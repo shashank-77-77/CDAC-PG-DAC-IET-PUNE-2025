@@ -1,0 +1,717 @@
+Constant Objects
+
+==>To create constant object use const keyword.
+
+==>When we create an object using the const keyword, the value of data members can never change till the life of the object in a program. The const objects are also known as the read-only objects.
+
+==>constant objects invokes only constant member function. But a non constant object can invoke both i.e constant  as well as non constant function.
+
+==>const obj invokes only constant function.
+
+Syntax
+const class_name obj_name;  
+ex: const Complex c1(1,2);
+
+#include <iostream>  
+using namespace std;  
+#include<string.h>
+class Cdate
+{
+	int day,month,year;
+	public:
+		int	getDay()const;
+		Cdate(int d,int m,int y)
+		{
+			day=d;
+			month=m;
+			year=y;
+		}
+		void display()const
+		{
+			cout<<"display date\n";
+			cout<<day<<"/"<<month<<"/"<<year<<endl;
+		}
+		void setDay(int dd)
+		{
+			day=dd;
+		}
+		
+		
+};
+int Cdate::	getDay()const
+		{
+			return day;
+		}
+int main()
+{
+	const Cdate d1(28,2,2025);
+	//d1.setDay(20);error because constant obj invokes only constant function
+	d1.display();
+	Cdate d2(1,1,2000);
+	d2.setDay(2);
+	d2.getDay();
+	
+}
+===============================================================
+
+
+#include<iostream>
+using namespace std;
+class Complex
+{
+	int real;
+	int img;
+	public:
+	void accept();
+	void setReal(int);
+	int getImg()const;
+	void show()const
+	{
+		cout<<"complex number is "<<real<<"+"<<img<<"i"<<endl;	
+	}
+	Complex(int r,int i)
+	{
+		real=r;
+		img=i;
+	}
+};
+void Complex::accept()
+{
+	cout<<"enter real and img\n";
+	cin>>real>>img;
+}
+void Complex::setReal(int r )
+{
+	real=r;
+}
+int Complex::getImg()const
+{
+	return img;
+}
+int main()
+{
+	 const Complex d1(1,2);
+	//d1.accept();//function calling
+	d1.show();
+	//d1.setReal(10);//setter function
+	d1.show();
+	cout<<"imaginary part is "<<d1.getImg();
+	
+}
+
+=========================================================================
+#include<iostream>
+using namespace std;
+class Complex
+{
+	int real;
+	int img;
+	public:
+	void accept();
+	void setReal(int);
+	int getImg()const;
+	void show()const
+	{
+		cout<<"complex number is "<<real<<"+"<<img<<"i"<<endl;	
+	}
+	Complex(int r,int i)
+	{
+		real=r;
+		img=i;
+	}
+};
+void Complex::accept()
+{
+	cout<<"enter real and img\n";
+	cin>>real>>img;
+}
+void Complex::setReal(int r )
+{
+	real=r;
+}
+int Complex::getImg()const
+{
+	return img;
+}
+int main()
+{
+	 const Complex d1(1,2);
+	//d1.accept();//error because the functionality of accept() is to accept and assign
+	// new values into object which is not allowed as obj is made const
+	d1.show();
+//	d1.setReal(10);//error
+
+	cout<<"imaginary part is "<<d1.getImg();
+	
+}
+=============================================================
+
+
+#include <iostream>  
+using namespace std;  
+class ABC  
+{  
+public:  
+int A;    
+ABC ()  
+{  
+A = 10; 
+}  
+};  
+int main ()  
+{  
+const ABC obj;  
+cout << " The value of A: " << obj.A << endl;  
+obj.A = 20; 
+return 0;  
+}  
+=================================================================================================
+ Constant Member function 
+
+==>To make a member function constant,use const keyword. 
+==>We can create a constant member function of a class by adding the const keyword after the name of the member function.
+Syntax
+
+return_type mem_fun() const  
+{  
+}   
+
+==>Those functions that do not alter the values of the data members, or the functions that are 'read only' can be 
+made constant.
+==>If a function is declared as const and the inplementation of that function tries to change the object by changing the value of any of its members,the compiler flags an error.
+
+Example: Program to use the const keyword with the member function of class
+class ABC  
+{   
+public:  
+int A;  
+
+void fun () const  
+{  
+ A = 0; // it shows compile time error  
+}  
+};  
+  
+int main ()  
+{  
+    ABC obj;  
+    obj.fun();  
+    return 0;  
+}  
+Output
+The above code throws a compilation error because the fun() function is a const member function of class ABC, and we are trying to assign a value to its data member 'x' that returns an error.
+
+
+// Constant member function defined outside the class
+#include <iostream>
+using namespace std;
+ 
+class Demo {
+    int x;
+ 
+public:
+    void set_data(int);
+    int get_data() const;
+};
+ void Demo::set_data(int a) 
+{
+ x = a;
+ }
+int Demo::get_data() const 
+{
+ return x; 
+}
+main()
+{
+    Demo d;
+    d.set_data(10);
+    cout << d.get_data();
+ 
+    return 0;
+}
+
+Output
+10
+
+
+// C++ program to demonstrate that const functions can be  called by non const objects
+ 
+#include <iostream>
+using namespace std;
+ 
+class Test {
+    int value;
+ public:
+    Test(int v = 0) 
+{
+ value = v; 
+}
+     int getValue() const { return value; }
+};
+ 
+int main()
+{
+    Test t(20);
+    cout << t.getValue();
+    return 0;
+}
+Output
+20
+
+// C++ program that demonstrate that non-const functions can not be called by const objects
+ #include <iostream>
+using namespace std;
+ class Test {
+    int value;
+ 
+public:
+    Test(int v = 0) { value = v; }
+ 
+    // non const member function
+    int getValue() { return value; }
+};
+ int main()
+{
+    // const object
+    const Test t;
+    cout << t.getValue();
+    return 0;
+}
+//ERROR
+
+===============================================================================
+
+Constant function Arguments
+We can declare the function arguments as the constant argument using the const keyword. And if the value of function arguments is declared const, it does not allow changing its value.
+
+Syntax
+
+return_type fun_name (const int x)  
+{  
+}   
+The fun_name() function contains a const argument whose value can never be changed once it defines in the program.
+
+
+#include <iostream>  
+using namespace std;  
+int Test (const int num)  
+{  
+// if we change the value of the const argument, it throws an error.  
+// num = num + 10;  
+cout << " The value of num: " << num << endl;  
+return 0;  
+}  
+int main ()  
+{  
+// call function  
+Test(5);  
+}  
+Output
+
+The value of num: 5
+In the above program, the num is a constant argument, and we cannot update the num value. If we update the value of the num variable, it returns the compile-time error.
+
+====================================================================================
+
+FAQ on constant object:
+Q1. Can const objects of a class call non-const member functions?
+Answer:
+No,an object declared as const cannot be modified and hence, can invoke only const member functions as these functions ensure not to modify the object.
+
+Q2. Can non-const objects of a class call const member function?
+Answer:
+When a function is declared as const, it can be called on any type of object.
+===============================================================================================
+
+Note: A constant member function can be overloaded with a function of same name.
+ex:
+void func() const;
+void func();
+
+class temp
+{
+public:
+	void show();
+	void show() const;
+};
+void temp::show()
+{
+	cout<<"in non constant show";
+}
+void temp::show()const
+{
+	cout<<"in  constant show";
+}
+int main()
+{
+	 temp t;
+	t.show();
+	const temp t1;
+	t.show();
+}
+
+In this case, constness of the object will determoine which functions should  be invoked.
+Note:Constructors and Destructors cannot be made constants.
+===================================================================================
+this pointer 
+
+Each object gets its own copy of data members and all objects share a single copy of member functions.Then now question is that if only one copy of each member function exists and is used by multiple objects, how are the proper data members are accessed and updated by the function?
+
+==>The compiler supplies an implicit pointer along with the names of the functions as 'this'.
+==>this pointer holds the address of the current object that invokes the fuction.whenever an object invokes member function,the address of that object stored in this pointer is passed implicitly to the function as a hidden parameter . 
+==>. In c programming, to find out variable address,we use & symbol.In c++,to know current object address, this pointer is used.This pointer is used to retrieve objects address
+
+#include<iostream>
+using namespace std;
+class test
+{
+	int a,b;
+public:
+void show(int a,int b)
+{
+	this->a=a;
+	this->b=b;
+
+}
+void display()
+{
+	cout<<a<<b;
+}
+};
+int main()
+{
+	test t;
+	t.show(10,20);
+	t.display();
+}
+=======================================
+
+#include <iostream>  
+using namespace std; 
+class Demo
+{
+	int a,b;
+	public:
+		Demo(int p,int q)
+		{
+			cout<<"address stored in this "<<this<<endl;
+			this->a=p;//compiler implicitly add this-> before attribute.
+			this->b=q;
+		}
+		void display()
+		{
+			cout<<a;
+			cout<<b;
+		}
+};
+int main()
+{
+	Demo d(10,20);
+	cout<<"address of d obj "<<&d<<endl;
+}
+==============================================
+
+Let's see the example of this keyword in C++ that refers to the fields of current class.
+#include<iostream>
+using namespace std;
+class test
+{
+	int a,b;
+	public:
+	void show()
+	{
+		a=10;
+		b=20;
+	cout<<"obj add"<<this<<endl;//print current class obj adddress (1000)
+	cout<<"a" <<this->a<<endl;//cout<<"a" <<a<<endl;
+	cout<<"b"<<this->b<<endl;//cout<<"b"<<b<<endl;
+}
+};
+int main()
+{
+	test t;
+	cout<<&t<<endl;//1000(object's address) assume this=1000
+	t.show();//implicitly this pointer will be passed to show()
+}
+
+========================
+==>this pointer is use to distinguish object's instance members from local variables when both are declared with the same name.To identify datamembers/instance variable, this pointer is used.
+
+#include<iostream>
+using namespace std;
+class date
+{
+	int dd,mm,yy;
+	public:
+	void show();
+	date(int,int,int);
+	date();
+};
+date::date()
+{
+	this->dd=this->mm=this->yy=0;
+}
+ date::date(int dd,int mm,int yy)
+{
+	this->dd=dd;
+	this->mm=mm;
+	this->yy=yy;
+}
+ void date::show()
+ {
+	 cout<<"date is "<<this->dd<<"/"<<this->mm<<"/"<<yy<<endl;
+ }
+ int main()
+{
+	date d1(1,1,1);
+	d1.show();
+	date d2(2,2,2);
+	d2.show();
+}
+=========================
+imp note:
+This pointer is not passed to the static function.therefore static mem fun cannot access non static data member.
+
+#include<iostream>
+using namespace std;
+class date
+{
+	int dd,mm,yy;
+	static int cnt;
+	public:
+	void show();
+	date(int,int,int);
+	static void getCnt()
+	{
+		//cout<<this->cnt;
+		//cout<<this;
+		//cout<<dd;
+		cout<<cnt;
+	}
+};
+int date::cnt=0;
+date::date(int d,int m,int y)
+{
+	
+	this->dd=d;
+	this->mm=m;
+	this->yy=y;
+}
+ 
+ void date::show()
+ {
+	 cout<<"date is "<<this->dd<<"/"<<this->mm<<"/"<<yy<<endl;
+ }
+ int main()
+{
+	date d1(1,1,2000);
+	d1.show();
+	date::getCnt();
+	
+}
+===============================================
+Passing and Returning Objects in C++
+
+In C++ we can pass class’s objects as arguments and also return them from a function the same way we pass and return other variables.
+
+Passing an Object as argument
+To pass an object as an argument we write the object name as the argument while calling the function the same way we do it for other variables.
+Syntax:  
+function_name(object_name);
+
+Returning Object as argument
+Syntax: 
+ return object_name;
+
+
+
+#include<iostream>
+using namespace std;
+class temp
+{
+	 int a;
+public:
+	void get();
+	temp add(temp & b1) //This function will take object as arguments and  return object
+	{
+		temp aobj3;
+		aobj3.a= this->a +   b1.a;// aobj3.a=a+b1.a
+		return aobj3;
+	}
+	void show()
+	{
+		cout<<"value is   "<<a;
+	}
+};
+void temp:: get()
+	{
+		cin>>this->a;
+	}
+int main()
+{
+	temp aobj1,aobj2;
+	aobj1.get();
+	aobj2.get();
+	temp aobj4=aobj1.add(aobj2);
+	aobj4.show();
+}
+============================================================
+DMA IN C LANG
+
+void pointer
+void pointer is a pointer which can store/return the address of any type of the variable.
+
+n==>no of elements to be accepted at runtime
+datatype * pointername=void* malloc( n * sizeof(datatype) );
+						=void* malloc(5*sizeof(int));
+				  int* ptr=(int*) malloc(20) //malloc() will return base address of type int* and stored in pointer on LHS of = operator
+
+
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int n;
+	int* ptr,i;
+	printf("enter no of elements to be accepted at runtime\n");
+	scanf("%d",&n);
+	ptr=(int*) malloc(n* sizeof(int));
+	printf("accept elements\n");
+	for(i=0;i<n;i++)
+	scanf("%d",(ptr+i));
+	for(i=0;i<n;i++)
+	ptr[i]=*(ptr+i)* i[ptr];
+	printf("display elements\n");
+	for(i=0;i<n;i++)
+	printf("%d\t",*(ptr+i));
+	free(ptr);//free() deallocated the memory which is allocated by malloc()
+}
+=====================================================================
+Array of Objects
+
+==>In C++, an array of objects is a collection of objects of the same class type that are stored in contiguous memory locations. Since each item in the array is an instance of the class, each one's member variables can have unique value. This makes it possible to manage and handles numerous objects by storing them in a single data structure and giving them similar properties and behaviours.
+
+syntax:
+classname arrayname[arraysize];
+
+Example:
+Storing more than one Employee data. Let’s assume there is an array of objects for storing 30 employee's data.
+
+#include<iostream>
+using namespace std;
+class Employee
+{
+  int id;
+  char name[30];
+  public:
+    void getdata();
+    void putdata();
+};
+void Employee::getdata()
+{
+  cout << "Enter Id : ";
+  cin >> id;
+  cout << "Enter Name : ";
+  cin >> name;
+}
+void Employee::putdata()
+{
+  cout << id << " ";
+  cout << name << " ";
+  cout << endl;
+}
+int main()
+{
+  // This is an array of objects having maximum limit of 30 Employees
+  Employee emp[30];
+  int n, i;
+  cout << "Enter Number of Employees - ";
+  cin >> n;
+   
+  // Accessing the function
+  for(i = 0; i < n; i++)
+    emp[i].getdata();
+   
+  cout << "Employee Data - " << endl;
+   
+  // Accessing the function
+  for(i = 0; i < n; i++)
+    emp[i].putdata();
+}
+
+
+=========================================
+#include<iostream>
+using namespace std;
+class Employee
+{
+  int id;
+  char name[30];
+  public:
+    void getdata();
+    void putdata();
+};
+void Employee::getdata()
+{
+  cout << "Enter Id : ";
+  cin >> id;
+  cout << "Enter Name : ";
+  cin >> name;
+}
+void Employee::putdata()
+{
+  cout << id << " ";
+  cout << name << " ";
+  cout << endl;
+}
+int main()
+{
+  // This is an array of objects having maximum limit of 30 Employees
+  Employee emp[30];
+  int n, i;
+  cout << "Enter Number of Employees - ";
+  cin >> n;
+   
+  // Accessing the function
+  for(i = 0; i < n; i++)
+    (emp+i)->getdata();
+   
+  cout << "Employee Data - " << endl;
+   
+  // Accessing the function
+  for(i = 0; i < n; i++)
+    (emp+i)->putdata();
+}
+=============================================================
+Advantages of Array of Objects: 
+
+==>The array of objects represent storing multiple objects in a single name.
+==>In an array of objects, the data can be accessed randomly by using the index number.
+==>Reduce the time  by storing the data in a single variable.
+
+=======================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

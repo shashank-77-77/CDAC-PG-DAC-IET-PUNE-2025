@@ -1,0 +1,45 @@
+TO run html from vs code install live server extension in vs code 
+
+
+
+Assignments 
+
+1) declare function calculate(...a) 
+	and display addition of data 
+	display only odd numbers from given data 
+
+  call calculate function with multiple parameters 
+
+2) with above concept use Math.max() method to display maximum number
+
+2) Perform the form validations as shown in Lecture
+  for name and age 
+   and display error message if it not valid 
+
+3) create html page -  with 
+	1 textfield and multiple buttons 
+	
+button captions are - 1)Add at End 
+		 2) Add at Start
+		3) delete from end 
+		4) delete from start
+		5) display odd numbers 
+		6) display even numbers
+hint -  use Array predined methods
+
+4) go through object and class syntax in javascript 
+   (shared files)
+
+5) Accrpt Number from user and display table of that number in 
+   table format 
+
+6) Accept Employee data 
+FirstName  | LastName | email | Date of Birth 
+
+from user 
+	a) perform validation -  data is entered or not 
+                    if not entered then display error msg 
+	b) if data is correct then display data on same page
+                     in table format 
+
+

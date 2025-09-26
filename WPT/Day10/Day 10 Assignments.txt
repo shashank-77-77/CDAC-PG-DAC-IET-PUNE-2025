@@ -1,0 +1,10 @@
+1) Demonstrate Ajax with JQuery Syntax 
+	$("").load()
+	$.get()
+
+2) Do Yesterday Data Load code with Promise Concept 
+
+3) use stylesheets mentioned in BootStrap 
+   and create Responsive WebPage 
+
+https://www.w3schools.com/bootstrap5/index.php

@@ -1,0 +1,17 @@
+1)Install Node js in your machine 
+
+2) check installation with node -v 
+
+3) Write a recursive function in Node.js to print factorial of number 
+
+number accept by command line Args
+
+4) Write a Node program that prints all the numbers between 1 and 100, each on a separate line.
+A few caveats:
+o if the number is divisible by 3, print "foo"
+o if the number is divisible by 5, print "bar"
+o if the number is divisible by both 3 and 5, print "foobar"
+
+5)use http package and create server in node js 
+
+6)

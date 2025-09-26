@@ -1,0 +1,60 @@
+Two types of decision-making statements are used within shell scripting. They are –
+
+If-else statement
+case-sac statement
+
+If-else statement
+If else statement is a conditional statement. It can be used to execute two different codes based on whether the given condition is satisfied or not. There are a couple of varieties present within the if-else statement. 
+They are –
+====================
+
+if-fi 
+
+Name="Girish"
+if [ "$Name" = "Girish" ]; then
+  echo "His name is Girish. It is true."
+fi
+
+====================
+if-else-fi 
+====================
+Age=17
+if [ "$Age" -ge 18 ]; then
+    echo "You can vote"
+else
+    echo "You cannot vote"    
+fi
+
+====================
+if-elif-else-fi 
+====================
+
+Age=17
+if [ "$Age" -ge 18 ]; then
+    echo "You can vote"
+elif [ "$Age" -eq 17 ]; then
+    echo "You can vote after one year"
+else
+    echo "You cannot vote"    
+fi
+
+====================
+Nested if-else
+====================
+
+echo "Enter subject"
+read subject
+
+if [ $subject == 'Linux' ]
+then
+echo "Enter Marks"
+read marks
+        if [ $marks -ge 30 ]
+        then
+        echo "You passed"
+        else
+        echo "You failed"
+        fi
+else
+echo "Wrong Subject"
+fi

@@ -1,0 +1,62 @@
+<html>
+
+
+
+
+
+
+<body>
+
+    Enter a Name <input type="text" required id="t1">
+
+    <button onclick="validate()">Display</button>
+
+    <p id="p1">Data </p>
+
+
+</body>
+
+
+<script>
+
+    function display() {
+
+        let d = document.getElementById("t1").value;
+
+        if (d.trim() != "") {
+            document.getElementById("p1").innerText =
+                document.getElementById("t1").value;
+        } else {
+            document.getElementById("p1").innerText = "please enter data ";
+        }
+    }
+
+    function validate() {
+
+        let ele = document.getElementById("t1");
+
+        console.log(ele.checkValidity())
+
+        if (ele.checkValidity()) {
+            document.getElementById("p1").innerText =
+                document.getElementById("t1").value;
+        } else {
+            document.getElementById("p1").innerText =
+                ele.validationMessage
+        }
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

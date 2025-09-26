@@ -1,0 +1,28 @@
+
+
+1) use browser callback functions
+     setInterval
+	 clearInterval
+	 setTimeout
+	 
+2) create 2 div elements 
+    1 at left top corner and 2 nd at right top corner 
+	and add annimation effect with above call back functions
+
+3)  accept data from user using input fields 
+      firstName LastName age 
+	  
+	  store data in Object format in function 
+	  and convert into JSON format 
+	  
+	  and display data in table format from JSON format data 
+	  
+4)	using same elements from assignment 3 
+    create username of User dynamically 
+      take 1st 2 characters from firstName
+	  take last 2 characters from lastName
+	  and age 
+	  
+	  eg Amit Patil 30 === amil30 
+	  
+5) check example of jquery 

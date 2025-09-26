@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+
+form {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    
+
+}
+#Submit {
+text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+
+input[type="text"] {
+    width: 95%;
+    padding: 6px;
+    margin-bottom: 2%;
+    border: 1px solid hsl(41, 82%, 47%);
+    border-radius: 15px;
+}
+
+input[type="email"] {
+    width: 95%;
+    padding: 6px;
+    margin-bottom: 2%;
+    border: 1px solid hsl(41, 82%, 47%);
+    border-radius: 15px;
+}
+
+input[type="submit"] {
+    width: 20% ;
+    padding: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    align-content: center;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+.error {
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 5px;
+}
+.submit-container {
+    text-align: center;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Validation</title>
+</head>
+<body>
+    <h2 style="text-align: center; padding: 3%;">Form with Validation</h2>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required minlength="3" maxlength="50" placeholder="Enter your name">
+        <span class="error" id="nameError"></span>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        <span class="error" id="emailError"></span>
+        <br><br>
+
+        <div class="submit-container">
+        <input type="submit" value="Submit" class="submit-button">
+    </div>
+    </form>
+
+    <script>
+        
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            let isValid = true;
+            
+            
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            
+            
+            let name = document.getElementById('name').value;
+            if (name === '') {
+                document.getElementById('nameError').textContent = 'Name is required.';
+                isValid = false;
+            } else if (name.length < 3) {
+                document.getElementById('nameError').textContent = 'Name must be at least 3 characters.';
+                isValid = false;
+            } else if (name.length > 50) {
+                document.getElementById('nameError').textContent = 'Name must be less than 50 characters.';
+                isValid = false;
+            }
+
+            
+            let email = document.getElementById('email').value;
+            if (email === '') {
+                document.getElementById('emailError').textContent = 'Email is required.';
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault(); 
+            }
+        });
+    </script>
+</body>
+</html>

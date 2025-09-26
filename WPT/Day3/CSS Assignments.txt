@@ -1,0 +1,29 @@
+Assignments 
+
+1)
+Show links to yesterday's Resume and Registration form
+Show an Iframe that is displaying an image in the beginning
+When the Links are clicked the pages should be displayed in the Iframe
+
+2)
+Write an HTML that has a div tag having an essay copied from net
+add font family , font size, font style , font weight , text decoration overline
+font color background color using INLINE CSS
+
+3) Write an HTML using internal CSS that has 3 Text Input Fields
+All should shown in one line
+Set the left and right margins to appropriate space
+Set the border to solid blue
+Set border size properly
+Below this show an image , show a rounded border in red color to image
+Adjust the top margin of image to have proper distance from texfields
+
+4.
+Add display : block to the LINKS in HW1 using inline CSS
+5.
+Write an external CSS having following selectors
+	a. HTML Selectors for input p and select
+	b.Class Selectors moderate and gaudy
+	c.ID selectors : id1
+In all the selectors provide color , bgcolor, font style and borders in different ways
+Apply the CSS to an HTML

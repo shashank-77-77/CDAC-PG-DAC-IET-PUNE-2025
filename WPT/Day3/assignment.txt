@@ -1,0 +1,12 @@
+
+Write a html code in NoteBook 
+index.html 
+
+	<h1>Name</h1>
+
+with help of List display 3 Hyperlinks 
+
+	Login                            login.html
+	New user Rgistrion      newuser.html
+	Change Password        cp.html
+

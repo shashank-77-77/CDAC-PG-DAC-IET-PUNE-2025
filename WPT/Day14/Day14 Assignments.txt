@@ -1,0 +1,30 @@
+
+1) add post and put functionality in yesterday Rest API 
+
+2) in above rest api 
+	/users/aboutus ----- display aboutus.html page 
+
+3) using hbs module -  Display Dynamic HTML page 
+
+	calc.hbs   -  accept 2 numbers and display output 
+
+  npm install hbs --- to get hbs module 
+
+4) use middleware app.use and check   
+      set data in request object and  display that data in next method
+
+5)  Do the React  App Setup 
+
+	npx create-react-app  <projectName>
+
+	  go inside project directory 
+
+	then npm install 
+
+	npm start ---  React App started
+
+6) create another react app 
+	by using Function Component 
+	Display Data in your web page 
+
+	

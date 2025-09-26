@@ -1,0 +1,109 @@
+Implementation of `While` Loop in Shell Script.
+
+vim looping.sh
+chmod +x looping.sh  (./looping.sh)
+
+====================================
+#/bin/bash
+
+a=0
+
+# lt is less than operator
+
+#Iterate the loop until a less than 10
+
+while [ $a -lt 10 ]
+do
+# Print the values
+echo $a
+# increment the value
+a=`expr $a + 1`
+done
+
+
+=============================
+
+#/bin/bash
+
+a=0
+
+# -gt is greater than operator
+#Iterate the loop until a is greater than 10
+
+until [ $a -gt 10 ]
+do
+
+# Print the values
+echo $a
+
+# increment the value
+a=`expr $a + 1`
+done
+
+==================
+Implementation of `for` Loop with `break` statement in Shell Script.
+
+#/bin/bash
+
+#Start of for loop
+
+for a in 1 2 3 4 5 6 7 8 9 10
+do
+
+# if a is equal to 5 break the loop
+if [ $a == 5 ]
+then
+break
+fi
+
+# Print the value
+echo “Iteration no $a”
+done
+
+==================
+
+Implementation of `for` Loop with `continue` statement in Shell Script.
+
+#/bin/bash
+
+for a in 1 2 3 4 5 6 7 8 9 10
+do
+
+# if a = 5 then continue the loop and
+# don’t move to line 8
+
+if [ $a == 5 ]
+then
+continue
+fi
+echo “Iteration no $a”
+done
+
+
+====================
+Implementing `until` Loop in Shell Script
+
+#/bin/bash
+
+a=0
+
+# -gt is greater than operator
+#Iterate the loop until a is greater than 10
+
+until [ $a -gt 10 ]
+do
+
+
+=======================
+Creating an Infinite Loop with “while true” in Shell Script
+
+#/bin/bash
+
+while true
+do
+
+# Command to be executed
+# sleep 1 indicates it sleeps for 1 sec
+echo “Hi, I am infinity loop”
+sleep 1
+done

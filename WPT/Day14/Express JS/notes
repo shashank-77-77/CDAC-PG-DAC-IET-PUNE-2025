@@ -1,0 +1,15 @@
+Rest API UI - Display
+
+localhost:4040/emp ======= display all record in html format
+
+get
+localhost:4040/api/users === all users info json
+get
+localhost:4040/api/users/15 == id = 15
+
+post
+localhost:4040/api/users/ === Record add json file
+
+modify
+
+delete

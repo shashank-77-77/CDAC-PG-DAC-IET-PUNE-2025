@@ -1,0 +1,11 @@
+<div id="content">Loading content...</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  
+  $("#content").load("https://jsonplaceholder.typicode.com/posts/1", function(response, status, err) {
+    if (status == "error") {
+      $("#content").html("Error loading content: " + err.statusText);
+    }
+  });
+</script>

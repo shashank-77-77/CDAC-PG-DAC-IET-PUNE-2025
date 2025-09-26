@@ -1,0 +1,21 @@
+Assignment 1
+
+1) Use Different tags of Html and create web pages 
+
+2) using text format , image , table and List tags
+    create your Resume 
+
+3) Use Emojis and Currency Symbols (Refer https://www.w3schools.com/)
+
+4) Create Registration Form using input tags
+	FirstName
+	LastName
+	UserName
+	Email
+	DOB  (Date Controller)
+	Known Languages  (Check Box)
+	Gender (Radio Button)
+	Password 
+	ConfirmPassword 
+	
+	2 buttons  -  Reset Submit 

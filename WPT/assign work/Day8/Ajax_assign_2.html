@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+<style>
+   table{
+    border: 1px solid rgb(0, 21, 248);
+   }
+</style>
+<body> 
+    <h1>Assigment no 2</h1>
+    <button onclick="display()"> Display </button>
+
+    <table border="1px" >
+        <thead>
+            <tr>
+                <th>UserId</th>
+                <th>Id</th>
+                <th>title</th>
+                <th>Body</th>
+            </tr>   
+        </thead>
+        <tbody id="mytable">
+
+        </tbody>
+    </table>
+</body>
+<script>
+function display(){
+    let data= new XMLHttpRequest;
+
+    data.open("GET", " https://jsonplaceholder.typicode.com/posts");
+    data.send();
+    console.log(data);
+    data.onload = function (){
+        // console.log("functions in data",this.responseText);
+        let Jsondata=this.responseText;
+        let obj=JSON.parse(Jsondata);
+        console.log(obj);
+        let table=document.getElementById("mytable");
+        
+        for(let i=0; i<obj.length-1;i++){
+         let newRow=table.insertRow();
+        let userid=newRow.insertCell(0);
+        let id=newRow.insertCell(1);
+        let title=newRow.insertCell(2);
+        let body=newRow.insertCell(3);
+
+        userid.innerText=obj[i].userId
+        id.innerText=obj[i].id
+        title.innerText=obj[i].title;
+        body.innerText=obj[i].body;
+
+        }
+    }
+}
+</script>
+</html>

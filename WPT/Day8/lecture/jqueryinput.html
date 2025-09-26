@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $("button").click(function () {
+                //text() // innerText
+                //html()  // innerHtml
+                let a = $("#t1").val();
+                //console.log(a);
+                $("#t2").val(a);
+
+                let c = "<p>" + a + "</p>";
+
+                $("button").after(c);
+
+
+            })
+
+
+
+        })
+
+
+    </script>
+</head>
+
+<body>
+
+    <p>paragraph Data </p>
+
+    Enter a Data <input type="text" id="t1">
+
+    <input type="text" id="t2">
+
+    <button type="button" value="Click">Click</button>
+
+
+    <p> </p>
+
+</body>
+
+</html>

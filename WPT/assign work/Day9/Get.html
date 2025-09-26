@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1"> data will appear here </div><br><br>
+    <button type="button" id="b1" >click me</button>
+</body>
+</html>
+
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        $("#b1").click(function () {
+            $.get("data.txt",function (data, status,xhr) {
+                    if (xhr.status == 200) {
+
+                        $("#d1").text(data);
+
+                    } else {
+
+                         $("#d1").text("fail to load data " + xhr.status);
+                    }
+                })
+        })
+    })
+
+</script>
+
+</html>
+

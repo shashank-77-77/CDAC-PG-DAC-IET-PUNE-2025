@@ -1,0 +1,35 @@
+<html>
+
+<head>
+   
+</head>
+
+<body>
+
+    <p id="p1">Dataaaaa </p>
+  
+<button type="button" onclick="myFunction()">Count!</button>
+
+     
+
+      <script>
+	  
+//document.getElementById("p1").innerHTML = "The counter is: " + counter();
+//let cnt = 0 ; var  clouser 
+ function counter( ){
+let cnt = 0 ;
+
+    return  function() { return cnt += 1;};  
+ }
+    
+const add = counter();/// 1time  function  return cnt += 1
+
+function myFunction(){
+  document.getElementById("p1").innerHTML = add();
+}
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question 3 Factorial Number</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            function factorial(num) {
+                if(num < 0)
+                { 
+                    return "Negative numbers not allowed";
+                }
+                if(num === 0 || num === 1) 
+                {
+                    return 1;
+                }
+                let fact = 1;
+                for(let i = 2; i <= num; i++) 
+                {
+                    fact *= i;
+                }
+                return fact;
+            }
+
+            $("#b1").click(function(){
+                let a = parseInt($("#n1").val()); 
+                // if(isNaN(a)) {
+                //     alert("Please enter a valid number");
+                //     return;
+                // }
+
+                let factResult = factorial(a);
+
+                $("#n2").val(factResult);
+
+
+                // // Add the factorial result as a paragraph after the button
+                // let c = "<p id='result'>Factorial of " + a + " is: " + factResult + "</p>";
+                // $("#b1").after(c);
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+    <label id="l1">Enter number</label>
+    <input type="number" id="n1"/><br><br>
+    <lable>Factorial is :</lable>
+    <input type="text" id="n2"/><br><br>
+
+    <button type="button" id="b1" value="Click">Click me</button>
+</body>
+</html>

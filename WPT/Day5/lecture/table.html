@@ -1,0 +1,47 @@
+<html>
+<head>
+
+</head>
+
+<body>
+
+    <p id="p1"></p>
+
+    <input type="text" id="n">
+    <button type="button" onclick="add()"> add at end </button>
+    <button type="button" onclick="addAtStart()"> add at start</button>
+    <button type="button" onclick="add()"> add in array</button>
+    <button type="button" onclick="add()"> add in array</button>
+
+</body>
+<script>
+ const a = [];
+
+ function add(){
+    let d = document.getElementById("n").value;
+    a.push(d);
+    console.log(a);
+    show();
+ }
+
+  function addAtStart(){
+    let d = document.getElementById("n").value;
+    a.unshift(d);
+    console.log(a);
+    show();
+ }
+function show(){
+document.getElementById("p1").innerHTML = a
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+</html>

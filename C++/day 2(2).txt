@@ -1,0 +1,1427 @@
+
+C++ was invented by Bjarne Stroustrup in 1979 at Bell lab.
+initially he called this lang as, c with classes,later in 1983 the name was changed to c++.
+
+
+==>C++ is a general purpose/multipurpose,high level,compiler based and object oriented programming language.
+
+==>What is general purpose?
+purpose means usage
+by using c++ we can design different types of s/ws
+
+
+Types of programming language
+1. Low-level programming language
+Low-level language is machine-dependent (0s and 1s) programming language. The processor runs low- level programs directly without the need of a compiler or interpreter, so the programs written in low-level language can be run very fast.
+
+
+2. High-level programming language (HLL) -It is designed for developing user-friendly software programs and websites.
+This programming language requires a compiler or interpreter to translate the program into machine language (execute the program).
+Example: Python, Java, JavaScript, PHP, C#, C,C++, etc.
+A high-level language is further divided into two parts -
+	a)Procedural Oriented programming language
+	b)Object-Oriented Programming language
+
+
+ques)which s/w application we can create using c++?
+==>using c++ , we can design operating system(dos,window,unix)
+==>using c++,we can design editors(notepad,wordpad,editplus)
+==>using c++,we can design commercial application(related to money like (bank program,hotel managment program,supermarket program)
+In supermarket,bill should be generated,billing program is designed using c++.Bank transactions application is designed using c++.
+==>using c++,we are also able to design database(oracle is designed by c and c++)
+==>using c++,we can also design translators(compiler,interpreter,assembler)
+compiler and interpreter are used to convert high level lang to machine code.
+assembler is used to convert low level lang to machine code.
+In c++ we are using compiler as a translator,thats why c++ is called as compiler based programming lang.
+==>using c++,we can design PC and mobile games. ex:snake game,mario etc.
+=========================================================
+Software is a collection of programs. /it is a digitized automated process
+program is a set of instructions
+
+===============================================================================
+Object oriented programming
+==>C++ is an extension of C programming
+==>learn limitation of c, how it is solved in c++?
+
+Function oriented programming lang/Procedural Language:
+
+==>Total program is divided into small programs called as functions. 
+Advantages are:
+easy to identify errors
+modularity
+reusability(write once use many times)
+
+Function is a small program which is ued to do a particular job.
+
+
+Entire c program is collection of functions thats why c++ is called as function oriented programming lang.
+procedural lang means all data stored at one place
+all data accessible to all function
+data is not secured
+===============================================
+
+problem with function
+==>when program is big ,when data is global then to identify  which variable is accesed by which function  is 
+very difficult.problem is when data is global ,any function can access it . so data is not secured because data is freely moving around the function.
+==>In c programming lang, data and function is seperately stored and global data is accessible to every function.
+but in oop they bind variable and function in single unit called as object. when it make private it is accessible only within that funtion.
+==>it is difficult to map real world entities into system design.it is difficult to bind data to the functionality of the system because its functionality is considered seperately
+==>debugging a structured program is difficult and time consuming process.since data is shared over the entire program,different functions may be accessing it.to exactly find whuch function is causing the error is not easy.
+
+
+
+Ex:
+In a class several students are there,every student is having its own data.one student data doesnt belong to another student data.
+
+stu1 obj
+id ,name,fees----->attributes
+To access this variables we have to use function,this function is able to access only student1 data
+stu2 obj
+id ,name,fees----->attributes,to access this variables we have to use function,this function is able to access only student2 data
+
+i.e  data is seperated into no of blocks called object called as object1,object 2.
+object1 contains first student data,object2 contains 2nd student data.
+total program is divided into several objects. thatwhy c++ is called as object oriented programming structure.
+
+
+
+in oop function and data both are link with one another.obj is having variables,these variables are accessible only within the fun associated with that object called as data hiding.
+===================================================================================
+object oriented programming features
+
+1)class-->extension of c structure
+structure is collection of  heterogenous datatype. structure allows us to store different types of variables at one place under one name.due to structure ,it is very easy to construct object oriented programming.
+In oop will going to use class but that class derived/extension of c structure.
+
+==>we can able to declared both primitive and derived datatype at one place using structure.
+ex:
+I want to store student related data at one place ..
+ struct stu
+{
+int id;primitaive
+int marks[6];//derived;
+};
+structure is constructed based on the user requirement  thats  why structure is called as user defined datatyes...
+
+ struct stu
+{
+int id;primitaive
+int marks[6];//derived;
+}s1,s2;//structure variable stored on stack.
+
+here  s1 stores 1 student data which is called as 1 object,now it is called object oriented .
+structure are the foundations to create class in c++.
+
+********disadvantage with structure*********
+In c lang structure data is by default public.structure can be accessed from anywhere within the program. 
+now to avoid this they have introduced class.
+
+In c++ also, we are having structure.
+
+Whats the difference between structure in C and structure in C++?
+In C ,inside the structure we can declare only variables(member structure) . while in C++,we can declare member structure +member function
+
+**In c++ also structure data is public.that means anyone can access data from anywhere,not secured.
+that why they have introduced class in c++.
+==========================================
+In c++,the private data shld be accessed only with the member function of the same class.
+struct  student
+{
+private/protected/public   datatype
+datamembers
+memberfunctions;
+};
+class student
+{
+private/protected/public   datatype
+datamembers
+memberfunctions;
+};
+using c++ structure ,we cannot define complex programs.But it is possible with the class concepts.
+
+2)class uses the concept of inheritance but structure in c++ never uses the concept of inheritance
+
+3)if we dont specify access specifier to a data member of a class by default all the members become private
+3)in c++ structure by default all the members are public. by default structure data is public,class data is private. 
+====================================================================================
+when it is private what will happen?
+class student
+{
+int id;//data members
+public:
+void get()
+{
+cout<<id;
+}
+}
+get() is the member of the class thats why it is called as member function.
+with the help of member function of a class we can access private data of a class.this data cannot be accessible from outside the class called as
+data hiding. mostly achieve using private access specifier.
+data hiding means insulating the data from external access. outsiders cannot access the data.only member function can access the data. 
+ex:mobile ph
+
+**class is a collection of data members and member function both are associated together into a single unit called as class is called encapsulation
+encapsulation is a process of binding the data under member function together into a single unit  called class.
+
+class provides data hiding,encapsulation(binding of data and function into a single unit called as class)
+
+====================================================> In class, to access the data member first memory should be allocated,for this the object shld be created.
+
+OBJECT
+
+==>In structure,structure variable should be created to access the structure members.
+==>In class,class variables are called as object.
+object means it is a variable of type class.
+student stu1;
+
+
+class stu
+{
+};
+stu s;//object  (memory allocation takes place)
+==>this obj is created from this class, that why  class is called as blueprint(original copy) to construct the object(xerox copy). thatswhy
+to create object we need class,thats  why class is a blueprint and object is the instance of the class.
+
+==>object is the physical representation of a class.when object is created then only memory allocation takes place. class never allocates memory i.e logical representation.
+==================================================
+Difference between C structure and C ++ structure
+
+1)collection of variables                     collection of variables and function
+2)structure members are public       structure members are 											  						private,protected,public
+-------------------------------------------------------------------------------
+similarities between  C++ structure and class
+1)userdefined                          				  userdefined
+2)collection of variables & functions   		collection of 	variables & functions
+3)members are private,protected,public		members are 																		private,protected,public
+-------------------------------------------------------------------		
+Differences between  C++ structure and class
+1)by default members are public 		by default members	are private
+2) structure cannot be inherited		class can be inherited
+3)used to build simple program			uses to build complex program,big project
+not used in bank prog,reservation
+============================================================================
+class:
+1)it is a userdefined datatypes because we r constructing a class based on primitive and derived datatype as per user requrimemt
+2)collection of datamembers and member functions
+3)it is a container because it contains members.
+4)class provides the concept of encapsulation(binding of data memebrs and member function in a single unit),provides the concept of data hiding with private access specifier.
+5)class is a blueprint to constructs the objects i.e it is a plan before constructing objectts
+paper plan(class)--------->  real building(object)
+6)class is a logical copy to create objects thats why class never occupies memory.
+
+
+syntax:
+class classname//class is keyword
+{
+access specifier://it specifies how it is going to access in our program
+datamember;
+member function;
+};
+
+
+1)private: whenever datamembers and membar functions are private, they cannot be accessed directly using objects.
+class A
+{
+int a; //int a=100;//not allowed ,direct initilization not allowed
+void get()
+{
+a=100;
+cout<<a;//allowed
+}//private data can be accessed within member function of same class
+}
+void main()
+{
+	obj;
+obj.a=100;//not allowed whenever datamembers and member functions are private cannot be accessed directly using objects.
+obj.get();//not allowed whenever datamembers and member functions are private cannot be accessed directly using objects.
+   //. is called membership operator
+} 
+
+
+Therefore it is better to use one public member
+class A
+{
+ int a; //int a=100;//not allowed ,direct initilization not allowed
+public void get()
+{
+a=100;
+cout<<a;//allowed
+}
+}
+void main()
+{
+	obj;
+obj.a=100;//not allowed whenever datamembers and member functions are private cannot be accessed directly using objects.
+obj.get();// allowed 
+   //. is called membership operator
+} 
+
+keypoint: when all the members are private,it is useless because to access the members,we have to declared object,where the object is generally declred and where members are called i.e from the main(),and main() is outside the class.thumb rule is private members are not visible outside the class.
+called as datahiding...declared one public()
+
+========================================================================================
+class student
+{
+private:
+int id;
+char name;
+float fee;
+public:
+void get()//inline function
+{
+cout<<"enter id and fee";
+
+cin>>id>>fee;
+cout<<"id = "<<id<<endl;
+}
+};
+void main()
+{
+
+}
+
+
+
+
+class student
+{
+private:
+int id;
+char name;
+float fee;
+public:
+void get();
+};
+void student::get()//not inline ::scope operator
+{
+cout<<"enter id and fee";
+
+cin>>id>>fee;
+cout<<"id = "<<id<<endl;
+cout<<"fee = "<<fee<<endl;
+}
+ 
+void main()
+{
+student stu;//mem allocated
+stu.get();
+
+}
+
+=========================================================================
+OBJECT
+To access class members,we should define objects because when class is declared memory is not allocated,when object is defined then only memory is allocated.
+
+ex: int a,b;
+int is logical copy occupies no memory
+a,b is physical copy ,memory gets allocated
+
+ex:student stu;
+stu.get();
+stu.put();
+thru object we can access class members...
+
+Object is :
+1) a variable of type class.
+2)an instance/xerox copy of a class
+3)it is physical representation of a class.
+==========================================================================
+Difference between procedural programming and object-oriented programming
+
+1)In procedural programming, the program is divided into small parts called functions.	
+In object-oriented programming, the program is divided into small parts called objects.
+
+2)It is less secure than OOPs. 
+Data hiding is possible in object-oriented programming . So, it is more secure than procedural programming.
+
+3)There is no access specifier in procedural programming.
+  Object-oriented programming has access specifiers like private, public, protected, etc.
+
+4)In procedural programming, data moves freely within the system from one function to another.	
+In OOP, objects can move and communicate with each other via member functions.
+
+5)There is no code reusability present in procedural programming.
+	It offers code reusability by using the feature of inheritance.
+===============================================================================================
+C++ Features
+
+Popular
+C++ can be the base language for many other programming languages that supports the feature of object-oriented programming. 
+
+ Compiler based
+C++ is a compiler-based programming language, which means no C++ program can be executed without compilation. C++ compiler is easily available, and it requires very little space for storage. First, we need to compile our program using a compiler, and then we can execute our program.
+
+Machine Independent
+
+Platform:
+Platform consists of processor/cpu and operating system.
+
+Platform Dependent ?
+The code which can only be run on same platform on which it was compiled. Compiled code cannot run on any other platforms.such language is called as platform dependent .
+ex: C,C++
+
+Here, same machine code which is compiled on windows,cannot be run on Linux or MAC OS.
+To run the code on MAC OS ,first we will have to compile in MAC OS.
+so such languages do not support code portability.
+
+
+A C++ executable is not platform-independent (compiled programs on Linux won’t run on Windows), however, they are machine-independent.  Suppose you have written a piece of code that can run on Linux/Windows/Mac OSx which makes the C++ Machine Independent but the executable file of the C++ cannot run on different operating systems.
+
+
+
+Rich Library
+C++ provides a lot of inbuilt functions that make the development fast. Following are the libraries used in C++ programming are:
+
+<iostream>
+<cmath>
+<cstdlib>
+<fstream>
+
+ Memory Management
+C++ provides very efficient management techniques. The various memory management operators help save the memory and improve the program's efficiency. These operators allocate and deallocate memory at run time. Some common memory management operators available C++ are new, delete etc.
+
+Object-Oriented
+In C++, object-oriented concepts like data hiding, encapsulation, and data abstraction can easily be implemented using keyword class, private, public, and protected access specifiers. Object-oriented makes development and maintenance easier.
+
+====================================================================
+Difference between C and C++
+
+C was developed by Dennis Ritchie between the year 1969 and 1973 at AT&T Bell Labs.	
+C++ was developed by Bjarne Stroustrup in 1979.
+
+C does no support polymorphism, encapsulation, and inheritance which means that C does not support object oriented programming.	
+C++ supports polymorphism, encapsulation, and inheritance because it is an object oriented programming language.
+
+C supports procedural programming.	 
+C++ supports object oriented programming paradigms.
+
+Data and functions are separated in C because it is a procedural programming language.	
+Data and functions are encapsulated together in form of an object in C++.
+
+C does not support data hiding so not secured.	
+C++ supports data hiding with the help of private access specifier,secured.
+
+Functions in C are not defined inside structures.	
+Functions can be used inside a structure in C++.
+
+C does not support inheritance.	
+C++ supports inheritance.
+
+Instead of focusing on data, C focuses on functions.	
+C++ focuses on data instead of focusing on method or procedure.
+
+C provides malloc() and calloc() functions for dynamic memory allocation, and free() for memory de-allocation.	
+C++ provides new operator for memory allocation and delete operator for memory de-allocation.
+
+Direct support for exception handling is not supported by C.	
+Exception handling is supported by C++.
+
+scanf() and printf() functions are used for input/output in C.	
+cin and cout are used for input/output in C++.
+
+C structures don’t have access modifiers.	
+C ++ structures have access modifiers.
+
+C does not support reference variables.
+C++ supports reference variables.
+========================================================================
+Types of Variables
+There are three types of variables based on the scope of variables in C++
+Local Variables
+Instance Variables
+Static Variables
+
+local variable
+the variable declared within the parenthesis of any function or any block is 
+called as local variable.
+These variables are created when entered into the block or the function is called and destroyed after exiting from the block or when the call returns from the function.
+The scope of these variables exists only within the block in which the variable is declared. i.e. we can access this variable only within that block.
+1)local variable cannot be declared globally 
+2)Initialization of Local Variable is Mandatory.
+3)scope and lifetime is within the block/within the function
+4)storage is stack section
+
+lifetime means how long the variable exists in the memory
+scope means how long the variable or value of that variable can be accessed
+in local variable lifetime depends on scope of variable
+
+#include<stdio.h>
+int main()
+{
+	int a=10;
+	 printf("%d",a);//10
+	 {
+		 int a=100;
+		 printf("%d",a);//100
+	 }
+	 printf("%d",a);//10
+}
+
+global variable
+Declaring global variables: Global variables are usually declared outside of all of the functions and blocks, at the top of the program. They can be accessed from any portion of the program.
+variable declared outside the function/block is called as global variable
+initial value is 0
+storage is data section
+lifetime-->thru out the program
+scope-->thru out the program
+
+#include <iostream>
+using namespace std;
+void fun();
+int a=10;
+int main()
+{
+    cout<<"Hello World";
+    fun();
+}
+void fun()
+{
+
+    cout<<a;
+}
+====================================================
+Datatypes in c++
+
+All variables use data type during declaration to restrict the type of data to be stored. Therefore, we can say that data types are used to tell the variables the type of data they can store. 
+Whenever a variable is defined in C++, the compiler allocates some memory for that variable based on the data type with which it is declared. Every data type requires a different amount of memory. 
+
+C++ supports the following data types:
+
+Primary or Built-in or Fundamental data type:
+These data types are built-in or predefined data types and can be used directly by the user to declare variables. example: int, char, float, bool, etc. 
+Integer: The keyword used for integer data types is int. Integers typically require 4 bytes of memory space and range from -2147483648 to 2147483647.  
+Character: Character data type is used for storing characters. The keyword used for the character data type is char. Characters typically require 1 byte of memory space and range from 0 to 255.  
+Boolean: Boolean data type is used for storing Boolean or logical values. A Boolean variable can store either true or false. The keyword used for the Boolean data type is bool. 
+Floating Point: Floating Point data type is used for storing single-precision floating-point values or decimal values. The keyword used for the floating-point data type is float. Float variables typically require 4 bytes of memory space. 
+Double Floating Point: Double Floating Point data type is used for storing double-precision floating-point values or decimal values. The keyword used for the double floating-point data type is double. Double variables typically require 8 bytes of memory space. 
+============================================================================
+// C Program to implement Boolean data type
+#include <stdbool.h>
+int main()
+{
+      // Boolean data types declared
+    bool a = true;
+    bool b = false;
+    printf("True : %d\n", a);
+    printf("False : %d", b);
+}
+===========================================================================================
+C++ I/O operation is using the stream concept. Stream is the sequence of bytes or flow of data. It makes the performance fast.
+If bytes flow from main memory to device like printer, display screen, or a network connection, etc, this is called as output operation.
+If bytes flow from device like printer, display screen, or a network connection, etc to main memory, this is called as input operation.
+
+Header files available in C++ for Input/Output operations are: 
+iostream: iostream stands for standard input-output stream. This header file contains definitions of objects like cin, cout, cerr, etc.
+
+
+Different streams are used to represent different kinds of data flow.
+==>istream is the class representing i/p stream,ostream is the class representing the o/p stream..to achiever the console input/output operations ,objects of these stream classes are used.
+==>to manage input output operations predefined obj cin,cout..
+
+Standard output stream (cout): Usually the standard output device is the display screen. The C++ cout statement is the instance of the ostream class. It is used to produce output on the standard output device which is usually the display screen. The data needed to be displayed on the screen is inserted in the standard output stream (cout) using the insertion operator(<<).
+==>ostream class availabe in iostream.h thats why we have to include this headerfile
+
+
+standard input stream (cin): Usually the input device in a computer is the keyboard. C++ cin statement is the instance of the class istream and is used to read input from the standard input device which is usually a keyboard. 
+The extraction operator(>>) is used along with the object cin for reading inputs. The extraction operator extracts the data from the object cin which is entered using the keyboard.
+
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+    int age;
+ 
+    cout << "Enter your age:";
+    cin >> age;
+    cout << "\nYour age is: " << age;
+ 
+    return 0;
+}
+
+Un-buffered standard error stream (cerr): The C++ cerr is the standard error stream that is used to output the errors. This is also an instance of the iostream class. As cerr in C++ is un-buffered so it is used when one needs to display the error message immediately. It does not have any buffer to store the error message and display it later.
+
+// C++ program to illustrate std::cerr 
+  
+#include <iostream> 
+using namespace std; 
+int main() 
+{ 
+  
+    // This will print "Welcome to GfG" 
+    // in the error window 
+    cerr << "Welcome to GfG! :: cerr"; 
+  
+    // This will print "Welcome to GfG" 
+    // in the output window 
+    cout << "Welcome to GfG! :: cout"; 
+    return 0; 
+} 
+In the above program the Output of Line 11 will display an error window as:
+RunTime Error in CPP code:
+
+Welcome to GfG! :: cerr
+==========================================================================
+\n-->back\ character   endl-->manipulator
+takes 1 byte                   no byte
+==============================================================================
+Constants:
+
+  const keywords is used to define the constant value that cannot change during program execution. It means once we declare a variable as the constant in a program, the variable's value will be fixed and never be changed. If we try to change the value of the const type variable, it shows an error message in the program.
+
+
+
+DAY 2:
+
+
+
+Types of Variables
+There are three types of variables based on the scope of variables in C++
+1)Local Variables
+2)Global Variable
+3)Instance Variables
+4)Static Variables
+
+1)local variable
+==>The variable declared within the parenthesis of any function or any block is  called as local variable.
+==>These variables are created when entered into the block or the function is called and destroyed after exiting from the block or when the call returns from the function.
+==>scope means how long the variable or value of that variable can be accessed
+The scope of these variables exists only within the block in which the variable is declared. i.e. we can access this variable only within that block.
+==>lifetime means how long the variable exists in the memory.
+ lifetime is within the block/within the function
+==>storage is stack section
+==>In local variable lifetime depends on scope of variable
+
+#include<iostream>
+using namespace std;
+void show();
+int main()
+{
+	show();
+	show();
+	show();
+	return 0;	
+}
+void show()
+{
+	int x=0;
+	cout<<x<<endl;//00
+	x++;
+}
+output:000
+===============================================================
+
+2)Global variable
+
+==>Variable declared outside the function/block is called as global variable
+==>initial value is 0
+==>storage is data section
+==>lifetime is through out the program
+==>scope is through out the program
+
+#include<iostream>
+using namespace std;
+void show();
+int y=10;
+int main()
+{
+	cout<<y<<endl;
+	y++;
+	show();
+	cout<<y<<endl;	
+}
+void show()
+{
+	cout<<y<<endl;
+	int x=0;
+	cout<<x<<endl;
+	x++;
+	cout<<y<<endl;
+}
+
+=================================
+
+==================================
+#include<iostream>
+using namespace std;
+void show();
+int y=10;
+int main()
+{
+	cout<<y<<endl;
+	y++;
+	show();
+	cout<<y<<endl;	
+}
+void show()
+{
+	cout<<y<<endl;
+	 y=0;
+	cout<<y<<endl;
+	y++;
+	cout<<y<<endl;
+}
+===============================================================
+
+3)Instance variable
+
+1)whenever an instance is created,the variable to whom  memory is allocated  is called as instance variable
+2)memory for instance variable is allocated per object
+i.e 50 object means 50 copies is created for instance variable
+3)changes made to instance variable of one object will not be reflected into another object's instance variable.
+
+
+
+=============================================================================================
+Static
+
+keyword:static
+storage:data section
+lifetime:through out the program
+scope for global static variable is thru out the prog
+scope for local static variable is within the block/function
+initial value:0
+
+
+
+#include<iostream>
+using namespace std;
+static int x=10;//global static variable
+int main()
+{
+	static int y=20;//local static variable
+}
+
+
+/*
+scope of x : thru out the program
+scope of y:within the main()
+lifetime:thru out the program*/
+================================================
+#include<iostream>
+using namespace std;
+void show();
+int main()
+{
+	show();
+	show();
+	show();
+
+}
+void show()
+{
+	static int x;
+	cout<<x<<endl;//012
+	x++;
+}
+==>memory is allocated only once for static varaible
+==>reinitilization doesnt takes place for static variable 
+===============================================================
+==================================================================================
+Reference variable..
+
+==>A reference variable is an alias, that is, another name for an already existing variable.
+
+FAQ:
+In c++ we have pass by reference. but why?
+==>In call by address,we have to declared formal parameter as a pointer and pointer holds address and address requires 8 bytes. memory will be allocated for pointers.
+ problem is we can initialise any  variable address in future.First  variable address is passed,later we can change address inside pointer. Means we can initialize another variable address into this pointer, due to this which variable adress it is going to store,makes confusion. Thats why pointer is not secured.To overcome the above limitations, reference datatype is introduced.
+
+==>A variable can be declared as a reference by putting '&' in the declaration. 
+syntax:
+data_type &refname = existing variable;
+
+ex:
+int num=10;
+int &refnum=num;
+
+==>num is an integer variable, located at some address which is initialized to a value 10.
+==>refnum is a another name for variable num, therefore refnum is a reference to num.
+
+==>We can access the contents of the variable through either the original variable name or the reference  name. 
+ex:
+int i = 17;
+int &r = i;
+r is the reference name for the original variable name i.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int num=10;
+	int &refnum=num;
+	cout<<num<<"  "<<refnum<<endl;
+	num=100;
+	cout<<num<<"  "<<refnum<<endl;
+	cout<<&num<<"   "<<&refnum<<endl;
+	
+}
+
+==>No seperate memory is allocated for a reference.Its just an alternative name given to the existing variable.
+==>Reference must be initialized at the time of the declaration.
+	
+	int num=10;
+	int &refnum;//error
+	refnum=num;
+
+==>Once a reference is initialized to an variable, it cannot be  refer to another variable i.e it is secured. 
+hence reference is a rigid connection.
+
+#include <iostream>  
+using namespace std;  
+int main()  
+{  
+int x=11; // variable initialization  
+int z=67;  
+int &y=x; // y reference to x  
+int &y=z; // y reference to z, but throws a compile-time error.  
+return 0;
+}  
+========================================================
+pass by value
+
+#include <iostream>  
+using namespace std; 
+void swap(int,int);
+int main()  
+{  
+	int a,b;
+	cout<<"enter values of a & b\n"<<endl;
+	cin>>a>>b;//10 20
+	swap(a,b);
+	cout<<"after swapping "<<endl;
+	cout<<"values of a & b is"<<a<<"\t"<<b<<endl;
+}
+void swap(int p,int q)
+{
+	int temp;
+	temp=p;
+	p=q;
+	q=temp;
+	
+}
+
+===============================================
+#include <iostream>  
+using namespace std; 
+void swap(int*,int*);
+int main()  
+{  
+	int a,b;
+	cout<<"enter values of a & b\n"<<endl;
+	cin>>a>>b;//10 20
+	swap(&a,&b);
+	cout<<"after swapping "<<endl;
+	cout<<"values of a & b is"<<a<<"\t"<<b<<endl;
+}
+void swap(int* p,int* q)
+{
+	int temp;
+	temp=*p;
+	*p=*q;
+	*q=temp;
+	
+}
+================================================================
+
+
+
+Reference can pass as a parameter to function.
+
+==>References can also be passed as a function parameter. It does not create a copy of the argument and behaves as an alias for a parameter. It enhances the performance as it does not create a copy of the argument.As it doesnot create a copy for reference,memory requirement is less .
+Pass by reference will reduce the complexity  generated by pointers in pass by address.
+
+#include <iostream>  
+using namespace std; 
+void swap(int&, int&); 
+int main()  
+{  
+	int a,b;
+	cout<<"enter values of a & b\n"<<endl;
+	cin>>a>>b;
+	swap(a,b);
+	cout<<"after swapping "<<endl;
+	cout<<"values of a & b is"<<a<<b<<endl;
+}
+void swap(int &p,int &q)
+{
+	int temp;
+	temp=p;
+	p=q;
+	q=temp;
+	
+}
+===================================================
+//more than 1 reference/alias name can be given to a single variable
+#include <iostream> 
+using namespace std; 
+ int main() 
+{ 
+    int num=10;
+	int& a=num;
+	int &b=num;
+	cout<<a<<b<<num;
+	a=20;
+	cout<<a<<b<<num;
+}
+
+=========================================================================
+#include <iostream> 
+using namespace std; 
+ int main() 
+{ 
+    int num=10;
+	int& a=num;
+	int &b=num;
+	printf("%d %d %d\n",&a,&b,&num);
+	cout<<&a<<"\t"<<&b<<"\t"<<&num;
+}
+
+======================================
+#include <iostream> 
+using namespace std; 
+int main()
+{
+int a=100;
+int &b=a;
+int &c=b;
+cout<<a<<b<<c;
+c=200;
+cout<<a<<b<<c;
+}
+========================================================================================
+
+Difference between pointer and reference;
+1)pointer is a flexible connection. it can point to any variable at a given point of a program.
+Reference is a rigid connection,reference once created,cannot refer to any other object.
+
+2)pointer has to be dereferenced using * operator to access the value at the address pointed by it.
+A reference has direct connection as it is another name for the same memory location.
+
+3)Reference cannot be null whereas pointer can point to null to indicate that they are not pointing to any valid thing. .
+
+========================================================================================
+
+
+
+
+
+
+
+FAQ:Can pointer point to NULL?
+#include <iostream>
+using namespace std;
+ int main()
+{
+    int* ptr = NULL;
+    int& ref = *ptr;
+    cout << ref << '\n';
+}
+//ERROR
+===================================================================================
+Scope resolution operator
+#include <iostream> 
+using namespace std; 
+ class Demo
+ {
+ 	int x;
+ 	public:
+ 		void accept();
+ 		int display();
+ 		
+ };
+ /*returntype classname::functionname(datatype argument name)
+ {
+}*/
+int Demo::display()
+{
+	
+}
+void Demo::accept()
+{
+	
+}
+
+ int main()
+ {
+ 	Demo d;
+ 	d.accept();
+ 
+ 
+ 
+ }
+ ======================================================
+Constructor
+
+Sequence after creation of object
+1)memory  allocated by the compiler 
+2)constructor invocation by compiler implicitly
+3)memory initialization by constructor
+
+==>Constructor in C++ is a special function that is invoked automatically at the time of object creation. It is used to initialize the data members of newly created objects.
+==>The constructor in C++ has the same name as the class . It constructs the values i.e. provides data for the object which is why it is known as constructor.
+==>Constructor do not return value, hence they do not have a return type not even void.
+==>Constructor cannot be constant member function.
+ 
+The prototype of the constructor looks like 
+     <class-name> (list-of-parameters);
+
+Constructor can be defined inside the class declaration or outside the class declaration
+a.    Syntax for defining the constructor within the class
+        <class-name>(list-of-parameters)
+        {
+                  //constructor definition
+        }
+
+b.    Syntax for defining the constructor outside the class
+
+        <class-name>: :<class-name/functionname>(list-of-parameters)
+        {
+                //constructor definition
+        }
+
+ Types of Constructors
+Default Constructors: 
+==>The constructor which doesn’t take any argument. It has no parameters. It is also called as no argument constructor.
+==>If constructor is not defined in the source code by the programmer, then the compiler defined the default constructor implicitly during compilation .
+#include<iostream>
+using namespace std;
+class Cdate
+{
+	int dd,mm,yy;
+	public:
+		void display()
+		{
+			cout<<"display today's date\n";
+			cout<<dd<<"/"<<mm<<"/"<<yy<<endl;
+		}
+};
+
+int main()
+{
+	Cdate d1;
+	d1.display();
+
+	
+}
+
+======================================================
+==>There can be only one no argument constructor per class.
+=================================================
+
+#include<iostream>
+using namespace std;
+class Cdate
+{
+	int dd,mm,yy;
+	public:
+		Cdate(int,int,int);
+		Cdate()//no argument constructor
+		{
+			cout<<"default constructor called\n";
+			dd=26;
+			mm=2;
+			yy=2025;
+			
+		}
+
+		void display()
+		{
+			cout<<"display today's date\n";
+			cout<<dd<<"/"<<mm<<"/"<<yy<<endl;
+		}
+};
+
+Cdate::Cdate(int d,int m ,int y)
+{
+	cout<<"para constructor called\n";
+	dd=d;
+	mm=m;
+	yy=y;
+	
+}
+int main()
+{
+	Cdate d1;
+	Cdate d2(27,2,2025);
+	d1.display();
+	d2.display();
+
+	
+}
+=======================================
+
+FAQs
+
+1. What is the significance of the default constructor? 
+
+    ==>They are used to create objects, which do not have any specific initial value. 
+
+2. Is a default constructor automatically provided?
+
+   ==>If no constructors are explicitly declared in the class, a default constructor is provided automatically by the compiler. 
+
+=====================================================================
+2. Parameterized Constructors: 
+
+==>A constructor with parameters is called as parametrized constructor.
+ ==> It is used to provide different values to distinct objects.
+==>If Parametrized constructor is not defined in the source code by the programmer, then the compiler cannot defined the default copy of Parametrized constructor implicitly during compilation.
+#include<iostream>
+using namespace std;
+class Cdate
+{
+	int dd,mm,yy;
+	public:
+		
+		void display()
+		{
+			cout<<"display today's date\n";
+			cout<<dd<<"/"<<mm<<"/"<<yy<<endl;
+		}
+};
+
+
+int main()
+{
+	Cdate d1(1,2,2025);
+
+
+	
+}
+
+==============================================================
+
+==>Constructors can be overloaded with different signatures.
+
+==> when the parameterized constructor is defined explicitly by programmer and no argument constructor is not defined explicitly, the compiler will not implicitly give call  to the default constructor and hence it will generate compilation error while creating object
+#include<iostream>
+using namespace std;
+class Cdate
+{
+	int dd,mm,yy;
+	public:
+		Cdate(int,int,int);
+		void display()
+		{
+			cout<<"display today's date\n";
+			cout<<dd<<"/"<<mm<<"/"<<yy<<endl;
+		}
+};
+
+Cdate::Cdate(int d,int m ,int y)
+{
+	cout<<"para constructor called\n";
+	dd=d;
+	mm=m;
+	yy=y;
+	
+}
+int main()
+{
+	Cdate d1;//error 
+
+
+	
+}
+
+=================================================
+#include<iostream>
+using namespace std;
+#include<string.h>
+class Student
+{
+	int rollno;
+	char name[10];
+	float per;
+	public:
+		Student(int r,char* ptr,float p)
+		{
+			rollno=r;
+			strcpy(name,ptr);
+			per=p;			
+		}
+		void display()
+		{
+			cout<<"rollno  is  "<<rollno<<"name is "<<name<<"per is "<<per; 
+		}
+		
+};
+int main()
+{
+	Student s1(101,"rahul",67.42);
+	s1.display();
+	
+}
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+#include <iostream>  
+using namespace std; 
+class Complex
+{
+
+	int real,img;
+	public:
+		void show();
+		Complex();
+		Complex(int,int);
+		
+};
+void Complex ::show()
+{
+	cout<<"complex no is "<<real<<"+"<<img<<"i"<<endl;
+}
+Complex::Complex()
+{
+	cout<<"in default constructor\n";
+	//real=10;
+	//img=20;
+	cout<<"enter value of real\n";
+	cin>>real;
+	cout<<"enter value of img\n";
+	cin>>img;
+	
+}
+Complex::Complex(int r,int i)
+{
+	cout<<"in parametrized constructor\n";
+	real=r;
+	img=i;
+}
+int main()
+{
+	Complex c1,c2;
+	c1.show();
+	c2.show();
+	Complex c3(5,6);
+	c3.show();
+	
+}
+
+
+===================================================
+
+Excercise 1:
+#include <iostream>
+using namespace std;
+ class Point {
+    Point()
+ {
+ cout << "Constructor called"; 
+ }
+};
+int main()
+{
+    Point t1;
+    return 0;
+}
+
+Excercise 2:
+#include<iostream>
+using namespace std;
+class Point {
+public:
+    Point() { cout << "Constructor called"; }
+};
+int main()
+{
+   Point t1, *t2;
+   return 0;
+}
+==========================================================
+Function Overloading
+
+==>In C++, We can have more than one constructor in a class with same name, as long as each has a different list of signatures.This concept is known as Constructor Overloading 
+==>Two or more function having same function name but different signatures is called as function overloading.
+==> In Function Overloading ,Function name should be the same and the arguments should be different. 
+==>The criteria to overload a constructor is to differ the number of arguments or the type of arguments or sequence of the argument.
+==>. We dont consider return type as a criteria to overload a constructor.
+
+Why Function Overloading?
+Suppose you have to perform addition of the given numbers but there can be any number of arguments, if you write the function such as a(int,int) for two parameters, and b(int,int,int) for three parameters then it may be difficult for you to understand the behavior of the function because  function name will be different.
+ 
+The parameters should follow any one or more than one of the following conditions for Function overloading:
+
+1)Parameters should have a different type
+add(int a, int b)
+add(double a, double b)
+
+#include <iostream>
+using namespace std;
+ void add(int a, int b)
+{
+  cout << "sum = " << (a + b);
+}
+ void add(double a, double b)
+{
+    cout << endl << "sum = " << (a + b);
+}
+ int main()
+{
+    add(10, 2);
+    add(5.3, 6.2);
+ }
+
+2)Parameters should have a different number of argument
+add(int a, int b)
+add(int a, int b, int c)
+
+#include <iostream>
+using namespace std;
+ void add(int a, int b)
+{
+  cout << "sum = " << (a + b);
+}
+ void add(int a, int b, int c)
+{
+    cout << endl << "sum = " << (a + b + c);
+}
+int main()
+{
+    add(10, 2);
+    add(5, 6, 4);
+  }
+
+3)Parameters should have a different sequence of parameters.
+add(int a, double b)
+add(double a, int b)
+
+#include<iostream>
+using namespace std;
+ void add(int a, double b)
+{
+    cout<<"sum = "<<(a+b);
+} 
+ void  add(double a, int b)
+{
+    cout<<endl<<"sum = "<<(a+b);
+} 
+ int main()
+{
+    add(10,2.5);
+    add(5.5,6);
+ }
+
+------------------------------------
+How does Function Overloading work?
+Exact match:- (Function name and Parameter)
+If a not exact match is found:–
+               ->Char are promoted to an int.
+
+               ->Float is promoted to double
+  	       ->    A bool can be promoted to an int (FALSE counts as 0, TRUE as 1).
+If no match is found:
+               ->C++ tries to find a match through the standard conversion.
+
+ELSE ERROR
+
+
+
+
+#include<iostream>
+using namespace std;
+ void add(int a, char b)
+{
+    cout<<"sum = "<<(a+b);
+} 
+ void add(int a,int b)
+{
+    cout<<endl<<"sum = "<<(a+b);
+} 
+void add(double a,double b)
+{
+    cout<<endl<<"sum = "<<(a+b);
+}
+ int main()
+{
+    add('A','B');
+    add(true,false);
+    add(1.2f,1.2f);
+ }
+
+
+=========================================================
+Array in C++
+
+In C++, an array is a data structure that is used to store multiple values of similar data types in a contiguous memory location.
+
+Array Declaration in C++
+In C++, we can declare an array by simply specifying the data type first and then the name of an array with its size.
+data_type array_name[Size_of_array];
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[5];
+    int i;
+    cout<<"accept elements\n";
+    for(i=0;i<=4;i++)
+    cin>>a[i];
+     cout<<"display elements\n";
+    for(i=0;i<=4;i++)
+    cout<<a[i]<<"\t";
+}
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[5];
+    int i;
+    cout<<"accept elements\n";
+    for(i=0;i<=4;i++)
+    cin>>*(a+i);
+     cout<<"display elements\n";
+    for(i=0;i<=4;i++)
+    cout<<*(i+a)<<"\t";
+}
+
+write a program to take Inputs from User and Store Them in an Array
+#include <iostream>
+using namespace std;
+int main()
+ {
+  int numbers[5];
+  cout << "Enter 5 numbers: " << endl;
+  //  store input from user to array
+  for (int i = 0; i < 5; ++i) {
+    cin >> numbers[i];
+  }
+  cout << "The numbers are: ";
+
+  //  print array elements
+  for (int n = 0; n < 5; ++n) {
+    cout << numbers[n] << "  ";
+  }
+
+  return 0;
+}
+============================================================================
+#include <iostream>
+using namespace std;
+int main()
+ {
+  int numbers[5];
+  cout << "Enter 5 numbers: " << endl;
+  //  store input from user to array
+  for (int i = 0; i < 5; ++i) {
+    cin >>*(numbers+i);
+  }
+
+  cout << "The numbers are: ";
+
+  //  print array elements
+  for (int n = 0; n < 5; ++n) {
+    cout << *(numbers+n) << "  ";
+  }
+
+  return 0;
+}

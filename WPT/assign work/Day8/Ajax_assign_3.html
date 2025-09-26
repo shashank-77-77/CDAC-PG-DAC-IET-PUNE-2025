@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX - Fetch Post by ID</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+</head>
+
+<body>
+    <style>
+            #content {
+    margin-top: 40px;
+    /* padding: 10px; */
+    border: 1px solid #ff0000;
+
+}
+
+table {
+    width: 100%;
+    border-width: 10%;
+    border-collapse: separate;
+}
+
+table, th, td {
+    border: 1px solid rgb(15, 11, 233);
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+    </style>
+    <div>
+        <label for="postId">Enter Post ID: </label>
+        <input type="number" id="postId" placeholder="Enter Post ID" />
+        <button id="dataBtn">Get Data</button>
+    </div>
+
+    <div id="content"></div>
+
+    <script>
+        document.getElementById("dataBtn").addEventListener("click", function () {
+
+            let postId = document.getElementById("postId").value;
+
+            if (postId === "") {
+                alert("Please enter a Post ID.");
+                return;
+            }
+
+            $.ajax({
+                url: `https://jsonplaceholder.typicode.com/posts/${postId}`, 
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+
+                    if (data && data.id) {
+
+                        let table = `<table><thead><tr><th>ID</th><th>Title</th></tr></thead><tbody>`;
+                        table += `<tr><td>${data.id}</td><td>${data.title}</td></tr>`;
+                        table += '</tbody></table>';
+
+
+                        document.getElementById("content").innerHTML = table;
+                    } else {
+
+                        document.getElementById("content").innerHTML = "<p>Post not found. Please try a valid ID.</p>";
+                    }
+                },
+                error: function () {
+                    document.getElementById("content").innerHTML = "<p>Error loading data. Please try again.</p>";
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

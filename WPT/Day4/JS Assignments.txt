@@ -1,0 +1,31 @@
+Today we need to use VS Code for Javascript Programs 
+
+  1) to run Javascript we need to Install Node JS 
+  2) then set path for node js in Enviornment Variable
+
+Assignments -----
+
+
+1) Write a function getFactorialImpl ( choice="FORLOOP" ) ----it could be FORLOOP or RECUR
+	Function Fact2(n1)
+	Use recursion and print the factorial
+	If the choice is FORLOOP return Fact1
+	If the choice is RECUR then return Fact2
+	Outside --- call let rv = getFactorialImpl("RECUR")
+	rv(3)
+	Rv = getFactorialImpl()
+	rv(5)
+
+2) Write a Program to use Different Array Library Functions using switch case
+
+3) Declare Array with String Data 
+	display every element in uppercase format
+             (use prdefined methods of String)
+4) write a function to add 3 numbers and print the values
+
+5) write a function that multiplies two numbers and returns the value
+
+6) Write a function to divide two numbers and assign function to a variable
+
+7) To Find max number from array write code in 3 ways as shown in lecture 
+

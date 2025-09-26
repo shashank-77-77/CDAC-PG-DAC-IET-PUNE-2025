@@ -1,0 +1,5 @@
+Bill ID: 101
+Customer: Alice
+Laptop - 75000
+Mouse - 500
+------------------------

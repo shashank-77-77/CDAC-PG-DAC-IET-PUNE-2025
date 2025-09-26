@@ -1,0 +1,2096 @@
+Math library functions
+
+C++ being a superset of C, supports a large number of useful mathematical functions. These functions are available in standard C++ to support various mathematical calculations.
+Instead of focusing on implementation, these functions can be directly used to simplify code and programs. In order to use these functions you need to include a header file- <math.h> or <cmath>.
+
+sqrt()	This function takes a number as an argument and returns its square root value. The number can not be a negative value.
+Consider a argument 'arg' :
+square_root of a number=√arg  
+Syntax
+Syntax would be :
+
+double sqrt(double arg);  
+float sqrt(float arg);    
+double sqrt(integral arg);  
+
+// CPP Program to demonstrate errors in double sqrt()
+#include <cmath>
+#include <iostream>
+using namespace std;
+int main()
+{
+    double answer;
+    answer = sqrt(10);
+    cout << "Square root of " << " is " << answer;
+     return 0;
+}
+
+If we pass a negative value in the argument domain error occurs and the output will be the Square root of -a, which is -nan.
+=============================================================================================
+int abs(int)	This function takes an integer number as an argument and returns its absolute value. It means the output will always be positive regardless of the sign of the input.
+
+#include <math.h>
+#include <iostream>
+ using namespace std;
+ int main()
+{
+    int val1, val2;
+ 
+    /// finding absolute value using
+    /// abs() function.
+    val1 = abs(1.9);
+    val2 = abs(-43);
+ int	val3= abs(-2.5);
+    cout << val1 << "\n";
+    cout <<  val2 << "\n";
+	cout <<  val3 << "\n";
+	    return 0;
+}
+
+===============================================================================
+double pow(double, double)	This function takes one argument as base and another as exponent.
+
+#include <iostream>  
+#include<cmath>  
+using namespace std;  
+int main()  
+{  
+int base=4;  
+  int exponent=2;  
+  int power=pow(base,exponent);  
+  cout << "Power of a given number is :" <<power;  
+  return 0;  
+}  
+Output:
+
+Power of a given number is :16
+=============================================================
+C++ Math ceil()
+It rounds the value to the nearest integer which is not less than the given value.
+
+For example :
+ceil(8.1)=9.0;  
+ceil(-8.8)=-8.0;  
+
+Example :
+
+#include <iostream>  
+#include<cmath>  
+using namespace std;  
+int main()  
+{  
+  float x=9.2;  
+   cout<<"final value of x is :"<<ceil(x);  
+  return 0;  
+}  
+
+========================================================
+Example 2
+
+#include <iostream>  
+#include<cmath>  
+using namespace std;  
+int main()  
+{  
+  float x=-2.2;  
+  cout<<"final value of x is :"<<ceil(x);  
+  return 0;  
+}  
+==============================================================
+
+C++ Math floor()
+It rounds the value to the nearest integer which is not greater than the given value.
+
+For example:
+
+floor(8.2)=8.0;  
+floor(-8.8)=-9.0;  
+
+#include <iostream>  
+#include<math.h>  
+using namespace std;  
+int main()  
+{  
+ float x=7.8;  
+cout<<"Now, the value of x is :"<<floor(x);  
+ return 0;  
+}  
+========================================
+#include <iostream>  
+#include<math.h>  
+using namespace std;  
+int main()  
+{  
+ float x=-10.2;  
+cout<<"Now, the value of x is :"<<floor(x);  
+ return 0;  
+}  
+================================================================================
+C++ Math round()
+This function is used to round off the given value which can be either float or double.
+
+For example:
+
+round(5.8)= 6;  
+round(-1.1)= -1;  
+
+#include <iostream>  
+#include<math.h>  
+using namespace std;  
+int main()  
+{  
+    float x=8.3;  
+    cout<<"Rounded value of x is : "<<round(x);  
+    return 0;  
+}  
+
+#include <iostream>  
+#include<math.h>  
+using namespace std;  
+int main()  
+{  
+    double x=-9.9;  
+     cout<<"Rounded value of x is : "<<round(x);  
+    return 0;  
+}  
+==================================================================
+
+===========================================================================================
+Function:
+
+Adv:
+1)Reuasability
+2)memory req is less
+3)repetition of code is reduced
+4)modularity.
+5)plugability
+6)function is handled by compiler and thats why it is type safe.
+
+limitations:
+1)time req is more
+
+function should be used for larger program
+===========================================
+Macro : It is also called preprocessors directive. The macros are defined by the #define keyword. Before the program compilation, the preprocessor examines the program whenever the preprocessor detects the macros then preprocessor replaces the macro by the macro definition. 
+Syntax of Macro:
+#define MACRO_NAME Macro_definition 
+
+
+Example of Macro:
+#include <iostream> 
+using namespace std; 
+  
+#define MAXIMUM(a, b) (a > b) ? a : b 
+int main() 
+{ 
+    cout << "Max (100, 1000):"; 
+    int k = MAXIMUM(100, 1000); 
+    cout << k << endl; 
+    cout << "Max (20, 0):"; 
+    int k1 = MAXIMUM(20, 0); 
+    cout << k1; 
+    return 0; 
+} 
+Output:
+Max (100, 1000):1000
+Max (20, 0):20 
+
+
+adv:
+time req is less as macro is inline to the program(within the program,the code gets replaced)
+
+lim:
+memory req is more
+macros are not typesafe since it is handled by preprocessor
+================================================
+
+==>to overcome the limitations of function and macro,inline function is used.
+
+Inline Function
+
+==>C++ provides inline functions to reduce the function call overhead. An inline function is a function that is expanded in line when it is called. When the inline function is called whole code of the inline function gets inserted or substituted at the point of the inline function call. This substitution is performed by the C++ compiler at compile time. An inline function may increase efficiency if it is small.
+
+Syntax:
+inline return-type function-name(parameters)
+{
+    // function code
+}  
+
+==>Remember, inlining is only a request to the compiler, not a command. The compiler can ignore the request for inlining. 
+
+==>The compiler may not perform inlining in such circumstances as: 
+If a function contains a loop. (for, while and do-while) 
+If a function is recursive. 
+If a function contains a switch or nested loop
+If a function contains static variables.
+
+Why Inline Functions are Used?
+When the program executes the function call instruction the CPU stores the memory address of the instruction following the function call, copies the arguments of the function on the stack, and finally transfers control to the specified function. The CPU then executes the function code, stores the function return value in a predefined memory location/register, and returns control to the calling function. This can become overhead if the execution time of the function is less than the switching time from the caller function to called function (callee). 
+ However, for small, commonly-used functions, the time needed to make the function call is often a lot more than the time needed to actually execute the function’s code. This overhead occurs for small functions because the execution time of a small function is less than the switching time.
+======================================================================
+==>When a function is invoked, it expands in line and is known as an inline function. When an inline function is invoked, its entire body of code is added or replaced at the inline function call location. At compile time, the C++ compiler makes this substitution.
+
+
+Inline functions Advantages: 
+    Function call overhead doesn’t occur. 
+    It also saves the overhead of push/pop variables on the stack when a function is called. 
+    It also saves the overhead of a return call from a function. 
+    enhance the execution time and speed of your program.The compilation speed of the program gets increased since the inline functions prevent function call overhead. 
+
+
+Inline function Disadvantages: 
+1)If you use too many inline functions then the size of the binary executable file will be large, because of the duplication of the same code. 
+2)The inline function may increase compile time overhead if someone changes the code inside the inline function then all the calling location has to be recompiled because the compiler would be required to replace all the code once again to reflect the changes, otherwise it will continue with old functionality. 
+
+#include <iostream>
+using namespace std;
+inline int cube(int s) { return s * s * s; }
+int main()
+{
+    cout << "The cube of 3 is: " << cube(3) << "\n";
+    return 0;
+}
+
+Output
+The cube of 3 is: 27
+
+========================================
+
+
+
+==========================================================
+Multiple Inheritance in C++:
+
+Multiple Inheritance is a feature of C++ where a class can inherit from more than one classes.  The constructors of inherited classes are called in the same order in which they are inherited.
+==>The list of base classes memtioned in the derived class declaration must be seperated by commas and each of the base classes should use its own specifier . If the class specifier is not specified,default is private.
+==>The order in which base class constructors are invoked is the same as the  order in which they appear in the derived class constructor's member initialization list.
+Syntax:
+
+class A
+{ 
+... .. ... 
+};
+class B
+{
+... .. ...
+};
+class C: public A,public B
+{
+... ... ...
+};
+
+#include<iostream>
+using namespace std;
+ 
+class A
+{
+public:
+  A()  { cout << "A's constructor called" << endl; }
+};
+ 
+class B
+{
+public:
+  B()  { cout << "B's constructor called" << endl; }
+};
+ 
+class C: public B, public A  // Note the order
+{
+public:
+  C()  { cout << "C's constructor called" << endl; }
+};
+ 
+int main()
+{
+    C c;
+    return 0;
+}
+Output:
+
+B's constructor called
+A's constructor called
+C's constructor called
+The destructors are called in reverse order of constructors.
+==================================================================
+#include<iostream>
+using namespace std;
+ 
+class A
+{
+	int a;
+public:
+  A()  { cout << "A's default constructor called" << endl; }
+  A(int p) 
+{
+    cout << "A's para constructor called" << endl;
+}
+};
+ 
+class B
+{
+	int b;
+public:
+  B()  { cout << "B's default constructor called" << endl; }
+  B(int q)
+  { 
+  		cout << "B's para constructor called" << endl;
+  }
+};
+ 
+class C: public B, public A  // Note the order
+{
+public:
+  C(int p,int q):A(p),B()
+    { 
+	cout << "C's para constructor called" << endl; 
+	}
+};
+ 
+int main()
+{
+    C c(10,20);
+    return 0;
+}
+
+
+
+
+
+====================================================
+
+Ambiguity Problem in Multiple Inheritance
+In Multiple Inheritance, when a single class is derived from two or more base or parent classes. So, it might be possible that both the parent class have the same-named member functions, and it shows ambiguity when the child class object invokes one of the same-named member functions. Hence, we can say, the C++ compiler is confused in selecting the member function of a class for the execution of a program.
+ex:
+Base classes can contain a function with the same name,signature and returntype.
+class A
+{ 
+... .. ... 
+};
+class C
+{
+... .. ...
+};
+class B: public A,public B
+{
+... ... ...
+};
+B bobj
+bobj.func();
+
+==>Here,the function call is ambiguous and doesnot compile,because it is not clear whether it refers to A::func() or C::func().This ambiguity can be resolved by any one of the following 2 ways.
+1)Making the call explicit by resolving the function call with the classname i.e specifying either  bobj.A::func() or bobj.c::func()
+2)overriding the func() in class B . then the statement bobj.func() will call func() of class B and the call will not be ambiguous.
+
+#include <iostream>  
+#include <conio.h>  
+  
+using namespace std;  
+  
+// create class A  
+class A  
+{  
+    public:   
+    void show()  
+    {  
+        cout << " It is the member function of class A " << endl;  
+    }  
+ };   
+   
+ // create class B  
+ class B  
+{  
+    public:   
+    void show()  
+    {  
+        cout << " It is the member function of class B " << endl;  
+    }  
+ };  
+   
+   
+ // create a child class to inherit the member function of class A and class B  
+ class child: public A, public B  
+ {  
+    public: 
+	/*void show()
+	{
+		A::show();
+		B::show();
+		cout<<"in child class show()";
+	 } */
+        void display()  
+        {  
+            cout << " It is the member function of the child class " << endl;  
+         }  
+ };  
+   
+ int main ()  
+ {  
+     
+    child ch;  
+    //ch.show(); // It causes ambiguity 
+	//ch.A::show();
+	//ch.B::show(); 
+	ch.show(); 
+//ch.disp();  
+    return 0;  
+ } 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+==========================================================================
+Diamond Inheritance:
+In diamond inheritance,one child has two parents and both the parents share a common parent. When in a hierarchy, a class is derived from two classes and both the classes are derived from a common base class,it is termed as diamond inheritance.
+
+Diamond Problem No 1:
+
+The Diamond Problem is an ambiguity error that arises in multiple inheritance when a derived class inherits from two or more base classes that share a common parent. This results in the inheritance hierarchy forming a diamond shape, hence the name "Diamond Problem." The ambiguity arises because the derived class has multiple paths to access members or methods inherited from the common parent, leading to confusion during method resolution and member access.
+diamond-problem-in-cpp
+
+// C++ Program to illustrate the diamond problem
+#include <iostream>
+using namespace std;
+
+// Base class
+class Base {
+public:
+    void fun() { cout << "Base" << endl; }
+};
+
+// Parent class 1
+class Parent1 : public Base {
+public:
+};
+
+// Parent class 2
+class Parent2 : public Base {
+public:
+};
+
+// Child class inheriting from both Parent1 and Parent2
+class Child : public Parent1, public Parent2 {
+};
+
+int main()
+{
+    Child* obj = new Child();
+    obj->fun(); // Abiguity arises, as Child now has two copies of fun()
+    return 0;
+}
+================================================================
+Diamond Problem No 2:
+
+ The diamond problem occurs when two superclasses of a class have a common base class. For example, in the following diagram, the TA class gets two copies of all attributes of Person class, this causes ambiguities.
+
+#include<iostream>
+using namespace std;
+class Person {
+public:
+    Person(int x)  { cout << "Person::Person(int ) called" << endl;   }
+};
+ 
+class Faculty : public Person {
+ public:
+    Faculty(int x):Person(x)   {
+       cout<<"Faculty::Faculty(int ) called"<< endl;
+    }
+};
+ 
+class Student : public Person {
+public:
+    Student(int x):Person(x) {
+        cout<<"Student::Student(int ) called"<< endl;
+    }
+};
+ 
+class TA : public Faculty, public Student  {
+public:
+    TA(int x):Student(x), Faculty(x)   {
+        cout<<"TA::TA(int ) called"<< endl;
+    }
+};
+ 
+int main()  {
+    TA ta1(30);
+}
+
+
+
+Person::Person(int ) called
+Faculty::Faculty(int ) called
+Person::Person(int ) called
+Student::Student(int ) called
+TA::TA(int ) called
+In the above program, constructor of ‘Person’ is called two times. Destructor of ‘Person’ will also be called two times when object ‘ta1’ is destructed. So object ‘ta1’ has two copies of all members of ‘Person’, this causes ambiguities. ========================================================================================
+#include<iostream>
+using namespace std;
+ class A
+{
+public:
+	int a;
+  A()  { cout << "A's default constructor called" << endl; }
+ 
+};
+ 
+class B: public A
+{
+
+public:
+	int b;
+  B()  { cout << "B's constructor called" << endl; }
+  
+};
+ 
+class C:public A  
+{
+public:
+	int c;
+  C()
+    { 
+	cout << "C's default constructor called" << endl; 
+	}
+	
+};
+ class D:public C,public B  
+{
+public:
+	int d;
+	D()
+	{
+		cout << "D's default constructor called" << endl; 
+	}
+  
+};
+int main()
+{
+  A aobj;
+  B bobj;
+  C cobj;
+  D dobj;
+  cout<<sizeof(dobj);
+}
+
+===============================================================================
+=
+#include<iostream>
+using namespace std;
+class Person {
+public:
+    Person(int x)  { cout << "Person::Person(int ) called" << endl;   }
+    Person()     { cout << "Person::Person() called" << endl;   }
+};
+ 
+class Faculty : virtual public Person {
+public:
+    Faculty(int x):Person(x)   {
+       cout<<"Faculty::Faculty(int ) called"<< endl;
+    }
+};
+ 
+class Student : virtual public Person {
+public:
+    Student(int x):Person(x) {
+        cout<<"Student::Student(int ) called"<< endl;
+    }
+};
+ 
+class TA : public Faculty, public Student  {
+public:
+    TA(int x):Student(x), Faculty(x)   {
+        cout<<"TA::TA(int ) called"<< endl;
+    }
+};
+ 
+int main()  {
+    TA ta1(30);
+}
+Output:
+
+Person::Person() called
+Faculty::Faculty(int ) called
+Student::Student(int ) called
+TA::TA(int ) called
+In the above program, constructor of ‘Person’ is called once. One important thing to note in the above output is, the default constructor of ‘Person’ is called.When we use ‘virtual’ keyword, the default constructor of grandparent class is called by default even if the parent classes explicitly call parameterized constructor.
+=======================================================================================
+How to call the parameterized constructor of the ‘Person’ class?
+
+The constructor has to be called in ‘TA’ class.
+
+For example, see the following program. 
+
+   
+#include<iostream>
+using namespace std;
+class Person {
+public:
+    Person(int x)  { cout << "Person::Person(int ) called" << endl;   }
+    Person()     { cout << "Person::Person() called" << endl;   }
+};
+ 
+class Faculty : virtual public Person {
+public:
+    Faculty(int x):Person(x)   {
+       cout<<"Faculty::Faculty(int ) called"<< endl;
+    }
+};
+ 
+class Student : virtual public Person {
+public:
+    Student(int x):Person(x) {
+        cout<<"Student::Student(int ) called"<< endl;
+    }
+};
+ 
+class TA : public Faculty, public Student  {
+public:
+    TA(int x):Student(x), Faculty(x), Person(x)   {
+        cout<<"TA::TA(int ) called"<< endl;
+    }
+};
+ 
+int main()  {
+    TA ta1(30);
+}
+Output:
+
+Person::Person(int ) called
+Faculty::Faculty(int ) called
+Student::Student(int ) called
+TA::TA(int ) called
+In general, it is not allowed to call the grandparent’s constructor directly, it has to be called through parent class. It is allowed only when ‘virtual’ keyword is used.
+=====================================================================================
+
+====================================================================
+
+
+Virtual base class in C++
+
+problem 1:
+If the base class contain a function with same name then while calling this function in the derived class or through an object of derived class, the compiler flashes an error of ambiguous call.
+
+problem 2:
+data duplication occurs when the derived class has multiple copies of the same base class.
+
+==>To avoid 2 major problems in case of diamond inheritance,c++ introduces a concept of a virtual base class. A virtual base class is a class that is virtually present in its derived classes(i.e in the form of virtual base class pointer). 
+==>A base class is made virtual by placing the keyword virtual before its name in the derived class declaration.(imp)
+==Virtual base classes offer a way to save spacce and avoid ambiguities in class hierarchies that use diamond inheritance.
+==>When a base class is specified as virtual,prevents duplicating its data members.A single copy of its data members is shared by all the base classes that use it as virtual base.
+==>if a virtual base class is not used ,all the derived classes will get duplicated data members.
+==>If a class inherits one or more classes with virtual parents, the most derived class is responsible for constructing the virtual base class. Here Class d is responsible for creating class A object.
+
+Employee:  id
+Manager:petrolallow,foodallow,virtual base pointer
+Salesperson:sales,comm,virtual base pointer
+Salesmanager:petrolallow,foodallow,virtual base pointer + sales,comm,virtual base pointer+id
+
+class Salesperson:virtual public Employee
+{}
+
+class Manager:virtual public Employee
+{}
+
+=====================================================================
+
+diamond inheritance
+case 1: with virtual base class, from derived class constructor,control will pass to super base class constructor either to default or 
+parametrized constructor depending on the base class initialization list mentioned in the derived class
+
+#include <iostream>
+using namespace std;
+class A
+{
+	int x;
+	public:
+		A()
+		{
+			cout<<"default const of A\n";
+		}
+		A(int x)
+		{
+			cout<<"para const of A\n";
+			this->x=x;
+		}
+		void display()
+		{
+			cout<<"value of x is "<<x<<endl;
+		}
+};
+class B:virtual public  A
+{
+	int y;
+	public:
+		B()
+		{
+			cout<<"default const of B\n";
+		}
+		B(int x,int y):A(x)
+		{
+			cout<<"para const of B\n";
+			this->y=y;
+		}
+		void display()
+		{
+			cout<<"value of y is "<<y<<endl;
+		}
+};
+class C:virtual public  A
+{
+	int z;
+	public:
+		C()
+		{
+			cout<<"default const of C\n";
+		}
+		C(int x,int z):A(x)
+		{
+			cout<<"para const of C\n";
+			this->z=z;
+		}
+		void display()
+		{
+			cout<<"value of z is "<<z<<endl;
+		}
+};
+class D:public B,public  C
+{
+	
+	public:
+		D()
+		{
+			cout<<"default const of D\n";
+		}
+		D(int x,int y,int z):B(x,y),C(x,z),A(x)
+		{
+			cout<<"para const of D\n";
+			
+		}
+};
+int main()
+{
+    D obj(10,20,30);
+    obj.B::display();
+    obj.C::display();
+    obj.A::display();
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+========================================================================
+Namespace:
+
+==>Namespace provide the space where we can define or declare identifier i.e. variable, function, classes. Namespace are necessary if you want more than one function with the same name. You can declare two different namespaces for these functions and call them by referencing their corresponding namespace. 
+
+==>A namespace is designed to overcome this difficulty and is used as additional information to differentiate similar functions, classes, variables etc. with the same name available in different libraries. 
+
+==> namespace helps in avoiding the ambiguity that may occur when two identifiers have the same name.
+
+For example, suppose you have two functions named calculate(), and both are performing different tasks. One calculate() function is doing the multiplication, and another is doing the addition. So in this case, to avoid ambiguity, you will declare both the functions in two different namespaces. These namespaces will differentiate both the functions and also provide information regarding both the functions.
+
+==>The best example of namespace scope is the C++ standard library (std) where all the classes, methods and templates are declared. Hence while writing a C++ program we usually include the directive 
+using namespace std;
+==============================================
+Defining a Namespace:
+A namespace definition begins with the keyword namespace followed by the namespace name as follows:
+namespace  namespace_name 
+{
+    // code declarations i.e. variable  (int a;)
+    function (void add();)
+    classes ( class student{};)
+}
+==>It is to be noted that, there is no semicolon (;) after the closing brace.
+==>Namespace only define them in a global scope.
+==>It is only present in C++ and not in C.
+==>Namespace declarations don’t have access specifiers (Public or Private).
+
+=================================================================
+
+C++ Namespace Example
+namespace Data
+{
+	class Manager
+	{
+	public:
+	void task() {}
+	};
+}
+
+You can access the class inside the above namespace in two ways:
+1)by using :: operator
+Data::Manager mgr;// mgr is an object
+
+
+Example:
+#include <iostream>
+using namespace std;
+// first name space
+namespace first_space
+{
+  void func()
+  {
+     cout << "Inside first_space" << endl;
+  }
+}
+// second name space
+namespace second_space
+{
+  void func()
+  {
+     cout << "Inside second_space" << endl;
+  }
+}
+ 
+int main ()
+{
+       // Calls function from first name space.
+      first_space :: func();
+    // Calls function from second name space.
+      second_space :: func(); 
+      return 0;
+}
+
+Output
+Inside first_space
+Inside second_space
+
+=======================================================================
+2)By using  "using" directive 
+==>You use the "using" directive to import the entire namespace into a program or another namespace. This directive eliminates the need to use the "namespace-name" every time. So it is better to use the "using" if you need several functions or classes from the namespace. Otherwise, if you only need to use it once or twice, "namespace-name::" would be a better choice.
+==>The using directive is positioned at the top of the program and it allows us to access all the namespace members.
+
+
+Example:
+#include <iostream>
+using namespace std;
+// first name space
+namespace first_space
+{
+	int a=10;
+  void func()
+  {
+     cout << "Inside first_space" << endl;
+  }
+}
+ 
+// second name space
+namespace second_space
+{
+int a=100;
+  void func()
+  {
+     cout << "Inside second_space" << endl;
+  }
+}
+using namespace first_space;
+int main ()
+{
+   // This calls function from first name space.
+  func();
+cout<<a;
+  return 0;
+}
+
+Output
+Inside first_space
+10
+==========================================================
+// without using std namespace
+std::cout
+std::cin
+std::endl
+std::exception
+std::bad_cast
+
+By including the using namespace std; code in our program, we can omit the std:: part for the identifiers defined in the std namespace:
+
+// using std namespace
+cout
+cin
+endl
+exception
+bad_cast
+
+
+
+===========================================================
+
+Nested Namespaces:
+Namespaces can be nested where you can define one namespace inside another name space as follows:
+SYNTAX:
+    namespace namespace_name1 
+    {
+          // code declarations
+          namespace namespace_name2 
+          {
+             // code declarations
+          }
+    }
+
+You can access members of nested namespace by using resolution operators as follows:
+==> to access members of namespace_name2
+using namespace namespace_name1::namespace_name2;
+==> to access members of namespace_name1
+using namespace namespace_name1;
+ 
+Example:
+#include <iostream>
+using namespace std;
+ // first name space
+namespace first_space
+{
+  void func()
+  {
+     cout << "Inside first_space" << endl;
+  }
+  // second name space
+  namespace second_space
+  {
+     void func()
+     {
+        cout << "Inside second_space" << endl;
+     }
+  }
+}
+using namespace first_space::second_space;
+int main ()
+{
+    // This calls function from second name space.
+      func();
+   
+      return 0;
+}
+
+Output
+Inside second_space
+=========================================================
+FAQ:
+
+#include<iostream>
+using namespace std;
+ namespace ns
+{
+    class geek
+    {
+    public:
+        void display()
+        {
+            cout<<"display()"<<endl;;
+        }
+    };
+}
+ 
+int main()
+{
+    // Creating Object of geek Class
+    ns::geek obj;
+ 
+    obj.display();
+ 
+    return 0;
+}
+
+Output
+ns::geek::display()
+================================================================
+==========================================================
+Standard Namespace
+The std is a short form of standard, the std namespace contains the built-in classes and declared functions.You can find all the standard types and functions in the C++ "std" namespace.
+
+#include<iostream>
+int main()
+{
+	std::cout<<"enter no to add";
+	int num1,num2;
+	std::cin>>num1;
+	std::cin>>num2;
+	std::cout<<"addition is"<<num1+num2;
+}
+Here std is used in front of cin and cout along with scope resolution operator, which indicates that the object cin and cout are defined inside the namespace whose name is std.The std is the standard library, and both cin and cout are defined inside this scope.
+
+====================================================================
+Advantage
+The primary advantage of namespaces is that they resolve any naming conflict. For example, sometimes, you may need more than one function with the same name. And namespaces provide a way to declare such functions without making the compiler ambiguous. 
+====================================================================
+
+======================================================================================
+Array of Integer pointers
+#include <iostream>  
+using namespace std;  
+int main()  
+{ 
+    int ptr1[5]; // integer array declaration  
+    int *ptr2[5]; // integer array of pointer declaration  
+    cout << "Enter five numbers :" <<endl;  
+    for(int i=0;i<5;i++)  
+    {  
+        cin >> ptr1[i];  
+    }  
+    for(int i=0;i<5;i++)  
+    {  
+        ptr2[i]=&ptr1[i];   
+    }    
+  cout << "The values are" << endl; 
+    for(int i=0;i<5;i++)  
+    {  
+        cout << *ptr2[i] << endl;  
+    }
+		cout<<sizeof(ptr2);
+    }  
+========================================================================
+
+========================================================
+Generic Programming 
+
+
+
+
+
+
+
+
+
+  ==>Generic Programming is implemented to increase the efficiency of the code. Generic Programming enables the programmer to write a general algorithm which will work with all data types. It eliminates the need to create different algorithms if the data type is an integer, string or a character. 
+The advantages of Generic Programming are
+Code Reusability
+Avoid Function Overloading
+Once written it can be used for multiple times with different parameters list
+
+Generics can be implemented in C++ using Templates.
+
+Templates
+==>A template is a simple yet very powerful tool in C++. The simple idea is to pass the data type as a parameter so that we don’t need to write the same code for different data types. For example, a software company may need to sort() for different data types. Rather than writing and maintaining multiple codes, we can write one sort() and pass the datatype as a parameter. 
+
+==>  It allows you to define the generic classes and generic functions and thus provides support for generic programming. Generic programming is a technique where generic types are used as parameters in algorithms so that they can work for a variety of data types.
+
+==>How Do Templates Work?
+Templates are expanded at compiler time. This is like macros. The difference is, that the compiler does type-checking before template expansion. The idea is simple, source code contains only function/class, but compiled code may contain multiple copies of the same function/class. 
+
+=========================================================================
+Templates can be represented in two ways:
+
+Function template 
+==>We can define a template for a function. For example, if we have an add() function, we can create versions of the add function for adding the int, float or double type values.
+==>We write a generic function that can be used for different data types. Examples of function templates are sort(), max(), min(), printArray(). 
+==>Function Template is used to write generic functions that can be used with different datatypes.The method of Generic Programming is implemented to increase the efficiency of the code.
+==>The types of parameters passed to it during its call decide the actual data types which the function will operate upon. Generic functions are like 'write once use multiple times'.
+==>This generality of coding reduces the programmers efforts of writing multiple  function definitions having the same implementation or algorithm for different datatypes that might be passed to it. This saves time,disk space,and efforts to rewrite the source code.
+
+A Generic function is created by using the keyword template. 
+Syntax of Function Template
+
+template < class T> 
+ret_type func_name(T argumentname)  
+{  
+    // body of function.  
+}  
+Where T is a placeholder name for a data type used by the function and this list is called as template parameter list and it cannot be empty. It is used within the function definition. It is only a placeholder that the compiler will automatically replace this placeholder with the actual data type.
+
+#include <iostream>  
+using namespace std;  
+template<class T> 
+T add(T &a,T &b)  
+{  
+    T result = a+b;  
+    return result;  
+      
+}  
+int main()  
+{  
+  int i =2;  
+  int j =3;  
+  float m = 2.3;  
+  float n = 1.2;  
+  cout<<"Addition of i and j is :"<<add(i,j);  
+  cout<<'\n';  
+  cout<<"Addition of m and n is :"<<add(m,n);  
+  return 0;  
+}
+  Addition of i and j is :5
+Addition of m and n is :3.5
+In the above example, we create the function template which can perform the addition operation on any type either it can be integer, float or double.
+===================================================================
+
+#include<iostream>
+using namespace std;
+template <class T>
+void swap1(T &x, T &y)
+{
+   T temp;
+   temp=x;
+   x=y;
+   y=temp;
+}
+ int main()
+{
+    
+    int a=10,b=20;
+char x='A',y='B';
+    swap1(a,b);
+	cout<<a<<b<<endl;
+swap1(x,y);
+cout<<x<<y;
+ 
+}
+==============================================================
+Function Templates with Multiple Parameters/placeholder
+We can use more than one generic type in the template function by using the comma to separate the list.
+
+Syntax
+ template<class T1, class T2,.....>  
+return_type function_name (arguments of type T1, T2....)  
+{  
+    // body of function.  
+}  
+In the above syntax, we have seen that the template function can accept any number of arguments of a different type.
+
+
+#include <iostream>  
+using namespace std;  
+template<class X,class Y> 
+void fun(X a,Y b)  
+{  
+    std::cout << "Value of a is : " <<a<< std::endl;  
+    std::cout << "Value of b is : " <<b<< std::endl;  
+}  
+  
+int main()  
+{  
+   fun(15,12.3);  
+   
+   return 0;  
+}  
+Output:
+
+Value of a is : 15
+Value of b is : 12.3
+In the above example, we use two generic types in the template function, i.e., X and Y.
+============================================================================
+#include <iostream> 
+using namespace std; 
+template <class T ,class Y> 
+T myMax(T x, Y y)
+{
+    return (x > y) ? x : y;
+}
+ int main()
+{
+    
+    cout << myMax(3, 'a') << endl;
+   
+    cout << myMax<double>(3,4 ) << endl;
+   
+    cout << myMax('g', 'e') << endl;
+ 
+    return 0;
+}
+========================================================================
+Overloading a Function Template
+We can overload the generic function means that the overloaded template functions can differ in the parameter list.
+
+
+#include <iostream>  
+using namespace std;  
+template<class X> 
+void fun(X a)  
+{  
+    std::cout << "Value of a is : " <<a<< std::endl;  
+}  
+template<class X,class Y> 
+void fun(X b ,Y c)  
+{  
+    std::cout << "Value of b is : " <<b<< std::endl;  
+    std::cout << "Value of c is : " <<c<< std::endl;  
+}  
+int main()  
+{  
+   fun(10);  
+   fun(20,30.5);  
+   return 0;  
+}  
+Output:
+
+Value of a is : 10
+Value of b is : 20
+Value of c is : 30.5
+In the above example, template of fun() function is overloaded.
+=========================================================================
+#include <iostream>  
+using namespace std;  
+template<class X> 
+void fun(X a,X b)  
+{ 
+	cout<<"execute1";
+    std::cout << "Value of a is : " <<a<< std::endl;  
+}  
+template<class X,class Y> 
+void fun(X b ,Y c)  
+{  
+cout<<"execute2";
+	cout<<"execute"; 
+    std::cout << "Value of b is : " <<b<< std::endl;  
+    std::cout << "Value of c is : " <<c<< std::endl;  
+} 
+template<class X,class Y,class Z> 
+void fun(X b ,Y c,Z d)  
+{  
+    std::cout << "Value of b is : " <<b<< std::endl;  
+    std::cout << "Value of c is : " <<c<< std::endl;
+	std::cout << "Value of c is : " <<d<< std::endl;  
+}   
+int main()  
+{  
+   fun(10,12);  
+   fun(20,30.5);
+   fun(10,10,10);  
+   return 0;  
+}
+
+
+======================================================
+
+===========================================================
+=========================================================================
+CLASS TEMPLATE
+
+Class Template can also be defined similarly to the Function Template. When a class uses the concept of Template, then the class is known as generic class.
+
+Syntax
+template<class Ttype>  
+class class_name  
+{  
+  .  
+  .  
+}  
+Ttype is a placeholder name which will be determined when the class is instantiated. We can define more than one generic data type using a comma-separated list. The Ttype can be used inside the class body.
+
+Now, we create an instance of a class
+class_name<type> ob;  
+where class_name: It is the name of the class.
+type: It is the type of the data that the class is operating on.
+ob: It is the name of the object.
+
+======================================================
+
+
+#include <iostream>  
+using namespace std;  
+template<class T>  
+class A   
+{  
+    public:  
+    T num1 ;  
+    T num2 ;  
+	A(T x) 
+    {
+		num1=x;
+		num2=x;
+	}          
+    void add()  
+    {  
+        std::cout << "Addition of num1 and num2 : " << num1+num2<<std::endl;  
+    }  
+      
+};  
+  
+int main()  
+{  
+    A<int> d(2);  
+    d.add();  
+    return 0;  
+} 
+In the above example, we create a template for class A. Inside the main() method, we create the instance of class A named as, 'd'.
+=====================================================================================
+#include <iostream>  
+using namespace std;  
+template<class T>  
+class A   
+{  
+    public:  
+    T num1 ;  
+    T num2 ;  
+	A(T x,T y) 
+    {
+		num1=x;
+		num2=y;
+	}          
+    void add()  
+    {  
+        std::cout << "Addition of num1 and num2 : " << num1+num2<<std::endl;  
+    }  
+      
+};  
+  
+int main()  
+{  
+    A<int> d(2,3);  
+    d.add();  
+    return 0;  
+} 
+
+
+
+============================================
+#include <iostream>  
+     using namespace std;  
+     template<class T>
+    class A   
+    {  
+	public:
+         T a, b;  
+         public:  
+        void display(T a,T b)
+         {  
+                 std::cout << "Values of a and b are : " << a<<" ,"<<b<<std::endl;  
+        }  
+	}; 
+      int main()  
+     {  
+           A<int> d;  
+           d.display(5,6);  
+		A<char> d1;  
+           d1.display('a','b');
+           return 0;  
+     } 
+
+=============================================================
+
+CLASS TEMPLATE WITH MULTIPLE PARAMETERS
+We can use more than one generic data type in a class template, and each generic data type is separated by the comma.
+
+Syntax
+template<class T1, class T2, ......>   
+class class_name  
+{  
+   // Body of the class.  
+}  
+
+#include <iostream>  
+     using namespace std;  
+     template<class T1, class T2>  
+    class A   
+    {  
+         T1 a;  
+         T2 b;  
+         public:  
+        A(T1 x,T2 y)  
+       {  
+           a = x;  
+           b = y;  
+        }  
+           void display()  
+          {  
+                 std::cout << "Values of a and b are : " << a+b<<std::endl;  
+           }  
+      };  
+  
+      int main()  
+     {  
+           A<int,float> d(5,6.5);  
+           d.display();  
+           return 0;  
+     }  
+Output:
+
+Values of a and b are : 11.5
+=========================================================================
+#include <iostream>  
+using namespace std;
+template<class T, class U >   
+  class A 
+{ 
+public: 
+    T x; 
+    U y;
+	void add(T x,U y)
+	{
+		cout<<x+y<<endl;
+	 } 
+}; 
+  
+int main() 
+{ 
+    A<int,int> a;
+	a.add(1,7); 
+    A<int, int> b; 
+   b.add(4,9); 
+    return 0; 
+} 
+
+========================================================================
+The template can contain multiple arguments, and we can also use the non-type arguments In addition to the type T argument.
+Let' s see the following example:
+
+template<class T, int size>  
+class array  
+{  
+        T arr[size];           // automatic array initialization.  
+};  
+
+Arguments are specified when the objects of a class are created:
+
+array<int, 15> t1;                        // array of 15 integers.  
+array<float, 10> t2;                    // array of 10 floats.   
+array<char, 4> t3;                      // array of 4 chars.           
+     
+Let's see a simple example of nontype template arguments.
+
+#include <iostream>  
+using namespace std;  
+template<class T, int size>  
+class A   
+{  
+    public:  
+    T arr[size];  
+    void insert()  
+    {  
+        int i =1;  
+        for (int j=0;j<size;j++)  
+        {  
+            arr[j] = i;  
+            i++;  
+        }  
+    }  
+      
+    void display()  
+    {  
+        for(int i=0;i<size;i++)  
+        {  
+            std::cout << arr[i] << " ";  
+        }  
+    }  
+};  
+int main()  
+{  
+    A<int,10> t1;  
+    t1.insert();  
+    t1.display();  
+    return 0;  
+}  
+Output:
+
+1 2 3 4 5 6 7 8 9 10
+In the above example, the class template is created which contains the nontype template argument, i.e., size. It is specified when the object of class 'A' is created.
+
+=========================================
+
+======================================================
+Friend Class and Function in C++
+
+==>Data hiding is a fundamental concept of object-oriented programming. It restricts the access of private members from outside of the class.Similarly, protected members can only be accessed by derived classes and are inaccessible from outside.
+However, there is a feature in C++ called friend functions that break this rule and allow us to access private/protected member functions from outside the class.
+
+==>A friend class can access private and protected members of other classes in which it is declared as a friend. 
+It is sometimes useful to allow a particular class to access private and protected members of other classes. 
+
+We can declare a friend class in C++ by using the friend keyword.
+
+class Demo //Base class
+{
+	//Demo1 is a friend  of Demo class
+	friend class Demo1;
+}
+class Demo1 // friend class
+{
+//statements;
+}
+
+Syntax:
+friend class class_name;    // declared in the base class
+
+========================================================
+
+
+// C++ Program to demonstrate the functioning of a friend class
+#include <iostream>
+using namespace std;
+ class Demo {
+private:
+    int private_variable;
+ protected:
+    int protected_variable;
+ public:
+    Demo()
+    {
+        private_variable = 10;
+        protected_variable = 99;
+    }
+     // friend class declaration
+    friend class F;
+};
+ // Here, class F is declared as a friend inside class Demo. Therefore,
+// F is a friend of class Demo. Class F can access the private/PROTECTED members of class Demo.
+class F {
+public:
+    void display(Demo& t)
+    {
+        cout << "The value of Private Variable = "<< t.private_variable << endl;
+        cout << "The value of Protected Variable = "<< t.protected_variable;
+    }
+};
+int main()
+{
+    Demo g;
+    F fri;
+    fri.display(g);
+    return 0;
+}
+
+Output
+The value of Private Variable = 10
+The value of Protected Variable = 99
+
+Note: We can declare friend class or function anywhere in the base class body whether its private, protected or public block. It works all the same.
+=====================================================================================
+
+Friend Function
+
+==>Like a friend class, a friend function can be granted special access to private and protected members of a class in C++. They are the non-member functions that can access and manipulate the private and protected members of the class in which they are declared as friends.
+==>If a function is defined as a friend function in C++, then the protected and private data of a class can be accessed using the function.
+
+==>A friend function can be:
+friend return_type function_name (arguments);    // for a global function
+
+===================================================================
+
+#include <iostream>  
+using namespace std;  
+class A
+{
+	int a;
+	public:
+		int geta();
+		friend void xyz(A&);
+};
+int A::geta()
+{
+	cout<<"enter the value of a\n";
+	cin>>this->a;
+}
+void xyz(A& a1obj)
+{
+	cout<<"friend function is accessing private class data  "<<a1obj.a<<endl;
+	
+}
+int main()
+{
+	A aobj;
+	aobj.geta();//a=10
+	xyz(aobj);
+}
+
+=======================================================================
+
+#include <iostream>  
+using namespace std;  
+class B;//forward declaraction
+class A
+{
+	int a;
+	public:
+		void geta()
+		{
+			cout<<"enter value of a\n";
+			cin>>a;
+		}
+		friend void big(A&, B&);
+};
+ class B
+{
+	int b;
+	public:
+		void getb()
+		{
+			cout<<"enter value of b\n";
+			cin>>b;
+		}
+		friend void big(A&, B&);
+};
+
+void big(A& x,B& y)
+{
+	if(x.a>y.b)
+	cout<<x.a<<"is greater";
+	if(x.a<y.b)
+	cout<<y.b<<"is greater";
+	else
+	cout<<"both are equal";
+}
+int main()
+{
+	A aobj;
+	B bobj;
+	aobj.geta();
+	bobj.getb();
+	big(aobj,bobj);	
+}
+
+
+
+=================================================================
+
+We can declare any global function as a friend function. 
+   
+// C++ program to create a global function as a friend function of some class
+#include <i  ostream>
+using namespace std;
+ 
+class base {
+private:
+    int private_variable;
+ 
+protected:
+    int protected_variable;
+ 
+public:
+    base()
+    {
+        private_variable = 10;
+        protected_variable = 99;
+    }
+     
+      // friend function declaration
+    friend void friendFunction(baseclass&);
+};
+ 
+ 
+// friend function definition
+void friendFunction(base& obj)
+{
+    cout << "Private Variable: " << obj.private_variable
+         << endl;
+    cout << "Protected Variable: " << obj.protected_variable;
+}
+ 
+int main()
+{
+    base object1;
+    friendFunction(object1);
+ 
+    return 0;
+}
+
+Output
+Private Variable: 10
+Protected Variable: 99
+In the above example, we have used a global function as a friend function.==============================================================================================
+
+Features of Friend Functions
+ ==>A friend function is a special function in C++ that in spite of not being a member function of a class has the privilege to access the private and protected data of a class.
+==>A friend function is a non-member function or ordinary function of a class, which is declared as a friend using the keyword “friend” inside the class. By declaring a function as a friend, all the access permissions are given to the function.
+==>The keyword “friend” is placed only in the function declaration of the friend function and not in the function definition or call.
+==>A friend function is called like an ordinary function. It cannot be called using the object name and dot operator. However, it may accept the object as an argument whose value it wants to access.
+==>A friend function can be declared in any section of the class i.e. public or private or protected.
+=======================================================
+Advantages of Friend Functions
+==>A friend function is able to access members without the need of inheriting the class.
+==>The friend function acts as a bridge between two classes by accessing their private data.
+==>It can be declared either in the public or private or protected part of the class.
+
+Disadvantages of Friend Functions
+==>Friend functions have access to private members of a class from outside the class which violates the law of data hiding.
+==>Friend functions cannot do any run-time polymorphism 
+
+Important Points About Friend Functions and Classes
+==>Friendship is not mutual. If class A is a friend of B, then B doesn’t become a friend of A automatically.
+i.e Friendship is not inherited. 
+
+
+
+======================================================================================
+Example :
+#include <iostream>    
+using namespace std;    
+class Box    
+{    
+    private:    
+        int length;    
+    public:    
+        Box()
+	{
+		length=5;
+	}
+        friend int printLength(Box); //friend function    
+};    
+int printLength(Box b)    
+{    
+   b.length += 10;    
+    return b.length;    
+}    
+int main()    
+{    
+    Box b;    
+    cout<<"Length of box: "<< printLength(b)<<endl;    
+    return 0;    
+}    
+Output:
+
+Length of box: 10  
+=============================================================
+#include<iostream>
+using namespace std;
+class complex
+{
+	int real,img;
+public:
+	complex();
+	complex(int,int);
+	void display();
+	complex operator+(int);
+	friend complex operator+(int,complex&);
+};
+complex::complex()
+{}
+complex::complex(int real,int img)
+{
+	this->real=real;
+	this->img=img;
+}
+void complex::display()
+{
+	if(img>0)
+	cout<<"complex number is "<<real<<"+"<<img<<"i"<<endl;
+	else
+	cout<<"complex number is "<<real<<img<<"i"<<endl;
+}
+complex complex::operator+(int num)
+{
+	complex temp;
+	temp.real=real+num;
+	temp.img=img+num;
+	return temp;
+}
+complex operator+(int num,complex & c)
+{
+	complex temp;
+	temp.real=c.real+num;
+	temp.img=c.img+num;
+	return temp;
+}
+
+
+
+int main()
+{
+	/*complex c1(1,2);
+	complex c2=c1 + 5;//c2=c1.operator+(5)
+	c2.display();*/
+	complex c1(1,2);
+	complex c2=5+c1;//  operator+(5,c1)     
+	c2.display();
+	
+
+
+}
+=========================================================================
+//overloading of == operator
+// C++ Program to overload == operator 
+#include<iostream> 
+#include<string> 
+using namespace std; 
+  
+class Car{ 
+  private: 
+    string name; 
+    int cost; 
+    public: 
+        Car(string n, int c){ 
+            name=n; 
+            cost=c; 
+        } 
+        bool operator == ( Car &c){ 
+            if (name == c.name && cost == c.cost) 
+                return true; 
+            return false; 
+        } 
+}; 
+int main(){ 
+    Car car1 ("Santro",500000); 
+    Car car2 ("Safari",1000000); 
+    if (car1 == car2) 
+        cout<<"Equivalent"<<endl; 
+    else
+        cout<<"Not Equivalent"<<endl; 
+}
+====================================================================
+//overloading of insertion and extraction operator
+using friend function with 2 classes
+#include <iostream>
+using namespace std;
+ 
+class Complex
+{
+private:
+    int real, imag;
+public:
+    Complex(int r = 0, int i =0)
+    {  real = r;   imag = i; }
+    friend void operator << (ostream &out, const Complex &c);
+    friend void operator >> (istream &in,  Complex &c);
+};
+ 
+void operator << (ostream &out, const Complex &c)
+{
+    out << c.real;
+    out  <<"+"<< c.imag <<"i"<< endl;
+   
+}
+ 
+void operator >> (istream &in,  Complex &c)
+{
+    cout << "Enter Real Part ";
+    in >> c.real;
+    
+    cout << "Enter Imaginary Part ";
+    in >> c.imag;
+    
+}
+ 
+int main()
+{
+   Complex c1;
+   cin >> c1;//operator>>(cin,c1);
+   cout << "The complex object is ";
+   cout << c1;
+   return 0;
+}
+==============================================================================
+
+What Is C++ Enum?
+
+==>Enum, which is also known as enumeration, is a user-defined data type that enables you to create a new data type that has a fixed range of possible values, and the variable can select one value from the set of values. For example, suppose you are the owner of an ice cream shop, and you sell a limited range of ice cream flavors. So you want the customers to select only from that collection of ice creams in your shop. This becomes an enumeration with ice cream as the name of enumeration and different flavors of ice creams as its elements.
+
+==>Enumeration (Enumerated type) is a user-defined data type that can be assigned some limited values. These values are defined by the programmer at the time of declaring the enumerated type.
+
+Syntax:
+
+enum enumerated-type-name
+{
+    value1, value2, value3…..valueN
+};
+
+enum Iceccream
+{
+	vanilla,stawberry,mango
+};
+Each of these elements has values starting from 0, like vanilla is 0, stawberry is 1, etc. The default values mentioned can be altered during the declaration of the enum in C++.
+====================================================================
+To declare an enum variable, write the name of the enumeration along with the enum variable.
+enum Iceccream
+{
+	vanilla,stawberry,mango
+};
+int main()
+{
+	Icecream i;
+}
+Here i is the enum variable.
+
+
+Example:
+enum first_enum{value1=1, value2=10, value3};
+
+In this case, 
+first_enum e;
+e=value3;
+cout<<e;
+
+Output:
+11
+
+
+
+============================================================================
+Why use an enum in a program?
+One can utilise the enums in a program when they want the variables in the program to have just the set of values. For instance, let us consider the creation of a direction variable. Now, there are a total of four directions (N, S, W, E). Thus, a total of four values are possible with the direction variable. But here, the variable would be able to hold just a single value at any given time. Now, if a user provides any different value to the variable here, then we should get a compilation error.
+For vsuch scenario enum can be used.
+
+==>enum is a userdefined datatype that consists of paired named-integer constants. 
+
+================================================================
+#include<iostream>
+using namespace std;
+
+int main() 
+{ 
+string today="sunday";
+  
+    switch (today) { 
+    case "sunday": 
+        cout << "it is sunday"; 
+        break; 
+    case 1: 
+        cout << "it is monday"; 
+        break; 
+}
+}
+
+//error
+==============================================
+#include<iostream>
+using namespace std;
+enum Day{sunday='A',monday,tuesday,wednesday,thursday,friday,saturday
+};
+int main() 
+{ 
+    enum Day today;
+    today=sunday;
+  	cout<<today;
+    switch (today) { 
+    case 65: 
+        cout << "it is sunday"; 
+        break; 
+    case 66: 
+        cout << "it is monday"; 
+        break; 
+}
+}
+
+====================================================================
+#include<iostream>
+using namespace std;
+enum Day{sunday=0,monday,tuesday,wednesday,thursday,friday,saturday
+};
+int main() 
+{ 
+    Day today=sunday;
+  
+    switch (today) { 
+    case sunday: 
+        cout << "it is sunday"; 
+        break; 
+    case monday: 
+        cout << "it is monday"; 
+        break; 
+}
+}
+
+==========================================
+  
+// Defining enum Year 
+enum year { 
+    Jan=1, 
+    Feb, 
+    Mar, 
+    Apr, 
+    May, 
+    Jun, 
+    Jul, 
+    Aug, 
+    Sep, 
+    Oct, 
+    Nov, 
+    Dec 
+}; 
+  int main() 
+{ 
+    int i; 
+  
+    // Traversing the year enum 
+    for (i = Jan; i <= Dec; i++) 
+        cout << i << " "; 
+  
+    return 0; 
+}
+
+Output: 
+1 2 3 4 5 6 7 8 9 10 11 12
+==============================================================
+Points to remember for C++ Enum
+enum can be easily used in switch
+enum can be traversed
+The C++ enum constants are  final implicitly.
+
+=======================================
+  Why enums are used in C++ programming?
+
+Enums are used to give names to constants, which makes the code easier to read and maintain.
+Use enums when you have values that you know aren't going to change, like month days, days, colors, deck of cards, etc.Enums or enumerations are generally used when you expect the variable to select one value from the possible set of values
+=====================================================================
+More points on Enum
+
+Multiple enum  elements can have the same value. Here’s an example of two enum elements having a similar value.
+enum Cars{Jeep = 1, BMW = 0, Mercedes_Benz = 0};
+
+==============================
+All the enum elements or constants should have a unique scope. It means that an element cannot be a part of two different enums in the same program as it will fail during compilation. 
+
+Example:
+#include <stdio.h>
+
+enum Cars{Mahindra, Jeep, BMW};
+
+enum Luxury_Cars{BMW, Ferrari, Mercedes_Benz};
+
+int main(){
+
+    return 0;
+
+}
+===========================================================
+==========================================================
+
+Typedef:
+
+typedef keyword in C++ is used for aliasing existing data types, user-defined data types, and pointers to a more meaningful name. Typedefs allow you to give descriptive names to standard data types, which can also help you self-document your code. Mostly typedefs are used for aliasing, only if the predefined name is too long or complex to write again and again.  The unnecessary use of typedef is generally not a good practice.
+
+Syntax:
+typedef <current_name> <new_name>
+
+======================================================
+Applications of typedef in C++
+
+    typedef in C++ can be used for aliasing predefined data types with long names.
+    It can be used with STL data structures like Vectors, Strings, Maps, etc.
+==========================================================
+#include <iostream> 
+using namespace std; 
+  
+int main() 
+{ 
+  
+    typedef int arr[3]; 
+  
+    // Making new 1D array 
+  
+    arr array1{ 1 , 1, 1}; 
+      
+  
+    cout << "Array output: "
+
+         << "\n"; 
+    for (int i = 0; i < 3; i++) { 
+        cout << array1[i] << " "; 
+    } 
+    cout << "\n"; 
+
+=================================================================
+#include <iostream> 
+using namespace std; 
+  
+int main() 
+{ 
+    int a = 10; 
+    int b = 20; 
+    // iPtr can now be used to create new pointers of type 
+    // int 
+    typedef int* iPtr; 
+  
+    iPtr pointer_to_a = &a; 
+    iPtr pointer_to_b = &b; 
+  
+    cout << "a is: " << *pointer_to_a << "\n"; 
+    cout << "b is: " << *pointer_to_b << "\n"; 
+  
+    return 0; 
+}
