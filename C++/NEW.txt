@@ -1,0 +1,1079 @@
+RTTI
+In C++, RTTI (Run-time type information) is a mechanism that exposes information about an object’s data type at runtime and is available only for the classes which have at least one virtual function. It allows the type of an object to be determined during program execution.
+
+1)typeid operator-->used for identifying the exact type of an object. 
+2)type_info class-->used to hold the type of information returned by typeid operator.
+
+typeid is an operator in C++. 
+    It is used where the dynamic type or runtime type information of an object is needed.
+    It is included in the <typeinfo> library. Hence inorder to use typeid, this library should be included in the program.
+
+Syntax:  
+
+typeid(type);
+OR
+typeid(expression);
+    This parameter is passed when the runtime type information of an expression is needed. In this, the expression is first evaluated. Then the type information of the final result is then provided.
+
+Return value: This operator provides the runtime type information of the specified parameter and hence that type information is returned, as a reference to an object of class type_info.
+
+1)When operand is a variable or an object.
+#include <iostream> 
+#include <typeinfo> 
+using namespace std; 
+  
+int main() 
+{ 
+    int i, j; 
+    char c; 
+  
+    // Get the type info using typeid operator 
+    const type_info& ti1 = typeid(i); 
+    const type_info& ti2 = typeid(j); 
+    const type_info& ti3 = typeid(c); 
+  
+    // Check if both types are same 
+    if (ti1 == ti2) 
+        cout << "i and j are of"
+             << " similar type" << endl; 
+    else
+        cout << "i and j are of"
+             << " different type" << endl; 
+  
+    // Check if both types are same 
+    if (ti2 == ti3) 
+        cout << "j and c are of"
+             << " similar type" << endl; 
+    else
+        cout << "j and c are of"
+             << " different type" << endl; 
+  
+    return 0; 
+} 
+==========================================
+} 
+#include <iostream> 
+#include <typeinfo> 
+using namespace std; 
+  
+int main() 
+{ 
+    int i = 5; 
+    float j = 1.0; 
+    char c = 'a'; 
+  
+    // Get the type info using typeid operator 
+    const type_info& ti1 = typeid(i * j); 
+    const type_info& ti2 = typeid(i * c); 
+    const type_info& ti3 = typeid(c); 
+  
+    // Print the types 
+    cout << "ti1 is of type "
+         << ti1.name() << endl; 
+  
+    cout << "ti2 is of type "
+         << ti2.name() << endl; 
+  
+    cout << "ti3 is of type "
+         << ti3.name() << endl; 
+  
+    return 0; 
+
+==============================================
+
+ #include <iostream>  
+#include <typeinfo> 
+    using namespace std;  
+    class Animal
+    {
+    	public:
+    		virtual void move()=0;
+    	
+	};
+	class eagle:public Animal
+	{
+		public:
+    		virtual void move()
+    		{
+    			cout<<"flying";
+			}
+    	
+		
+	};
+	class lion:public Animal
+	{
+		public:
+    		virtual void move()
+    		{
+    			cout<<"running";
+			}
+    	
+		
+	};
+	int main()
+	{
+	
+		Animal * p_e=new eagle();
+			Animal * p_l=new lion();
+const	type_info& TypeId=typeid(*p_e);
+		if(TypeId==typeid(eagle))
+		cout<<"eagle";
+	}	
+	
+=========================================================================
+Casting operators in c++
+1)static_cast
+2)dynamic_cast
+3)const_cast
+4)reinterpret_cast
+
+
+Runtime Casts
+ This is especially beneficial when we need to cast a pointer from a base class to a derived type. When dealing with the inheritance hierarchy of classes, the casting of an object is usually required. There are two types of casting: 
+
+    Upcasting: When a pointer or a reference of a derived class object is treated as a base class pointer.
+    Downcasting: When a base class pointer or reference is converted to a derived class pointer.
+
+Using ‘dynamic_cast‘: In an inheritance hierarchy, it is used for downcasting a base class pointer to a child class. On successful casting, it returns a pointer of the converted type and, however, it fails if we try to cast an invalid type such as an object pointer that is not of the type of the desired subclass.
+
+For example, dynamic_cast uses RTTI and the following program fails with the error “cannot dynamic_cast `b’ (of type `class B*’) to type `class D*’ (source type is not polymorphic) ” because there is no virtual function in the base class B.
+
+NOTE:
+Dynamic Cast: A cast is an operator that converts data from one type to another type. In C++, dynamic casting is mainly used for safe downcasting at run time. To work on dynamic_cast there must be one virtual function in the base class. A dynamic_cast works only polymorphic base class because it uses this information to decide safe downcasting.
+
+Syntax:
+    dynamic_cast <new_type>(Expression)
+
+    Downcasting: Casting a base class pointer (or reference) to a derived class pointer (or reference) is known as downcasting. In figure 1  casting from the Base class pointer/reference to the “derived class 1” pointer/reference showing downcasting (Base ->Derived class).
+
+#include <iostream>
+using namespace std;
+ 
+// Initialization of base class
+class B {
+    virtual void fun() {}
+};
+ 
+// Initialization of Derived class
+class D : public B {
+	public:
+	void show()
+	{
+		cout<<"in show()";
+	}
+};
+ 
+// Driver Code
+int main()
+{
+    B* b = new D; // Base class pointer
+    b->show()//error
+      //c++ want new type of conversion i.e dynamic_cast
+	
+    D* d = dynamic_cast<D*>(b); // Derived class pointer
+   d->show();
+ 
+    return 0;
+}
+
+====================================
+STL:
+
+
+he C++ Standard Template Library (STL) is a collection of algorithms, data structures, and other components that can be used to simplify the development of C++ programs. The STL provides a range of containers, such as vectors, lists, and maps, as well as algorithms for searching, sorting and manipulating data.
+
+One of the key benefits of the STL is that it provides a way to write generic, reusable code that can be applied to different data types. This means that you can write an algorithm once, and then use it with different types of data without having to write separate code for each type.
+
+The STL also provides a way to write efficient code. Many of the algorithms and data structures in the STL are implemented using optimized algorithms, which can result in faster execution times compared to custom code.
+
+Some of the key components of the STL include:
+Containers: The STL provides a range of containers, such as vector, list, map, set, and stack, which can be used to store and manipulate data.
+Classification of containers :
+
+
+vector	vector is a class that creates a dynamic array allowing insertions and deletions .Random access
+list	list is the sequence containers that allow the insertions and deletions from anywhere.
+deque	deque is the double ended queue that allows the insertion and deletion from both the ends.	
+set	set is an associate container for storing unique sets.	
+map	Map is an associate container for storing unique key-value pairs, i.e. each key is associated with only one value(one to one mapping).	
+
+
+
+stack	It follows last in first out(LIFO).	
+queue	It follows first in first out(FIFO).	
+
+Iterators are pointer-like entities used to access the individual elements in a container.
+Iterators are moved sequentially from one element to another element. This process is known as iterating through a container.
+
+=================================================
+Containers:
+
+Vector: The major problem while using arrays was that we had to specify size. This drawback was overcome by vectors. Vectors internally work as dynamically allocated arrays, which is the main reason as to how we can add elements without specifying the size of the vector. When the size of the vector becomes equal to capacity, the capacity of vector increases and thus we can add further elements.
+Vectors are the same as dynamic arrays with the ability to resize itself automatically when an element is inserted or deleted, with their storage being handled automatically by the container. Vector elements are placed in contiguous storage so that they can be accessed and traversed using iterators. In vectors, data is inserted at the end.
+
+Header file:
+#include <vector>
+
+Syntax: 
+
+vector<data type> variable_name;
+
+std::vector in C++ is the class template that contains the vector container and its member functions. It is defined inside the <vector> header file. The member functions of std::vector class provide various functionalities to vector containers. Some commonly used member functions are written below:
+
+Iterators
+begin() – Returns an iterator pointing to the first element in the vector
+end() – Returns an iterator pointing to the theoretical element that follows the last element in the vector
+rbegin() – Returns a reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first element
+rend() – Returns a reverse iterator pointing to the theoretical element preceding the first element in the vector (considered as reverse end)
+cbegin() – Returns a constant iterator pointing to the first element in the vector.
+cend() – Returns a constant iterator pointing to the theoretical element that follows the last element in the vector.
+crbegin() – Returns a constant reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first element
+crend() – Returns a constant reverse iterator pointing to the theoretical element preceding the first element in the vector (considered as reverse end)
+C++
+   
+// C++ program to illustrate the
+// iterators in vector
+#include <iostream>
+#include <vector>
+ 
+using namespace std;
+ 
+int main()
+{
+    vector<int> g1;
+ 
+    for (int i = 1; i <= 5; i++)
+        g1.push_back(i);
+ 
+    cout << "Output of begin and end: ";
+    for (auto i = g1.begin(); i != g1.end(); ++i)
+        cout << *i << " ";
+ 
+    cout << "\nOutput of cbegin and cend: ";
+    for (auto i = g1.cbegin(); i != g1.cend(); ++i)
+        cout << *i << " ";
+ 
+    cout << "\nOutput of rbegin and rend: ";
+    for (auto ir = g1.rbegin(); ir != g1.rend(); ++ir)
+        cout << *ir << " ";
+ 
+    cout << "\nOutput of crbegin and crend : ";
+    for (auto ir = g1.crbegin(); ir != g1.crend(); ++ir)
+        cout << *ir << " ";
+ 
+    return 0;
+}
+Output:
+Output of begin and end: 1 2 3 4 5 
+Output of cbegin and cend: 1 2 3 4 5 
+Output of rbegin and rend: 5 4 3 2 1 
+Output of crbegin and crend : 5 4 3 2 1
+Capacity
+size() – Returns the number of elements in the vector.
+max_size() – Returns the maximum number of elements that the vector can hold.
+capacity() – Returns the size of the storage space currently allocated to the vector expressed as number of elements.
+resize(n) – Resizes the container so that it contains ‘n’ elements.
+empty() – Returns whether the container is empty.
+shrink_to_fit() – Reduces the capacity of the container to fit its size and destroys all elements beyond the capacity.
+reserve() – Requests that the vector capacity be at least enough to contain n elements.
+C++
+   
+// C++ program to illustrate the
+// capacity function in vector
+#include <iostream>
+#include <vector>
+ 
+using namespace std;
+ 
+int main()
+{
+    vector<int> g1;
+ 
+    for (int i = 1; i <= 5; i++)
+        g1.push_back(i);
+ 
+    cout << "Size : " << g1.size();
+    cout << "\nCapacity : " << g1.capacity();
+    cout << "\nMax_Size : " << g1.max_size();
+ 
+    // resizes the vector size to 4
+    g1.resize(4);
+ 
+    // prints the vector size after resize()
+    cout << "\nSize : " << g1.size();
+ 
+    // checks if the vector is empty or not
+    if (g1.empty() == false)
+        cout << "\nVector is not empty";
+    else
+        cout << "\nVector is empty";
+ 
+    // Shrinks the vector
+    g1.shrink_to_fit();
+    cout << "\nVector elements are: ";
+    for (auto it = g1.begin(); it != g1.end(); it++)
+        cout << *it << " ";
+ 
+    return 0;
+}
+Output:
+Size : 5
+Capacity : 8
+Max_Size : 4611686018427387903
+Size : 4
+Vector is not empty
+Vector elements are: 1 2 3 4
+============================================
+STACK
+This data structure works on the LIFO technique, where LIFO stands for Last In First Out. The element which was first inserted will be extracted at the end and so on. There is an element called as 'top' which is the element at the upper most position. All the insertion and deletion operations are made at the top element itself in the stack.
+for stack, stacking of books we can take the top book easily and for queue remember when you have to stand in queue front of ATM for taking out the cash, then first person near to ATM has the first chance to take out the money from ATM. So, queue is the FIFO (First In First Out) type working.
+
+Header file:
+
+#include <stack>
+
+Syntax: 
+
+stack<data_type> variable_name;
+
+Most common function for stack:  
+
+push(): Used to push the element at top of the stack.
+pop(): Deletes the top element of the stack but do not returns it.
+top(): Returns the top element of the stack.
+empty(): Return boolean value, ie, True if stack is empty, else returns false.
+size(): Returns the size of the stack.
+C++
+
+#include <iostream> 
+#include <stack>
+using namespace std;
+int main() {
+    stack<int> stack;
+    stack.push(21);// The values pushed in the stack should be of the same data which is written during declaration of stack
+    stack.push(22);
+    stack.push(24);
+    stack.push(25);
+    int num=0;
+      stack.push(num);
+    stack.pop();
+    stack.pop();
+      stack.pop();
+   
+    while (!stack.empty()) {
+        cout << stack.top() <<" ";
+        stack.pop();
+    }
+}
+
+Output
+22 21 
+=================
+   
+// C++ program to illustrate the 
+// function of stack in C++ 
+#include <iostream> 
+ 
+// Header file for stack 
+#include <stack> 
+using namespace std; 
+ 
+// Function to print the stack 
+void print(stack<char> s) 
+{ 
+ 
+    // Loops runs till stack 
+    // becomes empty 
+    while (s.empty() == false) { 
+ 
+        // Prints the top element 
+        cout << s.top() << " "; 
+ 
+        // Now pops the same top element 
+        s.pop(); 
+    } 
+ 
+    cout << "\n"; 
+} 
+ 
+// Driver Code 
+int main() 
+{ 
+    // Given char array 
+    char array[] 
+        = { 'G', 'E', 'E', 'K', 
+            'S', 'F', 'O', 'R', 'G', 
+            'E', 'E', 'K', 'S' }; 
+ 
+    // Defining stack 
+    stack<char> s; 
+ 
+    // Check if stack is empty 
+    if (s.empty() == true) { 
+        cout << "Stack is currently Empty"
+            << "\n"; 
+    } 
+    else { 
+        cout << "Stack is not empty"
+            << "\n"; 
+    } 
+ 
+    // Push elements in stack 
+    for (int i = sizeof(array) / sizeof(array[0]) - 1; 
+        i >= 0; i--) { 
+        s.push(array[i]); 
+    } 
+ 
+    // Size of stack 
+    cout << "Size of stack: "
+        << s.size() << "\n"; 
+ 
+    // Content of stack 
+    cout << "Stack initially: "; 
+    print(s); 
+ 
+    // Returning the top 
+    // element of the stack 
+    cout << "Top element: "
+        << s.top() << "\n"; 
+ 
+    // Popping the top 
+    // element in stack 
+    s.pop(); 
+ 
+    cout << "Stack after 1"
+        << "pop operation: "; 
+    print(s); 
+ 
+    // Now checking the top element 
+    cout << "Top element after popping: "
+        << s.top() << "\n"; 
+ 
+    // Size of stack 
+    cout << "Size of stack"
+        << "after popping: "
+        << s.size() << "\n"; 
+ 
+    // Again checking if the 
+    // stack is empty 
+    if (s.empty() == true) { 
+        cout << "Stack is currently Empty"
+            << "\n"; 
+    } 
+    else { 
+        cout << "Stack is not empty"
+            << "\n"; 
+    } 
+    return 0; 
+} 
+
+Output
+Stack is currently Empty
+Size of stack: 13
+Stack initially: G E E K S F O R G E E K S 
+Top element: G
+Stack after 1pop operation: E E K S F O R G E E K S 
+Top element after popping: E
+Size of stackafter popping: 12
+Stack is not empty
+======================================================
+
+3.Queue: It is First In First Out (FIFO) data structureFor example, in a queue for buying tickets for a show, the one who enters the queue first, get the ticket first. 
+This data structure works on the FIFO technique, where FIFO stands for First In First Out. The element which was first inserted will be extracted at the first and so on. There is an element called as 'front' which is the element at the front most position or say the first position, also there is an element called as 'rear' which is the element at the last position. In normal queues insertion of elements take at the rear end and the deletion is done from the front.
+
+Header file: 
+
+#include <queue>
+
+Syntax: 
+
+queue<Data Type> variable_name;
+
+Most common function for Queue:
+
+push(): Used to push the element at back of the queue
+pop(): Deletes the front element of the queue but does not return it.
+front(): Returns the front element of the queue, or the element that is first in the line.
+empty(): Return boolean value, ie, True if queue is empty, else returns false
+back(): Returns the last element of queue.
+size(): Returns the size of the queue.
+C++
+   
+// C++ program to illustrate the 
+// function of vector in C++ 
+#include <iostream> 
+ 
+// Header file for queue 
+#include <queue> 
+using namespace std; 
+ 
+// Function to print the queue 
+void print(queue<char> q) 
+{ 
+    for (int i = 0; i < q.size(); i++) { 
+ 
+        // Printing the front element 
+        cout << q.front() << " "; 
+ 
+        // Popping the front element 
+        q.pop(); 
+    } 
+ 
+    cout << "\n"; 
+} 
+ 
+// Driver Code 
+int main() 
+{ 
+    // Given array 
+    char array[] 
+        = { 'G', 'E', 'E', 'K', 'S' }; 
+ 
+    // Defining queue 
+    queue<char> q; 
+ 
+    if (q.empty() == true) { 
+        cout << "Queue is empty\n"; 
+    } 
+ 
+    for (int i = 0; i < 5; i++) { 
+        q.push(array[i]); 
+    } 
+ 
+    cout << "Queue Initially: "; 
+    print(q); 
+ 
+    // Front element 
+    cout << "Front element: "
+        << q.front() << "\n"; 
+ 
+    // Back element 
+    cout << "Back Element: "
+        << q.back() << "\n"; 
+ 
+    // Size of queue 
+    cout << "Size of queue: "
+        << q.size() << "\n"; 
+ 
+    // Empty 
+    if (q.empty() == false) { 
+        cout << "Queue is not empty\n"; 
+    } 
+    return 0; 
+} 
+
+Output
+Queue is empty
+Queue Initially: G E E 
+Front element: G
+Back Element: S
+Size of queue: 5
+Queue is not empty
+===================================================================
+// CPP code to illustrate Queue in 
+// Standard Template Library (STL)
+#include <iostream>
+#include <queue>
+ 
+using namespace std;
+ 
+// Print the queue
+void showq(queue<int> gq)
+{
+    queue<int> g = gq;
+    while (!g.empty()) {
+        cout << '\t' << g.front();
+        g.pop();
+    }
+    cout << '\n';
+}
+ 
+// Driver Code
+int main()
+{
+    queue<int> gquiz;
+    gquiz.push(10);
+    gquiz.push(20);
+    gquiz.push(30);
+ 
+    cout << "The queue gquiz is : ";
+    showq(gquiz);
+ 
+    cout << "\ngquiz.size() : " << gquiz.size();
+    cout << "\ngquiz.front() : " << gquiz.front();
+    cout << "\ngquiz.back() : " << gquiz.back();
+ 
+    cout << "\ngquiz.pop() : ";
+    gquiz.pop();
+    showq(gquiz);
+ 
+    return 0;
+}
+
+Output
+The queue gquiz is :     10    20    30
+
+gquiz.size() : 3
+gquiz.front() : 10
+gquiz.back() : 30
+gquiz.pop() :     20    30
+===================================
+4.Set: Sets are associative containers in which each element is unique. The elements cannot be modified once inserted in the set. A set ignores the duplicate values and all the elements are stored in sorted order. This data structure is particularly useful when incoming elements need to be sorted and modification is not required. 
+The sets can store elements in two orders, increasing order or decreasing order. 
+Header file:
+
+#include <set> 
+
+Syntax:
+
+Increasing order: set<Data type> variable_name;
+Decreasing order :set<Data type, greater<Data type> > variable_name; 
+
+Most common function for Set: 
+
+insert(): This function is used to insert a new element in the Set.
+begin(): This function returns an iterator to the first element in the set.
+end(): It returns an iterator to the theoretical element that follows the last element in the set.
+size(): Returns the total size of the set.
+find(): It returns an iterator to the searched element if present. If not, it gives an iterator to the end.
+count(): Returns the count of occurrences in a set. 1 if present, else 0.
+empty(): Returns boolean value, ie, true if empty else false.
+
+Datatype: Set can take any data type depending on the values, e.g. int, char, float, etc.
+
+
+Example:
+
+set<int> val; // defining an empty set
+set<int> val = {6, 10, 5, 1}; // defining a set with values
+Program:
+
+C++
+   
+// C++ Program to Demonstrate
+// the basic working of STL
+#include <iostream>
+#include <set>
+ 
+int main()
+{
+    std::set<char> a;
+    a.insert('G');
+    a.insert('F');
+    a.insert('G');
+    for (auto& str : a) {
+        std::cout << str << ' ';
+    }
+    std::cout << '\n';
+    return 0;
+}
+
+Output
+F G 
+
+Set Sorted in Descending Order
+By default, the std::set is sorted in ascending order. However, we have the option to change the sorting order by using the following syntax.
+
+std::set <data_type, greater<data_type>> set_name;
+Example:
+
+C++
+   
+// C++ program to demonstrate the creation of descending
+// order set container
+#include <iostream>
+#include <set>
+using namespace std;
+ 
+int main()
+{
+ 
+    set<int, greater<int> > s1;
+    s1.insert(10);
+    s1.insert(5);
+    s1.insert(12);
+    s1.insert(4);
+ 
+    for (auto i : s1) {
+        cout << i << ' ';
+    }
+    return 0;
+}
+
+Output
+12 10 5 4 
+====================================================================
+C++ List is a STL container that stores elements randomly in unrelated locationsLists are sequence containers that allow non-contiguous memory allocation. As compared to the vector, the list has slow traversal, . To maintain sequential ordering, every list element includes two links:
+
+one that points to the previous element
+another that points to the next element
+In C++, the STL list implements the doubly-linked list data structure. As a result, we can iterate both forward and backward.
+
+
+std::list is the class of the List container. It is the part of C++ Standard Template Library (STL) and is defined inside <list> header file.
+
+Syntax:
+
+std::list <data-type> name_of_list;
+
+In C++, the STL list implements the doubly-linked list data structure. As a result, we can iterate both forward and backward.
+
+Create C++ STL List
+To create a list, we need to include the list header file in our program.
+
+#include<list>
+Once we import the header file, we can now declare a list using the following syntax:
+
+std::list<Type> list_name = {value1, value2, ...};
+Here,
+
+std::list - declares an STL container of type list
+<Type> - the data type of the values to be stored in the list
+list_name - a unique name given to the list
+value1, value2, ... - values to be stored in the list
+Let's see an example,
+
+// create a list of integer type
+std::list<int> numbers = {1, 2, 3, 4, 5};
+
+// create a list of character type
+std::list<char> vowels = {'a', 'e', 'i', 'o', 'u'};
+Note: We can also include list elements without mentioning the assignment operator. For example,
+
+std::list<int> numbers {1, 2, 3, 4, 5};
+Example: C++ STL List
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+int main() {
+
+    // create the list
+    list<int> numbers {1, 2, 3, 4};
+  
+    // display the elements of the list
+    cout << "List Elements: ";
+    for(int number : numbers) {
+        cout << number <<", ";
+    }
+    
+    return 0;
+
+}
+Run Code
+Output
+
+List Elements: 1, 2, 3, 4,
+In the above example, we have created a list named numbers with elements: 1, 2, 3, 4. We then used a ranged for loop to print the list elements.
+
+Note: We have used list instead of std::list because we have already defined std namespace using using namespace std;.
+
+Basic operations on List
+C++ STL provides various functions that we can use to perform different operations on lists. Let's look at some commonly used list functions to perform the following operations:
+
+Add elements
+Access elements
+Remove elements
+1. Add Elements to a List in C++
+We can add values in a list using the following functions:
+
+push_front() - inserts an element to the beginning of the list
+push_back() - adds an element to the end of the list
+Let's see an example,
+
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+int main() {
+    
+    // create a list
+    list<int> numbers = {1, 2, 3};
+  
+    // display the original list 
+    cout << "Initial List: ";
+    for(int number: numbers) {
+        cout << number << ", ";
+    }
+  
+    // add element at the beginning
+    numbers.push_front(0);
+
+    // add element at the end
+    numbers.push_back(4);
+
+    // display the modified list
+    cout << endl << "Final List: ";
+    for(int number : numbers) {
+        cout << number << ", ";
+    }
+
+
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+int main() {
+
+     // create a list
+    list<int> numbers = {1, 2, 3, 4, 5};
+
+    // create an iterator to point to the first element of the list
+    list<int>::iterator itr = numbers.begin();
+  
+    // increment itr to point to the 2nd element
+    ++itr;
+    
+    //display the 2nd element
+    cout << "Second Element: " << *itr << endl;
+  
+    // increment itr to point to the 4th element
+    ++itr;
+    ++itr;
+
+    // display the 4th element
+    cout << "Fourth Element: " << *itr;
+  
+    return 0;
+}
+Run Code
+Output
+
+Second Element: 2
+Fourth Element: 4
+In the above example,
+
+list<int>::iterator - defines an iterator for a list of int type
+numbers.begin() - sets the iterator to point to the beginning of the li
+====================================================================
+C++ Map
+In C++, maps are associated containers that hold pairs of data.
+
+These pairs, known as key-value pairs, have a unique key, while the associated values don't have to be unique.
+
+The elements in a map are internally sorted by their keys.
+
+In order to use maps in C++, we must include the map header file in our program:
+
+#include <map>
+Create a Map
+We can declare a map using the following syntax:
+
+std::map<key_type, value_type> map_name = {{key1, value1},{key2, value2}, ...};
+Here,
+
+std::map - declares an STL container of type map
+<key_type> - the data type of the keys to be stored in the map
+<value_type> - the data type of the values to be stored in the map
+map_name - a unique name given to the map
+key1, key2, ... - keys to be stored in the map
+value1, value2, ... - values to be stored in the map
+Let's see an example,
+
+// create a map with integer keys and string values
+std::map<int, string> student = {{1,"Jacqueline"}, {2,"Blake"}, {3,"Denise"}};
+Note: We can also initialize map elements without using the assignment operator =. For example,
+
+std::map<int, string> student {{1,"Jacqueline"}, {2,"Blake"}, {3,"Denise"}};
+Map Methods
+In C++, the map class provides various methods to perform different operations on a map.
+
+Operation	Description
+insert()	adds an element (key-value pair) to the map
+erase()	removes an element or range of elements from the map
+clear()	removes all the elements from the map
+find()	searches the map for the given key
+size()	returns the number of elements in the map
+empty()	returns true if the map is empty
+Add Values in a Map
+We can use the [] operator to add key-value pairs to a map. For example,
+
+// create a map with integer keys and string values
+std::map<int, string> student;
+
+// add element with key 1 and value "Jacqueline"
+student[1] = "Jacqueline";
+
+// add element with key 2 and value "Blake"
+student[2] = "Blake";
+We can also use the insert() function alongside the make_pair() function to insert elements into the map. For example,
+
+student.insert(std::make_pair(3, "Denise"));
+We can generalize the above two methods into the following syntaxes:
+
+// using the [] operator
+map_name[key] = value;
+
+// using the insert() and make_pair() functions
+map_name.insert(std::make_pair(key, value));
+Example 1: C++ Maps
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main() {
+    
+    map<int, string> student;
+  
+    // use [] operator to add elements
+    student[1] = "Jacqueline";
+    student[2] = "Blake";
+
+    // use insert() method to add elements
+    student.insert(make_pair(3, "Denise"));
+    student.insert(make_pair(4, "Blake"));
+
+    // add elements with duplicate keys
+    student[5] = "Timothy";
+    student[5] = "Aaron";
+
+    for (int i = 1; i <= student.size(); ++i) {
+        cout << "Student[" << i << "]: " << student[i] << endl;
+    }
+
+    return 0;
+}
+Run Code
+Output
+
+Student[1]: Jacqueline
+Student[2]: Blake
+Student[3]: Denise
+Student[4]: Blake
+Student[5]: Aaron
+In this program, we have created a map named student that stores int keys and string values.
+
+Notice that we have two duplicate values ("Blake") in our program, which is valid.
+
+However, we also have two duplicate keys (5) in our program, which is invalid.
+
+Here, since both "Timothy" and "Aaron" share the same key, only one of the values is allowed to be stored.
+
+First, "Timothy" is paired with the key 5 in student. Then, when "Aaron" is paired with 5, "Timothy" is overwritten.
+
+We then use a for loop to print all the map elements.
+
+Note: When we use cout to print a map element directly, we only print the corresponding map value, not its key.
+
+// Output: Jacqueline
+cout << student[1];
+Access Keys and Values
+We can access the keys and values of our map with the help of map iterators. For example,
+
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main() {
+
+    map<int, string> student;
+
+    student[1] = "Jacqueline";
+    student[2] = "Blake";
+    student[3] = "Denise";
+    student[4] = "Aaron";
+
+    // declare map iterator
+    map<int, string>::iterator iter;
+
+    // use iterator to display map elements
+    for (iter = student.begin(); iter != student.end(); ++iter) {
+        cout << iter->first << " - " << iter->second << endl;
+    }
+
+    return 0;  
+}
+Run Code
+Output
+
+1 - Jacqueline
+2 - Blake
+3 - Denise
+4 - Aaron
+In the above example, we have used a custom iterator iter to access the keys and values of the student map. The key is given by the first object, and the value by the second object.
+
+========================================================
+//overloading of == operator
+// C++ Program to overload == operator 
+#include<iostream> 
+#include<string> 
+using namespace std; 
+  
+class Car{ 
+  private: 
+    string name; 
+    int cost; 
+    public: 
+        Car(string n, int c){ 
+            name=n; 
+            cost=c; 
+        } 
+        bool operator == (const Car &c){ 
+            if (name == c.name && cost == c.cost) 
+                return true; 
+            return false; 
+        } 
+}; 
+int main(){ 
+    Car car1 ("Santro",500000); 
+    Car car2 ("Safari",1000000); 
+    if (car1 == car2) // car1.operator==(car2)
+        cout<<"Equivalent"<<endl; 
+    else
+        cout<<"Not Equivalent"<<endl; 
+}
+====================================================================
+//overloading of insertion and extraction operator
+
+In C++, stream insertion operator “<<” is used for output and extraction operator “>>” is used for input. 
+
+1) cout is an object of ostream class and cin is an object of istream class 
+2) These operators must be overloaded as a global function. And if we want to allow them to access private data members of the class, we must make them friend. 
+Why these operators must be overloaded as global? 
+In operator overloading, if an operator is overloaded as a member, then it must be a member of the object on the left side of the operator. For example, consider the statement “ob1 + ob2” (let ob1 and ob2 be objects of two different classes). To make this statement compile, we must overload ‘+’ in a class of ‘ob1’ or make ‘+’ a global function. 
+The operators ‘<<‘ and ‘>>’ are called like ‘cout << ob1’ and ‘cin >> ob1’. So if we want to make them a member method, then they must be made members of ostream and istream classes, which is not a good option most of the time. Therefore, these operators are overloaded as global functions with two parameters, cout and object of user-defined class.
+Following is a complete C++ program to demonstrate overloading of <> operators.
+ 
+
+#include <iostream>
+using namespace std;
+ 
+class Complex
+{
+private:
+    int real, imag;
+public:
+    Complex(int r = 0, int i =0)
+    {  real = r;   imag = i; }
+    friend void operator << (ostream &out, const Complex &c);
+    friend void operator >> (istream &in,  Complex &c);
+};
+ 
+void operator << (ostream &out, const Complex &c)
+{
+    out << c.real;
+    out  <<"+"<< c.imag <<"i"<< endl;
+   
+}
+ 
+void operator >> (istream &in,  Complex &c)
+{
+    cout << "Enter Real Part ";
+    in >> c.real;
+    
+    cout << "Enter Imaginary Part ";
+    in >> c.imag;
+    
+}
+ 
+int main()
+{
+   Complex c1;
+   cin >> c1;//operator>>(cin,c1)
+   cout << "The complex object is ";
+   cout << c1;
+   return 0;
+}

@@ -1,0 +1,32 @@
+check sortex.js  --- sort method 
+
+1.
+Display italics hello in another <p> tag
+Distplay underline hello in third <p> tag
+
+2. Using Jquery accept a number from the user in a textfield -on change show the factorial of that number in a <p> tag
+
+3. Using Jquery accept num: table from and table upto in 3 textfields
+for ex num=5 from= 1to =5
+On click of show button
+Show maths table in html table with a border and 2 columns
+5*1 = 5
+5*2 10
+5*3 15
+5*4 20
+5*5 25
+
+4. Using Jquery animate() API , write a div that has a nice quote in a nice font , color and size . Run the scroller from left to right 4 times , then R to L
+
+On click of the button
+
+5.  printing text on multiple lines on your own. on click on <p>
+
+6. Write an HTML that shows an AD that fadeIn on the screen
+Give a button-disappear = onclick of the button fadeOut the AD from the screen
+
+7. Try the slideDown and slideUP APIs as discussed in class
+
+Check and use other methods in JQuery 
+
+

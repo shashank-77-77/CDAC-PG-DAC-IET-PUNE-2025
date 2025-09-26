@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #content {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #b50a0a;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="content"></div>
+    <button id="dataBtn">Click me</button>
+    <script>
+
+        document.getElementById("dataBtn").addEventListener("click", function () {
+
+            $.ajax({
+                url: "data.txt",
+                type: "GET",
+                dataType: "text",
+                success: function (data) {
+
+                    document.getElementById("content").innerText = data;
+                },
+                error: function () {
+                    alert("Error loading file.");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

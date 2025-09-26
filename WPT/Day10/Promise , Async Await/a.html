@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0">
+  <title>AJAX Example</title>
+  <script>
+    let d = null;
+    function fetchData() {
+      let xhttp = new XMLHttpRequest();
+      xhttp.onload = function () {
+        if (this.readyState == 4 &&
+          this.status == 200) {
+          d = data;
+        }
+      };
+      xhttp.open("get",
+        "https://fake-json-api.mock.beeceptor.com/users", true);
+      xhttp.send();
+    }
+    console.log(d);
+    document.getElementById("data")
+      .innerHTML = d;
+  </script>
+</head>
+
+<body>
+
+  <h2>Fetch Data</h2>
+  <button onclick="fetchData()">
+    Fetch Data</button>
+
+  <div id="data"></div>
+
+</body>
+
+</html>

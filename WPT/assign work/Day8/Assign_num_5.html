@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS with jQuery and Try-Catch</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h1 id="myHeading">Hello, World!</h1>
+<button onclick="addStyle()">Add Class</button>
+<button onclick="removeStyle()">Remove Class</button>
+<button onclick="toggleStyle()">Toggle Class</button>
+
+<script>
+  function addStyle() {
+    try {
+      $('#myHeading').addClass('highlight');
+      console.log("Class 'highlight' added.");
+    } catch (error) {
+      console.error("Error in addStyle():", error.message);
+    } finally {
+      console.log("addStyle() executed.");
+    }
+  }
+
+  function removeStyle() {
+    try {
+      $('#myHeading').removeClass('highlight');
+      console.log("Class 'highlight' removed.");
+    } catch (error) {
+      console.error("Error in removeStyle():", error.message);
+    } finally {
+      console.log("removeStyle() executed.");
+    }
+  }
+
+  function toggleStyle() {
+    try {
+      $('#myHeading').toggleClass('highlight');
+      console.log("Class 'highlight' toggled.");
+    } catch (error) {
+      console.error("Error in toggleStyle():", error.message);
+    } finally {
+      console.log("toggleStyle() executed.");
+    }
+  }
+</script>
+
+</body>
+</html>

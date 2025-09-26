@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Promise Object</h1>
+<h2>The then() Method</h2>
+
+<p id="demo"></p>
+
+<script>
+function display(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+let myPromise = new Promise(function(resolve , reject ) {
+  let x = 0;
+
+// some code (try to change x to 5)
+
+  if (x == 0) {
+    console.log("ok")
+    resolve();
+  } else {
+    console.log("error");
+  }
+});
+
+myPromise.then(
+  function(value) {console.log("in then")},
+  function(error) {console.log("error in then ")}
+);
+</script>
+
+</body>
+</html>

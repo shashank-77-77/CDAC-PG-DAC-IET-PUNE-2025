@@ -1,0 +1,49 @@
+
+1)  accept 2 numbers from user 
+  and perform multiplication 
+  
+  using promise concept perform multiplication if both number 
+  are positive else reject the promise 
+
+2) Understand the Node JS Architecture and understand 
+event loop execution by adding timer and promise concept 
+
+use below code 
+
+setImmediate(function A() {
+	console.log("1st immediate");
+});
+
+
+
+process.nextTick(function C() {
+	console.log("1st process");
+});
+
+
+
+// First event queue ends here
+console.log("program started");
+----
+3)   accept command line args input from user 
+ between 1 -  5 
+ if input is valid then display * pattern output 
+ 
+ if input is 3 then display
+ * * *
+ * *
+ *
+  if number is not other that 1 to 5 then throw the error 
+  and display error message 
+  
+4)Accept 10 munbers  from Command Line Args and store in array 
+  then display 
+  1) addition of even numbers only 
+  2) addition of even index numbers
+  3) addition of prime numbers 
+  
+5)  USINF REPL concept 
+
+    write function which has for loop to display 
+	current date -  dd-mm-yyyy format 
+	then save that script in myDate.js file 

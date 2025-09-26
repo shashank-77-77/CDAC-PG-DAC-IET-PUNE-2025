@@ -1,0 +1,1779 @@
+void* malloc(n*sizeof(datatype));
+
+#include <iostream>  
+using namespace std;  
+#include<stdlib.h>
+int main()  
+{  
+   int *ptr;
+   int n,i;
+   cout<<"enter no of elements\n";
+   cin>>n;
+   ptr=(int*)malloc(n*sizeof(int));
+   cout<<"accept elements\n";
+   for(i=0;i<n;i++)
+   cin>>ptr[i];
+   	cout<<"display elements\n";
+   for(i=0;i<n;i++)
+   cout<<ptr[i]<<"\t";
+   free(ptr);
+}  
+==========================================================
+The following are the advantages of the new operator over malloc() function:
+1)It does not use the sizeof() operator as it automatically computes the size of the data object.
+2)It automatically returns the correct data type pointer, so it does not need to use the typecasting.
+
+Differences between the malloc() and new
+1)The new operator constructs an object, i.e., it calls the constructor to initialize an object while malloc() function does not call the constructor. The new operator invokes the constructor. This is the biggest difference between the malloc() and new.
+
+ 
+#include <iostream>
+using namespace std;
+ #include<stdlib.h>
+class A {
+    int a;
+ 
+
+ 
+    // Constructor of class A
+    A()
+    {
+        cout << "Constructor was Called!"
+             << endl;
+    }
+};
+ 
+
+int main()
+{
+ 
+    // Create an object of class A using new operator
+    A* a = new A();
+    cout << "Object of class A was "
+         << "created using new operator!"
+         << endl;
+ 
+    // Create an object of class A using malloc operator
+    A* b = (A*)malloc(sizeof(A));
+    cout << "Object of class A was "
+         << "created using malloc()!"
+         << endl;
+ 
+    return 0;
+}
+ 
+Output
+Constructor was Called!
+Object of class A was created using new operator!
+Object of class A was created using malloc()!
+In the above program we can clearly see that while creating object using new operator Default Constructor was called and using malloc function Default Constructor was not called.
+
+2)The new is an operator, while malloc() is a predefined function in the stdlib header file.
+
+3)If the sufficient memory is not available in a heap, then the new operator will throw an exception while the malloc() function returns a NULL pointer.
+
+4In the case of a new operator, we have to use the delete operator to deallocate the memory. But in the case of malloc() function, we have to use the free() function to deallocate the memory.
+=====================================================================================================
+
+1)The delete is an operator that de-allocates the memory dynamically while the free() is a function that destroys the memory at the runtime.
+2)When the delete operator destroys the allocated memory, then it calls the destructor of the class in C++, whereas the free() function does not call the destructor; it only frees the memory from the heap.
+ 
+#include <iostream>
+using namespace std;
+#include<stdlib.h>
+
+class A {
+    int a;
+public:
+   
+ 
+    A()
+    {
+        cout << "Constructor was Called!"
+             << endl;
+    }
+ 
+    // Destructor of class A
+    ~A()
+    {
+        cout << "Destructor was Called!"
+             << endl;
+    }
+};
+ 
+int main()
+{
+ 
+    // Create an object of class A
+    // using new operator
+    A* a = new A;
+    cout << "Object of class A was "
+         << "created using new operator!"
+         << endl;
+ 
+    delete a;
+    cout << "Object of class A was "
+         << "deleted using delete keyword!"
+         << endl;
+ 
+    cout << endl;
+ 
+    A* b = (A*)malloc(sizeof(A));
+    cout << "Object of class A was "
+         << "created using malloc()!"
+         << endl;
+ 
+    free(b);
+    cout << "Object of class A was "
+         << "deleted using free()!"
+         << endl;
+ 
+    return 0;
+}
+
+
+Output
+Constructor was Called!
+Object of class A was created using new operator!
+Destructor was Called!
+Object of class A was deleted using delete keyword!
+
+Object of class A was created using malloc()!
+Object of class A was deleted using free()!
+=======================================================================
+===========================
+#include <iostream>
+using namespace std;
+int main()
+{
+	string s1;
+	cin>>s1;
+	cout<<s1;
+
+}
+=======================================
+#include <iostream>  
+using namespace std;  
+#include<string.h>
+int main()  
+{  
+   char str1[20];
+   char str2[20];
+   cout<<"enter 1st string\n";
+   cin>>str1;
+   cout<<"enter 2nd string\n";
+   cin>>str2;
+   int x=strcmp(str1,str2);
+   if(x==1)
+   cout<<"string 1 is greater than string2\n";
+   if(x==-1)
+   cout<<"string 2 is greater than string1\n";
+    if(x==0)
+   cout<<"string 1 is equal to string2\n";
+   
+}  
+=========================================================================================#include <iostream>  
+using namespace std;  
+#include<string.h>
+int main()  
+{  
+   char str1[20];
+   char str2[20];
+   cout<<"enter 1st string\n";
+   cin>>str1;//iet
+   strcpy(str2,str1);//str2=iet
+   strrev(str1);// str1=tei
+   if(strcmp(str1,str2)==0)
+   cout<<"string is palindrom";
+   else
+   cout<<"not palindrom";
+   
+ 
+   
+}  
+============================================
+#include <iostream>  
+using namespace std;  
+#include<string.h>
+int main()  
+{  
+   char str1[20];
+   char str2[20];
+   cout<<"enter 1st string\n";
+   cin>>str1;
+   strcpy(str2,str1);
+   strrev(str1);
+   if(strcmp(str1,str2))
+   cout<<"string is not palindrom";
+   else
+   cout<<" palindrom";
+   
+ 
+   
+}  
+==========================================
+#include <iostream>  
+using namespace std;  
+#include<string.h>
+int main()  
+{  
+   char str1[20];
+   cout<<"enter 1st string\n";
+  	gets(str1);
+   puts(str1);
+ 
+   
+}  
+
+==========================================
+
+#include <iostream>  
+using namespace std;  
+#include<string.h>
+int main()  
+{  
+   char str1[50];
+   char* ptr=str1;
+   int space=0,vowel=0,cnt=0;
+   cout<<"enter multi string\n";
+	gets(str1);//iet cdac pune 
+   puts(str1);
+   while(*ptr!='\0')
+   {
+   		if(*ptr==32)
+   		space++;
+   		if(*ptr=='a'||*ptr=='e'||*ptr=='i'||*ptr=='o'||*ptr=='u')
+   		vowel++;
+   		cnt++;
+   		ptr++;
+   	
+   }
+ 	cout<<"no of characters are"<<cnt<<endl;
+ 	cout<<"no of spaces"<<space<<endl;
+ 	cout<<"no of words"<<space+1;
+   	cout<<"no of vowels"<<vowel;
+}  
+==============================================
+case1 :
+non constant pointer pointing to const int
+#include <iostream>  
+using namespace std;  
+#include<string.h>
+int main()  
+{  
+  	int a=10;
+  	int y=20;
+  const int	*ptr=&a;
+  cout<<*ptr;
+  //*ptr=5;===>error
+  //a=5;==>allowed
+  ptr=&y;
+}
+  ===========================================
+case 2:const pointer pointing to non const integer
+
+#include <iostream>  
+using namespace std;  
+#include<string.h>
+int main()  
+{  
+  	int a=10;
+  	int y=20;
+ int * const ptr=&a;
+   cout<<*ptr;
+  *ptr=5;//allowed
+  a=5;//allowed
+  ptr=&y;//error
+}
+==============================================  
+
+case 3: const pointer pointing to const integer
+#include <iostream>  
+using namespace std;  
+#include<string.h>
+int main()  
+{  
+  	int a=10;
+  	int y=20;
+ const int *const ptr=&a;
+  //*ptr=5;//not allowed
+  a=5;//allowed
+  ptr=&y;//error
+}
+  =======================================================
+
+=====
+Friend Class and Function in C++
+
+==>Data hiding is a fundamental concept of object-oriented programming. It restricts the access of private members from outside of the class.Similarly, protected members can only be accessed by derived classes and are inaccessible from outside.
+However, there is a feature in C++ called friend functions that break this rule and allow us to access private/protected member functions from outside the class.
+
+==>A friend class can access private and protected members of other classes in which it is declared as a friend. 
+It is sometimes useful to allow a particular class to access private and protected members of other classes. 
+We can declare a friend class in C++ by using the friend keyword.
+
+class Demo //Base class
+{
+	//Demo1 is a friend  of Demo class
+	friend class Demo1;
+}
+class Demo1 // friend class
+{
+//statements;
+}
+
+Syntax:
+friend class class_name;    // declared in the base class
+
+========================================================
+
+
+// C++ Program to demonstrate the functioning of a friend class
+#include <iostream>
+using namespace std;
+ class Demo {
+private:
+    int private_variable;
+ protected:
+    int protected_variable;
+ public:
+    Demo()
+    {
+        private_variable = 10;
+        protected_variable = 99;
+    }
+     // friend class declaration
+    friend class F;
+};
+ // Here, class F is declared as a friend inside class Demo. Therefore,
+// F is a friend of class Demo. Class F can access the private/PROTECTED members of //class Demo.
+class F {
+public:
+    void display(Demo& t)
+    {
+        cout << "The value of Private Variable = "<< t.private_variable << endl;
+        cout << "The value of Protected Variable = "<< t.protected_variable;
+    }
+};
+int main()
+{
+    Demo g;
+    F fri;
+    fri.display(g);
+    return 0;
+}
+
+Output
+The value of Private Variable = 10
+The value of Protected Variable = 99
+
+Note: We can declare friend class or function anywhere in the base class body whether its private, protected or public block. It works all the same.
+=====================================================================================
+
+Friend Function
+
+==>Like a friend class, a friend function can be granted special access to private and protected members of a class in C++. They are the non-member functions that can access and manipulate the private and protected members of the class in which they are declared as friends.
+==>If a function is defined as a friend function in C++, then the protected and private data of a class can be accessed using the function.
+
+==>A friend function can be:
+friend return_type function_name (arguments);    // for a global function
+
+===================================================================
+
+#include <iostream>  
+using namespace std;  
+class A
+{
+	int a;
+	public:
+		int geta();
+		friend void xyz(A&);
+};
+int A::geta()
+{
+	cout<<"enter the value of a\n";
+	cin>>this->a;
+}
+void xyz(A& a1obj)
+{
+	cout<<"friend function is accessing private class data  "<<a1obj.a<<endl;
+	
+}
+int main()
+{
+	A aobj;
+	aobj.geta();//a=10
+	xyz(aobj);
+}
+
+=======================================================================
+
+#include <iostream>  
+using namespace std;  
+class B;//forward declaraction
+class A
+{
+	int a;
+	public:
+		void geta()
+		{
+			cout<<"enter value of a\n";
+			cin>>a;
+		}
+		friend void big(A&, B&);
+};
+ class B
+{
+	int b;
+	public:
+		void getb()
+		{
+			cout<<"enter value of b\n";
+			cin>>b;
+		}
+		friend void big(A&, B&);
+};
+
+void big(A& x,B& y)
+{
+	if(x.a>y.b)
+	cout<<x.a<<"is greater";
+	if(x.a<y.b)
+	cout<<y.b<<"is greater";
+	else
+	cout<<"both are equal";
+}
+int main()
+{
+	A aobj;
+	B bobj;
+	aobj.geta();
+	bobj.getb();
+	big(aobj,bobj);	
+}
+
+
+
+=================================================================
+===========
+
+Features of Friend Functions
+ ==>A friend function is a special function in C++ that in spite of not being a member function of a class has the privilege to access the private and protected data of a class.
+==>A friend function is a non-member function or ordinary function of a class, which is declared as a friend using the keyword “friend” inside the class. By declaring a function as a friend, all the access permissions are given to the function.
+==>The keyword “friend” is placed only in the function declaration of the friend function and not in the function definition or call.
+==>A friend function is called like an ordinary function. It cannot be called using the object name and dot operator. However, it may accept the object as an argument whose value it wants to access.
+==>A friend function can be declared in any section of the class i.e. public or private or protected.
+=======================================================
+Advantages of Friend Functions
+==>A friend function is able to access members without the need of inheriting the class.
+==>The friend function acts as a bridge between two classes by accessing their private data.
+==>It can be declared either in the public or private or protected part of the class.
+
+Disadvantages of Friend Functions
+==>Friend functions have access to private members of a class from outside the class which violates the law of data hiding.
+==>Friend functions cannot do any run-time polymorphism 
+
+Important Points About Friend Functions and Classes
+==>Friendship is not mutual. If class A is a friend of B, then B doesn’t become a friend of A automatically.
+i.e Friendship is not inherited. 
+
+
+
+======================================================================================
+Example :
+#include <iostream>    
+using namespace std;    
+class Box    
+{    
+    private:    
+        int length;    
+    public:    
+        Box()
+	{
+		length=5;
+	}
+        friend int printLength(Box); //friend function    
+};    
+int printLength(Box b)    
+{    
+   b.length += 10;    
+    return b.length;    
+}    
+int main()    
+{    
+    Box b;    
+    cout<<"Length of box: "<< printLength(b)<<endl;    
+    return 0;    
+}    
+Output:
+
+Length of box: 10  
+=============================================================
+#include<iostream>
+using namespace std;
+class complex
+{
+	int real,img;
+public:
+	complex();
+	complex(int,int);
+	void display();
+	complex operator+(int);
+	friend complex operator+(int,complex&);
+};
+complex::complex()
+{}
+complex::complex(int real,int img)
+{
+	this->real=real;
+	this->img=img;
+}
+void complex::display()
+{
+	if(img>0)
+	cout<<"complex number is "<<real<<"+"<<img<<"i"<<endl;
+	else
+	cout<<"complex number is "<<real<<img<<"i"<<endl;
+}
+complex complex::operator+(int num)
+{
+	complex temp;
+	temp.real=real+num;
+	temp.img=img+num;
+	return temp;
+}
+complex operator+(int num,complex & c)
+{
+	complex temp;
+	temp.real=c.real+num;
+	temp.img=c.img+num;
+	return temp;
+}
+
+
+
+int main()
+{
+	/*complex c1(1,2);
+	complex c2=c1 + 5;//c2=c1.operator+(5)
+	c2.display();*/
+	complex c1(1,2);
+	complex c2=5+c1;//  operator+(5,c1)     
+	c2.display();
+	
+
+
+}
+=========================================================================
+====================================================================
+==============================================================================
+
+What Is C++ Enum?
+
+==>Enum, which is also known as enumeration, is a user-defined data type that enables you to create a  fixed range of possible values, and the variable can select one value from the set of values. For example, suppose you are the owner of an ice cream shop, and you sell a limited range of ice cream flavors. So you want the customers to select only from that collection of ice creams in your shop. This becomes an enumeration with ice cream as the name of enumeration and different flavors of ice creams as its elements.
+
+==>Enumeration (Enumerated type) is a user-defined data type that can be assigned some limited values. These values are defined by the programmer at the time of declaring the enumerated type.
+
+Syntax:
+
+enum enumerated-type-name
+{
+    value1, value2, value3…..valueN
+};
+
+enum Iceccream
+{
+	vanilla,stawberry,mango
+};
+Each of these elements has values starting from 0, like vanilla is 0, stawberry is 1, etc. The default values mentioned can be altered during the declaration of the enum in C++.
+====================================================================
+To declare an enum variable, write the name of the enumeration along with the enum variable.
+enum Iceccream
+{
+	vanilla,stawberry,mango
+};
+int main()
+{
+	Icecream i;
+}
+Here i is the enum variable.
+
+===================================================
+Example:
+#include <iostream>  
+using namespace std;  
+int main()
+{
+enum first_enum{value1=1, value2=10, value3};
+first_enum e;
+e=value3;
+cout<<e;
+
+}
+
+
+
+Output:
+11
+
+
+
+============================================================================
+Why use an enum in a program?
+One can utilise the enums in a program when they want the variables in the program to have just the set of values. For instance, let us consider the creation of a direction variable. Now, there are a total of four directions (N, S, W, E). Thus, a total of four values are possible with the direction variable. But here, the variable would be able to hold just a single value at any given time. Now, if a user provides any different value to the variable here, then we should get a compilation error.
+For vsuch scenario enum can be used.
+
+==>enum is a userdefined datatype that consists of paired named-integer constants. 
+
+================================================================
+#include<iostream>
+using namespace std;
+
+int main() 
+{ 
+string today="sunday";
+  
+    switch (today) { 
+    case "sunday": 
+        cout << "it is sunday"; 
+        break; 
+    case 1: 
+        cout << "it is monday"; 
+        break; 
+}
+}
+
+//error
+==============================================
+#include<iostream>
+using namespace std;
+enum Day{sunday='A',monday,tuesday,wednesday,thursday,friday,saturday
+};
+int main() 
+{ 
+    enum Day today;
+    today=sunday;
+  	cout<<today;
+    switch (today) { 
+    case 65: 
+        cout << "it is sunday"; 
+        break; 
+    case 66: 
+        cout << "it is monday"; 
+        break; 
+}
+}
+
+====================================================================
+#include<iostream>
+using namespace std;
+enum Day{sunday=0,monday,tuesday,wednesday,thursday,friday,saturday
+};
+int main() 
+{ 
+    Day today=sunday;
+  
+    switch (today) { 
+    case sunday: 
+        cout << "it is sunday"; 
+        break; 
+    case monday: 
+        cout << "it is monday"; 
+        break; 
+}
+}
+
+==========================================
+  
+// Defining enum Year 
+enum year { 
+    Jan=1, 
+    Feb, 
+    Mar, 
+    Apr, 
+    May, 
+    Jun, 
+    Jul, 
+    Aug, 
+    Sep, 
+    Oct, 
+    Nov, 
+    Dec 
+}; 
+  int main() 
+{ 
+    int i; 
+  
+    // Traversing the year enum 
+    for (i = Jan; i <= Dec; i++) 
+        cout << i << " "; 
+  
+    return 0; 
+}
+
+Output: 
+1 2 3 4 5 6 7 8 9 10 11 12
+==============================================================
+1)setw-->in c when we used \t we get spaces. but my req is to perform formated output.
+here setw means set width,here it will allocate specify number of spaces on the screen and it is going to print text from right to left.
+printf() ,cout --->print output from left to right
+setw print output from right to left
+
+cout<<"1\n10\n100\n";
+output is 1
+		1 0
+		1 0 0
+result     3  0 0
+
+our requirement is  
+		1 
+	1	0
+1	0	0
+result 111
+
+print matter from right to left go for setw.
+
+cout<< setw(5)<<1<<endl;//5 means no of spaces
+leave 5 space
+    1
+cout<<setw(5)<<10<<endl;
+   10
+cout<<setw(5)<<100
+  100
+//easy to calculate bill
+====================================
+setfill()-->fill space with some symbol;
+cout<<setfill('*');
+cout<<setw(5)<<1<<endl
+//****1
+
+setfill works with setw.  when setw is der then only setfill is implemented.
+
+===================================================
+cout<<setfill('*');
+cout<<setw(5)<<1<<endl
+cout<<setfill('*');
+cout<<setw(5)<<10<<endl
+cout<<setfill(' ');//when we dont want * symbol.setfill continue untill we write setfill(' ')
+cout<<setw(5)<<100<<endl
+
+output ****1
+	      ***10
+		  100
+================
+setprecision()
+
+cout<<22/7.0;
+//3.142758
+here  we give priority 1 or 2 decimal no,truncate the remaining decimal points
+for this setprecision () is used to indicate no of decimal places in floating values.
+
+cout<<setprecision(2)<<22/7.0;//no of decimal
+//3.1
+setprecisiom() will not work for integer data
+
+cout<<setprecision(2)<<124;//not work for integer will print as it is.
+
+==================================================
+set ios flags:
+
+#include <iomanip>
+#include <ios>
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+ 
+cout<<setiosflags(ios::showpos)<<100;//+100
+cout<<setiosflags(ios::showpos)<<-100;//-100
+/*when u want to display + sign before any positive number
+use showpos flag.work only for positive no*/
+
+
+}
+
+==========================================================
+File handling
+==>File handling in C++ is a mechanism to create and perform read/write operations on a file.
+==>We can access various file handling methods in C++ by importing the <fstream> class.
+
+#include <fstream>
+<fstream> includes two classes for file handling:
+
+   ==> ifstream - to read from a file.
+    ==>ofstream - to create/open and write to a file.
+=================================================================================
+Opening and Closing a File
+
+In order to work with files, we first need to open them. In C++, we can open a file using the ofstream and ifstream classes.
+
+For example, here's how we can open a file using ofstream:
+std::ofstream my_file("example.txt"); 
+
+Here,
+    my_file - the name of the object of the ofstream class.
+    example.txt - the name and extension of the file we want to open.
+======================================================================================
+Note: We can also use the open() function to open a file. For example,
+
+std::ofstream my_file.open("example.txt");
+=====================================================================
+Closing a File
+Once we're done working with a file, we need to close it using the close() function.
+my_file.close();
+==================================================================================
+Example 1: Opening and Closing a File
+#include <iostream>
+#include <fstream>
+using namespace std; 
+int main() {
+
+    // opening a text file for writing
+    ifstream my_file("example1.txt");
+    // close the file
+    my_file.close();
+    return 0;
+}
+============================================================
+Check the File for Errors
+
+In file handling, it's important to ensure the file was opened without any error before we can perform any further operations on it.There are two common ways to check files for errors:
+
+1. By Checking the File Object
+
+ofstream my_file("example.txt");
+// check if the file has been opened properly
+if (!my_file) {
+
+    // print error message
+    cout << "Error opening the file." << endl;
+    // terminate the main() function
+    return 1;
+}
+
+==>
+if (!my_file) {...}
+This method checks If the file has been opened successfully, the condition evaluates to true.
+    If there's an error, it evaluates to false, and you can handle the error accordingly.
+
+program:
+#include <iostream>
+#include <fstream>
+using namespace std; 
+int main() {
+
+    // opening a text file for writing
+    ifstream my_file("example.txt");
+    if (!my_file) {
+
+    // print error message
+    cout << "Error opening the file." << endl;
+    // terminate the main() function
+    
+}
+
+    // close the file
+    my_file.close();
+    return 0;
+}
+
+================================================================================
+2. Using the is_open() Function
+
+ is_open() function returns
+    true - if the file was opened successfully.
+    false - if the file failed to open or if it is in a state of error.
+
+ofstream my_file("example.txt");
+if (!my_file.is_open()) {
+    cout << "Error opening the file." << endl;
+    return 1;
+}
+
+program
+#include <iostream>
+#include <fstream>
+using namespace std; 
+int main() {
+
+    // opening a text file for writing
+    ifstream my_file("example.txt");
+    if (!my_file.is_open()) {
+    cout << "Error opening the file." << endl;
+	}
+    // close the file
+    my_file.close();
+    return 0;
+}
+
+================================
+Reading from text files is done by opening the file using the ifstream class.
+ For example,
+ifstream my_file("example1.txt");
+
+Then, we need to read the file line-by-line. To do this, we need to loop through each line of the file until all the lines are read, i.e., until we reach the end of the file.
+
+We use the eof() function for this purpose, which returns
+    true - if the file pointer points to the end of the file
+    false - if the file pointer doesn't point to the end of the file
+
+For example,
+
+// variable to store file content
+string line;
+// loop until the end of the file
+while (!my_file.eof()) {
+
+    // store the current line of the file in the "line" variable
+    getline(my_file, line);
+
+    // print the line variable
+    cout << line << endl;
+}
+
+Here, the while loop will run until the end of the file. In each iteration of the loop,
+    getline(my_file, line); reads the current line of the file and stores it in the line variable.
+    Then, it prints the line variable.
+================================================================================
+Example : Read From a File
+
+#include <iostream>
+#include <fstream>
+using namespace std; 
+int main() {
+
+    // open a text file for reading
+    ifstream my_file("tt.txt");
+
+    // check the file for errors
+    if(!my_file) {
+        cout << "Error: Unable to open the file." << endl;
+    }
+    else
+    cout<<"file opened";
+
+    // store the contents of the file in "line" string
+    string line;
+
+    // loop until the end of the text file
+    while (!my_file.eof()) {
+
+        // store the current line of the file
+        // in the "line" variable
+        getline(my_file, line);
+
+        // print the line variable
+        cout << line << endl;
+    }
+    // close the file
+    my_file.close();
+
+    return 0;
+}
+
+
+=========================================
+Write to a File
+
+We use the ofstream class to write to a file. For example,
+ofstream my_file("example.txt");
+We can then write to the file by using the insertion operator << with the ofstream object my_file. For example,
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main() {
+
+    // open a text file for writing
+    ofstream my_file("tt.txt");
+    // check the file for errors
+    if(!my_file) {
+        cout << "Error: Unable to open the file." << endl;
+    }
+
+    // write multiple lines to the file
+    my_file << "Line 1" << endl;
+    my_file << "Line 2" << endl;
+    my_file << "Line 3" << endl;
+    // close the file
+    my_file.close();
+
+    return 0;
+}
+
+====================================================================================
+Note: Writing to an existing file will overwrite the existing contents of the file.
+=============================================================================
+Append to a Text File
+
+To add/append to the existing content of a file, you need to open the file in append mode.
+In C++, you can achieve this by using the ios::app flag when opening the file:
+
+ofstream my_file("example.txt", ios::app);
+
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main() {
+
+    // open a text file for appending
+    fstream my_file("example.txt", ios::app);
+    // if the file doesn't open successfully, print an error message
+    if(!my_file) {
+        cout << "Failed to open the file for appending." << endl;
+        return 1;  
+    }
+    // append multiple lines to the file
+    my_file << "Line 4" << endl;
+    my_file << "Line 5" << endl;
+
+    my_file << "Line 6" << endl;
+
+    // close the file
+    my_file.close();
+
+    return 0;
+}
+
+This will add the following lines to example.txt:
+
+Line 4
+Line 5
+Line 6
+======================================
+File Handling With fstream
+
+Instead of using ifstream to read from a file and ofstream to write to the file, we can simply use the fstream class for all file operations.
+The constructor for fstream allows you to specify the file name and the mode for file operations.
+
+Mode and 	Description 
+
+ios::in
+	Opens the file to read (default for ifstream).
+
+ios::out
+	Opens the file to write (default for ofstream).
+
+ios::app
+	Opens the file and appends new content to itat the end.
+=======================================
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main() {
+
+    // 1. write to a text file
+    fstream my_file("example.txt", ios::out);
+    if (my_file) {
+        my_file << "This is a test line." << endl;
+        my_file.close();
+    }
+    else {
+        cout << "Unable to open file for writing." << endl;
+        return 1;
+    }
+
+    // 2. read from the same file
+    string line;
+    my_file.open("example.txt", ios::in);
+
+    
+    if (my_file) {
+        while (!my_file.eof()) {
+            getline(my_file, line);
+            cout << "Read from file: " << line << endl;
+        }
+        my_file.close();
+    }
+    else {
+        cout << "Unable to open file for reading." << endl;
+        return 1;
+    }
+
+    // 3. append data to the end of the file
+    my_file.open("example.txt", ios::app);
+
+
+    if (my_file) {
+        my_file << "This is another test line, appended to the file." << endl;
+        my_file.close();
+    }
+    else {
+        cout << "Unable to open file for appending." << endl;
+        return 1;
+    }
+
+    return 0;
+}
+========================================================
+Exception Handling
+
+What is an exception?
+
+==>An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions.
+==>In C++, exceptions are runtime anomalies or abnormal conditions that a program encounters during its execution due to which normal flow of the program cannot be maintained.
+
+ What is  Exception Handling?
+==>The process of handling these exceptions is called exception handling.
+==>Exception handling is a manner to handle the runtime error, we carry out exception handling, so, the normal flow of the program may be maintained even after runtime errors. 
+==>Using the exception handling mechanism, the control from one part of the program where the exception occurred can be transferred to another part of the code where the exception can be handled.
+
+====================================================================================
+Why do we need Exception Handling in C++?
+
+The following are the main advantages of exception handling over traditional error handling:
+
+ 1) Separation of Error Handling Code from Normal Code: There are always if-else conditions to handle errors in traditional error handling codes. These conditions and the code to handle errors get mixed up with the normal flow. This makes the code less readable and maintainable. With try/catch blocks, the code for error handling becomes separate from the normal flow.
+
+2)It maintains the normal flow of the application. Rest of the code is executed even after exception.
+This allows the program to recover gracefully from the error rather than terminating abruptly.
+
+3)The Exception Handling mechanism offers a way of clean seperation between error generating block and error handling block,thats why detecting of errors becomes very easy
+
+====================================================================================
+C++ try , catch and throw
+
+C++ provides an inbuilt feature for Exception Handling. It can be done using the following specialized keywords: try, catch, and throw with each having a different purpose.
+
+Syntax of try-catch in C++
+try {         
+     // Code that might throw an exception
+     throw SomeExceptionType("Error message");
+ } 
+catch( ExceptionName e1 )  {   
+     // catch block catches the exception that is thrown from try block
+ } 
+
+1. try in C++
+==>The try keyword represents a block of code that may throw an exception placed inside the try block. It’s followed by one or more catch blocks. If an exception occurs, try block throws that exception.
+==>The try block contains the code that may throw an exception. If an exception is thrown within the try block, the control is transferred to the corresponding catch block.
+
+2. catch
+The catch block contains the code that will handle the exception. Each catch block is associated with a specific exception type, and the catch block that corresponds to the type of exception that was thrown will be executed. If the catch block does not have a matching exception type, the exception is passed to the next catch block.
+
+3. throw in C++
+An exception in C++ can be thrown using the throw keyword. When a program encounters a throw statement, then it immediately terminates the current function and starts finding a matching catch block to handle the thrown exception.
+The throw keyword is used to throw an exception. The expression that follows the throw keyword is used to create the exception object. The exception object is then passed to the nearest catch block that can handle it.
+
+Note: Multiple catch statements can be used to catch different type of exceptions thrown by try block.
+==========================================================================================
+C++ Exception Classes
+
+In C++ standard exceptions are defined in <exception> class that we can use inside our programs. The arrangement of parent-child class hierarchy.They are intended to provide a standard set of exception classes for use in C++ programs and are designed to represent a wide range of error conditions that may occur during the execution of a program. 
+
+ll the exception classes in C++ are derived from std::exception class. Let's see the list of C++ common exception classes.
+Exception and Description
+std::exception
+	It is an exception and parent class of all standard C++ exceptions.
+std::bad_exception
+	It is used to handle the unexpected exceptions in a c++ program.
+std::bad_cast
+	This exception is generally be thrown by dynamic_cast.
+std::bad_typeid
+	This exception is generally be thrown by typeid.
+std::bad_alloc
+	 When the new operator fails to allocate the requested space.
+std::invalid_argument
+ This is thrown due to invalid arguments.
+
+
+
+========================================================================
+ #include <iostream>  
+using namespace std;
+int main()
+{
+	int numerator, denominator, result;
+    cout << "Enter numerator: ";
+    cin >> numerator;
+    cout << "Enter denominator: ";
+    cin >> denominator;
+    try{
+	if(denominator==0)
+	throw 0;
+	else
+	{
+	
+    result=numerator/denominator;
+    cout<<"result"<<result<<endl;
+	}
+	cout<<"end";
+	}
+    catch(float e)
+    {
+    	cout<<"in 1st catch \n";
+	}
+	catch(int e)
+	{
+		cout<<"denominator should not be 0\n";
+	}
+	cout<<"end of the program good bye\n";
+}
+	
+	
+	
+	
+	
+	=====================================================
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+   int numerator, denominator, arr[4] = {1,2,3,4};
+    int index;
+    
+    cout << "Enter array index: ";
+    cin >> index;
+    
+    try {
+        
+        // throw exception if array out of bounds
+        if (index >= 4)
+            throw "Error: Array out of bounds!";
+
+            
+        // not executed if array is out of bounds
+        cout << "Enter numerator: ";
+        cin >> numerator;
+    
+        cout << "Enter denominator: ";
+        cin >> denominator;
+
+        // throw exception if denominator is 0
+        if (denominator == 0)
+            throw 0;
+
+
+        // not executed if denominator is 0
+        arr[index] = numerator / denominator;
+        cout << arr[index] << endl;
+    }
+
+    // catch "Array out of bounds" exception
+    catch (const char* msg) {
+        cout << msg << endl;
+    }
+
+    // catch "Divide by 0" exception
+    catch (int num) {
+        cout << "Error: Cannot divide by " << num << endl;
+    }
+
+    // catch any other exception
+    catch (...) {
+        cout << "Unexpected exception!" << endl;
+    }
+
+    
+    return 0;    
+}
+=====================================================
+generalized catch block
+ #include <iostream>  
+using namespace std;
+int main()
+{
+	int numerator, denominator, result;
+    cout << "Enter numerator: ";
+    cin >> numerator;
+    cout << "Enter denominator: ";
+    cin >> denominator;
+    try{
+	if(denominator==0)
+	throw 0;
+	else
+	{
+	
+    result=numerator/denominator;
+    cout<<"result"<<result<<endl;
+	}
+	cout<<"end";
+	}
+    catch(float e)
+    {
+    	cout<<"in 1st catch \n";
+	}
+	catch(int* e)
+	{
+		cout<<"denominator should not be 0\n";
+	}
+	catch(...)
+	{
+		cout<<"something went wrong need to check\n";
+	}
+	cout<<"end of the program good bye\n";
+}
+	======================================================================================
+note:generalized catch block should be the last catch block
+ #include <iostream>  
+using namespace std;
+int main()
+{
+	int numerator, denominator, result;
+    cout << "Enter numerator: ";
+    cin >> numerator;
+    cout << "Enter denominator: ";
+    cin >> denominator;
+    try{
+	if(denominator==0)
+	throw 0;
+	else
+	{
+	
+    result=numerator/denominator;
+    cout<<"result"<<result<<endl;
+	}
+	cout<<"end";
+	}
+		catch(...)
+	{
+		cout<<"something went wrong need to check\n";
+	}
+    catch(float e)
+    {
+    	cout<<"in 1st catch \n";
+	}
+	catch(int* e)
+	{
+		cout<<"denominator should not be 0\n";
+	}
+
+	cout<<"end of the program good bye\n";
+}
+	
+	//error
+	========================================================================================================
+
+==============================================
+You can throw different types of exceptions as well like built-in types and custom types.
+
+#include <iostream>
+#include <stdexcept>
+using namespace std;
+
+int x = 5;
+
+int main() {
+try {
+   if (x == 0) 
+      throw x;
+   else if (x > 0)
+      throw 'x';
+   else 
+      throw "x is negative";
+}
+catch (int i) {
+   cout << "Caught an int exception: " << i << endl;
+}
+catch (char c) {
+   cout << "Caught a char exception: " << c << endl;
+}
+catch (char* str) {
+   cout << "Caught a string exception: " << str << endl;
+}
+}
+Output:
+Caught a char exception: x
+
+In this example, the code throws an exception based on the value of x: if x is zero, it throws an int exception, if x is positive it throws a char exception, otherwise it throws a string exception. The catch blocks catch the exception and print an appropriate message.
+===========================================
+program:C++ code for a simple program that prompts the user to enter their age and then checks if the age is a valid number between 0 and 100. If the age is not within this range, an exception is thrown, which is caught by the catch block, which prints an error message.
+
+
+#include <iostream>
+using namespace std;
+ 
+int main() {
+  try {
+    std::cout<<"Please enter the age"<<std::endl;
+    int age;
+    std::cin>>age;
+    if (age<0 || age>100)
+    {
+      throw (age);
+}
+ }
+ catch (int e) {
+cout << "Access denied - You must enter a valid age.\n";
+}
+  return 0;
+}
+===========================================
+
+
+
+// C++ program to demonstrate try/catch blocks can be nested
+// in C++
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+    // nesting of try/catch
+    try {
+        try {
+            throw 20;
+        }
+        catch (int n) {
+            cout << "Handle Partially ";
+            throw; // Re-throwing an exception
+        }
+    }
+    catch (int n) {
+        cout << "Handle remaining ";
+    }
+    return 0;
+}
+=========================================
+===============================================
+
+C++ User-Defined Exceptions
+==>In C++,we can create our own exception by inheriting the exception class located in the <exception> header.
+==>we have to ovveride the what() of the exception class.
+const char* what() const throw();
+what() print the error message
+throw() ==>exeception specification
+what() is not going to throw any kind of exception
+
+
+ #include <iostream>  
+    #include <exception>  
+    using namespace std;  
+    class MyException : public exception{  
+        public:  
+            const char * what() const throw()  
+            {  
+                return "Attempted to divide by zero!\n";  
+            }  
+    };  
+    int main()  
+    {  
+        try  
+        {  
+            int x, y;  
+            cout << "Enter the two numbers : \n";  
+            cin >> x >> y;  
+            if (y == 0)  
+            {  
+                MyException z;  
+                throw z;  
+            }  
+            else  
+            {  
+                cout << "x / y = " << x/y << endl;  
+            }  
+        }  
+        catch(exception& e)  
+        {  
+            cout << e.what();  
+        }  
+    }
+   
+=====================================================
+RTTI
+In C++, RTTI (Run-time type information) is a mechanism that exposes information about an object’s data type at runtime and is available only for the classes which have at least one virtual function. It allows the type of an object to be determined during program execution.
+
+1)typeid operator-->used for identifying the exact type of an object. 
+2)type_info class-->used to hold the type of information returned by typeid operator.
+
+typeid is an operator in C++. 
+    It is used where the dynamic type or runtime type information of an object is needed.
+    It is included in the <typeinfo> library. Hence inorder to use typeid, this library should be included in the program.
+
+Syntax:  
+
+typeid(type);
+OR
+typeid(expression);
+    This parameter is passed when the runtime type information of an expression is needed. In this, the expression is first evaluated. Then the type information of the final result is then provided.
+
+Return value: This operator provides the runtime type information of the specified parameter and hence that type information is returned, as a reference to an object of class type_info.
+
+1)When operand is a variable or an object.
+#include <iostream> 
+#include <typeinfo> 
+using namespace std; 
+  
+int main() 
+{ 
+    int i, j; 
+    char c; 
+  
+    // Get the type info using typeid operator 
+    const type_info& ti1 = typeid(i); 
+    const type_info& ti2 = typeid(j); 
+    const type_info& ti3 = typeid(c); 
+  
+    // Check if both types are same 
+    if (ti1 == ti2) 
+        cout << "i and j are of"
+             << " similar type" << endl; 
+    else
+        cout << "i and j are of"
+             << " different type" << endl; 
+  
+    // Check if both types are same 
+    if (ti2 == ti3) 
+        cout << "j and c are of"
+             << " similar type" << endl; 
+    else
+        cout << "j and c are of"
+             << " different type" << endl; 
+  
+    return 0; 
+} 
+==========================================
+
+#include <iostream> 
+#include <typeinfo> 
+using namespace std; 
+  
+int main() 
+{ 
+    int i = 5; 
+    float j = 1.0; 
+    char c = 'a'; 
+  
+    // Get the type info using typeid operator 
+    const type_info& ti1 = typeid(i * j); 
+    const type_info& ti2 = typeid(i * c); 
+    const type_info& ti3 = typeid(c); 
+  
+    // Print the types 
+    cout << "ti1 is of type "
+         << ti1.name() << endl; 
+  
+    cout << "ti2 is of type "
+         << ti2.name() << endl; 
+  
+    cout << "ti3 is of type "
+         << ti3.name() << endl; 
+  
+    return 0; 
+} 
+==============================================
+
+ #include <iostream>  
+#include <typeinfo> 
+    using namespace std;  
+    class Animal
+    {
+    	public:
+    		virtual void move()=0;
+    	
+	};
+	class eagle:public Animal
+	{
+		public:
+    		virtual void move()
+    		{
+    			cout<<"flying";
+			}
+    	
+		
+	};
+	class lion:public Animal
+	{
+		public:
+    		virtual void move()
+    		{
+    			cout<<"running";
+			}
+    	
+		
+	};
+	int main()
+	{
+	
+		Animal * p_e=new eagle();
+			Animal * p_l=new lion();
+const	type_info& TypeId=typeid(*p_e);
+		if(TypeId==typeid(eagle))
+		cout<<"eagle";
+	}	
+	
+=========================================================================
+Casting operators in c++
+1)static_cast
+2)dynamic_cast
+3)const_cast
+4)reinterpret_cast
+
+
+Runtime Casts
+
+The runtime cast, which checks that the cast is valid, is the simplest approach to ascertain the runtime type of an object using a pointer or reference. This is especially beneficial when we need to cast a pointer from a base class to a derived type. When dealing with the inheritance hierarchy of classes, the casting of an object is usually required. There are two types of casting: 
+
+    Upcasting: When a pointer or a reference of a derived class object is treated as a base class pointer.
+    Downcasting: When a base class pointer or reference is converted to a derived class pointer.
+
+Using ‘dynamic_cast‘: In an inheritance hierarchy, it is used for downcasting a base class pointer to a child class. On successful casting, it returns a pointer of the converted type and, however, it fails if we try to cast an invalid type such as an object pointer that is not of the type of the desired subclass.
+
+For example, dynamic_cast uses RTTI and the following program fails with the error “cannot dynamic_cast `b’ (of type `class B*’) to type `class D*’ (source type is not polymorphic) ” because there is no virtual function in the base class B.
+
+NOTE:
+Dynamic Cast: A cast is an operator that converts data from one type to another type. In C++, dynamic casting is mainly used for safe downcasting at run time. To work on dynamic_cast there must be one virtual function in the base class. A dynamic_cast works only polymorphic base class because it uses this information to decide safe downcasting.
+
+Syntax:
+    dynamic_cast <new_type>(Expression)
+
+    Downcasting: Casting a base class pointer (or reference) to a derived class pointer (or reference) is known as downcasting. In figure 1  casting from the Base class pointer/reference to the “derived class 1” pointer/reference showing downcasting (Base ->Derived class).
+
+// C++ program to demonstrate
+// Run Time Type Identification successfully
+// With virtual function
+ 
+#include <iostream>
+using namespace std;
+ 
+// Initialization of base class
+class B {
+    virtual void fun() {}
+};
+ 
+// Initialization of Derived class
+class D : public B {
+	public:
+	void show()
+	{
+		cout<<"in show()";
+	}
+};
+ 
+// Driver Code
+int main()
+{
+    B* b = new D; // Base class pointer
+    b->show()//error
+      //c++ want new type of conversion i.e dynamic_cast
+	
+    D* d = dynamic_cast<D*>(b); // Derived class pointer
+   d->show();
+    getchar();
+    return 0;
+}
+
+
+
+================================================
+static_cast
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+   int i;
+   float f=3.142f;
+   i=f;
+   cout<<i;
+    getchar();
+    return 0;
+}
+//this program gives warning for loss of precision
+
+//suppress the warning for loss of precision by using static_cast
+
+
+
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+   int i;
+   float f=3.142f;
+  i=static_cast<int>(f);
+   cout<<i;
+    getchar();
+    return 0;
+}
+
+
+
+================================================
+reinterpret cast:
+dangerous cast.dont use it because it can typecast any type into any other type
+
+
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+   int i=100000;
+   int* p;
+  p=i;
+    getchar();
+    return 0;
+}
+//error
+
+
+
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+   int i=100000;
+   int* p;
+  p=reinterpret_cast<int*>(i);
+  cout<<p;
+    getchar();
+    return 0;
+}
+==============================================================================
+const_cast->remove constness of the variable
+
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+ 	const int i=20;
+ 	 int* p;
+ //	p=&i;
+ 	
+ 	p = const_cast<int*>(&i);
+ 	cout<<*p;
+ 
+ //i++;//error
+ *p=10;//allowed
+ cout<<*p;
+    getchar();
+    return 0;
+}
+===============================================================
+STL:
+
+
+he C++ Standard Template Library (STL) is a collection of algorithms, data structures, and other components that can be used to simplify the development of C++ programs. The STL provides a range of containers, such as vectors, lists, and maps, as well as algorithms for searching, sorting and manipulating data.
+
+One of the key benefits of the STL is that it provides a way to write generic, reusable code that can be applied to different data types. This means that you can write an algorithm once, and then use it with different types of data without having to write separate code for each type.
+
+The STL also provides a way to write efficient code. Many of the algorithms and data structures in the STL are implemented using optimized algorithms, which can result in faster execution times compared to custom code.
+
+Some of the key components of the STL include:
+Containers: The STL provides a range of containers, such as vector, list, map, set, and stack, which can be used to store and manipulate data.
+Classification of containers :
+
+
+vector	vector is a class that creates a dynamic array allowing insertions and deletions .Random access
+list	list is the sequence containers that allow the insertions and deletions from anywhere.
+deque	deque is the double ended queue that allows the insertion and deletion from both the ends.	
+set	set is an associate container for storing unique sets.	
+map	Map is an associate container for storing unique key-value pairs, i.e. each key is associated with only one value(one to one mapping).	
+
+
+
+stack	It follows last in first out(LIFO).	
+queue	It follows first in first out(FIFO).	
+
+Iterators are pointer-like entities used to access the individual elements in a container.
+Iterators are moved sequentially from one element to another element. This process is known as iterating through a container.

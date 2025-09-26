@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <script>
+
+        let cnt = 0;   // global 
+        function counter() {
+            console.log("count ");
+            let cnt = 0;  // local 
+            cnt = cnt + 1;
+            document.getElementById("p1").innerHTML = "The counter is: " + cnt;
+            //another();
+        }
+
+        function another() {
+
+            cnt = 3;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <p id="p1">Data </p>
+
+
+
+    <button type="button" onclick="counter()">Call Function</button>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+  h1,
+  h2{
+    text-align: center;
+    }
+   #formContainer {
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    label {
+       display: block;
+       margin-top: 10px; 
+    }
+    input,
+    textarea {
+        width: 400px;
+        margin-top: 8px;
+        padding: 8px;
+        border: 1px solid #000000;
+        border-radius: 4px;
+    }
+
+     button {
+            margin: 10px;
+            padding: 8px 16px;
+            background-color: #22d71f;
+            color: #f72323;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f5e90d;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3d6694;
+            color: #fff;
+        }
+</style>
+
+</head>  
+
+<body>
+
+    
+ <h2>Employee Data</h2>
+ <div id="formContainer">
+     <label for="nameInput">
+            Name:
+     </label>
+     <input type="text"  id="nameInput"  placeholder="Employee Name"> <br><br>
+
+     <label for="emailInput">
+            Email Id:
+     </label>
+     <input type="email" id="emailInput" placeholder="Email id" ><br><br>
+     <label for="mobileInput">
+        Mobile No:
+     </label>
+     <input type="text" id="mobileInput" placeholder="Mobile No"><br><br>
+     <label for="addressInput">
+            Address:
+     </label>
+     <textarea id="addressInput" placeholder="Address"> </textarea><br><br>
+<button onclick="add()">AddData</button>
+     
+
+ </div>
+<table id="outTable">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile Details</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+    </table>
+
+    <script>
+        function add()
+        {
+            let name=document.getElementById("nameInput").value;
+            let email=document.getElementById("emailInput").value;
+            let mobile=document.getElementById("mobileInput").value;
+            let address=document.getElementById("addressInput").value;
+        
+            let table = document.getElementById("outTable");
+            let newRow = table.insertRow(table.rows.length);
+
+             newRow.insertCell(0).innerHTML = name;
+             newRow.insertCell(1).innerHTML = email;
+             newRow.insertCell(2).innerHTML = mobile;
+             newRow.insertCell(3).innerHTML = address;
+             newRow.insertCell(4).innerHTML =
+             '<button onclick="editData(this)">Edit</button>' +
+             '<button onclick="deleteData(this)">Delete</button>';
+
+                clearInputs()
+      }
+
+      function editData(button)
+      {
+            let row=button.parentNode.parentNode;
+
+            let nameCell = row.cells[0];
+            let emailCell = row.cells[1];
+            let mobileCell = row.cells[2];
+            let addressCell = row.cells[3];
+
+
+            let nameInput = 
+            prompt("Enter the Updated name :", nameCell.innerHTML);
+
+            let emailInput = 
+            prompt("Enter the Updated Email :", emailCell.innerHTML);
+
+            let mobileInput = 
+            prompt("Enter the updated Mobile no :", mobileCell.innerHTML);
+
+            let addressInput = 
+            prompt("Enter the Updated Address :", addressCell.innerHTML);
+
+
+            nameCell.innerHTML = nameInput;
+            emailCell.innerHTML = emailInput;
+            mobileCell.innerHTML = mobileInput;
+            addressCell.innerHTML = addressInput;
+      }
+
+      function deleteData(button)
+      {
+            let row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+
+      }
+
+      function clearInputs()
+      {
+           document.getElementById("nameInput").value = "";
+           document.getElementById("emailInput").value = "";
+           document.getElementById("mobileInput").value = "";
+           document.getElementById("addressInput").value = "";
+
+      }
+
+
+    </script>
+
+
+</body>
+</html>

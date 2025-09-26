@@ -1,0 +1,50 @@
+<html>
+
+<head>
+ <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
+
+
+ <script>
+
+    $(function (){
+
+    //alert("hello")
+        $("#d1").html("<h1>Data</h1> ");
+
+        $("p").text("paragraph data ");
+
+        $("#b1").click(()=>{
+            $("#d1").slideDown();
+            //$("#d1").fadeIn("slow");
+        })
+
+        $("#b2").click(()=>{
+            $("#d1").slideUp(500);
+        })
+
+        $("#b3").click(()=>{
+             
+            $("#d1").slideToggle(500);
+        })
+
+    })
+
+ </script>
+
+</head>
+<body>
+
+
+<div id="d1" style="width:80px;height:80px;display:none;background-color:red;">
+</div>
+
+<p></p>
+
+<button type="button" id="b1">Slide Down </button>
+<button type="button" id="b2">Slide UP  </button>
+<button type="button" id="b3">Slide UP/Down  </button>
+
+</body>
+
+
+</html>

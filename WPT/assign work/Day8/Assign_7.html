@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">    
+  <title>Smart Calculator</title>
+  <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #ffffff, #ffffff, #ffffff); /* dark blue gradient */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #eee;
+}
+
+.calculator {
+  background-color: #000000; /* dark slate */
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow:
+    0 10px 30px rgba(255, 255, 255, 0.7),
+    inset 0 0 15px #ffffff; /* subtle blue inner glow */
+  width: 320px;
+}
+
+.calculator input[type="text"] {
+  width: 100%;
+  height: 60px;
+  font-size: 26px;
+  padding: 12px;
+  margin-bottom: 25px;
+  border: none;
+  border-bottom: 3px solid #3b82f6; /* bright blue underline */
+  background-color: #ffffff; /* dark input bg */
+  color: #000000; /* light text */
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  border-radius: 6px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.calculator input[type="text"]:focus {
+  border-bottom-color: #000000;
+  background-color: #3b82f6; 
+  color: white;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.buttons button {
+  padding: 18px 0;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+}
+ </style>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div class="calculator">
+  <input type="text" id="display" placeholder="0" readonly>
+
+  <div class="buttons">
+    <button onclick="appendValue('7')">7</button>
+    <button onclick="appendValue('8')">8</button>
+    <button onclick="appendValue('9')">9</button>
+    <button class="operator" onclick="appendValue('/')">÷</button>
+
+    <button onclick="appendValue('4')">4</button>
+    <button onclick="appendValue('5')">5</button>
+    <button onclick="appendValue('6')">6</button>
+    <button class="operator" onclick="appendValue('*')">×</button>
+
+    <button onclick="appendValue('1')">1</button>
+    <button onclick="appendValue('2')">2</button>
+    <button onclick="appendValue('3')">3</button>
+    <button class="operator" onclick="appendValue('-')">−</button>
+
+    <button onclick="appendValue('0')">0</button>
+    <button onclick="appendValue('.')">.</button>
+    <button class="equal" onclick="calculate()">=</button>
+    <button class="operator" onclick="appendValue('+')">+</button>
+
+    <button class="clear" onclick="clearDisplay()">C</button>
+    <button class="reset" onclick="resetCalculator()">Reset</button>
+  </div>
+</div>
+
+<script>
+  
+  function appendValue(val) {
+    try {
+      $('#display').val($('#display').val() + val);
+    } catch (err) {
+      console.error('Error appending value:', err.message);
+    }
+  }
+
+ 
+  function clearDisplay() {
+    try {
+      let current = $('#display').val();
+      $('#display').val(current.slice(0, -1));
+    } catch (err) {
+      console.error('Error clearing display:', err.message);
+    }
+  }
+
+ 
+  function resetCalculator() {
+    try {
+      $('#display').val('');
+    } catch (err) {
+      console.error('Error resetting calculator:', err.message);
+    }
+  }
+
+  function calculate() {
+    try {
+      const result = eval($('#display').val());
+      $('#display').val(result);
+    } catch (err) {
+      alert('Invalid Expression');
+      console.error('Calculation error:', err.message);
+    }
+  }
+</script>
+
+</body>
+</html>

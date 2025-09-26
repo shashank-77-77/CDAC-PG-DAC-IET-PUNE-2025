@@ -1,0 +1,64 @@
+<!-- 1) Accept Employee data 
+FirstName  | LastName | email | Date of Birth 
+
+from user 
+	a) perform validation -  data is entered or not 
+                    if not entered then display error msg 
+	b) if data is correct then display data on same page
+                     in table format using dom evenets 
+					 
+	c) after adding data clear the textfields 
+	d) add row wise edit and delete functionality  -->
+
+    <html>
+    <head>
+    <title>
+        EMPLOYEE DATA
+    </title>
+
+    </head>
+        <body>
+            <div id="d1" style="background-color: aqua;">
+            <label for="f1" >Enter first name</label>
+            <input  type="text" name="ename" id="ename"/><br/><br/>
+            <label for="f2" >Enter last name</label>
+            <input  type="text" name="lname" id="lname"/><br/><br/>
+            <label for="f3" >Enter email id</label>
+            <input  type="email" name="mname" id="mname"/><br/><br/>
+            <button onclick="vali()">Print data</button>
+        </div>
+        <div id="d2" style="background-color: darksalmon;">
+            <table id="t1">
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Email</th>
+                </tr>
+            </table>
+
+
+        </div>
+        </body>
+        <script>
+            function vali()
+            {
+                let ename=document.getElementById("ename").value;
+                let lname=document.getElementById("lname").value;
+                let mname=document.getElementById("mname").value;
+                if(ename.trim()=="")
+                {
+
+                }
+                let table=document.getElementById("t1")
+
+                let newRow=table.insertRow(table.rows.length)
+                newRow.insertCell(0).innerHTML = ename;
+                newRow.insertCell(1).innerHTML = lname;
+                newRow.insertCell(2).innerHTML = mname;
+
+
+            }
+
+        </script>
+
+    </html>

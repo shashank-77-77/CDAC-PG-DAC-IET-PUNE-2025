@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fetch with AbortController</title>
+</head>
+
+<body>
+    <h1>Fetching Data</h1>
+    <div id="data">Loading......</div>
+    <button id="cancelBtn">Cancel Fetch</button>
+
+    <script>
+        const myDisplayer = content => {
+            document.getElementById("data").innerHTML = content;
+        };
+
+        // Create an AbortController instance
+        const controller = new AbortController();
+        const signal = controller.signal;
+
+        // Start the fetch with the abort signal
+        let myPromise = fetch("https://fake-json-api.mock.beeceptor.com/users", { signal })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("File not Found!!!! " + response.status);
+                }
+                return response.json();
+            });
+
+        myPromise.then(
+            data => {
+              setTimeout(()=>{
+                myDisplayer(`<pre>${JSON.stringify(data, null, 2)}</pre>`);
+              },7000)
+                
+            },
+            error => {
+                if (error.name === 'AbortError') {
+                    myDisplayer("Fetch aborted!");
+                } else {
+                    myDisplayer("Error!!!! " + error.message);
+                }
+            }
+        );
+
+        // Cancel fetch when clicking the button
+        document.getElementById("cancelBtn").addEventListener("click", () => {
+            controller.abort();
+        });
+    </script>
+</body>
+
+</html>

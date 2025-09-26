@@ -1,0 +1,39 @@
+<html>
+    <head>
+       <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $().ready(()=>{
+                $("#d1").click(()=>{
+                let x = 5; // number of rows 
+                let str = $("#d1").text()
+                let length = str.length
+                let finalstr=""
+                let a =0
+                let b= length/x
+                for(var i=0;i<x;i++){
+                    let part = str.slice(a,b)
+                    finalstr=finalstr.concat(part+"<br>")
+					console.log(a , b , length/x);
+                    a=b
+                    b=b+length/x
+                }
+                
+                $("p").html(finalstr)
+            })
+
+           
+
+            })
+
+        </script>
+
+<body>
+    <div id="d1" data-mylines="2">
+        this is some data which I want to split and divide in many lines this is a huge text . It is important to revise the concepts. regular revision is compulsary for winners.
+		 this is some data which I want
+		 this is some data which I want
+    </div>
+    <button>INCR LINES</button>
+    <p></p>
+</body>
+</html>

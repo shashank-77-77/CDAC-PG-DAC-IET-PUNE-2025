@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Validation</title>
+        <style>
+            .error{
+                visibility:hidden;
+            }
+        </style>
+        <script>
+            function Validate()
+            {
+                var name=document.forms["form1"]["studname"].value
+                var age=document.forms["form1"]["studage"].value
+                var password=document.forms["form1"]["pass"].value
+                console.log(password)
+
+                if(name.trim()==0)
+                {
+                    document.getElementsByClassName("error")[0].style.visibility='visible'
+                }
+                else
+                {
+                    document.getElementsByClassName("error")[0].style.visibility='hidden'
+                }
+
+                if(age<10)
+                {
+                    document.getElementsByClassName("error")[1].style.visibility='visible'
+                    //return false;
+                }
+                else
+                {
+                    document.getElementsByClassName("error")[1].style.visibility='hidden'
+                   
+                    //return true;
+                }
+
+                if(password.trim() == "")
+                { console.log("in if")
+
+                    document.getElementsByClassName("error")[2].style.visibility='visible'
+                    return false;
+                }
+                else
+                { console.log("in else");
+
+                    document.getElementsByClassName("error")[2].style.visibility='hidden'
+                     document.forms["form1"].action="login.html"
+                    return true;
+
+                }
+            }
+            function d1()
+            {
+                document.forms["form1"].action="signin.html"
+                document.forms["form1"].submit()
+            }
+        </script>
+
+    </head>
+    <body>
+        <form name="form1" onsubmit="return Validate()">
+        Enter Name:<input type="text" name="studname"/> 
+        <p class="error">Name must be give </p>
+        <br>
+        Enter Age:<input type="number" name="studage"/>
+        <p class="error">Age must be greater than 10</p>
+        <br>
+        Enter password:<input type="text" name="pass"/>
+        <p class="error">password should be 10 alphanumeric</p>
+        <br>
+        <input type="submit" value="action"></input><br>
+    
+    
+    </form>
+
+        
+
+        <script>
+            
+        </script>
+    </body>
+</html>

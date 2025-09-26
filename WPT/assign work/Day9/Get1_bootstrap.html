@@ -1,0 +1,12 @@
+<div id="result">Loading data...</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $.get("https://jsonplaceholder.typicode.com/posts/1")
+    .done(function(data) {
+      $("#result").html(`<pre>${JSON.stringify(data, null, 2)}</pre>`);
+    })
+    .fail(function() {
+      $("#result").text("Error loading data");
+    });
+</script>

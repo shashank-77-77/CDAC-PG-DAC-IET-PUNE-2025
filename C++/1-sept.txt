@@ -1,0 +1,1196 @@
+Dynamic object creation on heap
+
+#include<iostream>
+using namespace std;
+class cdate
+{
+	int dd,mm,yy;
+	public:
+		cdate()
+		{
+			dd=mm=yy=0;
+		}
+		cdate(int d,int m,int y)
+		{
+			dd=d;
+			mm=m;
+			yy=y;
+		}
+		void show()
+		{
+			cout<<dd<<"/"<<mm<<"/"<<yy<<endl;
+		}
+};
+int main()
+{
+	cdate* ptr1=new cdate(1,3,2025);
+	ptr1->show();
+	delete ptr1;
+
+}
+
+====================================
+creation of Dynamic Array of object on heap section
+  
+
+#include<iostream>
+using namespace std;
+class Student
+{
+	int rollno;
+	char name[20];
+	public:
+		void accept()
+		{
+			cin>>rollno;
+			cin>>name;
+		}
+		void display()
+		{
+			cout<<"rollno is \t"<<rollno<<"name is \t"<<name<<endl;
+			
+		}
+		~Student()
+		{
+			cout<<"destructor is called\n";
+		}
+	
+};
+  
+  int main()
+  {
+  	int n,i;
+  	cout<<"enter no of students\n";
+  	cin>>n;
+  Student* ptr	=new Student[n];
+  cout<<"accept details\n";
+  for(i=0;i<n;i++)
+   ptr[i].accept(); //(ptr+i)->accept();
+   cout<<"display details\n";
+  for(i=0;i<n;i++)
+   (ptr+i)->display();//ptr[i].display();
+delete [] ptr;
+}
+==========================================
+Dynamic initialization of object in C++
+
+==>Dynamic initialization of object refers to initializing the objects at a run time i.e., the initial value of an object is provided during run time.
+==>It can be achieved by using constructors and by passing different parameter list/signatures to the constructors.
+
+==>This comes in really handy when there are multiple constructors of the same class with different inputs.
+==========================================
+Dynamic Constructor:
+The constructor used for allocating the memory at runtime is known as the dynamic constructor.
+The memory is allocated at runtime using a new operator and similarly, memory is deallocated at runtime using the delete operator.
+
+Ex:
+// C++ program for dynamic allocation
+#include <iostream>
+using namespace std;
+ class Demo {
+    int* ptr;
+ public:
+      Demo()
+    {
+        // Dynamically initializing ptr using new
+        ptr = new int;
+        *ptr = 10;
+    }
+     // Function to display the value of ptr
+    void display()
+    {
+        cout << *ptr << endl;
+    }
+};
+ int main()
+{
+    Demo obj1;
+
+     obj1.display();
+}
+
+
+Output
+10
+In the above example, new is used to dynamically initialize the variable in default constructor and memory is allocated on the heap.
+The objects of the class Demo calls the function and it displays the value of dynamically allocated variable i.e ptr.
+
+===============================================================
+
+#include <iostream> 
+using namespace std; 
+#include<string.h>
+class string1
+{
+	int len;
+	char* ptr;
+
+
+
+
+	public:
+		string1();
+		void display();
+		string1(char*);
+		string1(char,int);
+		string1(int);
+		~string1()
+		{
+			cout<<"destructor is called\n";
+			if(ptr)
+			{
+			cout<<"in if\n";
+			delete[]ptr;
+			ptr=NULL;
+			}
+		
+		}
+};
+void string1::display()
+{
+	if(len>1)
+	{
+			cout<<"length of character is "<<len<<endl;
+			cout<<"string is "<<ptr<<endl;
+	}
+	else
+	{
+	cout<<"length of character is "<<len<<endl;
+	cout<<"character is "<<*ptr<<endl;
+	}
+}
+string1::string1()
+{
+	len=1;
+	ptr=new char[len];
+	*ptr='S';
+
+}
+ string1::string1(char* s)
+{
+	len=strlen(s);
+	ptr=new char[len+1];
+	strcpy(ptr,s);
+}
+string1::string1(char c,int len)
+{
+	int i;	
+	this->len=len;
+	ptr=new char[len+1];
+	for(i=0;i<len;i++)
+	{
+		ptr[i]=c;
+	}
+	ptr[len]='\0';
+	
+}
+string1::string1(int l)
+{
+	len=l;
+	ptr=new char[len+1];
+	cout<<"enter string\n";
+	cin>>ptr;
+
+}
+int main()
+{
+	string1 s1;
+	s1.display();
+	string1 s2("rahul");
+	s2.display();
+	string1 s3('*',80);
+	s3.display();
+	string1 s4(4);
+	s4.display();
+//no need to call explicit destructor.when the scope of object gets over,user defined //destructor will call implicitly
+implicitlyt
+	/*s1.~string1();
+	s2.~string1();
+	s3.~string1();
+	s4.~string1();*/
+}
+===============================================
+//no need of calling destructor explicitly . compiler will invoke destructor implicitly as soon as the object goes out of scope
+#include <iostream> 
+using namespace std; 
+#include<string.h>
+class string1
+{
+	int len;
+	char* ptr;
+	public:
+		string1();
+		void display();
+		string1(char*);
+		string1(char,int);
+		string1(int);
+		~string1()
+		{
+			cout<<"destructor is called\n";
+			if(ptr)
+			{
+			cout<<"in if\n";
+			delete[]ptr;
+			ptr=NULL;
+			}
+		
+		}
+};
+void string1::display()
+{
+	if(len>1)
+	{
+			cout<<"length of character is "<<len<<endl;
+			cout<<"string is "<<ptr<<endl;
+	}
+	else
+	{
+	cout<<"length of character is "<<len<<endl;
+	cout<<"character is "<<*ptr<<endl;
+	}
+}
+string1::string1()
+{
+	len=1;
+	ptr=new char[len];
+	*ptr='S';
+
+}
+ string1::string1(char* s)
+{
+	len=strlen(s);
+	ptr=new char[len+1];
+	strcpy(ptr,s);
+}
+string1::string1(char c,int len)
+{
+	int i;	
+	this->len=len;
+	ptr=new char[len+1];
+	for(i=0;i<len;i++)
+	{
+		ptr[i]=c;
+	}
+	ptr[len]='\0';
+	
+}
+string1::string1(int l)
+{
+	len=l;
+	ptr=new char[len+1];
+	cout<<"enter string\n";
+	cin>>ptr;
+
+}
+int main()
+{
+	string1 s1;
+	s1.display();
+	string1 s2("rahul");
+	s2.display();
+	string1 s3('*',80);
+	s3.display();
+	string1 s4(4);
+	s4.display();
+	
+}
+========================================================
+=======================================================================
+#include<iostream>
+using namespace std;
+class temp
+{
+	int *ptr;
+	int size;
+public:
+	temp();
+	void get();
+	void show();
+	int max();
+	int min();
+};
+temp::temp()
+{
+	cout<<"how many elements do u want to store\n";
+	cin>>size;//5	
+	ptr=new int[size];
+}
+void temp::get()
+{
+	cout<<"accept elements\n";
+	for(int i=0;i<size;i++)
+	cin>>ptr[i];//cin>>*(ptr+i)
+}
+void temp::show()
+{
+	cout<<"value are\n";
+	for(int i=0;i<size;i++)
+	cout<<ptr[i]<<"\n";
+}
+int temp::max()
+{
+	int m=ptr[0];
+	for(int i=1;i<size;i++)
+	if(ptr[i]>m)
+	m=ptr[i];
+	return m;
+}
+int temp::min()
+{
+	int m=ptr[0];
+	for(int i=1;i<size;i++)
+	if(ptr[i]<m)
+	m=ptr[i];
+	return m;
+}
+int main()
+{
+	temp a;
+	a.get();
+	a.show();
+	cout<<"maximum number is "<<a.max()<<endl;
+	cout<<"minimum number is "<<a.min()<<endl;
+}
+=========================================================================
+
+======================================================================================
+Destructor
+
+==>Destructor is an instance member function that is invoked automatically whenever an object is going to be destroyed or explicitly deleted by delete operator.Means,a destructor is the last function that is going to be called before an object is destroyed.
+==>A destructor is also a special member function like a constructor. 
+==>Destructor destroys the class objects created by the constructor. 
+==>Destructor has the same name as their class name preceded by a tilde (~) symbol.
+==>It is not possible to define more than one destructor hence destructor can not be overloaded.
+==>Destructor neither requires any argument nor returns any value.
+==>It is automatically called when an object goes out of scope. 
+==>Destructor release memory space occupied by the objects created by the constructor.
+==>In destructor, objects are destroyed in the reverse of an object creation.
+
+====================================================================================
+The thing is to be noted here if the object is created by using new or the constructor
+uses new to allocate memory that resides in the heap memory or the free store, 
+the destructor should use delete to free the memory.   
+
+The syntax for defining the destructor within the class:
+
+~ <class-name>() {
+    // some instructions
+}
+The syntax for defining the destructor outside the class:
+
+<class-name> :: ~<class-name>() {
+    // some instructions
+}
+
+// C++ program to demonstrate the execution of constructor and destructor
+ 
+#include <iostream>
+using namespace std;
+ class Test {
+public:
+    // User-Defined Constructor
+    Test() { cout << "\n Constructor executed"; }
+ 
+    // User-Defined Destructor
+    ~Test() { cout << "\nDestructor executed"; }
+};
+main()
+{
+    Test t;
+}
+=====================================================================================
+
+// C++ program to demonstrate the execution of constructor and destructor when 
+multiple objects are created
+
+ #include <iostream>
+using namespace std;
+class Test {
+public:
+     Test() { cout << "\n Constructor executed"; }
+ 
+    ~Test() { cout << "\n Destructor executed"; }
+};
+ main()
+{
+    // Create multiple objects of the Test class
+    Test t, t1, t2, t3;
+}
+====================================================================
+// C++ program to demonstrate the number of times constructor and destructors are called
+ 
+#include <iostream>
+using namespace std;
+static int Count = 0;     
+class Test {
+public:
+ 
+    Test()
+    { 
+        // Number of times constructor is called
+        Count++;
+        cout << "No. of Object created: " << Count<< endl;
+    }
+     ~Test()
+    {
+         
+        cout << "No. of Object destroyed: " << Count << endl;                                  
+                      Count--;                                                          
+        // Number of times destructor is called
+    }
+};
+int main()
+{
+    Test t, t1, t2, t3;
+}
+Output
+
+No. of Object created: 1
+No. of Object created: 2
+No. of Object created: 3
+No. of Object created: 4
+No. of Object destroyed: 4
+No. of Object destroyed: 3
+No. of Object destroyed: 2
+No. of Object destroyed: 1
+================================================================
+//Note: Objects are destroyed in the reverse order of their creation. 
+
+#include <iostream>
+using namespace std;
+#include <iostream>
+using namespace std;
+static int Count = 0;     
+class Test {
+public:
+ 
+    Test()
+    { 
+    	cout<<this<<endl;
+        Count++;
+        cout << "No. of Object created: " << Count<< endl;
+    }
+     ~Test()
+    {
+         cout<<this<<endl;
+        cout << "No. of Object destroyed: " << Count << endl;                                  
+        Count--;
+        
+    }
+};
+int main()
+{
+    Test t;
+    cout<<&t<<endl;
+	Test t1;
+	cout<<&t1<<endl;
+	Test   t2;
+	cout<<&t2<<endl;
+}
+
+============================================================================
+
+===========================================================
+EXCERCISE
+#include <iostream>
+using namespace std;
+     
+class Test {
+	private:
+		static int cnt1;
+		static int cnt2;
+public:
+ static int getcnt1()
+ {
+ 	return cnt1;
+ }
+ 
+    Test()
+    { 
+    cnt1++;
+       cout<<this<<endl;
+       cout<<"constructor is called\n";
+    }
+     ~Test()
+    {
+    	
+       cout<<"destructor is called"<<++cnt2<<endl;; 
+	   cout<<this<<endl; 
+    }
+};
+int Test ::cnt1=0;
+int Test::cnt2=0;
+int main()
+{
+    Test t;
+    cout<<&t<<endl;
+	  Test t1;
+    cout<<&t1<<endl;
+   cout<<"no of cons called"<< Test::getcnt1()<<endl;
+   
+
+}
+
+
+
+==============================================================================
+Properties of Destructor
+It cannot be declared static or const.========================================================================================
+How to call destructors explicitly?
+We can call the destructors explicitly using the following statement:
+
+#include <iostream>
+using namespace std;
+  class Test {
+	public:
+    Test()
+    { 
+   
+       cout<<"constructor is called\n";
+    }
+     ~Test()
+    {
+    	
+       cout<<"destructor is called"<<endl;; 
+	   
+    }
+};
+int main()
+{
+    Test t,t1;
+   t.~Test();
+   t1.~Test();
+  }
+
+=========================================================
+
+===========================================================
+
+=================================================================
+When do we need to write a user-defined destructor?
+==>If we do not write our own destructor in class, the compiler creates a default destructor 
+for us. The default destructor works fine unless we have dynamically allocated memory or 
+pointer in class. 
+
+
+Ex:
+class cstring
+{
+	public:
+	~cstring()
+	{
+		if(ptr)
+		{
+			delete[] ptr;
+			ptr=NULL;
+		}
+	}
+};
+
+==>The pointer ptr is checked to confirm that it is not NULL before memory on heap is deleted.
+
+It is not always mandatory to write userdefined destructor in the class.
+This function is basically used for cleanup purpose.The destructor implemented to free the 
+memory pointed by ptr. otherwise the memory remains allocated even though the pointer data
+member pointing to it goes out of scope when the object is destroyed. This is typical problem
+of memory leakage.If a class contains a pointer as a datamember , then it is mandatory for
+the programmer to implement a destructor.
+
+#include <iostream>
+using namespace std;
+#include<string.h>
+ class String {
+public:
+    char* s;
+    int size;
+ public:
+    String(char*); // constructor
+    ~String(); // destructor
+};
+ String::String(char* c)
+{
+    size = strlen(c);
+    s = new char[size + 1];
+    strcpy(s, c);
+}
+String::~String() { 
+    cout<<"dest called";
+    delete[] s;
+    cout<<s;
+    }
+ 
+int main()
+{
+    String str("Hello, World!");
+}
+=======================================================
+Scope of an Object
+
+Note: Objects are destroyed in the reverse order of their creation. 
+
+class Test
+{
+	public:
+	Test()
+	{
+		cout<<"constructor is invoked";
+	}
+	~Test()
+	{
+		cout<<"destructor is invoked";
+	}
+};
+Test t1;
+int main()
+{
+	cout<<"main begins";
+	Test t2;
+	{
+		cout<<"block begins"<<endl;
+		Test t3;
+		cout<<"block ends"<<endl;
+	}
+	cout<<"main ends"<<endl;
+}
+
+The sequence of the constructor calls and the destructor calls of all the objects created is
+ determined according to the life of the objets.
+output:
+
+constructor is invoked
+main begins
+constructor is invoked
+block begins
+constructor is invoked
+block ends
+destructor is invoked
+main ends
+destructor is invoked
+destructor is invoked
+====================================================================================
+
+
+Copy Constructor
+
+==>A copy constructor is a member function that initializes an object using another object 
+of the same class. 
+==>In simple terms, a constructor which creates a new object by initializing it with an 
+object of the same class, which has been created previously  is known as a copy constructor.  
+==>Copy Constructor is a special type of member function with the same name as classname.
+==>If a copy constructor is not defined in a class, the compiler defines one. 
+This compiler defined copy constructor does a member wise copy of the elements i.e 
+shallow copy. If the class doesnot have a pointer variable with dynamically allocated memory,
+ then there is no need to explicitly defines a copy constructor in the class.
+
+==>But if the class has a pointer variable to which memory is allocated dynamically,
+ then the class must implement its own copy constructor. In this case, 
+if user doesnot defined its own copy constructor,then the compiler's copy is invoked.
+This creates an object as a copy of another object.This shallow copy leads to the 
+problem of dangling pointer.
+========================================================================================
+What is Dangling Pointer and how this situation arises?
+==>This problem particularly arises when there are two objects holding the address of a 
+common memory location on the heap. 
+If one of those object goes out of scope, the destructor is invoked, thus deleting the memory
+ that it is pointing to. Now the other object, which is still in scope, but which was also
+ pointing to the same memory location, contains the address of the memory , which has been 
+freed by the destructor. The pointer holding an address to the memory that has been set free  is referred to as the dangling pointer.
+
+ex:
+ cstring s1("hello");
+cstring s2(s1); // to create s2 as a copy of s1
+//The implicit copy constructor does a member wise copy of the elements.  
+pointer data member of s1 and s2 point to the same memory on heap. If either of the object 
+goes out of scope, the destructor is invokes which will free the memory. This lead to 
+runtime error when this free memory is accessed.
+
+How Dangling pointer can be avoided?
+==>To avoid dangling pointer,it is mandatory to have a copy constructor in a  class which 
+contains  a pointer variable.
+It allocates seperate memory location on the heap for the object being initialized. 
+It also copies the contents of the object that is being copied to the newly allocated memory.
+ This is know as deep copying.
+==>Copy constructor takes a reference to an object of the same class as an argument.
+
+class cstring
+{
+	int len;
+	char* ptr;
+	public:
+cstring( cstring& s)
+{
+	this->len=len;
+	this->ptr=new char[len+1];
+	strcpy(this->ptr,s.ptr);
+}
+};
+int main()
+{
+ cstring s1("hello");
+cstring s2(s1); 
+}
+//for the above statement
+==>It is passed by reference because if the object is passed by value, 
+a copy is created on the stack. To create this local copy, again copy constructor will get 
+call, It will be invoked again and again and so on. 
+It will enter into a bad recursive loop.
+
+Types of Copy Constructors
+
+1. Default Copy Constructor:
+==>Compiler provides a default copy constructor which does memberwise copying i.e shallow 
+copying.
+
+// Implicit copy constructor Calling
+#include <iostream>
+using namespace std;
+ 
+class Sample {
+    int id;
+ 
+public:
+    void init(int x) { id = x; }
+    void display() { cout << endl << "ID=" << id; }
+};
+int main()
+{
+    Sample obj1;
+    obj1.init(10);
+    obj1.display();
+ 
+    // Implicit Copy Constructor Calling
+    Sample obj2(obj1); 
+    obj2.display();
+    return 0;
+}
+
+
+
+2.User defined copy constructor:
+The copy constructor can be defined explicitly by the programmer. 
+The process of initializing members of an object through a copy constructor is known as copy
+initialization.
+It is also called member-wise initialization because the copy constructor initializes one 
+object with the existing object, both belonging to the same class on a member by member copy
+basis.
+The copy constructor can be defined explicitly by the programmer. If the programmer does not
+define the copy constructor, the compiler does it for us.
+Copy constructor takes a reference to an object of the same class as an argument.
+
+Sample(Sample &t)
+{
+    id=t.id;
+}
+
+class date
+{
+	int dd,mm,yy;
+public:
+	void show();
+	date(int,int,int);
+	date(date&);//copy constructor
+};
+ date::date(int d,int m,int y)
+{
+	dd=d;
+	mm=m;
+	yy=y;
+}
+ void date::show()
+ {
+	 cout<<"date is "<<dd<<"/"<<mm<<"/"<<yy<<endl;
+ }
+ date::date(date & d_new)
+ {
+	 this->dd=d_new.dd;
+	 this->mm=d_new.mm;
+	 this->yy=2026;
+ }
+int main()
+{
+	date d(8,8,17);
+	date d1(d);
+	d.show();
+	d1.show();
+}
+
+
+Deep copy dynamically allocates the memory for the copy and then copies the actual value, 
+both the source and copy have distinct memory locations. In this way, both the source and 
+copy are distinct and will not share the same memory location. 
+Deep copy requires us to write the user-defined constructor.
+
+
+#include<iostream>
+using namespace std;
+#include<string.h>
+class string1
+{
+	int len;
+	char *ptr;
+public:
+	string1(char*);
+	void stringdisplay();
+	~string1();
+	string1(string1&);
+};
+void string1::stringdisplay()
+{
+	cout<<"length is "<<len<<endl;
+	cout<<"string is "<<ptr<<endl;
+}
+string1::string1(char * sptr)
+{
+	len=strlen(sptr);
+	ptr=new char[len+1];
+	strcpy(ptr,sptr);
+}
+string1::~string1()
+{
+	cout<<"destructor is called\n";
+	if(ptr)
+	{
+		cout<<"destructor is called1\n";
+	delete [] ptr;
+	}
+	cout<<"hello";
+}
+string1::string1(string1 & c)
+{
+	this->len=c.len;
+	this->ptr=new char[this->len+1];
+	strcpy(this->ptr,c.ptr);
+}
+int main()
+{	
+	string1 c2("rahul");
+	c2.stringdisplay();
+	string1 c3(c2);//copy constructor
+	c3.stringdisplay();
+}
+=================================
+
+
+When is a user-defined copy constructor needed? 
+If we don’t define our own copy constructor, the C++ compiler creates a default copy 
+constructor for each class which does a member-wise copy between objects. 
+The compiler-created copy constructor works fine in general. 
+If a class contains one of its data member as a pointer, its is mandatory on programmer's part
+ to write user defined copy constructor.
+user defined copy constructor should take care of dangling pointer situation.
+in user defined copy constructvor, the object should be passed by reference to avoid infinite
+ recursion of the copy constructor. 
+
+ 
+#include<iostream>
+using namespace std;
+#include<string.h>
+class string1
+{
+	int len;
+	char *ptr;
+public:
+	string1(char*);
+	void stringdisplay();
+	~string1();
+string1(string1&);
+
+};
+void string1::stringdisplay()
+{
+	cout<<"length is "<<len<<endl;
+	cout<<"string is "<<ptr<<endl;
+}
+string1::string1(char * sptr)
+{
+	len=strlen(sptr);
+	ptr=new char[len+1];
+	strcpy(ptr,sptr);
+}
+string1::~string1()
+{
+	cout<<"destructor is called\n";
+	if(ptr)
+	{
+		cout<<"destructor is called1\n";
+	delete [] ptr;
+	}
+	cout<<"hello";
+}
+string1::string1(string1 & c)
+{
+	this->len=c.len;
+	this->ptr=new char[this->len+1];
+	strcpy(this->ptr,c.ptr);
+}
+
+
+int main()
+{	
+	string1 c2("rahul");
+	c2.stringdisplay();
+	{	
+	string1 c3(c2);//copy constructor
+    }
+	c2.stringdisplay();
+}
+=========================================================================
+=========================================================================
+=======================================================================
+#include<iostream>
+using namespace std;
+#include<string.h>
+class string1
+{
+	public:
+	int len;
+	char *ptr;
+public:
+	string1(char*);
+	void stringdisplay();
+
+
+};
+void string1::stringdisplay()
+{
+	cout<<"length is "<<len<<endl;
+	cout<<"string is "<<ptr<<endl;
+}
+string1::string1(char * sptr)
+{
+	len=strlen(sptr);
+	ptr=new char[len+1];
+	strcpy(ptr,sptr);
+}
+
+
+int main()
+{	
+	string1 c2("rahul");
+	c2.stringdisplay();
+	cout<<c2.ptr<<endl;
+	{	
+	string1 c3(c2);//copy constructor
+    }
+	c2.stringdisplay();
+		cout<<c2.ptr<<endl;
+}
+==================================================================================
+
+===============================================================
+// C++ program to implement the deep copy
+
+#include <iostream>
+using namespace std;
+class box {
+private:
+    int length;
+    int* breadth;
+    int height;
+ public:
+    box()
+    {
+        breadth = new int;
+    }
+    void set_dimension(int len, int brea,
+                       int heig)
+    {
+        length = len;
+        *breadth = brea;
+        height = heig;
+    }
+    void show_data()
+    {
+        cout << " Length = " << length
+             << "\n Breadth = " << *breadth
+             << "\n Height = " << height
+             << endl;
+    }
+ 
+    box(box& sample)
+    {
+        length = sample.length;
+        breadth = new int;
+        *breadth = *(sample.breadth);
+        height = sample.height;
+    }
+ 
+    // Destructors
+    ~box()
+    {
+        delete breadth;
+    }
+};
+ 
+int main()
+{
+       box first;
+    first.set_dimension(12, 14, 16);
+     first.show_data();
+    box second(first);
+ 
+    second.show_data();
+ 
+    return 0;
+}
+==================================================================================
+Shallow Copy
+The default copy constructor can only produce the shallow copy.
+A Shallow copy is defined as the process of creating the copy of an object by copying data 
+of all the member variables as it is.In shallow copy, the two objects are not independent. 
+	In deep copy, the two objects are  independent. 
+
+Deep Copy
+Deep copy dynamically allocates the memory for the copy and then copies the actual value, 
+both the source and copy have distinct memory locations. In this way, both the source and 
+copy are distinct and will not share the same memory location. Deep copy requires us to write
+ the user-defined constructor.
+===========================================================================OVERLOADING OF = OPERATOR
+
+==>one object can be assigned to another object provided the type of both the objects is same.
+when object assignment is done,assignment operator function is called.
+
+==>ex:
+cstring s1("info");
+cstring s2("tech");
+s1=s2;//s1.operator=(s2) //memberwise copy
+
+==>compiler provides a default implementation of the assignment operator for any class which performs memberwise copy of the data members. this mechanism of performing memberwise copy of the contents of the objects is called as shallow copying.
+==>while performing memberwise copy,the address in the pointer data member of one object is copied into the pointer data member of another object.This means both the objects point to same memory location.it could lead to following problems:
+1)Memory leakage:
+2)Dangling pointer:
+
+Therefore for classes with a pointer data member ex: class cstring,shallow copying technique cannot be used.
+==>inorder to handle such memory related problems,the assignment operator needs to be overloaded.this enables deep copying
+=========================================================================
+==>user defined overloaded assignment operator function for the class cstring should take care of memory leakage and dangling pointer problems.steps involved in overloading the assignment operator are as follows:
+1)The old buffer is deleted. ex:if object s2 is assigned to s1, first the buffer pointed by s1 is deleted.This prevents memory leakage problem.
+2)Enough new memory is allocated on heap for s1.The new memory is equal to the size of buffer pointed by s2.
+3)The string is copied to the newly alloacted memory .The string of s2 is copied to the newly allocated memory.
+step2 and step 3 prevent the problem of dangling pointer.
+
+==>call s1=s2 is resolved as s1.operator=(s2).
+s1 is an implicit parameter which is the string to be modified. s2 is passed by reference to avoid copy constructor call.
+
+==>
+ex:
+cstring s1("info");
+cstring s2("tech");
+s1=s2;//calls assignment operator
+cstring s3=s1;//calls copy constructor
+
+==>If a class contains atleast one data member as a pointer then to avoid memory  related problems in the applications it is necessary for the programmer to implement the following:
+1)userdefined copy constructor
+2)userdefined destructor
+3)userdefined assignment operator
+
+
+CASE 1: WHEN COMPILER DEFINES ITS OWN COPY FOR ASSIGNMENT OPERATOR () WHICH WILL ARISE THE PROBLEM OF MEMORY LEAKAGE AS WELL AS DANGLING POINTER SITUATION
+#include<iostream>
+using namespace std;
+#include<string.h>
+class string1
+{
+	int len;
+	char* ptr;
+	public:
+		void display();
+		string1(char*);
+				~string1()
+		{
+			cout<<"destructor is called\n";
+			if(ptr)
+			{
+			
+			delete[] ptr;
+			ptr=NULL;
+		}
+		}
+};
+
+	void string1::display()
+{
+	cout<<"length is "<<len<<endl;
+	cout<<"string is "<<ptr<<endl;
+}
+string1::string1(char * sptr)
+{
+	len=strlen(sptr);
+	ptr=new char[len+1];
+	strcpy(ptr,sptr);
+}	
+
+int main()
+{
+	string1 s1("abc");
+	{
+	
+	string1 s2("axyz");
+	s2=s1;//s2.operator=(s1)
+}
+	s1.display();
+	
+
+}
+	
+===========================================================
+CASE 2:TO RECTIFY ML+DL SITUATION BY GIVING USERDEFINED ASSIGNMENT OPERATOR ()
+	
+	#include<iostream>
+using namespace std;
+#include<string.h>
+class string1
+{
+	int len;
+	char* ptr;
+	public:
+		void display();
+		string1(char*);
+		void operator=(string1&);
+		
+		~string1()
+		{
+			cout<<"destructor is called\n";
+			if(ptr)
+			{
+			
+			delete[] ptr;
+			ptr=NULL;
+		}
+		}
+};
+void  string1::operator=(string1& s)
+{
+	cout<<"assignment operator function called\n";
+	delete[] this->ptr;
+	this->len=s.len;
+	this->ptr=new char[this->len+1];
+	strcpy(this->ptr,s.ptr);
+	
+}
+	void string1::display()
+{
+	cout<<"length is "<<len<<endl;
+	cout<<"string is "<<ptr<<endl;
+}
+string1::string1(char * sptr)
+{
+	len=strlen(sptr);
+	ptr=new char[len+1];
+	strcpy(ptr,sptr);
+}	
+
+int main()
+{
+	string1 s1("abc");
+	{
+	
+	string1 s2("axyz");
+	s2=s1;//s2.operator=(s1)
+	}
+	s1.display();
+	
+
+}
+
+

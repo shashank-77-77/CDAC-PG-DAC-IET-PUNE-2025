@@ -1,0 +1,1036 @@
+Inheritance:
+==>Inheritance is one of the most important features of Object-Oriented Programming. 
+==>The capability of a class to derive properties and characteristics from another class is called Inheritance. 
+==>Inheritance is a feature or a process in which, new classes are created from the existing classes. 
+The new class created is called "derived class" or "child class" and the existing class is known as the "base class” or “parent class”. 
+The derived class now is said to be inherited from the base class.
+
+==>When we say derived class inherits the base class, it means, the derived class inherits all the properties of the base class, 
+without changing the properties of base class and may add new features to its own. These new features in the derived class will not affect the base class. 
+
+==>The derived class is the specialized class for the base class.
+up to the hierarchy------>generalization
+down to the hierarchy--->specialization
+
+==>It not only helps to reuse the old code but adds in extendings the functionality. i.e Reusability + Extensibility
+
+Reusability:
+Once a class is written and tested,it can be further used for creating new classes.These derived classes not only inherit the features of their base class,
+but also have their own individualist features. 
+it means that if the derived class wants to use its base class properties,it can do so because those properties are also available to the deried class by the virtue of inheritance.
+Now you can reuse the members of your parent class. So, there is no need to define the member again. So less code is required in the class.
+
+Extensibility:
+It is the mechanism of being able to derive classes from existing classes that provides extensibility of adding and removing classes in a hierarchy 
+as and when required.Any changes to data or functionalities contained within a base class are immediately inherited by all derived classes.
+===================================================================================================================================================================================
+
+==>each child has "is a " relationship with its parent.
+
+==>parent/base Class: The class whose properties are inherited by a subclass.
+==>child/derived Class: The class that inherits properties from another class 
+
+
+Syntax: 
+
+class  <derived_class_name> : <access-specifier> <base_class_name>
+{
+        //body
+}
+access-specifier  — either of private, public or protected. If neither is specified, PRIVATE is taken as default
+
+
+
+
+
+
+
+
+
+
+
+
+
+There are three Access specifiers in C++. These are:
+
+Access Modifiers or Access Specifiers in a class are used to assign the accessibility to the class members.
+Note: If we do not specify any access modifiers for the members inside the class, then by default the access modifier for the members will be Private.
+
+
+public – members are accessible from outside the class, and members can be accessed from anywhere.
+ The data members and member functions declared as public can be accessed by other classes and functions too.
+The public members of a class can be accessed from anywhere in the program using the direct member access operator (.) with the object of that class. 
+// C++ program to demonstrate public
+// access modifier
+ 
+#include<iostream>
+using namespace std;
+ 
+// class definition
+class Circle
+{
+    public: 
+        double radius;
+         
+        double  compute_area()
+        {
+            return 3.14*radius*radius;
+        }
+     
+};
+ 
+// main function
+int main()
+{
+    Circle obj;
+     
+    // accessing public datamember outside class
+    obj.radius = 5.5;
+     
+    cout << "Radius is: " << obj.radius << "\n";
+    cout << "Area is: " << obj.compute_area();
+    return 0;
+}
+Output: 
+
+Radius is: 5.5
+Area is: 94.985
+In the above program, the data member radius is declared as public so it could be accessed outside the class and thus was allowed access from inside main(). 
+ 
+======================================================================================
+===============================================================================================
+private – members cannot be accessed (or viewed) from outside the class, i.e members are private to that class only.
+The class members declared as private can be accessed only by the member functions inside the class. They are not allowed to be accessed directly by any 
+object or function outside the class. Only the member functions or the friend functions are allowed to access the private data members of the class.
+
+// C++ program to demonstrate private access modifier
+ 
+#include<iostream>
+using namespace std;
+ 
+class Circle
+{   
+    // private data member
+    private: 
+        double radius;
+      
+    // public member function    
+    public:    
+        double  compute_area()
+        {   // member function can access private 
+            // data member radius
+            return 3.14*radius*radius;
+        }
+     
+};
+ 
+// main function
+int main()
+{   
+    // creating object of the class
+    Circle obj;
+     
+    // trying to access private data member
+    // directly outside the class
+    obj.radius = 1.5;
+     
+    cout << "Area is:" << obj.compute_area();
+    return 0;
+}
+The output of the above program is a compile time error because we are not allowed to access the private data members of a class directly from outside the class.
+ Yet an access to obj.radius is attempted, but radius being a private data member, we obtained the above compilation error. 
+
+However, we can access the private data members of a class indirectly using the public member functions of the class. 
+=========================================================================================
+protected – members cannot be accessed from outside the class, but, they can be accessed in inherited classes or derived classes. 
+The protected access modifier is similar to the private access modifier in the sense that it can’t be accessed outside of its class unless that class is inherited class.
+The difference is that the class members declared as Protected can be accessed by any subclass (derived class) of that class as well.
+
+// C++ program to demonstrate protected access modifier
+#include <iostream>
+using namespace std;
+ class Parent
+{   
+    protected:
+    int id_protected;
+  };
+class Child : public Parent
+{
+    public:
+    void setId(int id)
+    { 
+        // Child class is able to access the inherited protected data members of base class
+             id_protected = id;
+      }
+       void displayId()
+    {
+        cout << "id_protected is: " << id_protected << endl;
+    }
+};
+ int main() {
+     
+    Child obj1;
+  // member function of the derived class can access the protected data members of the base class
+  obj1.setId(81);
+    obj1.displayId();
+
+}
+Output: 
+
+id_protected is: 81
+=============================================================================================
+Note:
+When derived class obj is created memory is allocated for base class datamembers as well as for derived class data members. 
+Through derived class obj, we can access base class members  as as well as derived class members except private 
+
+// C++ program to demonstrate implementation of Inheritance
+ #include <bits/stdc++.h>
+using namespace std;
+class Parent {
+public:
+    int id_p;
+};
+class Child : public Parent {
+public:
+    int id_c;
+};
+ int main()
+{
+    Child obj1;
+ 
+    // An object of class child has all data members and member functions of class parent
+    obj1.id_c = 7;
+    obj1.id_p = 91;
+    cout << "Child id is: " << obj1.id_c << '\n';
+    cout << "Parent id is: " << obj1.id_p << '\n';
+    cout<<sizeof(obj1);
+}
+
+Note 2:
+When base class obj is created memory is allocated for base class datamembers only. Through base class obj, we can access base class members only ,we cannot access derived class members.
+
+#include <bits/stdc++.h>
+using namespace std;
+class Parent {
+public:
+    int id_p;
+};
+class Child : public Parent {
+public:
+    int id_c;
+};
+ int main()
+{
+    Parent obj1;
+ 
+    // An object of class child has all data members and member functions of class parent
+   // obj1.id_c = 7;//error
+    obj1.id_p = 91;
+   // cout << "Child id is: " << obj1.id_c << '\n';//error
+    cout << "Parent id is: " << obj1.id_p << '\n';
+    cout<<sizeof(obj1);
+}
+
+==============================================================================================
+Modes of Inheritance: There are 3 modes of inheritance.
+
+Modes of inheritance specifies the way in which a class is derived. It tells abouth the access rights given to the derived class to access
+ its base class attributes and functions. These mode are:
+private(default)
+public
+protected
+
+ex:
+class derived_class_name :visibility-mode   base_class_name  
+{  
+    // body of the derived class.  
+}  
+Where,
+derived_class_name: It is the name of the derived class.
+visibility mode: The visibility mode specifies whether the features of the base class are publicly inherited or privately inherited. It can be public or private.
+
+Example:
+1. class ABC : private XYZ              //private derivation
+            {                }
+2. class ABC : public XYZ              //public derivation
+            {               }
+3. class ABC : protected XYZ              //protected derivation
+            {              }
+4. class ABC: XYZ                            //private derivation by default
+{            }
+
+
+Public Mode: If we derive a subclass from a public base class. Then the public member of the base class will become public in the derived class and protected members of 
+the base class will become protected in the derived class.
+1. C++ public Inheritance
+In this example, public inheritance is demonstrated. Since private and protected members will not be directly accessed from main( ) 
+so we have had to create functions name getPVT( ) to access the private variable and getProt( ) to access the protected variable from the inherited class.
+
+Example:
+
+
+// C++ program to demonstrate the working of public 
+// inheritance 
+#include <iostream> 
+using namespace std; 
+  
+class Base { 
+private: 
+    int pvt = 1; 
+protected: 
+    int prot = 2; 
+  
+public: 
+    int pub = 3; 
+  
+    // function to access private member 
+    int getPVT() { return pvt; } 
+}; 
+  
+class PublicDerived : public Base { 
+public: 
+    // function to access protected member from Base 
+    int getProt() { return prot; } 
+}; 
+  
+int main() 
+{ 
+    PublicDerived object1; 
+    cout << "Private = " << object1.getPVT() << endl; 
+    cout << "Protected = " << object1.getProt() << endl; 
+    cout << "Public = " << object1.pub << endl; 
+//cout << "Public = " << object1.prot<< endl; //error
+
+    return 0; 
+}
+Output
+Private = 1
+Protected = 2
+Public = 3
+
+Protected Mode: If we derive a subclass from a Protected base class. Then both public members and protected members of the base class will become protected in the derived class.
+
+We know that protected members can only be accessed from the Derived class. These members cannot be directly accessed from outside the class. So we cannot use getPVT() from ProtectedDerived.This is also why we need to create getPub() function in the Derived class in order to access the pub variable.
+
+Example:
+
+
+// C++ program to demonstrate the working 
+// of protected inheritance 
+#include <iostream> 
+using namespace std; 
+  
+class Base { 
+private: 
+    int pvt = 1; 
+  
+protected: 
+    int prot = 2; 
+  
+public: 
+    int pub = 3; 
+  
+    // function to access private member 
+    int getPVT() { return pvt; } 
+}; 
+  
+class ProtectedDerived : protected Base { 
+public: 
+    // function to access protected member from Base 
+    int getProt() { return prot; } 
+  
+    // function to access public member from Base 
+    int getPub() { return pub; } 
+}; 
+  
+int main() 
+{ 
+    ProtectedDerived object1; 
+    cout << "Private cannot be accessed." << endl; 
+    cout << "Protected = " << object1.getProt() << endl; 
+    cout << "Public = " << object1.getPub() << endl; 
+cout<<object1.prot;//error
+cout<<object1.pub;//error
+cout<<object1.getPvt();//error
+
+
+    return 0; 
+}
+Output
+Private cannot be accessed.
+Protected = 2
+Public = 3
+
+
+Private Mode: If we derive a subclass from a Private base class. Then both public members and protected members of the base class will become Private in the derived class.
+Note: The private members in the base class cannot be directly accessed in the derived class, while protected members can be directly accessed.
+
+/ C++ program to demonstrate the working 
+// of private inheritance 
+#include <iostream> 
+using namespace std; 
+  
+class Base { 
+private: 
+    int pvt = 1; 
+  
+protected: 
+    int prot = 2; 
+  
+public: 
+    int pub = 3; 
+  
+    // function to access private member 
+    int getPVT() { return pvt; } 
+}; 
+  
+class PrivateDerived : private Base { 
+public: 
+    // function to access protected member from Base 
+    int getProt() { return prot; } 
+  
+    // function to access private member 
+    int getPub() { return pub; } 
+}; 
+  
+int main() 
+{ 
+    PrivateDerived object1; 
+    cout << "Private cannot be accessed." << endl; 
+    cout << "Protected = " << object1.getProt() << endl; 
+    cout << "Public = " << object1.getPub() << endl; 
+    return 0; 
+}
+Output
+Private cannot be accessed.
+Protected = 2
+Public = 3
+======================================================================
+ASSIGNMENT 1:
+#include<iostream>
+using namespace std;
+class A
+{
+	int c;
+public:
+	int a;
+protected:
+	int b;
+public:
+	void display()
+	{
+		cout<<"in display of A\n";
+	}
+};
+class B:private A
+{
+public:
+	int c;
+public:
+	void show()
+	{
+	    display();//allowed
+		cout<<a<<b;
+	}
+};
+class C:private B
+{
+	public:
+	void show()
+	{
+	   // display(); not allowed
+		//cout<< a<<b; not allowed
+		cout<<c;
+	}
+};
+int main()
+{
+	B bobj;
+	bobj.show();
+//	bobj.display(); not allowed
+}
+====================================================================================
+ASSIGNMENT 2:
+#include<iostream>
+using namespace std;
+class A
+{
+	int c;
+public:
+	int a;
+protected:
+	int b;
+public:
+	void display()
+	{
+		cout<<"in display of A\n";
+	}
+
+};
+class B:public A
+{
+public:
+		public:
+	void show()
+	{
+	    display();
+		cout<<a<<b;
+	}
+};
+class C:public B
+{
+	public:
+	void show()
+	{
+		cout<< a<<b;
+			}
+};
+int main()
+{
+	B bobj;
+	bobj.show();
+	bobj.display();
+}
+====================================
+ASSIGNMENT 3:
+#include<iostream>
+using namespace std;
+class A
+{
+int c;
+public:
+	int a;
+protected:
+	int b;
+protected:
+	void display()
+	{
+		cout<<"in display of A\n";
+	}
+
+};
+class B:protected A
+{
+public:
+	int d;
+	public:
+	void show()
+	{
+	    	B bobj;
+	bobj.display();
+		cout<<a<<b;
+	
+	}
+};
+
+int main()
+{
+    B bobj;
+    bobj.show();
+}
+==================================================================================
+Types Of Inheritance
+C++ supports five types of inheritance:
+
+Single inheritance
+Multiple inheritance
+Hierarchical inheritance
+Multilevel inheritance
+Hybrid inheritance
+
+C++ Single Inheritance
+Single inheritance is defined as the inheritance in which a derived class is inherited from the only one base class.
+
+#include <iostream>  
+using namespace std;  
+ class Account {  
+    
+   float bonus = 2000;  
+   public:
+   int getBonus() 
+   {
+   		return bonus;
+   }
+ };  
+   class Programmer: public Account {  
+   public:  
+   float monthly_salary = 5000;  //protected:float bonus
+   void CalculateSalary()
+   {
+       cout<<"Total Salary: "<<monthly_salary+getBonus();  
+   }
+   };       
+int main() {  
+     Programmer p1;  
+     //p1.CalculateSalary();
+        cout<<"Total Salary: "<<p1.monthly_salary+getBonus();  
+    return 0;  
+}  
+=====================================================================
+NOTE 
+While creating an object of the derived class, the base class constructor is called first and then the derived class constructor is called. The base class constructor is responsible for initializing the inherited data members and the derived class constructor is responsible for initializing data members of derived class.
+
+The base class initializer list is used to indicate which base class constructor to call in the derived class constructor.otherwise , the no argument constructor of base class is used.
+
+Derived object has two partss: a base part and a derived part.
+The base part of derived object is constructed first. then the derived part is constructed. therefore the constructor execution are in the order of base->derived.
+
+
+Why the base class’s constructor is called on creating an object of derived class?
+
+ What happens when a class is inherited from other? The data members and member functions of base class comes automatically in derived class based on the access specifier but the definition of these members exists in base class only. So when we create an object of derived class, all of the members of derived class must be initialized but the inherited members in derived class can only be initialized by the base class’s constructor as the definition of these members exists in base class only. This is why the constructor of base class is called first to initialize all the inherited members. 
+
+CASE 1:
+
+/*#include<iostream>
+using namespace std;
+class A
+{
+	int a;
+public:
+	A();
+    void display();
+ };
+A::A()
+{
+	cout<<"in default of A\n";
+	a=10;
+}
+void A::display()
+{
+	cout<<a<<endl;
+}
+class B:public A
+{
+	int b;
+public:
+	B();
+	void display();
+};
+B::B()
+{
+	cout<<"in default of B\n";
+	b=20;
+}
+void B::display()
+{
+	A::display();
+	cout<<b<<endl;
+}
+int main()
+{
+	B bobj;
+	bobj.display();
+}
+O/P====>in default of A
+		 in default of B
+		10 20
+
+CASE 2:
+#include<iostream>
+using namespace std;
+class A
+{
+	int a;
+public:
+	A();
+    void display();
+ };
+A::A()
+{
+	cout<<"in default of A\n";
+	a=0;
+}
+void A::display()
+{
+	cout<<a<<endl;
+}
+class B:public A
+{
+	int b;
+public:
+	B(int,int);
+	void display();
+};
+B::B(int p,int q)
+{
+	cout<<"in para of B\n";
+	b=q;
+}
+void B::display()
+{
+	A::display();
+	cout<<b<<endl;
+}
+int main()
+{
+	B bobj(10,20);
+	bobj.display();
+}
+
+in default of A
+in para of B
+0
+20
+
+CASE 3:
+
+#include<iostream>
+using namespace std;
+class A
+{
+	int a;
+public:
+	A(int);
+    void display();
+ };
+A::A(int p)
+{
+	cout<<"in para of A\n";
+	a=p;
+}
+void A::display()
+{
+	cout<<a<<endl;
+}
+class B:public A
+{
+	int b;
+public:
+	B(int,int);
+	void display();
+};
+B::B(int p,int q):A(p)//base class initilization list
+{
+	cout<<"in para of B\n";
+	b=q;
+}
+void B::display()
+{
+	A::display();
+	cout<<b<<endl;
+}
+int main()
+{
+	B bobj(10,20);
+	bobj.display();
+}
+in para of A
+in para of B
+10
+20
+
+
+
+
+
+===============================================================
+=============================================================================================
+Multilevel Inheritance
+
+Multilevel Inheritance in C++ is the process of deriving a class from another derived class. When one class inherits another class it is further inherited by another class. It is known as multi-level inheritance.
+
+For example, if we take Grandfather as a base class then Father is the derived class that has features of Grandfather and then Child is the also derived class that is derived from the sub-class Father which inherits all the features of Father.
+class A // base class
+{
+    ...........
+};
+class B : access_specifier A // derived class
+{
+    ...........
+} ;
+class C : access_specifier B // derived from derived class B
+{
+    ...........
+} ;
+
+// C++ program to implement constructor in multilevel   Inheritance 
+#include<iostream> 
+using namespace std; 
+  class A 
+{ 
+    public: 
+        A() 
+        { 
+            cout << "Base class A constructor \n"; 
+        } 
+        ~A() 
+        { 
+            cout << "Base class A destructor \n"; 
+        } 
+}; 
+  
+// Derived class B 
+class B: public A 
+{ 
+    public: 
+        B() 
+        { 
+            cout << "Class B constructor \n"; 
+        }
+		~B() 
+        { 
+            cout << " class B DEstructor \n"; 
+        }  
+}; 
+  
+// Derived class C 
+class C: public B 
+{ 
+    public: 
+        C() 
+        { 
+            cout << "Class C constructor \n"; 
+              
+        } 
+        ~C() 
+        { 
+            cout << "Class C DEstructor \n"; 
+              
+        } 
+}; 
+  
+// Driver code 
+int main() 
+{ 
+    C obj; 
+    return 0; 
+}
+
+
+
+==================================================================
+#include<iostream> 
+using namespace std; 
+class employee
+{
+	int id;
+public:
+	employee();
+	employee(int);
+     void display();
+	 int findsalary()
+	{
+		return 0;
+	}
+};
+employee::employee()
+{
+	cout<<"in default of emp\n";
+	id=0;
+}
+employee::employee(int i)
+{
+	cout<<"in para of emp\n";
+	id=i;
+}
+void employee::display()
+{
+	
+	cout<<"id of an emp is "<<id<<endl;
+}
+class wageemployee:public employee
+{
+	int hrs,rate;
+public:
+	wageemployee();
+	wageemployee(int,int,int);
+     void display();
+	 int findsalary()
+	{
+		return hrs*rate;
+	}
+};
+wageemployee::wageemployee()
+{
+	cout<<"in default of wageemp\n";
+	hrs=rate=0;
+}
+wageemployee::wageemployee(int i,int h,int r):employee(i)
+{
+	cout<<"in para of wageemp\n";
+	hrs=h;
+	rate=r;
+}
+void wageemployee::display()
+{
+	employee::display();
+	cout<<"hrs of an eemp is "<<hrs<<endl;
+	cout<<"rate of an eemp is "<<rate<<endl;
+	
+}
+	
+class salesperson:public wageemployee
+{
+	int sales,comm;
+public:
+salesperson();
+salesperson(int,int,int,int,int);
+     void display();
+	 int findsalary()
+	{
+		return wageemployee::findsalary() + sales*comm;	
+	}
+};
+salesperson::salesperson()
+{
+	cout<<"in default of salesperson\n";
+	sales=comm=0;
+}
+salesperson::salesperson(int i,int h,int r,int s,int c):wageemployee(i,h,r)
+{
+	cout<<"in para of salespersonn";
+	sales=s;
+	comm=c;
+}
+void salesperson::display()
+{
+	wageemployee::display();
+	cout<<"sales of an eemp is "<<sales<<endl;
+	cout<<"comm of an eemp is "<<comm<<endl;
+	
+}
+int main()
+{
+	/*wageemployee we1(1,5,1000);
+	we1.display();
+	cout<<"salary is "<<we1.findsalary();*/
+	
+	/*wageemployee * ptr=new wageemployee(1,5,1000);
+	ptr->display();
+	delete ptr;*/
+	
+	salesperson sp1(1,5,1000,100000,1);
+	sp1.display();
+	
+	
+	
+}
+
+=================================================================
+Destructors in C++ are called in the opposite order of that of Constructors.
+
+
+
+===============================================================
+Object oriented concepts:
+
+
+
+
+
+
+
+
+
+
+
+
+Data hiding:
+
+==>hiding  of the data
+==>our internal data should not go outside directly i..e outside person should not access our internal data directly.i.e we should hide our data..
+==>ex: suppose we have to check email.to check our mail. by typing www.gmail.com,ur inbox mailbox wont get open.compulsory u have to provide username and password,ur gmail data is not coming outside directly,we have to do some sort of validation. after validation that data is going to come.
+==>ex:ICICI bank account is der. I visit bank, and ask how much account balance, bank people ask,what is ur account number and id proof, then only bank people will provide details.
+our main data should not  go directly. some sort of authentication is required then only  the data should go is called data hiding.
+
+class Account
+{
+	private :
+	double bal; //by implementing this bal variable as a private , we can implement data hiding
+				//I want check account balance then how I will check, If u want to balance information then I will call getBal().
+public:
+double getBalance()
+{
+	//validation;
+	if(valid)
+	return balance;
+
+}
+//user has to call public method, within the method ,we have to perform validation,if validation succed,then only we can be able to provide our data.
+
+Advantage:
+whereever hiding is there, the biggest advantage is security
+======================================================================
+Abstraction:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abstraction means not complete,partially implemented, not completely provided class.
+hiding internal implementation,just highlight the set of services what we are offering.
+these are the set of services what I m going to offer,but dont know how it is internally implemented.
+If I am exposing my internal code to any person then where is security to my code.thats why hide the internal code.
+
+ex:If we go to Atm,swipe the card,enter pinnumber,which operation u want to do(withdraw,),
+in this process we dont know which code is executing.
+If u click withdraw button,internally how this functionality is implemented,which sql query is executing,where the database server is locating ,all this information bank people will never highlited.
+bank people thru ATM gui screen,they are going to highlight the set of services what they are offering.
+
+
+
+ADVANTAGE:
+1)Security because outsider dont have idea internally how it is implemented
+ 
+2)Enhancement:suppose withdraw() is implemented using java, I want to replace with .net functionality,internally I made changes,but gui screen is same.
+without affecting enduser ,we can perform any changes in our internal code.
+
+3)Maintainablity and modularity of the application improves because we are hiding our internal implementation.
+
+
+
+===============================================================
+Encapsulation:
+
+capsule: whatever the medicine require to cure cold,that medicine is going to be encapsulated. its going to be grouped into this capsule. capsule is nothing but unit, all the required things are grouped
+into 1 capsule. in the same way.
+
+ex:for every student some data members and functions are der,
+the process of encapsulating or grouping of data members and corresponding behaviour into a single unit. that unit itself is called as class
+
+
+int age;
+int rollno;
+int marks;
+	+
+
+read()
+write()
+
+student related data + behaviour
+
+Every c++ class is an example of encapsulation.
+
+
+==>If any component follows data hiding and abstraction, that component is said to be encapsulated component.
+Encapsulation=data hiding + Abstraction
+
+class Account
+{
+	private:
+	double balance;
+	public:
+	public double getBal()	
+	{
+		//validate
+		return balance;
+		public void setBalance(double amt)
+		{
+			balance=balance + amt;
+		}
+	}
+
+i will never highlight this functionalities  to outside person directly, I will provide GUI screen to the user. in that balance enq. whenever user click bal enquiry ,functionality will get executed.but enduser dont know,internally which code is executed.
