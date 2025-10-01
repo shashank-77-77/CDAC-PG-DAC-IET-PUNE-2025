@@ -1,0 +1,32 @@
+Links for JSON Data - 
+https://jsonplaceholder.typicode.com/posts
+https://fake-json-api.mock.beeceptor.com/users
+
+1) use ajax concept and display data in html page 
+  on button click from text file 
+
+2) in Ajax Concept get Data From url
+     https://jsonplaceholder.typicode.com/posts
+
+	From Data display 
+	id and Title in Table Format on html page 
+
+3) in 2nd Assignment -  display data depends on parameter
+   Accept id from user 
+
+4) use HTML predefined Validations 
+     required  , minlength , maxlength 
+    and display error message if data is not properly entered
+
+5) use try and catch and finally block in JavaScript 
+
+6) apply the css to html elements with help of methods 
+
+	addClass()
+	removeClass()
+	toggleClass()
+
+7) 
+	Take TextField and Multiple Buttons 
+	Create Calculator using all concepts 
+	from HTML , css , JavaScript , JQuery 

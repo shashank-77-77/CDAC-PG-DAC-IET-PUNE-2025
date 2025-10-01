@@ -1,0 +1,37 @@
+1) use postman and call post method from server 
+
+install postman if not availble on machine 
+
+2) perform setup for express js 
+	create folder project1
+	npm init -y
+	npm install express 
+	
+	change start script in package.json file 
+
+3) with help of express js perform following operations 
+    on api with postman 
+	
+1) get  -  hostname:port/users
+2) get with specific id  - hostname:port/users/:id 
+3)get data with id and email  - hostname:port/users/:id/:email
+4) and delete operation  - hostname:port/users
+
+   generate your own data  from 
+	https://www.mockaroo.com/
+
+4) Delete Code 
+
+//req param    string 
+app.delete('/users/:id', (req, res) => {
+    const id = Number(req.params.id);  // 15
+    // console.log(id);
+    const userIndex = users1.findIndex(
+        user => user.id === id
+    )
+    if (userIndex === -1)
+        return res.status(404).send('Data not found');
+
+    const deletedItem = users1.splice(userIndex, 1);
+    return res.json("Dae ");
+});

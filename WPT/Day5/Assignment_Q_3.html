@@ -1,0 +1,46 @@
+<!-- Take 1 Button and when user click on that button display  -->
+   <!-- How many times user click and display that count in <p> tag 
+
+	if user click 10 times then make that button readonly using style -->
+
+<html>
+    <title>
+         counter5
+    </title>
+    <head>
+            
+    </head>
+    <body>
+        <p1 id="p1">Data</p1><br><br>
+        <button id="b1"   type="button" onclick="myFunction()">count</button>
+
+        <script>
+                function counter()
+                {
+                    let b=document.getElementById("b1")
+                        let cnt = 0;
+
+                        return function()
+                         {
+                            cnt +=1;
+                            if(cnt>10)
+                         {
+                            b.disabled=true
+                         } 
+                         
+                         return cnt;
+                        };
+                        
+                        
+                }
+
+                const add = counter();
+
+                function myFunction()
+                {
+                    document.getElementById("p1").innerHTML = add();
+
+                }
+        </script>        
+    </body>
+</html>

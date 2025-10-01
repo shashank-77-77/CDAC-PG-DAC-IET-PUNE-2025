@@ -1,0 +1,72 @@
+<html>
+
+
+<body>
+
+    <button onclick="showData()">
+
+        Data From File</button>
+</body>
+
+<script>
+
+    function showData() {
+        // form   HTTP 
+        let request = new XMLHttpRequest();
+        // setting request parameter 
+        // request.open("GET", "data1.txt")
+        request.open("GET", "https://jsonplaceholder.typicode.com/posts", true)
+        request.send();// server 
+        let dataJson;
+
+        //event    event occur 
+        request.onload = function () {            //response 
+            //console.log(this);
+            if (this.status == 200) {
+                //console.log(this.responseText)//JSON
+                dataJson = this.responseText;
+                //JSON   Object 
+                let r = JSON.parse(dataJson);
+                console.log("after event "); // table 
+            }
+            // console.log(dataJson);
+        }// load function end 
+
+        console.log("after ajax")
+        console.log("data :" + dataJson);// early execute 
+        //response();
+    }
+
+    let p = new Promise();  ///   success reject 
+    let x = 0;
+    if (x == 0) {
+        //promise success
+        function ()
+    } else {
+        // rejected 
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</html>

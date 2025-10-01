@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Load Post by ID</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        label,
+        input,
+        button {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            max-width: 100%;
+            overflow-wrap: break-word;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Load Post Data by ID</h2>
+    <label for="postId">Enter Post ID (1-100):</label><br />
+    <input type="number" id="postId" min="1" max="100" />
+    <button id="loadBtn">Load Post</button>
+
+    <div id="postResult" style="margin-top:20px;"></div>
+
+    <script>
+        const displayResult = (content) => {
+            document.getElementById("postResult").innerHTML = content;
+        }
+
+        document.getElementById("loadBtn").addEventListener("click", () => {
+            const id = document.getElementById("postId").value.trim();
+            const resultDiv = document.getElementById("postResult");
+
+            if (!id || id < 1 || id > 100) {
+                resultDiv.textContent = "Please enter a valid Post ID between 1 and 100.";
+                return;
+            }
+
+            resultDiv.textContent = "Loading...";
+
+            fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Post not found. Status: " + response.status);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    displayResult(`<pre>${JSON.stringify(data, null, 2)}</pre>`);
+                })
+                .catch(error => {
+                    displayResult("Error: " + error.message);
+                });
+        });
+    </script>
+
+</body>
+
+</html>

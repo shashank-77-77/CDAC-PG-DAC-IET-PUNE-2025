@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Fetching Data</h1>
+    <div id="data">Loading......</div>
+
+
+    <script>
+        const myDisplayer = content => {
+            document.getElementById("data").innerHTML = content
+        }
+        let myPromise = fetch("https://fake-json-api.mock.beeceptor.com/users").then(Response => {
+            if (!Response.ok) {
+                throw new Error("File not Found!!!!" + Response.status)
+            }
+            return Response.json();
+        })
+        myPromise.then(
+            data => {
+                myDisplayer(`<pre>${JSON.stringify(data, null, 2)}</pre>`)
+            },
+            error => {
+                myDisplayer("Error!!!!" + error.message)
+            }
+        )
+
+        // myPromise
+        //     .then(data => {
+        //         myDisplayer(`<pre>${JSON.stringify(data, null, 2)}</pre>`);
+        //     })
+        //     .catch(error => {
+        //         myDisplayer("Error!!!! " + error.message);
+        //     });
+
+
+    </script>
+</body>
+
+</html>

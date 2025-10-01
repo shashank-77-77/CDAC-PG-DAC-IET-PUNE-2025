@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1> Promise Object</h1>
+    <h2>The then() Method</h2>
+    <button onclick="call()">call</button>
+    <p id="demo"></p>
+
+    <script>
+        function display(some) {
+            document.getElementById("demo").innerHTML = some;
+        }
+        let data = "sample";
+        function call() {
+            let myPromise = new Promise(
+                function (resolve, reject) {
+                    let x = 0;
+                    // read data    
+                    // some code (try to change x to 5)
+                    if (x == 0) {
+                        // console.log("ok")
+                        data = "Ok from Function ";
+                        //document.getElementById("demo").innerHTML = value;
+                        resolve(data);// then success
+                    } else {
+                        console.log("error");
+                    }
+                });
+
+
+
+            // code success reject 
+            myPromise.then(
+                function (value) {
+                    console.log("in then");
+
+                    display(value);
+                },
+                function (error) { console.log("error in then ") }
+            );
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!-- accept data from user using input fields 
+      firstName LastName age 
+	  
+	  store data in Object format in function 
+	  and convert into JSON format 
+	  
+	  and display data in table format from JSON format data 
+	   -->
+<html>
+    <head>
+        <title> data details</title>
+    </head>
+    <style>   
+
+
+        tr,
+        th{
+            border: 1px solid rgba(184, 76, 34, 0.788);
+        }
+        td{
+            border: 1px dotted rgb(98, 11, 227);
+        }
+
+
+
+
+    </style>
+    <body>
+        <div id="box1" class="corner-box"></div>
+  <div id="box2" class="corner-box"></div>
+
+
+  <form id="userForm" style="text-align: center;">
+    <input type="text" id="fName" placeholder="First Name" required>
+    <input type="text" id="lName" placeholder="Last Name" required>
+    <input type="number" id="age" placeholder="Age" required>
+    <button type="button" onclick="Click()">ADD</button>
+  </form>
+
+  <div id="username" style="text-align: center;"></div>
+     
+
+ </div>
+  <table id="dTable">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+      </tr>
+    
+    <tbody></tbody>
+  </table>
+<script>
+    function Click() {
+    const firstName = document.getElementById('fName').value.trim();
+    const lastName = document.getElementById('lName').value.trim();
+    const age = document.getElementById('age').value.trim();
+
+    const userObj = {
+        firstName,
+        lastName,
+        age
+    };
+    const userJSON = JSON.stringify(userObj);
+ 
+    const tableBody = document.querySelector('#dTable tbody');
+
+    const newRow = document.createElement('tr')
+
+    const firstNameCell = document.createElement('td')
+    firstNameCell.textContent = firstName
+    newRow.appendChild(firstNameCell)
+
+    const lastNameCell = document.createElement('td')
+    lastNameCell.textContent = lastName
+    newRow.appendChild(lastNameCell)
+
+    const ageCell = document.createElement('td')
+    ageCell.textContent = age
+    newRow.appendChild(ageCell)
+
+    tableBody.appendChild(newRow)
+
+    const userName = firstName.slice(0, 2).toUpperCase() +
+        lastName.slice(-2).toUpperCase() +
+        age;
+    document.getElementById('username').textContent = `Username: ${userName}`
+}
+
+
+</script>
+
+    </body>
+</html>

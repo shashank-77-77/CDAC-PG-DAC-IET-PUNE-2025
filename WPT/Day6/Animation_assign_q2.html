@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title> Animation </title>
+</head>
+
+<body onload="myMove">
+    <div id="d1" style="background-color: rgb(225, 25, 239); width:100px; height: 100px; position:absolute;"></div>
+    <!-- <div id="d2" style="background-color: black;width: 100px;height: 100px;position: absolute;"></div> -->
+
+</body>
+<script>
+    let p = 0;
+    let p1=0;
+    let p2=0;
+    function animation() {
+        setInterval(animation, 300);
+        console.log("animation");
+        const elem = document.getElementById("d1");
+        const el=document.getElementById("d1");
+        const e =document.getElementById("d1")
+        let id = null;
+        let id2=null;
+        let id3=null;
+        clearInterval("id");
+        clearInterval("id2");
+        clearInterval("id3");
+        id = setInterval(animation, 200);
+        id2= setInterval(animation,200);
+        id3=setInterval(animation,200);
+        p++;
+        p1++;
+        p2++;
+        elem.style.top = p + 'px';
+        elem.style.left = p + 'px';
+        el.style.top=p+'px';
+        el.style.right=p+'px';
+        e.style.top=p+'px';
+        e.style.left=p +'px';
+    }
+    function myMove() {
+        let id = null;
+        let id2=null;
+        let id3=null;
+        const element = document.getElementById("d1");
+        const ele=document.getElementById("d2");
+        let pos = 0;
+        let pos1=0;
+        let pos2=0
+        clearInterval("id")
+        clearInterval("id2");
+        clearInterval("id3");
+        id = setInterval(frame, 5)
+        id2= setInterval(frame,5)
+        id3=setInterval(frame,5)
+        function frame() {
+            if (pos == 450) {
+                //clearInterval("id");
+            }
+            else {
+
+                pos++;
+                element.style.top = pos + 'px';
+                element.style.left = pos + 'px';
+            }
+            if(pos1 == 750)
+            {
+                clearInterval("id2");
+                
+            }
+            else
+            {
+                pos1++;
+                element.style.bottom=pos1 +'px';
+                element.style.left=pos1 + 'px';
+            }
+            if(pos2 == 450)
+            {
+                clearInterval("id3")
+
+            }
+            else
+            {
+                pos2++;
+                element.style.top=pos2 + 'px';
+                element.style.right=pos2 + 'px';
+            }
+            
+        }
+
+    }
+    myMove();
+
+</script>
+
+</html>

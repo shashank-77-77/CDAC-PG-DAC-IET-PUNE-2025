@@ -1,0 +1,995 @@
+=
+Polymorphism
+
+
+polymorphism is made up of 2 words poly means many and morphism means forms, so polymorphism means many forms.
+it means identically " one name " named methods(member functions) that have different behaiour means one methodss have multiple forms.
+Same message is pass to inherited classes and this classes will respond to the same message in different ways  is called as polymorphism or same message within a class taking different signatures having different implementations is also called as polymorphism.
+
+
+Binding is the process of associating a function call to an object.
+Different types of polymorphism are as follows
+1)compile time polymorphism:
+When binding occurs at compile time,it is known as compile time binding. All the methods are called on object at compile time. In compile-time polymorphism, the compiler determines which function or operation to call based on the number, types, and order of arguments. 
+This kind of polymorphism is implemented using function overloading and operator overloading.such polymorphism is called as early binding or static binding because an object is bound to its function call at compile time.
+==>At compile time,compiler will check the type of pointer rather than the type of data.
+
+2)Runtime polymorphism:
+When the binding process occurs at runtime ,it is called as runtime binding.
+In order to invoke the appropriate function of the derived class,the compiler needs to bind that function call to the correct function defination.The decision of which function to be invoked is taken at a later stage(at runtime). Hence this feature is referred to as runtime binding.The generic pointer is capable of pointing to any object at runtime. hence it can invoke any function dynamically depending on the type of the object that it is pointing to . In run-time polymorphism, the decision of which function to call is determined at runtime based on the actual object type rather than the reference or pointer type. It is also known as Dynamic Polymorphism
+Run Time Polymorphism can be exhibited by:
+
+Virtual Function
+Virtual Function is a member function that is declared as virtual in the base class and it can be overridden in the derived classes that inherit the base class.
+
+Difference Between Compile Time And Run Time Polymorphism
+Compile-Time Polymorphism and Run-Time Polymorphism
+
+1)It is also called Static Polymorphism.	
+It is also known as Dynamic Polymorphism.
+2)In compile-time polymorphism, the compiler determines which function or operation to call based on the number, types, and order of arguments.	
+In run-time polymorphism, the decision of which function to call is determined at runtime based on the actual object type rather than the  pointer type.
+3)The function to be invoked is known at the compile time.	
+The function to be invoked is known at the run time.
+4)Compile-time Polymorphism can be exhibited by: Function Overloading and Operator Overloading
+Run-time Polymorphism can be exhibited by Function Overriding.
+5)Faster execution rate.
+Comparatively slower execution rate.
+6)Inheritance in not involved.	
+Involves inheritance.
+=============================================
+Virtual Function
+
+==>To implement late binding, the function is declared with the keyword virtual in the base class. usually, when there is a possibility that a function in the base class may be overridden in the derived class this function is marked as virtual.
+The function in the derived class is overridden with same signature and return type.
+==>Polymorphism relies on runtime binding.To achieve runtime binding virtual keyword should be used.virtual keyword will tell the compiler to do binding at runtime and not at compile time.
+==>It tells the compiler to perform late binding where the compiler matches the object with the right called function and executes it during the runtime. This technique falls under Runtime Polymorphism.
+
+1)virtual function is a member function that can be redefined for the derived classes.
+2)The function in the base class,which are overridden  in the subsequent derived classes, are also considered virtual by the compiler.virtual function is redefined in all the derived classes even if the virtual keyword is not written.
+3)constructors can not be made Virtual Function
+4)destructor can be made Virtual Function
+5)virtual keyword should not be written in definition
+
+**At runtime binding the compiler will check the type of data rather than the type of pointer.According to the type of data the compiler will invoke the function of that class.
+**The idea is that virtual functions are called according to the type of the object instance pointed to or referenced, not according to the type of the pointer or reference.
+In other words, virtual functions are resolved late, at runtime.
+
+=============================================================================================
+========================================================================================
+
+
+//case 1: object creation on stack with out virtual keyword
+
+#include<iostream> 
+using namespace std; 
+class employee
+{
+	int id;
+public:
+	employee();
+	employee(int);
+     void display();
+	 int findsalary()
+	{
+		return 0;
+	}
+};
+employee::employee()
+{
+	cout<<"in default of emp\n";
+	id=0;
+}
+employee::employee(int i)
+{
+	cout<<"in para of emp\n";
+	id=i;
+}
+void employee::display()
+{
+	
+	cout<<"id of an emp is "<<id<<endl;
+}
+
+class wageemployee:public employee
+{
+	int hrs,rate;
+public:
+	wageemployee();
+	wageemployee(int,int,int);
+	 void display();
+int findsalary();
+};
+wageemployee::wageemployee()
+{
+	cout<<"in default of wage\n";
+	hrs=0;
+	rate=0;
+}
+wageemployee::wageemployee(int i,int h,int r)	:employee(i)
+{
+	cout<<"in para of wage\n";
+	hrs=h;
+	rate=r;
+}
+int wageemployee::findsalary()
+{
+	return hrs * rate;
+}
+void wageemployee::display()
+{
+	employee::display();
+	cout<<hrs<<endl;
+	cout<<rate<<endl;
+}
+
+int main()
+{
+	employee * ptr;//the type of pointer is called as static type
+	wageemployee we1(101,5,500);//type of object is called as dynamic type
+	ptr = &we1;
+	cout<<"salary is "<<ptr->findsalary();//without virtual keyword binding takes
+	//at compile time and at compile time type of pointer is checked rather than type 
+	//of object.depending on type of object,function of that class will be 
+	//executed
+	ptr->display();
+}
+
+
+
+
+=========================================================================
+//case 2: object creation on heap with new operator without virtual keyword
+#include<iostream> 
+using namespace std; 
+class employee
+{
+	int id;
+public:
+	employee();
+	employee(int);
+     void display();
+	 int findsalary()
+	{
+		return 0;
+	}
+};
+employee::employee()
+{
+	cout<<"in default of emp\n";
+	id=0;
+}
+employee::employee(int i)
+{
+	cout<<"in para of emp\n";
+	id=i;
+}
+void employee::display()
+{
+	
+	cout<<"id of an emp is "<<id<<endl;
+}
+
+class wageemployee:public employee
+{
+	int hrs,rate;
+public:
+	wageemployee();
+	wageemployee(int,int,int);
+	 void display();
+int findsalary();
+};
+wageemployee::wageemployee()
+{
+	cout<<"in default of wage\n";
+	hrs=0;
+	rate=0;
+}
+wageemployee::wageemployee(int i,int h,int r)	:employee(i)
+{
+	cout<<"in para of wage\n";
+	hrs=h;
+	rate=r;
+}
+int wageemployee::findsalary()
+{
+	return hrs * rate;
+}
+void wageemployee::display()
+{
+	employee::display();
+	cout<<hrs<<endl;
+	cout<<rate<<endl;
+}
+
+int main()
+{
+	employee * ptr=new wageemployee(101,5,500);
+	cout<<"salary is "<<ptr->findsalary();//without virtual keyword binding takes
+	//at compile time and at compile time type of pointer is checked rather than type 
+	//of object.depending on type of object,function of that class will be 
+	//executed
+	ptr->display();
+}
+====================================================================
+
+
+//case 3: object creation on stack  with virtual keyword
+
+#include<iostream> 
+using namespace std; 
+class employee
+{
+	int id;
+public:
+	employee();
+	employee(int);
+    virtual void display();
+	virtual int findsalary()
+	{
+		return 0;
+	}
+};
+employee::employee()
+{
+	cout<<"in default of emp\n";
+	id=0;
+}
+employee::employee(int i)
+{
+	cout<<"in para of emp\n";
+	id=i;
+}
+void employee::display()
+{
+	
+	cout<<"id of an emp is "<<id<<endl;
+}
+
+class wageemployee:public employee
+{
+	int hrs,rate;
+public:
+	wageemployee();
+	wageemployee(int,int,int);
+	 void display();
+int findsalary();
+};
+wageemployee::wageemployee()
+{
+	cout<<"in default of wage\n";
+	hrs=0;
+	rate=0;
+}
+wageemployee::wageemployee(int i,int h,int r)	:employee(i)
+{
+	cout<<"in para of wage\n";
+	hrs=h;
+	rate=r;
+}
+int wageemployee::findsalary()
+{
+	return hrs * rate;
+}
+void wageemployee::display()
+{
+	employee::display();
+	cout<<hrs<<endl;
+	cout<<rate<<endl;
+}
+
+int main()
+{
+	employee * ptr;
+	 wageemployee we1(101,5,500);
+	 ptr=&we1;
+	cout<<"salary is "<<ptr->findsalary();//with virtual keyword binding takes
+	//at runtime and at run time type of object is checked rather than type 
+	//of pointer.depending on type of object,function of that class will be 
+	//executed
+	ptr->display();
+}
+=============================================================================
+//case 4: object creation on heap  with virtual keyword
+#include<iostream> 
+using namespace std; 
+class employee
+{
+	int id;
+public:
+	employee();
+	employee(int);
+    virtual void display();
+	virtual int findsalary()
+	{
+		return 0;
+	}
+};
+employee::employee()
+{
+	cout<<"in default of emp\n";
+	id=0;
+}
+employee::employee(int i)
+{
+	cout<<"in para of emp\n";
+	id=i;
+}
+void employee::display()
+{
+	
+	cout<<"id of an emp is "<<id<<endl;
+}
+
+class wageemployee:public employee
+{
+	int hrs,rate;
+public:
+	wageemployee();
+	wageemployee(int,int,int);
+	 void display();
+int findsalary();
+};
+wageemployee::wageemployee()
+{
+	cout<<"in default of wage\n";
+	hrs=0;
+	rate=0;
+}
+wageemployee::wageemployee(int i,int h,int r)	:employee(i)
+{
+	cout<<"in para of wage\n";
+	hrs=h;
+	rate=r;
+}
+int wageemployee::findsalary()
+{
+	return hrs * rate;
+}
+void wageemployee::display()
+{
+	employee::display();
+	cout<<hrs<<endl;
+	cout<<rate<<endl;
+}
+
+int main()
+{
+	employee * ptr=new wageemployee (101,5,500);
+	cout<<"salary is "<<ptr->findsalary();//with virtual keyword binding takes
+	//at runtime and at run time type of object is checked rather than type 
+	//of pointer.depending on type of object,function of that class will be 
+	//executed
+	ptr->display();
+}
+
+=========================================================================
+
+1)Virtual functions cannot be friend function.Friend function are not members of the base class and hence cannot be inherited or overrided.
+2)Functions that are overriden in the derived class are declared as virtual in the base class. since the base class pointer is used to invoke the appropriate function at runtime.
+3)Constructors cannot be made virtual .When an object of a derived class is created, base class constructor should be called first.But if th base class constructor is made virtual, the derived class constructor wil be directly called and the base class members will not be initialized. Therefore forseeing the problem,compiler doesnot allow virtaul constructors.
+4)If a function is declared as virtual in the base class then,it will be treated as virtual in derived class even if the keyword virtual is not used.
+=============================================================
+
+
+
+
+
+ABSTRACT CLASS
+#include<iostream> 
+using namespace std; 
+class employee
+{
+	int id;
+public:
+	employee();
+	employee(int);
+    virtual void display();
+	virtual int findsalary()=0;
+
+	
+};
+employee::employee()
+{
+	cout<<"in default of emp\n";
+	id=0;
+}
+employee::employee(int i)
+{
+	cout<<"in para of emp\n";
+	id=i;
+}
+void employee::display()
+{
+	
+	cout<<"id of an emp is "<<id<<endl;
+}
+
+class wageemployee:public employee
+{
+	int hrs,rate;
+public:
+	wageemployee();
+	wageemployee(int,int,int);
+	 void display();
+int findsalary();
+void show();
+};
+wageemployee::wageemployee()
+{
+	cout<<"in default of wage\n";
+	hrs=0;
+	rate=0;
+}
+wageemployee::wageemployee(int i,int h,int r)	:employee(i)
+{
+	cout<<"in para of wage\n";
+	hrs=h;
+	rate=r;
+}
+int wageemployee::findsalary()
+{
+	return hrs * rate;
+}
+void wageemployee::display()
+{
+	employee::display();
+	cout<<hrs<<endl;
+	cout<<rate<<endl;
+}
+void wageemployee::show()
+{
+	cout<<"in show() of wageemployee\n";
+}
+
+int main()
+{
+	employee * ptr=new wageemployee (101,5,500);
+	//cout<<"salary is "<<ptr->findsalary();//with virtual keyword binding takes
+	//ptr->display();
+	ptr->show();
+	//with the help of baseclass pointer,we can only invoke overrided function plus 
+	//that function implementation should also be present in the baseclass pointer
+	// type. 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======================================================================================
+Pure virtual function
+1)A function without executable code is called as Pure virtual function.declared by using a specifier(=0) in the declaration of a virtual member function in the class declaration
+2) Pure virtual function is represented by(=0) in the function declaration and not in the definition
+ex:virtual float computesalary()=0;
+3)A class contains atleast 1 pure virtual function than that class is called as abstact class
+4)if any class contain all the pure virtual function then that class is calles as pure abstract  class
+5)we can not create object of an abstract class
+6)however we can create pointer  of an abstract class.
+7)if any base class contains pure virtual function then the pure virtual function has to be overrided in the derived class and give the implementation according to the requirements.if not given,then derived class automatically becomes abstract class
+8)Abstract class supports runtime polymorphism.
+9)if Pure virtual function is not overrided in the derived class than the derived class automatically becomes abstract class
+10)If a class is too generic to define its object then the class is made abstract.so the sole purpose of abstract classes is to provide a baseclass for other classes.
+11)An abstract class can have constructors. 
+
+Sometimes implementation of all functions cannot be provided in a base class because we don’t know the implementation. Such a class is called an abstract class.For example, let Shape be a base class. We cannot provide the implementation of function draw() in Shape, but we know every derived class must have an implementation of draw().other methods can be pure virtual function or virtual function or concrete funtion.
+ex: shape is a base class which is abstract.several other classes like circle,rectangle can be derived from it. The common attributes and behaviour of all shapes are bundled together in shape class. draw() and area() are the two common behaviours of all the above mentioned shapes.
+==>A shape hierarchy may define abstract class that requires programmers using it to provide their own implementation of the class by creating a derived class. This hierarchy is easily extensible.
+
+ex:
+In class Employee,computesalary() was added to implement runtime polymorphism.
+float computesalary()
+{
+	return 0.0f;
+}
+Actually this implementation is unnecessary and does not ake any sense. This function is never called ,but its existence in the class Employee is necessary to enable polymorphism.
+==>If a virtual function doesnot contain any meaningful code or if it has been added merly to ahieve dynamic binding,then it is made pure virtual funtion.
+=======================================================================================
+Why Destructor can be made virtual?
+class A
+{
+	public :
+	virtual ~A()
+	{
+		cout<<"In A's Destructor";
+	}
+};
+class B :public A
+{
+	public :
+	~B()
+	{
+		cout<<"In B's Destructor";
+	}
+};
+int main()
+{
+A * aptr=new B();
+delete aptr;
+}
+
+==If a base class pointer points to a derived object created on heap and the memory is freed by delete with base pointer the base class destructor is called.The deried class destructor is not invoked at all. To resole this problem,the base class destructor is made virtual.
+ex:
+Class A is a base class and B is derived from A. The destructor is made virtual in class A and an object of class B is created on heap using new and the address is stored in the base class A pointer i.e aptr.For the statement delete aptr, the destructor for the derived class is invoked first.
+==If the destructor is not made virtual, the base class destructor is called directly without the derived class destructor being called first. This leads to memory related problems.
+===================================
+
+
+
+==================================================================
+
+Similarities between virtual function and pure virtual function
+1)These are the concepts of Run-time polymorphism.
+2)These functions can’t be static.
+3)constructor cannot be pure/virtual fun
+4)destructor can be pure/virtual
+5)can be override
+
+Difference between virtual function and pure virtual function in C++
+
+
+=============================================================================
+========================================================================================
+
+Types of Classes:
+
+Concrete class:
+A class in which all the functionalities of an object are defined is called as concrete class.
+ 
+Abstract class:
+A class which contains/group all generic/common features that multiple derived class can implement according to there own requirments
+
+pure abstract class:
+A class in which all the member functions are pure virtual functions is called as pure abstract class. It is just an interface and cannot be instantiated.
+
+Polymorphic class:
+A class that contains at least one virtual function is called as polymorphic class.
+=================================================================================
+
+class A
+{
+int x;
+	//without virtual function
+};
+class B
+{
+int x;
+	//with virtual function
+};
+int main()
+{
+	A a;
+	B b;
+	cout<<"size of object a is "<<sizeof(a);
+	cout<<"size of object a is "<<sizeof(b);
+}
+class B contains a virtual function whereas class A doesnot contain any virtual function. If the size of the objects of both the classes A and B is compared, then size of object b is 8bytes more than the size of object a.The reason is, for every polymorphic class which contains at least one virtual function, the compiler implicitly adds a virtual pointer(vptr)
+==>vptr is added per object.
+==================================================================
+
+OPERATOR OVERLOADING
+
+int a=19,b=20;
+a+b;
+
+complex c1(1,2);
+complex c2(3,4);
+c1+c2;
+c1++;
+c1--;
+
+
+add(c1,c2);
+c1.add(c2)
+
+
+
+
+
+
+
+
+======================
+
+
+
+
+
+
+
+
+
+
+Suppose there is a need to add two complex numbers, a function Add() can be written in the class and used as follows:
+c3=c1.Add(c2);// c1,c2,c3 are the objects of complex class
+
+==>However, it would be more natural if it is written as c1+c2.But the + operator in c++ works only for numeric built-in datatypes and c1 and c2 are user defined datatypes.As compiler doesNot know the behaviour of any operator with UDTs ,if an operator is used with them,compiler gives an error.
+==>To overcome such problems,c++ provides the feature of operator overloading. The '+' operator can be overloaded for a class and This brings UDTs closer to built-in types.
+
+==>operator overloading gives additional meaning to the existing operator like +,-,*,/ etc. Giving additional meaning doesnot mean a radical change,but an extension in the default behaviour of the operator. operator overloading helps the compiler to perform this type of operation when it is applied on UDTs. With the help of operator oerloading one can use the existing operators on UDTs. 
+
+==>By using operator overloading we can add 2 userdefined datatypes also.we are giving extra task to an existing operator.
+it gives additional meaning to the existing operator.this features makes UDTs more natural and close to built in datatypes.
+
+==>the main idea behind “Operator overloading” is to use C++ operators with class variables or class objects. Redefining the meaning of operators really does not change their original meaning; instead, they have been given additional meaning along with their existing ones.
+==============================================================================
+
+==>operator keyword is used to implement operator overloading.overloaded operators are implemented as function.An overloaded operator is called an operator function. An operator function is declared with the keyword operator preceding the operator.
+ex:to overload the addition operator,a function called operator+ can be defined and implemented.
+
+
+syntax:
+
+return_type class_name  : : operator op(argument_list)  
+{  
+     // body of the function.  
+}  
+Where the return type is the type of value returned by the function.
+
+class_name is the name of the class.
+
+operator op is an operator function where op is the operator being overloaded, and the operator is the keyword.
+
+
+Rules and Regulations
+============================================================================== ==========
+1)New operators cannot be defined or invented ..extending the meaning of the operators doesnot mean giving new meaning to the operators.
+2)one cannot change the precedence or associativity of the operators.
+3)one cannot change the arity of the operator.
+4)we cannot overload membership operator(.),scope resolution operator(::),ternary operator,sizeof operator.
+5) For operator overloading to work, at least one of the operands must be a user-defined class object.
+================================================
+
+ 
+
+#include<iostream>
+using namespace std;
+class complex
+{
+	int real,img;
+
+public:
+	complex();
+	complex(int,int);
+	void display();
+	complex operator+(complex&);
+	complex operator-(complex&);
+	complex operator-();
+};
+complex::complex()
+{
+	real=img=0;
+}
+complex::complex(int real,int img)
+{
+	this->real=real;
+	this->img=img;
+}
+void complex::display()
+{
+	if(img>0)
+	cout<<"complex number is "<<real<<"+"<<img<<"i"<<endl;
+	else
+		cout<<"complex number is "<<real<<img<<"i"<<endl;
+
+}
+complex complex::operator+(complex & c2_new)
+{
+	complex temp;
+	temp.real=this->real+c2_new.real;
+	temp.img=img + c2_new.img;
+	return temp;
+}
+complex complex::operator-(complex & c2_new)
+{
+	complex temp;
+	temp.real=this->real-c2_new.real;
+	temp.img=img - c2_new.img;
+	return temp;
+}
+complex complex::operator-()
+{
+	complex temp;
+temp.real=	-this->real;
+temp.img=	-this->img;
+return temp;
+	
+}
+int main()
+{
+	complex c1(1,2);
+	complex c2(3,4);
+	complex c3=c1+c2;//c3=c1.operator+(c2)
+	c3.display();
+	complex c4=c1-c2;//c4=c1.operator-(c2)
+	c4.display();
+	complex c5=-c1;//c5=c1.operator-()
+	c5.display();
+	
+	}
+
+
+
+
+
+
+
+
+
+=================================================================================
+ 
+
+#include<iostream>
+using namespace std;
+class complex
+{
+	int real,img;
+
+public:
+	complex();
+	complex(int,int);
+	void display();
+	complex operator+(complex&);
+	complex operator-(complex&);
+	complex operator-();
+	complex operator++();
+	complex operator++(int);
+};
+complex::complex()
+{
+	real=img=0;
+}
+complex::complex(int real,int img)
+{
+	this->real=real;
+	this->img=img;
+}
+void complex::display()
+{
+	if(img>0)
+	cout<<"complex number is "<<real<<"+"<<img<<"i"<<endl;
+	else
+		cout<<"complex number is "<<real<<img<<"i"<<endl;
+
+}
+complex complex::operator+(complex & c2_new)
+{
+	complex temp;
+	temp.real=this->real+c2_new.real;
+	temp.img=img + c2_new.img;
+	return temp;
+}
+complex complex::operator-(complex & c2_new)
+{
+	complex temp;
+	temp.real=this->real-c2_new.real;
+	temp.img=img - c2_new.img;
+	return temp;
+}
+complex complex::operator-()
+{
+	complex temp;
+temp.real=	-this->real;
+temp.img=	-this->img;
+return temp;
+	
+}
+complex complex::operator++()
+{
+	this->real++;
+	this->img=this->img+1;
+	return (*this);
+}
+complex complex::operator++(int)
+{
+	complex temp=(*this);
+	this->real=this->real+1;
+	this->img=this->img+1;
+	return temp;
+		
+}
+int main()
+{
+	complex c1(1,2);
+	complex c2=++c1; //c2=c1.operator++()
+	c1.display();
+	c2.display();
+	
+	complex c3(3,4);
+	complex c4=c3++;//c4=c3.operator++(int)
+	c3.display();
+	c4.display();
+	
+	}
+
+
+==================================================
+
+Multiple Inheritance in C++:
+
+Multiple Inheritance is a feature of C++ where a class can inherit from more than one classes.  The constructors of inherited classes are called in the same order in which they are inherited.
+==>The list of base classes memtioned in the derived class declaration must be seperated by commas and each of the base classes should use its own specifier . If the class specifier is not specified,default is private.
+==>The order in which base class constructors are invoked is the same as the  order in which they appear in the derived class constructor's member initialization list.
+Syntax:
+
+class A
+{ 
+... .. ... 
+};
+class B
+{
+... .. ...
+};
+class C: public A,public B
+{
+... ... ...
+};
+
+#include<iostream>
+using namespace std;
+ 
+class A
+{
+public:
+  A()  { cout << "A's constructor called" << endl; }
+};
+ 
+class B
+{
+public:
+  B()  { cout << "B's constructor called" << endl; }
+};
+ 
+class C: public B, public A  // Note the order
+{
+public:
+  C()  { cout << "C's constructor called" << endl; }
+};
+ 
+int main()
+{
+    C c;
+    return 0;
+}
+Output:
+
+B's constructor called
+A's constructor called
+C's constructor called
+The destructors are called in reverse order of constructors.
+==================================================================
+#include<iostream>
+using namespace std;
+ 
+class A
+{
+	int a;
+public:
+  A()  { cout << "A's constructor called" << endl; }
+  A(int p) 
+{
+    cout << "A's para constructor called" << endl;
+}
+};
+ 
+class B
+{
+	int b;
+public:
+  B()  { cout << "B's constructor called" << endl; }
+  B(int q)
+  { 
+  		cout << "B's para constructor called" << endl;
+  }
+};
+ 
+class C: public B, public A  // Note the order
+{
+public:
+  C(int p,int q):A(p),B()
+    { 
+	cout << "C's paraconstructor called" << endl; 
+	}
+};
+ 
+int main()
+{
+    C c(10,20);
+    return 0;
+}
+
+
+
+
+====================================================
+
+Ambiguity Problem in Multiple Inheritance
+In Multiple Inheritance, when a single class is derived from two or more base or parent classes. So, it might be possible that both the parent class have the same-named member functions, and it shows ambiguity when the child class object invokes one of the same-named member functions. Hence, we can say, the C++ compiler is confused in selecting the member function of a class for the execution of a program.
+ex:
+Base classes can contain a function with the same name,signature and returntype.
+class A
+{ 
+... .. ... 
+};
+class C
+{
+... .. ...
+};
+class B: public A,public B
+{
+... ... ...
+};
+B bobj
+bobj.func();
+
+==>Here,the function call is ambiguous and doesnot compile,because it is not clear whether it refers to A::func() or C::func().This ambiguity can be resolved by any one of the following 2 ways.
+1)Making the call explicit by resolving the function call with the classname i.e specifying either  bobj.A::func() or bobj.c::func()
+2)overriding the func() in class B . then the statement bobj.func() will call func() of class B and the call will not be ambiguous.
+
+#include <iostream>  
+#include <conio.h>  
+  
+using namespace std;  
+  
+// create class A  
+class A  
+{  
+    public:   
+    void show()  
+    {  
+        cout << " It is the member function of class A " << endl;  
+    }  
+ };   
+   
+ // create class B  
+ class B  
+{  
+    public:   
+    void show()  
+    {  
+        cout << " It is the member function of class B " << endl;  
+    }  
+ };  
+   
+   
+ // create a child class to inherit the member function of class A and class B  
+ class child: public A, public B  
+ {  
+    public:  
+        void disp()  
+        {  
+            cout << " It is the member function of the child class " << endl;  
+         }  
+ };  
+   
+ int main ()  
+ {  
+    // create an object of the child class to access the member function  
+    child ch;  
+    ch.show(); // It causes ambiguity   
+ch.disp();  
+    return 0;  
+ }  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

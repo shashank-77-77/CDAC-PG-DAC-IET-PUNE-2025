@@ -1,0 +1,24 @@
+Concepts 
+     Function Comp , Class Comp , Event 
+
+1) Create Function Component  with parameters
+     	 a) Factorial ==  pass number as parameter 
+                  b) Calculator ==  pass 2 numbers as attribute 
+                        and display 
+
+		addition , subtraction , division , multiplication 
+	c) in point b  =  accept 1 more argument operation and then 
+                     display data for that operation only 
+
+2)   Create Multiple Function Component in js file 
+       and call those function from index.js file 
+
+3) write class Component 
+    with render method display 
+	1 textField and 2 Buttons
+			upper case , small case 
+	when you click the button display output 
+	in console in UPPERCASE / lowercase 
+    (use event handling )
+
+	

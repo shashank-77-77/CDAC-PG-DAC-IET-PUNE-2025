@@ -1,0 +1,11 @@
+Bill ID: 12
+Customer Name: shashank
+Purchased Items:
+Item ID: 2, Name: Notebook, Price: 45, Quantity: 30
+Item ID: 1, Name: Pen, Price: 10.5, Quantity: 50
+----------------------------------
+Bill ID: 44
+Customer Name: baban
+Purchased Items:
+Item ID: 1, Name: Pen, Price: 10.5, Quantity: 100
+----------------------------------

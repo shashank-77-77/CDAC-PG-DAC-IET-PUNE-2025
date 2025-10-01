@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title> Assignment no 1</title>         
+
+</head>
+<body>
+    <style>
+        #p1{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(4, 238, 255);
+        }
+    </style>
+
+    Enter a name: <input type="text" required id="t1"/>
+    <button onclick="display()">Display</button>
+    <p>Data</p>
+    <p id="p1">  </p>
+
+
+</body>
+<script>
+
+    function display()
+    {
+        let d=document.getElementById("t1").value;
+        if(d.trim() != "" )
+        {
+            document.getElementById("p1").innerHTML=document.getElementById("t1").value;
+        }
+        else
+        {
+            document.getElementById("p1").innerText= "Enter the data"; 
+        }
+    }
+
+    function vaild()
+    {
+        let ele=document.getElementById("t1");  
+            console.log(ele.checkValidity())
+        
+        if(ele.checkValidity())
+        {
+
+        }
+    }
+
+
+
+
+
+</script>
+
+
+
+
+</html>

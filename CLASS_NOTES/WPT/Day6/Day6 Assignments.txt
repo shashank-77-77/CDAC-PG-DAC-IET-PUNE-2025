@@ -1,0 +1,51 @@
+TO run html from vs code install live server extension in vs code 
+
+
+
+Assignments 
+
+
+1) Accept Employee data 
+FirstName  | LastName | email | Date of Birth 
+
+from user 
+	a) perform validation -  data is entered or not 
+                    if not entered then display error msg 
+	b) if data is correct then display data on same page
+                     in table format using dom evenets 
+					 
+	c) after adding data clear the textfields 
+	d) add row wise edit and delete functionality 
+	
+2) Display Timer on Browser using callback function setInterval
+
+3) Take 1 Button and when user click on that button display 
+   How many times user click and display that count in <p> tag 
+
+	if user click 10 times then make that button readonly using style 
+
+4) 
+	Write 6 Function in Script 
+	
+	display 
+	addition 
+	subtraction
+	multiply
+	division 
+	calculate
+	
+	Accept data from user 
+		2 numbers and Which Operation they want to perform
+  according to choice call particular function and display result 
+using callback function concept 
+
+    calculate(n1 , n2 , mcallBack)
+		addition (n1 , n2 , display);
+		
+
+
+	
+	
+   
+
+

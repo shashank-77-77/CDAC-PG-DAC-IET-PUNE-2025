@@ -1,0 +1,6 @@
+
+Open windows powersheel and run below command.
+
+
+ 
+ Set-ExecutionPolicy Unrestricted

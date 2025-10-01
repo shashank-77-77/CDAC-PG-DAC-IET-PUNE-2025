@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CALCULATOR</h1>
+    <label for="fno">Enter first Number</label>
+    <input type="number" name="firstNo" id="fno"><br><br>
+    <label for="sno">Enter Second Number</label>
+    <input type="number" name="secondNo" id="sno"><br><br>
+ 
+    <p id="p1"></p>
+    <button onclick="choices()">Submit</button>
+    
+
+    <script>
+     function choices(){
+     let choice = prompt(
+        `Enter your choice :
+        1. Display
+        2. Addition
+        3. Substraction
+        4. Multiplication
+        5. Division
+        6. Calculate`
+     );
+     switch(parseInt(choice)){
+       
+        case 1: 
+         Display();
+         break;
+
+        case 2:
+        Addition();
+        break;
+
+        case 3:
+        Substraction();
+        break;
+
+        case 4:
+        Multiplication();
+        break;
+
+        case 5:
+        division();
+        break;
+
+        case 6:
+        Calculate();
+        break;
+
+        default:
+            break;
+        
+     }
+    }
+    function Display(){
+        let a= parseFloat(document.getElementById("fno").value);
+           let b =parseFloat(document.getElementById("sno").value);
+           if(isNaN(a)||isNaN(b)){
+            document.getElementById("p1").innerHTML = "please enter the numbers to display"
+           }else{
+            document.getElementById("p1").innerHTML = "Value of a is"+a + "  &  " +  "Value of b is "+b;
+           }
+
+    }
+    function Addition(){
+           let a= parseFloat(document.getElementById("fno").value);
+           let b =parseFloat(document.getElementById("sno").value);
+           if (isNaN(a) || isNaN(b)) {
+            document.getElementById("p1").innerHTML = "Please enter valid numbers.";
+            } else {
+              let res = a + b;
+             document.getElementById("p1").innerHTML = "Result: " + res;
+         }
+        }
+           function Substraction(){
+           let a= parseFloat(document.getElementById("fno").value);
+           let b =parseFloat(document.getElementById("sno").value);
+           if (isNaN(a) || isNaN(b)) {
+            document.getElementById("p1").innerHTML = "Please enter valid numbers.";
+            } else {
+              let res = a - b;
+             document.getElementById("p1").innerHTML = "Result: " + res;
+         }
+        }
+           function Multiplication(){
+           let a= parseFloat(document.getElementById("fno").value);
+           let b =parseFloat(document.getElementById("sno").value);
+           if (isNaN(a) || isNaN(b)) {
+            document.getElementById("p1").innerHTML = "Please enter valid numbers.";
+            } else {
+              let res = a * b;
+             document.getElementById("p1").innerHTML = "Result: " + res;
+         }
+        }
+           function Division(){
+           let a= parseFloat(document.getElementById("fno").value);
+           let b =parseFloat(document.getElementById("sno").value);
+           if (isNaN(a) || isNaN(b)) {
+            document.getElementById("p1").innerHTML = "Please enter valid numbers.";
+            } else {
+              let res = a / b;
+             document.getElementById("p1").innerHTML = "Result: " + res;
+         }
+        }
+           function Calculate(){
+           let a= parseFloat(document.getElementById("fno").value);
+           let b =parseFloat(document.getElementById("sno").value);
+           if (isNaN(a) || isNaN(b)) {
+            document.getElementById("p1").innerHTML = "Please enter valid numbers.";
+            } else{
+              let res = a ^ b;
+             document.getElementById("p1").innerHTML = "Result: " + res;
+         }
+        }
+
+    </script>
+</body>
+</html>

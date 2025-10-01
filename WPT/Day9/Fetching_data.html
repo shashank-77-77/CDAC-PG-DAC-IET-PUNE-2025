@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+
+<body>
+
+    <h1>Fetching Data</h1>
+    <div id="data"></div>
+    <button id="btn">Click to Fetch Data</button>
+    <button id="close-btn">Hide the data</button>
+
+    <script>
+
+        const element = document.getElementById("btn");
+        element.addEventListener("click", fetchData);
+
+        const ele = document.getElementById("close-btn");
+        ele.addEventListener("click", hidedata);
+
+
+
+        function fetchData() {
+            let xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    let data = JSON.parse(this.responseText);
+
+                    document.getElementById("data").innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                
+
+                }
+            }
+            xhttp.open("GET", "https://fake-json-api.mock.beeceptor.com/users", true);
+            xhttp.send()
+        }
+
+        
+            function hidedata() {
+
+                const dataElement = document.getElementById("data");
+
+                dataElement.style.display = "none";
+            }
+        
+    </script>
+</body>
+
+</html>

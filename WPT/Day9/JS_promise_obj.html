@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Promise Concept</h1>
+    <h2>In then () Method</h2>
+    <p id="d1"></p>
+<script>
+
+    function disp(some)
+    {
+        document.getElementById("d1").innerHTML =some;
+    }
+
+    let myProm = new Promise(function (resolve , reject){
+        let x =0;
+        if(x == 0) 
+        {
+            console.log("Done")
+            resolve();
+        }
+        else
+        {
+            console.log("error")
+
+        }
+    });
+
+    myProm.then(
+        function (value){console.log("In then")},
+        function (error){console.log("Error")}
+    );
+
+</script>   
+</body>
+</html>
