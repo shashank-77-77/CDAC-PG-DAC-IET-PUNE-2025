@@ -1,0 +1,64 @@
+<html>
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+
+        $("button").click(function () {
+
+            //2 rows 
+            let data = $("#ta1").val();
+            console.log(data.length)
+            let l = data.length;
+            let a = 0;
+            let c = l / 4;
+            let d = data.slice(a, c);//break 
+
+            d = d + "<br/>" + data.slice(c + 1, l);
+
+
+
+
+
+
+
+
+        })
+
+
+
+
+
+
+
+    })
+
+
+
+
+</script>
+
+
+<body>
+
+    Enter Data
+    <textarea id="ta1" cols="5" rows="5"></textarea>
+
+    <button>Convert </button>
+
+
+    <p>
+
+
+    </p>
+
+
+
+
+</body>
+
+
+
+
+
+</html>

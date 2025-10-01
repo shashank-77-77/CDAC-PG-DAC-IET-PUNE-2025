@@ -1,0 +1,139 @@
+WPT  --- Web Programming Technologies 
+	Devlop Application   flow
+
+		set of programs 
+
+Application --- Bank   --  Account   Human 
+
+	Software 
+
+
+No of Users --- Desktop Application  --- Single Use 
+
+		install    Human 
+
+Application  ----    Input        Process   Output 
+
+	3 Layers   C C++
+
+Presentation Logic --- Display Info , Accept Input 
+
+Business Logic ---- Validation Logic , Process Data 
+
+		Output 
+
+Persistance Logic   ---   Storing Data   // Database 
+
+Application --- Compile ---- Run    Accepting   Output 
+
+Application Dev --  one time 
+
+End User ---  Enhan
+Multi Tier 
+	Machine 1  ----------------------        Machine2 
+
+1) Connection  --- Intranet   ///    internet 
+2) Communication ------ Language 
+
+   Protocol  -  Comman Set of Rules 
+
+	TCP / IP  ----- Intranet  ----- Text Format 
+	FTP   -----   File Transfer Protocol 
+	SMTP   ----   Mail 
+	HTTP   ------- Web Application 
+
+	HTML 
+
+End User ---  Informative page 	Text , Img , Audio , Video 
+
+		HTML 
+
+Web Application -- Prsentation Logic  -- HTML 
+
+Markup Language --- Reprsent Data 
+	HTML ---- 
+	XML --- 
+
+
+
+Desktop   Single User --  Install 
+Application   -------------------- 
+
+
+Internet + Browser 
+
+
+Client     	  HTTP Request    (html)                 Web  Server 
+	  HTTP Response   (html)
+
+	Web Application --   
+Browser --- HTML 
+M1                                      M2 
+
+
+Web Application   --- Host  on the Web Server 
+
+		Internet 
+
+		Web Server    Apache Tomat   iis
+			     Jboss , GlassFish 
+
+     Multi tier Application / Distributed Application 
+
+	1) 2 Tier   ----  Client    Request        Server 
+			Response
+
+2)  n tier  --  Mobile  ----  
+	Web Server --- 
+	Application Server (Application)  --
+	DataBase Server 	
+
+
+	
+	Arch Of Web Application  
+
+Web Application  ---- set of programs 
+
+Software 	Method ------	Prog1   -----------   Prog2 
+
+	Internet    HTTP
+
+Client            Web  Server   ------------------ DataBase Server 
+                    ---- Web Conatiner (Java)
+
+C++   Class   Variables , Functions 
+	Main ---- Object calling Functions // Methods
+
+	Parametrised --  
+
+WPT  
+HTTP Protocol ---    HTTP Methods  - Message 
+
+		GET    , POST   ------ PUT DELETE
+Programmer / Dev 
+Web Application ------ Client      
+	
+	Request - Message Format
+			hostname -- 
+			Protocal HTTP 
+			Browser Type 
+			Content Type 
+		Browser 
+  	 Server --- Response    Message Format 
+			Status code  ---  200 
+			100  300 400 500 
+
+	www.gmail.com -------- Request 
+
+			
+
+HTML   CSS 
+
+
+
+
+
+
+
+
+

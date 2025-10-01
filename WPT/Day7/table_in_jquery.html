@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table Generator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                let num = parseInt($("#n1").val());
+                let from = parseInt($("#from").val());
+                let to = parseInt($("#to").val());
+
+                // Clear any previous table rows
+                $("#t4").empty();
+
+                // Validate inputs
+                if (isNaN(num) || isNaN(from) || isNaN(to) || from > to) {
+                    alert("Please enter valid numbers. 'From' should be less than or equal to 'To'.");
+                    return;
+                }
+
+                // Generate table rows
+                for (let i = from; i <= to; i++) {
+                    let result = num * i;
+                    let row =   "<tr>" +
+                                "<td>" + num + " * " + i + "</td>" +
+                                "<td>" + result + "</td>" +
+                                "</tr>";
+                    $("#t4").append(row);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <label>Enter number:</label><br>
+    <input type="number" id="n1" /><br><br>
+
+    <label>From:</label><br>
+    <input type="number" id="from" /><br><br>
+
+    <label>To:</label><br>
+    <input type="number" id="to" /><br><br>
+
+    <button type="button" id="b1">Show Table</button>
+
+    <br><br>
+    <table id="table1">
+        <tr>
+            <th>Expression</th>
+            <th>Result</th>
+        </tr>
+        <tbody id="t4"></tbody>
+    </table>
+
+</body>
+</html>

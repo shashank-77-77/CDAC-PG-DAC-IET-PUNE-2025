@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RESUME</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-info h2 {
+            margin: 8px 0;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        section {
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #666;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile-pic {
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <center><h1>RESUME</h1></center>
+
+        <!-- Header Section -->
+        <header>
+            <div class="profile-info">
+                <h2>Name: Shashank N Mankar</h2>
+                <h2>Phone No: 7770******</h2>
+                <h2>Email: shashankmankar412@gmail.com</h2>
+            </div>
+            <div>
+                <img src="img5.jpg" alt="Profile Picture" class="profile-pic">
+            </div>
+        </header>
+
+        <!-- Education Section -->
+        <section>
+            <h2>Education</h2>
+            <table>
+                <tr>
+                    <th>Degree</th>
+                    <th>Institution</th>
+                    <th>Year</th>
+                </tr>
+                <tr>
+                    <td>Bachelor of Technology</td>
+                    <td>RTM University</td>
+                    <td>2025</td>
+                </tr>
+                 <tr>
+                    <td>Diploma</td>
+                    <td>MSBTE University</td>
+                    <td>2020</td>
+                </tr>
+                <tr>
+                    <td> 10th CBSE</td>
+                    <td>KVOF Chanda</td>
+                    <td>2015</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Skills Section -->
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React.js & Node.js</li>
+                <li>Python & Java</li>
+                <li>SQL & MongoDB</li>
+                <li>Git & GitHub</li>
+                <li>Problem Solving & Algorithms</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section>
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Portfolio Website:</strong> A personal portfolio built with HTML/CSS/JS.</li>
+                <li><strong>Task Manager App:</strong> A full-stack app using MERN stack for task management.</li>
+                <li><strong>Weather App:</strong> A Python app that fetches weather data using API.</li>
+            </ul>
+        </section>
+
+        <!-- Languages Section -->
+        <section>
+            <h2>Languages Known</h2>
+            <ul>
+                <li>English</li>
+                <li>Hindi</li>
+                <li>Marathi</li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+</html>

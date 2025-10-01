@@ -1,0 +1,22 @@
+1) in http server pass data as query parameter 
+  and use that data to display on HTML Page 
+  fName=ABC&lName=XYZ
+
+	o/p Hello <fName>
+
+2) create array like todo as shown in lecture  say todos
+  
+	display array data depends on path param 
+
+	<url>/todos  --  display data in json format 
+
+	<url>/todos/<id> -- display specific id data on web page 
+
+3)   Try File Handling Write and Read data synchronous method 
+   and try asynchronous method 
+
+4)create add function in calc.js and use in main.js
+
+5) try npm commands 
+
+6) npm install -g express (Install Express)

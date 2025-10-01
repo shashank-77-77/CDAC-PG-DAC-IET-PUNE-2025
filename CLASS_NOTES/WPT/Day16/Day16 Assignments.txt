@@ -1,0 +1,34 @@
+check all classroom demos 
+
+ 1) Create Function Component  with parameters
+     	 a) Factorial ==  pass number as parameter 
+                  b) Calculator ==  pass 2 numbers as attribute 
+                        and display 
+
+		addition , subtraction , division , multiplication 
+	c) in point b  =  accept 1 more argument operation and then 
+                     display data for that operation only 
+
+in above assignments display output On Html Page 
+
+use state management 
+
+2)  use predefined methods and check lifecycle of 
+class Component  
+
+3)  accept data in textfield and take 3 radio buttons 
+     on  -  uppercase , lowercase and Title Case 
+
+on selection on that Radio button display appropiate output 
+
+4)
+Write a React Component to accept user details
+name email 
+dropdown
+Graduate, PG , UnderGrad
+
+If the user selects Graduate show GraduateComponent degree, year, final year score, univ
+If the user selects PG show PGComponent year, Thesis subject
+If the user selects UnderGrad show UnderGradComponent SSC , HSC
+( USE conditional Renderring )
+	

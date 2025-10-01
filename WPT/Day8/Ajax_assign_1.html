@@ -1,0 +1,74 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment no 1</title>
+</head>
+<body>
+
+<button onclick="Data()">Data</button>
+<p id="p2">File data will appear here</p>
+<p id="p1">   </p> <br> <br>
+
+<script>
+function Data() {
+    let request = new XMLHttpRequest();
+    request.open("GET","data.txt", true);
+    request.send();
+
+    request.onload = function() {
+        if (this.status == 200) {
+            
+            let dataJson = JSON.parse(this.responseText);
+            document.getElementById("p1").textContent = `Title: ${dataJson.title}\nBody: ${dataJson.body}`;
+        } else {
+            document.getElementById("p1").textContent = "Failed to load data.";
+        }
+    };
+
+    request.onerror = function() {
+        document.getElementById("p1").textContent = "Request error.";
+    }
+}
+</script>
+
+</body>
+</html>
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment no 1</title>
+</head>
+<body>
+
+<button onclick="Data()">Data</button>
+<p id="p2">File data will appear here</p>
+<p id="p1"></p> <br> <br>
+
+<script>
+function Data() {
+    let request = new XMLHttpRequest();
+    request.open("GET", "data.txt", true);
+    request.send();
+
+    request.onload = function() {
+        if (this.status == 200) {
+            try {
+                document.getElementById("p1").innerText = request.responseText ;
+            } catch (e) {
+                document.getElementById("p1").textContent = "Error to load data.";
+            }
+        } else {
+            document.getElementById("p1").textContent = "Failed to load data.";
+        }
+    };
+
+    request.onerror = function() {
+        document.getElementById("p1").textContent = "Request error.";
+    }
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+<!-- Using Jquery animate() API , write a div that has a nice quote in a nice
+  font , color and size . Run the scroller from left to right 4 times , then 
+  R to L -->
+<html>
+    <head>
+        <title>
+           Question No 4 ANIMATION
+        </title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+        <script>
+            $(document).ready(function()
+            {
+                $("#b1").click(function()
+                {
+                    $("#d1").animate({
+                        "left":260,
+                        "height":400,
+                        "opacity":0.2
+                    },3000)
+
+                })
+                $("#b2").click(function () {
+
+                $("#d1").stop();
+            })
+
+            })
+        </script>
+    </head>
+    <body>
+        <div id="d1" style="background-color: black;
+        height: 70px;
+        width : 60px;
+        position: absolute;
+        ">
+            <br /><br>
+    <br /><br><br /><br>
+    <br /><br><br /><br><br /><br><br /><br>
+
+        <button  id="b1">Animation</button>
+        <button  id="b2">Stop</button>
+
+
+        </div>
+    </body>
+</html>

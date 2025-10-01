@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#b1").click(function () {
+                $("#d1").animate({
+                    "left": 250,
+                    "height": 300,
+                    "opacity": 0.5
+                }, 2000)
+
+            })
+
+            $("#b2").click(function () {
+
+                $("#d1").stop();
+            })
+
+
+        })
+
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <div id="d1" style="background-color: red;
+                height: 50px;
+                width:50px;
+                position: absolute;">
+
+
+    </div>
+    <br /><br>
+    <br /><br><br /><br>
+    <br /><br><br /><br><br /><br><br /><br>
+
+    <button id="b1">Animate </button>
+
+    <button id="b2">Stop </button>
+
+
+
+</body>

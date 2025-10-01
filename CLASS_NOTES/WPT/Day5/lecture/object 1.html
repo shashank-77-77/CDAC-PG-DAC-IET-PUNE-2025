@@ -1,0 +1,41 @@
+<html>
+
+<head>
+   
+</head>
+
+<body>
+
+    <p id="p1">Dataaaaa </p>
+
+    <form>
+
+        Enter a Name : <input type="text" name="uname" id="uname"/>
+
+    </form>
+
+    <form>
+
+        Enter a Name : <input type="text" name="uname" id="uname"/>
+
+    </form>
+  
+<button type="button" onclick="showData()">Count!</button>
+
+     
+<script>
+
+    const emp = {
+
+        eName : "a",
+        salary : 1234
+    };
+
+    function showData(){
+        emp.eName = document.getElementById("uname").value;
+        document.getElementById("p1").innerHTML =  emp.eName + " , " + emp.salary;
+    }
+    </script>
+
+</body>
+</html>

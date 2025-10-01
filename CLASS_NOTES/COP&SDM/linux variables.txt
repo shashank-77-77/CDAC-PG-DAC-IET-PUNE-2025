@@ -1,0 +1,63 @@
+Defining Variables
+variable_name = <variable data>
+num="1"
+name="Devil"
+
+Accessing variable
+Variable data could be accessed by appending the variable name with ‘$’ as follows:
+
+#!/bin/bash
+
+VAR_1="Devil"
+VAR_2="OWL"
+
+echo "$VAR_1$VAR_2"
+
+Unsetting Variables
+The unset command directs a shell to delete a variable and its stored data from list of variables. It can be used as follows:
+
+#!/bin/bash
+
+var1="Devil"
+var2=23
+echo $var1 $var2
+
+unset var1
+
+echo $var1 $var2
+
+Note: The unset command could not be used to unset read-only variables.
+
+Read only Variables.
+These variables are read only i.e., their values could not be modified later in the script. Following is an example:
+
+#!/bin/bash
+var1="Devil"
+var2=23
+readonly var1
+echo $var1 $var2
+var1=23
+echo $var1 $var2
+
+
+Now let us see all the above codes in action together. Following is a shell script that includes all the shell variables discussed above
+
+# accessing the declared variables using $
+echo "Name is $Var_name, and age is $Var_age."
+
+# read-only variables
+var_blood_group="O-"
+readonly var_blood_group
+echo "Blood group is $var_blood_group and read only."
+echo "Error for read only variables, if trying to \
+modify them."
+echo
+var_blood_group="B+"
+echo
+
+# unsetting variables
+unset Var_age
+echo "After unsetting var_age..."
+echo
+echo "Name is $Var_name, blood group is $var_blood_group\
+ and age is $Var_age..."

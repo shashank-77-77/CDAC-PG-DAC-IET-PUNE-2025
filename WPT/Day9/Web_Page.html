@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive WebPage with Parallax | Bootstrap</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* Parallax Background */
+    .parallax {
+      background-image: url('carssss.jpg');
+      min-height: 400px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: rgba(1, 103, 255, 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .parallax h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Soham Enterprise</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Welcome to My Responsive Website</h1>
+      <p class="lead">Now with a beautiful parallax section</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <img
+          src="https://via.placeholder.com/500x300"
+          class="img-fluid rounded"
+          alt="About Image"
+        />
+      </div>
+      <div class="col-md-6">
+        <h2>About Us</h2>
+        <p>
+          This responsive page uses Bootstrap's grid system and layout components, enhanced by custom CSS like a parallax effect for added depth and modern feel.
+        </p>
+        <p>
+          Try resizing the window or scrolling the page to see the parallax in action.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax Section -->
+  <section class="parallax">
+    <div class="container">
+      <h2>Experience the Parallax</h2>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="bg-light py-5" id="features">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Features</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="card p-4 mb-4 shadow-sm">
+            <h5>Responsive Design</h5>
+            <p>Looks great on all devices using Bootstrap 5.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 mb-4 shadow-sm">
+            <h5>Parallax Effect</h5>
+            <p>Smooth and immersive scrolling experience.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 mb-4 shadow-sm">
+            <h5>Easy to Customize</h5>
+            <p>Built with modern HTML, CSS, and Bootstrap utilities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="container my-5" id="contact">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <form>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" placeholder="Your Name" />
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="email" class="form-control" placeholder="Your Email" />
+        </div>
+      </div>
+      <div class="mb-3">
+        <textarea
+          class="form-control"
+          rows="4"
+          placeholder="Your Message"
+        ></textarea>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary">Send Message</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 MySite. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,739 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[5];
+    int i,sum=0;
+    float avg;
+    cout<<"accept elements\n";
+    for(i=0;i<=4;i++)
+    cin>>a[i];
+    for(i=0;i<=4;i++)
+    sum=sum+ *(a+i);
+    avg=(float)sum/5;
+    cout<<"average "<<avg;
+}
+=============================
+Display length of an array
+
+int a[5];
+
+20/4
+
+
+
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[5];
+    int x=sizeof(a);
+    int y=sizeof(a[0]);
+    int len=x/y;
+    cout<<"length="<<len;
+}
+================================
+accept array elements and display maximum element in an array
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[5];
+    int i,max;
+    cout<<"accept elements\n";
+    for(i=0;i<=4;i++)
+    cin>>a[i];//2 4 7 1 0
+   max=*(a+0); //a[0]
+   for(i=1;i<=4;i++)
+   {
+   		if(max<a[i])
+   		{
+   			max=a[i];
+		}
+   }
+   cout<<"maximum no ="<<max;
+   
+   
+}
+===============================================
+copy one element of array into another and display summation of copied element
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[5],b[5];
+    int i,sum=0;
+    cout<<"accept elements\n";
+    for(i=0;i<=4;i++)
+    cin>>a[i];
+    for(i=0;i<=4;i++)
+    {
+    	b[i]=a[i];
+	}
+	cout<<"display copied elements\n";
+	 for(i=0;i<=4;i++)
+	 {
+    cout<<b[i]<<"\t";
+	}
+    for(i=0;i<=4;i++)
+    {
+    	sum=sum+b[i];
+	}
+	cout<<"summation= "<<sum;
+    
+   
+}
+================================================
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[5]={1,2};
+   cout<<a[2]<<a[3]<<a[4]; //partial initilization of an array
+   
+}
+========================================
+#include<iostream>
+using namespace std;
+int main()
+{
+    const int a[5]={1,2};
+    int b[]={1,2,3,4};//16 bytes memory allocation takes place
+ 	//a[0]=10;--->error
+ 	int x=a[0]*a[0];//allowed
+   
+}
+==============================================
+EVEN AND ODD ARRAY
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[6]={3,4,5,6,7,8};
+   int i,e[6],o[6];
+   int x=0,y=0;
+   for(i=0;i<=5;i++)
+   {
+   		if(a[i]%2==0)
+   		{
+   			e[x]=a[i];
+			   	
+   			x++;
+		}
+		else
+		{
+			o[y]=a[i];
+			y++;	
+		}
+   }
+
+    for(i=0;i<x;i++)
+    cout<<e[i]<<"\t";
+    cout<<"--------\n";
+     for(i=0;i<y;i++)
+    cout<<o[i]<<"\t";
+   
+}
+
+
+====================================
+NOTE:
+COMPILER PERFORM BOUND CHECKING OF AN ARRAY AT COMEPILETIME
+ int a[5]={1,2}; //12000
+
+COMPILER DONOT PERFORM BOUND CHECKING OF AN ARRAY AT RUNTIME
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[5]={1,2,3,4,5};
+    int i;
+    for(i=0;i<=9;i++)
+    {
+    	cout<<a[i]<<"\t";
+	}
+   
+}
+
+
+c.w
+1)accept array elements and display minimum element in an array
+2)display 2nd largest element in an array
+====================================================================================
+// C++ Program to Illustrate that Array Name is a Pointer  that Points to First Element of the Array 
+#include <iostream> 
+using namespace std; 
+  
+int main() 
+{ 
+    // Defining an array 
+    int arr[] = { 1, 2, 3, 4 }; 
+  
+    // Define a pointer 
+    int* ptr = arr; 
+  
+    // Printing address of the arrary using array name 
+    cout << "Memory address of arr: " << &arr << endl; 
+  
+    // Printing address of the array using ptr 
+    cout << "Memory address of arr: " << ptr << endl; 
+  
+    return 0; 
+}
+===========================================================================
+// C++ Program to Print Array Elements without Indexing 
+#include <iostream> 
+using namespace std; 
+  
+int main() 
+{ 
+  
+    // Define an array 
+    int arr[] = { 11, 22, 33, 44 }; 
+  
+    // Print elements of an array 
+    cout << "first element: " << *arr << endl; 
+    cout << "Second element: " << *(arr + 1) << endl; 
+    cout << "Third element: " << *(arr + 2) << endl; 
+    cout << "fourth element: " << *(arr + 3) << endl; 
+  
+    return 0; 
+}
+=============================================================
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[5]={1,2,3,4,5};
+   	//a++;-->since a is an array pointer,a is implictly a constant pointer 
+   	int* ptr=a;// ptr is non constant pointer
+   	cout<<a[0]<<endl;
+   cout<<ptr[0]<<endl;
+   ptr++;
+    	cout<<a[0]<<endl;
+   cout<<ptr[0]<<endl;
+   cout<<ptr[1]<<endl;
+   cout<<ptr[3]<<endl;
+   cout<<*(a+1)<<endl;
+    cout<<*(ptr+1)<<endl;
+}
+
+==============================
+Two Dimensional Array in C++
+In C++, a two-dimensional array is a grouping of elements arranged in rows and columns. Each element is accessed using two indices: one for the row and one for the column, which makes it easy to visualize as a table or grid.
+
+Syntax of 2D array
+
+data_Type array_name[n][m];
+Where,
+
+n: Number of rows.
+m: Number of columns.
+====================================
+subscript version
+#include <iostream> 
+using namespace std; 
+  
+int main() 
+{ 
+    
+    int a[3][3]; 
+  
+   cout<<"accept elements\n";
+    for (int i = 0; i <=2 ; i++)
+	 { 
+        for (int j = 0; j<=2; j++)
+		 { 
+		 
+		 	cin>>a[i][j];
+		 }
+	}
+	cout<<"display elements\n";
+    for (int i = 0; i <=2 ; i++)
+	 { 
+        for (int j = 0; j<=2; j++)
+		 { 
+		 
+		 	cout<<a[i][j]<<"\t";
+		 }
+		 cout<<"\n";
+	}
+}
+
+=========================================================
+pointer version
+#include <iostream> 
+using namespace std; 
+  
+int main() 
+{ 
+    
+    int a[3][3]; 
+  
+   cout<<"accept elements\n";
+    for (int i = 0; i <=2 ; i++)
+	 { 
+        for (int j = 0; j<=2; j++)
+		 { 
+		 
+		 	cin>>*(*(a+i)+j);
+		 }
+	}
+	cout<<"display elements\n";
+    for (int i = 0; i <=2 ; i++)
+	 { 
+        for (int j = 0; j<=2; j++)
+		 { 
+		 
+		 	cout<<*(*(a+i)+j)<<"\t";
+		 }
+		 cout<<"\n";
+	}
+}
+
+
+
+
+
+
+==============================================
+ASSIGNMENT 1
+ addition of two matrix and store the result in 3rd matrix use only pointer notation
+int a[3][3]={1,2,3,4,5,6,7,8,9};
+int b[3][3]={1,2,3,4,5,6};
+int c[3][3];
+
+ASSIGNMENT 2
+display transpose of a matrix
+
+ASSIGNMENT 3
+multiplication of 2 matrix
+
+
+
+ASSIGNMENT 4
+display maximum element in 2d array along with row and col index value
+
+
+ int a[3][3]={{1,2,3},{4,5,6},{7,8,9}}; 
+ int a[3][3]={{1,2},{4,5},{7,8,9}}; 
+ int a[3][3]={1,2,4,5,7,8,9};
+     int a[3][]={1,2,4,5,7};//error ----->col size is compulsory
+
+==============================================
+=====================================================
+
+Default Arguments
+
+==>A default argument is a value provided in a function declaration that is automatically assigned by the compiler if the calling function doesn’t provide a value for the argument. 
+
+#include <iostream> 
+using namespace std; 
+void add(int=1,int=2,int=3,int=4);
+int main() 
+{ 
+
+    add();
+    add(5);
+    add(2,2);
+    add(0,2,0);
+    add(10,2,30,4);
+}
+void add(int a,int b,int c,int d)
+{
+	cout<<a+b+c+d<<endl;
+	
+}
+
+
+Following are the rules of declaring default arguments -
+
+==> Default arguments are different from constant arguments as constant arguments can’t be changed whereas default arguments can be overwritten if required.These values can be overwritten if the value is passed to the function. 
+==>Default values should be given from right to left
+
+#include <iostream>  
+using namespace std;  
+ void add(int,int=2,int=3,int=4);
+int main() 
+{
+	add();//error
+	add(10);
+	add(10,20);
+	add(10,20,30);  
+    add(10,20,30,40);
+    return 0;  
+} 
+void add(int a,int b,int c,int d)
+{
+	cout<<a+b+c+d<<endl;
+ } 
+========================================================================
+
+#include <iostream>
+using namespace std;
+void display(char = '*', int = 30);
+int main() {
+    int count = 80;
+    cout << "No argument passed: ";
+    display(); 
+      cout << "First argument passed: ";
+    display('#'); 
+    
+    cout << "Both arguments passed: ";
+    display('$', count); 
+
+    return 0;
+}
+void display(char c, int count) {
+    for(int i = 1; i <= count; ++i)
+    {
+        cout << c;
+    }
+    cout << endl;
+}
+
+
+
+
+
+=================================================================
+#include <iostream> 
+using namespace std; 
+
+void add(int a=1,int b=2,int c=3,int d=4)
+{
+	cout<<a+b+c+d<<endl;
+	
+}
+int main() 
+{ 
+
+    add();
+    add(5);
+    add(2,2);
+    add(0,2,0);
+    add(10,2,30,4);
+}
+
+
+=============================================
+
+
+
+
+#include<iostream>
+using namespace std;
+void func(int a, bool flag = true)
+{
+		if (flag == true ) 
+		{
+			cout<< "Flag is true. a = " << a;
+      	        }
+		else
+		{
+			cout<< "Flag is false. a = " << a;
+        	}
+}
+int main()
+{
+	func(200, false);
+}
+
+
+==============================================
+If we are defining the default arguments in the function definition instead of the function prototype, then the function must be defined before the function call.
+
+#include <iostream>
+using namespace std;
+
+int sum(int x, int y, int z = 5, int w = 10) 
+{
+    return (x + y + z + w);
+}
+int main()
+{
+    cout << sum(10, 15) << endl;
+    cout << sum(10, 15, 25) << endl;
+    cout << sum(10, 15, 25, 30) << endl;
+   
+}
+
+=======================================================
+points to remember
+
+1)Once we provide a default value for a parameter, all subsequent parameters must also have default values. For example,
+// Invalid
+void add(int a, int b = 3, int c, int d);
+
+// Invalid
+void add(int a, int b = 3, int c, int d = 4);
+
+// Valid
+void add(int a, int c, int b = 3, int d = 4);
+
+2)Default values shld be given from trailing ends.i.e from right to left
+void add(int a,int b=3,int c=3,int d=4);//valid compulsary we have to pass 1 argument from function call
+void add(int a=4,int b=3,int c=3,int d);//invalid
+void add(int a=1,int b,int c=3,int d=4);//invalid
+
+======================================================================================// CPP code to demonstrate constructor can have default arguments
+#include <iostream>
+using namespace std;
+class A {
+public:
+    int sum ;
+    
+    A(int a, int x = 0) // default constructor with one
+                        // default argument
+    {
+        sum = a + x;
+    }
+    void print() { cout << "Sum =" << sum << endl; }
+};
+int main()
+{
+    // This construct has two arguments. Second argument is
+    // initialized with a value of 0 Now we can call the
+    // constructor in two possible ways.
+    A obj1(10, 20);
+    A obj2(5);
+    obj1.print();
+    obj2.print();
+    return 0;
+}
+
+
+
+
+
+#include <iostream>
+using namespace std;
+class A {
+public:
+    int sum;
+    A(); // default constructor with no argument
+    A(int , int  = 0); // default constructor with one default argument
+    
+    void print() { cout << "Sum =" << sum << endl; }
+};
+A::A(int a, int x) // default constructor with one default argument
+    {
+        sum = a + x;
+    }
+    
+int main()
+{
+    // This construct has two arguments. Second argument is
+    // initialized with a value of 0 Now we can call the
+    // constructor in two possible ways.
+    A obj1(10, 20);
+    A obj2(5);
+    obj1.print();
+    obj2.print();
+    return 0;
+}
+
+====================================================
+Advantages of Default Arguments:
+
+Default arguments are useful when we want to increase the capabilities of an existing function as we can do it just by adding another default argument to the function.
+It helps in reducing the size of a program.
+It provides a simple and effective programming approach.
+===================================================================
+======================================================================
+STATIC  VARIABLE
+
+==>Sometimes only one copy of a variable is required between all the objects of the same class,rather than having each object maintaining its own copy.in such case,that data members is declared as static.only one copy of static variable is created on data section and that copy is shared between all the object of the same class.Therefore static variable is called as class variable.
+==>static data members are not part of the object,they are stored seperately.
+==>Variable declared with static keyword are called as static variable.
+==> Static Variable stored on data section
+==>changes to the static variable affects all the instance of the same class.
+==>It is initialized before any object of this class is created, even before the main starts.
+
+Static variables in a Function: When a variable is declared as static, memory for static variable  gets allocated for the lifetime of the program. Even if the function is called multiple times, memory for the static variable is allocated only once and the value of the variable in the previous call gets carried through the next function call. 
+
+#include <iostream>
+using namespace std;
+ void demo()
+{
+    static int count = 0;
+    cout << count << " ";
+     count++;
+}
+ int main()
+{
+    for (int i = 0; i < 5; i++)
+        demo();
+    return 0;
+}
+============================================
+use of static variable
+static variable  is useful for  application where the previous state of function needs to be stored. 
+
+#include <iostream>
+using namespace std;
+ void demo()
+{
+    static int count = 0,sum=0;
+     sum=sum+count;
+     cout<<sum<<"\n";
+     count++;
+}
+ int main()
+{
+    for (int i = 0; i < 5; i++)
+        demo();
+    return 0;
+}
+
+==============================================
+STATIC FUNCTION
+1)function declare with static keyword is called as static function
+2)static function is invoked by class name
+3)syntax:
+ classname::static function name();
+Memory efficient: Now we don't need to create instance for accessing the static members, so it saves memory.
+4)This pointer is not passed to the static function.therefore static mem fun cannot access non static data member.
+5)static function access only static data but a non static function can access both static as well as non static
+6)static function can also be called with an object of class.
+=================================================================
+Accessing static data member
+i)if the static data member is public in the class declaration then it can be accessed outside the class using classname::staticmembers;
+
+#include<iostream>
+using namespace std;
+class Complex
+{
+	public:
+	static int cnt;
+};
+int Complex::cnt=5;
+int main()
+{
+	cout<<Complex::cnt;
+}
+====================================================================================
+
+==================================================================================
+==============================================================
+The reason we need Static member :
+1)Static members are used to store information that is shared by all objects in a class. 
+2) static variable is used to count the number of object created.
+
+
+
+
+
+#include <iostream>  
+using namespace std; 
+class Complex
+{
+
+	int real,img;
+	static int cnt;
+	public:
+		void show();
+		Complex();
+		Complex(int,int);
+		static int getCnt();
+		
+};
+int Complex::cnt; //cnt=100;
+int Complex::getCnt()
+{
+	return cnt;
+}
+void Complex ::show()
+{
+	cout<<"complex no is "<<real<<"+"<<img<<"i"<<" "<<cnt<<endl;
+}
+Complex::Complex()
+{
+	cout<<"in default constructor\n";
+	real=10;
+	img=20;
+	cnt++;
+	
+}
+Complex::Complex(int r,int i)
+{
+	cout<<"in parametrized constructor\n";
+	real=r;
+	img=i;
+	cnt++;
+}
+int main()
+{
+	Complex c1,c2;
+	Complex c3(5,6);
+	cout<<"no of obj created is "<<Complex::getCnt();
+	cout<<"sizeoof obj is     "<<sizeof(c1)<<endl;
+	cout<<Complex::cnt;//possible only if data member is public
+
+}
+
+=============================================================
+Ex:
+static  is used to refer the common property of all objects such as rateOfInterest in case of Account , companyName in case of Employee etc.
+
+
+#include <iostream>  
+using namespace std;  
+#include<string.h>
+class Account {  
+   public:  
+       int accno;     
+       char name[10];  
+       static float rateOfInterest;   
+       Account(int accno1, char* name1)   
+        {    
+             accno = accno1;    
+           strcpy(name,name1);   
+        }    
+       void display()    
+        {    
+            cout<<accno<<"   "<<name<<"   "<<rateOfInterest<<endl;   
+        }    
+};  
+float Account::rateOfInterest=6.5;  
+int main() {  
+    Account a1 =Account(201, "Sanjay"); 
+    Account a2=Account(202, "Nakul");  
+    a1.display();    
+    a2.display();    
+    return 0;  
+} 
+==========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

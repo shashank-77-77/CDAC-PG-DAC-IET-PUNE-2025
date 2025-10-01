@@ -1,0 +1,18 @@
+React Fiber --- 
+
+https://github.com/acdlite/react-fiber-architecture?tab=readme-ov-file#what-is-reconciliation
+
+
+Assignment 
+
+1) with useEffect ---- check lifecycle of Functioncal Componenet
+
+2) create Counter Application with useState
+
+3) in 2nd Assignment --  add useEffect 
+      display table of that counter value on page when counter 
+   is incremented
+
+4) Accept Data in textfield and onBlur event display that 
+   data as List Order List in webpage
+

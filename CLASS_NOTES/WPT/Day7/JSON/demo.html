@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JSON TO JAVAsCRIPT Array</h2>
+<p id="json"></p>
+<p id="demo"></p>
+<p id="arr"></p>
+
+<script>
+const text = '[ "ONR", "TWO", "THREE", "Four" ]';
+
+//convert in javascript array 
+const myArr = JSON.parse(text);
+
+document.getElementById("json").innerHTML = text;
+
+
+document.getElementById("arr").innerHTML = myArr;
+
+document.getElementById("demo").innerHTML = show(myArr);
+
+
+function show(a){
+ let data = "<table border='2'>";
+    for (let index = 0; index < a.length; index++) {
+        const element = a[index];
+         data = data + "<tr><td>"+element+"</td></tr>"
+        
+    }
+
+    return data;
+
+}
+</script>
+
+</body>
+</html>

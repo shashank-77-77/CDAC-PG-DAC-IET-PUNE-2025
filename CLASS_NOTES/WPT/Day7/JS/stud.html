@@ -1,0 +1,42 @@
+<html>
+
+<body>
+
+    <div id="d1" style="background-color: aqua;text-align: center;">
+
+        <label for="sName" >Enter A Name</label>
+        <input type=""text" name="sName" id ="sName"><br/>
+
+        <label for="mks" >Enter A Marks</label>
+        <input type=""number" name="mks" id ="mks"><br/>
+
+        <button onclick="call()">Add</button>
+
+            <p id="p1"></p>
+
+    </div>
+
+</body>
+
+<script>
+function call(){
+const stud = {
+  firstName: "John",
+  marks: 89
+};
+
+const s = Object.create(stud);
+s.firstName = document.getElementById("sName").value;
+s.marks = document.getElementById("mks").value
+console.log(s);
+const studData = new Array();
+
+studData.push(s);
+console.log(studData);
+for(let i = 0 ; i<studData.length ; i++){
+
+document.getElementById("p1").innerHTML = document.getElementById("p1").innerHTML + studData[i].firstName + "  " + studData[i].marks +"<br/>";
+}
+}
+</script>
+</html>
