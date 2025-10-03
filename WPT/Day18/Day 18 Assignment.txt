@@ -1,0 +1,23 @@
+--- 
+to use axios -  install the module 
+
+1) check code for useRef hook 
+
+
+2) load the data from json url 
+and display data in Table Format in page 
+on Button Click 
+
+https://jsonplaceholder.typicode.com/posts
+
+3)  write code for random password generator 
+    as per discuss in Lecture depends on length 
+	need to change 
+	
+4) create Login Form using HTML Form 
+ on submit click display data on page
+ 
+
+
+
+ 

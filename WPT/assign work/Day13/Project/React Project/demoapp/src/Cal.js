@@ -52,6 +52,7 @@ export default class Calculator extends Component {
             this.setState({ inputValue1: value });
         }
     }
+    
     myeventHandler = (e) => {
         if (e.target.value === "Addition") {
             const result = this.Addition(this.state.inputValue, this.state.inputValue1);
@@ -98,13 +99,13 @@ export default class Calculator extends Component {
                     Addition
                 </button>
                 <button value="Sub" onClick={this.myeventHandler}>
-                    Sub
+                    Substraction
                 </button>
                 <button value="Multi" onClick={this.myeventHandler}>
-                    Multi
+                    Multiplication
                 </button>
                 <button value="Div" onClick={this.myeventHandler}>
-                    Div
+                    Divison
                 </button>
                 <h2>Result: {this.state.result}</h2>
             </>
