@@ -33,7 +33,7 @@ export default class Factorial extends Component {
     render() {
         return (
             <>
-                <h1>from Class Factorial</h1>
+                <h1>From Class Factorial</h1>
                 Enter a number
                 <input
                     type="text"
@@ -42,10 +42,10 @@ export default class Factorial extends Component {
                     onChange={this.handleInputChange}
                 />
                 <button value="Factorial" onClick={this.myeventHandler}>
-                    Call Factorial
+                    Calculate Factorial
                 </button>
                 <h2>Result: {this.state.result}</h2>
             </>
         );
-    }
+        }
 }
