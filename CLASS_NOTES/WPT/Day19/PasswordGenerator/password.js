@@ -1,14 +1,17 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-function RandomPassword() {
+function PasswordGenerator() {
 
   const [password, setPassword] = useState('');
-  const [length, setLength] = useState(7);
+  const [length, setLength] = useState(12);
   const [includeNumbers, setIncludeNumbers] = useState(false);
   const [includeSymbols, setIncludeSymbols] = useState(false);
 
 
-  const Gen_Password = () => {
+
+
+
+  const generatePassword = () => {
     let characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     if (includeNumbers) characters += '0123456789';
     if (includeSymbols) characters += '!@#$%^&*()_+';
@@ -19,17 +22,26 @@ function RandomPassword() {
         Math.floor(Math.random() * characters.length));
     }
 
+    // state passowrd 
     setPassword(newPassword);
   };
 
-  useEffect(() => { Gen_Password() },
+  useEffect(() => { generatePassword() },
+    [length, includeNumbers, includeSymbols])
+  //performace   function def 
+  // data useMemo Virtual DOM 
+  useCallback(() => { generatePassword() },
     [length, includeNumbers, includeSymbols])
 
-  useCallback(() => { Gen_Password() },
-    [length, includeNumbers, includeSymbols])
+  //const passwordGenerte = useCallback(generatePassword, [length, includeNumbers])
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(password);
+    alert('Password copied to clipboard!');
+  };
 
   return (
-    <div className="pass-generator">
+    <div className="password-generator">
       <h1>Random Password Generator</h1>
       <div>
         <label>Password Length:</label>
@@ -46,7 +58,7 @@ function RandomPassword() {
         <label>
           <input
             type="checkbox"
-            checked={includeNumbers}
+            checked={includeNumbers}// false 
             onChange={() => setIncludeNumbers(!includeNumbers)}
           />
           Include Numbers
@@ -61,16 +73,14 @@ function RandomPassword() {
           />
           Include Symbols
         </label>
-        
       </div>
-      <br></br>
-      <button onClick={Gen_Password}>GetPassword</button>
+      <button onClick={generatePassword}>Generate Password</button>
       <div>
-        
         <input type="text" value={password} readOnly />
+        <button onClick={copyToClipboard}>Copy</button>
       </div>
     </div>
   );
 }
 
-export default RandomPassword;
+export default PasswordGenerator;
