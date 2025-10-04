@@ -1,0 +1,10 @@
+1) use prev object in useCallback Assignment
+
+2) write program to use useContext hook
+
+3) create Home.js   , AboutUs.js , Contact.js Function 
+ Component 
+	and call componenets with Router Concept
+from App.js using Link 
+ 
+npm install  react-router-dom

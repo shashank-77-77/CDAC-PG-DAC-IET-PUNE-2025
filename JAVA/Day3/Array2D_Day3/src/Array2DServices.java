@@ -111,6 +111,130 @@ public class Array2DServices
 		}
 		return temp;
 	}
+
+	public static int[][] addArray(int[][] arr, int[][] arr1) {
+		int [][] temp = new int[arr.length][arr1[0].length];
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0 ;j<arr[i].length;j++)
+			{
+				temp[i][j]=arr[i][j] + arr1[i][j];
+			}
+		}
+		return temp;
+	}
+
+	public static int[][] multiArray(int[][] arr, int[][] arr1) {
+		int temp [][] =new int[arr.length][arr1[0].length];
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr[0].length;j++)
+			{
+				for(int k=0;k<arr[0].length;k++)
+				{
+					temp[i][j] +=arr[i][k] * arr1[k][j];
+				}
+			}
+		}
+		return temp;
+	}
+
+	public static int[][] transArray(int[][] arr) {
+		int [][] temp =new int[arr.length][arr[0].length];
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr[0].length;j++)
+			{
+				temp[i][j]=arr[j][i];
+			}
+		}
+		return temp;
+	}
+
+	public static boolean identityCheck(int[][] arr) {
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr[0].length;j++)
+			{
+				if((i == j) && (arr[i][j] != 1))
+				{
+					return false;
+				}
+				else if((i != j) && (arr[i][j] != 0))
+				{
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	public static int[][] rotateRowwise(int[][] arr) 
+	{
+		int [][]temp = new int [arr.length][arr[0].length];
+		for(int i =0 ; i<arr.length;i++)
+		{
+			for(int j=0 ;j<arr[0].length;j++)
+			{
+				temp[i][j] = arr[i][j];
+			}
+		}
+		
+		int [] temp1 = temp[0];
+		
+		for(int i=0;i<temp.length-1;i++)
+		{
+			temp[i]=temp[i+1];
+		}
+		
+		temp[arr.length-1] = temp1;
+		
+		return temp;
+	}
+
+	public static int[][] rotateColwise(int[][] arr) 
+		{
+		int [] [] temp  = new int [arr.length][arr[0].length];
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr[0].length;j++)
+			{
+				temp[i][j]=arr[i][j];
+			}
+		}
+			int [] temp1= new int[temp.length];
+			for(int i=0;i<temp1.length;i++)
+			{
+				temp1[i] = temp[i][arr[0].length-1];
+			}
+			
+			for(int i=0 ; i<temp.length;i++)
+			{
+				for(int j=temp.length-2;j>=0;j--)
+				{
+					temp[i][j+1]=temp[i][j];
+				}
+			}
+			for(int i=0;i<temp.length;i++)
+			{
+				temp[i][0]=temp1[i];
+			}
+		return temp;
+		}
+
+	public static int[] convert1DArray(int[][] arr) {
+		int [] temp=new int [arr.length * arr[0].length];
+		int cnt=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr[0].length;j++)
+			{
+				temp[cnt]=arr[i][j];
+				cnt++;
+			}
+		}
+		return temp;
+	}
 	
 	
 }

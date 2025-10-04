@@ -15,6 +15,7 @@ import TextToList from './TextList_Webpage';
 import RefFunct from './Ref_Function';
 import GetData from './JsonTableData';
 import PasswordGenerator from './RandomPassword';
+import Count12 from './Count';
 
 
 
@@ -36,6 +37,7 @@ root.render(
     <RefFunct></RefFunct>
     <GetData></GetData>
     <PasswordGenerator></PasswordGenerator>
+    <Count12></Count12>
 
    
   </React.StrictMode>

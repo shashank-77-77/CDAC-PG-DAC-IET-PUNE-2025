@@ -73,7 +73,56 @@ public class Test2DArray {
 			}
 			break;
 		
+		case 7:
+			int [][] addition=Array2DServices.addArray(arr,arr1);
+			Array2DServices.displayData(addition);
+			break;
+			
+		case 8:
+			int [][] multi=Array2DServices.multiArray(arr,arr1);
+			Array2DServices.displayData(multi);
+			break;
+		 
+		case 9:
+			int [][] trans=Array2DServices.transArray(arr);
+			Array2DServices.displayData(trans);
+			break;
+			
+		case 10:
+			boolean check=Array2DServices.identityCheck(arr);
+			if(check)
+			{
+				System.out.println("It is Identity Matrix");
+			}
+			else
+			{
+				System.out.println("It's not identity matrix");
+			}
+			break;
 		
+		case 11:
+			int [][] newarr=Array2DServices.rotateRowwise(arr);
+			Array2DServices.displayData(newarr);
+			break;
+		
+		case 12:
+			newarr=Array2DServices.rotateColwise(arr);
+			Array2DServices.displayData(newarr);
+			break;
+		
+		case 13:
+			 arrnew=Array2DServices.convert1DArray(arr);
+			 for(int val : arrnew)
+			 {
+				 System.out.print(val + " , ");
+			 }
+			 break;
+			
+			
+			
+		
+			
+			
 		
 		}
 
