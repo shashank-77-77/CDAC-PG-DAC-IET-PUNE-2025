@@ -1,0 +1,37 @@
+create index.html
+
+	1) Display Headings with h1 tag 
+	   and display current date and time - 
+	   using iframe 
+	   
+  2) in same page Hyperlink to Calculate
+     in Calculate.html   
+		accept data in 1 text field 
+		validate data is enter or not 
+		if data is in number format display table of that 
+		number in 1 page 
+		
+
+3) accept data from user using input fields 
+      firstName LastName age 	  
+	  create username of User dynamically 
+      take 1st 2 characters from firstName
+	  take last 2 characters from lastName
+	  and age 
+	  
+	  eg Amit Patil 30 === amil30
+ 
+ 
+ 4) accept Student Information in Page 
+ FirstName , LastName , Marks 
+ add data in Student Object 
+ 
+ const stud = {
+  firstName: "John",
+  lastname: "",
+  marks : 48
+};
+
+onButton Click  -   add data in Student Object 
+and display data on same page from Object 
+ 

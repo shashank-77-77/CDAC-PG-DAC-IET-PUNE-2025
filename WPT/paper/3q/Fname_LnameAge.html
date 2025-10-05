@@ -1,0 +1,85 @@
+ <!-- accept data from user using input fields 
+      firstName LastName age 	  
+	  create username of User dynamically 
+      take 1st 2 characters from firstName
+	  take last 2 characters from lastName
+	  and age 
+	  
+	  eg Amit Patil 30 === amil30 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create Username</title>
+  <style>
+    label { display: block; margin-top: 10px; }
+    #usernameOutput { margin-top: 15px; font-weight: bold; }
+    #error { color: rgb(255, 0, 0); }
+  </style>
+</head>
+<body>
+  <h1>Create Username</h1>
+  <form id="userForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required />
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required />
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="1" required />
+
+    <button type="submit">Generate Username</button>
+  </form>
+
+  <div id="error"></div>
+  <div id="usernameOutput"></div>
+
+  <script>
+    document.getElementById('userForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const errorDiv = document.getElementById('error');
+      const outputDiv = document.getElementById('usernameOutput');
+      errorDiv.textContent = '';
+      outputDiv.textContent = '';
+
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const age = document.getElementById('age').value.trim();
+
+      if (!firstName || !lastName || !age) {
+        errorDiv.textContent = 'Please fill in all fields.';
+        return;
+      }
+
+      if (age <= 0 || isNaN(age)) {
+        errorDiv.textContent = 'Please enter a valid age.';
+        return;
+      }
+
+      if (firstName.length < 2) {
+        errorDiv.textContent = 'First name must have at least 2 characters.';
+        return;
+      }
+
+      if (lastName.length < 2) {
+        errorDiv.textContent = 'Last name must have at least 2 characters.';
+        return;
+      }
+
+      // Take first 2 chars from firstName (lowercase)
+      const firstPart = firstName.substring(0, 2).toLowerCase();
+      // Take last 2 chars from lastName (lowercase)
+      const lastPart = lastName.substring(lastName.length - 2).toLowerCase();
+
+      // Create the username
+      const username = firstPart + lastPart + age;
+
+      outputDiv.textContent = `Generated username: ${username}`;
+    });
+  </script>
+</body>
+</html>

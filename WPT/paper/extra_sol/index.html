@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Shashank Mankar — Dynamic Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { padding-top: 60px; background-color: #f8f9fa; }
+    .card { box-shadow: 0 8px 20px rgba(0,0,0,0.1); border-radius: 10px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+    button:hover { opacity: 0.9; transform: scale(1.02); }
+    iframe.time-frame { width:100%; height:70px; border:0; }
+    pre.json-box { background:#f1f4f9; padding:12px; border-radius:6px; font-size:0.9rem; }
+    .parallax {
+      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80');
+      height: 320px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      font-size: 2.3rem;
+      font-weight: 600;
+    }
+    table.student-table th, table.student-table td { text-align: center; }
+    table.student-table tr:hover { background-color: #f1f7ff; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <a class="navbar-brand font-weight-bold" href="#">Shashank Mankar Portal</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" id="loadCalc" href="#">Calculate</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="parallax">Welcome to Shashank Mankar’s Interactive Dashboard</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card mb-4 mt-4">
+        <div class="card-body">
+          <h1 class="card-title text-primary">Dynamic Web Experience</h1>
+          <p class="card-text">Created by <strong>Shashank Mankar</strong>. This responsive portal integrates live date and time display, username generation, and student data management. It demonstrates advanced AJAX and parallax techniques for a seamless user experience.</p>
+          <h5>Current Date &amp; Time (via iframe)</h5>
+          <iframe class="time-frame" src="time.html"></iframe>
+        </div>
+      </div>
+      <div id="ajaxContent" class="mb-4"></div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card mb-4 mt-4">
+        <div class="card-body">
+          <h4 class="card-title">Username Generator</h4>
+          <form id="userForm" novalidate>
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input id="fname" class="form-control" placeholder="e.g., Amit">
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input id="lname" class="form-control" placeholder="e.g., Patil">
+            </div>
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input id="age" class="form-control" type="number" placeholder="e.g., 30">
+            </div>
+            <button type="button" id="genBtn" class="btn btn-primary btn-block">Generate Username</button>
+          </form>
+          <hr>
+          <div id="unameResult"></div>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h4 class="card-title">Student Information Manager</h4>
+          <form id="studForm" novalidate>
+            <div class="form-group">
+              <label for="sFirst">First Name</label>
+              <input id="sFirst" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="sLast">Last Name</label>
+              <input id="sLast" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="sMarks">Marks</label>
+              <input id="sMarks" class="form-control" type="number" min="0" max="100">
+            </div>
+            <button type="button" id="addStudBtn" class="btn btn-success btn-block">Add / Update Student</button>
+          </form>
+          <hr>
+          <strong>Student Data:</strong>
+          <table class="table table-striped student-table mt-3">
+            <thead class="thead-dark">
+              <tr><th>First Name</th><th>Last Name</th><th>Marks</th></tr>
+            </thead>
+            <tbody id="studTableBody">
+              <tr><td>John</td><td>Doe</td><td>48</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center py-3">
+    <small class="text-muted">© 2025 Created by <strong>Shashank Mankar</strong> — Empowering Interactive Web Learning.</small>
+  </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+$(function(){
+  $('#loadCalc').on('click', function(e){
+    e.preventDefault();
+    $.get('calculate.html')
+      .done(function(data){ $('#ajaxContent').html(data); })
+      .fail(function(){ $('#ajaxContent').html('<div class="alert alert-danger">Unable to load Calculate page.</div>'); });
+  });
+
+  $('#genBtn').on('click', function(){
+    const f=$('#fname').val().trim(), l=$('#lname').val().trim(), a=$('#age').val().trim();
+    if(!f||!l||!a){ $('#unameResult').html('<div class="alert alert-warning">All fields are required.</div>'); return; }
+    const uname=(f.slice(0,2)+l.slice(-2)+a).toLowerCase();
+    $('#unameResult').html(`<div class='alert alert-info'>Generated Username: <strong>${uname}</strong></div>`);
+  });
+
+  let studData=[{firstName:'John', lastName:'Doe', marks:48}];
+  function renderTable(){
+    let html='';
+    studData.forEach(s=>{ html+=`<tr><td>${s.firstName}</td><td>${s.lastName}</td><td>${s.marks}</td></tr>`; });
+    $('#studTableBody').html(html);
+  }
+  renderTable();
+
+  $('#addStudBtn').on('click', function(){
+    const f=$('#sFirst').val().trim(), l=$('#sLast').val().trim(), m=$('#sMarks').val().trim();
+    if(!f||!l||m===''){ alert('Please complete all fields'); return; }
+    studData.push({firstName:f,lastName:l,marks:Number(m)});
+    renderTable();
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live Time</title>
+<style>
+body { margin:0; display:flex; align-items:center; justify-content:center; height:100%; font-family:Arial,sans-serif; font-size:1.1rem; font-weight:600; color:#333; background:#e8f0fe; }
+</style>
+</head>
+<body>
+  <div id="timeDisplay"></div>
+  <script>
+    function updateTime(){ document.getElementById('timeDisplay').textContent=new Date().toLocaleString(); }
+    setInterval(updateTime,1000);
+    updateTime();
+  </script>
+</body>
+</html>

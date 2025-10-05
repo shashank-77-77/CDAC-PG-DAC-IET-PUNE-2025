@@ -1,0 +1,53 @@
+<!-- This file is intended to be loaded either directly in the browser or via AJAX into index.html -->
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">Calculate — Multiplication Table</h3>
+    <p class="card-text">Enter a number and the system will validate input and render a multiplication table for that number.</p>
+    <form id="calcForm" class="form-inline" onsubmit="return false;">
+      <div class="form-group mb-2">
+        <label for="numInput" class="sr-only">Number</label>
+        <input id="numInput" class="form-control" placeholder="Enter a number">
+      </div>
+      <button id="calcBtn" class="btn btn-primary mb-2 ml-2">Calculate</button>
+    </form>
+    <div id="calcAlert" class="mt-2"></div>
+    <div id="tableOut" class="mt-3"></div>
+  </div>
+</div>
+
+<script>
+  // Self-contained script for the Calculate page. If loaded via AJAX into index.html,
+  // this script will execute once injected. If loaded directly it will also work.
+  (function(){
+    function renderTable(n){
+      let html = '<div class="table-responsive"><table class="table table-bordered"><thead><tr><th>Multiplier</th><th>Result</th></tr></thead><tbody>';
+      for(let i=1;i<=10;i++){
+        html += `<tr><td>${n} x ${i}</td><td>${n * i}</td></tr>`;
+      }
+      html += '</tbody></table></div>';
+      return html;
+    }
+
+    // Use event delegation so that handlers bind even if loaded by AJAX
+    $(document).on('click', '#calcBtn', function(e){
+      e.preventDefault();
+      const val = $('#numInput').val().trim();
+      $('#tableOut').empty();
+      $('#calcAlert').empty();
+
+      if(val === ''){
+        $('#calcAlert').html('<div class="alert alert-warning">Please enter a value.</div>');
+        return;
+      }
+
+      // Check if the value is a number (integer or float)
+      if(!/^[-+]?\d+(\.\d+)?$/.test(val)){
+        $('#calcAlert').html('<div class="alert alert-danger">Invalid format — please enter a numeric value.</div>');
+        return;
+      }
+
+      const num = Number(val);
+      $('#tableOut').html(renderTable(num));
+    });
+  })();
+</script>
