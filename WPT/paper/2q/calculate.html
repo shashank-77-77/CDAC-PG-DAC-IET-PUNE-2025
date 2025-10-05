@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculate Table</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+      text-align: center;
+    }
+    #error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculate Multiplication Table</h1>
+  <br></br>
+
+  <form id="calcForm">
+    <label for="numberInput">Enter a number: </label>
+    <input type="text" id="numberInput" name="numberInput" />
+    <button type="submit">Calculate</button>
+  </form>
+  <div id="error"></div>
+  <div id="result"></div>
+
+  <script>
+    document.getElementById('calcForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const input = document.getElementById('numberInput').value.trim();
+      const errorDiv = document.getElementById('error');
+      const resultDiv = document.getElementById('result');
+      errorDiv.textContent = '';
+      resultDiv.innerHTML = '';
+
+      if (input === '') {
+        errorDiv.textContent = 'Please enter a value.';
+        return;
+      }
+
+      if (isNaN(input)) {
+        errorDiv.textContent = 'Please enter a valid number.';
+        return;
+      }
+
+      const number = Number(input);
+      let tableHTML = '<table><tr><th>Multiplier</th><th>Result</th></tr>';
+      for (let i = 1; i <= 10; i++) {
+        tableHTML += `<tr><td>${i}</td><td>${number} &times; ${i} = ${number * i}</td></tr>`;
+      }
+      tableHTML += '</table>';
+      resultDiv.innerHTML = tableHTML;
+    });
+  </script>
+</body>
+</html>

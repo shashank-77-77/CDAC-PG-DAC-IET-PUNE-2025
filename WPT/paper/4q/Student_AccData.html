@@ -1,0 +1,82 @@
+<!-- accept Student Information in Page 
+ FirstName , LastName , Marks 
+ add data in Student Object 
+ 
+ const stud = {
+  firstName: "John",
+  lastname: "",
+  marks : 48
+};
+
+onButton Click  -   add data in Student Object 
+and display data on same page from Object  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Information</title>
+  <style>
+    label { display: block; margin-top: 10px; }
+    #displayData { margin-top: 15px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Enter Student Information</h1>
+  <form id="studentForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required />
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required />
+
+    <label for="marks">Marks:</label>
+    <input type="number" id="marks" name="marks" min="0" max="100" required />
+
+    <button type="button" id="submitBtn">Add Student</button>
+  </form>
+
+  <div id="displayData"></div>
+
+  <script>
+    // Initialize the student object with default empty values as shown
+    const stud = {
+      firstName: "John",
+      lastName: "",
+      marks: 48
+    };
+
+    document.getElementById('submitBtn').addEventListener('click', function() {
+      // Get input values
+      const fName = document.getElementById('firstName').value.trim();
+      const lName = document.getElementById('lastName').value.trim();
+      const marksInput = document.getElementById('marks').value.trim();
+
+      // Basic validation
+      if (!fName || !lName || marksInput === '') {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      const marks = Number(marksInput);
+      if (isNaN(marks) || marks < 0 || marks > 100) {
+        alert('Please enter valid marks between 0 and 100.');
+        return;
+      }
+
+      // Add data to the student object
+      stud.firstName = fName;
+      stud.lastName = lName;
+      stud.marks = marks;
+
+      // Display the data on the page
+      document.getElementById('displayData').innerHTML = 
+        `<p><strong>Student Information:</strong></p>
+         <p>First Name: ${stud.firstName}</p>
+         <p>Last Name: ${stud.lastName}</p>
+         <p>Marks: ${stud.marks}</p>`;
+    });
+  </script>
+</body>
+</html>

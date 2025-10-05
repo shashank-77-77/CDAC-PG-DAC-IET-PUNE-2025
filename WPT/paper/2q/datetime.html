@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Date and Time</title>
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 1.25rem; margin: 0; padding: 10px; }
+  </style>
+</head>
+<body>
+  <div id="datetime"></div>
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const dateString = now.toLocaleDateString(undefined, options);
+      const timeString = now.toLocaleTimeString();
+      document.getElementById('datetime').textContent = `Today is: ${dateString}, Time: ${timeString}`;
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+  </script>
+</body>
+</html>

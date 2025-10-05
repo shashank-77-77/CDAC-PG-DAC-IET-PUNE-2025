@@ -1,0 +1,17 @@
+.Main{
+    display : grid;
+    grid-template-columns: auto auto; 
+    
+}
+.ShoppingMain{
+    margin:auto;
+    width:fit-content;
+    padding: auto;
+    padding: 20dvb;
+    border:2px solid black;
+    
+}
+.ProductDesc{
+    width: 200%;
+    border:2px solid black;
+}
