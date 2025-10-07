@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Information Management</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e1bee7);
+      padding: 50px;
+      text-align: center;
+    }
+    h1 {
+      color: #4a148c;
+    }
+    .form-container {
+      margin: 20px auto;
+      padding: 20px;
+      width: 350px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    input {
+      width: 80%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      background-color: #7b1fa2;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #4a148c;
+    }
+    .output-container {
+      margin-top: 30px;
+      background-color: #f3e5f5;
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #9c27b0;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #ba68c8;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hospital Information Portal</h1>
+  <div class="form-container">
+    <input type="text" id="hospitalName" placeholder="Hospital Name"><br>
+    <input type="text" id="location" placeholder="Location"><br>
+    <input type="number" id="beds" placeholder="No. of Beds"><br>
+    <button onclick="addHospital()">Add Hospital</button>
+  </div>
+
+  <div class="output-container">
+    <h2>Hospital Records</h2>
+    <table id="hospitalTable">
+      <thead>
+        <tr>
+          <th>Hospital Name</th>
+          <th>Location</th>
+          <th>No. of Beds</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <script>
+    const hospital = {
+      name: "",
+      location: "",
+      beds: 0
+    };
+
+    function addHospital() {
+      // Capture input data
+      hospital.name = document.getElementById("hospitalName").value;
+      hospital.location = document.getElementById("location").value;
+      hospital.beds = document.getElementById("beds").value;
+
+      // Display data dynamically
+      const tableBody = document.getElementById("tableBody");
+      const newRow = `<tr>
+        <td>${hospital.name}</td>
+        <td>${hospital.location}</td>
+        <td>${hospital.beds}</td>
+      </tr>`;
+      tableBody.innerHTML += newRow;
+
+      // Reset fields post transaction
+      document.getElementById("hospitalName").value = "";
+      document.getElementById("location").value = "";
+      document.getElementById("beds").value = "";
+    }
+  </script>
+</body>
+</html>
