@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Information Management</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #c5cae9);
+      padding: 50px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #1a237e;
+    }
+
+    .form-container {
+      margin: 20px auto;
+      padding: 20px;
+      width: 350px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    input {
+      width: 80%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: #303f9f;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1a237e;
+    }
+
+    .output-container {
+      margin-top: 30px;
+      background-color: #e8eaf6;
+      padding: 20px;
+      border-radius: 10px;
+      width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #3f51b5;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #5c6bc0;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Vehicle Information Portal</h1>
+  
+  <div class="form-container">
+    <input type="text" id="vehicleName" placeholder="Vehicle Name"><br>
+    <input type="text" id="vehicleType" placeholder="Vehicle Type"><br>
+    <input type="number" id="vehiclePrice" placeholder="Vehicle Price"><br>
+    <button onclick="addVehicle()">Add Vehicle</button>
+  </div>
+
+  <div class="output-container">
+    <h2>Vehicle Records</h2>
+    <table id="vehicleTable">
+      <thead>
+        <tr>
+          <th>Vehicle Name</th>
+          <th>Type</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <script>
+    const vehicle = {
+      name: "",
+      type: "",
+      price: 0
+    };
+
+    function addVehicle() {
+      // Capture input data
+      vehicle.name = document.getElementById("vehicleName").value;
+      vehicle.type = document.getElementById("vehicleType").value;
+      vehicle.price = document.getElementById("vehiclePrice").value;
+
+      // Validate empty inputs for data hygiene
+      if (!vehicle.name || !vehicle.type || !vehicle.price) {
+        alert("All fields are mandatory to maintain data integrity.");
+        return;
+      }
+
+      // Display data dynamically
+      const tableBody = document.getElementById("tableBody");
+      const newRow = `<tr>
+        <td>${vehicle.name}</td>
+        <td>${vehicle.type}</td>
+        <td>₹${vehicle.price}</td>
+      </tr>`;
+      tableBody.innerHTML += newRow;
+
+      // Reset form fields post-transaction
+      document.getElementById("vehicleName").value = "";
+      document.getElementById("vehicleType").value = "";
+      document.getElementById("vehiclePrice").value = "";
+    }
+  </script>
+
+</body>
+</html>
