@@ -1,76 +1,73 @@
 package com.beans;
 
+import java.util.List;
+import java.util.Objects;
+
 public class Student {
-	private int sid;
-	private String sname;
-	private int age;
-	private float m1;
-	private float m2;
-	
-	public Student()
-	{
-		System.out.println("In default constructor");
+	private int s_id;
+	private String s_name;
+	private List<Integer> m;
+
+	public Student(List<Integer> marks) {
+		super();
 	}
-	public Student(int sid,String sname,int age,float m1,float m2)
-	{
-		this.sid=sid;
-		this.sname=sname;
-		this.age=age;
-		this.m1=m1;
-		this.m2=m2;
+
+	public Student(int s_id, String s_name, List<Integer> m) {
+		super();
+		this.s_id = s_id;
+		this.s_name = s_name;
+		this.m = m;
 	}
 	
-	public int getSid()
-	{
-		return sid;
+
+	public Student(int id) {
+		s_id=id;
 	}
-	
-	public void setSid(int sid)
-	{
-		this.sid=sid;
+
+	public int getS_id() {
+		return s_id;
 	}
-	
-	public String getSname()
-	{
-		return sname;
+
+	public void setS_id(int s_id) {
+		this.s_id = s_id;
 	}
-	
-	public void setSname(String sname)
-	{
-		this.sname=sname;
+
+	public String getS_name() {
+		return s_name;
 	}
-	
-	public int getAge()
-	{
-		return age;
+
+	public void setS_name(String s_name) {
+		this.s_name = s_name;
 	}
-	
-	public void setAge(int age)
-	{
-		this.age=age;
+
+	public List<Integer> getM() {
+		return m;
 	}
-	
-	public float getM1()
-	{
-		return m1;
+
+	public void setM(List<Integer> m) {
+		this.m = m;
 	}
-	
-	public void setM1(float m1)
-	{
-		this.m1=m1;
-	}
-	
-	public float getM2()
-	{
-		return m2;
-	}
-	public void setM2(float m2)
-	{
-		this.m2=m2;
-	}
+
 	@Override
 	public String toString() {
-		return "Student [sid=" + sid + ", sname=" + sname + ", age=" + age + ", m1=" + m1 + ", m2=" + m2 + "]";
+		return "Student [s_id=" + s_id + ", s_name=" + s_name + ",marks=" + m + "]";
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(m, s_id, s_name);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Student other = (Student) obj;
+		return Objects.equals(m, other.m) && s_id == other.s_id && Objects.equals(s_name, other.s_name);
 	}
 
 }
