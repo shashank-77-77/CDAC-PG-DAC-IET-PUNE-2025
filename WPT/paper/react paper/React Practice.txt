@@ -1,0 +1,26 @@
+Create 3 Components
+
+Home.js     Function Component  -- Message Home Page
+AboutUs.js  Function Component  -- Message About Us 
+ContactUs.js  Class Component  -- add Contact Details 
+Counter.js
+
+
+With Route Concepts 
+Display Above Componenets as per Click 
+Default Home Page need to Display 
+
+take 1 more Route - Counter 
+
+on Click on That call Counter.js 
+
+In that Counter -Take 2 Buttons 
+Increament and Decreament 
+and Perform Oprations with help of UseState Hook 
+
+
+
+
+
+
+
