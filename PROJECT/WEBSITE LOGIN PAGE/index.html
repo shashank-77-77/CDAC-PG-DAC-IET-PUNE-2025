@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>WEBSITE GALLERY</title>
+
+<!-- React + Babel (single-file demo) -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<style>
+  /* --- Base / Responsive --- */
+  :root{
+    --primary:#0d6efd;
+    --primary-700:#0b5ed7;
+    --card-bg: rgba(0,0,0,0.72);
+    --radius:14px;
+    --glass: rgba(255,255,255,0.06);
+  }
+  *{box-sizing:border-box;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+  body,html{margin:0;padding:0;height:100%;background:#f3f4f6;color:#111;}
+  .container{min-height:100vh;display:flex;flex-direction:column;}
+  header{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:linear-gradient(90deg, rgba(13,110,253,0.06), rgba(13,110,253,0.02));box-shadow:0 4px 18px rgba(2,6,23,0.04);position:sticky;top:0;backdrop-filter: blur(4px);z-index:10;}
+  header .brand{display:flex;align-items:center;gap:12px;font-weight:700;}
+  .brand .logo{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--primary),#6610f2);display:flex;align-items:center;justify-content:center;color:#fff;}
+  main{flex:1;display:flex;align-items:stretch;justify-content:center;padding:20px;}
+  .card{background:var(--card-bg);color:#fff;border-radius:var(--radius);padding:22px;max-width:420px;width:100%;box-shadow:0 10px 30px rgba(2,6,23,0.45);}
+  .muted{color:#cfd8e3;font-size:0.92rem;}
+  label{display:block;margin:8px 0 6px;font-size:0.9rem;color:#dbe5ff;}
+  input[type="text"],input[type="password"],input[type="email"]{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.03);color:#fff;outline:none;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:none;background:var(--primary);color:#fff;font-weight:600;cursor:pointer;transition:transform .18s ease, box-shadow .18s ease;}
+  .btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(13,110,253,0.18);background:var(--primary-700);}
+  .link{color:#cde1ff;cursor:pointer;text-decoration:underline;font-size:0.9rem;}
+  .error{color:#ffc6c6;background:rgba(255,60,60,0.06);padding:8px;border-radius:8px;margin-top:10px;}
+  .success{color:#d6ffd6;background:rgba(0,160,0,0.06);padding:8px;border-radius:8px;margin-top:10px;}
+
+  /* --- Gallery layout --- */
+  .layout{display:flex;gap:20px;width:100%;max-width:1200px;}
+  .sidebar{width:260px;padding:18px;border-radius:12px;background:#fff;box-shadow:0 6px 20px rgba(15,23,42,0.04);align-self:flex-start;}
+  .content{flex:1;padding:18px;border-radius:12px;background:#fff;box-shadow:0 6px 20px rgba(15,23,42,0.04);}
+  .sidebar h3,.content h3{margin:0 0 10px 0;}
+  .user-info{display:flex;flex-direction:column;gap:8px;padding:8px;border-radius:10px;background:linear-gradient(180deg, rgba(13,110,253,0.03), transparent);}
+
+  .photos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;}
+  .photo-card{position:relative;border-radius:10px;overflow:hidden;border:1px solid rgba(15,23,42,0.04);background:#f8fafc;}
+  .photo-card img{width:100%;height:200px;object-fit:cover;display:block;transition:transform .28s ease,filter .28s ease;}
+  .photo-card:hover img{transform:scale(1.03);filter:brightness(0.98);}
+  .photo-meta{padding:10px;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+  .photo-meta a{color:var(--primary);text-decoration:underline;font-weight:600;}
+  .photo-actions{display:flex;gap:8px;}
+  .ghost{background:transparent;border:1px solid rgba(2,6,23,0.06);padding:8px;border-radius:10px;cursor:pointer;}
+  .ghost:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(2,6,23,0.06);}
+
+  /* Modal */
+  .modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,0.45);display:flex;align-items:center;justify-content:center;z-index:1000;}
+  .modal{width:100%;max-width:720px;background:#fff;border-radius:12px;padding:18px;box-shadow:0 30px 70px rgba(2,6,23,0.4);color:#0b1220;}
+  .modal .row{display:flex;gap:10px;}
+  .modal input, .modal textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef8;}
+  .modal .actions{display:flex;gap:10px;justify-content:flex-end;margin-top:12px;}
+
+  /* small screens */
+  @media(max-width:920px){ .layout{flex-direction:column;} .sidebar{width:100%} .card{max-width:100%} main{padding:18px;} .photo-card img{height:170px} }
+  @media(max-width:520px){ .photo-card img{height:140px} header{padding:10px;} .brand{gap:8px} .brand .logo{width:34px;height:34px;} .btn{padding:9px 12px;} }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<!-- React App (Babel) -->
+<script type="text/babel">
+const { useState, useEffect, useRef } = React;
+
+/* -------------------------
+   Utilities: storage & seed
+   ------------------------- */
+const STORAGE_KEYS = {
+  USERS: 'app_users_v1',
+  GALLERY: 'app_gallery_v1',
+  SESSION: 'app_session_v1'
+};
+
+const seedData = (() => {
+  // Seed demo users & gallery if not present
+  const demoUsers = [
+    { id:1, username:'admin', email:'admin@corp.local', password:'Admin@123', role:'admin' },
+    { id:2, username:'shashank', email:'shashank@example.com', password:'shashank1234', role:'editor' },
+    { id:3, username:'alice', email:'alice@example.com', password:'alice1234', role:'viewer' }
+  ];
+  const demoGallery = [
+    { id:1, title:'Sunset Vista', src:'https://picsum.photos/id/1011/1200/800', link:'https://unsplash.com', caption:'Beautiful coast' },
+    { id:2, title:'Forest Path', src:'https://picsum.photos/id/1015/1200/800', link:'https://example.com', caption:'Walk the line' },
+    { id:3, title:'City Lights', src:'https://picsum.photos/id/1016/1200/800', link:'https://example.org', caption:'Night skyline' }
+  ];
+  return { demoUsers, demoGallery };
+})();
+
+function readStorage(key, fallback){
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch(e){
+    console.warn('readStorage err',e);
+    return fallback;
+  }
+}
+function writeStorage(key, value){
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch(e){ console.warn('writeStorage err', e); }
+}
+
+/* Initialize seed if absent */
+if(!localStorage.getItem(STORAGE_KEYS.USERS)){
+  writeStorage(STORAGE_KEYS.USERS, seedData.demoUsers);
+}
+if(!localStorage.getItem(STORAGE_KEYS.GALLERY)){
+  writeStorage(STORAGE_KEYS.GALLERY, seedData.demoGallery);
+}
+
+/* -------------------------
+   App: Root
+   ------------------------- */
+function App(){
+  const [route, setRoute] = useState('login'); // 'login' | 'gallery'
+  const [session, setSession] = useState(readStorage(STORAGE_KEYS.SESSION, null)); // {userId, username, role}
+  const [users, setUsers] = useState(readStorage(STORAGE_KEYS.USERS, []));
+  const [gallery, setGallery] = useState(readStorage(STORAGE_KEYS.GALLERY, []));
+
+  useEffect(()=> writeStorage(STORAGE_KEYS.USERS, users), [users]);
+  useEffect(()=> writeStorage(STORAGE_KEYS.GALLERY, gallery), [gallery]);
+  useEffect(()=> writeStorage(STORAGE_KEYS.SESSION, session), [session]);
+
+  useEffect(()=> {
+    if(session) setRoute('gallery');
+  }, [session]);
+
+  const logout = () => { setSession(null); setRoute('login'); };
+
+  return (
+    <div className="container">
+      <Header session={session} onLogout={logout} goHome={()=>setRoute('gallery')} />
+      <main>
+        {route === 'login' && (
+          <AuthCard
+            users={users}
+            onSignIn={(u)=> { setSession(u); setRoute('gallery'); }}
+            onRegister={(u)=> setUsers(prev=>[...prev,u])}
+          />
+        )}
+
+        {route === 'gallery' && (
+          <Gallery
+            session={session}
+            users={users}
+            gallery={gallery}
+            setGallery={setGallery}
+            setSession={setSession}
+            logout={logout}
+            setRoute={setRoute}
+          />
+        )}
+      </main>
+    </div>
+  );
+}
+
+/* -------------------------
+   Header Component
+   ------------------------- */
+function Header({ session, onLogout, goHome }){
+  return (
+    <header>
+      <div className="brand" onClick={goHome} style={{cursor:'pointer'}}>
+        <div className="logo">DM</div>
+        <div>
+          <div style={{fontSize:16}}>SHASHANK'S Gallery</div>
+          <div style={{fontSize:12,color:'#446'}}>Enterprise demo — responsive & editable</div>
+        </div>
+      </div>
+      <div style={{display:'flex',alignItems:'center',gap:12}}>
+        <div className="muted" style={{fontSize:13}}>
+          {session ? `Signed in as ${session.username} (${session.role})` : 'Not signed in'}
+        </div>
+        {session ? <button className="btn" onClick={onLogout}>Sign Out</button> : null}
+      </div>
+    </header>
+  );
+}
+
+/* -------------------------
+   AuthCard: Login & Register
+   ------------------------- */
+function AuthCard({ users, onSignIn, onRegister }){
+  const [mode, setMode] = useState('login'); // login | register
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const [info, setInfo] = useState('');
+
+  const handleLogin = (e) => {
+    e && e.preventDefault();
+    setError(''); setInfo('');
+    const found = users.find(u => u.username === username && u.password === password);
+    if(!found){ setError('Credentials invalid — please verify username and password.'); return; }
+    // create session
+    onSignIn({ userId: found.id, username: found.username, role: found.role });
+  };
+
+  const handleRegister = (e) => {
+    e && e.preventDefault();
+    setError(''); setInfo('');
+    if(!username || !password || !email){ setError('Please complete all registration fields.'); return; }
+    if(users.find(u => u.username === username)){ setError('Username already exists.'); return; }
+    const newUser = { id: Date.now(), username, email, password, role: 'editor' };
+    onRegister(newUser);
+    setInfo('Registration successful. You can now login.');
+    setUsername(''); setPassword(''); setEmail('');
+    setMode('login');
+  };
+
+  return (
+    <div style={{width:'100%',maxWidth:950,display:'flex',gap:20,alignItems:'flex-start',flexWrap:'wrap'}}>
+      <div className="card" style={{flex:'0 0 420px'}}>
+        <h2 style={{marginTop:0}}>Sign In</h2>
+        <p className="muted">Use demo accounts or register — "admin" unlocks editing features.</p>
+        <form onSubmit={handleLogin}>
+          <label>Username</label>
+          <input value={username} onChange={e=>setUsername(e.target.value)} placeholder="username (e.g., admin)" />
+          <label>Password</label>
+          <input type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="password" />
+          <div style={{display:'flex',gap:10,marginTop:12}}>
+            <button className="btn" type="button" onClick={handleLogin}>Sign In</button>
+            <button className="ghost" type="button" onClick={()=>{ setMode(mode==='login'?'register':'login'); setError(''); setInfo(''); }}>
+              {mode==='login' ? 'Switch to Register' : 'Back to Login'}
+            </button>
+          </div>
+          {error && <div className="error">{error}</div>}
+        </form>
+        <div style={{marginTop:12,fontSize:13}} className="muted">
+          Demo credentials:
+          <ul style={{margin:'8px 0 0 18px'}}>
+            <li>admin / Admin@123 (role: admin)</li>
+            <li>shashank / shashank1234 (role: editor)</li>
+            <li>alice / alice1234 (role: viewer)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="card" style={{flex:1,background:'#fff',color:'#0b1220'}}>
+        {mode === 'register' ? (
+          <>
+            <h2 style={{marginTop:0}}>Register New Account</h2>
+            <p className="muted">New accounts default to role <strong>editor</strong>.</p>
+            <form onSubmit={handleRegister}>
+              <label>Desired Username</label>
+              <input value={username} onChange={e=>setUsername(e.target.value)} placeholder="choose username" />
+              <label>Email</label>
+              <input type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="email@domain.com" />
+              <label>Create Password</label>
+              <input type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="strong password" />
+              <div style={{display:'flex',gap:10,marginTop:12,justifyContent:'flex-end'}}>
+                <button className="btn" type="submit">Create Account</button>
+              </div>
+              {error && <div className="error">{error}</div>}
+              {info && <div className="success">{info}</div>}
+            </form>
+          </>
+        ) : (
+          <>
+            <h2 style={{marginTop:0}}>Register or Sign In</h2>
+            <p className="muted">If you need to create an account, switch to Register.</p>
+            <div style={{display:'flex',gap:8,marginTop:12}}>
+              <button className="ghost" onClick={()=>{ setMode('register'); setError(''); setInfo(''); }}>Create Account</button>
+              <a className="link" href="#" onClick={(e)=>{e.preventDefault(); alert('For demo only — accounts are stored locally via localStorage.')}}>Why localStorage?</a>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* -------------------------
+   Gallery Component
+   ------------------------- */
+function Gallery({ session, users, gallery, setGallery, setSession, logout, setRoute }){
+  const [query, setQuery] = useState('');
+  const [editing, setEditing] = useState(null); // { mode:'add'|'edit', item: {...} }
+  const [showModal, setShowModal] = useState(false);
+  const isAdminOrEditor = session && (session.role === 'admin' || session.role === 'editor');
+
+  /* CRUD operations */
+  const handleAddClick = () => {
+    setEditing({ mode:'add', item: { title:'', src:'', link:'', caption:'' }});
+    setShowModal(true);
+  };
+  const handleEditClick = (item) => {
+    setEditing({ mode:'edit', item: {...item} });
+    setShowModal(true);
+  };
+  const handleDelete = (id) => {
+    if(!confirm('Delete this photo? This action is persistent.')) return;
+    setGallery(prev => prev.filter(p=>p.id !== id));
+  };
+  const handleSave = (payload) => {
+    if(editing.mode === 'add'){
+      const newItem = { ...payload, id: Date.now() };
+      setGallery(prev => [newItem, ...prev]);
+    } else {
+      setGallery(prev => prev.map(p => p.id === payload.id ? payload : p));
+    }
+    setShowModal(false);
+    setEditing(null);
+  };
+
+  /* Admin-only: impersonate a user (for demo) */
+  const impersonate = (userId) => {
+    const u = users.find(x=>x.id===userId);
+    if(!u) return;
+    setSession({ userId:u.id, username:u.username, role:u.role });
+  };
+
+  const filtered = gallery.filter(g => g.title.toLowerCase().includes(query.toLowerCase()) || (g.caption||'').toLowerCase().includes(query.toLowerCase()));
+
+  return (
+    <div style={{width:'100%',display:'flex',justifyContent:'center'}}>
+      <div className="layout">
+        <aside className="sidebar">
+          <h3>Control Panel</h3>
+          <div className="user-info">
+            <div style={{fontWeight:700}}>{session ? session.username : 'Guest'}</div>
+            <div className="muted">Role: {session ? session.role : 'none'}</div>
+            <div style={{fontSize:13}}>Shashank Mankar — official links below for branding & portfolio integration.</div>
+            <div style={{display:'flex',flexDirection:'column',gap:6,marginTop:8}}>
+              <a className="link" href="https://www.linkedin.com/in/shashank-mankar" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a className="link" href="https://github.com/shashank" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a className="link" href="https://twitter.com/shashank" target="_blank" rel="noopener noreferrer">Twitter</a>
+            </div>
+          </div>
+
+          <div style={{marginTop:12}}>
+            <label>Search</label>
+            <input placeholder="Find by title or caption" value={query} onChange={e=>setQuery(e.target.value)} />
+          </div>
+
+          <div style={{marginTop:12,display:'flex',gap:8}}>
+            {isAdminOrEditor ? <button className="btn" onClick={handleAddClick}>Add Photo</button> : <button className="ghost" onClick={() => alert('Editor role required to add photos.')}>Add Photo</button>}
+            <button className="ghost" onClick={() => { setGallery(seedData.demoGallery); alert('Reset to seed gallery (demo).'); }}>Reset</button>
+          </div>
+
+          <div style={{marginTop:14}}>
+            <h4 style={{margin:'8px 0'}}>Users (impersonate)</h4>
+            <div style={{display:'flex',flexDirection:'column',gap:8}}>
+              {users.map(u => (
+                <div key={u.id} style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:8}}>
+                  <div style={{fontSize:14}}>{u.username} <span style={{color:'#7b8ea5',fontSize:12}}>({u.role})</span></div>
+                  <div style={{display:'flex',gap:6}}>
+                    <button className="ghost" onClick={()=>impersonate(u.id)}>Impersonate</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div style={{marginTop:14}}>
+            <h4 style={{margin:'8px 0'}}>Session</h4>
+            <div style={{display:'flex',gap:8}}>
+              <button className="ghost" onClick={()=>{ setSession(null); alert('Signed out for demo.'); }}>Sign Out</button>
+              <button className="ghost" onClick={()=>{ localStorage.clear(); alert('localStorage cleared (demo). Reload to reset seeds).'); }}>Clear Storage</button>
+            </div>
+          </div>
+        </aside>
+
+        <section className="content">
+          <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:8}}>
+            <div>
+              <h3 style={{margin:0}}>Photo Gallery</h3>
+              <div className="muted" style={{marginTop:6}}>Editable gallery with link updates — changes persist in localStorage.</div>
+            </div>
+            <div style={{display:'flex',gap:8}}>
+              <button className="ghost" onClick={()=>{ navigator.clipboard?.writeText(location.href); alert('Page URL copied to clipboard.')}}>Share</button>
+              <button className="ghost" onClick={()=>setRoute('login')}>Back to Login</button>
+            </div>
+          </div>
+
+          <div style={{marginTop:14}}>
+            <div className="photos-grid">
+              {filtered.length === 0 && <div className="muted">No photos match your search.</div>}
+              {filtered.map(item => (
+                <div className="photo-card" key={item.id}>
+                  <a href={item.link || '#'} target="_blank" rel="noopener noreferrer" style={{display:'block'}}>
+                    <img src={item.src} alt={item.title} loading="lazy" />
+                  </a>
+                  <div className="photo-meta">
+                    <div style={{flex:1}}>
+                      <div style={{fontWeight:700}}>{item.title}</div>
+                      <div style={{fontSize:13,color:'#6b7280'}}>{item.caption}</div>
+                    </div>
+                    <div className="photo-actions">
+                      {isAdminOrEditor ? (
+                        <>
+                          <button className="ghost" onClick={()=>handleEditClick(item)}>Edit</button>
+                          <button className="ghost" onClick={()=>handleDelete(item.id)}>Delete</button>
+                        </>
+                      ) : (
+                        <a className="link" href={item.link || '#'} target="_blank" rel="noopener noreferrer">Open</a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </section>
+      </div>
+
+      {showModal && editing && (
+        <EditModal
+          mode={editing.mode}
+          item={editing.item}
+          onClose={()=>{ setShowModal(false); setEditing(null); }}
+          onSave={handleSave}
+        />
+      )}
+    </div>
+  );
+}
+
+/* -------------------------
+   EditModal: Add / Edit photo
+   ------------------------- */
+function EditModal({ mode, item, onClose, onSave }){
+  const [title, setTitle] = useState(item.title || '');
+  const [src, setSrc] = useState(item.src || '');
+  const [link, setLink] = useState(item.link || '');
+  const [caption, setCaption] = useState(item.caption || '');
+  const [error, setError] = useState('');
+
+  const handleSubmit = () => {
+    setError('');
+    if(!title || !src){ setError('Title and image source are required.'); return; }
+    // simple validation for URLs
+    try {
+      new URL(src);
+      if(link) new URL(link);
+    } catch(e){
+      setError('Please provide valid URLs for image source and link.');
+      return;
+    }
+    onSave({ ...item, title: title.trim(), src: src.trim(), link: link.trim(), caption: caption.trim() });
+  };
+
+  // small helper to autofill from picsum for convenience
+  const fillRandom = () => {
+    const id = Math.floor(Math.random()*1000);
+    const url = `https://picsum.photos/id/${1000 - id % 1000}/1200/800`;
+    setSrc(url);
+  };
+
+  return (
+    <div className="modal-backdrop">
+      <div className="modal" role="dialog" aria-modal="true" aria-label={mode === 'add' ? 'Add Photo' : 'Edit Photo'}>
+        <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:12}}>
+          <h3 style={{margin:0}}>{mode === 'add' ? 'Add Photo' : 'Edit Photo'}</h3>
+          <div style={{display:'flex',gap:8}}>
+            <button className="ghost" onClick={()=>{navigator.clipboard?.writeText(location.href); alert('Page URL copied to clipboard.')}}>Copy URL</button>
+            <button className="ghost" onClick={onClose}>Close</button>
+          </div>
+        </div>
+
+        <div style={{display:'grid',gridTemplateColumns:'1fr',gap:10}}>
+          <label>Title</label>
+          <input value={title} onChange={e=>setTitle(e.target.value)} placeholder="A descriptive title" />
+          <label>Image Source (absolute URL)</label>
+          <input value={src} onChange={e=>setSrc(e.target.value)} placeholder="https://..." />
+          <div style={{display:'flex',gap:8}}>
+            <button className="ghost" onClick={fillRandom}>Pick Random (picsum)</button>
+            <div style={{flex:1}}></div>
+          </div>
+          <label>Destination Link (where image should go)</label>
+          <input value={link} onChange={e=>setLink(e.target.value)} placeholder="https:// (optional)" />
+          <label>Caption / Alt</label>
+          <input value={caption} onChange={e=>setCaption(e.target.value)} placeholder="Short caption or alt text" />
+
+          {error && <div className="error">{error}</div>}
+
+          <div className="actions">
+            <button className="btn" onClick={handleSubmit}>{mode === 'add' ? 'Add Photo' : 'Save Changes'}</button>
+            <button className="ghost" onClick={onClose}>Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* -------------------------
+   Render
+   ------------------------- */
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
