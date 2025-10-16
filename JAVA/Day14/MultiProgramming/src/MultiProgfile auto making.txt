@@ -1,0 +1,5 @@
+MultiProgfile auto making 
+
+
+
+auto openin same file  on 2 run
