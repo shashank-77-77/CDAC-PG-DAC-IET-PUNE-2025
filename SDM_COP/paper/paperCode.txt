@@ -1,0 +1,574 @@
+#!/bin/bash
+
+read -p "Enter the number of terms: " n
+
+a=0
+b=1
+
+echo "Fibonacci sequence up to $n terms:"
+
+for (( i=0; i<n; i++ ))
+do
+    echo -n "$a "
+    fn=$((a + b))
+    a=$b
+    b=$fn
+done
+
+echo
+
+-----------------------------------------------------------------------------
+
+
+#!/bin/bash
+
+read -p "Enter a number: " num
+fact=1
+
+for (( i=1; i<=num; i++ ))
+do
+    fact=$((fact * i))
+done
+
+echo "Factorial of $num is: $fact"
+
+
+----------------------------------------------------------------------------
+
+
+#!/bin/bash
+# Addition Script — Bash Arithmetic Engine
+
+read -p "Enter first number: " a
+read -p "Enter second number: " b
+
+sum=$((a + b))
+
+echo "Sum of $a and $b is: $sum"
+
+
+-----------------------------------------------------------------------------
+
+#!/bin/bash
+# Multiplication Engine — Bash Arithmetic Module
+
+read -p "Enter first number: " a
+read -p "Enter second number: " b
+
+product=$((a * b))
+
+echo "Product of $a and $b is: $product"
+
+----------------------------------------------------------------------------
+
+#!/bin/bash
+# Subtraction Engine — Bash Arithmetic Workflow
+
+read -p "Enter first number: " a
+read -p "Enter second number: " b
+
+diff=$((a - b))
+
+echo "Difference between $a and $b is: $diff"
+
+----------------------------------------------------------------------------
+
+1. Right-Angled Triangle (Stars)
+#!/bin/bash
+read -p "Enter number of rows: " n
+
+for ((i=1; i<=n; i++))
+do
+    for ((j=1; j<=i; j++))
+    do
+        echo -n "* "
+    done
+    echo
+done
+
+--------------------------------------------------------------------------
+
+2. Inverted Right-Angled Triangle (Stars)
+#!/bin/bash
+read -p "Enter number of rows: " n
+
+for ((i=n; i>=1; i--))
+do
+    for ((j=1; j<=i; j++))
+    do
+        echo -n "* "
+    done
+    echo
+done
+------------------------------------------------------------------------
+
+3. Pyramid (Stars)
+#!/bin/bash
+read -p "Enter number of rows: " n
+
+for ((i=1; i<=n; i++))
+do
+    for ((j=i; j<n; j++))
+    do
+        echo -n " "
+    done
+    for ((k=1; k<=((2*i)-1); k++))
+    do
+        echo -n "*"
+    done
+    echo
+done
+
+--------------------------------------------------------------------
+
+4. Numeric Right-Angled Triangle
+#!/bin/bash
+read -p "Enter number of rows: " n
+
+for ((i=1; i<=n; i++))
+do
+    for ((j=1; j<=i; j++))
+    do
+        echo -n "$j "
+    done
+    echo
+done
+
+--------------------------------------------------------------------
+
+5. Floyd’s Triangle
+#!/bin/bash
+read -p "Enter number of rows: " n
+num=1
+
+for ((i=1; i<=n; i++))
+do
+    for ((j=1; j<=i; j++))
+    do
+        echo -n "$num "
+        ((num++))
+    done
+    echo
+done
+
+-------------------------------------------------------------------
+
+6. Diamond Pattern (Stars)
+#!/bin/bash
+read -p "Enter number of rows: " n
+
+# Upper Pyramid
+for ((i=1; i<=n; i++))
+do
+    for ((j=i; j<n; j++))
+    do
+        echo -n " "
+    done
+    for ((k=1; k<=((2*i)-1); k++))
+    do
+        echo -n "*"
+    done
+    echo
+done
+
+# Lower Pyramid
+for ((i=n-1; i>=1; i--))
+do
+    for ((j=n; j>i; j--))
+    do
+        echo -n " "
+    done
+    for ((k=1; k<=((2*i)-1); k++))
+    do
+        echo -n "*"
+    done
+    echo
+done
+
+--------------------------------------------------------------------
+
+Hollow Pyramid
+#!/bin/bash
+read -p "Enter number of rows: " n
+
+for ((i=1;i<=n;i++)); do
+    for ((j=i;j<n;j++)); do
+        echo -n " "
+    done
+    for ((j=1;j<=2*i-1;j++)); do
+        if [[ $j -eq 1 || $j -eq $((2*i-1)) || i -eq n ]]; then
+            echo -n "*"
+        else
+            echo -n " "
+        fi
+    done
+    echo
+done
+
+-------------------------------------------------------------------
+
+1. Alphabet Triangle
+#!/bin/bash
+read -p "Enter number of rows: " n
+char=65 # ASCII for 'A'
+
+for ((i=1;i<=n;i++)); do
+    for ((j=1;j<=i;j++)); do
+        printf "%c " "$char"
+        ((char++))
+        if ((char>90)); then char=65; fi
+    done
+    echo
+done
+
+--------------------------------------------------------------------
+
+
+Pascal’s Triangle (Bash)
+#!/bin/bash
+# Pascal's Triangle Generator
+
+read -p "Enter number of rows: " n
+
+for ((i=0; i<n; i++))
+do
+    # Print leading spaces for alignment
+    for ((j=i; j<n; j++))
+    do
+        echo -n " "
+    done
+
+    val=1
+    for ((j=0; j<=i; j++))
+    do
+        echo -n "$val "
+        val=$((val * (i - j) / (j + 1)))
+    done
+    echo
+done
+
+----------------------------------------------------------------------
+
+. Sum of Digits
+read -p "Enter number: " n
+sum=0
+while [ $n -gt 0 ]
+do
+  sum=$((sum + n % 10))
+  n=$((n / 10))
+done
+echo "Sum of digits = $sum"
+
+--------------------------------------------------------------------
+
+c. Reverse a Number
+read -p "Enter number: " n
+rev=0
+while [ $n -gt 0 ]
+do
+  rev=$((rev * 10 + n % 10))
+  n=$((n / 10))
+done
+echo "Reversed number = $rev"
+
+--------------------------------------------------------------------
+b. Largest Element in Array
+arr=(12 45 7 23 89)
+max=${arr[0]}
+for i in "${arr[@]}"
+do
+  if ((i > max)); then
+    max=$i
+  fi
+done
+echo "Largest element = $max"
+
+------------------------------------------------------------------
+
+Check Palindrome
+read -p "Enter string: " str
+rev=$(echo "$str" | rev)
+if [ "$str" == "$rev" ]; then
+  echo "Palindrome"
+else
+  echo "Not Palindrome"
+fi
+
+
+-------------------------------------------------------------------
+
+Count Words in a String
+read -p "Enter string: " str
+echo $str | wc -w
+
+-------------------------------------------------------------------
+Sum of Array Elements
+arr=(1 2 3 4 5)
+sum=0
+for i in "${arr[@]}"
+do
+  sum=$((sum + i))
+done
+echo "Sum = $sum"
+
+
+---------------------------------------------------------------------
+a. Prime Number Check
+read -p "Enter number: " n
+isPrime=1
+for ((i=2;i<=n/2;i++))
+do
+  if (( n % i == 0 )); then
+    isPrime=0
+    break
+  fi
+done
+
+if (( isPrime==1 && n>1 )); then
+  echo "$n is prime"
+else
+  echo "$n is not prime"
+fi
+
+---------------------------------------------------------------------
+
+Implementation of `While` Loop in Shell Script.
+
+vim looping.sh
+chmod +x looping.sh  (./looping.sh)
+
+====================================
+#/bin/bash
+
+a=0
+
+# lt is less than operator
+
+#Iterate the loop until a less than 10
+
+while [ $a -lt 10 ]
+do
+# Print the values
+echo $a
+# increment the value
+a=`expr $a + 1`
+done
+
+
+=============================
+
+#/bin/bash
+
+a=0
+
+# -gt is greater than operator
+#Iterate the loop until a is greater than 10
+
+until [ $a -gt 10 ]
+do
+
+# Print the values
+echo $a
+
+# increment the value
+a=`expr $a + 1`
+done
+
+==================
+Implementation of `for` Loop with `break` statement in Shell Script.
+
+#/bin/bash
+
+#Start of for loop
+
+for a in 1 2 3 4 5 6 7 8 9 10
+do
+
+# if a is equal to 5 break the loop
+if [ $a == 5 ]
+then
+break
+fi
+
+# Print the value
+echo “Iteration no $a”
+done
+
+==================
+
+Implementation of `for` Loop with `continue` statement in Shell Script.
+
+#/bin/bash
+
+for a in 1 2 3 4 5 6 7 8 9 10
+do
+
+# if a = 5 then continue the loop and
+# don’t move to line 8
+
+if [ $a == 5 ]
+then
+continue
+fi
+echo “Iteration no $a”
+done
+
+
+====================
+Implementing `until` Loop in Shell Script
+
+#/bin/bash
+
+a=0
+
+# -gt is greater than operator
+#Iterate the loop until a is greater than 10
+
+until [ $a -gt 10 ]
+do
+
+
+=======================
+Creating an Infinite Loop with “while true” in Shell Script
+
+#/bin/bash
+
+while true
+do
+
+# Command to be executed
+# sleep 1 indicates it sleeps for 1 sec
+echo “Hi, I am infinity loop”
+sleep 1
+done
+
+
+----------------------------------------------------------------------------------------------
+
+Two types of decision-making statements are used within shell scripting. They are –
+
+If-else statement
+case-sac statement
+
+If-else statement
+If else statement is a conditional statement. It can be used to execute two different codes based on whether the given condition is satisfied or not. There are a couple of varieties present within the if-else statement. 
+They are –
+====================
+
+if-fi 
+
+Name="Girish"
+if [ "$Name" = "Girish" ]; then
+  echo "His name is Girish. It is true."
+fi
+
+====================
+if-else-fi 
+====================
+Age=17
+if [ "$Age" -ge 18 ]; then
+    echo "You can vote"
+else
+    echo "You cannot vote"    
+fi
+
+====================
+if-elif-else-fi 
+====================
+
+Age=17
+if [ "$Age" -ge 18 ]; then
+    echo "You can vote"
+elif [ "$Age" -eq 17 ]; then
+    echo "You can vote after one year"
+else
+    echo "You cannot vote"    
+fi
+
+====================
+Nested if-else
+====================
+
+echo "Enter subject"
+read subject
+
+if [ $subject == 'Linux' ]
+then
+echo "Enter Marks"
+read marks
+        if [ $marks -ge 30 ]
+        then
+        echo "You passed"
+        else
+        echo "You failed"
+        fi
+else
+echo "Wrong Subject"
+fi
+
+
+------------------------------------------------------------------------------------------------------------
+
+Defining Variables
+variable_name = <variable data>
+num="1"
+name="Devil"
+
+Accessing variable
+Variable data could be accessed by appending the variable name with ‘$’ as follows:
+
+#!/bin/bash
+
+VAR_1="Devil"
+VAR_2="OWL"
+
+echo "$VAR_1$VAR_2"
+
+Unsetting Variables
+The unset command directs a shell to delete a variable and its stored data from list of variables. It can be used as follows:
+
+#!/bin/bash
+
+var1="Devil"
+var2=23
+echo $var1 $var2
+
+unset var1
+
+echo $var1 $var2
+
+Note: The unset command could not be used to unset read-only variables.
+
+Read only Variables.
+These variables are read only i.e., their values could not be modified later in the script. Following is an example:
+
+#!/bin/bash
+var1="Devil"
+var2=23
+readonly var1
+echo $var1 $var2
+var1=23
+echo $var1 $var2
+
+
+Now let us see all the above codes in action together. Following is a shell script that includes all the shell variables discussed above
+
+# accessing the declared variables using $
+echo "Name is $Var_name, and age is $Var_age."
+
+# read-only variables
+var_blood_group="O-"
+readonly var_blood_group
+echo "Blood group is $var_blood_group and read only."
+echo "Error for read only variables, if trying to \
+modify them."
+echo
+var_blood_group="B+"
+echo
+
+# unsetting variables
+unset Var_age
+echo "After unsetting var_age..."
+echo
+echo "Name is $Var_name, blood group is $var_blood_group\
+ and age is $Var_age..."
