@@ -1,0 +1,22 @@
+
+1. https://leetcode.com/problems/two-sum/description/
+
+2. https://leetcode.com/problems/reverse-integer/
+
+3. https://leetcode.com/problems/palindrome-number/description/
+
+4. https://leetcode.com/problems/fibonacci-number/description/ 
+
+5. https://leetcode.com/problems/climbing-stairs/description/
+
+6. https://leetcode.com/problems/maximum-subarray/description/
+
+7. https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+
+8. https://leetcode.com/problems/single-number/description/
+
+9. https://leetcode.com/problems/power-of-two/description/
+
+10. https://leetcode.com/problems/substring-with-concatenation-of-all-words/
+
+11. https://leetcode.com/problems/lru-cache/description/
