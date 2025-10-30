@@ -1,0 +1,1393 @@
+
+C:\Users\SALEEL>mysql --user=root --password=root
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.41 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> select database();
++------------+
+| database() |
++------------+
+| NULL       |
++------------+
+1 row in set (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| db1                |
+| information_schema |
+| movies             |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| test               |
+| world              |
+| x                  |
++--------------------+
+10 rows in set (0.03 sec)
+
+mysql> use x;
+Database changed
+mysql> show engines;
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+| Engine             | Support | Comment                                                        | Transactions | XA   | Savepoints |
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+| MEMORY             | YES     | Hash based, stored in memory, useful for temporary tables      | NO           | NO   | NO         |
+| MRG_MYISAM         | YES     | Collection of identical MyISAM tables                          | NO           | NO   | NO         |
+| CSV                | YES     | CSV storage engine                                             | NO           | NO   | NO         |
+| FEDERATED          | NO      | Federated MySQL storage engine                                 | NULL         | NULL | NULL       |
+| PERFORMANCE_SCHEMA | YES     | Performance Schema                                             | NO           | NO   | NO         |
+| MyISAM             | YES     | MyISAM storage engine                                          | NO           | NO   | NO         |
+| InnoDB             | DEFAULT | Supports transactions, row-level locking, and foreign keys     | YES          | YES  | YES        |
+| ndbinfo            | NO      | MySQL Cluster system information storage engine                | NULL         | NULL | NULL       |
+| BLACKHOLE          | YES     | /dev/null storage engine (anything you write to it disappears) | NO           | NO   | NO         |
+| ARCHIVE            | YES     | Archive storage engine                                         | NO           | NO   | NO         |
+| ndbcluster         | NO      | Clustered, fault-tolerant tables                               | NULL         | NULL | NULL       |
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+11 rows in set (0.01 sec)
+
+mysql>
+mysql>
+mysql> show engines;
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+| Engine             | Support | Comment                                                        | Transactions | XA   | Savepoints |
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+| MEMORY             | YES     | Hash based, stored in memory, useful for temporary tables      | NO           | NO   | NO         |
+| MRG_MYISAM         | YES     | Collection of identical MyISAM tables                          | NO           | NO   | NO         |
+| CSV                | YES     | CSV storage engine                                             | NO           | NO   | NO         |
+| FEDERATED          | NO      | Federated MySQL storage engine                                 | NULL         | NULL | NULL       |
+| PERFORMANCE_SCHEMA | YES     | Performance Schema                                             | NO           | NO   | NO         |
+| MyISAM             | YES     | MyISAM storage engine                                          | NO           | NO   | NO         |
+| InnoDB             | DEFAULT | Supports transactions, row-level locking, and foreign keys     | YES          | YES  | YES        |
+| ndbinfo            | NO      | MySQL Cluster system information storage engine                | NULL         | NULL | NULL       |
+| BLACKHOLE          | YES     | /dev/null storage engine (anything you write to it disappears) | NO           | NO   | NO         |
+| ARCHIVE            | YES     | Archive storage engine                                         | NO           | NO   | NO         |
+| ndbcluster         | NO      | Clustered, fault-tolerant tables                               | NULL         | NULL | NULL       |
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+11 rows in set (0.00 sec)
+
+mysql> show tables;
+Empty set (0.07 sec)
+
+mysql> create table emp(id int, ename varchar(10), ename char(10));
+ERROR 1060 (42S21): Duplicate column name 'ename'
+mysql> create table emp(id int, ename1 varchar(10), ename2 char(10));
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> desc emp;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | YES  |     | NULL    |       |
+| ename1 | varchar(10) | YES  |     | NULL    |       |
+| ename2 | char(10)    | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.02 sec)
+
+mysql> insert into emp values(1001,'saleel', 'saleel');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from emp;
++------+--------+--------+
+| id   | ename1 | ename2 |
++------+--------+--------+
+| 1001 | saleel | saleel |
++------+--------+--------+
+1 row in set (0.01 sec)
+
+mysql> select ename1, ename2 from emp;
++--------+--------+
+| ename1 | ename2 |
++--------+--------+
+| saleel | saleel |
++--------+--------+
+1 row in set (0.00 sec)
+
+mysql> select length(ename1), ename2 from emp;
++----------------+--------+
+| length(ename1) | ename2 |
++----------------+--------+
+|              6 | saleel |
++----------------+--------+
+1 row in set (0.00 sec)
+
+mysql> select length(ename1), length(ename2) from emp;
++----------------+----------------+
+| length(ename1) | length(ename2) |
++----------------+----------------+
+|              6 |              6 |
++----------------+----------------+
+1 row in set (0.00 sec)
+
+mysql> desc emp;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | YES  |     | NULL    |       |
+| ename1 | varchar(10) | YES  |     | NULL    |       |
+| ename2 | char(10)    | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> SET sql_mode = 'PAD_CHAR_TO_FULL_LENGTH';
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+
+mysql> select length(ename1), length(ename2) from emp;
++----------------+----------------+
+| length(ename1) | length(ename2) |
++----------------+----------------+
+|              6 |             10 |
++----------------+----------------+
+1 row in set (0.00 sec)
+
+mysql> select * from emp;
++------+--------+------------+
+| id   | ename1 | ename2     |
++------+--------+------------+
+| 1001 | saleel | saleel     |
++------+--------+------------+
+1 row in set (0.00 sec)
+
+mysql> select 34+343;
++--------+
+| 34+343 |
++--------+
+|    377 |
++--------+
+1 row in set (0.01 sec)
+
+mysql> select 454*343;
++---------+
+| 454*343 |
++---------+
+|  155722 |
++---------+
+1 row in set (0.01 sec)
+
+mysql> create tabel a(c1 int auto_increment);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tabel a(c1 int auto_increment)' at line 1
+mysql> create table a(c1 int auto_increment);
+ERROR 1075 (42000): Incorrect table definition; there can be only one auto column and it must be defined as a key
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> create table a(c1 int auto_increment);
+ERROR 1075 (42000): Incorrect table definition; there can be only one auto column and it must be defined as a key
+mysql> create table a(c1 int primary key auto_increment, c2 int);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> desc a;
++-------+------+------+-----+---------+----------------+
+| Field | Type | Null | Key | Default | Extra          |
++-------+------+------+-----+---------+----------------+
+| c1    | int  | NO   | PRI | NULL    | auto_increment |
+| c2    | int  | YES  |     | NULL    |                |
++-------+------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> desc emp;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | YES  |     | NULL    |       |
+| ename1 | varchar(10) | YES  |     | NULL    |       |
+| ename2 | char(10)    | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> desc a;
++-------+------+------+-----+---------+----------------+
+| Field | Type | Null | Key | Default | Extra          |
++-------+------+------+-----+---------+----------------+
+| c1    | int  | NO   | PRI | NULL    | auto_increment |
+| c2    | int  | YES  |     | NULL    |                |
++-------+------+------+-----+---------+----------------+
+2 rows in set (0.01 sec)
+
+mysql> insert into a values(default, 100);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into a values(default, 200);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from a;
++----+------+
+| c1 | c2   |
++----+------+
+|  1 |  100 |
+|  2 |  200 |
++----+------+
+2 rows in set (0.01 sec)
+
+mysql> insert into a values(default, 300);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from a;
++----+------+
+| c1 | c2   |
++----+------+
+|  1 |  100 |
+|  2 |  200 |
+|  3 |  300 |
++----+------+
+3 rows in set (0.00 sec)
+
+mysql> insert into a values(default, 400);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from a;
++----+------+
+| c1 | c2   |
++----+------+
+|  1 |  100 |
+|  2 |  200 |
+|  3 |  300 |
+|  4 |  400 |
++----+------+
+4 rows in set (0.00 sec)
+
+mysql> insert into a values(50, 300);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from a;
++----+------+
+| c1 | c2   |
++----+------+
+|  1 |  100 |
+|  2 |  200 |
+|  3 |  300 |
+|  4 |  400 |
+| 50 |  300 |
++----+------+
+5 rows in set (0.00 sec)
+
+mysql> insert into a values(default, 4000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from a;
++----+------+
+| c1 | c2   |
++----+------+
+|  1 |  100 |
+|  2 |  200 |
+|  3 |  300 |
+|  4 |  400 |
+| 50 |  300 |
+| 51 | 4000 |
++----+------+
+6 rows in set (0.00 sec)
+
+mysql> insert into a values(500, 300);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from a;
++-----+------+
+| c1  | c2   |
++-----+------+
+|   1 |  100 |
+|   2 |  200 |
+|   3 |  300 |
+|   4 |  400 |
+|  50 |  300 |
+|  51 | 4000 |
+| 500 |  300 |
++-----+------+
+7 rows in set (0.00 sec)
+
+mysql> insert into a values(default, 300);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from a;
++-----+------+
+| c1  | c2   |
++-----+------+
+|   1 |  100 |
+|   2 |  200 |
+|   3 |  300 |
+|   4 |  400 |
+|  50 |  300 |
+|  51 | 4000 |
+| 500 |  300 |
+| 501 |  300 |
++-----+------+
+8 rows in set (0.00 sec)
+
+mysql> create table b(id int primary key auto_increment, ename varchar(10), city varchar(10) default 'Baroda');
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> deac b;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'deac b' at line 1
+mysql> desc b;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int         | NO   | PRI | NULL    | auto_increment |
+| ename | varchar(10) | YES  |     | NULL    |                |
+| city  | varchar(10) | YES  |     | Baroda  |                |
++-------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> insert into b values(default,'saleel', 'Surat');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select id, ename, city from b;
++----+--------+-------+
+| id | ename  | city  |
++----+--------+-------+
+|  1 | saleel | Surat |
++----+--------+-------+
+1 row in set (0.00 sec)
+
+mysql> insert into b values(default,'sharmin', default);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from b;
++----+---------+--------+
+| id | ename   | city   |
++----+---------+--------+
+|  1 | saleel  | Surat  |
+|  2 | sharmin | Baroda |
++----+---------+--------+
+2 rows in set (0.00 sec)
+
+mysql> insert into b valeus(default, default(city), 'xyz');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'valeus(default, default(city), 'xyz')' at line 1
+mysql> insert into b values(default, default(city), 'xyz');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from b;
++----+---------+--------+
+| id | ename   | city   |
++----+---------+--------+
+|  1 | saleel  | Surat  |
+|  2 | sharmin | Baroda |
+|  3 | Baroda  | xyz    |
++----+---------+--------+
+3 rows in set (0.00 sec)
+
+mysql> create table c(id int primary key auto_increment, ename varchar(10), city varchar(10) default 'Baroda', c1 int, c2 int, c3 int default (c1+c2));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc  c;
++-------+-------------+------+-----+---------------+-------------------+
+| Field | Type        | Null | Key | Default       | Extra             |
++-------+-------------+------+-----+---------------+-------------------+
+| id    | int         | NO   | PRI | NULL          | auto_increment    |
+| ename | varchar(10) | YES  |     | NULL          |                   |
+| city  | varchar(10) | YES  |     | Baroda        |                   |
+| c1    | int         | YES  |     | NULL          |                   |
+| c2    | int         | YES  |     | NULL          |                   |
+| c3    | int         | YES  |     | (`c1` + `c2`) | DEFAULT_GENERATED |
++-------+-------------+------+-----+---------------+-------------------+
+6 rows in set (0.00 sec)
+
+mysql> insert into c values(default, 'saleel', default, 10, 20, default);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from c;
++----+--------+--------+------+------+------+
+| id | ename  | city   | c1   | c2   | c3   |
++----+--------+--------+------+------+------+
+|  1 | saleel | Baroda |   10 |   20 |   30 |
++----+--------+--------+------+------+------+
+1 row in set (0.00 sec)
+
+mysql> insert into c(ename, c1, c2) values('ruhan', 1000, 2000);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from c;
++----+--------+--------+------+------+------+
+| id | ename  | city   | c1   | c2   | c3   |
++----+--------+--------+------+------+------+
+|  1 | saleel | Baroda |   10 |   20 |   30 |
+|  2 | ruhan  | Baroda | 1000 | 2000 | 3000 |
++----+--------+--------+------+------+------+
+2 rows in set (0.00 sec)
+
+mysql> insert into c(ename, c1, c2) values('deep',5000, 3000), ('neel', 70, 90), ('bandish', 120, 130);
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from c;
++----+---------+--------+------+------+------+
+| id | ename   | city   | c1   | c2   | c3   |
++----+---------+--------+------+------+------+
+|  1 | saleel  | Baroda |   10 |   20 |   30 |
+|  2 | ruhan   | Baroda | 1000 | 2000 | 3000 |
+|  3 | deep    | Baroda | 5000 | 3000 | 8000 |
+|  4 | neel    | Baroda |   70 |   90 |  160 |
+|  5 | bandish | Baroda |  120 |  130 |  250 |
++----+---------+--------+------+------+------+
+5 rows in set (0.00 sec)
+
+mysql> select now();
++---------------------+
+| now()               |
++---------------------+
+| 2025-10-29 10:31:28 |
++---------------------+
+1 row in set (0.01 sec)
+
+mysql> select now(), curdate();;
++---------------------+------------+
+| now()               | curdate()  |
++---------------------+------------+
+| 2025-10-29 10:31:37 | 2025-10-29 |
++---------------------+------------+
+1 row in set (0.01 sec)
+
+ERROR:
+No query specified
+
+mysql> select now(), curdate(), curtime();
++---------------------+------------+-----------+
+| now()               | curdate()  | curtime() |
++---------------------+------------+-----------+
+| 2025-10-29 10:31:57 | 2025-10-29 | 10:31:57  |
++---------------------+------------+-----------+
+1 row in set (0.00 sec)
+
+mysql> create table orders(order_id int primary key auto_increment, order_date date default curdate(), product_name varchar(10) not null, rate float(6,2), qty int, total1 float(10,2) default (rate * qty), total2 float(10,2) generated always as (rate * qty), userName varchar(10) invisible, pwd varbinary(10));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'curdate(), product_name varchar(10) not null, rate float(6,2), qty int, total1 f' at line 1
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> create table orders(order_id int primary key auto_increment, order_date datetime default now(), product_name varchar(10) not null, rate float(6,2), qty int, total1 float(10,2) default (rate * qty), total2 float(10,2) generated always as (rate * qty), userName varchar(10) invisible, pwd varbinary(10));
+Query OK, 0 rows affected, 3 warnings (0.05 sec)
+
+mysql> desc orders;
++--------------+---------------+------+-----+-------------------+-------------------+
+| Field        | Type          | Null | Key | Default           | Extra             |
++--------------+---------------+------+-----+-------------------+-------------------+
+| order_id     | int           | NO   | PRI | NULL              | auto_increment    |
+| order_date   | datetime      | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| product_name | varchar(10)   | NO   |     | NULL              |                   |
+| rate         | float(6,2)    | YES  |     | NULL              |                   |
+| qty          | int           | YES  |     | NULL              |                   |
+| total1       | float(10,2)   | YES  |     | (`rate` * `qty`)  | DEFAULT_GENERATED |
+| total2       | float(10,2)   | YES  |     | NULL              | VIRTUAL GENERATED |
+| userName     | varchar(10)   | YES  |     | NULL              | INVISIBLE         |
+| pwd          | varbinary(10) | YES  |     | NULL              |                   |
++--------------+---------------+------+-----+-------------------+-------------------+
+9 rows in set (0.01 sec)
+
+mysql> insert into  orders(product_name, rate, qty, userName, pwd) values('Bread', 45, 6, 'saleel', 'saleel');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from orders;
++----------+---------------------+--------------+-------+------+--------+--------+----------------+
+| order_id | order_date          | product_name | rate  | qty  | total1 | total2 | pwd            |
++----------+---------------------+--------------+-------+------+--------+--------+----------------+
+|        1 | 2025-10-29 10:47:32 | Bread        | 45.00 |    6 | 270.00 | 270.00 | 0x73616C65656C |
++----------+---------------------+--------------+-------+------+--------+--------+----------------+
+1 row in set (0.00 sec)
+
+mysql> select order_id, order_Date, product_name, rate, qty, total1, total2, username, pwd  from orders;
++----------+---------------------+--------------+-------+------+--------+--------+----------+----------------+
+| order_id | order_Date          | product_name | rate  | qty  | total1 | total2 | username | pwd            |
++----------+---------------------+--------------+-------+------+--------+--------+----------+----------------+
+|        1 | 2025-10-29 10:47:32 | Bread        | 45.00 |    6 | 270.00 | 270.00 | saleel   | 0x73616C65656C |
++----------+---------------------+--------------+-------+------+--------+--------+----------+----------------+
+1 row in set (0.00 sec)
+
+mysql> select order_id, order_Date, product_name, rate, qty, total1, total2, username, pwd, case(pwd as char)  from orders;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as char)  from orders' at line 1
+mysql>
+mysql>
+mysql> select order_id, order_Date, product_name, rate, qty, total1, total2, username, pwd, cast(pwd as char)  from orders;
++----------+---------------------+--------------+-------+------+--------+--------+----------+----------------+-------------------+
+| order_id | order_Date          | product_name | rate  | qty  | total1 | total2 | username | pwd            | cast(pwd as char) |
++----------+---------------------+--------------+-------+------+--------+--------+----------+----------------+-------------------+
+|        1 | 2025-10-29 10:47:32 | Bread        | 45.00 |    6 | 270.00 | 270.00 | saleel   | 0x73616C65656C | saleel            |
++----------+---------------------+--------------+-------+------+--------+--------+----------+----------------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> select  username, pwd, cast(pwd as char)  from orders;
++----------+----------------+-------------------+
+| username | pwd            | cast(pwd as char) |
++----------+----------------+-------------------+
+| saleel   | 0x73616C65656C | saleel            |
++----------+----------------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> seelct * from orders;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'seelct * from orders' at line 1
+mysql> select  * from orders;
++----------+---------------------+--------------+-------+------+--------+--------+----------------+
+| order_id | order_date          | product_name | rate  | qty  | total1 | total2 | pwd            |
++----------+---------------------+--------------+-------+------+--------+--------+----------------+
+|        1 | 2025-10-29 10:47:32 | Bread        | 45.00 |    6 | 270.00 | 270.00 | 0x73616C65656C |
++----------+---------------------+--------------+-------+------+--------+--------+----------------+
+1 row in set (0.00 sec)
+
+mysql> select  *, * from orders;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* from orders' at line 1
+mysql>
+mysql>
+mysql> select  orders.*, * from orders;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* from orders' at line 1
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> select  orders.*, orders.* from orders;
++----------+---------------------+--------------+-------+------+--------+--------+----------------+----------+---------------------+--------------+-------+------+--------+--------+----------------+
+| order_id | order_date          | product_name | rate  | qty  | total1 | total2 | pwd            | order_id | order_date          | product_name | rate  | qty  | total1 | total2 | pwd            |
++----------+---------------------+--------------+-------+------+--------+--------+----------------+----------+---------------------+--------------+-------+------+--------+--------+----------------+
+|        1 | 2025-10-29 10:47:32 | Bread        | 45.00 |    6 | 270.00 | 270.00 | 0x73616C65656C |        1 | 2025-10-29 10:47:32 | Bread        | 45.00 |    6 | 270.00 | 270.00 | 0x73616C65656C |
++----------+---------------------+--------------+-------+------+--------+--------+----------------+----------+---------------------+--------------+-------+------+--------+--------+----------------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> select  orders.* from orders;
++----------+---------------------+--------------+-------+------+--------+--------+----------------+
+| order_id | order_date          | product_name | rate  | qty  | total1 | total2 | pwd            |
++----------+---------------------+--------------+-------+------+--------+--------+----------------+
+|        1 | 2025-10-29 10:47:32 | Bread        | 45.00 |    6 | 270.00 | 270.00 | 0x73616C65656C |
++----------+---------------------+--------------+-------+------+--------+--------+----------------+
+1 row in set (0.00 sec)
+
+mysql> select  orders.*, username from orders;
++----------+---------------------+--------------+-------+------+--------+--------+----------------+----------+
+| order_id | order_date          | product_name | rate  | qty  | total1 | total2 | pwd            | username |
++----------+---------------------+--------------+-------+------+--------+--------+----------------+----------+
+|        1 | 2025-10-29 10:47:32 | Bread        | 45.00 |    6 | 270.00 | 270.00 | 0x73616C65656C | saleel   |
++----------+---------------------+--------------+-------+------+--------+--------+----------------+----------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> select  username, * from orders;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* from orders' at line 1
+mysql> select  *, username from orders;
++----------+---------------------+--------------+-------+------+--------+--------+----------------+----------+
+| order_id | order_date          | product_name | rate  | qty  | total1 | total2 | pwd            | username |
++----------+---------------------+--------------+-------+------+--------+--------+----------------+----------+
+|        1 | 2025-10-29 10:47:32 | Bread        | 45.00 |    6 | 270.00 | 270.00 | 0x73616C65656C | saleel   |
++----------+---------------------+--------------+-------+------+--------+--------+----------------+----------+
+1 row in set (0.00 sec)
+
+mysql> select  username, orders.* from orders;
++----------+----------+---------------------+--------------+-------+------+--------+--------+----------------+
+| username | order_id | order_date          | product_name | rate  | qty  | total1 | total2 | pwd            |
++----------+----------+---------------------+--------------+-------+------+--------+--------+----------------+
+| saleel   |        1 | 2025-10-29 10:47:32 | Bread        | 45.00 |    6 | 270.00 | 270.00 | 0x73616C65656C |
++----------+----------+---------------------+--------------+-------+------+--------+--------+----------------+
+1 row in set (0.00 sec)
+
+mysql> select  product_name, rate, qty, total1, total2 from orders;
++--------------+-------+------+--------+--------+
+| product_name | rate  | qty  | total1 | total2 |
++--------------+-------+------+--------+--------+
+| Bread        | 45.00 |    6 | 270.00 | 270.00 |
++--------------+-------+------+--------+--------+
+1 row in set (0.00 sec)
+
+mysql> update orders set rate = 75.35;
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select  product_name, rate, qty, total1, total2 from orders;
++--------------+-------+------+--------+--------+
+| product_name | rate  | qty  | total1 | total2 |
++--------------+-------+------+--------+--------+
+| Bread        | 75.35 |    6 | 270.00 | 452.10 |
++--------------+-------+------+--------+--------+
+1 row in set (0.00 sec)
+
+mysql> update orders set total1= default;
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select  product_name, rate, qty, total1, total2 from orders;
++--------------+-------+------+--------+--------+
+| product_name | rate  | qty  | total1 | total2 |
++--------------+-------+------+--------+--------+
+| Bread        | 75.35 |    6 | 452.10 | 452.10 |
++--------------+-------+------+--------+--------+
+1 row in set (0.00 sec)
+
+mysql> update orders set total1 = -1;
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select  product_name, rate, qty, total1, total2 from orders;
++--------------+-------+------+--------+--------+
+| product_name | rate  | qty  | total1 | total2 |
++--------------+-------+------+--------+--------+
+| Bread        | 75.35 |    6 |  -1.00 | 452.10 |
++--------------+-------+------+--------+--------+
+1 row in set (0.00 sec)
+
+mysql> update orders set total2 = -2;
+ERROR 3105 (HY000): The value specified for generated column 'total2' in table 'orders' is not allowed.
+mysql> update orders set total1= default;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select  product_name, rate, qty, total1, total2 from orders;
++--------------+-------+------+--------+--------+
+| product_name | rate  | qty  | total1 | total2 |
++--------------+-------+------+--------+--------+
+| Bread        | 75.35 |    6 | 452.10 | 452.10 |
++--------------+-------+------+--------+--------+
+1 row in set (0.00 sec)
+
+mysql> desc orders;
++--------------+---------------+------+-----+-------------------+-------------------+
+| Field        | Type          | Null | Key | Default           | Extra             |
++--------------+---------------+------+-----+-------------------+-------------------+
+| order_id     | int           | NO   | PRI | NULL              | auto_increment    |
+| order_date   | datetime      | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| product_name | varchar(10)   | NO   |     | NULL              |                   |
+| rate         | float(6,2)    | YES  |     | NULL              |                   |
+| qty          | int           | YES  |     | NULL              |                   |
+| total1       | float(10,2)   | YES  |     | (`rate` * `qty`)  | DEFAULT_GENERATED |
+| total2       | float(10,2)   | YES  |     | NULL              | VIRTUAL GENERATED |
+| userName     | varchar(10)   | YES  |     | NULL              | INVISIBLE         |
+| pwd          | varbinary(10) | YES  |     | NULL              |                   |
++--------------+---------------+------+-----+-------------------+-------------------+
+9 rows in set (0.00 sec)
+
+mysql> select order_id, order_date, product_name, rate, qty, total2 from orders;
++----------+---------------------+--------------+-------+------+--------+
+| order_id | order_date          | product_name | rate  | qty  | total2 |
++----------+---------------------+--------------+-------+------+--------+
+|        1 | 2025-10-29 10:47:32 | Bread        | 75.35 |    6 | 452.10 |
++----------+---------------------+--------------+-------+------+--------+
+1 row in set (0.00 sec)
+
+mysql> select json_object('orderID',order_id, 'productName', product_name, 'Rate', rate, 'Quantity, qty, 'Total', total2) from orders;
+    '> ^C
+mysql>
+mysql>
+mysql>
+mysql> select json_object('orderID',order_id, 'productName', product_name, 'Rate', rate, 'Quantity', qty, 'Total', total2) from orders;
++--------------------------------------------------------------------------------------------------------------+
+| json_object('orderID',order_id, 'productName', product_name, 'Rate', rate, 'Quantity', qty, 'Total', total2) |
++--------------------------------------------------------------------------------------------------------------+
+| {"Rate": 75.3499984741211, "Total": 452.1000061035156, "orderID": 1, "Quantity": 6, "productName": "Bread"}  |
++--------------------------------------------------------------------------------------------------------------+
+1 row in set (0.02 sec)
+
+mysql> select order_id, order_date, product_name, rate, qty, total2 from orders;
++----------+---------------------+--------------+-------+------+--------+
+| order_id | order_date          | product_name | rate  | qty  | total2 |
++----------+---------------------+--------------+-------+------+--------+
+|        1 | 2025-10-29 10:47:32 | Bread        | 75.35 |    6 | 452.10 |
++----------+---------------------+--------------+-------+------+--------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> select order_id, order_date, product_name, rate, qty, total2 from orders;
++----------+---------------------+--------------+-------+------+--------+
+| order_id | order_date          | product_name | rate  | qty  | total2 |
++----------+---------------------+--------------+-------+------+--------+
+|        1 | 2025-10-29 10:47:32 | Bread        | 75.35 |    6 | 452.10 |
++----------+---------------------+--------------+-------+------+--------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> select 'saleel';
++--------+
+| saleel |
++--------+
+| saleel |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select 'saleel', 4000;
++--------+------+
+| saleel | 4000 |
++--------+------+
+| saleel | 4000 |
++--------+------+
+1 row in set (0.00 sec)
+
+mysql> select json_object('Enployee Name', 'saleel', 'Salary', 4000);
++--------------------------------------------------------+
+| json_object('Enployee Name', 'saleel', 'Salary', 4000) |
++--------------------------------------------------------+
+| {"Salary": 4000, "Enployee Name": "saleel"}            |
++--------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql> select json_object('Employee Name', 'saleel', 'Salary', 4000, phone,json_array(111, 222));
+ERROR 1054 (42S22): Unknown column 'phone' in 'field list'
+mysql> select json_object('Employee Name', 'saleel', 'Salary', 4000, 'phone', json_array(111, 222));
++---------------------------------------------------------------------------------------+
+| json_object('Employee Name', 'saleel', 'Salary', 4000, 'phone', json_array(111, 222)) |
++---------------------------------------------------------------------------------------+
+| {"phone": [111, 222], "Salary": 4000, "Employee Name": "saleel"}                      |
++---------------------------------------------------------------------------------------+
+1 row in set (0.01 sec)
+
+mysql>
+mysql>
+mysql> select product_name, rate, qty from orders;
++--------------+-------+------+
+| product_name | rate  | qty  |
++--------------+-------+------+
+| Bread        | 75.35 |    6 |
++--------------+-------+------+
+1 row in set (0.00 sec)
+
+mysql> select  json_object('ProductName', product_name, 'C1', json_array(rate, qty)) from orders;
++-----------------------------------------------------------------------+
+| json_object('ProductName', product_name, 'C1', json_array(rate, qty)) |
++-----------------------------------------------------------------------+
+| {"C1": [75.3499984741211, 6], "ProductName": "Bread"}                 |
++-----------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> select case when 10=10 then 'Good' else 'Bad' end;
++--------------------------------------------+
+| case when 10=10 then 'Good' else 'Bad' end |
++--------------------------------------------+
+| Good                                       |
++--------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select case when 10=101 then 'Good' else 'Bad' end;
++---------------------------------------------+
+| case when 10=101 then 'Good' else 'Bad' end |
++---------------------------------------------+
+| Bad                                         |
++---------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> create table d(c1 int, c2 enum('Bread', 'Butter' ,'Cheese'));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> desc d;
++-------+---------------------------------+------+-----+---------+-------+
+| Field | Type                            | Null | Key | Default | Extra |
++-------+---------------------------------+------+-----+---------+-------+
+| c1    | int                             | YES  |     | NULL    |       |
+| c2    | enum('Bread','Butter','Cheese') | YES  |     | NULL    |       |
++-------+---------------------------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> insert into d values(1, 'Jam');
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> select * from d;
++------+------+
+| c1   | c2   |
++------+------+
+|    1 |      |
++------+------+
+1 row in set (0.00 sec)
+
+mysql> insert into d values(1, 'Butter');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from d;
++------+--------+
+| c1   | c2     |
++------+--------+
+|    1 |        |
+|    1 | Butter |
++------+--------+
+2 rows in set (0.00 sec)
+
+mysql> desc d;
++-------+---------------------------------+------+-----+---------+-------+
+| Field | Type                            | Null | Key | Default | Extra |
++-------+---------------------------------+------+-----+---------+-------+
+| c1    | int                             | YES  |     | NULL    |       |
+| c2    | enum('Bread','Butter','Cheese') | YES  |     | NULL    |       |
++-------+---------------------------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> insert into d values(2, 1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from d;
++------+--------+
+| c1   | c2     |
++------+--------+
+|    1 |        |
+|    1 | Butter |
+|    2 | Bread  |
++------+--------+
+3 rows in set (0.00 sec)
+
+mysql> create table e(c1 int, c2 set('Red,Blue,Green,Yellow'));
+ERROR 1367 (22007): Illegal set 'Red,Blue,Green,Yellow' value found during parsing
+mysql> create table e(c1 int, c2 set('Red','Blue','Green','Yellow'));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc e;
++-------+------------------------------------+------+-----+---------+-------+
+| Field | Type                               | Null | Key | Default | Extra |
++-------+------------------------------------+------+-----+---------+-------+
+| c1    | int                                | YES  |     | NULL    |       |
+| c2    | set('Red','Blue','Green','Yellow') | YES  |     | NULL    |       |
++-------+------------------------------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> insert into e values(1,'Red');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into e values(2,'Red,green');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from e;
++------+-----------+
+| c1   | c2        |
++------+-----------+
+|    1 | Red       |
+|    2 | Red,Green |
++------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> insert into e values(3,'Red,green,red');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from e;
++------+-----------+
+| c1   | c2        |
++------+-----------+
+|    1 | Red       |
+|    2 | Red,Green |
+|    3 | Red,Green |
++------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> insert into e values(4,'Green,red,yellow');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from e;
++------+------------------+
+| c1   | c2               |
++------+------------------+
+|    1 | Red              |
+|    2 | Red,Green        |
+|    3 | Red,Green        |
+|    4 | Red,Green,Yellow |
++------+------------------+
+4 rows in set (0.00 sec)
+
+mysql> select find_in_set('saleel',  'sharmin, saleel,ruhan');
++-------------------------------------------------+
+| find_in_set('saleel',  'sharmin, saleel,ruhan') |
++-------------------------------------------------+
+|                                               0 |
++-------------------------------------------------+
+1 row in set (0.01 sec)
+
+mysql> select find_in_set(' saleel',  'sharmin, saleel,ruhan');
++--------------------------------------------------+
+| find_in_set(' saleel',  'sharmin, saleel,ruhan') |
++--------------------------------------------------+
+|                                                2 |
++--------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select find_in_set('saleel',  'sharmin,saleel,ruhan');
++------------------------------------------------+
+| find_in_set('saleel',  'sharmin,saleel,ruhan') |
++------------------------------------------------+
+|                                              2 |
++------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select find_in_set('saleel',  'sharmin,saleel,ruhan');
++------------------------------------------------+
+| find_in_set('saleel',  'sharmin,saleel,ruhan') |
++------------------------------------------------+
+|                                              2 |
++------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> desc e;
++-------+------------------------------------+------+-----+---------+-------+
+| Field | Type                               | Null | Key | Default | Extra |
++-------+------------------------------------+------+-----+---------+-------+
+| c1    | int                                | YES  |     | NULL    |       |
+| c2    | set('Red','Blue','Green','Yellow') | YES  |     | NULL    |       |
++-------+------------------------------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select find_in_set('Green', c2) from e;
++--------------------------+
+| find_in_set('Green', c2) |
++--------------------------+
+|                        0 |
+|                        3 |
+|                        3 |
+|                        3 |
++--------------------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from e;
++------+------------------+
+| c1   | c2               |
++------+------------------+
+|    1 | Red              |
+|    2 | Red,Green        |
+|    3 | Red,Green        |
+|    4 | Red,Green,Yellow |
++------+------------------+
+4 rows in set (0.00 sec)
+
+mysql> desc e;
++-------+------------------------------------+------+-----+---------+-------+
+| Field | Type                               | Null | Key | Default | Extra |
++-------+------------------------------------+------+-----+---------+-------+
+| c1    | int                                | YES  |     | NULL    |       |
+| c2    | set('Red','Blue','Green','Yellow') | YES  |     | NULL    |       |
++-------+------------------------------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> create table f(c1 int, c2 enum('A','B','G'), c3 varchar(20) generated always as ( case    when c2='A' then 'Apple'        when c2='B' then 'Banana'       when c2='G' then 'Grapes' end ));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc f;
++-------+-------------------+------+-----+---------+-------------------+
+| Field | Type              | Null | Key | Default | Extra             |
++-------+-------------------+------+-----+---------+-------------------+
+| c1    | int               | YES  |     | NULL    |                   |
+| c2    | enum('A','B','G') | YES  |     | NULL    |                   |
+| c3    | varchar(20)       | YES  |     | NULL    | VIRTUAL GENERATED |
++-------+-------------------+------+-----+---------+-------------------+
+3 rows in set (0.00 sec)
+
+mysql> insert int f(c1, c2) values(1,'A');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'int f(c1, c2) values(1,'A')' at line 1
+mysql>
+mysql>
+mysql> insert into f(c1, c2) values(1,'A');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into f(c1, c2) values(2,'B');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into f(c1, c2) values(3,'G');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from f;
++------+------+--------+
+| c1   | c2   | c3     |
++------+------+--------+
+|    1 | A    | Apple  |
+|    2 | B    | Banana |
+|    3 | G    | Grapes |
++------+------+--------+
+3 rows in set (0.00 sec)
+
+mysql> update f set c2='G' where c1=1;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from f;
++------+------+--------+
+| c1   | c2   | c3     |
++------+------+--------+
+|    1 | G    | Grapes |
+|    2 | B    | Banana |
+|    3 | G    | Grapes |
++------+------+--------+
+3 rows in set (0.00 sec)
+
+mysql> select * from f where  c3='Grapes';
++------+------+--------+
+| c1   | c2   | c3     |
++------+------+--------+
+|    1 | G    | Grapes |
+|    3 | G    | Grapes |
++------+------+--------+
+2 rows in set (0.00 sec)
+
+mysql> update f set c2='A' where  c3='Grapes';
+Query OK, 2 rows affected (0.02 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from f;
++------+------+--------+
+| c1   | c2   | c3     |
++------+------+--------+
+|    1 | A    | Apple  |
+|    2 | B    | Banana |
+|    3 | A    | Apple  |
++------+------+--------+
+3 rows in set (0.00 sec)
+
+mysql> insert into f(c1, c2) values(3,'K');
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> select * from f;
++------+------+--------+
+| c1   | c2   | c3     |
++------+------+--------+
+|    1 | A    | Apple  |
+|    2 | B    | Banana |
+|    3 | A    | Apple  |
+|    3 |      | NULL   |
++------+------+--------+
+4 rows in set (0.00 sec)
+
+mysql> create table g(c1 int, c2 enum('A','B','G'), c3 varchar(20) generated always as ( case        when c2='A' then 'Apple'        when c2='B' then 'Banana'       when c2='G' then 'Grapes' else 'Invalid Data' end ));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert into f(c1, c2) values(3,'K');
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> select * from f;
++------+------+--------+
+| c1   | c2   | c3     |
++------+------+--------+
+|    1 | A    | Apple  |
+|    2 | B    | Banana |
+|    3 | A    | Apple  |
+|    3 |      | NULL   |
+|    3 |      | NULL   |
++------+------+--------+
+5 rows in set (0.00 sec)
+
+mysql> select * from g;
+Empty set (0.01 sec)
+
+mysql> insert into g(c1, c2) values(3,'K');
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> select * from g;
++------+------+--------------+
+| c1   | c2   | c3           |
++------+------+--------------+
+|    3 |      | Invalid Data |
++------+------+--------------+
+1 row in set (0.00 sec)
+
+mysql> desc g;
++-------+-------------------+------+-----+---------+-------------------+
+| Field | Type              | Null | Key | Default | Extra             |
++-------+-------------------+------+-----+---------+-------------------+
+| c1    | int               | YES  |     | NULL    |                   |
+| c2    | enum('A','B','G') | YES  |     | NULL    |                   |
+| c3    | varchar(20)       | YES  |     | NULL    | VIRTUAL GENERATED |
++-------+-------------------+------+-----+---------+-------------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from f;
++------+------+--------+
+| c1   | c2   | c3     |
++------+------+--------+
+|    1 | A    | Apple  |
+|    2 | B    | Banana |
+|    3 | A    | Apple  |
+|    3 |      | NULL   |
+|    3 |      | NULL   |
++------+------+--------+
+5 rows in set (0.00 sec)
+
+mysql> show tables;
++-------------+
+| Tables_in_x |
++-------------+
+| a           |
+| b           |
+| c           |
+| d           |
+| e           |
+| emp         |
+| f           |
+| g           |
+| orders      |
++-------------+
+9 rows in set (0.01 sec)
+
+mysql> select * from emp;
++------+--------+------------+
+| id   | ename1 | ename2     |
++------+--------+------------+
+| 1001 | saleel | saleel     |
++------+--------+------------+
+1 row in set (0.00 sec)
+
+mysql> select rate from orders;
++-------+
+| rate  |
++-------+
+| 75.35 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select product_name, rate from orders;
++--------------+-------+
+| product_name | rate  |
++--------------+-------+
+| Bread        | 75.35 |
++--------------+-------+
+1 row in set (0.00 sec)
+
+mysql> use db1;
+Database changed
+mysql> select ename, sal from emp;
++----------+------+
+| ename    | sal  |
++----------+------+
+| GITA     | 1750 |
+| VRUSHALI | 1750 |
+| SHARMIN  | 1750 |
+| BANDISH  | 1750 |
+| SMITH    |  800 |
+| AARAV    | 3350 |
+| THOMAS   | 1750 |
+| ALLEN    | 1600 |
+| WARD     | 1250 |
+| JONES    | 2975 |
+| MARTIN   | 1250 |
+| BLAKE    | 2850 |
+| CLARK    | 2450 |
+| SCOTT    | 3000 |
+| KING     | 5000 |
+| FRED     | 5000 |
+| TURNER   | 1500 |
+| ADAMS    | 1100 |
+| Ruhan    | 2000 |
+| Neel     | 1000 |
+| JAMES    |  950 |
+| FORD     | 3000 |
+| HOFFMAN  | 4150 |
+| GRASS    | 2575 |
+| MILLER   | 1300 |
+| AARUSH   | 1350 |
+| ALEX     | 1250 |
+| NATASHA  | 1750 |
+| SANGITA  | 1750 |
+| SUPRIYA  | 1750 |
++----------+------+
+30 rows in set (0.01 sec)
+
+mysql> select ename, sal, sal+1000 from emp;
++----------+------+----------+
+| ename    | sal  | sal+1000 |
++----------+------+----------+
+| GITA     | 1750 |     2750 |
+| VRUSHALI | 1750 |     2750 |
+| SHARMIN  | 1750 |     2750 |
+| BANDISH  | 1750 |     2750 |
+| SMITH    |  800 |     1800 |
+| AARAV    | 3350 |     4350 |
+| THOMAS   | 1750 |     2750 |
+| ALLEN    | 1600 |     2600 |
+| WARD     | 1250 |     2250 |
+| JONES    | 2975 |     3975 |
+| MARTIN   | 1250 |     2250 |
+| BLAKE    | 2850 |     3850 |
+| CLARK    | 2450 |     3450 |
+| SCOTT    | 3000 |     4000 |
+| KING     | 5000 |     6000 |
+| FRED     | 5000 |     6000 |
+| TURNER   | 1500 |     2500 |
+| ADAMS    | 1100 |     2100 |
+| Ruhan    | 2000 |     3000 |
+| Neel     | 1000 |     2000 |
+| JAMES    |  950 |     1950 |
+| FORD     | 3000 |     4000 |
+| HOFFMAN  | 4150 |     5150 |
+| GRASS    | 2575 |     3575 |
+| MILLER   | 1300 |     2300 |
+| AARUSH   | 1350 |     2350 |
+| ALEX     | 1250 |     2250 |
+| NATASHA  | 1750 |     2750 |
+| SANGITA  | 1750 |     2750 |
+| SUPRIYA  | 1750 |     2750 |
++----------+------+----------+
+30 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> select 2134+23432;
++------------+
+| 2134+23432 |
++------------+
+|      25566 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select ename, sal, sal+1000, sal*1.1 from emp;
++----------+------+----------+---------+
+| ename    | sal  | sal+1000 | sal*1.1 |
++----------+------+----------+---------+
+| GITA     | 1750 |     2750 |  1925.0 |
+| VRUSHALI | 1750 |     2750 |  1925.0 |
+| SHARMIN  | 1750 |     2750 |  1925.0 |
+| BANDISH  | 1750 |     2750 |  1925.0 |
+| SMITH    |  800 |     1800 |   880.0 |
+| AARAV    | 3350 |     4350 |  3685.0 |
+| THOMAS   | 1750 |     2750 |  1925.0 |
+| ALLEN    | 1600 |     2600 |  1760.0 |
+| WARD     | 1250 |     2250 |  1375.0 |
+| JONES    | 2975 |     3975 |  3272.5 |
+| MARTIN   | 1250 |     2250 |  1375.0 |
+| BLAKE    | 2850 |     3850 |  3135.0 |
+| CLARK    | 2450 |     3450 |  2695.0 |
+| SCOTT    | 3000 |     4000 |  3300.0 |
+| KING     | 5000 |     6000 |  5500.0 |
+| FRED     | 5000 |     6000 |  5500.0 |
+| TURNER   | 1500 |     2500 |  1650.0 |
+| ADAMS    | 1100 |     2100 |  1210.0 |
+| Ruhan    | 2000 |     3000 |  2200.0 |
+| Neel     | 1000 |     2000 |  1100.0 |
+| JAMES    |  950 |     1950 |  1045.0 |
+| FORD     | 3000 |     4000 |  3300.0 |
+| HOFFMAN  | 4150 |     5150 |  4565.0 |
+| GRASS    | 2575 |     3575 |  2832.5 |
+| MILLER   | 1300 |     2300 |  1430.0 |
+| AARUSH   | 1350 |     2350 |  1485.0 |
+| ALEX     | 1250 |     2250 |  1375.0 |
+| NATASHA  | 1750 |     2750 |  1925.0 |
+| SANGITA  | 1750 |     2750 |  1925.0 |
+| SUPRIYA  | 1750 |     2750 |  1925.0 |
++----------+------+----------+---------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, sal, sal+1000, sal*1.1, sal *.10 from emp;
++----------+------+----------+---------+----------+
+| ename    | sal  | sal+1000 | sal*1.1 | sal *.10 |
++----------+------+----------+---------+----------+
+| GITA     | 1750 |     2750 |  1925.0 |   175.00 |
+| VRUSHALI | 1750 |     2750 |  1925.0 |   175.00 |
+| SHARMIN  | 1750 |     2750 |  1925.0 |   175.00 |
+| BANDISH  | 1750 |     2750 |  1925.0 |   175.00 |
+| SMITH    |  800 |     1800 |   880.0 |    80.00 |
+| AARAV    | 3350 |     4350 |  3685.0 |   335.00 |
+| THOMAS   | 1750 |     2750 |  1925.0 |   175.00 |
+| ALLEN    | 1600 |     2600 |  1760.0 |   160.00 |
+| WARD     | 1250 |     2250 |  1375.0 |   125.00 |
+| JONES    | 2975 |     3975 |  3272.5 |   297.50 |
+| MARTIN   | 1250 |     2250 |  1375.0 |   125.00 |
+| BLAKE    | 2850 |     3850 |  3135.0 |   285.00 |
+| CLARK    | 2450 |     3450 |  2695.0 |   245.00 |
+| SCOTT    | 3000 |     4000 |  3300.0 |   300.00 |
+| KING     | 5000 |     6000 |  5500.0 |   500.00 |
+| FRED     | 5000 |     6000 |  5500.0 |   500.00 |
+| TURNER   | 1500 |     2500 |  1650.0 |   150.00 |
+| ADAMS    | 1100 |     2100 |  1210.0 |   110.00 |
+| Ruhan    | 2000 |     3000 |  2200.0 |   200.00 |
+| Neel     | 1000 |     2000 |  1100.0 |   100.00 |
+| JAMES    |  950 |     1950 |  1045.0 |    95.00 |
+| FORD     | 3000 |     4000 |  3300.0 |   300.00 |
+| HOFFMAN  | 4150 |     5150 |  4565.0 |   415.00 |
+| GRASS    | 2575 |     3575 |  2832.5 |   257.50 |
+| MILLER   | 1300 |     2300 |  1430.0 |   130.00 |
+| AARUSH   | 1350 |     2350 |  1485.0 |   135.00 |
+| ALEX     | 1250 |     2250 |  1375.0 |   125.00 |
+| NATASHA  | 1750 |     2750 |  1925.0 |   175.00 |
+| SANGITA  | 1750 |     2750 |  1925.0 |   175.00 |
+| SUPRIYA  | 1750 |     2750 |  1925.0 |   175.00 |
++----------+------+----------+---------+----------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, sal, sal+1000, sal*1.1, sal + sal *.10 from emp;
++----------+------+----------+---------+----------------+
+| ename    | sal  | sal+1000 | sal*1.1 | sal + sal *.10 |
++----------+------+----------+---------+----------------+
+| GITA     | 1750 |     2750 |  1925.0 |        1925.00 |
+| VRUSHALI | 1750 |     2750 |  1925.0 |        1925.00 |
+| SHARMIN  | 1750 |     2750 |  1925.0 |        1925.00 |
+| BANDISH  | 1750 |     2750 |  1925.0 |        1925.00 |
+| SMITH    |  800 |     1800 |   880.0 |         880.00 |
+| AARAV    | 3350 |     4350 |  3685.0 |        3685.00 |
+| THOMAS   | 1750 |     2750 |  1925.0 |        1925.00 |
+| ALLEN    | 1600 |     2600 |  1760.0 |        1760.00 |
+| WARD     | 1250 |     2250 |  1375.0 |        1375.00 |
+| JONES    | 2975 |     3975 |  3272.5 |        3272.50 |
+| MARTIN   | 1250 |     2250 |  1375.0 |        1375.00 |
+| BLAKE    | 2850 |     3850 |  3135.0 |        3135.00 |
+| CLARK    | 2450 |     3450 |  2695.0 |        2695.00 |
+| SCOTT    | 3000 |     4000 |  3300.0 |        3300.00 |
+| KING     | 5000 |     6000 |  5500.0 |        5500.00 |
+| FRED     | 5000 |     6000 |  5500.0 |        5500.00 |
+| TURNER   | 1500 |     2500 |  1650.0 |        1650.00 |
+| ADAMS    | 1100 |     2100 |  1210.0 |        1210.00 |
+| Ruhan    | 2000 |     3000 |  2200.0 |        2200.00 |
+| Neel     | 1000 |     2000 |  1100.0 |        1100.00 |
+| JAMES    |  950 |     1950 |  1045.0 |        1045.00 |
+| FORD     | 3000 |     4000 |  3300.0 |        3300.00 |
+| HOFFMAN  | 4150 |     5150 |  4565.0 |        4565.00 |
+| GRASS    | 2575 |     3575 |  2832.5 |        2832.50 |
+| MILLER   | 1300 |     2300 |  1430.0 |        1430.00 |
+| AARUSH   | 1350 |     2350 |  1485.0 |        1485.00 |
+| ALEX     | 1250 |     2250 |  1375.0 |        1375.00 |
+| NATASHA  | 1750 |     2750 |  1925.0 |        1925.00 |
+| SANGITA  | 1750 |     2750 |  1925.0 |        1925.00 |
+| SUPRIYA  | 1750 |     2750 |  1925.0 |        1925.00 |
++----------+------+----------+---------+----------------+
+30 rows in set (0.00 sec)
+
+mysql> use x;
+Database changed
+mysql> select rate from orders;
++-------+
+| rate  |
++-------+
+| 75.35 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> update orders set rate = rate*1.10;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select rate from orders;
++-------+
+| rate  |
++-------+
+| 82.88 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> update orders set rate = rate*1.10;
+
+
+
+
+
+
+
+
+
+
+
