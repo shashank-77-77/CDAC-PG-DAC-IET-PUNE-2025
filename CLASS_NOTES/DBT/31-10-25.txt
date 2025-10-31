@@ -1,0 +1,3461 @@
+Microsoft Windows [Version 10.0.26200.7019]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\SALEEL>mysql --user=root --password=root db1
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.41 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use db1
+Database changed
+mysql> select sal, comm from emp;
++------+------+
+| sal  | comm |
++------+------+
+| 1750 | NULL |
+| 1750 | NULL |
+| 1750 | NULL |
+| 1750 | NULL |
+|  800 | NULL |
+| 3350 | NULL |
+| 1750 | NULL |
+| 1600 |  300 |
+| 1250 |  500 |
+| 2975 | NULL |
+| 1250 | 1400 |
+| 2850 | NULL |
+| 2450 | NULL |
+| 3000 | NULL |
+| 5000 | NULL |
+| 5000 | NULL |
+| 1500 |    0 |
+| 1100 | NULL |
+| 2000 | NULL |
+| 1000 | NULL |
+|  950 | NULL |
+| 3000 | NULL |
+| 4150 | NULL |
+| 2575 | 2700 |
+| 1300 | 1300 |
+| 1350 | 2700 |
+| 1250 |  500 |
+| 1750 | NULL |
+| 1750 | NULL |
+| 1750 | NULL |
++------+------+
+30 rows in set (0.01 sec)
+
+mysql> select sal, comm, sal+comm from emp;
++------+------+----------+
+| sal  | comm | sal+comm |
++------+------+----------+
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+|  800 | NULL |     NULL |
+| 3350 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+| 1600 |  300 |     1900 |
+| 1250 |  500 |     1750 |
+| 2975 | NULL |     NULL |
+| 1250 | 1400 |     2650 |
+| 2850 | NULL |     NULL |
+| 2450 | NULL |     NULL |
+| 3000 | NULL |     NULL |
+| 5000 | NULL |     NULL |
+| 5000 | NULL |     NULL |
+| 1500 |    0 |     1500 |
+| 1100 | NULL |     NULL |
+| 2000 | NULL |     NULL |
+| 1000 | NULL |     NULL |
+|  950 | NULL |     NULL |
+| 3000 | NULL |     NULL |
+| 4150 | NULL |     NULL |
+| 2575 | 2700 |     5275 |
+| 1300 | 1300 |     2600 |
+| 1350 | 2700 |     4050 |
+| 1250 |  500 |     1750 |
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
++------+------+----------+
+30 rows in set (0.01 sec)
+
+mysql>
+mysql>
+mysql> desc emp;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EMPNO     | int         | NO   | PRI | NULL    |       |
+| ENAME     | varchar(12) | YES  |     | NULL    |       |
+| GENDER    | char(1)     | YES  |     | NULL    |       |
+| JOB       | varchar(20) | YES  |     | NULL    |       |
+| MGR       | int         | YES  | MUL | NULL    |       |
+| HIREDATE  | date        | YES  |     | NULL    |       |
+| SAL       | int         | YES  |     | NULL    |       |
+| COMM      | int         | YES  |     | NULL    |       |
+| DEPTNO    | int         | NO   | MUL | NULL    |       |
+| BONUSID   | int         | YES  |     | NULL    |       |
+| USER NAME | varchar(20) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| PHONE     | varchar(45) | YES  |     | NULL    |       |
+| isActive  | tinyint(1)  | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+14 rows in set (0.08 sec)
+
+mysql> select sal Salary, comm, sal+comm from emp;
++--------+------+----------+
+| Salary | comm | sal+comm |
++--------+------+----------+
+|   1750 | NULL |     NULL |
+|   1750 | NULL |     NULL |
+|   1750 | NULL |     NULL |
+|   1750 | NULL |     NULL |
+|    800 | NULL |     NULL |
+|   3350 | NULL |     NULL |
+|   1750 | NULL |     NULL |
+|   1600 |  300 |     1900 |
+|   1250 |  500 |     1750 |
+|   2975 | NULL |     NULL |
+|   1250 | 1400 |     2650 |
+|   2850 | NULL |     NULL |
+|   2450 | NULL |     NULL |
+|   3000 | NULL |     NULL |
+|   5000 | NULL |     NULL |
+|   5000 | NULL |     NULL |
+|   1500 |    0 |     1500 |
+|   1100 | NULL |     NULL |
+|   2000 | NULL |     NULL |
+|   1000 | NULL |     NULL |
+|    950 | NULL |     NULL |
+|   3000 | NULL |     NULL |
+|   4150 | NULL |     NULL |
+|   2575 | 2700 |     5275 |
+|   1300 | 1300 |     2600 |
+|   1350 | 2700 |     4050 |
+|   1250 |  500 |     1750 |
+|   1750 | NULL |     NULL |
+|   1750 | NULL |     NULL |
+|   1750 | NULL |     NULL |
++--------+------+----------+
+30 rows in set (0.00 sec)
+
+mysql>
+mysql> select sal Salary, comm Commission, sal+comm from emp;
++--------+------------+----------+
+| Salary | Commission | sal+comm |
++--------+------------+----------+
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|    800 |       NULL |     NULL |
+|   3350 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|   1600 |        300 |     1900 |
+|   1250 |        500 |     1750 |
+|   2975 |       NULL |     NULL |
+|   1250 |       1400 |     2650 |
+|   2850 |       NULL |     NULL |
+|   2450 |       NULL |     NULL |
+|   3000 |       NULL |     NULL |
+|   5000 |       NULL |     NULL |
+|   5000 |       NULL |     NULL |
+|   1500 |          0 |     1500 |
+|   1100 |       NULL |     NULL |
+|   2000 |       NULL |     NULL |
+|   1000 |       NULL |     NULL |
+|    950 |       NULL |     NULL |
+|   3000 |       NULL |     NULL |
+|   4150 |       NULL |     NULL |
+|   2575 |       2700 |     5275 |
+|   1300 |       1300 |     2600 |
+|   1350 |       2700 |     4050 |
+|   1250 |        500 |     1750 |
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
++--------+------------+----------+
+30 rows in set (0.00 sec)
+
+mysql>
+mysql> select sal Salary, comm Commission, sal+comm 'Grand Total' from emp;
++--------+------------+-------------+
+| Salary | Commission | Grand Total |
++--------+------------+-------------+
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|    800 |       NULL |        NULL |
+|   3350 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|   1600 |        300 |        1900 |
+|   1250 |        500 |        1750 |
+|   2975 |       NULL |        NULL |
+|   1250 |       1400 |        2650 |
+|   2850 |       NULL |        NULL |
+|   2450 |       NULL |        NULL |
+|   3000 |       NULL |        NULL |
+|   5000 |       NULL |        NULL |
+|   5000 |       NULL |        NULL |
+|   1500 |          0 |        1500 |
+|   1100 |       NULL |        NULL |
+|   2000 |       NULL |        NULL |
+|   1000 |       NULL |        NULL |
+|    950 |       NULL |        NULL |
+|   3000 |       NULL |        NULL |
+|   4150 |       NULL |        NULL |
+|   2575 |       2700 |        5275 |
+|   1300 |       1300 |        2600 |
+|   1350 |       2700 |        4050 |
+|   1250 |        500 |        1750 |
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
++--------+------------+-------------+
+30 rows in set (0.00 sec)
+
+mysql>
+mysql> select sal Salary, comm Commission, sal+comm 'Grand Total', abc from emp;
+ERROR 1054 (42S22): Unknown column 'abc' in 'field list'
+mysql> select sal Salary, comm Commission, sal+comm 'Grand Total', 'abc' from emp;
++--------+------------+-------------+-----+
+| Salary | Commission | Grand Total | abc |
++--------+------------+-------------+-----+
+|   1750 |       NULL |        NULL | abc |
+|   1750 |       NULL |        NULL | abc |
+|   1750 |       NULL |        NULL | abc |
+|   1750 |       NULL |        NULL | abc |
+|    800 |       NULL |        NULL | abc |
+|   3350 |       NULL |        NULL | abc |
+|   1750 |       NULL |        NULL | abc |
+|   1600 |        300 |        1900 | abc |
+|   1250 |        500 |        1750 | abc |
+|   2975 |       NULL |        NULL | abc |
+|   1250 |       1400 |        2650 | abc |
+|   2850 |       NULL |        NULL | abc |
+|   2450 |       NULL |        NULL | abc |
+|   3000 |       NULL |        NULL | abc |
+|   5000 |       NULL |        NULL | abc |
+|   5000 |       NULL |        NULL | abc |
+|   1500 |          0 |        1500 | abc |
+|   1100 |       NULL |        NULL | abc |
+|   2000 |       NULL |        NULL | abc |
+|   1000 |       NULL |        NULL | abc |
+|    950 |       NULL |        NULL | abc |
+|   3000 |       NULL |        NULL | abc |
+|   4150 |       NULL |        NULL | abc |
+|   2575 |       2700 |        5275 | abc |
+|   1300 |       1300 |        2600 | abc |
+|   1350 |       2700 |        4050 | abc |
+|   1250 |        500 |        1750 | abc |
+|   1750 |       NULL |        NULL | abc |
+|   1750 |       NULL |        NULL | abc |
+|   1750 |       NULL |        NULL | abc |
++--------+------------+-------------+-----+
+30 rows in set (0.00 sec)
+
+mysql> select sal Salary, comm Commission, sal+comm 'Grand Total', 'abc' R1 from emp;
+
++--------+------------+-------------+-----+
+| Salary | Commission | Grand Total | R1  |
++--------+------------+-------------+-----+
+|   1750 |       NULL |        NULL | abc |
+|   1750 |       NULL |        NULL | abc |
+|   1750 |       NULL |        NULL | abc |
+|   1750 |       NULL |        NULL | abc |
+|    800 |       NULL |        NULL | abc |
+|   3350 |       NULL |        NULL | abc |
+|   1750 |       NULL |        NULL | abc |
+|   1600 |        300 |        1900 | abc |
+|   1250 |        500 |        1750 | abc |
+|   2975 |       NULL |        NULL | abc |
+|   1250 |       1400 |        2650 | abc |
+|   2850 |       NULL |        NULL | abc |
+|   2450 |       NULL |        NULL | abc |
+|   3000 |       NULL |        NULL | abc |
+|   5000 |       NULL |        NULL | abc |
+|   5000 |       NULL |        NULL | abc |
+|   1500 |          0 |        1500 | abc |
+|   1100 |       NULL |        NULL | abc |
+|   2000 |       NULL |        NULL | abc |
+|   1000 |       NULL |        NULL | abc |
+|    950 |       NULL |        NULL | abc |
+|   3000 |       NULL |        NULL | abc |
+|   4150 |       NULL |        NULL | abc |
+|   2575 |       2700 |        5275 | abc |
+|   1300 |       1300 |        2600 | abc |
+|   1350 |       2700 |        4050 | abc |
+|   1250 |        500 |        1750 | abc |
+|   1750 |       NULL |        NULL | abc |
+|   1750 |       NULL |        NULL | abc |
+|   1750 |       NULL |        NULL | abc |
++--------+------------+-------------+-----+
+30 rows in set (0.00 sec)
+
+mysql> select sal Salary, comm Commission, ifnull(sal+comm, 0) 'Grand Total', 'abc' R1 from emp;
++--------+------------+-------------+-----+
+| Salary | Commission | Grand Total | R1  |
++--------+------------+-------------+-----+
+|   1750 |       NULL |           0 | abc |
+|   1750 |       NULL |           0 | abc |
+|   1750 |       NULL |           0 | abc |
+|   1750 |       NULL |           0 | abc |
+|    800 |       NULL |           0 | abc |
+|   3350 |       NULL |           0 | abc |
+|   1750 |       NULL |           0 | abc |
+|   1600 |        300 |        1900 | abc |
+|   1250 |        500 |        1750 | abc |
+|   2975 |       NULL |           0 | abc |
+|   1250 |       1400 |        2650 | abc |
+|   2850 |       NULL |           0 | abc |
+|   2450 |       NULL |           0 | abc |
+|   3000 |       NULL |           0 | abc |
+|   5000 |       NULL |           0 | abc |
+|   5000 |       NULL |           0 | abc |
+|   1500 |          0 |        1500 | abc |
+|   1100 |       NULL |           0 | abc |
+|   2000 |       NULL |           0 | abc |
+|   1000 |       NULL |           0 | abc |
+|    950 |       NULL |           0 | abc |
+|   3000 |       NULL |           0 | abc |
+|   4150 |       NULL |           0 | abc |
+|   2575 |       2700 |        5275 | abc |
+|   1300 |       1300 |        2600 | abc |
+|   1350 |       2700 |        4050 | abc |
+|   1250 |        500 |        1750 | abc |
+|   1750 |       NULL |           0 | abc |
+|   1750 |       NULL |           0 | abc |
+|   1750 |       NULL |           0 | abc |
++--------+------------+-------------+-----+
+30 rows in set (0.00 sec)
+
+mysql> select sal Salary, comm Commission, sal+ ifnull(comm, 0) 'Grand Total', 'abc' R1 from emp;
++--------+------------+-------------+-----+
+| Salary | Commission | Grand Total | R1  |
++--------+------------+-------------+-----+
+|   1750 |       NULL |        1750 | abc |
+|   1750 |       NULL |        1750 | abc |
+|   1750 |       NULL |        1750 | abc |
+|   1750 |       NULL |        1750 | abc |
+|    800 |       NULL |         800 | abc |
+|   3350 |       NULL |        3350 | abc |
+|   1750 |       NULL |        1750 | abc |
+|   1600 |        300 |        1900 | abc |
+|   1250 |        500 |        1750 | abc |
+|   2975 |       NULL |        2975 | abc |
+|   1250 |       1400 |        2650 | abc |
+|   2850 |       NULL |        2850 | abc |
+|   2450 |       NULL |        2450 | abc |
+|   3000 |       NULL |        3000 | abc |
+|   5000 |       NULL |        5000 | abc |
+|   5000 |       NULL |        5000 | abc |
+|   1500 |          0 |        1500 | abc |
+|   1100 |       NULL |        1100 | abc |
+|   2000 |       NULL |        2000 | abc |
+|   1000 |       NULL |        1000 | abc |
+|    950 |       NULL |         950 | abc |
+|   3000 |       NULL |        3000 | abc |
+|   4150 |       NULL |        4150 | abc |
+|   2575 |       2700 |        5275 | abc |
+|   1300 |       1300 |        2600 | abc |
+|   1350 |       2700 |        4050 | abc |
+|   1250 |        500 |        1750 | abc |
+|   1750 |       NULL |        1750 | abc |
+|   1750 |       NULL |        1750 | abc |
+|   1750 |       NULL |        1750 | abc |
++--------+------------+-------------+-----+
+30 rows in set (0.00 sec)
+
+mysql>
+mysql> select sal Salary, comm Commission, sal+ ifnull(comm, 0) 'Grand Total', 'abc' R1 from emp e;
++--------+------------+-------------+-----+
+| Salary | Commission | Grand Total | R1  |
++--------+------------+-------------+-----+
+|   1750 |       NULL |        1750 | abc |
+|   1750 |       NULL |        1750 | abc |
+|   1750 |       NULL |        1750 | abc |
+|   1750 |       NULL |        1750 | abc |
+|    800 |       NULL |         800 | abc |
+|   3350 |       NULL |        3350 | abc |
+|   1750 |       NULL |        1750 | abc |
+|   1600 |        300 |        1900 | abc |
+|   1250 |        500 |        1750 | abc |
+|   2975 |       NULL |        2975 | abc |
+|   1250 |       1400 |        2650 | abc |
+|   2850 |       NULL |        2850 | abc |
+|   2450 |       NULL |        2450 | abc |
+|   3000 |       NULL |        3000 | abc |
+|   5000 |       NULL |        5000 | abc |
+|   5000 |       NULL |        5000 | abc |
+|   1500 |          0 |        1500 | abc |
+|   1100 |       NULL |        1100 | abc |
+|   2000 |       NULL |        2000 | abc |
+|   1000 |       NULL |        1000 | abc |
+|    950 |       NULL |         950 | abc |
+|   3000 |       NULL |        3000 | abc |
+|   4150 |       NULL |        4150 | abc |
+|   2575 |       2700 |        5275 | abc |
+|   1300 |       1300 |        2600 | abc |
+|   1350 |       2700 |        4050 | abc |
+|   1250 |        500 |        1750 | abc |
+|   1750 |       NULL |        1750 | abc |
+|   1750 |       NULL |        1750 | abc |
+|   1750 |       NULL |        1750 | abc |
++--------+------------+-------------+-----+
+30 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql> select emp.ename, emp.job, emp.sal Salary from emp;
++----------+---------------------+--------+
+| ename    | job                 | Salary |
++----------+---------------------+--------+
+| GITA     | Compliance officers |   1750 |
+| VRUSHALI | Compliance officers |   1750 |
+| SHARMIN  | Public Relation     |   1750 |
+| BANDISH  | Public Relation     |   1750 |
+| SMITH    | CLERK               |    800 |
+| AARAV    | CLERK               |   3350 |
+| THOMAS   | CLERK               |   1750 |
+| ALLEN    | SALESMAN            |   1600 |
+| WARD     | SALESMAN            |   1250 |
+| JONES    | MANAGER             |   2975 |
+| MARTIN   | SALESMAN            |   1250 |
+| BLAKE    | MANAGER             |   2850 |
+| CLARK    | MANAGER             |   2450 |
+| SCOTT    | ANALYST             |   3000 |
+| KING     | PRESIDENT           |   5000 |
+| FRED     | vice PRESIDENT      |   5000 |
+| TURNER   | SALESMAN            |   1500 |
+| ADAMS    | CLERK               |   1100 |
+| Ruhan    | Network             |   2000 |
+| Neel     | vice PRESIDENT      |   1000 |
+| JAMES    | CLERK               |    950 |
+| FORD     | ANALYST             |   3000 |
+| HOFFMAN  | MANAGER             |   4150 |
+| GRASS    | SALESMAN            |   2575 |
+| MILLER   | CLERK               |   1300 |
+| AARUSH   | SALESMAN            |   1350 |
+| ALEX     | MANAGER             |   1250 |
+| NATASHA  | CLERK               |   1750 |
+| SANGITA  | Compliance officers |   1750 |
+| SUPRIYA  | ANALYST             |   1750 |
++----------+---------------------+--------+
+30 rows in set (0.00 sec)
+
+mysql> select emp.ename, emp.job, emp.sal Salary from emp;
++----------+---------------------+--------+
+| ename    | job                 | Salary |
++----------+---------------------+--------+
+| GITA     | Compliance officers |   1750 |
+| VRUSHALI | Compliance officers |   1750 |
+| SHARMIN  | Public Relation     |   1750 |
+| BANDISH  | Public Relation     |   1750 |
+| SMITH    | CLERK               |    800 |
+| AARAV    | CLERK               |   3350 |
+| THOMAS   | CLERK               |   1750 |
+| ALLEN    | SALESMAN            |   1600 |
+| WARD     | SALESMAN            |   1250 |
+| JONES    | MANAGER             |   2975 |
+| MARTIN   | SALESMAN            |   1250 |
+| BLAKE    | MANAGER             |   2850 |
+| CLARK    | MANAGER             |   2450 |
+| SCOTT    | ANALYST             |   3000 |
+| KING     | PRESIDENT           |   5000 |
+| FRED     | vice PRESIDENT      |   5000 |
+| TURNER   | SALESMAN            |   1500 |
+| ADAMS    | CLERK               |   1100 |
+| Ruhan    | Network             |   2000 |
+| Neel     | vice PRESIDENT      |   1000 |
+| JAMES    | CLERK               |    950 |
+| FORD     | ANALYST             |   3000 |
+| HOFFMAN  | MANAGER             |   4150 |
+| GRASS    | SALESMAN            |   2575 |
+| MILLER   | CLERK               |   1300 |
+| AARUSH   | SALESMAN            |   1350 |
+| ALEX     | MANAGER             |   1250 |
+| NATASHA  | CLERK               |   1750 |
+| SANGITA  | Compliance officers |   1750 |
+| SUPRIYA  | ANALYST             |   1750 |
++----------+---------------------+--------+
+30 rows in set (0.00 sec)
+
+mysql> select emp.ename, emp.job, emp.sal Salary from emp;
++----------+---------------------+--------+
+| ename    | job                 | Salary |
++----------+---------------------+--------+
+| GITA     | Compliance officers |   1750 |
+| VRUSHALI | Compliance officers |   1750 |
+| SHARMIN  | Public Relation     |   1750 |
+| BANDISH  | Public Relation     |   1750 |
+| SMITH    | CLERK               |    800 |
+| AARAV    | CLERK               |   3350 |
+| THOMAS   | CLERK               |   1750 |
+| ALLEN    | SALESMAN            |   1600 |
+| WARD     | SALESMAN            |   1250 |
+| JONES    | MANAGER             |   2975 |
+| MARTIN   | SALESMAN            |   1250 |
+| BLAKE    | MANAGER             |   2850 |
+| CLARK    | MANAGER             |   2450 |
+| SCOTT    | ANALYST             |   3000 |
+| KING     | PRESIDENT           |   5000 |
+| FRED     | vice PRESIDENT      |   5000 |
+| TURNER   | SALESMAN            |   1500 |
+| ADAMS    | CLERK               |   1100 |
+| Ruhan    | Network             |   2000 |
+| Neel     | vice PRESIDENT      |   1000 |
+| JAMES    | CLERK               |    950 |
+| FORD     | ANALYST             |   3000 |
+| HOFFMAN  | MANAGER             |   4150 |
+| GRASS    | SALESMAN            |   2575 |
+| MILLER   | CLERK               |   1300 |
+| AARUSH   | SALESMAN            |   1350 |
+| ALEX     | MANAGER             |   1250 |
+| NATASHA  | CLERK               |   1750 |
+| SANGITA  | Compliance officers |   1750 |
+| SUPRIYA  | ANALYST             |   1750 |
++----------+---------------------+--------+
+30 rows in set (0.00 sec)
+
+mysql> select emp.ename, emp.job, emp.sal Salary from emp e;
+ERROR 1054 (42S22): Unknown column 'emp.ename' in 'field list'
+mysql> select emp.ename, emp.job, emp.sal Salary from emp ;
++----------+---------------------+--------+
+| ename    | job                 | Salary |
++----------+---------------------+--------+
+| GITA     | Compliance officers |   1750 |
+| VRUSHALI | Compliance officers |   1750 |
+| SHARMIN  | Public Relation     |   1750 |
+| BANDISH  | Public Relation     |   1750 |
+| SMITH    | CLERK               |    800 |
+| AARAV    | CLERK               |   3350 |
+| THOMAS   | CLERK               |   1750 |
+| ALLEN    | SALESMAN            |   1600 |
+| WARD     | SALESMAN            |   1250 |
+| JONES    | MANAGER             |   2975 |
+| MARTIN   | SALESMAN            |   1250 |
+| BLAKE    | MANAGER             |   2850 |
+| CLARK    | MANAGER             |   2450 |
+| SCOTT    | ANALYST             |   3000 |
+| KING     | PRESIDENT           |   5000 |
+| FRED     | vice PRESIDENT      |   5000 |
+| TURNER   | SALESMAN            |   1500 |
+| ADAMS    | CLERK               |   1100 |
+| Ruhan    | Network             |   2000 |
+| Neel     | vice PRESIDENT      |   1000 |
+| JAMES    | CLERK               |    950 |
+| FORD     | ANALYST             |   3000 |
+| HOFFMAN  | MANAGER             |   4150 |
+| GRASS    | SALESMAN            |   2575 |
+| MILLER   | CLERK               |   1300 |
+| AARUSH   | SALESMAN            |   1350 |
+| ALEX     | MANAGER             |   1250 |
+| NATASHA  | CLERK               |   1750 |
+| SANGITA  | Compliance officers |   1750 |
+| SUPRIYA  | ANALYST             |   1750 |
++----------+---------------------+--------+
+30 rows in set (0.00 sec)
+
+mysql> select emp.ename, emp.job, emp.sal Salary from emp e;
+ERROR 1054 (42S22): Unknown column 'emp.ename' in 'field list'
+mysql> select e.ename, e.job, e.sal Salary from emp e;
++----------+---------------------+--------+
+| ename    | job                 | Salary |
++----------+---------------------+--------+
+| GITA     | Compliance officers |   1750 |
+| VRUSHALI | Compliance officers |   1750 |
+| SHARMIN  | Public Relation     |   1750 |
+| BANDISH  | Public Relation     |   1750 |
+| SMITH    | CLERK               |    800 |
+| AARAV    | CLERK               |   3350 |
+| THOMAS   | CLERK               |   1750 |
+| ALLEN    | SALESMAN            |   1600 |
+| WARD     | SALESMAN            |   1250 |
+| JONES    | MANAGER             |   2975 |
+| MARTIN   | SALESMAN            |   1250 |
+| BLAKE    | MANAGER             |   2850 |
+| CLARK    | MANAGER             |   2450 |
+| SCOTT    | ANALYST             |   3000 |
+| KING     | PRESIDENT           |   5000 |
+| FRED     | vice PRESIDENT      |   5000 |
+| TURNER   | SALESMAN            |   1500 |
+| ADAMS    | CLERK               |   1100 |
+| Ruhan    | Network             |   2000 |
+| Neel     | vice PRESIDENT      |   1000 |
+| JAMES    | CLERK               |    950 |
+| FORD     | ANALYST             |   3000 |
+| HOFFMAN  | MANAGER             |   4150 |
+| GRASS    | SALESMAN            |   2575 |
+| MILLER   | CLERK               |   1300 |
+| AARUSH   | SALESMAN            |   1350 |
+| ALEX     | MANAGER             |   1250 |
+| NATASHA  | CLERK               |   1750 |
+| SANGITA  | Compliance officers |   1750 |
+| SUPRIYA  | ANALYST             |   1750 |
++----------+---------------------+--------+
+30 rows in set (0.00 sec)
+
+mysql> select e.ename, e.job, e.sal Salary from emp ;
+ERROR 1054 (42S22): Unknown column 'e.ename' in 'field list'
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> select '1' + '1';
++-----------+
+| '1' + '1' |
++-----------+
+|         2 |
++-----------+
+1 row in set (0.01 sec)
+
+mysql> desc numberString;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(45) | NO   | PRI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+1 row in set (0.02 sec)
+
+mysql> select * from numberString;
++---------------+
+| c1            |
++---------------+
+| 1saleel       |
+| 34sharmin     |
+| 56731vrushali |
+| 6001GITA      |
+| 6129VRUSHALI  |
+| 6473SHARMIN   |
+| 6781BANDISH   |
+| 7369SMITH     |
+| 7415AARAV     |
+| 7421THOMAS    |
+| 743ruhan      |
+| 7499ALLEN     |
+| 7521WARD      |
+| 7566JONES     |
+| 7654MARTIN    |
+| 7657822ajay   |
+| 7698BLAKE     |
+| 7782CLARK     |
+| 7788SCOTT     |
+| 7839KING      |
+| 7840FRED      |
+| 7844TURNER    |
+| 7876ADAMS     |
+| 7888Ruhan     |
+| 7889Neel      |
+| 7900JAMES     |
+| 7902FORD      |
+| 7919HOFFMAN   |
+| 7920GRASS     |
+| 7934MILLER    |
+| 7945AARUSH    |
+| 7949ALEX      |
+| 836379bandish |
+| 8433NATASHA   |
+| 9400SANGITA   |
+| 9473SUPRIYA   |
++---------------+
+36 rows in set (0.04 sec)
+
+mysql>
+mysql> select c1, c1/1 R1 from numberString;
++---------------+---------+
+| c1            | R1      |
++---------------+---------+
+| 1saleel       |       1 |
+| 34sharmin     |      34 |
+| 56731vrushali |   56731 |
+| 6001GITA      |    6001 |
+| 6129VRUSHALI  |    6129 |
+| 6473SHARMIN   |    6473 |
+| 6781BANDISH   |    6781 |
+| 7369SMITH     |    7369 |
+| 7415AARAV     |    7415 |
+| 7421THOMAS    |    7421 |
+| 743ruhan      |     743 |
+| 7499ALLEN     |    7499 |
+| 7521WARD      |    7521 |
+| 7566JONES     |    7566 |
+| 7654MARTIN    |    7654 |
+| 7657822ajay   | 7657822 |
+| 7698BLAKE     |    7698 |
+| 7782CLARK     |    7782 |
+| 7788SCOTT     |    7788 |
+| 7839KING      |    7839 |
+| 7840FRED      |    7840 |
+| 7844TURNER    |    7844 |
+| 7876ADAMS     |    7876 |
+| 7888Ruhan     |    7888 |
+| 7889Neel      |    7889 |
+| 7900JAMES     |    7900 |
+| 7902FORD      |    7902 |
+| 7919HOFFMAN   |    7919 |
+| 7920GRASS     |    7920 |
+| 7934MILLER    |    7934 |
+| 7945AARUSH    |    7945 |
+| 7949ALEX      |    7949 |
+| 836379bandish |  836379 |
+| 8433NATASHA   |    8433 |
+| 9400SANGITA   |    9400 |
+| 9473SUPRIYA   |    9473 |
++---------------+---------+
+36 rows in set, 36 warnings (0.00 sec)
+
+mysql> select 'saleel';
++--------+
+| saleel |
++--------+
+| saleel |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select 'saleel', lpad('saleel',9 , '*');
++--------+------------------------+
+| saleel | lpad('saleel',9 , '*') |
++--------+------------------------+
+| saleel | ***saleel              |
++--------+------------------------+
+1 row in set (0.01 sec)
+
+mysql> select 'saleel', rpad('saleel',9 , '*');
++--------+------------------------+
+| saleel | rpad('saleel',9 , '*') |
++--------+------------------------+
+| saleel | saleel***              |
++--------+------------------------+
+1 row in set (0.01 sec)
+
+mysql> select ename, phone from emp;
++----------+------------+
+| ename    | phone      |
++----------+------------+
+| GITA     | NULL       |
+| VRUSHALI | NULL       |
+| SHARMIN  | NULL       |
+| BANDISH  | NULL       |
+| SMITH    | 7032300023 |
+| AARAV    | 7032300084 |
+| THOMAS   | 7032300011 |
+| ALLEN    | 7032300096 |
+| WARD     | 7132300034 |
+| JONES    | 7132300039 |
+| MARTIN   | 7132300050 |
+| BLAKE    | 7132300027 |
+| CLARK    | 7032300001 |
+| SCOTT    | NULL       |
+| KING     | 7132300081 |
+| FRED     | NULL       |
+| TURNER   | NULL       |
+| ADAMS    | 7132300086 |
+| Ruhan    | NULL       |
+| Neel     | NULL       |
+| JAMES    | 7132300042 |
+| FORD     | NULL       |
+| HOFFMAN  | NULL       |
+| GRASS    | NULL       |
+| MILLER   | 7132300055 |
+| AARUSH   | NULL       |
+| ALEX     | 7156567183 |
+| NATASHA  | NULL       |
+| SANGITA  | NULL       |
+| SUPRIYA  | NULL       |
++----------+------------+
+30 rows in set (0.00 sec)
+
+mysql>
+mysql> select ename, phone, lpad(phone, 10,'*') from emp;
++----------+------------+---------------------+
+| ename    | phone      | lpad(phone, 10,'*') |
++----------+------------+---------------------+
+| GITA     | NULL       | NULL                |
+| VRUSHALI | NULL       | NULL                |
+| SHARMIN  | NULL       | NULL                |
+| BANDISH  | NULL       | NULL                |
+| SMITH    | 7032300023 | 7032300023          |
+| AARAV    | 7032300084 | 7032300084          |
+| THOMAS   | 7032300011 | 7032300011          |
+| ALLEN    | 7032300096 | 7032300096          |
+| WARD     | 7132300034 | 7132300034          |
+| JONES    | 7132300039 | 7132300039          |
+| MARTIN   | 7132300050 | 7132300050          |
+| BLAKE    | 7132300027 | 7132300027          |
+| CLARK    | 7032300001 | 7032300001          |
+| SCOTT    | NULL       | NULL                |
+| KING     | 7132300081 | 7132300081          |
+| FRED     | NULL       | NULL                |
+| TURNER   | NULL       | NULL                |
+| ADAMS    | 7132300086 | 7132300086          |
+| Ruhan    | NULL       | NULL                |
+| Neel     | NULL       | NULL                |
+| JAMES    | 7132300042 | 7132300042          |
+| FORD     | NULL       | NULL                |
+| HOFFMAN  | NULL       | NULL                |
+| GRASS    | NULL       | NULL                |
+| MILLER   | 7132300055 | 7132300055          |
+| AARUSH   | NULL       | NULL                |
+| ALEX     | 7156567183 | 7156567183          |
+| NATASHA  | NULL       | NULL                |
+| SANGITA  | NULL       | NULL                |
+| SUPRIYA  | NULL       | NULL                |
++----------+------------+---------------------+
+30 rows in set (0.01 sec)
+
+mysql> select ename, phone, lpad(phone, 11,'*') from emp;
++----------+------------+---------------------+
+| ename    | phone      | lpad(phone, 11,'*') |
++----------+------------+---------------------+
+| GITA     | NULL       | NULL                |
+| VRUSHALI | NULL       | NULL                |
+| SHARMIN  | NULL       | NULL                |
+| BANDISH  | NULL       | NULL                |
+| SMITH    | 7032300023 | *7032300023         |
+| AARAV    | 7032300084 | *7032300084         |
+| THOMAS   | 7032300011 | *7032300011         |
+| ALLEN    | 7032300096 | *7032300096         |
+| WARD     | 7132300034 | *7132300034         |
+| JONES    | 7132300039 | *7132300039         |
+| MARTIN   | 7132300050 | *7132300050         |
+| BLAKE    | 7132300027 | *7132300027         |
+| CLARK    | 7032300001 | *7032300001         |
+| SCOTT    | NULL       | NULL                |
+| KING     | 7132300081 | *7132300081         |
+| FRED     | NULL       | NULL                |
+| TURNER   | NULL       | NULL                |
+| ADAMS    | 7132300086 | *7132300086         |
+| Ruhan    | NULL       | NULL                |
+| Neel     | NULL       | NULL                |
+| JAMES    | 7132300042 | *7132300042         |
+| FORD     | NULL       | NULL                |
+| HOFFMAN  | NULL       | NULL                |
+| GRASS    | NULL       | NULL                |
+| MILLER   | 7132300055 | *7132300055         |
+| AARUSH   | NULL       | NULL                |
+| ALEX     | 7156567183 | *7156567183         |
+| NATASHA  | NULL       | NULL                |
+| SANGITA  | NULL       | NULL                |
+| SUPRIYA  | NULL       | NULL                |
++----------+------------+---------------------+
+30 rows in set (0.00 sec)
+
+mysql> select * from books;
++----+------------+-----------+------+
+| ID | bookName   | Type      | Cost |
++----+------------+-----------+------+
+|  1 | DS         | Hardcover |  950 |
+|  2 | DS         | Hardcover |  950 |
+|  3 | JavaScript | Paperback |  700 |
+|  4 | JavaScript | Paperback |  700 |
+|  5 | Hbase      | Paperback |  760 |
+|  6 | Python     | Hardcover |  980 |
+|  8 | SQL        | Hardcover |  980 |
++----+------------+-----------+------+
+7 rows in set (0.05 sec)
+
+mysql> SELECT LPAD(id, 7, '#'), bookName, Type, Cost FROM books;
++------------------+------------+-----------+------+
+| LPAD(id, 7, '#') | bookName   | Type      | Cost |
++------------------+------------+-----------+------+
+| ######1          | DS         | Hardcover |  950 |
+| ######2          | DS         | Hardcover |  950 |
+| ######3          | JavaScript | Paperback |  700 |
+| ######4          | JavaScript | Paperback |  700 |
+| ######5          | Hbase      | Paperback |  760 |
+| ######6          | Python     | Hardcover |  980 |
+| ######8          | SQL        | Hardcover |  980 |
++------------------+------------+-----------+------+
+7 rows in set (0.00 sec)
+
+mysql> select ename, phone, right(phone, 4) R1 from emp;
++----------+------------+------+
+| ename    | phone      | R1   |
++----------+------------+------+
+| GITA     | NULL       | NULL |
+| VRUSHALI | NULL       | NULL |
+| SHARMIN  | NULL       | NULL |
+| BANDISH  | NULL       | NULL |
+| SMITH    | 7032300023 | 0023 |
+| AARAV    | 7032300084 | 0084 |
+| THOMAS   | 7032300011 | 0011 |
+| ALLEN    | 7032300096 | 0096 |
+| WARD     | 7132300034 | 0034 |
+| JONES    | 7132300039 | 0039 |
+| MARTIN   | 7132300050 | 0050 |
+| BLAKE    | 7132300027 | 0027 |
+| CLARK    | 7032300001 | 0001 |
+| SCOTT    | NULL       | NULL |
+| KING     | 7132300081 | 0081 |
+| FRED     | NULL       | NULL |
+| TURNER   | NULL       | NULL |
+| ADAMS    | 7132300086 | 0086 |
+| Ruhan    | NULL       | NULL |
+| Neel     | NULL       | NULL |
+| JAMES    | 7132300042 | 0042 |
+| FORD     | NULL       | NULL |
+| HOFFMAN  | NULL       | NULL |
+| GRASS    | NULL       | NULL |
+| MILLER   | 7132300055 | 0055 |
+| AARUSH   | NULL       | NULL |
+| ALEX     | 7156567183 | 7183 |
+| NATASHA  | NULL       | NULL |
+| SANGITA  | NULL       | NULL |
+| SUPRIYA  | NULL       | NULL |
++----------+------------+------+
+30 rows in set (0.01 sec)
+
+mysql> select ename, length(ename), phone, right(phone, 4) R1 from emp;
++----------+---------------+------------+------+
+| ename    | length(ename) | phone      | R1   |
++----------+---------------+------------+------+
+| GITA     |             4 | NULL       | NULL |
+| VRUSHALI |             8 | NULL       | NULL |
+| SHARMIN  |             7 | NULL       | NULL |
+| BANDISH  |             7 | NULL       | NULL |
+| SMITH    |             5 | 7032300023 | 0023 |
+| AARAV    |             5 | 7032300084 | 0084 |
+| THOMAS   |             6 | 7032300011 | 0011 |
+| ALLEN    |             5 | 7032300096 | 0096 |
+| WARD     |             4 | 7132300034 | 0034 |
+| JONES    |             5 | 7132300039 | 0039 |
+| MARTIN   |             6 | 7132300050 | 0050 |
+| BLAKE    |             5 | 7132300027 | 0027 |
+| CLARK    |             5 | 7032300001 | 0001 |
+| SCOTT    |             5 | NULL       | NULL |
+| KING     |             4 | 7132300081 | 0081 |
+| FRED     |             4 | NULL       | NULL |
+| TURNER   |             6 | NULL       | NULL |
+| ADAMS    |             5 | 7132300086 | 0086 |
+| Ruhan    |             5 | NULL       | NULL |
+| Neel     |             4 | NULL       | NULL |
+| JAMES    |             5 | 7132300042 | 0042 |
+| FORD     |             4 | NULL       | NULL |
+| HOFFMAN  |             7 | NULL       | NULL |
+| GRASS    |             5 | NULL       | NULL |
+| MILLER   |             6 | 7132300055 | 0055 |
+| AARUSH   |             6 | NULL       | NULL |
+| ALEX     |             4 | 7156567183 | 7183 |
+| NATASHA  |             7 | NULL       | NULL |
+| SANGITA  |             7 | NULL       | NULL |
+| SUPRIYA  |             7 | NULL       | NULL |
++----------+---------------+------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename,phone, concat('******', right(phone, 4)) R1 from emp;
++----------+------------+------------+
+| ename    | phone      | R1         |
++----------+------------+------------+
+| GITA     | NULL       | NULL       |
+| VRUSHALI | NULL       | NULL       |
+| SHARMIN  | NULL       | NULL       |
+| BANDISH  | NULL       | NULL       |
+| SMITH    | 7032300023 | ******0023 |
+| AARAV    | 7032300084 | ******0084 |
+| THOMAS   | 7032300011 | ******0011 |
+| ALLEN    | 7032300096 | ******0096 |
+| WARD     | 7132300034 | ******0034 |
+| JONES    | 7132300039 | ******0039 |
+| MARTIN   | 7132300050 | ******0050 |
+| BLAKE    | 7132300027 | ******0027 |
+| CLARK    | 7032300001 | ******0001 |
+| SCOTT    | NULL       | NULL       |
+| KING     | 7132300081 | ******0081 |
+| FRED     | NULL       | NULL       |
+| TURNER   | NULL       | NULL       |
+| ADAMS    | 7132300086 | ******0086 |
+| Ruhan    | NULL       | NULL       |
+| Neel     | NULL       | NULL       |
+| JAMES    | 7132300042 | ******0042 |
+| FORD     | NULL       | NULL       |
+| HOFFMAN  | NULL       | NULL       |
+| GRASS    | NULL       | NULL       |
+| MILLER   | 7132300055 | ******0055 |
+| AARUSH   | NULL       | NULL       |
+| ALEX     | 7156567183 | ******7183 |
+| NATASHA  | NULL       | NULL       |
+| SANGITA  | NULL       | NULL       |
+| SUPRIYA  | NULL       | NULL       |
++----------+------------+------------+
+30 rows in set (0.01 sec)
+
+mysql> select 'saleel' = 'saleel';
++---------------------+
+| 'saleel' = 'saleel' |
++---------------------+
+|                   1 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> select 'saleel' = 'Saleel';
++---------------------+
+| 'saleel' = 'Saleel' |
++---------------------+
+|                   1 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> select 'saleel' = 'SALEEL';
++---------------------+
+| 'saleel' = 'SALEEL' |
++---------------------+
+|                   1 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> select 'saleel' = binary 'SALEEL';
++----------------------------+
+| 'saleel' = binary 'SALEEL' |
++----------------------------+
+|                          0 |
++----------------------------+
+1 row in set, 1 warning (0.01 sec)
+
+mysql> select ename from emp;
++----------+
+| ename    |
++----------+
+| GITA     |
+| VRUSHALI |
+| SHARMIN  |
+| BANDISH  |
+| SMITH    |
+| AARAV    |
+| THOMAS   |
+| ALLEN    |
+| WARD     |
+| JONES    |
+| MARTIN   |
+| BLAKE    |
+| CLARK    |
+| SCOTT    |
+| KING     |
+| FRED     |
+| TURNER   |
+| ADAMS    |
+| Ruhan    |
+| Neel     |
+| JAMES    |
+| FORD     |
+| HOFFMAN  |
+| GRASS    |
+| MILLER   |
+| AARUSH   |
+| ALEX     |
+| NATASHA  |
+| SANGITA  |
+| SUPRIYA  |
++----------+
+30 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql> select replace('saleel', 'e','X');
++----------------------------+
+| replace('saleel', 'e','X') |
++----------------------------+
+| salXXl                     |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select replace('saleel', 'e',' ');
++----------------------------+
+| replace('saleel', 'e',' ') |
++----------------------------+
+| sal  l                     |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select replace('saleel', 'e','');
++---------------------------+
+| replace('saleel', 'e','') |
++---------------------------+
+| sall                      |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql> select length('saleel') - length(replace('saleel', 'e',''));
++------------------------------------------------------+
+| length('saleel') - length(replace('saleel', 'e','')) |
++------------------------------------------------------+
+|                                                    2 |
++------------------------------------------------------+
+1 row in set (0.01 sec)
+
+mysql> select 'saleel', length('saleel') - length(replace('saleel', 'e',''));
++--------+------------------------------------------------------+
+| saleel | length('saleel') - length(replace('saleel', 'e','')) |
++--------+------------------------------------------------------+
+| saleel |                                                    2 |
++--------+------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select 'saleel', length('saleel') - length(replace('saleel', 'e','')) R1;
++--------+------+
+| saleel | R1   |
++--------+------+
+| saleel |    2 |
++--------+------+
+1 row in set (0.00 sec)
+
+mysql> select * from teams;
++--------+------------------------------------------------+
+| TeamID | Members                                        |
++--------+------------------------------------------------+
+|      1 | Saleel, Sharmin, Vrushali, Gau                 |
+|      2 | Kaushal, Natsha, Ruhan                         |
+|      3 | Lalu, Brooke, Boy, Naru, Bhavin                |
+|      4 | Bhuru, Baba, Anoop, Meera, Boy                 |
+|      5 | Dilu, Fredy                                    |
+|      6 | Daigo, Harshil, Boy, Raju, Bothyo              |
+|      7 | Bandish, Supriya, Sangita                      |
+|      8 | Monika, Karishma, William, Varsha, Jack, Grace |
+|      9 | Vasant, Neel                                   |
+|     10 | Nitish, Bipin, Mai, Didi                       |
++--------+------------------------------------------------+
+10 rows in set (0.00 sec)
+
+mysql> select id, members from teams;
+ERROR 1054 (42S22): Unknown column 'id' in 'field list'
+mysql> select teamid, members from teams;
++--------+------------------------------------------------+
+| teamid | members                                        |
++--------+------------------------------------------------+
+|      1 | Saleel, Sharmin, Vrushali, Gau                 |
+|      2 | Kaushal, Natsha, Ruhan                         |
+|      3 | Lalu, Brooke, Boy, Naru, Bhavin                |
+|      4 | Bhuru, Baba, Anoop, Meera, Boy                 |
+|      5 | Dilu, Fredy                                    |
+|      6 | Daigo, Harshil, Boy, Raju, Bothyo              |
+|      7 | Bandish, Supriya, Sangita                      |
+|      8 | Monika, Karishma, William, Varsha, Jack, Grace |
+|      9 | Vasant, Neel                                   |
+|     10 | Nitish, Bipin, Mai, Didi                       |
++--------+------------------------------------------------+
+10 rows in set (0.00 sec)
+
+mysql> select teamid, members, replace(members,',', '') R1 from teams;
++--------+------------------------------------------------+-------------------------------------------+
+| teamid | members                                        | R1                                        |
++--------+------------------------------------------------+-------------------------------------------+
+|      1 | Saleel, Sharmin, Vrushali, Gau                 | Saleel Sharmin Vrushali Gau               |
+|      2 | Kaushal, Natsha, Ruhan                         | Kaushal Natsha Ruhan                      |
+|      3 | Lalu, Brooke, Boy, Naru, Bhavin                | Lalu Brooke Boy Naru Bhavin               |
+|      4 | Bhuru, Baba, Anoop, Meera, Boy                 | Bhuru Baba Anoop Meera Boy                |
+|      5 | Dilu, Fredy                                    | Dilu Fredy                                |
+|      6 | Daigo, Harshil, Boy, Raju, Bothyo              | Daigo Harshil Boy Raju Bothyo             |
+|      7 | Bandish, Supriya, Sangita                      | Bandish Supriya Sangita                   |
+|      8 | Monika, Karishma, William, Varsha, Jack, Grace | Monika Karishma William Varsha Jack Grace |
+|      9 | Vasant, Neel                                   | Vasant Neel                               |
+|     10 | Nitish, Bipin, Mai, Didi                       | Nitish Bipin Mai Didi                     |
++--------+------------------------------------------------+-------------------------------------------+
+10 rows in set (0.00 sec)
+
+mysql> select teamid, length(members), length(replace(members,',', '')) R1 from teams;
++--------+-----------------+------+
+| teamid | length(members) | R1   |
++--------+-----------------+------+
+|      1 |              30 |   27 |
+|      2 |              22 |   20 |
+|      3 |              31 |   27 |
+|      4 |              30 |   26 |
+|      5 |              11 |   10 |
+|      6 |              33 |   29 |
+|      7 |              25 |   23 |
+|      8 |              46 |   41 |
+|      9 |              12 |   11 |
+|     10 |              24 |   21 |
++--------+-----------------+------+
+10 rows in set (0.00 sec)
+
+mysql> select teamid, length(members), length(replace(members,',', '')) + 1 R1 from teams;
++--------+-----------------+------+
+| teamid | length(members) | R1   |
++--------+-----------------+------+
+|      1 |              30 |   28 |
+|      2 |              22 |   21 |
+|      3 |              31 |   28 |
+|      4 |              30 |   27 |
+|      5 |              11 |   11 |
+|      6 |              33 |   30 |
+|      7 |              25 |   24 |
+|      8 |              46 |   42 |
+|      9 |              12 |   12 |
+|     10 |              24 |   22 |
++--------+-----------------+------+
+10 rows in set (0.00 sec)
+
+mysql> select teamid, length(members), length(replace(members,',', '')) R1 from teams;
++--------+-----------------+------+
+| teamid | length(members) | R1   |
++--------+-----------------+------+
+|      1 |              30 |   27 |
+|      2 |              22 |   20 |
+|      3 |              31 |   27 |
+|      4 |              30 |   26 |
+|      5 |              11 |   10 |
+|      6 |              33 |   29 |
+|      7 |              25 |   23 |
+|      8 |              46 |   41 |
+|      9 |              12 |   11 |
+|     10 |              24 |   21 |
++--------+-----------------+------+
+10 rows in set (0.00 sec)
+
+mysql> select teamid, members , length(members)  -  length(replace(members,',', '')) R1 from teams;
++--------+------------------------------------------------+------+
+| teamid | members                                        | R1   |
++--------+------------------------------------------------+------+
+|      1 | Saleel, Sharmin, Vrushali, Gau                 |    3 |
+|      2 | Kaushal, Natsha, Ruhan                         |    2 |
+|      3 | Lalu, Brooke, Boy, Naru, Bhavin                |    4 |
+|      4 | Bhuru, Baba, Anoop, Meera, Boy                 |    4 |
+|      5 | Dilu, Fredy                                    |    1 |
+|      6 | Daigo, Harshil, Boy, Raju, Bothyo              |    4 |
+|      7 | Bandish, Supriya, Sangita                      |    2 |
+|      8 | Monika, Karishma, William, Varsha, Jack, Grace |    5 |
+|      9 | Vasant, Neel                                   |    1 |
+|     10 | Nitish, Bipin, Mai, Didi                       |    3 |
++--------+------------------------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> select teamid, members , length(members)  -  length(replace(members,',', '')) + 1 R1 from teams;
++--------+------------------------------------------------+------+
+| teamid | members                                        | R1   |
++--------+------------------------------------------------+------+
+|      1 | Saleel, Sharmin, Vrushali, Gau                 |    4 |
+|      2 | Kaushal, Natsha, Ruhan                         |    3 |
+|      3 | Lalu, Brooke, Boy, Naru, Bhavin                |    5 |
+|      4 | Bhuru, Baba, Anoop, Meera, Boy                 |    5 |
+|      5 | Dilu, Fredy                                    |    2 |
+|      6 | Daigo, Harshil, Boy, Raju, Bothyo              |    5 |
+|      7 | Bandish, Supriya, Sangita                      |    3 |
+|      8 | Monika, Karishma, William, Varsha, Jack, Grace |    6 |
+|      9 | Vasant, Neel                                   |    2 |
+|     10 | Nitish, Bipin, Mai, Didi                       |    4 |
++--------+------------------------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> select * from voter_responce;
+ERROR 1146 (42S02): Table 'db1.voter_responce' doesn't exist
+mysql> select * from voter_responces;
+ERROR 1146 (42S02): Table 'db1.voter_responces' doesn't exist
+mysql> show tables like 'v%';
++--------------------+
+| Tables_in_db1 (v%) |
++--------------------+
+| vote_response      |
+| votes              |
++--------------------+
+2 rows in set (0.04 sec)
+
+mysql> select * from vote_response;
++-------------+-----------------------------------------------------------------------------------------------------------------------+
+| candidateID | response                                                                                                              |
++-------------+-----------------------------------------------------------------------------------------------------------------------+
+|           3 | n,n,n,y,y,y,y,n,y,n,y,y,n,n,y,n,n,n,n,n,n,n,n,y,y,y,y,y,y,y,n,y,n,y,y,y,n,n,n,y,y,y,y,n,n,n,n,n,y                     |
+|           1 | y,n,n,y,y,y,y,n,y,n,y,y,n,n,y,n,n,y,n,y,n,y,n,y,y,y,y,y,y,y,n,y,n,y,y,y,n,n,n,y,y,y,y,y,y,y,n,y,n,y,n,y,n,n,n,y,y,y,n |
+|           2 | y,y,y,y,y,y,y,n,y,y,y,y,n,y,y,y,y,y,n,y,y,y,y,y,y,y,y,y,y,y,n,y,y,y,y,y,n,y,y,y,y,y,y,y,n,y,n                         |
+|           4 | n,n,n,y,y,n,n,n,y,n,y,y,n,n,y,n,y,n,n,y,n,y,n,y,y,n,y,n,y,y,n,y,n,y,n,y,n,n,n,y,y,n,n                                 |
++-------------+-----------------------------------------------------------------------------------------------------------------------+
+4 rows in set (0.09 sec)
+
+mysql> select * from cnumber;
+ERROR 1146 (42S02): Table 'db1.cnumber' doesn't exist
+mysql> select * from cnumbers;
++----+------+
+| id | num  |
++----+------+
+|  1 |    1 |
+|  2 |    1 |
+|  3 |    1 |
+|  4 |    2 |
+|  5 |    1 |
+|  6 |    2 |
+|  7 |    2 |
+|  8 |    7 |
+|  9 |    7 |
+| 10 |    7 |
+| 11 |    5 |
+| 12 |    5 |
+| 13 |    2 |
+| 14 |    4 |
+| 15 |    4 |
+| 16 |    4 |
++----+------+
+16 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> select id,num from cnumbers;
++----+------+
+| id | num  |
++----+------+
+|  1 |    1 |
+|  2 |    1 |
+|  3 |    1 |
+|  4 |    2 |
+|  5 |    1 |
+|  6 |    2 |
+|  7 |    2 |
+|  8 |    7 |
+|  9 |    7 |
+| 10 |    7 |
+| 11 |    5 |
+| 12 |    5 |
+| 13 |    2 |
+| 14 |    4 |
+| 15 |    4 |
+| 16 |    4 |
++----+------+
+16 rows in set (0.00 sec)
+
+mysql> select id,num, id/5 from cnumbers;
++----+------+--------+
+| id | num  | id/5   |
++----+------+--------+
+|  1 |    1 | 0.2000 |
+|  2 |    1 | 0.4000 |
+|  3 |    1 | 0.6000 |
+|  4 |    2 | 0.8000 |
+|  5 |    1 | 1.0000 |
+|  6 |    2 | 1.2000 |
+|  7 |    2 | 1.4000 |
+|  8 |    7 | 1.6000 |
+|  9 |    7 | 1.8000 |
+| 10 |    7 | 2.0000 |
+| 11 |    5 | 2.2000 |
+| 12 |    5 | 2.4000 |
+| 13 |    2 | 2.6000 |
+| 14 |    4 | 2.8000 |
+| 15 |    4 | 3.0000 |
+| 16 |    4 | 3.2000 |
++----+------+--------+
+16 rows in set (0.01 sec)
+
+mysql> select id,num, id%5 from cnumbers;
++----+------+------+
+| id | num  | id%5 |
++----+------+------+
+|  1 |    1 |    1 |
+|  2 |    1 |    2 |
+|  3 |    1 |    3 |
+|  4 |    2 |    4 |
+|  5 |    1 |    0 |
+|  6 |    2 |    1 |
+|  7 |    2 |    2 |
+|  8 |    7 |    3 |
+|  9 |    7 |    4 |
+| 10 |    7 |    0 |
+| 11 |    5 |    1 |
+| 12 |    5 |    2 |
+| 13 |    2 |    3 |
+| 14 |    4 |    4 |
+| 15 |    4 |    0 |
+| 16 |    4 |    1 |
++----+------+------+
+16 rows in set (0.00 sec)
+
+------------------------
+
+
+mysql> select 1234.34;
++---------+
+| 1234.34 |
++---------+
+| 1234.34 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> select 1234.34, round(1234.34) R1, round(1234.34, 1) R2;
++---------+------+--------+
+| 1234.34 | R1   | R2     |
++---------+------+--------+
+| 1234.34 | 1234 | 1234.3 |
++---------+------+--------+
+1 row in set (0.01 sec)
+
+mysql> select 1234.35, round(1234.35) R1, round(1234.35, 1) R2;
++---------+------+--------+
+| 1234.35 | R1   | R2     |
++---------+------+--------+
+| 1234.35 | 1234 | 1234.4 |
++---------+------+--------+
+1 row in set (0.00 sec)
+
+mysql> select 1234.35, round(1234.5) R1, round(1234.35, 1) R2;
++---------+------+--------+
+| 1234.35 | R1   | R2     |
++---------+------+--------+
+| 1234.35 | 1235 | 1234.4 |
++---------+------+--------+
+1 row in set (0.00 sec)
+
+mysql> select 12345.65, round(12345.65, 1) R2;
++----------+---------+
+| 12345.65 | R2      |
++----------+---------+
+| 12345.65 | 12345.7 |
++----------+---------+
+1 row in set (0.00 sec)
+
+mysql> select 12345.65, round(12345.65, 1) R2, ceil(12345.65);
++----------+---------+----------------+
+| 12345.65 | R2      | ceil(12345.65) |
++----------+---------+----------------+
+| 12345.65 | 12345.7 |          12346 |
++----------+---------+----------------+
+1 row in set (0.01 sec)
+
+mysql> select 12345.65, round(12345.65, 1) R1, ceil(12345) R2;
++----------+---------+-------+
+| 12345.65 | R1      | R2    |
++----------+---------+-------+
+| 12345.65 | 12345.7 | 12345 |
++----------+---------+-------+
+1 row in set (0.00 sec)
+
+mysql> select 12345.15, round(12345.15, 1) R1, ceil(12345.15) R2;
++----------+---------+-------+
+| 12345.15 | R1      | R2    |
++----------+---------+-------+
+| 12345.15 | 12345.2 | 12346 |
++----------+---------+-------+
+1 row in set (0.00 sec)
+
+mysql> select 12345.15, round(12345.15, 1) R1, ceil(12345.15) R2, floor(12345.15) R3;
++----------+---------+-------+-------+
+| 12345.15 | R1      | R2    | R3    |
++----------+---------+-------+-------+
+| 12345.15 | 12345.2 | 12346 | 12345 |
++----------+---------+-------+-------+
+1 row in set (0.01 sec)
+
+mysql> select 12345.55, round(12345.55, 1) R1, ceil(12345.55) R2, floor(12345.55) R3;
++----------+---------+-------+-------+
+| 12345.55 | R1      | R2    | R3    |
++----------+---------+-------+-------+
+| 12345.55 | 12345.6 | 12346 | 12345 |
++----------+---------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select 12345.55, round(12345.55, 1) R1, ceil(12345.55) R2, floor(12345.56) R3;
++----------+---------+-------+-------+
+| 12345.55 | R1      | R2    | R3    |
++----------+---------+-------+-------+
+| 12345.55 | 12345.6 | 12346 | 12345 |
++----------+---------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select 12345.55, round(12345.55, 1) R1, ceil(12345.55) R2, floor(12345.10) R3;
++----------+---------+-------+-------+
+| 12345.55 | R1      | R2    | R3    |
++----------+---------+-------+-------+
+| 12345.55 | 12345.6 | 12346 | 12345 |
++----------+---------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select 12345.55, round(12345.55, 1) R1, ceil(12345.56) R2, floor(12345.10) R3;
++----------+---------+-------+-------+
+| 12345.55 | R1      | R2    | R3    |
++----------+---------+-------+-------+
+| 12345.55 | 12345.6 | 12346 | 12345 |
++----------+---------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select 12345.55, round(12345.55, 1) R1, ceil(12345.10) R2, floor(12345.10) R3;
++----------+---------+-------+-------+
+| 12345.55 | R1      | R2    | R3    |
++----------+---------+-------+-------+
+| 12345.55 | 12345.6 | 12346 | 12345 |
++----------+---------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select 12345.55, round(12345.55, 1) R1, ceil(12345.10) R2, floor(12345.99) R3;
++----------+---------+-------+-------+
+| 12345.55 | R1      | R2    | R3    |
++----------+---------+-------+-------+
+| 12345.55 | 12345.6 | 12346 | 12345 |
++----------+---------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select 12345.55, round(12345.999, 2);
++----------+---------------------+
+| 12345.55 | round(12345.999, 2) |
++----------+---------------------+
+| 12345.55 |            12346.00 |
++----------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> select 12345.55, round(12345.199, 2);
++----------+---------------------+
+| 12345.55 | round(12345.199, 2) |
++----------+---------------------+
+| 12345.55 |            12345.20 |
++----------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> select 1234.55, round(1234.55, -2);
++---------+--------------------+
+| 1234.55 | round(1234.55, -2) |
++---------+--------------------+
+| 1234.55 |               1200 |
++---------+--------------------+
+1 row in set (0.00 sec)
+
+mysql> select 1235.55, round(1235.55, -2);
++---------+--------------------+
+| 1235.55 | round(1235.55, -2) |
++---------+--------------------+
+| 1235.55 |               1200 |
++---------+--------------------+
+1 row in set (0.00 sec)
+
+mysql> select 1255.55, round(1255.55, -2);
++---------+--------------------+
+| 1255.55 | round(1255.55, -2) |
++---------+--------------------+
+| 1255.55 |               1300 |
++---------+--------------------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql> select rand();
++--------------------+
+| rand()             |
++--------------------+
+| 0.8790096015473917 |
++--------------------+
+1 row in set (0.01 sec)
+
+mysql> select rand();
++----------------------+
+| rand()               |
++----------------------+
+| 0.045632098843932246 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand();
++-------------------+
+| rand()            |
++-------------------+
+| 0.591131720311131 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand();
++--------------------+
+| rand()             |
++--------------------+
+| 0.8187623357575036 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand();
++--------------------+
+| rand()             |
++--------------------+
+| 0.3204165485877698 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand();
++--------------------+
+| rand()             |
++--------------------+
+| 0.1457957663999831 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand() *10;
++-------------------+
+| rand() *10        |
++-------------------+
+| 7.677292169702511 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand() *10;
++--------------------+
+| rand() *10         |
++--------------------+
+| 4.0125881638495144 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand() *10;
++-------------------+
+| rand() *10        |
++-------------------+
+| 7.031064617476486 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand() *10;
++-------------------+
+| rand() *10        |
++-------------------+
+| 3.117558903170339 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand() *10;
++-------------------+
+| rand() *10        |
++-------------------+
+| 4.494600970758685 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand() *10;
++--------------------+
+| rand() *10         |
++--------------------+
+| 3.1203284516188576 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand() *10;
++-------------------+
+| rand() *10        |
++-------------------+
+| 2.117839653154686 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand() *10;
++--------------------+
+| rand() *10         |
++--------------------+
+| 1.2282132182533043 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand() *10;
++-------------------+
+| rand() *10        |
++-------------------+
+| 9.787547439138915 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand() *10;
++-------------------+
+| rand() *10        |
++-------------------+
+| 5.253097848271111 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand()) * 10;
++-------------------+
+| ceil(rand()) * 10 |
++-------------------+
+|                10 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand()) * 10;
++-------------------+
+| ceil(rand()) * 10 |
++-------------------+
+|                10 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand()) * 10;
++-------------------+
+| ceil(rand()) * 10 |
++-------------------+
+|                10 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand()) * 10;
++-------------------+
+| ceil(rand()) * 10 |
++-------------------+
+|                10 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand()) * 10;
++-------------------+
+| ceil(rand()) * 10 |
++-------------------+
+|                10 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand()) * 10;
++-------------------+
+| ceil(rand()) * 10 |
++-------------------+
+|                10 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand()) * 10;
++-------------------+
+| ceil(rand()) * 10 |
++-------------------+
+|                10 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand()) * 10;
++-------------------+
+| ceil(rand()) * 10 |
++-------------------+
+|                10 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand()) * 10;
++-------------------+
+| ceil(rand()) * 10 |
++-------------------+
+|                10 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select rand() *10;
++-------------------+
+| rand() *10        |
++-------------------+
+| 7.708840330791511 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand()) * 10;
++-------------------+
+| ceil(rand()) * 10 |
++-------------------+
+|                10 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand()) * 10;
++-------------------+
+| ceil(rand()) * 10 |
++-------------------+
+|                10 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                  0 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand()) * 10;
++--------------------+
+| round(rand()) * 10 |
++--------------------+
+|                 10 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql> select round(rand() * 10);
++--------------------+
+| round(rand() * 10) |
++--------------------+
+|                  7 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand() * 10);
++--------------------+
+| round(rand() * 10) |
++--------------------+
+|                  3 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand() * 10);
++--------------------+
+| round(rand() * 10) |
++--------------------+
+|                  5 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand() * 10);
++--------------------+
+| round(rand() * 10) |
++--------------------+
+|                  5 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand() * 10);
++--------------------+
+| round(rand() * 10) |
++--------------------+
+|                  1 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand() * 10);
++--------------------+
+| round(rand() * 10) |
++--------------------+
+|                  8 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand() * 10);
++--------------------+
+| round(rand() * 10) |
++--------------------+
+|                  8 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand() * 10);
++--------------------+
+| round(rand() * 10) |
++--------------------+
+|                  7 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand() * 10);
++--------------------+
+| round(rand() * 10) |
++--------------------+
+|                  9 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select round(rand() * 10);
++--------------------+
+| round(rand() * 10) |
++--------------------+
+|                  4 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand() * 10);
++-------------------+
+| ceil(rand() * 10) |
++-------------------+
+|                 5 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand() * 10);
++-------------------+
+| ceil(rand() * 10) |
++-------------------+
+|                10 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand() * 10);
++-------------------+
+| ceil(rand() * 10) |
++-------------------+
+|                 3 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand() * 10);
++-------------------+
+| ceil(rand() * 10) |
++-------------------+
+|                 7 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql> select ceil(rand() * 10);
++-------------------+
+| ceil(rand() * 10) |
++-------------------+
+|                 5 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand() * 10);
++-------------------+
+| ceil(rand() * 10) |
++-------------------+
+|                 5 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand() * 10);
++-------------------+
+| ceil(rand() * 10) |
++-------------------+
+|                 8 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand() * 10);
++-------------------+
+| ceil(rand() * 10) |
++-------------------+
+|                 4 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand() * 10);
++-------------------+
+| ceil(rand() * 10) |
++-------------------+
+|                 7 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ceil(rand() * 10);
++-------------------+
+| ceil(rand() * 10) |
++-------------------+
+|                 3 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from cnumbers;
++----+------+
+| id | num  |
++----+------+
+|  1 |    1 |
+|  2 |    1 |
+|  3 |    1 |
+|  4 |    2 |
+|  5 |    1 |
+|  6 |    2 |
+|  7 |    2 |
+|  8 |    7 |
+|  9 |    7 |
+| 10 |    7 |
+| 11 |    5 |
+| 12 |    5 |
+| 13 |    2 |
+| 14 |    4 |
+| 15 |    4 |
+| 16 |    4 |
++----+------+
+16 rows in set (0.00 sec)
+
+mysql> select c.* from cnumbers c;
++----+------+
+| id | num  |
++----+------+
+|  1 |    1 |
+|  2 |    1 |
+|  3 |    1 |
+|  4 |    2 |
+|  5 |    1 |
+|  6 |    2 |
+|  7 |    2 |
+|  8 |    7 |
+|  9 |    7 |
+| 10 |    7 |
+| 11 |    5 |
+| 12 |    5 |
+| 13 |    2 |
+| 14 |    4 |
+| 15 |    4 |
+| 16 |    4 |
++----+------+
+16 rows in set (0.01 sec)
+
+mysql> select c.*, c.id/5 R1 from cnumbers c;
++----+------+--------+
+| id | num  | R1     |
++----+------+--------+
+|  1 |    1 | 0.2000 |
+|  2 |    1 | 0.4000 |
+|  3 |    1 | 0.6000 |
+|  4 |    2 | 0.8000 |
+|  5 |    1 | 1.0000 |
+|  6 |    2 | 1.2000 |
+|  7 |    2 | 1.4000 |
+|  8 |    7 | 1.6000 |
+|  9 |    7 | 1.8000 |
+| 10 |    7 | 2.0000 |
+| 11 |    5 | 2.2000 |
+| 12 |    5 | 2.4000 |
+| 13 |    2 | 2.6000 |
+| 14 |    4 | 2.8000 |
+| 15 |    4 | 3.0000 |
+| 16 |    4 | 3.2000 |
++----+------+--------+
+16 rows in set (0.00 sec)
+
+mysql> select c.*, c.id%5 R1 from cnumbers c;
++----+------+------+
+| id | num  | R1   |
++----+------+------+
+|  1 |    1 |    1 |
+|  2 |    1 |    2 |
+|  3 |    1 |    3 |
+|  4 |    2 |    4 |
+|  5 |    1 |    0 |
+|  6 |    2 |    1 |
+|  7 |    2 |    2 |
+|  8 |    7 |    3 |
+|  9 |    7 |    4 |
+| 10 |    7 |    0 |
+| 11 |    5 |    1 |
+| 12 |    5 |    2 |
+| 13 |    2 |    3 |
+| 14 |    4 |    4 |
+| 15 |    4 |    0 |
+| 16 |    4 |    1 |
++----+------+------+
+16 rows in set (0.00 sec)
+
+mysql> select c.*, case when c.id%5 = 0 then 5 else endc.id%5 R1 from cnumbers c;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'R1 from cnumbers c' at line 1
+mysql>
+mysql>
+mysql> select c.*, case when c.id%5 = 0 then 5 else c.id%5 end R1 from cnumbers c;
++----+------+------+
+| id | num  | R1   |
++----+------+------+
+|  1 |    1 |    1 |
+|  2 |    1 |    2 |
+|  3 |    1 |    3 |
+|  4 |    2 |    4 |
+|  5 |    1 |    5 |
+|  6 |    2 |    1 |
+|  7 |    2 |    2 |
+|  8 |    7 |    3 |
+|  9 |    7 |    4 |
+| 10 |    7 |    5 |
+| 11 |    5 |    1 |
+| 12 |    5 |    2 |
+| 13 |    2 |    3 |
+| 14 |    4 |    4 |
+| 15 |    4 |    5 |
+| 16 |    4 |    1 |
++----+------+------+
+16 rows in set (0.00 sec)
+
+mysql> select c.*, case when c.id%5 = 0 then 5 else c.id%5 end R1, c.id/2 R2 from cnumbers c;
++----+------+------+--------+
+| id | num  | R1   | R2     |
++----+------+------+--------+
+|  1 |    1 |    1 | 0.5000 |
+|  2 |    1 |    2 | 1.0000 |
+|  3 |    1 |    3 | 1.5000 |
+|  4 |    2 |    4 | 2.0000 |
+|  5 |    1 |    5 | 2.5000 |
+|  6 |    2 |    1 | 3.0000 |
+|  7 |    2 |    2 | 3.5000 |
+|  8 |    7 |    3 | 4.0000 |
+|  9 |    7 |    4 | 4.5000 |
+| 10 |    7 |    5 | 5.0000 |
+| 11 |    5 |    1 | 5.5000 |
+| 12 |    5 |    2 | 6.0000 |
+| 13 |    2 |    3 | 6.5000 |
+| 14 |    4 |    4 | 7.0000 |
+| 15 |    4 |    5 | 7.5000 |
+| 16 |    4 |    1 | 8.0000 |
++----+------+------+--------+
+16 rows in set (0.00 sec)
+
+mysql> select c.*, case when c.id%5 = 0 then 5 else c.id%5 end R1, c.id/5 R2 from cnumbers c;
++----+------+------+--------+
+| id | num  | R1   | R2     |
++----+------+------+--------+
+|  1 |    1 |    1 | 0.2000 |
+|  2 |    1 |    2 | 0.4000 |
+|  3 |    1 |    3 | 0.6000 |
+|  4 |    2 |    4 | 0.8000 |
+|  5 |    1 |    5 | 1.0000 |
+|  6 |    2 |    1 | 1.2000 |
+|  7 |    2 |    2 | 1.4000 |
+|  8 |    7 |    3 | 1.6000 |
+|  9 |    7 |    4 | 1.8000 |
+| 10 |    7 |    5 | 2.0000 |
+| 11 |    5 |    1 | 2.2000 |
+| 12 |    5 |    2 | 2.4000 |
+| 13 |    2 |    3 | 2.6000 |
+| 14 |    4 |    4 | 2.8000 |
+| 15 |    4 |    5 | 3.0000 |
+| 16 |    4 |    1 | 3.2000 |
++----+------+------+--------+
+16 rows in set (0.00 sec)
+
+mysql> select c.*, case when c.id%5 = 0 then 5 else c.id%5 end R1, c.id-1/5 R2 from cnumbers c;
++----+------+------+---------+
+| id | num  | R1   | R2      |
++----+------+------+---------+
+|  1 |    1 |    1 |  0.8000 |
+|  2 |    1 |    2 |  1.8000 |
+|  3 |    1 |    3 |  2.8000 |
+|  4 |    2 |    4 |  3.8000 |
+|  5 |    1 |    5 |  4.8000 |
+|  6 |    2 |    1 |  5.8000 |
+|  7 |    2 |    2 |  6.8000 |
+|  8 |    7 |    3 |  7.8000 |
+|  9 |    7 |    4 |  8.8000 |
+| 10 |    7 |    5 |  9.8000 |
+| 11 |    5 |    1 | 10.8000 |
+| 12 |    5 |    2 | 11.8000 |
+| 13 |    2 |    3 | 12.8000 |
+| 14 |    4 |    4 | 13.8000 |
+| 15 |    4 |    5 | 14.8000 |
+| 16 |    4 |    1 | 15.8000 |
++----+------+------+---------+
+16 rows in set (0.00 sec)
+
+mysql> select c.*, case when c.id%5 = 0 then 5 else c.id%5 end R1, ((c.id-1) / 5) + 1 R2 from cnumbers c;
++----+------+------+--------+
+| id | num  | R1   | R2     |
++----+------+------+--------+
+|  1 |    1 |    1 | 1.0000 |
+|  2 |    1 |    2 | 1.2000 |
+|  3 |    1 |    3 | 1.4000 |
+|  4 |    2 |    4 | 1.6000 |
+|  5 |    1 |    5 | 1.8000 |
+|  6 |    2 |    1 | 2.0000 |
+|  7 |    2 |    2 | 2.2000 |
+|  8 |    7 |    3 | 2.4000 |
+|  9 |    7 |    4 | 2.6000 |
+| 10 |    7 |    5 | 2.8000 |
+| 11 |    5 |    1 | 3.0000 |
+| 12 |    5 |    2 | 3.2000 |
+| 13 |    2 |    3 | 3.4000 |
+| 14 |    4 |    4 | 3.6000 |
+| 15 |    4 |    5 | 3.8000 |
+| 16 |    4 |    1 | 4.0000 |
++----+------+------+--------+
+16 rows in set (0.00 sec)
+
+mysql> select c.*, case when c.id%5 = 0 then 5 else c.id%5 end R1, floor(((c.id-1) / 5) + 1) R2 from cnumbers c;
++----+------+------+------+
+| id | num  | R1   | R2   |
++----+------+------+------+
+|  1 |    1 |    1 |    1 |
+|  2 |    1 |    2 |    1 |
+|  3 |    1 |    3 |    1 |
+|  4 |    2 |    4 |    1 |
+|  5 |    1 |    5 |    1 |
+|  6 |    2 |    1 |    2 |
+|  7 |    2 |    2 |    2 |
+|  8 |    7 |    3 |    2 |
+|  9 |    7 |    4 |    2 |
+| 10 |    7 |    5 |    2 |
+| 11 |    5 |    1 |    3 |
+| 12 |    5 |    2 |    3 |
+| 13 |    2 |    3 |    3 |
+| 14 |    4 |    4 |    3 |
+| 15 |    4 |    5 |    3 |
+| 16 |    4 |    1 |    4 |
++----+------+------+------+
+16 rows in set (0.00 sec)
+
+mysql> select c.*, case when c.id%5 = 0 then 5 else c.id%5 end R1, floor(((c.id-1) / 5) + 1) R2 from cnumbers c;
++----+------+------+------+
+| id | num  | R1   | R2   |
++----+------+------+------+
+|  1 |    1 |    1 |    1 |
+|  2 |    1 |    2 |    1 |
+|  3 |    1 |    3 |    1 |
+|  4 |    2 |    4 |    1 |
+|  5 |    1 |    5 |    1 |
+|  6 |    2 |    1 |    2 |
+|  7 |    2 |    2 |    2 |
+|  8 |    7 |    3 |    2 |
+|  9 |    7 |    4 |    2 |
+| 10 |    7 |    5 |    2 |
+| 11 |    5 |    1 |    3 |
+| 12 |    5 |    2 |    3 |
+| 13 |    2 |    3 |    3 |
+| 14 |    4 |    4 |    3 |
+| 15 |    4 |    5 |    3 |
+| 16 |    4 |    1 |    4 |
++----+------+------+------+
+16 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql> select ascii('a'), ascii('z');
++------------+------------+
+| ascii('a') | ascii('z') |
++------------+------------+
+|         97 |        122 |
++------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select char(98);
++--------------------+
+| char(98)           |
++--------------------+
+| 0x62               |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select cast(char(98) as char);
++------------------------+
+| cast(char(98) as char) |
++------------------------+
+| b                      |
++------------------------+
+1 row in set (0.01 sec)
+
+mysql> select floor(97 + rand() * 25) R1;
++----+
+| R1 |
++----+
+| 98 |
++----+
+1 row in set (0.00 sec)
+
+mysql> select floor(97 + rand() * 25) R1;
++-----+
+| R1  |
++-----+
+| 113 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select floor(97 + rand() * 25) R1;
++----+
+| R1 |
++----+
+| 97 |
++----+
+1 row in set (0.00 sec)
+
+mysql> select floor(97 + rand() * 25) R1;
++-----+
+| R1  |
++-----+
+| 103 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select floor(97 + rand() * 25) R1;
++-----+
+| R1  |
++-----+
+| 102 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select floor(97 + rand() * 25) R1;
++-----+
+| R1  |
++-----+
+| 102 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select floor(97 + rand() * 25) R1;
++-----+
+| R1  |
++-----+
+| 110 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select floor(97 + rand() * 25) R1;
++-----+
+| R1  |
++-----+
+| 121 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select floor(97 + rand() * 25) R1;
++-----+
+| R1  |
++-----+
+| 103 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select floor(97 + rand() * 25) R1;
++-----+
+| R1  |
++-----+
+| 105 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select floor(97 + rand() * 25) R1;
++-----+
+| R1  |
++-----+
+| 119 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select floor(97 + rand() * 25) R1;
++-----+
+| R1  |
++-----+
+| 111 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select cast (floor(97 + rand() * 25) as char) R1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'char) R1' at line 1
+mysql>
+mysql>
+mysql> select cast ((floor(97 + rand() * 25)) as char) R1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'char) R1' at line 1
+mysql> select cast(floor(97 + rand() * 25)) as char) R1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as char) R1' at line 1
+mysql>
+mysql>
+mysql>
+mysql> select cast(floor(97 + rand() * 25) as char) R1;
++------+
+| R1   |
++------+
+| 102  |
++------+
+1 row in set (0.00 sec)
+
+mysql> select cast(floor(97 + rand() * 25) as char) R1;
++------+
+| R1   |
++------+
+| 102  |
++------+
+1 row in set (0.00 sec)
+
+mysql> select cast(floor(97 + rand() * 25) as char) R1;
++------+
+| R1   |
++------+
+| 111  |
++------+
+1 row in set (0.00 sec)
+
+mysql> select cast(floor(97 + rand() * 25) as char) R1;
++------+
+| R1   |
++------+
+| 102  |
++------+
+1 row in set (0.00 sec)
+
+mysql> select cast(floor(97 + rand() * 25) as char) R1;
++------+
+| R1   |
++------+
+| 105  |
++------+
+1 row in set (0.00 sec)
+
+mysql> select cast(floor(97 + rand() * 25) as char) R1;
++------+
+| R1   |
++------+
+| 97   |
++------+
+1 row in set (0.00 sec)
+
+mysql> select floor(97 + rand() * 25) R1;
++----+
+| R1 |
++----+
+| 99 |
++----+
+1 row in set (0.00 sec)
+
+mysql> select cast(floor(97 + rand() * 25) as char) R1;
++------+
+| R1   |
++------+
+| 105  |
++------+
+1 row in set (0.00 sec)
+
+mysql> select cast(ascii(97) as char) R1;
++------+
+| R1   |
++------+
+| 57   |
++------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> select cast(ascii(97) as char) R1;
++------+
+| R1   |
++------+
+| 57   |
++------+
+1 row in set (0.00 sec)
+
+mysql> select cast(char(97) as char) R1;
++------+
+| R1   |
++------+
+| a    |
++------+
+1 row in set (0.00 sec)
+
+mysql> select cast(char(floor(97 + rand() * 25)) as char) R1;
++------+
+| R1   |
++------+
+| n    |
++------+
+1 row in set (0.00 sec)
+
+mysql> select cast(char(floor(97 + rand() * 25)) as char) R1;
++------+
+| R1   |
++------+
+| n    |
++------+
+1 row in set (0.00 sec)
+
+mysql> select cast(char(floor(97 + rand() * 25)) as char) R1;
++------+
+| R1   |
++------+
+| e    |
++------+
+1 row in set (0.00 sec)
+
+mysql> select cast(char(floor(97 + rand() * 25)) as char) R1;
++------+
+| R1   |
++------+
+| f    |
++------+
+1 row in set (0.00 sec)
+
+mysql> select cast(char(floor(97 + rand() * 25)) as char) R1;
++------+
+| R1   |
++------+
+| m    |
++------+
+1 row in set (0.00 sec)
+
+mysql> select cast(char(floor(97 + rand() * 25)) as char) R1;
++------+
+| R1   |
++------+
+| x    |
++------+
+1 row in set (0.00 sec)
+
+mysql> select cast(char(floor(97 + rand() * 25)) as char) R1;
++------+
+| R1   |
++------+
+| c    |
++------+
+1 row in set (0.00 sec)
+
+mysql> select char(100);
++----------------------+
+| char(100)            |
++----------------------+
+| 0x64                 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> select cast(char(100) as char);
++-------------------------+
+| cast(char(100) as char) |
++-------------------------+
+| d                       |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> select floor(100000 + rand() * (100000 - 999999)) + 1);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql>
+mysql>
+mysql> select floor(100000 + rand() * (100000 - 999999)) + 1;
++------------------------------------------------+
+| floor(100000 + rand() * (100000 - 999999)) + 1 |
++------------------------------------------------+
+|                                        -624032 |
++------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select abs(floor(100000 + rand() * (100000 - 999999)) + 1);
++-----------------------------------------------------+
+| abs(floor(100000 + rand() * (100000 - 999999)) + 1) |
++-----------------------------------------------------+
+|                                              503012 |
++-----------------------------------------------------+
+1 row in set (0.01 sec)
+
+mysql> select abs(floor(100000 + rand() * (100000 - 999999)) + 1);
++-----------------------------------------------------+
+| abs(floor(100000 + rand() * (100000 - 999999)) + 1) |
++-----------------------------------------------------+
+|                                              742961 |
++-----------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select abs(floor(100000 + rand() * (100000 - 999999)) + 1);
++-----------------------------------------------------+
+| abs(floor(100000 + rand() * (100000 - 999999)) + 1) |
++-----------------------------------------------------+
+|                                              505775 |
++-----------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select folor(10 + rand() * (20-10) )
+    -> ;
+ERROR 1305 (42000): FUNCTION db1.folor does not exist
+mysql> select floor(10 + rand() * (20-10) );
++-------------------------------+
+| floor(10 + rand() * (20-10) ) |
++-------------------------------+
+|                            15 |
++-------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select floor(10 + rand() * (20-10) );
++-------------------------------+
+| floor(10 + rand() * (20-10) ) |
++-------------------------------+
+|                            17 |
++-------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select floor(10 + rand() * (20-10) );
++-------------------------------+
+| floor(10 + rand() * (20-10) ) |
++-------------------------------+
+|                            11 |
++-------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select floor(10 + rand() * (20-10) );
++-------------------------------+
+| floor(10 + rand() * (20-10) ) |
++-------------------------------+
+|                            13 |
++-------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select floor(10 + rand() * (20-10) );
++-------------------------------+
+| floor(10 + rand() * (20-10) ) |
++-------------------------------+
+|                            13 |
++-------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select floor(10 + rand() * (20-10) );
++-------------------------------+
+| floor(10 + rand() * (20-10) ) |
++-------------------------------+
+|                            18 |
++-------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select floor(10 + rand() * (20-10) );
++-------------------------------+
+| floor(10 + rand() * (20-10) ) |
++-------------------------------+
+|                            12 |
++-------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select floor(10 + rand() * (20-10) );
++-------------------------------+
+| floor(10 + rand() * (20-10) ) |
++-------------------------------+
+|                            16 |
++-------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select floor(10 + rand() * (20-10) );
++-------------------------------+
+| floor(10 + rand() * (20-10) ) |
++-------------------------------+
+|                            15 |
++-------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select floor(10 + rand() * (20-10) );
++-------------------------------+
+| floor(10 + rand() * (20-10) ) |
++-------------------------------+
+|                            18 |
++-------------------------------+
+1 row in set (0.00 sec)
+
+mysql> with recursive cte as (select 1 n union select n+1 from cte where n < 100) select * from n;
+ERROR 1146 (42S02): Table 'db1.n' doesn't exist
+mysql> with recursive cte as (select 1 n union select n+1 from cte where n < 100) select * from cte;
++------+
+| n    |
++------+
+|    1 |
+|    2 |
+|    3 |
+|    4 |
+|    5 |
+|    6 |
+|    7 |
+|    8 |
+|    9 |
+|   10 |
+|   11 |
+|   12 |
+|   13 |
+|   14 |
+|   15 |
+|   16 |
+|   17 |
+|   18 |
+|   19 |
+|   20 |
+|   21 |
+|   22 |
+|   23 |
+|   24 |
+|   25 |
+|   26 |
+|   27 |
+|   28 |
+|   29 |
+|   30 |
+|   31 |
+|   32 |
+|   33 |
+|   34 |
+|   35 |
+|   36 |
+|   37 |
+|   38 |
+|   39 |
+|   40 |
+|   41 |
+|   42 |
+|   43 |
+|   44 |
+|   45 |
+|   46 |
+|   47 |
+|   48 |
+|   49 |
+|   50 |
+|   51 |
+|   52 |
+|   53 |
+|   54 |
+|   55 |
+|   56 |
+|   57 |
+|   58 |
+|   59 |
+|   60 |
+|   61 |
+|   62 |
+|   63 |
+|   64 |
+|   65 |
+|   66 |
+|   67 |
+|   68 |
+|   69 |
+|   70 |
+|   71 |
+|   72 |
+|   73 |
+|   74 |
+|   75 |
+|   76 |
+|   77 |
+|   78 |
+|   79 |
+|   80 |
+|   81 |
+|   82 |
+|   83 |
+|   84 |
+|   85 |
+|   86 |
+|   87 |
+|   88 |
+|   89 |
+|   90 |
+|   91 |
+|   92 |
+|   93 |
+|   94 |
+|   95 |
+|   96 |
+|   97 |
+|   98 |
+|   99 |
+|  100 |
++------+
+100 rows in set (0.02 sec)
+
+mysql> with recursive cte as (select 1 n union select n+1 from cte where n < 100) select floor(10 + rand() * (20-10) ) from cte;
++-------------------------------+
+| floor(10 + rand() * (20-10) ) |
++-------------------------------+
+|                            13 |
+|                            12 |
+|                            12 |
+|                            14 |
+|                            15 |
+|                            12 |
+|                            16 |
+|                            16 |
+|                            13 |
+|                            15 |
+|                            19 |
+|                            12 |
+|                            10 |
+|                            17 |
+|                            15 |
+|                            16 |
+|                            13 |
+|                            16 |
+|                            14 |
+|                            13 |
+|                            14 |
+|                            11 |
+|                            12 |
+|                            17 |
+|                            11 |
+|                            16 |
+|                            15 |
+|                            16 |
+|                            19 |
+|                            16 |
+|                            12 |
+|                            13 |
+|                            12 |
+|                            10 |
+|                            13 |
+|                            18 |
+|                            11 |
+|                            19 |
+|                            16 |
+|                            10 |
+|                            15 |
+|                            15 |
+|                            12 |
+|                            13 |
+|                            10 |
+|                            12 |
+|                            18 |
+|                            18 |
+|                            15 |
+|                            12 |
+|                            17 |
+|                            18 |
+|                            11 |
+|                            10 |
+|                            17 |
+|                            17 |
+|                            15 |
+|                            15 |
+|                            19 |
+|                            10 |
+|                            13 |
+|                            16 |
+|                            12 |
+|                            12 |
+|                            15 |
+|                            11 |
+|                            11 |
+|                            11 |
+|                            13 |
+|                            10 |
+|                            14 |
+|                            19 |
+|                            15 |
+|                            18 |
+|                            14 |
+|                            16 |
+|                            11 |
+|                            18 |
+|                            18 |
+|                            14 |
+|                            19 |
+|                            15 |
+|                            15 |
+|                            11 |
+|                            12 |
+|                            17 |
+|                            19 |
+|                            13 |
+|                            18 |
+|                            13 |
+|                            10 |
+|                            13 |
+|                            14 |
+|                            13 |
+|                            11 |
+|                            10 |
+|                            15 |
+|                            17 |
+|                            12 |
+|                            17 |
++-------------------------------+
+100 rows in set (0.00 sec)
+
+mysql> with recursive cte as (select 1 n union select n+1 from cte where n < 200) select floor(10 + rand() * (20-10) ) from cte;
++-------------------------------+
+| floor(10 + rand() * (20-10) ) |
++-------------------------------+
+|                            10 |
+|                            19 |
+|                            16 |
+|                            13 |
+|                            17 |
+|                            15 |
+|                            18 |
+|                            12 |
+|                            19 |
+|                            17 |
+|                            19 |
+|                            13 |
+|                            10 |
+|                            12 |
+|                            11 |
+|                            17 |
+|                            16 |
+|                            16 |
+|                            13 |
+|                            10 |
+|                            19 |
+|                            17 |
+|                            19 |
+|                            13 |
+|                            11 |
+|                            13 |
+|                            15 |
+|                            15 |
+|                            11 |
+|                            12 |
+|                            17 |
+|                            10 |
+|                            11 |
+|                            13 |
+|                            14 |
+|                            11 |
+|                            12 |
+|                            10 |
+|                            13 |
+|                            17 |
+|                            18 |
+|                            16 |
+|                            10 |
+|                            10 |
+|                            13 |
+|                            14 |
+|                            12 |
+|                            19 |
+|                            18 |
+|                            14 |
+|                            18 |
+|                            16 |
+|                            16 |
+|                            15 |
+|                            16 |
+|                            14 |
+|                            13 |
+|                            15 |
+|                            15 |
+|                            10 |
+|                            15 |
+|                            18 |
+|                            14 |
+|                            16 |
+|                            10 |
+|                            12 |
+|                            10 |
+|                            16 |
+|                            11 |
+|                            16 |
+|                            16 |
+|                            13 |
+|                            19 |
+|                            15 |
+|                            10 |
+|                            17 |
+|                            12 |
+|                            13 |
+|                            18 |
+|                            10 |
+|                            19 |
+|                            16 |
+|                            11 |
+|                            19 |
+|                            12 |
+|                            14 |
+|                            15 |
+|                            12 |
+|                            15 |
+|                            11 |
+|                            18 |
+|                            19 |
+|                            12 |
+|                            14 |
+|                            13 |
+|                            15 |
+|                            18 |
+|                            14 |
+|                            17 |
+|                            11 |
+|                            16 |
+|                            19 |
+|                            16 |
+|                            14 |
+|                            13 |
+|                            11 |
+|                            19 |
+|                            13 |
+|                            16 |
+|                            13 |
+|                            19 |
+|                            14 |
+|                            16 |
+|                            16 |
+|                            13 |
+|                            18 |
+|                            11 |
+|                            14 |
+|                            15 |
+|                            15 |
+|                            11 |
+|                            18 |
+|                            18 |
+|                            18 |
+|                            16 |
+|                            18 |
+|                            12 |
+|                            17 |
+|                            11 |
+|                            11 |
+|                            13 |
+|                            14 |
+|                            12 |
+|                            19 |
+|                            18 |
+|                            12 |
+|                            19 |
+|                            10 |
+|                            13 |
+|                            15 |
+|                            17 |
+|                            11 |
+|                            13 |
+|                            14 |
+|                            19 |
+|                            14 |
+|                            14 |
+|                            18 |
+|                            17 |
+|                            14 |
+|                            19 |
+|                            14 |
+|                            13 |
+|                            14 |
+|                            10 |
+|                            10 |
+|                            12 |
+|                            10 |
+|                            13 |
+|                            14 |
+|                            13 |
+|                            15 |
+|                            15 |
+|                            10 |
+|                            16 |
+|                            10 |
+|                            11 |
+|                            16 |
+|                            19 |
+|                            18 |
+|                            13 |
+|                            11 |
+|                            15 |
+|                            13 |
+|                            12 |
+|                            11 |
+|                            11 |
+|                            10 |
+|                            18 |
+|                            11 |
+|                            10 |
+|                            19 |
+|                            16 |
+|                            14 |
+|                            10 |
+|                            19 |
+|                            16 |
+|                            12 |
+|                            15 |
+|                            17 |
+|                            13 |
+|                            15 |
+|                            16 |
+|                            16 |
+|                            10 |
+|                            13 |
+|                            15 |
+|                            19 |
+|                            11 |
+|                            16 |
++-------------------------------+
+200 rows in set (0.00 sec)
+
+mysql> with recursive cte as (select 1 n union select n+1 from cte where n < 200) select floor(10 + rand() * (20-10) + 1 ) from cte;
++-----------------------------------+
+| floor(10 + rand() * (20-10) + 1 ) |
++-----------------------------------+
+|                                20 |
+|                                19 |
+|                                14 |
+|                                11 |
+|                                13 |
+|                                13 |
+|                                15 |
+|                                13 |
+|                                12 |
+|                                19 |
+|                                19 |
+|                                19 |
+|                                16 |
+|                                14 |
+|                                12 |
+|                                16 |
+|                                14 |
+|                                20 |
+|                                20 |
+|                                18 |
+|                                19 |
+|                                13 |
+|                                15 |
+|                                18 |
+|                                14 |
+|                                17 |
+|                                20 |
+|                                11 |
+|                                13 |
+|                                11 |
+|                                17 |
+|                                12 |
+|                                18 |
+|                                11 |
+|                                13 |
+|                                19 |
+|                                18 |
+|                                20 |
+|                                18 |
+|                                16 |
+|                                19 |
+|                                16 |
+|                                12 |
+|                                12 |
+|                                11 |
+|                                20 |
+|                                17 |
+|                                16 |
+|                                16 |
+|                                14 |
+|                                18 |
+|                                20 |
+|                                16 |
+|                                18 |
+|                                11 |
+|                                19 |
+|                                15 |
+|                                17 |
+|                                19 |
+|                                12 |
+|                                12 |
+|                                13 |
+|                                19 |
+|                                17 |
+|                                17 |
+|                                14 |
+|                                20 |
+|                                15 |
+|                                16 |
+|                                15 |
+|                                18 |
+|                                12 |
+|                                14 |
+|                                17 |
+|                                19 |
+|                                17 |
+|                                16 |
+|                                20 |
+|                                12 |
+|                                20 |
+|                                12 |
+|                                12 |
+|                                11 |
+|                                17 |
+|                                15 |
+|                                12 |
+|                                13 |
+|                                11 |
+|                                13 |
+|                                14 |
+|                                18 |
+|                                17 |
+|                                11 |
+|                                15 |
+|                                11 |
+|                                18 |
+|                                18 |
+|                                15 |
+|                                11 |
+|                                19 |
+|                                20 |
+|                                12 |
+|                                11 |
+|                                20 |
+|                                15 |
+|                                13 |
+|                                20 |
+|                                20 |
+|                                20 |
+|                                19 |
+|                                16 |
+|                                11 |
+|                                18 |
+|                                14 |
+|                                17 |
+|                                11 |
+|                                15 |
+|                                12 |
+|                                12 |
+|                                15 |
+|                                18 |
+|                                15 |
+|                                20 |
+|                                16 |
+|                                18 |
+|                                11 |
+|                                13 |
+|                                20 |
+|                                11 |
+|                                13 |
+|                                12 |
+|                                19 |
+|                                11 |
+|                                16 |
+|                                18 |
+|                                20 |
+|                                14 |
+|                                11 |
+|                                12 |
+|                                19 |
+|                                17 |
+|                                16 |
+|                                20 |
+|                                13 |
+|                                14 |
+|                                12 |
+|                                14 |
+|                                15 |
+|                                11 |
+|                                11 |
+|                                13 |
+|                                18 |
+|                                13 |
+|                                18 |
+|                                11 |
+|                                11 |
+|                                12 |
+|                                14 |
+|                                16 |
+|                                16 |
+|                                20 |
+|                                15 |
+|                                12 |
+|                                16 |
+|                                13 |
+|                                16 |
+|                                20 |
+|                                14 |
+|                                18 |
+|                                16 |
+|                                18 |
+|                                13 |
+|                                17 |
+|                                17 |
+|                                15 |
+|                                12 |
+|                                15 |
+|                                20 |
+|                                14 |
+|                                20 |
+|                                18 |
+|                                18 |
+|                                15 |
+|                                19 |
+|                                13 |
+|                                16 |
+|                                12 |
+|                                20 |
+|                                12 |
+|                                20 |
+|                                13 |
+|                                15 |
+|                                17 |
+|                                19 |
+|                                14 |
+|                                14 |
+|                                15 |
+|                                14 |
+|                                12 |
+|                                18 |
++-----------------------------------+
+200 rows in set (0.00 sec)
+
+mysql>
+
+
+
