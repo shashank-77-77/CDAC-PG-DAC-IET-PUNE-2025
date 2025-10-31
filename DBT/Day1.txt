@@ -1,0 +1,1024 @@
+Microsoft Windows [Version 10.0.19045.6456]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\IET>mysql --host=192.168.10.117 --port=3306 --user=dac82 --password=welcome
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 51
+Server version: 8.0.44 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show tables;
+ERROR 1046 (3D000): No database selected
+mysql> use dac82
+Database changed
+mysql> show tables;
++---------------------+
+| Tables_in_dac82     |
++---------------------+
+| a                   |
+| activity            |
+| agent               |
+| airline_seats       |
+| andor               |
+| atm                 |
+| b                   |
+| bankloan            |
+| batch_schedule      |
+| betweensalary       |
+| bitwise             |
+| blanktablea         |
+| blanktableb         |
+| blog                |
+| bonus               |
+| books               |
+| brands              |
+| bus_stops           |
+| cafe                |
+| candidate           |
+| cardpayments        |
+| cashpayments        |
+| categories          |
+| category            |
+| city                |
+| classandsubjects    |
+| client              |
+| cnumbers            |
+| coalesce            |
+| comments            |
+| company             |
+| countnulls          |
+| countnumbers        |
+| cricketwinnerteam   |
+| customer            |
+| customers           |
+| demodept1           |
+| demodept2           |
+| dept                |
+| dept1               |
+| dhl                 |
+| docs                |
+| doctor              |
+| doctorvisits        |
+| dummy               |
+| duplicate           |
+| emp                 |
+| emp1                |
+| emp2                |
+| emp_attendance      |
+| emp_cards           |
+| emp_phone           |
+| empj                |
+| envelope            |
+| facebook            |
+| fedex               |
+| food                |
+| food_category_tags  |
+| food_items          |
+| fromstoreorders     |
+| fruits              |
+| fullname            |
+| hall_ticket         |
+| hobby               |
+| ipl                 |
+| item                |
+| job_list            |
+| key_parts           |
+| labtestlist         |
+| leading_zeroes      |
+| leadtable           |
+| licence             |
+| linkedin            |
+| location            |
+| managers            |
+| mass_table          |
+| medicinelist        |
+| menucard            |
+| missingnumbers      |
+| nearest             |
+| new                 |
+| newbooks            |
+| null1               |
+| null2               |
+| nullif              |
+| numberstring        |
+| onlineorders        |
+| ord                 |
+| order1              |
+| order_items         |
+| orderdetails        |
+| orders              |
+| overlapping_dates   |
+| overtime            |
+| patient             |
+| phonecall           |
+| pivot_table         |
+| plumber             |
+| plumber_service_map |
+| points              |
+| population          |
+| price               |
+| product             |
+| product_sales       |
+| products            |
+| pune_metro_stations |
+| quarterly_revenue   |
+| r                   |
+| r1                  |
+| r2                  |
+| races               |
+| regexpr             |
+| repeatingnumbers    |
+| replacedept         |
+| reservations        |
+| revenue             |
+| rockets             |
+| room_assigned       |
+| room_staff          |
+| rooms               |
+| runners             |
+| runningserver       |
+| sales               |
+| sales1              |
+| sales_channel       |
+| salespeople         |
+| salesperson         |
+| salgrade            |
+| server              |
+| service             |
+| seta                |
+| setb                |
+| shop                |
+| softdrink           |
+| sort                |
+| sourcecity          |
+| sourcenames         |
+| stadium             |
+| stages              |
+| states              |
+| station             |
+| status              |
+| stocks              |
+| stringnumber        |
+| student             |
+| swapcity            |
+| tablea              |
+| tableaa             |
+| tableb              |
+| tablebb             |
+| targetcity          |
+| targetnames         |
+| tasks               |
+| teams               |
+| temp1               |
+| trainers            |
+| trains              |
+| traintimetable      |
+| transactions        |
+| unpivot_table       |
+| ups                 |
+| vote_response       |
+| votes               |
+| warehouse           |
+| x                   |
+| year_of_service     |
+| yearly_revenue      |
+| years               |
+| z                   |
++---------------------+
+169 rows in set (0.06 sec)
+
+mysql> select sal Salary, comm Commission, sal+comm from emp;
++--------+------------+----------+
+| Salary | Commission | sal+comm |
++--------+------------+----------+
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|    800 |       NULL |     NULL |
+|   3350 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|   1600 |        300 |     1900 |
+|   1250 |        500 |     1750 |
+|   2975 |       NULL |     NULL |
+|   1250 |       1400 |     2650 |
+|   2850 |       NULL |     NULL |
+|   2450 |       NULL |     NULL |
+|   3000 |       NULL |     NULL |
+|   5000 |       NULL |     NULL |
+|   5000 |       NULL |     NULL |
+|   1500 |          0 |     1500 |
+|   1100 |       NULL |     NULL |
+|   2000 |       NULL |     NULL |
+|   1000 |       NULL |     NULL |
+|    950 |       NULL |     NULL |
+|   3000 |       NULL |     NULL |
+|   4150 |       NULL |     NULL |
+|   2575 |       2700 |     5275 |
+|   1300 |       1300 |     2600 |
+|   1350 |       2700 |     4050 |
+|   1250 |        500 |     1750 |
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
++--------+------------+----------+
+30 rows in set (0.22 sec)
+
+mysql> select sal Salary, comm Commission, sal+comm "Grand Total" from emp;
++--------+------------+-------------+
+| Salary | Commission | Grand Total |
++--------+------------+-------------+
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|    800 |       NULL |        NULL |
+|   3350 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|   1600 |        300 |        1900 |
+|   1250 |        500 |        1750 |
+|   2975 |       NULL |        NULL |
+|   1250 |       1400 |        2650 |
+|   2850 |       NULL |        NULL |
+|   2450 |       NULL |        NULL |
+|   3000 |       NULL |        NULL |
+|   5000 |       NULL |        NULL |
+|   5000 |       NULL |        NULL |
+|   1500 |          0 |        1500 |
+|   1100 |       NULL |        NULL |
+|   2000 |       NULL |        NULL |
+|   1000 |       NULL |        NULL |
+|    950 |       NULL |        NULL |
+|   3000 |       NULL |        NULL |
+|   4150 |       NULL |        NULL |
+|   2575 |       2700 |        5275 |
+|   1300 |       1300 |        2600 |
+|   1350 |       2700 |        4050 |
+|   1250 |        500 |        1750 |
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
++--------+------------+-------------+
+30 rows in set (0.00 sec)
+
+mysql> select sal Salary, comm Commission, ifnull(sal+comm, 0) "Grand Total" from emp;
++--------+------------+-------------+
+| Salary | Commission | Grand Total |
++--------+------------+-------------+
+|   1750 |       NULL |           0 |
+|   1750 |       NULL |           0 |
+|   1750 |       NULL |           0 |
+|   1750 |       NULL |           0 |
+|    800 |       NULL |           0 |
+|   3350 |       NULL |           0 |
+|   1750 |       NULL |           0 |
+|   1600 |        300 |        1900 |
+|   1250 |        500 |        1750 |
+|   2975 |       NULL |           0 |
+|   1250 |       1400 |        2650 |
+|   2850 |       NULL |           0 |
+|   2450 |       NULL |           0 |
+|   3000 |       NULL |           0 |
+|   5000 |       NULL |           0 |
+|   5000 |       NULL |           0 |
+|   1500 |          0 |        1500 |
+|   1100 |       NULL |           0 |
+|   2000 |       NULL |           0 |
+|   1000 |       NULL |           0 |
+|    950 |       NULL |           0 |
+|   3000 |       NULL |           0 |
+|   4150 |       NULL |           0 |
+|   2575 |       2700 |        5275 |
+|   1300 |       1300 |        2600 |
+|   1350 |       2700 |        4050 |
+|   1250 |        500 |        1750 |
+|   1750 |       NULL |           0 |
+|   1750 |       NULL |           0 |
+|   1750 |       NULL |           0 |
++--------+------------+-------------+
+30 rows in set (0.00 sec)
+
+mysql> select sal Salary, comm Commission, ifnull(sal+comm, sal) "Grand Total" from emp;
++--------+------------+-------------+
+| Salary | Commission | Grand Total |
++--------+------------+-------------+
+|   1750 |       NULL |        1750 |
+|   1750 |       NULL |        1750 |
+|   1750 |       NULL |        1750 |
+|   1750 |       NULL |        1750 |
+|    800 |       NULL |         800 |
+|   3350 |       NULL |        3350 |
+|   1750 |       NULL |        1750 |
+|   1600 |        300 |        1900 |
+|   1250 |        500 |        1750 |
+|   2975 |       NULL |        2975 |
+|   1250 |       1400 |        2650 |
+|   2850 |       NULL |        2850 |
+|   2450 |       NULL |        2450 |
+|   3000 |       NULL |        3000 |
+|   5000 |       NULL |        5000 |
+|   5000 |       NULL |        5000 |
+|   1500 |          0 |        1500 |
+|   1100 |       NULL |        1100 |
+|   2000 |       NULL |        2000 |
+|   1000 |       NULL |        1000 |
+|    950 |       NULL |         950 |
+|   3000 |       NULL |        3000 |
+|   4150 |       NULL |        4150 |
+|   2575 |       2700 |        5275 |
+|   1300 |       1300 |        2600 |
+|   1350 |       2700 |        4050 |
+|   1250 |        500 |        1750 |
+|   1750 |       NULL |        1750 |
+|   1750 |       NULL |        1750 |
+|   1750 |       NULL |        1750 |
++--------+------------+-------------+
+30 rows in set (0.00 sec)
+
+mysql> select sal Salary, comm Commission, sal + ifnull(comm, 0) "Grand Total" from emp;
++--------+------------+-------------+
+| Salary | Commission | Grand Total |
++--------+------------+-------------+
+|   1750 |       NULL |        1750 |
+|   1750 |       NULL |        1750 |
+|   1750 |       NULL |        1750 |
+|   1750 |       NULL |        1750 |
+|    800 |       NULL |         800 |
+|   3350 |       NULL |        3350 |
+|   1750 |       NULL |        1750 |
+|   1600 |        300 |        1900 |
+|   1250 |        500 |        1750 |
+|   2975 |       NULL |        2975 |
+|   1250 |       1400 |        2650 |
+|   2850 |       NULL |        2850 |
+|   2450 |       NULL |        2450 |
+|   3000 |       NULL |        3000 |
+|   5000 |       NULL |        5000 |
+|   5000 |       NULL |        5000 |
+|   1500 |          0 |        1500 |
+|   1100 |       NULL |        1100 |
+|   2000 |       NULL |        2000 |
+|   1000 |       NULL |        1000 |
+|    950 |       NULL |         950 |
+|   3000 |       NULL |        3000 |
+|   4150 |       NULL |        4150 |
+|   2575 |       2700 |        5275 |
+|   1300 |       1300 |        2600 |
+|   1350 |       2700 |        4050 |
+|   1250 |        500 |        1750 |
+|   1750 |       NULL |        1750 |
+|   1750 |       NULL |        1750 |
+|   1750 |       NULL |        1750 |
++--------+------------+-------------+
+30 rows in set (0.00 sec)
+
+mysql> select '1' + '1';
++-----------+
+| '1' + '1' |
++-----------+
+|         2 |
++-----------+
+1 row in set (0.00 sec)
+
+
+mysql> select * from numberstring;
++---------------+
+| c1            |
++---------------+
+| 1saleel       |
+| 34sharmin     |
+| 56731vrushali |
+| 6001GITA      |
+| 6129VRUSHALI  |
+| 6473SHARMIN   |
+| 6781BANDISH   |
+| 7369SMITH     |
+| 7415AARAV     |
+| 7421THOMAS    |
+| 743ruhan      |
+| 7499ALLEN     |
+| 7521WARD      |
+| 7566JONES     |
+| 7654MARTIN    |
+| 7657822ajay   |
+| 7698BLAKE     |
+| 7782CLARK     |
+| 7788SCOTT     |
+| 7839KING      |
+| 7840FRED      |
+| 7844TURNER    |
+| 7876ADAMS     |
+| 7888Ruhan     |
+| 7889Neel      |
+| 7900JAMES     |
+| 7902FORD      |
+| 7919HOFFMAN   |
+| 7920GRASS     |
+| 7934MILLER    |
+| 7945AARUSH    |
+| 7949ALEX      |
+| 836379bandish |
+| 8433NATASHA   |
+| 9400SANGITA   |
+| 9473SUPRIYA   |
++---------------+
+36 rows in set (0.20 sec)
+
+mysql> select c1 , c1/1 Numbers from numberString;
++---------------+---------+
+| c1            | Numbers |
++---------------+---------+
+| 1saleel       |       1 |
+| 34sharmin     |      34 |
+| 56731vrushali |   56731 |
+| 6001GITA      |    6001 |
+| 6129VRUSHALI  |    6129 |
+| 6473SHARMIN   |    6473 |
+| 6781BANDISH   |    6781 |
+| 7369SMITH     |    7369 |
+| 7415AARAV     |    7415 |
+| 7421THOMAS    |    7421 |
+| 743ruhan      |     743 |
+| 7499ALLEN     |    7499 |
+| 7521WARD      |    7521 |
+| 7566JONES     |    7566 |
+| 7654MARTIN    |    7654 |
+| 7657822ajay   | 7657822 |
+| 7698BLAKE     |    7698 |
+| 7782CLARK     |    7782 |
+| 7788SCOTT     |    7788 |
+| 7839KING      |    7839 |
+| 7840FRED      |    7840 |
+| 7844TURNER    |    7844 |
+| 7876ADAMS     |    7876 |
+| 7888Ruhan     |    7888 |
+| 7889Neel      |    7889 |
+| 7900JAMES     |    7900 |
+| 7902FORD      |    7902 |
+| 7919HOFFMAN   |    7919 |
+| 7920GRASS     |    7920 |
+| 7934MILLER    |    7934 |
+| 7945AARUSH    |    7945 |
+| 7949ALEX      |    7949 |
+| 836379bandish |  836379 |
+| 8433NATASHA   |    8433 |
+| 9400SANGITA   |    9400 |
+| 9473SUPRIYA   |    9473 |
++---------------+---------+
+36 rows in set, 36 warnings (0.00 sec)
+
+
+mysql> select 'shashank';
++----------+
+| shashank |
++----------+
+| shashank |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select 'shashank', lpad('shashank',9,'*');
++----------+------------------------+
+| shashank | lpad('shashank',9,'*') |
++----------+------------------------+
+| shashank | *shashank              |
++----------+------------------------+
+1 row in set (0.00 sec)
+
+mysql> select 'shashank', lpad('shashank',10,'*');
++----------+-------------------------+
+| shashank | lpad('shashank',10,'*') |
++----------+-------------------------+
+| shashank | **shashank              |
++----------+-------------------------+
+1 row in set (0.00 sec)
+
+mysql> select 'shashank', lpad('shashank',50,'*');
++----------+----------------------------------------------------+
+| shashank | lpad('shashank',50,'*')                            |
++----------+----------------------------------------------------+
+| shashank | ******************************************shashank |
++----------+----------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select 'shashank', rpad('shashank',10,'*');
++----------+-------------------------+
+| shashank | rpad('shashank',10,'*') |
++----------+-------------------------+
+| shashank | shashank**              |
++----------+-------------------------+
+1 row in set (0.00 sec)
+
+mysql> select ename,phone from emp;
++----------+------------+
+| ename    | phone      |
++----------+------------+
+| GITA     | NULL       |
+| VRUSHALI | NULL       |
+| SHARMIN  | NULL       |
+| BANDISH  | NULL       |
+| SMITH    | 7032300023 |
+| AARAV    | 7032300084 |
+| THOMAS   | 7032300011 |
+| ALLEN    | 7032300096 |
+| WARD     | 7132300034 |
+| JONES    | 7132300039 |
+| MARTIN   | 7132300050 |
+| BLAKE    | 7132300027 |
+| CLARK    | 7032300001 |
+| SCOTT    | NULL       |
+| KING     | 7132300081 |
+| FRED     | NULL       |
+| TURNER   | NULL       |
+| ADAMS    | 7132300086 |
+| Ruhan    | NULL       |
+| Neel     | NULL       |
+| JAMES    | 7132300042 |
+| FORD     | NULL       |
+| HOFFMAN  | NULL       |
+| GRASS    | NULL       |
+| MILLER   | 7132300055 |
+| AARUSH   | NULL       |
+| ALEX     | 7156567183 |
+| NATASHA  | NULL       |
+| SANGITA  | NULL       |
+| SUPRIYA  | NULL       |
++----------+------------+
+30 rows in set (0.05 sec)
+
+mysql> select ename, phone , right(phone , 4) R1 from emp;
++----------+------------+------+
+| ename    | phone      | R1   |
++----------+------------+------+
+| GITA     | NULL       | NULL |
+| VRUSHALI | NULL       | NULL |
+| SHARMIN  | NULL       | NULL |
+| BANDISH  | NULL       | NULL |
+| SMITH    | 7032300023 | 0023 |
+| AARAV    | 7032300084 | 0084 |
+| THOMAS   | 7032300011 | 0011 |
+| ALLEN    | 7032300096 | 0096 |
+| WARD     | 7132300034 | 0034 |
+| JONES    | 7132300039 | 0039 |
+| MARTIN   | 7132300050 | 0050 |
+| BLAKE    | 7132300027 | 0027 |
+| CLARK    | 7032300001 | 0001 |
+| SCOTT    | NULL       | NULL |
+| KING     | 7132300081 | 0081 |
+| FRED     | NULL       | NULL |
+| TURNER   | NULL       | NULL |
+| ADAMS    | 7132300086 | 0086 |
+| Ruhan    | NULL       | NULL |
+| Neel     | NULL       | NULL |
+| JAMES    | 7132300042 | 0042 |
+| FORD     | NULL       | NULL |
+| HOFFMAN  | NULL       | NULL |
+| GRASS    | NULL       | NULL |
+| MILLER   | 7132300055 | 0055 |
+| AARUSH   | NULL       | NULL |
+| ALEX     | 7156567183 | 7183 |
+| NATASHA  | NULL       | NULL |
+| SANGITA  | NULL       | NULL |
+| SUPRIYA  | NULL       | NULL |
++----------+------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename,length(ename), phone , right(phone , 4) R1 from emp;
++----------+---------------+------------+------+
+| ename    | length(ename) | phone      | R1   |
++----------+---------------+------------+------+
+| GITA     |             4 | NULL       | NULL |
+| VRUSHALI |             8 | NULL       | NULL |
+| SHARMIN  |             7 | NULL       | NULL |
+| BANDISH  |             7 | NULL       | NULL |
+| SMITH    |             5 | 7032300023 | 0023 |
+| AARAV    |             5 | 7032300084 | 0084 |
+| THOMAS   |             6 | 7032300011 | 0011 |
+| ALLEN    |             5 | 7032300096 | 0096 |
+| WARD     |             4 | 7132300034 | 0034 |
+| JONES    |             5 | 7132300039 | 0039 |
+| MARTIN   |             6 | 7132300050 | 0050 |
+| BLAKE    |             5 | 7132300027 | 0027 |
+| CLARK    |             5 | 7032300001 | 0001 |
+| SCOTT    |             5 | NULL       | NULL |
+| KING     |             4 | 7132300081 | 0081 |
+| FRED     |             4 | NULL       | NULL |
+| TURNER   |             6 | NULL       | NULL |
+| ADAMS    |             5 | 7132300086 | 0086 |
+| Ruhan    |             5 | NULL       | NULL |
+| Neel     |             4 | NULL       | NULL |
+| JAMES    |             5 | 7132300042 | 0042 |
+| FORD     |             4 | NULL       | NULL |
+| HOFFMAN  |             7 | NULL       | NULL |
+| GRASS    |             5 | NULL       | NULL |
+| MILLER   |             6 | 7132300055 | 0055 |
+| AARUSH   |             6 | NULL       | NULL |
+| ALEX     |             4 | 7156567183 | 7183 |
+| NATASHA  |             7 | NULL       | NULL |
+| SANGITA  |             7 | NULL       | NULL |
+| SUPRIYA  |             7 | NULL       | NULL |
++----------+---------------+------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename,phone, concat('*****',right(phone,5)) R1 from emp;
++----------+------------+------------+
+| ename    | phone      | R1         |
++----------+------------+------------+
+| GITA     | NULL       | NULL       |
+| VRUSHALI | NULL       | NULL       |
+| SHARMIN  | NULL       | NULL       |
+| BANDISH  | NULL       | NULL       |
+| SMITH    | 7032300023 | *****00023 |
+| AARAV    | 7032300084 | *****00084 |
+| THOMAS   | 7032300011 | *****00011 |
+| ALLEN    | 7032300096 | *****00096 |
+| WARD     | 7132300034 | *****00034 |
+| JONES    | 7132300039 | *****00039 |
+| MARTIN   | 7132300050 | *****00050 |
+| BLAKE    | 7132300027 | *****00027 |
+| CLARK    | 7032300001 | *****00001 |
+| SCOTT    | NULL       | NULL       |
+| KING     | 7132300081 | *****00081 |
+| FRED     | NULL       | NULL       |
+| TURNER   | NULL       | NULL       |
+| ADAMS    | 7132300086 | *****00086 |
+| Ruhan    | NULL       | NULL       |
+| Neel     | NULL       | NULL       |
+| JAMES    | 7132300042 | *****00042 |
+| FORD     | NULL       | NULL       |
+| HOFFMAN  | NULL       | NULL       |
+| GRASS    | NULL       | NULL       |
+| MILLER   | 7132300055 | *****00055 |
+| AARUSH   | NULL       | NULL       |
+| ALEX     | 7156567183 | *****67183 |
+| NATASHA  | NULL       | NULL       |
+| SANGITA  | NULL       | NULL       |
+| SUPRIYA  | NULL       | NULL       |
++----------+------------+------------+
+30 rows in set (0.00 sec)
+
+mysql> select ename,phone, concat('*****',right(phone,5),ifnull(phone ,0)) R1 from emp;
++----------+------------+----------------------+
+| ename    | phone      | R1                   |
++----------+------------+----------------------+
+| GITA     | NULL       | NULL                 |
+| VRUSHALI | NULL       | NULL                 |
+| SHARMIN  | NULL       | NULL                 |
+| BANDISH  | NULL       | NULL                 |
+| SMITH    | 7032300023 | *****000237032300023 |
+| AARAV    | 7032300084 | *****000847032300084 |
+| THOMAS   | 7032300011 | *****000117032300011 |
+| ALLEN    | 7032300096 | *****000967032300096 |
+| WARD     | 7132300034 | *****000347132300034 |
+| JONES    | 7132300039 | *****000397132300039 |
+| MARTIN   | 7132300050 | *****000507132300050 |
+| BLAKE    | 7132300027 | *****000277132300027 |
+| CLARK    | 7032300001 | *****000017032300001 |
+| SCOTT    | NULL       | NULL                 |
+| KING     | 7132300081 | *****000817132300081 |
+| FRED     | NULL       | NULL                 |
+| TURNER   | NULL       | NULL                 |
+| ADAMS    | 7132300086 | *****000867132300086 |
+| Ruhan    | NULL       | NULL                 |
+| Neel     | NULL       | NULL                 |
+| JAMES    | 7132300042 | *****000427132300042 |
+| FORD     | NULL       | NULL                 |
+| HOFFMAN  | NULL       | NULL                 |
+| GRASS    | NULL       | NULL                 |
+| MILLER   | 7132300055 | *****000557132300055 |
+| AARUSH   | NULL       | NULL                 |
+| ALEX     | 7156567183 | *****671837156567183 |
+| NATASHA  | NULL       | NULL                 |
+| SANGITA  | NULL       | NULL                 |
+| SUPRIYA  | NULL       | NULL                 |
++----------+------------+----------------------+
+30 rows in set (0.00 sec)
+
+mysql> select 'shashank' = 'shashank'
+    -> ;
++-------------------------+
+| 'shashank' = 'shashank' |
++-------------------------+
+|                       1 |
++-------------------------+
+1 row in set (0.29 sec)
+
+mysql> select 'shashank' = 'shashan';
++------------------------+
+| 'shashank' = 'shashan' |
++------------------------+
+|                      0 |
++------------------------+
+1 row in set (0.43 sec)
+
+mysql> select replace('shashank','a','X');
++-----------------------------+
+| replace('shashank','a','X') |
++-----------------------------+
+| shXshXnk                    |
++-----------------------------+
+1 row in set (0.00 sec)
+
+
+mysql> select replace('shashank','a','X');
++-----------------------------+
+| replace('shashank','a','X') |
++-----------------------------+
+| shXshXnk                    |
++-----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select replace('shashank','a','');
++----------------------------+
+| replace('shashank','a','') |
++----------------------------+
+| shshnk                     |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select replace('shashank','a','');
++----------------------------+
+| replace('shashank','a','') |
++----------------------------+
+| shshnk                     |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select replace('shashank','sh','');
++-----------------------------+
+| replace('shashank','sh','') |
++-----------------------------+
+| aank                        |
++-----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select replace('shashank','sn','*');
++------------------------------+
+| replace('shashank','sn','*') |
++------------------------------+
+| shashank                     |
++------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select replace('shashank','sh','*');
++------------------------------+
+| replace('shashank','sh','*') |
++------------------------------+
+| *a*ank                       |
++------------------------------+
+1 row in set (0.00 sec)
+mysql> select replace('shashank','s','*');
++-----------------------------+
+| replace('shashank','s','*') |
++-----------------------------+
+| *ha*hank                    |
++-----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select length('shashank') - length(replace('shashank','h',''));
++---------------------------------------------------------+
+| length('shashank') - length(replace('shashank','h','')) |
++---------------------------------------------------------+
+|                                                       2 |
++---------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select length('shashank') - length(replace('shashank','k',''));
++---------------------------------------------------------+
+| length('shashank') - length(replace('shashank','k','')) |
++---------------------------------------------------------+
+|                                                       1 |
++---------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from teams;
++--------+------------------------------------------------+
+| TeamID | Members                                        |
++--------+------------------------------------------------+
+|      1 | Saleel, Sharmin, Vrushali, Gau                 |
+|      2 | Kaushal, Natsha, Ruhan                         |
+|      3 | Lalu, Brooke, Boy, Naru, Bhavin                |
+|      4 | Bhuru, Baba, Anoop, Meera, Boy                 |
+|      5 | Dilu, Fredy                                    |
+|      6 | Daigo, Harshil, Boy, Raju, Bothyo              |
+|      7 | Bandish, Supriya, Sangita                      |
+|      8 | Monika, Karishma, William, Varsha, Jack, Grace |
+|      9 | Vasant, Neel                                   |
+|     10 | Nitish, Bipin, Mai, Didi                       |
++--------+------------------------------------------------+
+10 rows in set (0.32 sec)
+
+mysql> select teamid, members ,replace(members,',','') R1 from teams;
++--------+------------------------------------------------+-------------------------------------------+
+| teamid | members                                        | R1                                        |
++--------+------------------------------------------------+-------------------------------------------+
+|      1 | Saleel, Sharmin, Vrushali, Gau                 | Saleel Sharmin Vrushali Gau               |
+|      2 | Kaushal, Natsha, Ruhan                         | Kaushal Natsha Ruhan                      |
+|      3 | Lalu, Brooke, Boy, Naru, Bhavin                | Lalu Brooke Boy Naru Bhavin               |
+|      4 | Bhuru, Baba, Anoop, Meera, Boy                 | Bhuru Baba Anoop Meera Boy                |
+|      5 | Dilu, Fredy                                    | Dilu Fredy                                |
+|      6 | Daigo, Harshil, Boy, Raju, Bothyo              | Daigo Harshil Boy Raju Bothyo             |
+|      7 | Bandish, Supriya, Sangita                      | Bandish Supriya Sangita                   |
+|      8 | Monika, Karishma, William, Varsha, Jack, Grace | Monika Karishma William Varsha Jack Grace |
+|      9 | Vasant, Neel                                   | Vasant Neel                               |
+|     10 | Nitish, Bipin, Mai, Didi                       | Nitish Bipin Mai Didi                     |
++--------+------------------------------------------------+-------------------------------------------+
+10 rows in set (0.00 sec)
+
+mysql> select teamid, length(members), length(replace(members,',', '')) R1 from teams;
++--------+-----------------+------+
+| teamid | length(members) | R1   |
++--------+-----------------+------+
+|      1 |              30 |   27 |
+|      2 |              22 |   20 |
+|      3 |              31 |   27 |
+|      4 |              30 |   26 |
+|      5 |              11 |   10 |
+|      6 |              33 |   29 |
+|      7 |              25 |   23 |
+|      8 |              46 |   41 |
+|      9 |              12 |   11 |
+|     10 |              24 |   21 |
++--------+-----------------+------+
+10 rows in set (0.00 sec)
+
+mysql> select teamid, length(members), length(replace(members,',', ''))+1 R1 from teams;
++--------+-----------------+------+
+| teamid | length(members) | R1   |
++--------+-----------------+------+
+|      1 |              30 |   28 |
+|      2 |              22 |   21 |
+|      3 |              31 |   28 |
+|      4 |              30 |   27 |
+|      5 |              11 |   11 |
+|      6 |              33 |   30 |
+|      7 |              25 |   24 |
+|      8 |              46 |   42 |
+|      9 |              12 |   12 |
+|     10 |              24 |   22 |
++--------+-----------------+------+
+10 rows in set (0.00 sec)
+
+mysql> select teamid, length(members), length(replace(members,',', '')) R1 from teams;
++--------+-----------------+------+
+| teamid | length(members) | R1   |
++--------+-----------------+------+
+|      1 |              30 |   27 |
+|      2 |              22 |   20 |
+|      3 |              31 |   27 |
+|      4 |              30 |   26 |
+|      5 |              11 |   10 |
+|      6 |              33 |   29 |
+|      7 |              25 |   23 |
+|      8 |              46 |   41 |
+|      9 |              12 |   11 |
+|     10 |              24 |   21 |
++--------+-----------------+------+
+10 rows in set (0.00 sec)
+
+mysql> select teamid,members, length(members) - length(replace(members,',', '')) R1 from teams;
++--------+------------------------------------------------+------+
+| teamid | members                                        | R1   |
++--------+------------------------------------------------+------+
+|      1 | Saleel, Sharmin, Vrushali, Gau                 |    3 |
+|      2 | Kaushal, Natsha, Ruhan                         |    2 |
+|      3 | Lalu, Brooke, Boy, Naru, Bhavin                |    4 |
+|      4 | Bhuru, Baba, Anoop, Meera, Boy                 |    4 |
+|      5 | Dilu, Fredy                                    |    1 |
+|      6 | Daigo, Harshil, Boy, Raju, Bothyo              |    4 |
+|      7 | Bandish, Supriya, Sangita                      |    2 |
+|      8 | Monika, Karishma, William, Varsha, Jack, Grace |    5 |
+|      9 | Vasant, Neel                                   |    1 |
+|     10 | Nitish, Bipin, Mai, Didi                       |    3 |
++--------+------------------------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> select teamid,members, length(members) - length(replace(members,',', ''))+1 R1 from teams;
++--------+------------------------------------------------+------+
+| teamid | members                                        | R1   |
++--------+------------------------------------------------+------+
+|      1 | Saleel, Sharmin, Vrushali, Gau                 |    4 |
+|      2 | Kaushal, Natsha, Ruhan                         |    3 |
+|      3 | Lalu, Brooke, Boy, Naru, Bhavin                |    5 |
+|      4 | Bhuru, Baba, Anoop, Meera, Boy                 |    5 |
+|      5 | Dilu, Fredy                                    |    2 |
+|      6 | Daigo, Harshil, Boy, Raju, Bothyo              |    5 |
+|      7 | Bandish, Supriya, Sangita                      |    3 |
+|      8 | Monika, Karishma, William, Varsha, Jack, Grace |    6 |
+|      9 | Vasant, Neel                                   |    2 |
+|     10 | Nitish, Bipin, Mai, Didi                       |    4 |
++--------+------------------------------------------------+------+
+10 rows in set (0.00 sec)
+
+mysql> select * from vote_response;
++-------------+-----------------------------------------------------------------------------------------------------------------------+
+| candidateID | response                                                                                                              |
++-------------+-----------------------------------------------------------------------------------------------------------------------+
+|           3 | n,n,n,y,y,y,y,n,y,n,y,y,n,n,y,n,n,n,n,n,n,n,n,y,y,y,y,y,y,y,n,y,n,y,y,y,n,n,n,y,y,y,y,n,n,n,n,n,y                     |
+|           1 | y,n,n,y,y,y,y,n,y,n,y,y,n,n,y,n,n,y,n,y,n,y,n,y,y,y,y,y,y,y,n,y,n,y,y,y,n,n,n,y,y,y,y,y,y,y,n,y,n,y,n,y,n,n,n,y,y,y,n |
+|           2 | y,y,y,y,y,y,y,n,y,y,y,y,n,y,y,y,y,y,n,y,y,y,y,y,y,y,y,y,y,y,n,y,y,y,y,y,n,y,y,y,y,y,y,y,n,y,n                         |
+|           4 | n,n,n,y,y,n,n,n,y,n,y,y,n,n,y,n,y,n,n,y,n,y,n,y,y,n,y,n,y,y,n,y,n,y,n,y,n,n,n,y,y,n,n                                 |
++-------------+-----------------------------------------------------------------------------------------------------------------------+
+4 rows in set (0.57 sec)
+
+mysql> select response, replace(response,'n','') from vote_response;
++-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+| response                                                                                                              | replace(response,'n','')                                                                       |
++-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+| n,n,n,y,y,y,y,n,y,n,y,y,n,n,y,n,n,n,n,n,n,n,n,y,y,y,y,y,y,y,n,y,n,y,y,y,n,n,n,y,y,y,y,n,n,n,n,n,y                     | ,,,y,y,y,y,,y,,y,y,,,y,,,,,,,,,y,y,y,y,y,y,y,,y,,y,y,y,,,,y,y,y,y,,,,,,y                       |
+| y,n,n,y,y,y,y,n,y,n,y,y,n,n,y,n,n,y,n,y,n,y,n,y,y,y,y,y,y,y,n,y,n,y,y,y,n,n,n,y,y,y,y,y,y,y,n,y,n,y,n,y,n,n,n,y,y,y,n | y,,,y,y,y,y,,y,,y,y,,,y,,,y,,y,,y,,y,y,y,y,y,y,y,,y,,y,y,y,,,,y,y,y,y,y,y,y,,y,,y,,y,,,,y,y,y, |
+| y,y,y,y,y,y,y,n,y,y,y,y,n,y,y,y,y,y,n,y,y,y,y,y,y,y,y,y,y,y,n,y,y,y,y,y,n,y,y,y,y,y,y,y,n,y,n                         | y,y,y,y,y,y,y,,y,y,y,y,,y,y,y,y,y,,y,y,y,y,y,y,y,y,y,y,y,,y,y,y,y,y,,y,y,y,y,y,y,y,,y,         |
+| n,n,n,y,y,n,n,n,y,n,y,y,n,n,y,n,y,n,n,y,n,y,n,y,y,n,y,n,y,y,n,y,n,y,n,y,n,n,n,y,y,n,n                                 | ,,,y,y,,,,y,,y,y,,,y,,y,,,y,,y,,y,y,,y,,y,y,,y,,y,,y,,,,y,y,,                                  |
++-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+4 rows in set (0.00 sec)
+
+mysql> select response,length(response) - length( replace(response,',',' ')) from vote_response;
++-----------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------+
+| response                                                                                                              | length(response) - length( replace(response,',',' ')) |
++-----------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------+
+| n,n,n,y,y,y,y,n,y,n,y,y,n,n,y,n,n,n,n,n,n,n,n,y,y,y,y,y,y,y,n,y,n,y,y,y,n,n,n,y,y,y,y,n,n,n,n,n,y                     |                                                     0 |
+| y,n,n,y,y,y,y,n,y,n,y,y,n,n,y,n,n,y,n,y,n,y,n,y,y,y,y,y,y,y,n,y,n,y,y,y,n,n,n,y,y,y,y,y,y,y,n,y,n,y,n,y,n,n,n,y,y,y,n |                                                     0 |
+| y,y,y,y,y,y,y,n,y,y,y,y,n,y,y,y,y,y,n,y,y,y,y,y,y,y,y,y,y,y,n,y,y,y,y,y,n,y,y,y,y,y,y,y,n,y,n                         |                                                     0 |
+| n,n,n,y,y,n,n,n,y,n,y,y,n,n,y,n,y,n,n,y,n,y,n,y,y,n,y,n,y,y,n,y,n,y,n,y,n,n,n,y,y,n,n                                 |                                                     0 |
++-----------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------+
+4 rows in set (0.00 sec)
+
+mysql> select response,length(response) - length(replace(response,'n','')+1) from vote_response;
++-----------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------+
+| resposelect candidateid , length(response) - length(replace(response,'y','')) from vote_response;                     | length(response) - length(replace(response,'n+-------------+-----------------------------------------------------+
+| candidateid | length(response) - length(replace(response,'y','')) |---------------------------------------------------+----------------------------------------------+-------------+-----------------------------------------------------+
+|           3 |                                                  24 |,y,y,n,n,n,y,y,y,y,n,n,n,n,n,y                     |
+|           1 |                                                  36 |
+|           2 |                                                  40 |,y,y,n,n,n,y,y,y,y,y,y,y,n,y,n,y,n,y,n,n,n,y,y,y,n |
+|           4 |                                                  19 |
++-------------+-----------------------------------------------------+,y,y,n,y,y,y,y,y,y,y,n,y,n                         |
+4 rows in set (0.00 sec)
+| n,n,n,y,y,n,n,n,y,n,y,y,n,n,y,n,y,n,n,y,n,y,n,y,y,n,y,n,y,y,n,y,n,y,n,y,n,n,n,y,y,n,n                                 |
+mysql> select candidateid , length(response) - length(replace(response,'y','')) from vote_response;
++-------------+-----------------------------------------------------+---------------------------------------------------| candidateid | length(response) - length(replace(response,'y','')) |
++-------------+-----------------------------------------------------+
+|           3 |                                                  24 |
+|           1 |                                                  36 |
+|           2 |                                                  40 |
+|           4 |                                                  19 |
++-------------+-----------------------------------------------------+
+4 rows in set (0.00 sec)      97 |
+|           1 |              117 |
+mysql>
+|           4 |               85 |
++-------------+------------------+
+4 rows in set (0.00 sec)
+
+mysql> select candidateid , length(response) - length(replace(response,',',''))+1 from vote_response;
++-------------+-------------------------------------------------------+
+| candidateid | length(response) - length(replace(response,',',''))+1 |
++-------------+-------------------------------------------------------+
+|           3 |                                                    49 |
+|           1 |                                                    59 |
+|           2 |                                                    47 |
+|           4 |                                                    43 |
++-------------+-------------------------------------------------------+
+4 rows in set (0.00 sec)
+
+mysql> select candidateid , length(response) - length(replace(response,'y',''))+1 from vote_response;
++-------------+-------------------------------------------------------+
+| candidateid | length(response) - length(replace(response,'y',''))+1 |
++------select candidateid , length(response) - length(replace(response,'y',''))+1 from vote_response;
++-------------+-------------------------------------------------------+
+| candidateid | length(response) - length(replace(response,'y',''))+1 |
++-------------+-------------------------------------------------------+
+|           3 |                                                    25 |
+|           1 |                                                    37 |
+|           2 |                                                    41 |
+|           4 |                                                    20 |
++-------------+-------------------------------------------------------+
+4 rows in set (0.00 sec)
+
+mysql> select candidateid , length(response) - length(replace(response,'y','')) from vote_response;
++-------------+-----------------------------------------------------+
+| candidateid | length(response) - length(replace(response,'y','')) |
++-------------+-----------------------------------------------------+
+|           3 |                                                  24 |
+|           1 |                                                  36 |
+|           2 |                                                  40 |
+|           4 |                                                  19 |
++-------------+-----------------------------------------------------+
+4 rows in set (0.00 sec)
+
+mysql> select candidateid , length(response) - length(replace(response,'y','')) Voters from vote_response;
++-------------+--------+
+| candidateid | Voters |
++-------------+--------+
+|           3 |     24 |
+|           1 |     36 |
+|           2 |     40 |
+|           4 |     19 |
++-------------+--------+
+4 rows in set (0.00 sec)
