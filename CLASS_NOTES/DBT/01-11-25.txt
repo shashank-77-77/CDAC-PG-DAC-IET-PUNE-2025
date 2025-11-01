@@ -1,0 +1,1966 @@
+
+C:\Users\SALEEL>mysql --user=root --password=root db1
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.41 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> select 2000 R1, 2000 R2,
+    ->
+    -> 51^C
+mysql>
+mysql>
+mysql> select 2000 R1, 2000 R2, R1+r2;
+ERROR 1054 (42S22): Unknown column 'R1' in 'field list'
+mysql> select ename from emp;
++----------+
+| ename    |
++----------+
+| GITA     |
+| VRUSHALI |
+| SHARMIN  |
+| BANDISH  |
+| SMITH    |
+| AARAV    |
+| THOMAS   |
+| ALLEN    |
+| WARD     |
+| JONES    |
+| MARTIN   |
+| BLAKE    |
+| CLARK    |
+| SCOTT    |
+| KING     |
+| FRED     |
+| TURNER   |
+| ADAMS    |
+| Ruhan    |
+| Neel     |
+| JAMES    |
+| FORD     |
+| HOFFMAN  |
+| GRASS    |
+| MILLER   |
+| AARUSH   |
+| ALEX     |
+| NATASHA  |
+| SANGITA  |
+| SUPRIYA  |
++----------+
+30 rows in set (0.01 sec)
+
+mysql> select ename from emp limit 2;
++----------+
+| ename    |
++----------+
+| GITA     |
+| VRUSHALI |
++----------+
+2 rows in set (0.00 sec)
+
+mysql> select ename from emp limit 2,2;
++---------+
+| ename   |
++---------+
+| SHARMIN |
+| BANDISH |
++---------+
+2 rows in set (0.00 sec)
+
+mysql>
+mysql> select ename from emp limit 2,4;
++---------+
+| ename   |
++---------+
+| SHARMIN |
+| BANDISH |
+| SMITH   |
+| AARAV   |
++---------+
+4 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> select ename, job, sal from emp;
++----------+---------------------+------+
+| ename    | job                 | sal  |
++----------+---------------------+------+
+| GITA     | Compliance officers | 1750 |
+| VRUSHALI | Compliance officers | 1750 |
+| SHARMIN  | Public Relation     | 1750 |
+| BANDISH  | Public Relation     | 1750 |
+| SMITH    | CLERK               |  800 |
+| AARAV    | CLERK               | 3350 |
+| THOMAS   | CLERK               | 1750 |
+| ALLEN    | SALESMAN            | 1600 |
+| WARD     | SALESMAN            | 1250 |
+| JONES    | MANAGER             | 2975 |
+| MARTIN   | SALESMAN            | 1250 |
+| BLAKE    | MANAGER             | 2850 |
+| CLARK    | MANAGER             | 2450 |
+| SCOTT    | ANALYST             | 3000 |
+| KING     | PRESIDENT           | 5000 |
+| FRED     | vice PRESIDENT      | 5000 |
+| TURNER   | SALESMAN            | 1500 |
+| ADAMS    | CLERK               | 1100 |
+| Ruhan    | Network             | 2000 |
+| Neel     | vice PRESIDENT      | 1000 |
+| JAMES    | CLERK               |  950 |
+| FORD     | ANALYST             | 3000 |
+| HOFFMAN  | MANAGER             | 4150 |
+| GRASS    | SALESMAN            | 2575 |
+| MILLER   | CLERK               | 1300 |
+| AARUSH   | SALESMAN            | 1350 |
+| ALEX     | MANAGER             | 1250 |
+| NATASHA  | CLERK               | 1750 |
+| SANGITA  | Compliance officers | 1750 |
+| SUPRIYA  | ANALYST             | 1750 |
++----------+---------------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, job, sal from emp order by ename;
++----------+---------------------+------+
+| ename    | job                 | sal  |
++----------+---------------------+------+
+| AARAV    | CLERK               | 3350 |
+| AARUSH   | SALESMAN            | 1350 |
+| ADAMS    | CLERK               | 1100 |
+| ALEX     | MANAGER             | 1250 |
+| ALLEN    | SALESMAN            | 1600 |
+| BANDISH  | Public Relation     | 1750 |
+| BLAKE    | MANAGER             | 2850 |
+| CLARK    | MANAGER             | 2450 |
+| FORD     | ANALYST             | 3000 |
+| FRED     | vice PRESIDENT      | 5000 |
+| GITA     | Compliance officers | 1750 |
+| GRASS    | SALESMAN            | 2575 |
+| HOFFMAN  | MANAGER             | 4150 |
+| JAMES    | CLERK               |  950 |
+| JONES    | MANAGER             | 2975 |
+| KING     | PRESIDENT           | 5000 |
+| MARTIN   | SALESMAN            | 1250 |
+| MILLER   | CLERK               | 1300 |
+| NATASHA  | CLERK               | 1750 |
+| Neel     | vice PRESIDENT      | 1000 |
+| Ruhan    | Network             | 2000 |
+| SANGITA  | Compliance officers | 1750 |
+| SCOTT    | ANALYST             | 3000 |
+| SHARMIN  | Public Relation     | 1750 |
+| SMITH    | CLERK               |  800 |
+| SUPRIYA  | ANALYST             | 1750 |
+| THOMAS   | CLERK               | 1750 |
+| TURNER   | SALESMAN            | 1500 |
+| VRUSHALI | Compliance officers | 1750 |
+| WARD     | SALESMAN            | 1250 |
++----------+---------------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, job, sal from emp order by ename desc;
++----------+---------------------+------+
+| ename    | job                 | sal  |
++----------+---------------------+------+
+| WARD     | SALESMAN            | 1250 |
+| VRUSHALI | Compliance officers | 1750 |
+| TURNER   | SALESMAN            | 1500 |
+| THOMAS   | CLERK               | 1750 |
+| SUPRIYA  | ANALYST             | 1750 |
+| SMITH    | CLERK               |  800 |
+| SHARMIN  | Public Relation     | 1750 |
+| SCOTT    | ANALYST             | 3000 |
+| SANGITA  | Compliance officers | 1750 |
+| Ruhan    | Network             | 2000 |
+| Neel     | vice PRESIDENT      | 1000 |
+| NATASHA  | CLERK               | 1750 |
+| MILLER   | CLERK               | 1300 |
+| MARTIN   | SALESMAN            | 1250 |
+| KING     | PRESIDENT           | 5000 |
+| JONES    | MANAGER             | 2975 |
+| JAMES    | CLERK               |  950 |
+| HOFFMAN  | MANAGER             | 4150 |
+| GRASS    | SALESMAN            | 2575 |
+| GITA     | Compliance officers | 1750 |
+| FRED     | vice PRESIDENT      | 5000 |
+| FORD     | ANALYST             | 3000 |
+| CLARK    | MANAGER             | 2450 |
+| BLAKE    | MANAGER             | 2850 |
+| BANDISH  | Public Relation     | 1750 |
+| ALLEN    | SALESMAN            | 1600 |
+| ALEX     | MANAGER             | 1250 |
+| ADAMS    | CLERK               | 1100 |
+| AARUSH   | SALESMAN            | 1350 |
+| AARAV    | CLERK               | 3350 |
++----------+---------------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, job, hiredate, sal from emp order by hiredate;
++----------+---------------------+------------+------+
+| ename    | job                 | hiredate   | sal  |
++----------+---------------------+------------+------+
+| GRASS    | SALESMAN            | 1980-02-14 | 2575 |
+| AARUSH   | SALESMAN            | 1980-02-14 | 1350 |
+| SMITH    | CLERK               | 1980-12-17 |  800 |
+| ALLEN    | SALESMAN            | 1981-02-20 | 1600 |
+| WARD     | SALESMAN            | 1981-02-22 | 1250 |
+| JONES    | MANAGER             | 1981-04-02 | 2975 |
+| BLAKE    | MANAGER             | 1981-05-01 | 2850 |
+| CLARK    | MANAGER             | 1981-06-09 | 2450 |
+| GITA     | Compliance officers | 1981-07-19 | 1750 |
+| VRUSHALI | Compliance officers | 1981-07-19 | 1750 |
+| SHARMIN  | Public Relation     | 1981-07-19 | 1750 |
+| BANDISH  | Public Relation     | 1981-07-19 | 1750 |
+| THOMAS   | CLERK               | 1981-07-19 | 1750 |
+| NATASHA  | CLERK               | 1981-07-19 | 1750 |
+| SANGITA  | Compliance officers | 1981-07-19 | 1750 |
+| SUPRIYA  | ANALYST             | 1981-07-19 | 1750 |
+| TURNER   | SALESMAN            | 1981-09-08 | 1500 |
+| MARTIN   | SALESMAN            | 1981-09-28 | 1250 |
+| KING     | PRESIDENT           | 1981-11-17 | 5000 |
+| JAMES    | CLERK               | 1981-12-03 |  950 |
+| FORD     | ANALYST             | 1981-12-03 | 3000 |
+| AARAV    | CLERK               | 1981-12-31 | 3350 |
+| MILLER   | CLERK               | 1982-01-23 | 1300 |
+| ALEX     | MANAGER             | 1982-01-24 | 1250 |
+| HOFFMAN  | MANAGER             | 1982-03-24 | 4150 |
+| SCOTT    | ANALYST             | 1982-12-09 | 3000 |
+| ADAMS    | CLERK               | 1983-01-12 | 1100 |
+| FRED     | vice PRESIDENT      | 1983-08-09 | 5000 |
+| Ruhan    | Network             | 1983-08-09 | 2000 |
+| Neel     | vice PRESIDENT      | 1983-08-09 | 1000 |
++----------+---------------------+------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, job, hiredate, sal from emp order by hiredate desc;
++----------+---------------------+------------+------+
+| ename    | job                 | hiredate   | sal  |
++----------+---------------------+------------+------+
+| FRED     | vice PRESIDENT      | 1983-08-09 | 5000 |
+| Ruhan    | Network             | 1983-08-09 | 2000 |
+| Neel     | vice PRESIDENT      | 1983-08-09 | 1000 |
+| ADAMS    | CLERK               | 1983-01-12 | 1100 |
+| SCOTT    | ANALYST             | 1982-12-09 | 3000 |
+| HOFFMAN  | MANAGER             | 1982-03-24 | 4150 |
+| ALEX     | MANAGER             | 1982-01-24 | 1250 |
+| MILLER   | CLERK               | 1982-01-23 | 1300 |
+| AARAV    | CLERK               | 1981-12-31 | 3350 |
+| JAMES    | CLERK               | 1981-12-03 |  950 |
+| FORD     | ANALYST             | 1981-12-03 | 3000 |
+| KING     | PRESIDENT           | 1981-11-17 | 5000 |
+| MARTIN   | SALESMAN            | 1981-09-28 | 1250 |
+| TURNER   | SALESMAN            | 1981-09-08 | 1500 |
+| GITA     | Compliance officers | 1981-07-19 | 1750 |
+| VRUSHALI | Compliance officers | 1981-07-19 | 1750 |
+| SHARMIN  | Public Relation     | 1981-07-19 | 1750 |
+| BANDISH  | Public Relation     | 1981-07-19 | 1750 |
+| THOMAS   | CLERK               | 1981-07-19 | 1750 |
+| NATASHA  | CLERK               | 1981-07-19 | 1750 |
+| SANGITA  | Compliance officers | 1981-07-19 | 1750 |
+| SUPRIYA  | ANALYST             | 1981-07-19 | 1750 |
+| CLARK    | MANAGER             | 1981-06-09 | 2450 |
+| BLAKE    | MANAGER             | 1981-05-01 | 2850 |
+| JONES    | MANAGER             | 1981-04-02 | 2975 |
+| WARD     | SALESMAN            | 1981-02-22 | 1250 |
+| ALLEN    | SALESMAN            | 1981-02-20 | 1600 |
+| SMITH    | CLERK               | 1980-12-17 |  800 |
+| GRASS    | SALESMAN            | 1980-02-14 | 2575 |
+| AARUSH   | SALESMAN            | 1980-02-14 | 1350 |
++----------+---------------------+------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select * from city;
++------+----------+
+| id   | CityName |
++------+----------+
+|    1 | Baroda   |
+|    2 | Surat    |
+|    3 | Bharuch  |
+|    4 | Rajkot   |
+|    5 | Jamnagar |
++------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select * from city order by CityName;
++------+----------+
+| id   | CityName |
++------+----------+
+|    1 | Baroda   |
+|    3 | Bharuch  |
+|    5 | Jamnagar |
+|    4 | Rajkot   |
+|    2 | Surat    |
++------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select * from city order by CityName desc;
++------+----------+
+| id   | CityName |
++------+----------+
+|    2 | Surat    |
+|    4 | Rajkot   |
+|    5 | Jamnagar |
+|    3 | Bharuch  |
+|    1 | Baroda   |
++------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select ename, job, hiredate, sal from emp order by sal;
++----------+---------------------+------------+------+
+| ename    | job                 | hiredate   | sal  |
++----------+---------------------+------------+------+
+| SMITH    | CLERK               | 1980-12-17 |  800 |
+| JAMES    | CLERK               | 1981-12-03 |  950 |
+| Neel     | vice PRESIDENT      | 1983-08-09 | 1000 |
+| ADAMS    | CLERK               | 1983-01-12 | 1100 |
+| WARD     | SALESMAN            | 1981-02-22 | 1250 |
+| MARTIN   | SALESMAN            | 1981-09-28 | 1250 |
+| ALEX     | MANAGER             | 1982-01-24 | 1250 |
+| MILLER   | CLERK               | 1982-01-23 | 1300 |
+| AARUSH   | SALESMAN            | 1980-02-14 | 1350 |
+| TURNER   | SALESMAN            | 1981-09-08 | 1500 |
+| ALLEN    | SALESMAN            | 1981-02-20 | 1600 |
+| GITA     | Compliance officers | 1981-07-19 | 1750 |
+| VRUSHALI | Compliance officers | 1981-07-19 | 1750 |
+| SHARMIN  | Public Relation     | 1981-07-19 | 1750 |
+| BANDISH  | Public Relation     | 1981-07-19 | 1750 |
+| THOMAS   | CLERK               | 1981-07-19 | 1750 |
+| NATASHA  | CLERK               | 1981-07-19 | 1750 |
+| SANGITA  | Compliance officers | 1981-07-19 | 1750 |
+| SUPRIYA  | ANALYST             | 1981-07-19 | 1750 |
+| Ruhan    | Network             | 1983-08-09 | 2000 |
+| CLARK    | MANAGER             | 1981-06-09 | 2450 |
+| GRASS    | SALESMAN            | 1980-02-14 | 2575 |
+| BLAKE    | MANAGER             | 1981-05-01 | 2850 |
+| JONES    | MANAGER             | 1981-04-02 | 2975 |
+| SCOTT    | ANALYST             | 1982-12-09 | 3000 |
+| FORD     | ANALYST             | 1981-12-03 | 3000 |
+| AARAV    | CLERK               | 1981-12-31 | 3350 |
+| HOFFMAN  | MANAGER             | 1982-03-24 | 4150 |
+| KING     | PRESIDENT           | 1981-11-17 | 5000 |
+| FRED     | vice PRESIDENT      | 1983-08-09 | 5000 |
++----------+---------------------+------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, job, hiredate, sal from emp order by sal desc;
++----------+---------------------+------------+------+
+| ename    | job                 | hiredate   | sal  |
++----------+---------------------+------------+------+
+| KING     | PRESIDENT           | 1981-11-17 | 5000 |
+| FRED     | vice PRESIDENT      | 1983-08-09 | 5000 |
+| HOFFMAN  | MANAGER             | 1982-03-24 | 4150 |
+| AARAV    | CLERK               | 1981-12-31 | 3350 |
+| SCOTT    | ANALYST             | 1982-12-09 | 3000 |
+| FORD     | ANALYST             | 1981-12-03 | 3000 |
+| JONES    | MANAGER             | 1981-04-02 | 2975 |
+| BLAKE    | MANAGER             | 1981-05-01 | 2850 |
+| GRASS    | SALESMAN            | 1980-02-14 | 2575 |
+| CLARK    | MANAGER             | 1981-06-09 | 2450 |
+| Ruhan    | Network             | 1983-08-09 | 2000 |
+| GITA     | Compliance officers | 1981-07-19 | 1750 |
+| VRUSHALI | Compliance officers | 1981-07-19 | 1750 |
+| SHARMIN  | Public Relation     | 1981-07-19 | 1750 |
+| BANDISH  | Public Relation     | 1981-07-19 | 1750 |
+| THOMAS   | CLERK               | 1981-07-19 | 1750 |
+| NATASHA  | CLERK               | 1981-07-19 | 1750 |
+| SANGITA  | Compliance officers | 1981-07-19 | 1750 |
+| SUPRIYA  | ANALYST             | 1981-07-19 | 1750 |
+| ALLEN    | SALESMAN            | 1981-02-20 | 1600 |
+| TURNER   | SALESMAN            | 1981-09-08 | 1500 |
+| AARUSH   | SALESMAN            | 1980-02-14 | 1350 |
+| MILLER   | CLERK               | 1982-01-23 | 1300 |
+| WARD     | SALESMAN            | 1981-02-22 | 1250 |
+| MARTIN   | SALESMAN            | 1981-09-28 | 1250 |
+| ALEX     | MANAGER             | 1982-01-24 | 1250 |
+| ADAMS    | CLERK               | 1983-01-12 | 1100 |
+| Neel     | vice PRESIDENT      | 1983-08-09 | 1000 |
+| JAMES    | CLERK               | 1981-12-03 |  950 |
+| SMITH    | CLERK               | 1980-12-17 |  800 |
++----------+---------------------+------------+------+
+30 rows in set (0.00 sec)
+
+mysql>
+mysql> select ename, job, hiredate, sal from emp order by job, ename;
++----------+---------------------+------------+------+
+| ename    | job                 | hiredate   | sal  |
++----------+---------------------+------------+------+
+| FORD     | ANALYST             | 1981-12-03 | 3000 |
+| SCOTT    | ANALYST             | 1982-12-09 | 3000 |
+| SUPRIYA  | ANALYST             | 1981-07-19 | 1750 |
+| AARAV    | CLERK               | 1981-12-31 | 3350 |
+| ADAMS    | CLERK               | 1983-01-12 | 1100 |
+| JAMES    | CLERK               | 1981-12-03 |  950 |
+| MILLER   | CLERK               | 1982-01-23 | 1300 |
+| NATASHA  | CLERK               | 1981-07-19 | 1750 |
+| SMITH    | CLERK               | 1980-12-17 |  800 |
+| THOMAS   | CLERK               | 1981-07-19 | 1750 |
+| GITA     | Compliance officers | 1981-07-19 | 1750 |
+| SANGITA  | Compliance officers | 1981-07-19 | 1750 |
+| VRUSHALI | Compliance officers | 1981-07-19 | 1750 |
+| ALEX     | MANAGER             | 1982-01-24 | 1250 |
+| BLAKE    | MANAGER             | 1981-05-01 | 2850 |
+| CLARK    | MANAGER             | 1981-06-09 | 2450 |
+| HOFFMAN  | MANAGER             | 1982-03-24 | 4150 |
+| JONES    | MANAGER             | 1981-04-02 | 2975 |
+| Ruhan    | Network             | 1983-08-09 | 2000 |
+| KING     | PRESIDENT           | 1981-11-17 | 5000 |
+| BANDISH  | Public Relation     | 1981-07-19 | 1750 |
+| SHARMIN  | Public Relation     | 1981-07-19 | 1750 |
+| AARUSH   | SALESMAN            | 1980-02-14 | 1350 |
+| ALLEN    | SALESMAN            | 1981-02-20 | 1600 |
+| GRASS    | SALESMAN            | 1980-02-14 | 2575 |
+| MARTIN   | SALESMAN            | 1981-09-28 | 1250 |
+| TURNER   | SALESMAN            | 1981-09-08 | 1500 |
+| WARD     | SALESMAN            | 1981-02-22 | 1250 |
+| FRED     | vice PRESIDENT      | 1983-08-09 | 5000 |
+| Neel     | vice PRESIDENT      | 1983-08-09 | 1000 |
++----------+---------------------+------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, job, hiredate, sal from emp order by job, ename desc;
++----------+---------------------+------------+------+
+| ename    | job                 | hiredate   | sal  |
++----------+---------------------+------------+------+
+| SUPRIYA  | ANALYST             | 1981-07-19 | 1750 |
+| SCOTT    | ANALYST             | 1982-12-09 | 3000 |
+| FORD     | ANALYST             | 1981-12-03 | 3000 |
+| THOMAS   | CLERK               | 1981-07-19 | 1750 |
+| SMITH    | CLERK               | 1980-12-17 |  800 |
+| NATASHA  | CLERK               | 1981-07-19 | 1750 |
+| MILLER   | CLERK               | 1982-01-23 | 1300 |
+| JAMES    | CLERK               | 1981-12-03 |  950 |
+| ADAMS    | CLERK               | 1983-01-12 | 1100 |
+| AARAV    | CLERK               | 1981-12-31 | 3350 |
+| VRUSHALI | Compliance officers | 1981-07-19 | 1750 |
+| SANGITA  | Compliance officers | 1981-07-19 | 1750 |
+| GITA     | Compliance officers | 1981-07-19 | 1750 |
+| JONES    | MANAGER             | 1981-04-02 | 2975 |
+| HOFFMAN  | MANAGER             | 1982-03-24 | 4150 |
+| CLARK    | MANAGER             | 1981-06-09 | 2450 |
+| BLAKE    | MANAGER             | 1981-05-01 | 2850 |
+| ALEX     | MANAGER             | 1982-01-24 | 1250 |
+| Ruhan    | Network             | 1983-08-09 | 2000 |
+| KING     | PRESIDENT           | 1981-11-17 | 5000 |
+| SHARMIN  | Public Relation     | 1981-07-19 | 1750 |
+| BANDISH  | Public Relation     | 1981-07-19 | 1750 |
+| WARD     | SALESMAN            | 1981-02-22 | 1250 |
+| TURNER   | SALESMAN            | 1981-09-08 | 1500 |
+| MARTIN   | SALESMAN            | 1981-09-28 | 1250 |
+| GRASS    | SALESMAN            | 1980-02-14 | 2575 |
+| ALLEN    | SALESMAN            | 1981-02-20 | 1600 |
+| AARUSH   | SALESMAN            | 1980-02-14 | 1350 |
+| Neel     | vice PRESIDENT      | 1983-08-09 | 1000 |
+| FRED     | vice PRESIDENT      | 1983-08-09 | 5000 |
++----------+---------------------+------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, job, hiredate, sal from emp order by job, ename, sal;
++----------+---------------------+------------+------+
+| ename    | job                 | hiredate   | sal  |
++----------+---------------------+------------+------+
+| FORD     | ANALYST             | 1981-12-03 | 3000 |
+| SCOTT    | ANALYST             | 1982-12-09 | 3000 |
+| SUPRIYA  | ANALYST             | 1981-07-19 | 1750 |
+| AARAV    | CLERK               | 1981-12-31 | 3350 |
+| ADAMS    | CLERK               | 1983-01-12 | 1100 |
+| JAMES    | CLERK               | 1981-12-03 |  950 |
+| MILLER   | CLERK               | 1982-01-23 | 1300 |
+| NATASHA  | CLERK               | 1981-07-19 | 1750 |
+| SMITH    | CLERK               | 1980-12-17 |  800 |
+| THOMAS   | CLERK               | 1981-07-19 | 1750 |
+| GITA     | Compliance officers | 1981-07-19 | 1750 |
+| SANGITA  | Compliance officers | 1981-07-19 | 1750 |
+| VRUSHALI | Compliance officers | 1981-07-19 | 1750 |
+| ALEX     | MANAGER             | 1982-01-24 | 1250 |
+| BLAKE    | MANAGER             | 1981-05-01 | 2850 |
+| CLARK    | MANAGER             | 1981-06-09 | 2450 |
+| HOFFMAN  | MANAGER             | 1982-03-24 | 4150 |
+| JONES    | MANAGER             | 1981-04-02 | 2975 |
+| Ruhan    | Network             | 1983-08-09 | 2000 |
+| KING     | PRESIDENT           | 1981-11-17 | 5000 |
+| BANDISH  | Public Relation     | 1981-07-19 | 1750 |
+| SHARMIN  | Public Relation     | 1981-07-19 | 1750 |
+| AARUSH   | SALESMAN            | 1980-02-14 | 1350 |
+| ALLEN    | SALESMAN            | 1981-02-20 | 1600 |
+| GRASS    | SALESMAN            | 1980-02-14 | 2575 |
+| MARTIN   | SALESMAN            | 1981-09-28 | 1250 |
+| TURNER   | SALESMAN            | 1981-09-08 | 1500 |
+| WARD     | SALESMAN            | 1981-02-22 | 1250 |
+| FRED     | vice PRESIDENT      | 1983-08-09 | 5000 |
+| Neel     | vice PRESIDENT      | 1983-08-09 | 1000 |
++----------+---------------------+------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, job, hiredate, sal from emp order by job, sal, ename;
++----------+---------------------+------------+------+
+| ename    | job                 | hiredate   | sal  |
++----------+---------------------+------------+------+
+| SUPRIYA  | ANALYST             | 1981-07-19 | 1750 |
+| FORD     | ANALYST             | 1981-12-03 | 3000 |
+| SCOTT    | ANALYST             | 1982-12-09 | 3000 |
+| SMITH    | CLERK               | 1980-12-17 |  800 |
+| JAMES    | CLERK               | 1981-12-03 |  950 |
+| ADAMS    | CLERK               | 1983-01-12 | 1100 |
+| MILLER   | CLERK               | 1982-01-23 | 1300 |
+| NATASHA  | CLERK               | 1981-07-19 | 1750 |
+| THOMAS   | CLERK               | 1981-07-19 | 1750 |
+| AARAV    | CLERK               | 1981-12-31 | 3350 |
+| GITA     | Compliance officers | 1981-07-19 | 1750 |
+| SANGITA  | Compliance officers | 1981-07-19 | 1750 |
+| VRUSHALI | Compliance officers | 1981-07-19 | 1750 |
+| ALEX     | MANAGER             | 1982-01-24 | 1250 |
+| CLARK    | MANAGER             | 1981-06-09 | 2450 |
+| BLAKE    | MANAGER             | 1981-05-01 | 2850 |
+| JONES    | MANAGER             | 1981-04-02 | 2975 |
+| HOFFMAN  | MANAGER             | 1982-03-24 | 4150 |
+| Ruhan    | Network             | 1983-08-09 | 2000 |
+| KING     | PRESIDENT           | 1981-11-17 | 5000 |
+| BANDISH  | Public Relation     | 1981-07-19 | 1750 |
+| SHARMIN  | Public Relation     | 1981-07-19 | 1750 |
+| MARTIN   | SALESMAN            | 1981-09-28 | 1250 |
+| WARD     | SALESMAN            | 1981-02-22 | 1250 |
+| AARUSH   | SALESMAN            | 1980-02-14 | 1350 |
+| TURNER   | SALESMAN            | 1981-09-08 | 1500 |
+| ALLEN    | SALESMAN            | 1981-02-20 | 1600 |
+| GRASS    | SALESMAN            | 1980-02-14 | 2575 |
+| Neel     | vice PRESIDENT      | 1983-08-09 | 1000 |
+| FRED     | vice PRESIDENT      | 1983-08-09 | 5000 |
++----------+---------------------+------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, job, hiredate, sal from emp order by job, sal, ename desc;
++----------+---------------------+------------+------+
+| ename    | job                 | hiredate   | sal  |
++----------+---------------------+------------+------+
+| SUPRIYA  | ANALYST             | 1981-07-19 | 1750 |
+| SCOTT    | ANALYST             | 1982-12-09 | 3000 |
+| FORD     | ANALYST             | 1981-12-03 | 3000 |
+| SMITH    | CLERK               | 1980-12-17 |  800 |
+| JAMES    | CLERK               | 1981-12-03 |  950 |
+| ADAMS    | CLERK               | 1983-01-12 | 1100 |
+| MILLER   | CLERK               | 1982-01-23 | 1300 |
+| THOMAS   | CLERK               | 1981-07-19 | 1750 |
+| NATASHA  | CLERK               | 1981-07-19 | 1750 |
+| AARAV    | CLERK               | 1981-12-31 | 3350 |
+| VRUSHALI | Compliance officers | 1981-07-19 | 1750 |
+| SANGITA  | Compliance officers | 1981-07-19 | 1750 |
+| GITA     | Compliance officers | 1981-07-19 | 1750 |
+| ALEX     | MANAGER             | 1982-01-24 | 1250 |
+| CLARK    | MANAGER             | 1981-06-09 | 2450 |
+| BLAKE    | MANAGER             | 1981-05-01 | 2850 |
+| JONES    | MANAGER             | 1981-04-02 | 2975 |
+| HOFFMAN  | MANAGER             | 1982-03-24 | 4150 |
+| Ruhan    | Network             | 1983-08-09 | 2000 |
+| KING     | PRESIDENT           | 1981-11-17 | 5000 |
+| SHARMIN  | Public Relation     | 1981-07-19 | 1750 |
+| BANDISH  | Public Relation     | 1981-07-19 | 1750 |
+| WARD     | SALESMAN            | 1981-02-22 | 1250 |
+| MARTIN   | SALESMAN            | 1981-09-28 | 1250 |
+| AARUSH   | SALESMAN            | 1980-02-14 | 1350 |
+| TURNER   | SALESMAN            | 1981-09-08 | 1500 |
+| ALLEN    | SALESMAN            | 1981-02-20 | 1600 |
+| GRASS    | SALESMAN            | 1980-02-14 | 2575 |
+| Neel     | vice PRESIDENT      | 1983-08-09 | 1000 |
+| FRED     | vice PRESIDENT      | 1983-08-09 | 5000 |
++----------+---------------------+------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select comm from emp order by comm;
++------+
+| comm |
++------+
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+|    0 |
+|  300 |
+|  500 |
+|  500 |
+| 1300 |
+| 1400 |
+| 2700 |
+| 2700 |
++------+
+30 rows in set (0.00 sec)
+
+mysql> select comm from emp order by comm desc;
++------+
+| comm |
++------+
+| 2700 |
+| 2700 |
+| 1400 |
+| 1300 |
+|  500 |
+|  500 |
+|  300 |
+|    0 |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
++------+
+30 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql> select isnull(1);
++-----------+
+| isnull(1) |
++-----------+
+|         0 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> select isnull(null);
++--------------+
+| isnull(null) |
++--------------+
+|            1 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql> select comm, isnull(comm) R1 from emp;
++------+----+
+| comm | R1 |
++------+----+
+| NULL |  1 |
+| NULL |  1 |
+| NULL |  1 |
+| NULL |  1 |
+| NULL |  1 |
+| NULL |  1 |
+| NULL |  1 |
+|  300 |  0 |
+|  500 |  0 |
+| NULL |  1 |
+| 1400 |  0 |
+| NULL |  1 |
+| NULL |  1 |
+| NULL |  1 |
+| NULL |  1 |
+| NULL |  1 |
+|    0 |  0 |
+| NULL |  1 |
+| NULL |  1 |
+| NULL |  1 |
+| NULL |  1 |
+| NULL |  1 |
+| NULL |  1 |
+| 2700 |  0 |
+| 1300 |  0 |
+| 2700 |  0 |
+|  500 |  0 |
+| NULL |  1 |
+| NULL |  1 |
+| NULL |  1 |
++------+----+
+30 rows in set (0.00 sec)
+
+mysql> select comm from emp order by comm desc;
++------+
+| comm |
++------+
+| 2700 |
+| 2700 |
+| 1400 |
+| 1300 |
+|  500 |
+|  500 |
+|  300 |
+|    0 |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
++------+
+30 rows in set (0.00 sec)
+
+mysql> select comm from emp order by comm desc;
++------+
+| comm |
++------+
+| 2700 |
+| 2700 |
+| 1400 |
+| 1300 |
+|  500 |
+|  500 |
+|  300 |
+|    0 |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
++------+
+30 rows in set (0.00 sec)
+
+mysql> select comm from emp order by isnull(comm), comm desc;
++------+
+| comm |
++------+
+| 2700 |
+| 2700 |
+| 1400 |
+| 1300 |
+|  500 |
+|  500 |
+|  300 |
+|    0 |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
++------+
+30 rows in set (0.00 sec)
+
+mysql> select comm from emp order by isnull(comm) desc, comm desc;
++------+
+| comm |
++------+
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| 2700 |
+| 2700 |
+| 1400 |
+| 1300 |
+|  500 |
+|  500 |
+|  300 |
+|    0 |
++------+
+30 rows in set (0.00 sec)
+
+mysql> select * from countnulls;
++----+----------+--------+-------+
+| id | ename    | city   | phone |
++----+----------+--------+-------+
+|  1 | saleel   | baroda |  NULL |
+|  2 | sharmin  | pune   |  NULL |
+|  3 | ruhan    | NULL   |  1111 |
+|  4 | vrushali | NULL   |  2222 |
+|  5 | neel     | NULL   |  3333 |
++----+----------+--------+-------+
+5 rows in set (0.04 sec)
+
+mysql> select * from countnulls order by city;
++----+----------+--------+-------+
+| id | ename    | city   | phone |
++----+----------+--------+-------+
+|  3 | ruhan    | NULL   |  1111 |
+|  4 | vrushali | NULL   |  2222 |
+|  5 | neel     | NULL   |  3333 |
+|  1 | saleel   | baroda |  NULL |
+|  2 | sharmin  | pune   |  NULL |
++----+----------+--------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from countnulls order by isnull(city), city;
++----+----------+--------+-------+
+| id | ename    | city   | phone |
++----+----------+--------+-------+
+|  1 | saleel   | baroda |  NULL |
+|  2 | sharmin  | pune   |  NULL |
+|  3 | ruhan    | NULL   |  1111 |
+|  4 | vrushali | NULL   |  2222 |
+|  5 | neel     | NULL   |  3333 |
++----+----------+--------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select true, false;
++------+-------+
+| true | false |
++------+-------+
+|    1 |     0 |
++------+-------+
+1 row in set (0.00 sec)
+
+mysql> select * from city;
++------+----------+
+| id   | CityName |
++------+----------+
+|    1 | Baroda   |
+|    2 | Surat    |
+|    3 | Bharuch  |
+|    4 | Rajkot   |
+|    5 | Jamnagar |
++------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select * from city order by true;
++------+----------+
+| id   | CityName |
++------+----------+
+|    1 | Baroda   |
+|    2 | Surat    |
+|    3 | Bharuch  |
+|    4 | Rajkot   |
+|    5 | Jamnagar |
++------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select c.*, true from city c;
++------+----------+------+
+| id   | CityName | true |
++------+----------+------+
+|    1 | Baroda   |    1 |
+|    2 | Surat    |    1 |
+|    3 | Bharuch  |    1 |
+|    4 | Rajkot   |    1 |
+|    5 | Jamnagar |    1 |
++------+----------+------+
+5 rows in set (0.00 sec)
+
+mysql> select c.*,length(cityname) from city c;
++------+----------+------------------+
+| id   | CityName | length(cityname) |
++------+----------+------------------+
+|    1 | Baroda   |                6 |
+|    2 | Surat    |                5 |
+|    3 | Bharuch  |                7 |
+|    4 | Rajkot   |                6 |
+|    5 | Jamnagar |                8 |
++------+----------+------------------+
+5 rows in set (0.00 sec)
+
+mysql> select c.*,length(cityname) from city c order by 3;
++------+----------+------------------+
+| id   | CityName | length(cityname) |
++------+----------+------------------+
+|    2 | Surat    |                5 |
+|    1 | Baroda   |                6 |
+|    4 | Rajkot   |                6 |
+|    3 | Bharuch  |                7 |
+|    5 | Jamnagar |                8 |
++------+----------+------------------+
+5 rows in set (0.00 sec)
+
+mysql> select c.*,length(cityname) from city c order by length(cityname);
++------+----------+------------------+
+| id   | CityName | length(cityname) |
++------+----------+------------------+
+|    2 | Surat    |                5 |
+|    1 | Baroda   |                6 |
+|    4 | Rajkot   |                6 |
+|    3 | Bharuch  |                7 |
+|    5 | Jamnagar |                8 |
++------+----------+------------------+
+5 rows in set (0.00 sec)
+
+mysql> select c.*,length(cityname) from city c order by length(cityname) desc;
++------+----------+------------------+
+| id   | CityName | length(cityname) |
++------+----------+------------------+
+|    5 | Jamnagar |                8 |
+|    3 | Bharuch  |                7 |
+|    1 | Baroda   |                6 |
+|    4 | Rajkot   |                6 |
+|    2 | Surat    |                5 |
++------+----------+------------------+
+5 rows in set (0.00 sec)
+
+mysql> select c.*,length(cityname) R1 from city c order by R1;
++------+----------+------+
+| id   | CityName | R1   |
++------+----------+------+
+|    2 | Surat    |    5 |
+|    1 | Baroda   |    6 |
+|    4 | Rajkot   |    6 |
+|    3 | Bharuch  |    7 |
+|    5 | Jamnagar |    8 |
++------+----------+------+
+5 rows in set (0.00 sec)
+
+mysql> select hiredate, monthname(hiredate) from emp;
++------------+---------------------+
+| hiredate   | monthname(hiredate) |
++------------+---------------------+
+| 1981-07-19 | July                |
+| 1981-07-19 | July                |
+| 1981-07-19 | July                |
+| 1981-07-19 | July                |
+| 1980-12-17 | December            |
+| 1981-12-31 | December            |
+| 1981-07-19 | July                |
+| 1981-02-20 | February            |
+| 1981-02-22 | February            |
+| 1981-04-02 | April               |
+| 1981-09-28 | September           |
+| 1981-05-01 | May                 |
+| 1981-06-09 | June                |
+| 1982-12-09 | December            |
+| 1981-11-17 | November            |
+| 1983-08-09 | August              |
+| 1981-09-08 | September           |
+| 1983-01-12 | January             |
+| 1983-08-09 | August              |
+| 1983-08-09 | August              |
+| 1981-12-03 | December            |
+| 1981-12-03 | December            |
+| 1982-03-24 | March               |
+| 1980-02-14 | February            |
+| 1982-01-23 | January             |
+| 1980-02-14 | February            |
+| 1982-01-24 | January             |
+| 1981-07-19 | July                |
+| 1981-07-19 | July                |
+| 1981-07-19 | July                |
++------------+---------------------+
+30 rows in set (0.00 sec)
+
+mysql> select hiredate, monthname(hiredate) R1 from emp R!;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '!' at line 1
+mysql> select hiredate, monthname(hiredate) R1 from emp R1;
++------------+-----------+
+| hiredate   | R1        |
++------------+-----------+
+| 1981-07-19 | July      |
+| 1981-07-19 | July      |
+| 1981-07-19 | July      |
+| 1981-07-19 | July      |
+| 1980-12-17 | December  |
+| 1981-12-31 | December  |
+| 1981-07-19 | July      |
+| 1981-02-20 | February  |
+| 1981-02-22 | February  |
+| 1981-04-02 | April     |
+| 1981-09-28 | September |
+| 1981-05-01 | May       |
+| 1981-06-09 | June      |
+| 1982-12-09 | December  |
+| 1981-11-17 | November  |
+| 1983-08-09 | August    |
+| 1981-09-08 | September |
+| 1983-01-12 | January   |
+| 1983-08-09 | August    |
+| 1983-08-09 | August    |
+| 1981-12-03 | December  |
+| 1981-12-03 | December  |
+| 1982-03-24 | March     |
+| 1980-02-14 | February  |
+| 1982-01-23 | January   |
+| 1980-02-14 | February  |
+| 1982-01-24 | January   |
+| 1981-07-19 | July      |
+| 1981-07-19 | July      |
+| 1981-07-19 | July      |
++------------+-----------+
+30 rows in set (0.00 sec)
+
+mysql> select hiredate, monthname(hiredate) R1, month(hiredate) R2 from emp R1;
++------------+-----------+------+
+| hiredate   | R1        | R2   |
++------------+-----------+------+
+| 1981-07-19 | July      |    7 |
+| 1981-07-19 | July      |    7 |
+| 1981-07-19 | July      |    7 |
+| 1981-07-19 | July      |    7 |
+| 1980-12-17 | December  |   12 |
+| 1981-12-31 | December  |   12 |
+| 1981-07-19 | July      |    7 |
+| 1981-02-20 | February  |    2 |
+| 1981-02-22 | February  |    2 |
+| 1981-04-02 | April     |    4 |
+| 1981-09-28 | September |    9 |
+| 1981-05-01 | May       |    5 |
+| 1981-06-09 | June      |    6 |
+| 1982-12-09 | December  |   12 |
+| 1981-11-17 | November  |   11 |
+| 1983-08-09 | August    |    8 |
+| 1981-09-08 | September |    9 |
+| 1983-01-12 | January   |    1 |
+| 1983-08-09 | August    |    8 |
+| 1983-08-09 | August    |    8 |
+| 1981-12-03 | December  |   12 |
+| 1981-12-03 | December  |   12 |
+| 1982-03-24 | March     |    3 |
+| 1980-02-14 | February  |    2 |
+| 1982-01-23 | January   |    1 |
+| 1980-02-14 | February  |    2 |
+| 1982-01-24 | January   |    1 |
+| 1981-07-19 | July      |    7 |
+| 1981-07-19 | July      |    7 |
+| 1981-07-19 | July      |    7 |
++------------+-----------+------+
+30 rows in set (0.00 sec)
+
+mysql> select * from orders;
++------+---------+---------------------+------+------+--------+--------------+------------+------------------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type   | paymentType  | registered | delivery_partner |
++------+---------+---------------------+------+------+--------+--------------+------------+------------------+
+| 2322 |   750.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 2364 |   750.1 | 1996-10-03 12:07:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 2475 |   750.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 3001 |   18.69 | 1996-10-03 12:30:00 | 2008 | 1007 | Online | Credit Cards |          1 | NULL             |
+| 3002 |  1900.1 | 1996-10-03 12:30:00 | 2007 | 1004 | Online | Wallets      |          1 | NULL             |
+| 3003 |  767.19 | 1996-10-03 13:45:00 | 2001 | 1001 | Online | Debit Cards  |          1 | NULL             |
+| 3005 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1002 | Online | Debit Cards  |          1 | NULL             |
+| 3006 | 1098.16 | 1996-10-03 13:37:00 | 2008 | 1007 | Online | Wallets      |          1 | NULL             |
+| 3007 |   75.75 | 1996-10-04 15:21:00 | 2002 | 1003 | Online | Credit Cards |          1 | NULL             |
+| 3008 |    4723 | 1996-10-05 12:07:00 | 2006 | 1001 | Cash   | COD          |          0 | NULL             |
+| 3009 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Online | Credit Cards |          1 | NULL             |
+| 3010 | 1309.95 | 1996-10-06 13:12:00 | 2004 | 1002 | Online | EMI Options  |          1 | NULL             |
+| 3011 | 9891.88 | 1996-10-06 13:09:00 | 2006 | 1001 | Online | EMI Options  |          1 | NULL             |
+| 3012 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3013 | 1245.98 | 1996-10-04 16:32:00 | 2002 | 1003 | Online | EMI Options  |          1 | NULL             |
+| 3014 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Cash   | COD          |          0 | NULL             |
+| 3015 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Online | EMI Options  |          1 | NULL             |
+| 3016 | 1729.67 | 1996-10-06 13:18:00 | 2006 | 1001 | Online | Wallets      |          1 | NULL             |
+| 3017 |   18.69 | 1996-10-03 12:30:00 | 2001 | 1007 | Online | Credit Cards |          1 | NULL             |
+| 3018 |  767.19 | 1996-10-03 12:05:00 | 2002 | 1001 | Online | Wallets      |          1 | NULL             |
+| 3019 |  1900.1 | 1996-10-03 12:05:00 | 2007 | 1004 | Online | EMI Options  |          1 | NULL             |
+| 3020 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1007 | Cash   | COD          |          0 | NULL             |
+| 3021 | 1098.16 | 1996-10-03 13:37:00 | 2008 | 1007 | Online | Debit Cards  |          1 | NULL             |
+| 3022 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3023 |   75.75 | 1996-10-04 16:02:00 | 2002 | 1004 | Online | Wallets      |          1 | NULL             |
+| 3024 |    4723 | 1996-10-05 12:07:00 | 2006 | 1002 | Online | Credit Cards |          1 | NULL             |
+| 3025 | 1309.95 | 1996-10-06 13:12:00 | 2002 | 1002 | Online | Wallets      |          1 | NULL             |
+| 3026 | 9891.88 | 1996-10-06 13:09:00 | 2006 | 1001 | Online | Wallets      |          1 | NULL             |
+| 3027 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3028 | 1245.98 | 1996-10-04 16:32:00 | 2002 | 1003 | Online | Debit Cards  |          1 | NULL             |
+| 3029 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Online | Credit Cards |          1 | NULL             |
+| 3030 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Cash   | COD          |          0 | NULL             |
+| 3031 | 1729.67 | 1996-10-06 13:07:00 | 2006 | 1007 | Online | Wallets      |          1 | NULL             |
+| 3032 | 3434.55 | 1996-01-26 17:09:12 | 2006 | 1007 | Online | Wallets      |          1 | NULL             |
+| 3033 |  522.23 | 1996-12-24 14:23:00 | 2002 | 1002 | Cash   | COD          |          0 | NULL             |
+| 3049 |  500.58 | 1996-03-14 07:45:19 | 2001 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3050 |  1900.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 3074 |   457.4 | 1996-04-19 05:13:00 | 2008 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 3119 |   125.5 | 1996-07-26 18:37:00 | 2007 | 1001 | Online | Wallets      |          1 | NULL             |
+| 4001 |   145.2 | 1996-05-13 20:47:00 | 2008 | 1003 | Online | EMI Options  |          1 | NULL             |
+| 4012 |   245.6 | 1996-03-06 13:07:00 | 2001 | 1002 | Online | Wallets      |          1 | NULL             |
+| 4021 |  600.65 | 1996-08-12 13:07:00 | 2001 | 1002 | Online | Wallets      |          1 | NULL             |
+| 4054 |  1200.8 | 1996-11-22 13:07:00 | 2004 | 1003 | Cash   | COD          |          0 | NULL             |
+| 5001 |  325.23 | 1996-11-04 15:21:00 | NULL | 1002 | Online | GPay         |          1 | NULL             |
+| 5011 |  138.35 | 1996-09-14 13:07:00 | 2001 | 1007 | Cash   | COD          |          0 | NULL             |
+| 5014 |  980.65 | 1996-08-23 13:07:00 | 2002 | 1007 | Online | Wallets      |          1 | NULL             |
+| 5015 | 2133.35 | 1996-06-23 13:07:00 | 2004 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 5016 | 1000.95 | 1996-03-12 13:07:00 | 2002 | 1007 | Cash   | COD          |          0 | NULL             |
+| 5020 |  950.45 | 1996-10-03 14:00:00 | NULL | 1007 | Online | Paytm        |          1 | NULL             |
+| 5034 |  120.16 | 1996-11-03 13:37:00 | NULL | 1003 | Cash   | COD          |          0 | NULL             |
+| 5053 |  1500.5 | 1996-01-01 13:07:00 | 2006 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 5056 |   750.1 | 1996-10-03 12:05:00 | NULL | 1007 | Online | PhonePe      |          1 | NULL             |
+| 5099 |  790.75 | 1996-04-24 13:07:00 | 2002 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 6501 |  125.45 | 1996-06-13 13:07:00 | 2001 | 1001 | Online | EMI Options  |          1 | NULL             |
+| 6502 |  535.25 | 1996-08-24 13:07:00 | 2006 | 1004 | Cash   | COD          |          0 | NULL             |
+| 6503 | 1100.25 | 1996-07-26 13:07:00 | 2006 | 1007 | Online | Wallets      |          1 | NULL             |
+| 6504 | 1350.75 | 1996-07-21 13:07:00 | 2008 | 1007 | Cash   | COD          |          0 | NULL             |
+| 6605 |  1900.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 6606 | 5160.45 | 1996-10-03 14:00:00 | NULL | 1002 | Online | Paytm        |          1 | NULL             |
+| 6607 | 1098.16 | 1996-11-03 13:37:00 | NULL | 1007 | Cash   | COD          |          0 | NULL             |
+| 6608 | 1713.23 | 1996-11-04 15:21:00 | NULL | 1003 | Online | GPay         |          1 | NULL             |
++------+---------+---------------------+------+------+--------+--------------+------------+------------------+
+61 rows in set (0.02 sec)
+
+mysql>
+mysql>
+mysql> select paymentType from orders;
++--------------+
+| paymentType  |
++--------------+
+| PhonePe      |
+| PhonePe      |
+| PhonePe      |
+| Credit Cards |
+| Wallets      |
+| Debit Cards  |
+| Debit Cards  |
+| Wallets      |
+| Credit Cards |
+| COD          |
+| Credit Cards |
+| EMI Options  |
+| EMI Options  |
+| COD          |
+| EMI Options  |
+| COD          |
+| EMI Options  |
+| Wallets      |
+| Credit Cards |
+| Wallets      |
+| EMI Options  |
+| COD          |
+| Debit Cards  |
+| COD          |
+| Wallets      |
+| Credit Cards |
+| Wallets      |
+| Wallets      |
+| COD          |
+| Debit Cards  |
+| Credit Cards |
+| COD          |
+| Wallets      |
+| Wallets      |
+| COD          |
+| COD          |
+| PhonePe      |
+| EMI Options  |
+| Wallets      |
+| EMI Options  |
+| Wallets      |
+| Wallets      |
+| COD          |
+| GPay         |
+| COD          |
+| Wallets      |
+| EMI Options  |
+| COD          |
+| Paytm        |
+| COD          |
+| EMI Options  |
+| PhonePe      |
+| EMI Options  |
+| EMI Options  |
+| COD          |
+| Wallets      |
+| COD          |
+| PhonePe      |
+| Paytm        |
+| COD          |
+| GPay         |
++--------------+
+61 rows in set (0.00 sec)
+
+mysql> select paymentType field(paymentType,'PhonePe') from orders;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(paymentType,'PhonePe') from orders' at line 1
+mysql>
+mysql>
+mysql> select paymentType, field(paymentType,'PhonePe') from orders;
++--------------+------------------------------+
+| paymentType  | field(paymentType,'PhonePe') |
++--------------+------------------------------+
+| PhonePe      |                            1 |
+| PhonePe      |                            1 |
+| PhonePe      |                            1 |
+| Credit Cards |                            0 |
+| Wallets      |                            0 |
+| Debit Cards  |                            0 |
+| Debit Cards  |                            0 |
+| Wallets      |                            0 |
+| Credit Cards |                            0 |
+| COD          |                            0 |
+| Credit Cards |                            0 |
+| EMI Options  |                            0 |
+| EMI Options  |                            0 |
+| COD          |                            0 |
+| EMI Options  |                            0 |
+| COD          |                            0 |
+| EMI Options  |                            0 |
+| Wallets      |                            0 |
+| Credit Cards |                            0 |
+| Wallets      |                            0 |
+| EMI Options  |                            0 |
+| COD          |                            0 |
+| Debit Cards  |                            0 |
+| COD          |                            0 |
+| Wallets      |                            0 |
+| Credit Cards |                            0 |
+| Wallets      |                            0 |
+| Wallets      |                            0 |
+| COD          |                            0 |
+| Debit Cards  |                            0 |
+| Credit Cards |                            0 |
+| COD          |                            0 |
+| Wallets      |                            0 |
+| Wallets      |                            0 |
+| COD          |                            0 |
+| COD          |                            0 |
+| PhonePe      |                            1 |
+| EMI Options  |                            0 |
+| Wallets      |                            0 |
+| EMI Options  |                            0 |
+| Wallets      |                            0 |
+| Wallets      |                            0 |
+| COD          |                            0 |
+| GPay         |                            0 |
+| COD          |                            0 |
+| Wallets      |                            0 |
+| EMI Options  |                            0 |
+| COD          |                            0 |
+| Paytm        |                            0 |
+| COD          |                            0 |
+| EMI Options  |                            0 |
+| PhonePe      |                            1 |
+| EMI Options  |                            0 |
+| EMI Options  |                            0 |
+| COD          |                            0 |
+| Wallets      |                            0 |
+| COD          |                            0 |
+| PhonePe      |                            1 |
+| Paytm        |                            0 |
+| COD          |                            0 |
+| GPay         |                            0 |
++--------------+------------------------------+
+61 rows in set (0.01 sec)
+
+mysql> select paymentType, field(paymentType,'COD','PhonePe') from orders;
++--------------+------------------------------------+
+| paymentType  | field(paymentType,'COD','PhonePe') |
++--------------+------------------------------------+
+| PhonePe      |                                  2 |
+| PhonePe      |                                  2 |
+| PhonePe      |                                  2 |
+| Credit Cards |                                  0 |
+| Wallets      |                                  0 |
+| Debit Cards  |                                  0 |
+| Debit Cards  |                                  0 |
+| Wallets      |                                  0 |
+| Credit Cards |                                  0 |
+| COD          |                                  1 |
+| Credit Cards |                                  0 |
+| EMI Options  |                                  0 |
+| EMI Options  |                                  0 |
+| COD          |                                  1 |
+| EMI Options  |                                  0 |
+| COD          |                                  1 |
+| EMI Options  |                                  0 |
+| Wallets      |                                  0 |
+| Credit Cards |                                  0 |
+| Wallets      |                                  0 |
+| EMI Options  |                                  0 |
+| COD          |                                  1 |
+| Debit Cards  |                                  0 |
+| COD          |                                  1 |
+| Wallets      |                                  0 |
+| Credit Cards |                                  0 |
+| Wallets      |                                  0 |
+| Wallets      |                                  0 |
+| COD          |                                  1 |
+| Debit Cards  |                                  0 |
+| Credit Cards |                                  0 |
+| COD          |                                  1 |
+| Wallets      |                                  0 |
+| Wallets      |                                  0 |
+| COD          |                                  1 |
+| COD          |                                  1 |
+| PhonePe      |                                  2 |
+| EMI Options  |                                  0 |
+| Wallets      |                                  0 |
+| EMI Options  |                                  0 |
+| Wallets      |                                  0 |
+| Wallets      |                                  0 |
+| COD          |                                  1 |
+| GPay         |                                  0 |
+| COD          |                                  1 |
+| Wallets      |                                  0 |
+| EMI Options  |                                  0 |
+| COD          |                                  1 |
+| Paytm        |                                  0 |
+| COD          |                                  1 |
+| EMI Options  |                                  0 |
+| PhonePe      |                                  2 |
+| EMI Options  |                                  0 |
+| EMI Options  |                                  0 |
+| COD          |                                  1 |
+| Wallets      |                                  0 |
+| COD          |                                  1 |
+| PhonePe      |                                  2 |
+| Paytm        |                                  0 |
+| COD          |                                  1 |
+| GPay         |                                  0 |
++--------------+------------------------------------+
+61 rows in set (0.00 sec)
+
+mysql> select paymentType, field(paymentType,'PhonePe') R1 from orders;
++--------------+----+
+| paymentType  | R1 |
++--------------+----+
+| PhonePe      |  1 |
+| PhonePe      |  1 |
+| PhonePe      |  1 |
+| Credit Cards |  0 |
+| Wallets      |  0 |
+| Debit Cards  |  0 |
+| Debit Cards  |  0 |
+| Wallets      |  0 |
+| Credit Cards |  0 |
+| COD          |  0 |
+| Credit Cards |  0 |
+| EMI Options  |  0 |
+| EMI Options  |  0 |
+| COD          |  0 |
+| EMI Options  |  0 |
+| COD          |  0 |
+| EMI Options  |  0 |
+| Wallets      |  0 |
+| Credit Cards |  0 |
+| Wallets      |  0 |
+| EMI Options  |  0 |
+| COD          |  0 |
+| Debit Cards  |  0 |
+| COD          |  0 |
+| Wallets      |  0 |
+| Credit Cards |  0 |
+| Wallets      |  0 |
+| Wallets      |  0 |
+| COD          |  0 |
+| Debit Cards  |  0 |
+| Credit Cards |  0 |
+| COD          |  0 |
+| Wallets      |  0 |
+| Wallets      |  0 |
+| COD          |  0 |
+| COD          |  0 |
+| PhonePe      |  1 |
+| EMI Options  |  0 |
+| Wallets      |  0 |
+| EMI Options  |  0 |
+| Wallets      |  0 |
+| Wallets      |  0 |
+| COD          |  0 |
+| GPay         |  0 |
+| COD          |  0 |
+| Wallets      |  0 |
+| EMI Options  |  0 |
+| COD          |  0 |
+| Paytm        |  0 |
+| COD          |  0 |
+| EMI Options  |  0 |
+| PhonePe      |  1 |
+| EMI Options  |  0 |
+| EMI Options  |  0 |
+| COD          |  0 |
+| Wallets      |  0 |
+| COD          |  0 |
+| PhonePe      |  1 |
+| Paytm        |  0 |
+| COD          |  0 |
+| GPay         |  0 |
++--------------+----+
+61 rows in set (0.00 sec)
+
+mysql> select paymentType, field(paymentType,'COD','PhonePe') from orders;
++--------------+------------------------------------+
+| paymentType  | field(paymentType,'COD','PhonePe') |
++--------------+------------------------------------+
+| PhonePe      |                                  2 |
+| PhonePe      |                                  2 |
+| PhonePe      |                                  2 |
+| Credit Cards |                                  0 |
+| Wallets      |                                  0 |
+| Debit Cards  |                                  0 |
+| Debit Cards  |                                  0 |
+| Wallets      |                                  0 |
+| Credit Cards |                                  0 |
+| COD          |                                  1 |
+| Credit Cards |                                  0 |
+| EMI Options  |                                  0 |
+| EMI Options  |                                  0 |
+| COD          |                                  1 |
+| EMI Options  |                                  0 |
+| COD          |                                  1 |
+| EMI Options  |                                  0 |
+| Wallets      |                                  0 |
+| Credit Cards |                                  0 |
+| Wallets      |                                  0 |
+| EMI Options  |                                  0 |
+| COD          |                                  1 |
+| Debit Cards  |                                  0 |
+| COD          |                                  1 |
+| Wallets      |                                  0 |
+| Credit Cards |                                  0 |
+| Wallets      |                                  0 |
+| Wallets      |                                  0 |
+| COD          |                                  1 |
+| Debit Cards  |                                  0 |
+| Credit Cards |                                  0 |
+| COD          |                                  1 |
+| Wallets      |                                  0 |
+| Wallets      |                                  0 |
+| COD          |                                  1 |
+| COD          |                                  1 |
+| PhonePe      |                                  2 |
+| EMI Options  |                                  0 |
+| Wallets      |                                  0 |
+| EMI Options  |                                  0 |
+| Wallets      |                                  0 |
+| Wallets      |                                  0 |
+| COD          |                                  1 |
+| GPay         |                                  0 |
+| COD          |                                  1 |
+| Wallets      |                                  0 |
+| EMI Options  |                                  0 |
+| COD          |                                  1 |
+| Paytm        |                                  0 |
+| COD          |                                  1 |
+| EMI Options  |                                  0 |
+| PhonePe      |                                  2 |
+| EMI Options  |                                  0 |
+| EMI Options  |                                  0 |
+| COD          |                                  1 |
+| Wallets      |                                  0 |
+| COD          |                                  1 |
+| PhonePe      |                                  2 |
+| Paytm        |                                  0 |
+| COD          |                                  1 |
+| GPay         |                                  0 |
++--------------+------------------------------------+
+61 rows in set (0.00 sec)
+
+mysql> select paymentType, field(paymentType,'COD','PhonePe') R1 from orders;
++--------------+----+
+| paymentType  | R1 |
++--------------+----+
+| PhonePe      |  2 |
+| PhonePe      |  2 |
+| PhonePe      |  2 |
+| Credit Cards |  0 |
+| Wallets      |  0 |
+| Debit Cards  |  0 |
+| Debit Cards  |  0 |
+| Wallets      |  0 |
+| Credit Cards |  0 |
+| COD          |  1 |
+| Credit Cards |  0 |
+| EMI Options  |  0 |
+| EMI Options  |  0 |
+| COD          |  1 |
+| EMI Options  |  0 |
+| COD          |  1 |
+| EMI Options  |  0 |
+| Wallets      |  0 |
+| Credit Cards |  0 |
+| Wallets      |  0 |
+| EMI Options  |  0 |
+| COD          |  1 |
+| Debit Cards  |  0 |
+| COD          |  1 |
+| Wallets      |  0 |
+| Credit Cards |  0 |
+| Wallets      |  0 |
+| Wallets      |  0 |
+| COD          |  1 |
+| Debit Cards  |  0 |
+| Credit Cards |  0 |
+| COD          |  1 |
+| Wallets      |  0 |
+| Wallets      |  0 |
+| COD          |  1 |
+| COD          |  1 |
+| PhonePe      |  2 |
+| EMI Options  |  0 |
+| Wallets      |  0 |
+| EMI Options  |  0 |
+| Wallets      |  0 |
+| Wallets      |  0 |
+| COD          |  1 |
+| GPay         |  0 |
+| COD          |  1 |
+| Wallets      |  0 |
+| EMI Options  |  0 |
+| COD          |  1 |
+| Paytm        |  0 |
+| COD          |  1 |
+| EMI Options  |  0 |
+| PhonePe      |  2 |
+| EMI Options  |  0 |
+| EMI Options  |  0 |
+| COD          |  1 |
+| Wallets      |  0 |
+| COD          |  1 |
+| PhonePe      |  2 |
+| Paytm        |  0 |
+| COD          |  1 |
+| GPay         |  0 |
++--------------+----+
+61 rows in set (0.00 sec)
+
+mysql> select * from orders;
++------+---------+---------------------+------+------+--------+--------------+------------+------------------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type   | paymentType  | registered | delivery_partner |
++------+---------+---------------------+------+------+--------+--------------+------------+------------------+
+| 2322 |   750.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 2364 |   750.1 | 1996-10-03 12:07:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 2475 |   750.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 3001 |   18.69 | 1996-10-03 12:30:00 | 2008 | 1007 | Online | Credit Cards |          1 | NULL             |
+| 3002 |  1900.1 | 1996-10-03 12:30:00 | 2007 | 1004 | Online | Wallets      |          1 | NULL             |
+| 3003 |  767.19 | 1996-10-03 13:45:00 | 2001 | 1001 | Online | Debit Cards  |          1 | NULL             |
+| 3005 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1002 | Online | Debit Cards  |          1 | NULL             |
+| 3006 | 1098.16 | 1996-10-03 13:37:00 | 2008 | 1007 | Online | Wallets      |          1 | NULL             |
+| 3007 |   75.75 | 1996-10-04 15:21:00 | 2002 | 1003 | Online | Credit Cards |          1 | NULL             |
+| 3008 |    4723 | 1996-10-05 12:07:00 | 2006 | 1001 | Cash   | COD          |          0 | NULL             |
+| 3009 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Online | Credit Cards |          1 | NULL             |
+| 3010 | 1309.95 | 1996-10-06 13:12:00 | 2004 | 1002 | Online | EMI Options  |          1 | NULL             |
+| 3011 | 9891.88 | 1996-10-06 13:09:00 | 2006 | 1001 | Online | EMI Options  |          1 | NULL             |
+| 3012 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3013 | 1245.98 | 1996-10-04 16:32:00 | 2002 | 1003 | Online | EMI Options  |          1 | NULL             |
+| 3014 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Cash   | COD          |          0 | NULL             |
+| 3015 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Online | EMI Options  |          1 | NULL             |
+| 3016 | 1729.67 | 1996-10-06 13:18:00 | 2006 | 1001 | Online | Wallets      |          1 | NULL             |
+| 3017 |   18.69 | 1996-10-03 12:30:00 | 2001 | 1007 | Online | Credit Cards |          1 | NULL             |
+| 3018 |  767.19 | 1996-10-03 12:05:00 | 2002 | 1001 | Online | Wallets      |          1 | NULL             |
+| 3019 |  1900.1 | 1996-10-03 12:05:00 | 2007 | 1004 | Online | EMI Options  |          1 | NULL             |
+| 3020 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1007 | Cash   | COD          |          0 | NULL             |
+| 3021 | 1098.16 | 1996-10-03 13:37:00 | 2008 | 1007 | Online | Debit Cards  |          1 | NULL             |
+| 3022 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3023 |   75.75 | 1996-10-04 16:02:00 | 2002 | 1004 | Online | Wallets      |          1 | NULL             |
+| 3024 |    4723 | 1996-10-05 12:07:00 | 2006 | 1002 | Online | Credit Cards |          1 | NULL             |
+| 3025 | 1309.95 | 1996-10-06 13:12:00 | 2002 | 1002 | Online | Wallets      |          1 | NULL             |
+| 3026 | 9891.88 | 1996-10-06 13:09:00 | 2006 | 1001 | Online | Wallets      |          1 | NULL             |
+| 3027 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3028 | 1245.98 | 1996-10-04 16:32:00 | 2002 | 1003 | Online | Debit Cards  |          1 | NULL             |
+| 3029 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Online | Credit Cards |          1 | NULL             |
+| 3030 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Cash   | COD          |          0 | NULL             |
+| 3031 | 1729.67 | 1996-10-06 13:07:00 | 2006 | 1007 | Online | Wallets      |          1 | NULL             |
+| 3032 | 3434.55 | 1996-01-26 17:09:12 | 2006 | 1007 | Online | Wallets      |          1 | NULL             |
+| 3033 |  522.23 | 1996-12-24 14:23:00 | 2002 | 1002 | Cash   | COD          |          0 | NULL             |
+| 3049 |  500.58 | 1996-03-14 07:45:19 | 2001 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3050 |  1900.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 3074 |   457.4 | 1996-04-19 05:13:00 | 2008 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 3119 |   125.5 | 1996-07-26 18:37:00 | 2007 | 1001 | Online | Wallets      |          1 | NULL             |
+| 4001 |   145.2 | 1996-05-13 20:47:00 | 2008 | 1003 | Online | EMI Options  |          1 | NULL             |
+| 4012 |   245.6 | 1996-03-06 13:07:00 | 2001 | 1002 | Online | Wallets      |          1 | NULL             |
+| 4021 |  600.65 | 1996-08-12 13:07:00 | 2001 | 1002 | Online | Wallets      |          1 | NULL             |
+| 4054 |  1200.8 | 1996-11-22 13:07:00 | 2004 | 1003 | Cash   | COD          |          0 | NULL             |
+| 5001 |  325.23 | 1996-11-04 15:21:00 | NULL | 1002 | Online | GPay         |          1 | NULL             |
+| 5011 |  138.35 | 1996-09-14 13:07:00 | 2001 | 1007 | Cash   | COD          |          0 | NULL             |
+| 5014 |  980.65 | 1996-08-23 13:07:00 | 2002 | 1007 | Online | Wallets      |          1 | NULL             |
+| 5015 | 2133.35 | 1996-06-23 13:07:00 | 2004 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 5016 | 1000.95 | 1996-03-12 13:07:00 | 2002 | 1007 | Cash   | COD          |          0 | NULL             |
+| 5020 |  950.45 | 1996-10-03 14:00:00 | NULL | 1007 | Online | Paytm        |          1 | NULL             |
+| 5034 |  120.16 | 1996-11-03 13:37:00 | NULL | 1003 | Cash   | COD          |          0 | NULL             |
+| 5053 |  1500.5 | 1996-01-01 13:07:00 | 2006 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 5056 |   750.1 | 1996-10-03 12:05:00 | NULL | 1007 | Online | PhonePe      |          1 | NULL             |
+| 5099 |  790.75 | 1996-04-24 13:07:00 | 2002 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 6501 |  125.45 | 1996-06-13 13:07:00 | 2001 | 1001 | Online | EMI Options  |          1 | NULL             |
+| 6502 |  535.25 | 1996-08-24 13:07:00 | 2006 | 1004 | Cash   | COD          |          0 | NULL             |
+| 6503 | 1100.25 | 1996-07-26 13:07:00 | 2006 | 1007 | Online | Wallets      |          1 | NULL             |
+| 6504 | 1350.75 | 1996-07-21 13:07:00 | 2008 | 1007 | Cash   | COD          |          0 | NULL             |
+| 6605 |  1900.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 6606 | 5160.45 | 1996-10-03 14:00:00 | NULL | 1002 | Online | Paytm        |          1 | NULL             |
+| 6607 | 1098.16 | 1996-11-03 13:37:00 | NULL | 1007 | Cash   | COD          |          0 | NULL             |
+| 6608 | 1713.23 | 1996-11-04 15:21:00 | NULL | 1003 | Online | GPay         |          1 | NULL             |
++------+---------+---------------------+------+------+--------+--------------+------------+------------------+
+61 rows in set (0.00 sec)
+
+mysql> select * from orders where paymentType = 'COD';
++------+---------+---------------------+------+------+------+-------------+------------+------------------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type | paymentType | registered | delivery_partner |
++------+---------+---------------------+------+------+------+-------------+------------+------------------+
+| 3008 |    4723 | 1996-10-05 12:07:00 | 2006 | 1001 | Cash | COD         |          0 | NULL             |
+| 3012 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash | COD         |          0 | NULL             |
+| 3014 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Cash | COD         |          0 | NULL             |
+| 3020 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1007 | Cash | COD         |          0 | NULL             |
+| 3022 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash | COD         |          0 | NULL             |
+| 3027 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash | COD         |          0 | NULL             |
+| 3030 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Cash | COD         |          0 | NULL             |
+| 3033 |  522.23 | 1996-12-24 14:23:00 | 2002 | 1002 | Cash | COD         |          0 | NULL             |
+| 3049 |  500.58 | 1996-03-14 07:45:19 | 2001 | 1003 | Cash | COD         |          0 | NULL             |
+| 4054 |  1200.8 | 1996-11-22 13:07:00 | 2004 | 1003 | Cash | COD         |          0 | NULL             |
+| 5011 |  138.35 | 1996-09-14 13:07:00 | 2001 | 1007 | Cash | COD         |          0 | NULL             |
+| 5016 | 1000.95 | 1996-03-12 13:07:00 | 2002 | 1007 | Cash | COD         |          0 | NULL             |
+| 5034 |  120.16 | 1996-11-03 13:37:00 | NULL | 1003 | Cash | COD         |          0 | NULL             |
+| 6502 |  535.25 | 1996-08-24 13:07:00 | 2006 | 1004 | Cash | COD         |          0 | NULL             |
+| 6504 | 1350.75 | 1996-07-21 13:07:00 | 2008 | 1007 | Cash | COD         |          0 | NULL             |
+| 6607 | 1098.16 | 1996-11-03 13:37:00 | NULL | 1007 | Cash | COD         |          0 | NULL             |
++------+---------+---------------------+------+------+------+-------------+------------+------------------+
+16 rows in set (0.01 sec)
+
+mysql> select * from orders where paymentType = 'Wallets';
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type   | paymentType | registered | delivery_partner |
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+| 3002 |  1900.1 | 1996-10-03 12:30:00 | 2007 | 1004 | Online | Wallets     |          1 | NULL             |
+| 3006 | 1098.16 | 1996-10-03 13:37:00 | 2008 | 1007 | Online | Wallets     |          1 | NULL             |
+| 3016 | 1729.67 | 1996-10-06 13:18:00 | 2006 | 1001 | Online | Wallets     |          1 | NULL             |
+| 3018 |  767.19 | 1996-10-03 12:05:00 | 2002 | 1001 | Online | Wallets     |          1 | NULL             |
+| 3023 |   75.75 | 1996-10-04 16:02:00 | 2002 | 1004 | Online | Wallets     |          1 | NULL             |
+| 3025 | 1309.95 | 1996-10-06 13:12:00 | 2002 | 1002 | Online | Wallets     |          1 | NULL             |
+| 3026 | 9891.88 | 1996-10-06 13:09:00 | 2006 | 1001 | Online | Wallets     |          1 | NULL             |
+| 3031 | 1729.67 | 1996-10-06 13:07:00 | 2006 | 1007 | Online | Wallets     |          1 | NULL             |
+| 3032 | 3434.55 | 1996-01-26 17:09:12 | 2006 | 1007 | Online | Wallets     |          1 | NULL             |
+| 3119 |   125.5 | 1996-07-26 18:37:00 | 2007 | 1001 | Online | Wallets     |          1 | NULL             |
+| 4012 |   245.6 | 1996-03-06 13:07:00 | 2001 | 1002 | Online | Wallets     |          1 | NULL             |
+| 4021 |  600.65 | 1996-08-12 13:07:00 | 2001 | 1002 | Online | Wallets     |          1 | NULL             |
+| 5014 |  980.65 | 1996-08-23 13:07:00 | 2002 | 1007 | Online | Wallets     |          1 | NULL             |
+| 6503 | 1100.25 | 1996-07-26 13:07:00 | 2006 | 1007 | Online | Wallets     |          1 | NULL             |
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+14 rows in set (0.00 sec)
+
+mysql> select * from orders where paymentType = 'COD';
++------+---------+---------------------+------+------+------+-------------+------------+------------------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type | paymentType | registered | delivery_partner |
++------+---------+---------------------+------+------+------+-------------+------------+------------------+
+| 3008 |    4723 | 1996-10-05 12:07:00 | 2006 | 1001 | Cash | COD         |          0 | NULL             |
+| 3012 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash | COD         |          0 | NULL             |
+| 3014 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Cash | COD         |          0 | NULL             |
+| 3020 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1007 | Cash | COD         |          0 | NULL             |
+| 3022 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash | COD         |          0 | NULL             |
+| 3027 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash | COD         |          0 | NULL             |
+| 3030 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Cash | COD         |          0 | NULL             |
+| 3033 |  522.23 | 1996-12-24 14:23:00 | 2002 | 1002 | Cash | COD         |          0 | NULL             |
+| 3049 |  500.58 | 1996-03-14 07:45:19 | 2001 | 1003 | Cash | COD         |          0 | NULL             |
+| 4054 |  1200.8 | 1996-11-22 13:07:00 | 2004 | 1003 | Cash | COD         |          0 | NULL             |
+| 5011 |  138.35 | 1996-09-14 13:07:00 | 2001 | 1007 | Cash | COD         |          0 | NULL             |
+| 5016 | 1000.95 | 1996-03-12 13:07:00 | 2002 | 1007 | Cash | COD         |          0 | NULL             |
+| 5034 |  120.16 | 1996-11-03 13:37:00 | NULL | 1003 | Cash | COD         |          0 | NULL             |
+| 6502 |  535.25 | 1996-08-24 13:07:00 | 2006 | 1004 | Cash | COD         |          0 | NULL             |
+| 6504 | 1350.75 | 1996-07-21 13:07:00 | 2008 | 1007 | Cash | COD         |          0 | NULL             |
+| 6607 | 1098.16 | 1996-11-03 13:37:00 | NULL | 1007 | Cash | COD         |          0 | NULL             |
++------+---------+---------------------+------+------+------+-------------+------------+------------------+
+16 rows in set (0.00 sec)
+
+mysql> select * from orders where paymentType = 'COD' and AMT > 3000;
++------+---------+---------------------+------+------+------+-------------+------------+------------------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type | paymentType | registered | delivery_partner |
++------+---------+---------------------+------+------+------+-------------+------------+------------------+
+| 3008 |    4723 | 1996-10-05 12:07:00 | 2006 | 1001 | Cash | COD         |          0 | NULL             |
+| 3012 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash | COD         |          0 | NULL             |
+| 3014 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Cash | COD         |          0 | NULL             |
+| 3020 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1007 | Cash | COD         |          0 | NULL             |
+| 3027 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash | COD         |          0 | NULL             |
++------+---------+---------------------+------+------+------+-------------+------------+------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from orders where paymentType = 'COD'  OR paymentType = 'GPay';
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type   | paymentType | registered | delivery_partner |
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+| 3008 |    4723 | 1996-10-05 12:07:00 | 2006 | 1001 | Cash   | COD         |          0 | NULL             |
+| 3012 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3014 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Cash   | COD         |          0 | NULL             |
+| 3020 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1007 | Cash   | COD         |          0 | NULL             |
+| 3022 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3027 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3030 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Cash   | COD         |          0 | NULL             |
+| 3033 |  522.23 | 1996-12-24 14:23:00 | 2002 | 1002 | Cash   | COD         |          0 | NULL             |
+| 3049 |  500.58 | 1996-03-14 07:45:19 | 2001 | 1003 | Cash   | COD         |          0 | NULL             |
+| 4054 |  1200.8 | 1996-11-22 13:07:00 | 2004 | 1003 | Cash   | COD         |          0 | NULL             |
+| 5001 |  325.23 | 1996-11-04 15:21:00 | NULL | 1002 | Online | GPay        |          1 | NULL             |
+| 5011 |  138.35 | 1996-09-14 13:07:00 | 2001 | 1007 | Cash   | COD         |          0 | NULL             |
+| 5016 | 1000.95 | 1996-03-12 13:07:00 | 2002 | 1007 | Cash   | COD         |          0 | NULL             |
+| 5034 |  120.16 | 1996-11-03 13:37:00 | NULL | 1003 | Cash   | COD         |          0 | NULL             |
+| 6502 |  535.25 | 1996-08-24 13:07:00 | 2006 | 1004 | Cash   | COD         |          0 | NULL             |
+| 6504 | 1350.75 | 1996-07-21 13:07:00 | 2008 | 1007 | Cash   | COD         |          0 | NULL             |
+| 6607 | 1098.16 | 1996-11-03 13:37:00 | NULL | 1007 | Cash   | COD         |          0 | NULL             |
+| 6608 | 1713.23 | 1996-11-04 15:21:00 | NULL | 1003 | Online | GPay        |          1 | NULL             |
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+18 rows in set (0.00 sec)
+
+mysql> select * from orders order by amt where paymentType = 'COD'  OR paymentType = 'GPay';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where paymentType = 'COD'  OR paymentType = 'GPay'' at line 1
+mysql> select * from orders order by amt where paymentType = 'COD'  OR paymentType = 'GPay';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where paymentType = 'COD'  OR paymentType = 'GPay'' at line 1
+mysql> select * from orders where paymentType = 'COD'  OR paymentType = 'GPay';
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type   | paymentType | registered | delivery_partner |
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+| 3008 |    4723 | 1996-10-05 12:07:00 | 2006 | 1001 | Cash   | COD         |          0 | NULL             |
+| 3012 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3014 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Cash   | COD         |          0 | NULL             |
+| 3020 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1007 | Cash   | COD         |          0 | NULL             |
+| 3022 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3027 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3030 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Cash   | COD         |          0 | NULL             |
+| 3033 |  522.23 | 1996-12-24 14:23:00 | 2002 | 1002 | Cash   | COD         |          0 | NULL             |
+| 3049 |  500.58 | 1996-03-14 07:45:19 | 2001 | 1003 | Cash   | COD         |          0 | NULL             |
+| 4054 |  1200.8 | 1996-11-22 13:07:00 | 2004 | 1003 | Cash   | COD         |          0 | NULL             |
+| 5001 |  325.23 | 1996-11-04 15:21:00 | NULL | 1002 | Online | GPay        |          1 | NULL             |
+| 5011 |  138.35 | 1996-09-14 13:07:00 | 2001 | 1007 | Cash   | COD         |          0 | NULL             |
+| 5016 | 1000.95 | 1996-03-12 13:07:00 | 2002 | 1007 | Cash   | COD         |          0 | NULL             |
+| 5034 |  120.16 | 1996-11-03 13:37:00 | NULL | 1003 | Cash   | COD         |          0 | NULL             |
+| 6502 |  535.25 | 1996-08-24 13:07:00 | 2006 | 1004 | Cash   | COD         |          0 | NULL             |
+| 6504 | 1350.75 | 1996-07-21 13:07:00 | 2008 | 1007 | Cash   | COD         |          0 | NULL             |
+| 6607 | 1098.16 | 1996-11-03 13:37:00 | NULL | 1007 | Cash   | COD         |          0 | NULL             |
+| 6608 | 1713.23 | 1996-11-04 15:21:00 | NULL | 1003 | Online | GPay        |          1 | NULL             |
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+18 rows in set (0.00 sec)
+
+mysql> select * from orders where paymentType = 'COD'  OR paymentType = 'GPay' order by amt;
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type   | paymentType | registered | delivery_partner |
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+| 5034 |  120.16 | 1996-11-03 13:37:00 | NULL | 1003 | Cash   | COD         |          0 | NULL             |
+| 5011 |  138.35 | 1996-09-14 13:07:00 | 2001 | 1007 | Cash   | COD         |          0 | NULL             |
+| 5001 |  325.23 | 1996-11-04 15:21:00 | NULL | 1002 | Online | GPay        |          1 | NULL             |
+| 3049 |  500.58 | 1996-03-14 07:45:19 | 2001 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3033 |  522.23 | 1996-12-24 14:23:00 | 2002 | 1002 | Cash   | COD         |          0 | NULL             |
+| 6502 |  535.25 | 1996-08-24 13:07:00 | 2006 | 1004 | Cash   | COD         |          0 | NULL             |
+| 3030 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Cash   | COD         |          0 | NULL             |
+| 5016 | 1000.95 | 1996-03-12 13:07:00 | 2002 | 1007 | Cash   | COD         |          0 | NULL             |
+| 6607 | 1098.16 | 1996-11-03 13:37:00 | NULL | 1007 | Cash   | COD         |          0 | NULL             |
+| 4054 |  1200.8 | 1996-11-22 13:07:00 | 2004 | 1003 | Cash   | COD         |          0 | NULL             |
+| 6504 | 1350.75 | 1996-07-21 13:07:00 | 2008 | 1007 | Cash   | COD         |          0 | NULL             |
+| 3022 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 6608 | 1713.23 | 1996-11-04 15:21:00 | NULL | 1003 | Online | GPay        |          1 | NULL             |
+| 3012 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3027 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3014 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Cash   | COD         |          0 | NULL             |
+| 3008 |    4723 | 1996-10-05 12:07:00 | 2006 | 1001 | Cash   | COD         |          0 | NULL             |
+| 3020 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1007 | Cash   | COD         |          0 | NULL             |
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+18 rows in set (0.01 sec)
+
+mysql> select * from orders where paymentType = 'COD'  OR paymentType = 'GPay' and amt>700;
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type   | paymentType | registered | delivery_partner |
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+| 3008 |    4723 | 1996-10-05 12:07:00 | 2006 | 1001 | Cash   | COD         |          0 | NULL             |
+| 3012 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3014 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Cash   | COD         |          0 | NULL             |
+| 3020 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1007 | Cash   | COD         |          0 | NULL             |
+| 3022 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3027 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3030 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Cash   | COD         |          0 | NULL             |
+| 3033 |  522.23 | 1996-12-24 14:23:00 | 2002 | 1002 | Cash   | COD         |          0 | NULL             |
+| 3049 |  500.58 | 1996-03-14 07:45:19 | 2001 | 1003 | Cash   | COD         |          0 | NULL             |
+| 4054 |  1200.8 | 1996-11-22 13:07:00 | 2004 | 1003 | Cash   | COD         |          0 | NULL             |
+| 5011 |  138.35 | 1996-09-14 13:07:00 | 2001 | 1007 | Cash   | COD         |          0 | NULL             |
+| 5016 | 1000.95 | 1996-03-12 13:07:00 | 2002 | 1007 | Cash   | COD         |          0 | NULL             |
+| 5034 |  120.16 | 1996-11-03 13:37:00 | NULL | 1003 | Cash   | COD         |          0 | NULL             |
+| 6502 |  535.25 | 1996-08-24 13:07:00 | 2006 | 1004 | Cash   | COD         |          0 | NULL             |
+| 6504 | 1350.75 | 1996-07-21 13:07:00 | 2008 | 1007 | Cash   | COD         |          0 | NULL             |
+| 6607 | 1098.16 | 1996-11-03 13:37:00 | NULL | 1007 | Cash   | COD         |          0 | NULL             |
+| 6608 | 1713.23 | 1996-11-04 15:21:00 | NULL | 1003 | Online | GPay        |          1 | NULL             |
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+17 rows in set (0.00 sec)
+
+mysql> select * from orders where (paymentType = 'COD'  OR paymentType = 'GPay') and amt>700;
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type   | paymentType | registered | delivery_partner |
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+| 3008 |    4723 | 1996-10-05 12:07:00 | 2006 | 1001 | Cash   | COD         |          0 | NULL             |
+| 3012 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3014 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Cash   | COD         |          0 | NULL             |
+| 3020 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1007 | Cash   | COD         |          0 | NULL             |
+| 3022 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3027 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD         |          0 | NULL             |
+| 3030 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Cash   | COD         |          0 | NULL             |
+| 4054 |  1200.8 | 1996-11-22 13:07:00 | 2004 | 1003 | Cash   | COD         |          0 | NULL             |
+| 5016 | 1000.95 | 1996-03-12 13:07:00 | 2002 | 1007 | Cash   | COD         |          0 | NULL             |
+| 6504 | 1350.75 | 1996-07-21 13:07:00 | 2008 | 1007 | Cash   | COD         |          0 | NULL             |
+| 6607 | 1098.16 | 1996-11-03 13:37:00 | NULL | 1007 | Cash   | COD         |          0 | NULL             |
+| 6608 | 1713.23 | 1996-11-04 15:21:00 | NULL | 1003 | Online | GPay        |          1 | NULL             |
++------+---------+---------------------+------+------+--------+-------------+------------+------------------+
+12 rows in set (0.00 sec)
+
+mysql> select * from tanks;
+ERROR 1146 (42S02): Table 'db1.tanks' doesn't exist
+mysql> select * from tasks;
++----+--------+-----------+
+| id | title  | completed |
++----+--------+-----------+
+|  1 | Task-1 |         1 |
+|  2 | Task0  |         0 |
+|  3 | Task1  |         0 |
+|  4 | Task2  |         1 |
+|  5 | Task3  |         0 |
+|  6 | Task4  |         1 |
+|  7 | Task5  |      NULL |
+|  8 | Task6  |      NULL |
+|  9 | Task7  |         0 |
+| 10 | Task8  |         1 |
+| 11 | Task9  |        12 |
+| 12 | Task10 |        58 |
+| 13 | Task11 |         1 |
+| 14 | Task12 |         0 |
+| 15 | Task13 |         1 |
+| 16 | Task14 |      NULL |
++----+--------+-----------+
+16 rows in set (0.04 sec)
+
+mysql> select * from tasks where completed=1;
++----+--------+-----------+
+| id | title  | completed |
++----+--------+-----------+
+|  1 | Task-1 |         1 |
+|  4 | Task2  |         1 |
+|  6 | Task4  |         1 |
+| 10 | Task8  |         1 |
+| 13 | Task11 |         1 |
+| 15 | Task13 |         1 |
++----+--------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> select * from tasks where completed= true;
++----+--------+-----------+
+| id | title  | completed |
++----+--------+-----------+
+|  1 | Task-1 |         1 |
+|  4 | Task2  |         1 |
+|  6 | Task4  |         1 |
+| 10 | Task8  |         1 |
+| 13 | Task11 |         1 |
+| 15 | Task13 |         1 |
++----+--------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> select * from tasks where completed;
++----+--------+-----------+
+| id | title  | completed |
++----+--------+-----------+
+|  1 | Task-1 |         1 |
+|  4 | Task2  |         1 |
+|  6 | Task4  |         1 |
+| 10 | Task8  |         1 |
+| 11 | Task9  |        12 |
+| 12 | Task10 |        58 |
+| 13 | Task11 |         1 |
+| 15 | Task13 |         1 |
++----+--------+-----------+
+8 rows in set (0.00 sec)
+
+mysql> SELECT ename FROM emp WHERE ename = True;
+Empty set, 30 warnings (0.01 sec)
+
+mysql> show warnings;
++---------+------+----------------------------------------------+
+| Level   | Code | Message                                      |
++---------+------+----------------------------------------------+
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'GITA'     |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'VRUSHALI' |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'SHARMIN'  |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'BANDISH'  |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'SMITH'    |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'AARAV'    |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'THOMAS'   |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'ALLEN'    |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'WARD'     |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'JONES'    |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'MARTIN'   |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'BLAKE'    |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'CLARK'    |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'SCOTT'    |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'KING'     |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'FRED'     |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'TURNER'   |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'ADAMS'    |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'Ruhan'    |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'Neel'     |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'JAMES'    |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'FORD'     |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'HOFFMAN'  |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'GRASS'    |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'MILLER'   |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'AARUSH'   |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'ALEX'     |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'NATASHA'  |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'SANGITA'  |
+| Warning | 1292 | Truncated incorrect DOUBLE value: 'SUPRIYA'  |
++---------+------+----------------------------------------------+
+30 rows in set (0.01 sec)
+
+mysql> SELECT ename FROM emp WHERE ename = True;
+Empty set, 30 warnings (0.00 sec)
+
+mysql>
