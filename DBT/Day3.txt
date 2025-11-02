@@ -1,0 +1,512 @@
+Microsoft Windows [Version 10.0.19045.6456]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\IET>mysql --host=192.168.10.117 --port=3306 --user=dac83 --password=welcome
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 191
+Server version: 8.0.44 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use dac83
+Database changed
+mysql> desc emp;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EMPNO     | int         | NO   | PRI | NULL    |       |
+| ENAME     | varchar(12) | YES  |     | NULL    |       |
+| GENDER    | char(1)     | YES  |     | NULL    |       |
+| JOB       | varchar(20) | YES  |     | NULL    |       |
+| MGR       | int         | YES  | MUL | NULL    |       |
+| HIREDATE  | date        | YES  |     | NULL    |       |
+| SAL       | int         | YES  |     | NULL    |       |
+| COMM      | int         | YES  |     | NULL    |       |
+| DEPTNO    | int         | NO   | MUL | NULL    |       |
+| BONUSID   | int         | YES  |     | NULL    |       |
+| USER NAME | varchar(20) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| PHONE     | varchar(45) | YES  |     | NULL    |       |
+| isActive  | tinyint(1)  | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+14 rows in set (0.01 sec)
+
+mysql> select sal, comm, sal-comm from emp;
++------+------+----------+
+| sal  | comm | sal-comm |
++------+------+----------+
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+|  800 | NULL |     NULL |
+| 3350 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+| 1600 |  300 |     1300 |
+| 1250 |  500 |      750 |
+| 2975 | NULL |     NULL |
+| 1250 | 1400 |     -150 |
+| 2850 | NULL |     NULL |
+| 2450 | NULL |     NULL |
+| 3000 | NULL |     NULL |
+| 5000 | NULL |     NULL |
+| 5000 | NULL |     NULL |
+| 1500 |    0 |     1500 |
+| 1100 | NULL |     NULL |
+| 2000 | NULL |     NULL |
+| 1000 | NULL |     NULL |
+|  950 | NULL |     NULL |
+| 3000 | NULL |     NULL |
+| 4150 | NULL |     NULL |
+| 2575 | 2700 |     -125 |
+| 1300 | 1300 |        0 |
+| 1350 | 2700 |    -1350 |
+| 1250 |  500 |      750 |
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
++------+------+----------+
+30 rows in set (0.00 sec)
+
+mysql> select sal, comm, sal*comm from emp;
++------+------+----------+
+| sal  | comm | sal*comm |
++------+------+----------+
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+|  800 | NULL |     NULL |
+| 3350 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+| 1600 |  300 |   480000 |
+| 1250 |  500 |   625000 |
+| 2975 | NULL |     NULL |
+| 1250 | 1400 |  1750000 |
+| 2850 | NULL |     NULL |
+| 2450 | NULL |     NULL |
+| 3000 | NULL |     NULL |
+| 5000 | NULL |     NULL |
+| 5000 | NULL |     NULL |
+| 1500 |    0 |        0 |
+| 1100 | NULL |     NULL |
+| 2000 | NULL |     NULL |
+| 1000 | NULL |     NULL |
+|  950 | NULL |     NULL |
+| 3000 | NULL |     NULL |
+| 4150 | NULL |     NULL |
+| 2575 | 2700 |  6952500 |
+| 1300 | 1300 |  1690000 |
+| 1350 | 2700 |  3645000 |
+| 1250 |  500 |   625000 |
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
+| 1750 | NULL |     NULL |
++------+------+----------+
+30 rows in set (0.00 sec)
+
+mysql> select sal SALARY, comm COMMISSION, sal*comm from emp;
++--------+------------+----------+
+| SALARY | COMMISSION | sal*comm |
++--------+------------+----------+
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|    800 |       NULL |     NULL |
+|   3350 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|   1600 |        300 |   480000 |
+|   1250 |        500 |   625000 |
+|   2975 |       NULL |     NULL |
+|   1250 |       1400 |  1750000 |
+|   2850 |       NULL |     NULL |
+|   2450 |       NULL |     NULL |
+|   3000 |       NULL |     NULL |
+|   5000 |       NULL |     NULL |
+|   5000 |       NULL |     NULL |
+|   1500 |          0 |        0 |
+|   1100 |       NULL |     NULL |
+|   2000 |       NULL |     NULL |
+|   1000 |       NULL |     NULL |
+|    950 |       NULL |     NULL |
+|   3000 |       NULL |     NULL |
+|   4150 |       NULL |     NULL |
+|   2575 |       2700 |  6952500 |
+|   1300 |       1300 |  1690000 |
+|   1350 |       2700 |  3645000 |
+|   1250 |        500 |   625000 |
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
+|   1750 |       NULL |     NULL |
++--------+------------+----------+
+30 rows in set (0.00 sec)
+
+mysql> select sal SALARY, comm COMMISSION, sal*comm  "GRAND TOTAL" from emp;
++--------+------------+-------------+
+| SALARY | COMMISSION | GRAND TOTAL |
++--------+------------+-------------+
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|    800 |       NULL |        NULL |
+|   3350 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|   1600 |        300 |      480000 |
+|   1250 |        500 |      625000 |
+|   2975 |       NULL |        NULL |
+|   1250 |       1400 |     1750000 |
+|   2850 |       NULL |        NULL |
+|   2450 |       NULL |        NULL |
+|   3000 |       NULL |        NULL |
+|   5000 |       NULL |        NULL |
+|   5000 |       NULL |        NULL |
+|   1500 |          0 |           0 |
+|   1100 |       NULL |        NULL |
+|   2000 |       NULL |        NULL |
+|   1000 |       NULL |        NULL |
+|    950 |       NULL |        NULL |
+|   3000 |       NULL |        NULL |
+|   4150 |       NULL |        NULL |
+|   2575 |       2700 |     6952500 |
+|   1300 |       1300 |     1690000 |
+|   1350 |       2700 |     3645000 |
+|   1250 |        500 |      625000 |
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
+|   1750 |       NULL |        NULL |
++--------+------------+-------------+
+30 rows in set (0.00 sec)
+
+mysql> show engines;
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+| Engine             | Support | Comment                                                        | Transactions | XA   | Savepoints |
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+| MEMORY             | YES     | Hash based, stored in memory, useful for temporary tables      | NO           | NO   | NO         |
+| MRG_MYISAM         | YES     | Collection of identical MyISAM tables                          | NO           | NO   | NO         |
+| CSV                | YES     | CSV storage engine                                             | NO           | NO   | NO         |
+| FEDERATED          | NO      | Federated MySQL storage engine                                 | NULL         | NULL | NULL       |
+| PERFORMANCE_SCHEMA | YES     | Performance Schema                                             | NO           | NO   | NO         |
+| MyISAM             | YES     | MyISAM storage engine                                          | NO           | NO   | NO         |
+| InnoDB             | DEFAULT | Supports transactions, row-level locking, and foreign keys     | YES          | YES  | YES        |
+| ndbinfo            | NO      | MySQL Cluster system information storage engine                | NULL         | NULL | NULL       |
+| BLACKHOLE          | YES     | /dev/null storage engine (anything you write to it disappears) | NO           | NO   | NO         |
+| ARCHIVE            | YES     | Archive storage engine                                         | NO           | NO   | NO         |
+| ndbcluster         | NO      | Clustered, fault-tolerant tables                               | NULL         | NULL | NULL       |
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+11 rows in set (0.00 sec)
+
+mysql> desc emp;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EMPNO     | int         | NO   | PRI | NULL    |       |
+| ENAME     | varchar(12) | YES  |     | NULL    |       |
+| GENDER    | char(1)     | YES  |     | NULL    |       |
+| JOB       | varchar(20) | YES  |     | NULL    |       |
+| MGR       | int         | YES  | MUL | NULL    |       |
+| HIREDATE  | date        | YES  |     | NULL    |       |
+| SAL       | int         | YES  |     | NULL    |       |
+| COMM      | int         | YES  |     | NULL    |       |
+| DEPTNO    | int         | NO   | MUL | NULL    |       |
+| BONUSID   | int         | YES  |     | NULL    |       |
+| USER NAME | varchar(20) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| PHONE     | varchar(45) | YES  |     | NULL    |       |
+| isActive  | tinyint(1)  | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+14 rows in set (0.04 sec)
+
+mysql> select * from emp;
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+| EMPNO | ENAME    | GENDER | JOB                 | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME    | PWD        | PHONE      | isActive |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+|  6001 | GITA     | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | GITA         | sales@2017 | NULL       |        1 |
+|  6129 | VRUSHALI | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | VRUSHALI     | PUN@8877   | NULL       |        1 |
+|  6473 | SHARMIN  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | SHARMIN      | a12recmpm  | NULL       |        1 |
+|  6781 | BANDISH  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | BANDISH      | a12recmpm  | NULL       |        1 |
+|  7369 | SMITH    | M      | CLERK               | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | TRITONE      | a12recmpm  | 7032300023 |        0 |
+|  7415 | AARAV    | M      | CLERK               | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | AARAV        | NULL       | 7032300084 |        0 |
+|  7421 | THOMAS   | M      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | THOMAS       | r50mpm     | 7032300011 |        0 |
+|  7499 | ALLEN    | M      | SALESMAN            | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | ALWAYS TESTE | sales@2017 | 7032300096 |        1 |
+|  7521 | WARD     | M      | SALESMAN            | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | WARD         | sales@2017 | 7132300034 |        1 |
+|  7566 | JONES    | M      | MANAGER             | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB    | a12recmpm  | 7132300039 |        1 |
+|  7654 | MARTIN   | M      | SALESMAN            | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | LIFE RACER   | sales@2017 | 7132300050 |        1 |
+|  7698 | BLAKE    | M      | MANAGER             | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN      | sales@2017 | 7132300027 |        1 |
+|  7782 | CLARK    | M      | MANAGER             | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | CLARK        | r50mpm     | 7032300001 |        1 |
+|  7788 | SCOTT    | M      | ANALYST             | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND   | a12recmpm  | NULL       |        1 |
+|  7839 | KING     | M      | PRESIDENT           | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING         | r50mpm     | 7132300081 |        1 |
+|  7840 | FRED     | M      | vice PRESIDENT      | 7839 | 1983-08-09 | 5000 | NULL |     20 |       1 | SAND STONE   | a12recmpm  | NULL       |        1 |
+|  7844 | TURNER   | M      | SALESMAN            | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | SAND DUST    | sales@2017 | NULL       |        1 |
+|  7876 | ADAMS    | M      | CLERK               | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | CRAZY ANYONE | a12recmpm  | 7132300086 |        1 |
+|  7888 | Ruhan    | M      | Network             | 7888 | 1983-08-09 | 2000 | NULL |     60 |       1 | Ruhan        | BRD@1122   | NULL       |        1 |
+|  7889 | Neel     | M      | vice PRESIDENT      | 7839 | 1983-08-09 | 1000 | NULL |     60 |       0 | Neel         | BRD@1122   | NULL       |        1 |
+|  7900 | JAMES    | M      | CLERK               | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | CRAZY LEADER | sales@2017 | 7132300042 |        1 |
+|  7902 | FORD     | M      | ANALYST             | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO      | a12recmpm  | NULL       |        0 |
+|  7919 | HOFFMAN  | M      | MANAGER             | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | INTERVAL     | sales@2017 | NULL       |        1 |
+|  7920 | GRASS    | M      | SALESMAN            | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | GRASS        | sales@2017 | NULL       |        1 |
+|  7934 | MILLER   | M      | CLERK               | 7782 | 1982-01-23 | 1300 | 1300 |     10 |       2 | QUARTERNOTE  | r50mpm     | 7132300055 |        0 |
+|  7945 | AARUSH   | M      | SALESMAN            | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | AARUSH       | ABCDEF     | NULL       |        0 |
+|  7949 | ALEX     | M      | MANAGER             | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | QUARTERREST  | sales@2017 | 7156567183 |        1 |
+|  8433 | NATASHA  | F      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | NATASHA      | sales@2017 | NULL       |        1 |
+|  9400 | SANGITA  | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SANGITA      | NULL       | NULL       |        1 |
+|  9473 | SUPRIYA  | F      | ANALYST             | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SUPRIYA      | XYZ@1234   | NULL       |        1 |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+30 rows in set (0.00 sec)
+
+mysql> select ename1, ename2 from emp;
+ERROR 1054 (42S22): Unknown column 'ename1' in 'field list'
+mysql> create table emp33(id int, ename varchar(12), ename char(12));
+ERROR 1060 (42S21): Duplicate column name 'ename'
+mysql> create table emp33(id int, ename1 varchar(12), ename2 char(12));
+Query OK, 0 rows affected (1.17 sec)
+
+mysql> select ename1, ename2 from emp33;
+Empty set (0.00 sec)
+
+mysql> insert into emp33 values(007,'soham','shashank');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into emp33 values(009,'tushar','rohit');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select ename1, ename2 from emp33;
++--------+----------+
+| ename1 | ename2   |
++--------+----------+
+| soham  | shashank |
+| tushar | rohit    |
++--------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select length(ename2), ename2 from emp33;
++----------------+----------+
+| length(ename2) | ename2   |
++----------------+----------+
+|              8 | shashank |
+|              5 | rohit    |
++----------------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select 11+55;
++-------+
+| 11+55 |
++-------+
+|    66 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select 11*55,55-44;
++-------+-------+
+| 11*55 | 55-44 |
++-------+-------+
+|   605 |    11 |
++-------+-------+
+1 row in set (0.00 sec)
+
+mysql> create table autoinccc(c1 int primary key auto_increment, c2 int);
+Query OK, 0 rows affected (0.35 sec)
+
+mysql> desc autoinccc;
++-------+------+------+-----+---------+----------------+
+| Field | Type | Null | Key | Default | Extra          |
++-------+------+------+-----+---------+----------------+
+| c1    | int  | NO   | PRI | NULL    | auto_increment |
+| c2    | int  | YES  |     | NULL    |                |
++-------+------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> insert into autoinccc values(default, 102);
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into autoinccc values(default, 454);
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from autoinccc;
++----+------+
+| c1 | c2   |
++----+------+
+|  1 |  102 |
+|  2 |  454 |
++----+------+
+2 rows in set (0.00 sec)
+
+mysql> insert into autoinccc values(default, 300);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select * from autoinccc;
++----+------+
+| c1 | c2   |
++----+------+
+|  1 |  102 |
+|  2 |  454 |
+|  3 |  300 |
++----+------+
+3 rows in set (0.00 sec)
+
+mysql> insert into autoinccc values(54, 565);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from autoinccc;
++----+------+
+| c1 | c2   |
++----+------+
+|  1 |  102 |
+|  2 |  454 |
+|  3 |  300 |
+| 54 |  565 |
++----+------+
+4 rows in set (0.00 sec)
+
+mysql> insert into autoinccc values(default, 3002);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select * from autoinccc;
++----+------+
+| c1 | c2   |
++----+------+
+|  1 |  102 |
+|  2 |  454 |
+|  3 |  300 |
+| 54 |  565 |
+| 55 | 3002 |
++----+------+
+5 rows in set (0.00 sec)
+
+mysql> create table don(id int primary key auto_increment, ename varchar(10),city varchar(10) default 'Nagpur');
+Query OK, 0 rows affected (0.32 sec)
+
+mysql> insert into don values(default,'shashank','surat');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from don;
++----+----------+-------+
+| id | ename    | city  |
++----+----------+-------+
+|  1 | shashank | surat |
++----+----------+-------+
+1 row in set (0.00 sec)
+
+mysql> insert into don values(default,'Shashank','Nagpur');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from don;
++----+----------+--------+
+| id | ename    | city   |
++----+----------+--------+
+|  1 | shashank | surat  |
+|  2 | Shashank | Nagpur |
++----+----------+--------+
+2 rows in set (0.00 sec)
+
+mysql> insert into don values(default,'shashank','nagpur');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from don;
++----+----------+--------+
+| id | ename    | city   |
++----+----------+--------+
+|  1 | shashank | surat  |
+|  2 | Shashank | Nagpur |
+|  3 | shashank | nagpur |
++----+----------+--------+
+3 rows in set (0.00 sec)
+
+mysql> insert into don values(default,'Shashank','surat');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from don;
++----+----------+--------+
+| id | ename    | city   |
++----+----------+--------+
+|  1 | shashank | surat  |
+|  2 | Shashank | Nagpur |
+|  3 | shashank | nagpur |
+|  4 | Shashank | surat  |
++----+----------+--------+
+4 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.97 sec)
+
+mysql> desc c;
++-------+-------------+------+-----+---------------+-------------------+
+| Field | Type        | Null | Key | Default       | Extra             |
++-------+-------------+------+-----+---------------+-------------------+
+| id    | int         | NO   | PRI | NULL          | auto_increment    |
+| ename | varchar(10) | YES  |     | NULL          |                   |
+| city  | varchar(10) | YES  |     | Nagpur        |                   |
+| c1    | int         | YES  |     | NULL          |                   |
+| c2    | int         | YES  |     | NULL          |                   |
+| c3    | int         | YES  |     | (`c1` + `c2`) | DEFAULT_GENERATED |
++-------+-------------+------+-----+---------------+-------------------+
+6 rows in set (0.00 sec)
+
+mysql> insert into c values(default,'shashank',default,10,20,default);
+Query OK, 1 row affected (0.09 sec)
+
+mysql> select * from c;
++----+----------+--------+------+------+------+
+| id | ename    | city   | c1   | c2   | c3   |
++----+----------+--------+------+------+------+
+|  1 | shashank | Nagpur |   10 |   20 |   30 |
++----+----------+--------+------+------+------+
+1 row in set (0.00 sec)
+
+mysql> insert into c(ename,c1,c2) values('Yuvraj',1000,2000);
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from c;
++----+----------+--------+------+------+------+
+| id | ename    | city   | c1   | c2   | c3   |
++----+----------+--------+------+------+------+
+|  1 | shashank | Nagpur |   10 |   20 |   30 |
+|  2 | Yuvraj   | Nagpur | 1000 | 2000 | 3000 |
++----+----------+--------+------+------+------+
+2 rows in set (0.00 sec)
+
+mysql> select now();
++---------------------+
+| now()               |
++---------------------+
+| 2025-11-02 09:42:04 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> select curdate();
++------------+
+| curdate()  |
++------------+
+| 2025-11-02 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select now(),curdate();
++---------------------+------------+
+| now()               | curdate()  |
++---------------------+------------+
+| 2025-11-02 09:48:23 | 2025-11-02 |
++---------------------+------------+
+1 row in set (0.00 sec)
+
+
+
+mysql> insert into study values('shashank',2300,now());
+Query OK, 1 row affected, 1 warning (0.05 sec)
+
+mysql> select * from study;
++----------+------+------------+
+| name     | sal  | Date       |
++----------+------+------------+
+| shashank | 2300 | 2025-11-02 |
++----------+------+------------+
+1 row in set (0.00 sec)
+
+mysql> 
