@@ -1,0 +1,2481 @@
+Microsoft Windows [Version 10.0.26200.7019]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\SALEEL>mysql --user=root --password=root db1
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11
+Server version: 8.0.41 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> select cityname from city;
++----------+
+| cityname |
++----------+
+| Baroda   |
+| Surat    |
+| Bharuch  |
+| Rajkot   |
+| Jamnagar |
++----------+
+5 rows in set (0.03 sec)
+
+mysql> select ename, lag(ename) over(order by empno) R1 from emp;
++----------+----------+
+| ename    | R1       |
++----------+----------+
+| GITA     | NULL     |
+| VRUSHALI | GITA     |
+| SHARMIN  | VRUSHALI |
+| BANDISH  | SHARMIN  |
+| SMITH    | BANDISH  |
+| AARAV    | SMITH    |
+| THOMAS   | AARAV    |
+| ALLEN    | THOMAS   |
+| WARD     | ALLEN    |
+| JONES    | WARD     |
+| MARTIN   | JONES    |
+| BLAKE    | MARTIN   |
+| CLARK    | BLAKE    |
+| SCOTT    | CLARK    |
+| KING     | SCOTT    |
+| FRED     | KING     |
+| TURNER   | FRED     |
+| ADAMS    | TURNER   |
+| Ruhan    | ADAMS    |
+| Neel     | Ruhan    |
+| JAMES    | Neel     |
+| FORD     | JAMES    |
+| HOFFMAN  | FORD     |
+| GRASS    | HOFFMAN  |
+| MILLER   | GRASS    |
+| AARUSH   | MILLER   |
+| ALEX     | AARUSH   |
+| NATASHA  | ALEX     |
+| SANGITA  | NATASHA  |
+| SUPRIYA  | SANGITA  |
++----------+----------+
+30 rows in set (0.02 sec)
+
+mysql> select ename, lead(ename) over(order by empno) R1 from emp;
++----------+----------+
+| ename    | R1       |
++----------+----------+
+| GITA     | VRUSHALI |
+| VRUSHALI | SHARMIN  |
+| SHARMIN  | BANDISH  |
+| BANDISH  | SMITH    |
+| SMITH    | AARAV    |
+| AARAV    | THOMAS   |
+| THOMAS   | ALLEN    |
+| ALLEN    | WARD     |
+| WARD     | JONES    |
+| JONES    | MARTIN   |
+| MARTIN   | BLAKE    |
+| BLAKE    | CLARK    |
+| CLARK    | SCOTT    |
+| SCOTT    | KING     |
+| KING     | FRED     |
+| FRED     | TURNER   |
+| TURNER   | ADAMS    |
+| ADAMS    | Ruhan    |
+| Ruhan    | Neel     |
+| Neel     | JAMES    |
+| JAMES    | FORD     |
+| FORD     | HOFFMAN  |
+| HOFFMAN  | GRASS    |
+| GRASS    | MILLER   |
+| MILLER   | AARUSH   |
+| AARUSH   | ALEX     |
+| ALEX     | NATASHA  |
+| NATASHA  | SANGITA  |
+| SANGITA  | SUPRIYA  |
+| SUPRIYA  | NULL     |
++----------+----------+
+30 rows in set (0.00 sec)
+
+mysql> select ename from emp;
++----------+
+| ename    |
++----------+
+| GITA     |
+| VRUSHALI |
+| SHARMIN  |
+| BANDISH  |
+| SMITH    |
+| AARAV    |
+| THOMAS   |
+| ALLEN    |
+| WARD     |
+| JONES    |
+| MARTIN   |
+| BLAKE    |
+| CLARK    |
+| SCOTT    |
+| KING     |
+| FRED     |
+| TURNER   |
+| ADAMS    |
+| Ruhan    |
+| Neel     |
+| JAMES    |
+| FORD     |
+| HOFFMAN  |
+| GRASS    |
+| MILLER   |
+| AARUSH   |
+| ALEX     |
+| NATASHA  |
+| SANGITA  |
+| SUPRIYA  |
++----------+
+30 rows in set (0.00 sec)
+
+mysql> select row_number() over() R1,ename from emp;
++----+----------+
+| R1 | ename    |
++----+----------+
+|  1 | GITA     |
+|  2 | VRUSHALI |
+|  3 | SHARMIN  |
+|  4 | BANDISH  |
+|  5 | SMITH    |
+|  6 | AARAV    |
+|  7 | THOMAS   |
+|  8 | ALLEN    |
+|  9 | WARD     |
+| 10 | JONES    |
+| 11 | MARTIN   |
+| 12 | BLAKE    |
+| 13 | CLARK    |
+| 14 | SCOTT    |
+| 15 | KING     |
+| 16 | FRED     |
+| 17 | TURNER   |
+| 18 | ADAMS    |
+| 19 | Ruhan    |
+| 20 | Neel     |
+| 21 | JAMES    |
+| 22 | FORD     |
+| 23 | HOFFMAN  |
+| 24 | GRASS    |
+| 25 | MILLER   |
+| 26 | AARUSH   |
+| 27 | ALEX     |
+| 28 | NATASHA  |
+| 29 | SANGITA  |
+| 30 | SUPRIYA  |
++----+----------+
+30 rows in set (0.01 sec)
+
+mysql> select ename, job from emp;
++----------+---------------------+
+| ename    | job                 |
++----------+---------------------+
+| GITA     | Compliance officers |
+| VRUSHALI | Compliance officers |
+| SHARMIN  | Public Relation     |
+| BANDISH  | Public Relation     |
+| SMITH    | CLERK               |
+| AARAV    | CLERK               |
+| THOMAS   | CLERK               |
+| ALLEN    | SALESMAN            |
+| WARD     | SALESMAN            |
+| JONES    | MANAGER             |
+| MARTIN   | SALESMAN            |
+| BLAKE    | MANAGER             |
+| CLARK    | MANAGER             |
+| SCOTT    | ANALYST             |
+| KING     | PRESIDENT           |
+| FRED     | vice PRESIDENT      |
+| TURNER   | SALESMAN            |
+| ADAMS    | CLERK               |
+| Ruhan    | Network             |
+| Neel     | vice PRESIDENT      |
+| JAMES    | CLERK               |
+| FORD     | ANALYST             |
+| HOFFMAN  | MANAGER             |
+| GRASS    | SALESMAN            |
+| MILLER   | CLERK               |
+| AARUSH   | SALESMAN            |
+| ALEX     | MANAGER             |
+| NATASHA  | CLERK               |
+| SANGITA  | Compliance officers |
+| SUPRIYA  | ANALYST             |
++----------+---------------------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, job from emp order by job;
++----------+---------------------+
+| ename    | job                 |
++----------+---------------------+
+| SCOTT    | ANALYST             |
+| FORD     | ANALYST             |
+| SUPRIYA  | ANALYST             |
+| SMITH    | CLERK               |
+| AARAV    | CLERK               |
+| THOMAS   | CLERK               |
+| ADAMS    | CLERK               |
+| JAMES    | CLERK               |
+| MILLER   | CLERK               |
+| NATASHA  | CLERK               |
+| GITA     | Compliance officers |
+| VRUSHALI | Compliance officers |
+| SANGITA  | Compliance officers |
+| JONES    | MANAGER             |
+| BLAKE    | MANAGER             |
+| CLARK    | MANAGER             |
+| HOFFMAN  | MANAGER             |
+| ALEX     | MANAGER             |
+| Ruhan    | Network             |
+| KING     | PRESIDENT           |
+| SHARMIN  | Public Relation     |
+| BANDISH  | Public Relation     |
+| ALLEN    | SALESMAN            |
+| WARD     | SALESMAN            |
+| MARTIN   | SALESMAN            |
+| TURNER   | SALESMAN            |
+| GRASS    | SALESMAN            |
+| AARUSH   | SALESMAN            |
+| FRED     | vice PRESIDENT      |
+| Neel     | vice PRESIDENT      |
++----------+---------------------+
+30 rows in set (0.01 sec)
+
+mysql> select row_number() over(partition by job) R1, ename, job from emp;
++----+----------+---------------------+
+| R1 | ename    | job                 |
++----+----------+---------------------+
+|  1 | SCOTT    | ANALYST             |
+|  2 | FORD     | ANALYST             |
+|  3 | SUPRIYA  | ANALYST             |
+|  1 | SMITH    | CLERK               |
+|  2 | AARAV    | CLERK               |
+|  3 | THOMAS   | CLERK               |
+|  4 | ADAMS    | CLERK               |
+|  5 | JAMES    | CLERK               |
+|  6 | MILLER   | CLERK               |
+|  7 | NATASHA  | CLERK               |
+|  1 | GITA     | Compliance officers |
+|  2 | VRUSHALI | Compliance officers |
+|  3 | SANGITA  | Compliance officers |
+|  1 | JONES    | MANAGER             |
+|  2 | BLAKE    | MANAGER             |
+|  3 | CLARK    | MANAGER             |
+|  4 | HOFFMAN  | MANAGER             |
+|  5 | ALEX     | MANAGER             |
+|  1 | Ruhan    | Network             |
+|  1 | KING     | PRESIDENT           |
+|  1 | SHARMIN  | Public Relation     |
+|  2 | BANDISH  | Public Relation     |
+|  1 | ALLEN    | SALESMAN            |
+|  2 | WARD     | SALESMAN            |
+|  3 | MARTIN   | SALESMAN            |
+|  4 | TURNER   | SALESMAN            |
+|  5 | GRASS    | SALESMAN            |
+|  6 | AARUSH   | SALESMAN            |
+|  1 | FRED     | vice PRESIDENT      |
+|  2 | Neel     | vice PRESIDENT      |
++----+----------+---------------------+
+30 rows in set (0.01 sec)
+
+mysql> select ename, sal from emp;
++----------+------+
+| ename    | sal  |
++----------+------+
+| GITA     | 1750 |
+| VRUSHALI | 1750 |
+| SHARMIN  | 1750 |
+| BANDISH  | 1750 |
+| SMITH    |  800 |
+| AARAV    | 3350 |
+| THOMAS   | 1750 |
+| ALLEN    | 1600 |
+| WARD     | 1250 |
+| JONES    | 2975 |
+| MARTIN   | 1250 |
+| BLAKE    | 2850 |
+| CLARK    | 2450 |
+| SCOTT    | 3000 |
+| KING     | 5000 |
+| FRED     | 5000 |
+| TURNER   | 1500 |
+| ADAMS    | 1100 |
+| Ruhan    | 2000 |
+| Neel     | 1000 |
+| JAMES    |  950 |
+| FORD     | 3000 |
+| HOFFMAN  | 4150 |
+| GRASS    | 2575 |
+| MILLER   | 1300 |
+| AARUSH   | 1350 |
+| ALEX     | 1250 |
+| NATASHA  | 1750 |
+| SANGITA  | 1750 |
+| SUPRIYA  | 1750 |
++----------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, sal from emp order by sal;
++----------+------+
+| ename    | sal  |
++----------+------+
+| SMITH    |  800 |
+| JAMES    |  950 |
+| Neel     | 1000 |
+| ADAMS    | 1100 |
+| WARD     | 1250 |
+| MARTIN   | 1250 |
+| ALEX     | 1250 |
+| MILLER   | 1300 |
+| AARUSH   | 1350 |
+| TURNER   | 1500 |
+| ALLEN    | 1600 |
+| GITA     | 1750 |
+| VRUSHALI | 1750 |
+| SHARMIN  | 1750 |
+| BANDISH  | 1750 |
+| THOMAS   | 1750 |
+| NATASHA  | 1750 |
+| SANGITA  | 1750 |
+| SUPRIYA  | 1750 |
+| Ruhan    | 2000 |
+| CLARK    | 2450 |
+| GRASS    | 2575 |
+| BLAKE    | 2850 |
+| JONES    | 2975 |
+| SCOTT    | 3000 |
+| FORD     | 3000 |
+| AARAV    | 3350 |
+| HOFFMAN  | 4150 |
+| KING     | 5000 |
+| FRED     | 5000 |
++----------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, sal,rank() over(order by sal) R1 from emp;
++----------+------+----+
+| ename    | sal  | R1 |
++----------+------+----+
+| SMITH    |  800 |  1 |
+| JAMES    |  950 |  2 |
+| Neel     | 1000 |  3 |
+| ADAMS    | 1100 |  4 |
+| WARD     | 1250 |  5 |
+| MARTIN   | 1250 |  5 |
+| ALEX     | 1250 |  5 |
+| MILLER   | 1300 |  8 |
+| AARUSH   | 1350 |  9 |
+| TURNER   | 1500 | 10 |
+| ALLEN    | 1600 | 11 |
+| GITA     | 1750 | 12 |
+| VRUSHALI | 1750 | 12 |
+| SHARMIN  | 1750 | 12 |
+| BANDISH  | 1750 | 12 |
+| THOMAS   | 1750 | 12 |
+| NATASHA  | 1750 | 12 |
+| SANGITA  | 1750 | 12 |
+| SUPRIYA  | 1750 | 12 |
+| Ruhan    | 2000 | 20 |
+| CLARK    | 2450 | 21 |
+| GRASS    | 2575 | 22 |
+| BLAKE    | 2850 | 23 |
+| JONES    | 2975 | 24 |
+| SCOTT    | 3000 | 25 |
+| FORD     | 3000 | 25 |
+| AARAV    | 3350 | 27 |
+| HOFFMAN  | 4150 | 28 |
+| KING     | 5000 | 29 |
+| FRED     | 5000 | 29 |
++----------+------+----+
+30 rows in set (0.01 sec)
+
+mysql> select ename, sal,rank() over(order by sal) R1, dense_rank() over(order by sal) R2 from emp;
++----------+------+----+----+
+| ename    | sal  | R1 | R2 |
++----------+------+----+----+
+| SMITH    |  800 |  1 |  1 |
+| JAMES    |  950 |  2 |  2 |
+| Neel     | 1000 |  3 |  3 |
+| ADAMS    | 1100 |  4 |  4 |
+| WARD     | 1250 |  5 |  5 |
+| MARTIN   | 1250 |  5 |  5 |
+| ALEX     | 1250 |  5 |  5 |
+| MILLER   | 1300 |  8 |  6 |
+| AARUSH   | 1350 |  9 |  7 |
+| TURNER   | 1500 | 10 |  8 |
+| ALLEN    | 1600 | 11 |  9 |
+| GITA     | 1750 | 12 | 10 |
+| VRUSHALI | 1750 | 12 | 10 |
+| SHARMIN  | 1750 | 12 | 10 |
+| BANDISH  | 1750 | 12 | 10 |
+| THOMAS   | 1750 | 12 | 10 |
+| NATASHA  | 1750 | 12 | 10 |
+| SANGITA  | 1750 | 12 | 10 |
+| SUPRIYA  | 1750 | 12 | 10 |
+| Ruhan    | 2000 | 20 | 11 |
+| CLARK    | 2450 | 21 | 12 |
+| GRASS    | 2575 | 22 | 13 |
+| BLAKE    | 2850 | 23 | 14 |
+| JONES    | 2975 | 24 | 15 |
+| SCOTT    | 3000 | 25 | 16 |
+| FORD     | 3000 | 25 | 16 |
+| AARAV    | 3350 | 27 | 17 |
+| HOFFMAN  | 4150 | 28 | 18 |
+| KING     | 5000 | 29 | 19 |
+| FRED     | 5000 | 29 | 19 |
++----------+------+----+----+
+30 rows in set (0.02 sec)
+
+mysql> select ename, sal,rank() over(order by sal desc) R1, dense_rank() over(order by sal desc) R2 from emp;
++----------+------+----+----+
+| ename    | sal  | R1 | R2 |
++----------+------+----+----+
+| KING     | 5000 |  1 |  1 |
+| FRED     | 5000 |  1 |  1 |
+| HOFFMAN  | 4150 |  3 |  2 |
+| AARAV    | 3350 |  4 |  3 |
+| SCOTT    | 3000 |  5 |  4 |
+| FORD     | 3000 |  5 |  4 |
+| JONES    | 2975 |  7 |  5 |
+| BLAKE    | 2850 |  8 |  6 |
+| GRASS    | 2575 |  9 |  7 |
+| CLARK    | 2450 | 10 |  8 |
+| Ruhan    | 2000 | 11 |  9 |
+| GITA     | 1750 | 12 | 10 |
+| VRUSHALI | 1750 | 12 | 10 |
+| SHARMIN  | 1750 | 12 | 10 |
+| BANDISH  | 1750 | 12 | 10 |
+| THOMAS   | 1750 | 12 | 10 |
+| NATASHA  | 1750 | 12 | 10 |
+| SANGITA  | 1750 | 12 | 10 |
+| SUPRIYA  | 1750 | 12 | 10 |
+| ALLEN    | 1600 | 20 | 11 |
+| TURNER   | 1500 | 21 | 12 |
+| AARUSH   | 1350 | 22 | 13 |
+| MILLER   | 1300 | 23 | 14 |
+| WARD     | 1250 | 24 | 15 |
+| MARTIN   | 1250 | 24 | 15 |
+| ALEX     | 1250 | 24 | 15 |
+| ADAMS    | 1100 | 27 | 16 |
+| Neel     | 1000 | 28 | 17 |
+| JAMES    |  950 | 29 | 18 |
+| SMITH    |  800 | 30 | 19 |
++----------+------+----+----+
+30 rows in set (0.00 sec)
+
+mysql> select ename, job, sal, dense_rank() over(partition by job order by sal desc) R2 from emp;
++----------+---------------------+------+----+
+| ename    | job                 | sal  | R2 |
++----------+---------------------+------+----+
+| SCOTT    | ANALYST             | 3000 |  1 |
+| FORD     | ANALYST             | 3000 |  1 |
+| SUPRIYA  | ANALYST             | 1750 |  2 |
+| AARAV    | CLERK               | 3350 |  1 |
+| THOMAS   | CLERK               | 1750 |  2 |
+| NATASHA  | CLERK               | 1750 |  2 |
+| MILLER   | CLERK               | 1300 |  3 |
+| ADAMS    | CLERK               | 1100 |  4 |
+| JAMES    | CLERK               |  950 |  5 |
+| SMITH    | CLERK               |  800 |  6 |
+| GITA     | Compliance officers | 1750 |  1 |
+| VRUSHALI | Compliance officers | 1750 |  1 |
+| SANGITA  | Compliance officers | 1750 |  1 |
+| HOFFMAN  | MANAGER             | 4150 |  1 |
+| JONES    | MANAGER             | 2975 |  2 |
+| BLAKE    | MANAGER             | 2850 |  3 |
+| CLARK    | MANAGER             | 2450 |  4 |
+| ALEX     | MANAGER             | 1250 |  5 |
+| Ruhan    | Network             | 2000 |  1 |
+| KING     | PRESIDENT           | 5000 |  1 |
+| SHARMIN  | Public Relation     | 1750 |  1 |
+| BANDISH  | Public Relation     | 1750 |  1 |
+| GRASS    | SALESMAN            | 2575 |  1 |
+| ALLEN    | SALESMAN            | 1600 |  2 |
+| TURNER   | SALESMAN            | 1500 |  3 |
+| AARUSH   | SALESMAN            | 1350 |  4 |
+| WARD     | SALESMAN            | 1250 |  5 |
+| MARTIN   | SALESMAN            | 1250 |  5 |
+| FRED     | vice PRESIDENT      | 5000 |  1 |
+| Neel     | vice PRESIDENT      | 1000 |  2 |
++----------+---------------------+------+----+
+30 rows in set (0.00 sec)
+
+mysql> select ename from emp where job='manager';
++---------+
+| ename   |
++---------+
+| JONES   |
+| BLAKE   |
+| CLARK   |
+| HOFFMAN |
+| ALEX    |
++---------+
+5 rows in set (0.02 sec)
+
+mysql> select ename,lag(ename) over() R1 from emp where job='manager';
++---------+---------+
+| ename   | R1      |
++---------+---------+
+| JONES   | NULL    |
+| BLAKE   | JONES   |
+| CLARK   | BLAKE   |
+| HOFFMAN | CLARK   |
+| ALEX    | HOFFMAN |
++---------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select ename,lead(ename) over() R1 from emp where job='manager';
++---------+---------+
+| ename   | R1      |
++---------+---------+
+| JONES   | BLAKE   |
+| BLAKE   | CLARK   |
+| CLARK   | HOFFMAN |
+| HOFFMAN | ALEX    |
+| ALEX    | NULL    |
++---------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select * from traintimetable;
++----+---------+----------------------------+----------+----------+
+| id | trainID | stationname                | distance | timing   |
++----+---------+----------------------------+----------+----------+
+|  1 |   22863 | mumbai central             |        0 | 08:30:00 |
+|  2 |   22863 | surat                      |      262 | 12:40:13 |
+|  3 |   22863 | baroda                     |      129 | 14:42:00 |
+|  4 |   22863 | ahmednagar JN              |      100 | 17:10:00 |
+|  5 |   22863 | surendranagar              |      130 | 20:00:00 |
+|  6 |   22863 | rajkot JN                  |      116 | 23:40:00 |
+|  7 |   22863 | hapa                       |       75 | 00:05:00 |
+|  8 |   22868 | pune JN                    |        0 | 17:20:00 |
+|  9 |   22868 | uruli                      |       30 | 17:47:13 |
+| 10 |   22868 | daund chord line           |     87.1 | 18:27:00 |
+| 11 |   22868 | ahmednagar                 |       71 | 20:10:00 |
+| 12 |   22868 | belapur                    |       61 | 21:15:00 |
+| 13 |   22868 | kopargaon                  |       44 | 21:57:00 |
+| 14 |   22868 | manmad JN                  |    41.84 | 23:25:13 |
+| 15 |   22868 | daund chord line           |      249 | 18:27:00 |
+| 16 |   22868 | bhopal                     |      728 | 08:55:00 |
+| 17 |   12267 | mumbai central             |        0 | 23:00:00 |
+| 18 |   12267 | ahmedabad JN               |      534 | 05:00:00 |
+| 19 |   12267 | surendranagar              |      131 | 07:20:00 |
+| 20 |   12267 | rajkot JN                  |      106 | 09:15:00 |
+| 21 |   12267 | hapa                       |      191 | 12:45:00 |
+| 22 |   12307 | HOWRAH JN                  |     2271 | 23:25:00 |
+| 23 |   12307 | BARDDHAMAN JN              |     99.6 | 00:31:00 |
+| 24 |   12307 | ASANSOL JN                 |      107 | 02:09:00 |
+| 25 |   12307 | DHANBAD JN                 |       65 | 03:25:00 |
+| 26 |   12307 | PARASNATH                  |       49 | 04:02:00 |
+| 27 |   12307 | KODERMA                    |      115 | 04:54:00 |
+| 28 |   12307 | GAYA JN                    |       76 | 06:30:00 |
+| 29 |   12307 | ANUGRAHA NARAYAN ROAD      |      115 | 07:20:00 |
+| 30 |   12307 | DEHRI ON SONE              |       17 | 07:40:00 |
+| 31 |   12307 | SASARAM                    |       55 | 07:58:00 |
+| 32 |   12307 | BHABUA ROAD                |       31 | 08:38:00 |
+| 33 |   12307 | PT DEEN DAYAL UPADHYAYA JN |       90 | 09:55:00 |
+| 34 |   12307 | MIRZAPUR                   |    155.5 | 10:55:00 |
+| 35 |   12307 | PRAYAGRAJ JN               |       99 | 12:20:00 |
+| 36 |   12307 | FATEHPUR                   |      155 | 13:32:00 |
+| 37 |   12307 | KANPUR CENTRAL             |       75 | 14:55:00 |
+| 38 |   12307 | ETAWAH                     |       47 | 16:27:00 |
+| 39 |   12307 | TUNDLA JN                  |       54 | 18:35:00 |
+| 40 |   12307 | AGRA FORT                  |       21 | 19:30:00 |
+| 41 |   12307 | ACHHNERA JN                |      227 | 20:14:00 |
+| 42 |   12307 | BHARATPUR JN               |      746 | 20:44:00 |
+| 43 |   12307 | GAYA JN                    |       90 | 06:30:00 |
+| 44 |   12307 | JAIPUR                     |       33 | 00:05:00 |
+| 45 |   12307 | NAWA CITY                  |       14 | 01:38:00 |
+| 46 |   12307 | KUCHAMAN CITY              |       44 | 01:55:00 |
+| 47 |   12307 | MAKRANA JN                 |       59 | 02:03:00 |
+| 48 |   12307 | DEGANA JN                  |      104 | 02:37:00 |
+| 49 |   12307 | MERTA ROAD JN              |        0 | 03:15:00 |
+| 50 |   12307 | JODHPUR JN                 |       89 | 04:20:00 |
+| 51 |   12308 | JAIPUR                     |       21 | 00:05:00 |
+| 52 |   12308 | NAWA CITY                  |       14 | 01:38:00 |
+| 53 |   12308 | KUCHAMAN CITY              |       44 | 01:55:00 |
+| 54 |   12308 | MAKRANA JN                 |       46 | 02:03:00 |
+| 55 |   12308 | DEGANA JN                  |      103 | 02:37:00 |
+| 56 |   12308 | MERTA ROAD JN              |     NULL | 03:15:00 |
+| 57 |   12308 | JODHPUR JN                 |     NULL | 04:20:00 |
++----+---------+----------------------------+----------+----------+
+57 rows in set (0.03 sec)
+
+mysql> select id, trainID, stationname 'Current Station', lead(stationname) over(partition by trainID order by id) 'Next Station' from traintimetable;
++----+---------+----------------------------+----------------------------+
+| id | trainID | Current Station            | Next Station               |
++----+---------+----------------------------+----------------------------+
+| 17 |   12267 | mumbai central             | ahmedabad JN               |
+| 18 |   12267 | ahmedabad JN               | surendranagar              |
+| 19 |   12267 | surendranagar              | rajkot JN                  |
+| 20 |   12267 | rajkot JN                  | hapa                       |
+| 21 |   12267 | hapa                       | NULL                       |
+| 22 |   12307 | HOWRAH JN                  | BARDDHAMAN JN              |
+| 23 |   12307 | BARDDHAMAN JN              | ASANSOL JN                 |
+| 24 |   12307 | ASANSOL JN                 | DHANBAD JN                 |
+| 25 |   12307 | DHANBAD JN                 | PARASNATH                  |
+| 26 |   12307 | PARASNATH                  | KODERMA                    |
+| 27 |   12307 | KODERMA                    | GAYA JN                    |
+| 28 |   12307 | GAYA JN                    | ANUGRAHA NARAYAN ROAD      |
+| 29 |   12307 | ANUGRAHA NARAYAN ROAD      | DEHRI ON SONE              |
+| 30 |   12307 | DEHRI ON SONE              | SASARAM                    |
+| 31 |   12307 | SASARAM                    | BHABUA ROAD                |
+| 32 |   12307 | BHABUA ROAD                | PT DEEN DAYAL UPADHYAYA JN |
+| 33 |   12307 | PT DEEN DAYAL UPADHYAYA JN | MIRZAPUR                   |
+| 34 |   12307 | MIRZAPUR                   | PRAYAGRAJ JN               |
+| 35 |   12307 | PRAYAGRAJ JN               | FATEHPUR                   |
+| 36 |   12307 | FATEHPUR                   | KANPUR CENTRAL             |
+| 37 |   12307 | KANPUR CENTRAL             | ETAWAH                     |
+| 38 |   12307 | ETAWAH                     | TUNDLA JN                  |
+| 39 |   12307 | TUNDLA JN                  | AGRA FORT                  |
+| 40 |   12307 | AGRA FORT                  | ACHHNERA JN                |
+| 41 |   12307 | ACHHNERA JN                | BHARATPUR JN               |
+| 42 |   12307 | BHARATPUR JN               | GAYA JN                    |
+| 43 |   12307 | GAYA JN                    | JAIPUR                     |
+| 44 |   12307 | JAIPUR                     | NAWA CITY                  |
+| 45 |   12307 | NAWA CITY                  | KUCHAMAN CITY              |
+| 46 |   12307 | KUCHAMAN CITY              | MAKRANA JN                 |
+| 47 |   12307 | MAKRANA JN                 | DEGANA JN                  |
+| 48 |   12307 | DEGANA JN                  | MERTA ROAD JN              |
+| 49 |   12307 | MERTA ROAD JN              | JODHPUR JN                 |
+| 50 |   12307 | JODHPUR JN                 | NULL                       |
+| 51 |   12308 | JAIPUR                     | NAWA CITY                  |
+| 52 |   12308 | NAWA CITY                  | KUCHAMAN CITY              |
+| 53 |   12308 | KUCHAMAN CITY              | MAKRANA JN                 |
+| 54 |   12308 | MAKRANA JN                 | DEGANA JN                  |
+| 55 |   12308 | DEGANA JN                  | MERTA ROAD JN              |
+| 56 |   12308 | MERTA ROAD JN              | JODHPUR JN                 |
+| 57 |   12308 | JODHPUR JN                 | NULL                       |
+|  1 |   22863 | mumbai central             | surat                      |
+|  2 |   22863 | surat                      | baroda                     |
+|  3 |   22863 | baroda                     | ahmednagar JN              |
+|  4 |   22863 | ahmednagar JN              | surendranagar              |
+|  5 |   22863 | surendranagar              | rajkot JN                  |
+|  6 |   22863 | rajkot JN                  | hapa                       |
+|  7 |   22863 | hapa                       | NULL                       |
+|  8 |   22868 | pune JN                    | uruli                      |
+|  9 |   22868 | uruli                      | daund chord line           |
+| 10 |   22868 | daund chord line           | ahmednagar                 |
+| 11 |   22868 | ahmednagar                 | belapur                    |
+| 12 |   22868 | belapur                    | kopargaon                  |
+| 13 |   22868 | kopargaon                  | manmad JN                  |
+| 14 |   22868 | manmad JN                  | daund chord line           |
+| 15 |   22868 | daund chord line           | bhopal                     |
+| 16 |   22868 | bhopal                     | NULL                       |
++----+---------+----------------------------+----------------------------+
+57 rows in set (0.00 sec)
+
+mysql> select id, trainID, stationname 'Current Station', lead(stationname, 2) over(partition by trainID order by id) 'Next Station' from traintimetable;
++----+---------+----------------------------+----------------------------+
+| id | trainID | Current Station            | Next Station               |
++----+---------+----------------------------+----------------------------+
+| 17 |   12267 | mumbai central             | surendranagar              |
+| 18 |   12267 | ahmedabad JN               | rajkot JN                  |
+| 19 |   12267 | surendranagar              | hapa                       |
+| 20 |   12267 | rajkot JN                  | NULL                       |
+| 21 |   12267 | hapa                       | NULL                       |
+| 22 |   12307 | HOWRAH JN                  | ASANSOL JN                 |
+| 23 |   12307 | BARDDHAMAN JN              | DHANBAD JN                 |
+| 24 |   12307 | ASANSOL JN                 | PARASNATH                  |
+| 25 |   12307 | DHANBAD JN                 | KODERMA                    |
+| 26 |   12307 | PARASNATH                  | GAYA JN                    |
+| 27 |   12307 | KODERMA                    | ANUGRAHA NARAYAN ROAD      |
+| 28 |   12307 | GAYA JN                    | DEHRI ON SONE              |
+| 29 |   12307 | ANUGRAHA NARAYAN ROAD      | SASARAM                    |
+| 30 |   12307 | DEHRI ON SONE              | BHABUA ROAD                |
+| 31 |   12307 | SASARAM                    | PT DEEN DAYAL UPADHYAYA JN |
+| 32 |   12307 | BHABUA ROAD                | MIRZAPUR                   |
+| 33 |   12307 | PT DEEN DAYAL UPADHYAYA JN | PRAYAGRAJ JN               |
+| 34 |   12307 | MIRZAPUR                   | FATEHPUR                   |
+| 35 |   12307 | PRAYAGRAJ JN               | KANPUR CENTRAL             |
+| 36 |   12307 | FATEHPUR                   | ETAWAH                     |
+| 37 |   12307 | KANPUR CENTRAL             | TUNDLA JN                  |
+| 38 |   12307 | ETAWAH                     | AGRA FORT                  |
+| 39 |   12307 | TUNDLA JN                  | ACHHNERA JN                |
+| 40 |   12307 | AGRA FORT                  | BHARATPUR JN               |
+| 41 |   12307 | ACHHNERA JN                | GAYA JN                    |
+| 42 |   12307 | BHARATPUR JN               | JAIPUR                     |
+| 43 |   12307 | GAYA JN                    | NAWA CITY                  |
+| 44 |   12307 | JAIPUR                     | KUCHAMAN CITY              |
+| 45 |   12307 | NAWA CITY                  | MAKRANA JN                 |
+| 46 |   12307 | KUCHAMAN CITY              | DEGANA JN                  |
+| 47 |   12307 | MAKRANA JN                 | MERTA ROAD JN              |
+| 48 |   12307 | DEGANA JN                  | JODHPUR JN                 |
+| 49 |   12307 | MERTA ROAD JN              | NULL                       |
+| 50 |   12307 | JODHPUR JN                 | NULL                       |
+| 51 |   12308 | JAIPUR                     | KUCHAMAN CITY              |
+| 52 |   12308 | NAWA CITY                  | MAKRANA JN                 |
+| 53 |   12308 | KUCHAMAN CITY              | DEGANA JN                  |
+| 54 |   12308 | MAKRANA JN                 | MERTA ROAD JN              |
+| 55 |   12308 | DEGANA JN                  | JODHPUR JN                 |
+| 56 |   12308 | MERTA ROAD JN              | NULL                       |
+| 57 |   12308 | JODHPUR JN                 | NULL                       |
+|  1 |   22863 | mumbai central             | baroda                     |
+|  2 |   22863 | surat                      | ahmednagar JN              |
+|  3 |   22863 | baroda                     | surendranagar              |
+|  4 |   22863 | ahmednagar JN              | rajkot JN                  |
+|  5 |   22863 | surendranagar              | hapa                       |
+|  6 |   22863 | rajkot JN                  | NULL                       |
+|  7 |   22863 | hapa                       | NULL                       |
+|  8 |   22868 | pune JN                    | daund chord line           |
+|  9 |   22868 | uruli                      | ahmednagar                 |
+| 10 |   22868 | daund chord line           | belapur                    |
+| 11 |   22868 | ahmednagar                 | kopargaon                  |
+| 12 |   22868 | belapur                    | manmad JN                  |
+| 13 |   22868 | kopargaon                  | daund chord line           |
+| 14 |   22868 | manmad JN                  | bhopal                     |
+| 15 |   22868 | daund chord line           | NULL                       |
+| 16 |   22868 | bhopal                     | NULL                       |
++----+---------+----------------------------+----------------------------+
+57 rows in set (0.00 sec)
+
+mysql> select id, trainID, stationname 'Current Station', lead(stationname, 1) over(partition by trainID order by id) 'Next Station' from traintimetable;
++----+---------+----------------------------+----------------------------+
+| id | trainID | Current Station            | Next Station               |
++----+---------+----------------------------+----------------------------+
+| 17 |   12267 | mumbai central             | ahmedabad JN               |
+| 18 |   12267 | ahmedabad JN               | surendranagar              |
+| 19 |   12267 | surendranagar              | rajkot JN                  |
+| 20 |   12267 | rajkot JN                  | hapa                       |
+| 21 |   12267 | hapa                       | NULL                       |
+| 22 |   12307 | HOWRAH JN                  | BARDDHAMAN JN              |
+| 23 |   12307 | BARDDHAMAN JN              | ASANSOL JN                 |
+| 24 |   12307 | ASANSOL JN                 | DHANBAD JN                 |
+| 25 |   12307 | DHANBAD JN                 | PARASNATH                  |
+| 26 |   12307 | PARASNATH                  | KODERMA                    |
+| 27 |   12307 | KODERMA                    | GAYA JN                    |
+| 28 |   12307 | GAYA JN                    | ANUGRAHA NARAYAN ROAD      |
+| 29 |   12307 | ANUGRAHA NARAYAN ROAD      | DEHRI ON SONE              |
+| 30 |   12307 | DEHRI ON SONE              | SASARAM                    |
+| 31 |   12307 | SASARAM                    | BHABUA ROAD                |
+| 32 |   12307 | BHABUA ROAD                | PT DEEN DAYAL UPADHYAYA JN |
+| 33 |   12307 | PT DEEN DAYAL UPADHYAYA JN | MIRZAPUR                   |
+| 34 |   12307 | MIRZAPUR                   | PRAYAGRAJ JN               |
+| 35 |   12307 | PRAYAGRAJ JN               | FATEHPUR                   |
+| 36 |   12307 | FATEHPUR                   | KANPUR CENTRAL             |
+| 37 |   12307 | KANPUR CENTRAL             | ETAWAH                     |
+| 38 |   12307 | ETAWAH                     | TUNDLA JN                  |
+| 39 |   12307 | TUNDLA JN                  | AGRA FORT                  |
+| 40 |   12307 | AGRA FORT                  | ACHHNERA JN                |
+| 41 |   12307 | ACHHNERA JN                | BHARATPUR JN               |
+| 42 |   12307 | BHARATPUR JN               | GAYA JN                    |
+| 43 |   12307 | GAYA JN                    | JAIPUR                     |
+| 44 |   12307 | JAIPUR                     | NAWA CITY                  |
+| 45 |   12307 | NAWA CITY                  | KUCHAMAN CITY              |
+| 46 |   12307 | KUCHAMAN CITY              | MAKRANA JN                 |
+| 47 |   12307 | MAKRANA JN                 | DEGANA JN                  |
+| 48 |   12307 | DEGANA JN                  | MERTA ROAD JN              |
+| 49 |   12307 | MERTA ROAD JN              | JODHPUR JN                 |
+| 50 |   12307 | JODHPUR JN                 | NULL                       |
+| 51 |   12308 | JAIPUR                     | NAWA CITY                  |
+| 52 |   12308 | NAWA CITY                  | KUCHAMAN CITY              |
+| 53 |   12308 | KUCHAMAN CITY              | MAKRANA JN                 |
+| 54 |   12308 | MAKRANA JN                 | DEGANA JN                  |
+| 55 |   12308 | DEGANA JN                  | MERTA ROAD JN              |
+| 56 |   12308 | MERTA ROAD JN              | JODHPUR JN                 |
+| 57 |   12308 | JODHPUR JN                 | NULL                       |
+|  1 |   22863 | mumbai central             | surat                      |
+|  2 |   22863 | surat                      | baroda                     |
+|  3 |   22863 | baroda                     | ahmednagar JN              |
+|  4 |   22863 | ahmednagar JN              | surendranagar              |
+|  5 |   22863 | surendranagar              | rajkot JN                  |
+|  6 |   22863 | rajkot JN                  | hapa                       |
+|  7 |   22863 | hapa                       | NULL                       |
+|  8 |   22868 | pune JN                    | uruli                      |
+|  9 |   22868 | uruli                      | daund chord line           |
+| 10 |   22868 | daund chord line           | ahmednagar                 |
+| 11 |   22868 | ahmednagar                 | belapur                    |
+| 12 |   22868 | belapur                    | kopargaon                  |
+| 13 |   22868 | kopargaon                  | manmad JN                  |
+| 14 |   22868 | manmad JN                  | daund chord line           |
+| 15 |   22868 | daund chord line           | bhopal                     |
+| 16 |   22868 | bhopal                     | NULL                       |
++----+---------+----------------------------+----------------------------+
+57 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> select id, trainID, stationname 'Current Station', lead(stationname, 1, 'End of ...') over(partition by trainID order by id) 'Next Station' from traintimetable;
++----+---------+----------------------------+----------------------------+
+| id | trainID | Current Station            | Next Station               |
++----+---------+----------------------------+----------------------------+
+| 17 |   12267 | mumbai central             | ahmedabad JN               |
+| 18 |   12267 | ahmedabad JN               | surendranagar              |
+| 19 |   12267 | surendranagar              | rajkot JN                  |
+| 20 |   12267 | rajkot JN                  | hapa                       |
+| 21 |   12267 | hapa                       | End of ...                 |
+| 22 |   12307 | HOWRAH JN                  | BARDDHAMAN JN              |
+| 23 |   12307 | BARDDHAMAN JN              | ASANSOL JN                 |
+| 24 |   12307 | ASANSOL JN                 | DHANBAD JN                 |
+| 25 |   12307 | DHANBAD JN                 | PARASNATH                  |
+| 26 |   12307 | PARASNATH                  | KODERMA                    |
+| 27 |   12307 | KODERMA                    | GAYA JN                    |
+| 28 |   12307 | GAYA JN                    | ANUGRAHA NARAYAN ROAD      |
+| 29 |   12307 | ANUGRAHA NARAYAN ROAD      | DEHRI ON SONE              |
+| 30 |   12307 | DEHRI ON SONE              | SASARAM                    |
+| 31 |   12307 | SASARAM                    | BHABUA ROAD                |
+| 32 |   12307 | BHABUA ROAD                | PT DEEN DAYAL UPADHYAYA JN |
+| 33 |   12307 | PT DEEN DAYAL UPADHYAYA JN | MIRZAPUR                   |
+| 34 |   12307 | MIRZAPUR                   | PRAYAGRAJ JN               |
+| 35 |   12307 | PRAYAGRAJ JN               | FATEHPUR                   |
+| 36 |   12307 | FATEHPUR                   | KANPUR CENTRAL             |
+| 37 |   12307 | KANPUR CENTRAL             | ETAWAH                     |
+| 38 |   12307 | ETAWAH                     | TUNDLA JN                  |
+| 39 |   12307 | TUNDLA JN                  | AGRA FORT                  |
+| 40 |   12307 | AGRA FORT                  | ACHHNERA JN                |
+| 41 |   12307 | ACHHNERA JN                | BHARATPUR JN               |
+| 42 |   12307 | BHARATPUR JN               | GAYA JN                    |
+| 43 |   12307 | GAYA JN                    | JAIPUR                     |
+| 44 |   12307 | JAIPUR                     | NAWA CITY                  |
+| 45 |   12307 | NAWA CITY                  | KUCHAMAN CITY              |
+| 46 |   12307 | KUCHAMAN CITY              | MAKRANA JN                 |
+| 47 |   12307 | MAKRANA JN                 | DEGANA JN                  |
+| 48 |   12307 | DEGANA JN                  | MERTA ROAD JN              |
+| 49 |   12307 | MERTA ROAD JN              | JODHPUR JN                 |
+| 50 |   12307 | JODHPUR JN                 | End of ...                 |
+| 51 |   12308 | JAIPUR                     | NAWA CITY                  |
+| 52 |   12308 | NAWA CITY                  | KUCHAMAN CITY              |
+| 53 |   12308 | KUCHAMAN CITY              | MAKRANA JN                 |
+| 54 |   12308 | MAKRANA JN                 | DEGANA JN                  |
+| 55 |   12308 | DEGANA JN                  | MERTA ROAD JN              |
+| 56 |   12308 | MERTA ROAD JN              | JODHPUR JN                 |
+| 57 |   12308 | JODHPUR JN                 | End of ...                 |
+|  1 |   22863 | mumbai central             | surat                      |
+|  2 |   22863 | surat                      | baroda                     |
+|  3 |   22863 | baroda                     | ahmednagar JN              |
+|  4 |   22863 | ahmednagar JN              | surendranagar              |
+|  5 |   22863 | surendranagar              | rajkot JN                  |
+|  6 |   22863 | rajkot JN                  | hapa                       |
+|  7 |   22863 | hapa                       | End of ...                 |
+|  8 |   22868 | pune JN                    | uruli                      |
+|  9 |   22868 | uruli                      | daund chord line           |
+| 10 |   22868 | daund chord line           | ahmednagar                 |
+| 11 |   22868 | ahmednagar                 | belapur                    |
+| 12 |   22868 | belapur                    | kopargaon                  |
+| 13 |   22868 | kopargaon                  | manmad JN                  |
+| 14 |   22868 | manmad JN                  | daund chord line           |
+| 15 |   22868 | daund chord line           | bhopal                     |
+| 16 |   22868 | bhopal                     | End of ...                 |
++----+---------+----------------------------+----------------------------+
+57 rows in set (0.00 sec)
+
+mysql> select * from pune_metro_station;
+ERROR 1146 (42S02): Table 'db1.pune_metro_station' doesn't exist
+mysql> select * from pune_metro_stations;
++---------+---------------------------------------------------+----------+------+--------------+---------------------+
+| stop_id | stop_name                                         | route_no | city | next_stop_id | distance_to_next_km |
++---------+---------------------------------------------------+----------+------+--------------+---------------------+
+|       1 | Chandni Chowk                                     | Line-1   | pune |            2 |                2.91 |
+|       2 | Kothrud Bus Depot                                 | Line-1   | pune |            3 |                1.22 |
+|       3 | Vanaz                                             | Line-1   | pune |            4 |                2.38 |
+|       4 | Anand Nagar                                       | Line-1   | pune |            5 |                1.22 |
+|       5 | Ideal Colony                                      | Line-1   | pune |            6 |                1.96 |
+|       6 | Nal Stop                                          | Line-1   | pune |            7 |                1.17 |
+|       7 | Garware College                                   | Line-1   | pune |            8 |                2.94 |
+|       8 | Deccan Gymkhana                                   | Line-1   | pune |            9 |                2.20 |
+|       9 | Chhatrapati Sambhaji Udyan                        | Line-1   | pune |           10 |                1.19 |
+|      10 | PMC Bhavan                                        | Line-1   | pune |           11 |                2.32 |
+|      11 | Civil Court (interchange station with the Line-2) | Line-1   | pune |           12 |                1.05 |
+|      12 | Mangalwar Peth                                    | Line-1   | pune |           13 |                1.29 |
+|      13 | Pune Railway Station                              | Line-1   | pune |           14 |                2.31 |
+|      14 | Ruby Hall Clinic                                  | Line-1   | pune |           15 |                2.69 |
+|      15 | Bund Garden                                       | Line-1   | pune |           16 |                1.49 |
+|      16 | Yerawada                                          | Line-1   | pune |           17 |                2.38 |
+|      17 | Kalyani Nagar                                     | Line-1   | pune |           18 |                2.44 |
+|      18 | Ramwadi                                           | Line-1   | pune |         NULL |                2.05 |
+|      19 | Bhakti Shakti                                     | Line-2   | pune |           20 |                1.93 |
+|      20 | Nigdi                                             | Line-2   | pune |           21 |                2.51 |
+|      21 | Akurdi                                            | Line-2   | pune |           22 |                1.77 |
+|      22 | Chinchwad                                         | Line-2   | pune |           23 |                2.31 |
+|      23 | PCMC Bhavan                                       | Line-2   | pune |           24 |                1.25 |
+|      24 | Sant Tukaram Nagar                                | Line-2   | pune |           25 |                2.32 |
+|      25 | Nashik Phata                                      | Line-2   | pune |           26 |                2.83 |
+|      26 | Kasarwadi                                         | Line-2   | pune |           27 |                2.19 |
+|      27 | Phugewadi                                         | Line-2   | pune |           28 |                1.46 |
+|      28 | Dapodi                                            | Line-2   | pune |           29 |                1.75 |
+|      29 | Bopodi                                            | Line-2   | pune |           30 |                1.36 |
+|      30 | Khadki                                            | Line-2   | pune |           31 |                2.53 |
+|      31 | Range Hills                                       | Line-2   | pune |           32 |                1.61 |
+|      32 | Shivaji Nagar                                     | Line-2   | pune |           33 |                1.42 |
+|      33 | Chinchwad                                         | Line-2   | pune |           34 |                1.29 |
+|      34 | Kasba Peth                                        | Line-2   | pune |           35 |                1.19 |
+|      35 | Mandai                                            | Line-2   | pune |           36 |                1.09 |
+|      36 | Swargate                                          | Line-2   | pune |         NULL |                2.86 |
+|      37 | Market Yard                                       | Line-2   | pune |           38 |                2.03 |
+|      38 | Bibwewadi                                         | Line-2   | pune |           39 |                2.60 |
+|      39 | Padmavati                                         | Line-2   | pune |           40 |                1.87 |
+|      40 | Balaji Nagar                                      | Line-2   | pune |           41 |                2.57 |
+|      41 | Katraj                                            | Line-2   | pune |           42 |                2.25 |
+|      42 | Civil Court                                       | Line-3   | pune |           43 |                2.54 |
+|      43 | Shivaji Nagar                                     | Line-3   | pune |           44 |                2.96 |
+|      44 | Agriculture College                               | Line-3   | pune |           45 |                2.18 |
+|      45 | R.B.I.                                            | Line-3   | pune |           46 |                3.00 |
+|      46 | University                                        | Line-3   | pune |           47 |                1.45 |
+|      47 | Sakal Nagar                                       | Line-3   | pune |           48 |                1.27 |
+|      48 | Krushi Anusadhan                                  | Line-3   | pune |           49 |                2.99 |
+|      49 | Baner                                             | Line-3   | pune |           50 |                2.13 |
+|      50 | Baner Gaon                                        | Line-3   | pune |           51 |                2.67 |
+|      51 | Balewadi Phata                                    | Line-3   | pune |           52 |                1.98 |
+|      52 | Laxmi Nagar                                       | Line-3   | pune |           53 |                2.88 |
+|      53 | Ram Nagar (Nashik Phata)                          | Line-3   | pune |           54 |                1.45 |
+|      54 | NICMAR                                            | Line-3   | pune |           55 |                1.62 |
+|      55 | Balewadi Stadium                                  | Line-3   | pune |           56 |                2.76 |
+|      56 | Wakad Chowk                                       | Line-3   | pune |           57 |                1.92 |
+|      57 | Hinjewadi                                         | Line-3   | pune |           58 |                2.32 |
+|      58 | Shivaji Chowk                                     | Line-3   | pune |           59 |                2.83 |
+|      59 | Pall India                                        | Line-3   | pune |           60 |                2.21 |
+|      60 | Wipro Phase II                                    | Line-3   | pune |           61 |                1.57 |
+|      61 | Infosys Phase II                                  | Line-3   | pune |           62 |                2.19 |
+|      62 | Dohler                                            | Line-3   | pune |           63 |                1.25 |
+|      63 | Embassy Quadron Business Park                     | Line-3   | pune |           64 |                2.70 |
+|      64 | Megapolis Circle                                  | Line-3   | pune |         NULL |                2.73 |
++---------+---------------------------------------------------+----------+------+--------------+---------------------+
+64 rows in set (0.02 sec)
+       select stop_idid, stop_name from pune_metro_stations;
+ERROR 1054 (42S22): Unknown column 'stop_idid' in 'field list'
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> select stop_id, stop_name 'Current station', lead(stop_name) over(partition by route_no order by stop_id) 'next station' from pune_metro_stations;
++---------+---------------------------------------------------+---------------------------------------------------+
+| stop_id | Current station                                   | next station                                      |
++---------+---------------------------------------------------+---------------------------------------------------+
+|       1 | Chandni Chowk                                     | Kothrud Bus Depot                                 |
+|       2 | Kothrud Bus Depot                                 | Vanaz                                             |
+|       3 | Vanaz                                             | Anand Nagar                                       |
+|       4 | Anand Nagar                                       | Ideal Colony                                      |
+|       5 | Ideal Colony                                      | Nal Stop                                          |
+|       6 | Nal Stop                                          | Garware College                                   |
+|       7 | Garware College                                   | Deccan Gymkhana                                   |
+|       8 | Deccan Gymkhana                                   | Chhatrapati Sambhaji Udyan                        |
+|       9 | Chhatrapati Sambhaji Udyan                        | PMC Bhavan                                        |
+|      10 | PMC Bhavan                                        | Civil Court (interchange station with the Line-2) |
+|      11 | Civil Court (interchange station with the Line-2) | Mangalwar Peth                                    |
+|      12 | Mangalwar Peth                                    | Pune Railway Station                              |
+|      13 | Pune Railway Station                              | Ruby Hall Clinic                                  |
+|      14 | Ruby Hall Clinic                                  | Bund Garden                                       |
+|      15 | Bund Garden                                       | Yerawada                                          |
+|      16 | Yerawada                                          | Kalyani Nagar                                     |
+|      17 | Kalyani Nagar                                     | Ramwadi                                           |
+|      18 | Ramwadi                                           | NULL                                              |
+|      19 | Bhakti Shakti                                     | Nigdi                                             |
+|      20 | Nigdi                                             | Akurdi                                            |
+|      21 | Akurdi                                            | Chinchwad                                         |
+|      22 | Chinchwad                                         | PCMC Bhavan                                       |
+|      23 | PCMC Bhavan                                       | Sant Tukaram Nagar                                |
+|      24 | Sant Tukaram Nagar                                | Nashik Phata                                      |
+|      25 | Nashik Phata                                      | Kasarwadi                                         |
+|      26 | Kasarwadi                                         | Phugewadi                                         |
+|      27 | Phugewadi                                         | Dapodi                                            |
+|      28 | Dapodi                                            | Bopodi                                            |
+|      29 | Bopodi                                            | Khadki                                            |
+|      30 | Khadki                                            | Range Hills                                       |
+|      31 | Range Hills                                       | Shivaji Nagar                                     |
+|      32 | Shivaji Nagar                                     | Chinchwad                                         |
+|      33 | Chinchwad                                         | Kasba Peth                                        |
+|      34 | Kasba Peth                                        | Mandai                                            |
+|      35 | Mandai                                            | Swargate                                          |
+|      36 | Swargate                                          | Market Yard                                       |
+|      37 | Market Yard                                       | Bibwewadi                                         |
+|      38 | Bibwewadi                                         | Padmavati                                         |
+|      39 | Padmavati                                         | Balaji Nagar                                      |
+|      40 | Balaji Nagar                                      | Katraj                                            |
+|      41 | Katraj                                            | NULL                                              |
+|      42 | Civil Court                                       | Shivaji Nagar                                     |
+|      43 | Shivaji Nagar                                     | Agriculture College                               |
+|      44 | Agriculture College                               | R.B.I.                                            |
+|      45 | R.B.I.                                            | University                                        |
+|      46 | University                                        | Sakal Nagar                                       |
+|      47 | Sakal Nagar                                       | Krushi Anusadhan                                  |
+|      48 | Krushi Anusadhan                                  | Baner                                             |
+|      49 | Baner                                             | Baner Gaon                                        |
+|      50 | Baner Gaon                                        | Balewadi Phata                                    |
+|      51 | Balewadi Phata                                    | Laxmi Nagar                                       |
+|      52 | Laxmi Nagar                                       | Ram Nagar (Nashik Phata)                          |
+|      53 | Ram Nagar (Nashik Phata)                          | NICMAR                                            |
+|      54 | NICMAR                                            | Balewadi Stadium                                  |
+|      55 | Balewadi Stadium                                  | Wakad Chowk                                       |
+|      56 | Wakad Chowk                                       | Hinjewadi                                         |
+|      57 | Hinjewadi                                         | Shivaji Chowk                                     |
+|      58 | Shivaji Chowk                                     | Pall India                                        |
+|      59 | Pall India                                        | Wipro Phase II                                    |
+|      60 | Wipro Phase II                                    | Infosys Phase II                                  |
+|      61 | Infosys Phase II                                  | Dohler                                            |
+|      62 | Dohler                                            | Embassy Quadron Business Park                     |
+|      63 | Embassy Quadron Business Park                     | Megapolis Circle                                  |
+|      64 | Megapolis Circle                                  | NULL                                              |
++---------+---------------------------------------------------+---------------------------------------------------+
+64 rows in set (0.00 sec)
+
+mysql> select stop_id, route_no, stop_name 'Current station', lead(stop_name) over(partition by route_no order by stop_id) 'next station' from pune_metro_stations;
++---------+----------+---------------------------------------------------+---------------------------------------------------+
+| stop_id | route_no | Current station                                   | next station                                      |
++---------+----------+---------------------------------------------------+---------------------------------------------------+
+|       1 | Line-1   | Chandni Chowk                                     | Kothrud Bus Depot                                 |
+|       2 | Line-1   | Kothrud Bus Depot                                 | Vanaz                                             |
+|       3 | Line-1   | Vanaz                                             | Anand Nagar                                       |
+|       4 | Line-1   | Anand Nagar                                       | Ideal Colony                                      |
+|       5 | Line-1   | Ideal Colony                                      | Nal Stop                                          |
+|       6 | Line-1   | Nal Stop                                          | Garware College                                   |
+|       7 | Line-1   | Garware College                                   | Deccan Gymkhana                                   |
+|       8 | Line-1   | Deccan Gymkhana                                   | Chhatrapati Sambhaji Udyan                        |
+|       9 | Line-1   | Chhatrapati Sambhaji Udyan                        | PMC Bhavan                                        |
+|      10 | Line-1   | PMC Bhavan                                        | Civil Court (interchange station with the Line-2) |
+|      11 | Line-1   | Civil Court (interchange station with the Line-2) | Mangalwar Peth                                    |
+|      12 | Line-1   | Mangalwar Peth                                    | Pune Railway Station                              |
+|      13 | Line-1   | Pune Railway Station                              | Ruby Hall Clinic                                  |
+|      14 | Line-1   | Ruby Hall Clinic                                  | Bund Garden                                       |
+|      15 | Line-1   | Bund Garden                                       | Yerawada                                          |
+|      16 | Line-1   | Yerawada                                          | Kalyani Nagar                                     |
+|      17 | Line-1   | Kalyani Nagar                                     | Ramwadi                                           |
+|      18 | Line-1   | Ramwadi                                           | NULL                                              |
+|      19 | Line-2   | Bhakti Shakti                                     | Nigdi                                             |
+|      20 | Line-2   | Nigdi                                             | Akurdi                                            |
+|      21 | Line-2   | Akurdi                                            | Chinchwad                                         |
+|      22 | Line-2   | Chinchwad                                         | PCMC Bhavan                                       |
+|      23 | Line-2   | PCMC Bhavan                                       | Sant Tukaram Nagar                                |
+|      24 | Line-2   | Sant Tukaram Nagar                                | Nashik Phata                                      |
+|      25 | Line-2   | Nashik Phata                                      | Kasarwadi                                         |
+|      26 | Line-2   | Kasarwadi                                         | Phugewadi                                         |
+|      27 | Line-2   | Phugewadi                                         | Dapodi                                            |
+|      28 | Line-2   | Dapodi                                            | Bopodi                                            |
+|      29 | Line-2   | Bopodi                                            | Khadki                                            |
+|      30 | Line-2   | Khadki                                            | Range Hills                                       |
+|      31 | Line-2   | Range Hills                                       | Shivaji Nagar                                     |
+|      32 | Line-2   | Shivaji Nagar                                     | Chinchwad                                         |
+|      33 | Line-2   | Chinchwad                                         | Kasba Peth                                        |
+|      34 | Line-2   | Kasba Peth                                        | Mandai                                            |
+|      35 | Line-2   | Mandai                                            | Swargate                                          |
+|      36 | Line-2   | Swargate                                          | Market Yard                                       |
+|      37 | Line-2   | Market Yard                                       | Bibwewadi                                         |
+|      38 | Line-2   | Bibwewadi                                         | Padmavati                                         |
+|      39 | Line-2   | Padmavati                                         | Balaji Nagar                                      |
+|      40 | Line-2   | Balaji Nagar                                      | Katraj                                            |
+|      41 | Line-2   | Katraj                                            | NULL                                              |
+|      42 | Line-3   | Civil Court                                       | Shivaji Nagar                                     |
+|      43 | Line-3   | Shivaji Nagar                                     | Agriculture College                               |
+|      44 | Line-3   | Agriculture College                               | R.B.I.                                            |
+|      45 | Line-3   | R.B.I.                                            | University                                        |
+|      46 | Line-3   | University                                        | Sakal Nagar                                       |
+|      47 | Line-3   | Sakal Nagar                                       | Krushi Anusadhan                                  |
+|      48 | Line-3   | Krushi Anusadhan                                  | Baner                                             |
+|      49 | Line-3   | Baner                                             | Baner Gaon                                        |
+|      50 | Line-3   | Baner Gaon                                        | Balewadi Phata                                    |
+|      51 | Line-3   | Balewadi Phata                                    | Laxmi Nagar                                       |
+|      52 | Line-3   | Laxmi Nagar                                       | Ram Nagar (Nashik Phata)                          |
+|      53 | Line-3   | Ram Nagar (Nashik Phata)                          | NICMAR                                            |
+|      54 | Line-3   | NICMAR                                            | Balewadi Stadium                                  |
+|      55 | Line-3   | Balewadi Stadium                                  | Wakad Chowk                                       |
+|      56 | Line-3   | Wakad Chowk                                       | Hinjewadi                                         |
+|      57 | Line-3   | Hinjewadi                                         | Shivaji Chowk                                     |
+|      58 | Line-3   | Shivaji Chowk                                     | Pall India                                        |
+|      59 | Line-3   | Pall India                                        | Wipro Phase II                                    |
+|      60 | Line-3   | Wipro Phase II                                    | Infosys Phase II                                  |
+|      61 | Line-3   | Infosys Phase II                                  | Dohler                                            |
+|      62 | Line-3   | Dohler                                            | Embassy Quadron Business Park                     |
+|      63 | Line-3   | Embassy Quadron Business Park                     | Megapolis Circle                                  |
+|      64 | Line-3   | Megapolis Circle                                  | NULL                                              |
++---------+----------+---------------------------------------------------+---------------------------------------------------+
+64 rows in set (0.00 sec)
+
+mysql> select stop_id, route_no, stop_name 'Current station', lead(stop_name, 1 ,'End of....') over(partition by route_no order by stop_id) 'next station' from pune_metro_stations;
++---------+----------+---------------------------------------------------+---------------------------------------------------+
+| stop_id | route_no | Current station                                   | next station                                      |
++---------+----------+---------------------------------------------------+---------------------------------------------------+
+|       1 | Line-1   | Chandni Chowk                                     | Kothrud Bus Depot                                 |
+|       2 | Line-1   | Kothrud Bus Depot                                 | Vanaz                                             |
+|       3 | Line-1   | Vanaz                                             | Anand Nagar                                       |
+|       4 | Line-1   | Anand Nagar                                       | Ideal Colony                                      |
+|       5 | Line-1   | Ideal Colony                                      | Nal Stop                                          |
+|       6 | Line-1   | Nal Stop                                          | Garware College                                   |
+|       7 | Line-1   | Garware College                                   | Deccan Gymkhana                                   |
+|       8 | Line-1   | Deccan Gymkhana                                   | Chhatrapati Sambhaji Udyan                        |
+|       9 | Line-1   | Chhatrapati Sambhaji Udyan                        | PMC Bhavan                                        |
+|      10 | Line-1   | PMC Bhavan                                        | Civil Court (interchange station with the Line-2) |
+|      11 | Line-1   | Civil Court (interchange station with the Line-2) | Mangalwar Peth                                    |
+|      12 | Line-1   | Mangalwar Peth                                    | Pune Railway Station                              |
+|      13 | Line-1   | Pune Railway Station                              | Ruby Hall Clinic                                  |
+|      14 | Line-1   | Ruby Hall Clinic                                  | Bund Garden                                       |
+|      15 | Line-1   | Bund Garden                                       | Yerawada                                          |
+|      16 | Line-1   | Yerawada                                          | Kalyani Nagar                                     |
+|      17 | Line-1   | Kalyani Nagar                                     | Ramwadi                                           |
+|      18 | Line-1   | Ramwadi                                           | End of....                                        |
+|      19 | Line-2   | Bhakti Shakti                                     | Nigdi                                             |
+|      20 | Line-2   | Nigdi                                             | Akurdi                                            |
+|      21 | Line-2   | Akurdi                                            | Chinchwad                                         |
+|      22 | Line-2   | Chinchwad                                         | PCMC Bhavan                                       |
+|      23 | Line-2   | PCMC Bhavan                                       | Sant Tukaram Nagar                                |
+|      24 | Line-2   | Sant Tukaram Nagar                                | Nashik Phata                                      |
+|      25 | Line-2   | Nashik Phata                                      | Kasarwadi                                         |
+|      26 | Line-2   | Kasarwadi                                         | Phugewadi                                         |
+|      27 | Line-2   | Phugewadi                                         | Dapodi                                            |
+|      28 | Line-2   | Dapodi                                            | Bopodi                                            |
+|      29 | Line-2   | Bopodi                                            | Khadki                                            |
+|      30 | Line-2   | Khadki                                            | Range Hills                                       |
+|      31 | Line-2   | Range Hills                                       | Shivaji Nagar                                     |
+|      32 | Line-2   | Shivaji Nagar                                     | Chinchwad                                         |
+|      33 | Line-2   | Chinchwad                                         | Kasba Peth                                        |
+|      34 | Line-2   | Kasba Peth                                        | Mandai                                            |
+|      35 | Line-2   | Mandai                                            | Swargate                                          |
+|      36 | Line-2   | Swargate                                          | Market Yard                                       |
+|      37 | Line-2   | Market Yard                                       | Bibwewadi                                         |
+|      38 | Line-2   | Bibwewadi                                         | Padmavati                                         |
+|      39 | Line-2   | Padmavati                                         | Balaji Nagar                                      |
+|      40 | Line-2   | Balaji Nagar                                      | Katraj                                            |
+|      41 | Line-2   | Katraj                                            | End of....                                        |
+|      42 | Line-3   | Civil Court                                       | Shivaji Nagar                                     |
+|      43 | Line-3   | Shivaji Nagar                                     | Agriculture College                               |
+|      44 | Line-3   | Agriculture College                               | R.B.I.                                            |
+|      45 | Line-3   | R.B.I.                                            | University                                        |
+|      46 | Line-3   | University                                        | Sakal Nagar                                       |
+|      47 | Line-3   | Sakal Nagar                                       | Krushi Anusadhan                                  |
+|      48 | Line-3   | Krushi Anusadhan                                  | Baner                                             |
+|      49 | Line-3   | Baner                                             | Baner Gaon                                        |
+|      50 | Line-3   | Baner Gaon                                        | Balewadi Phata                                    |
+|      51 | Line-3   | Balewadi Phata                                    | Laxmi Nagar                                       |
+|      52 | Line-3   | Laxmi Nagar                                       | Ram Nagar (Nashik Phata)                          |
+|      53 | Line-3   | Ram Nagar (Nashik Phata)                          | NICMAR                                            |
+|      54 | Line-3   | NICMAR                                            | Balewadi Stadium                                  |
+|      55 | Line-3   | Balewadi Stadium                                  | Wakad Chowk                                       |
+|      56 | Line-3   | Wakad Chowk                                       | Hinjewadi                                         |
+|      57 | Line-3   | Hinjewadi                                         | Shivaji Chowk                                     |
+|      58 | Line-3   | Shivaji Chowk                                     | Pall India                                        |
+|      59 | Line-3   | Pall India                                        | Wipro Phase II                                    |
+|      60 | Line-3   | Wipro Phase II                                    | Infosys Phase II                                  |
+|      61 | Line-3   | Infosys Phase II                                  | Dohler                                            |
+|      62 | Line-3   | Dohler                                            | Embassy Quadron Business Park                     |
+|      63 | Line-3   | Embassy Quadron Business Park                     | Megapolis Circle                                  |
+|      64 | Line-3   | Megapolis Circle                                  | End of....                                        |
++---------+----------+---------------------------------------------------+---------------------------------------------------+
+64 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> select * from stocks;
++-----+-------------------------+------------+-------+
+| day | companyName             | stockPrice | since |
++-----+-------------------------+------------+-------+
+|   1 | Reliance Industries Ltd |    1429.70 |  1966 |
+|   2 | Reliance Industries Ltd |    1429.70 |  NULL |
+|   3 | Reliance Industries Ltd |    1449.12 |  NULL |
+|   4 | Reliance Industries Ltd |    1200.98 |  NULL |
+|   5 | Reliance Industries Ltd |    1557.97 |  NULL |
+|   6 | Reliance Industries Ltd |    1432.27 |  NULL |
+|   7 | Reliance Industries Ltd |    2642.43 |  NULL |
+|   8 | Only Vimal              |    3494.93 |  1975 |
+|   9 | Only Vimal              |    2833.22 |  NULL |
+|  10 | Only Vimal              |    1904.43 |  NULL |
+|  11 | Only Vimal              |    4303.98 |  NULL |
+|  12 | Only Vimal              |    2357.97 |  NULL |
+|  13 | Only Vimal              |    1432.34 |  NULL |
+|  14 | Only Vimal              |    5400.43 |  NULL |
+|  15 | Only Vimal              |    1402.77 |  NULL |
+|  16 | Only Vimal              |    1402.78 |  NULL |
+|  17 | Raymonds                |    1254.00 |  1925 |
+|  18 | Raymonds                |    2833.22 |  NULL |
+|  19 | Raymonds                |    1904.43 |  NULL |
+|  20 | Raymonds                |    4303.98 |  NULL |
+|  21 | Raymonds                |    2357.97 |  NULL |
+|  22 | Raymonds                |    3423.34 |  NULL |
+|  23 | Raymonds                |    5313.43 |  NULL |
+|  24 | Raymonds                |    6543.77 |  NULL |
+|  25 | Raymonds                |    1402.78 |  NULL |
++-----+-------------------------+------------+-------+
+25 rows in set (0.01 sec)
+
+mysql> select day, companyName, stockPrice,max(stockPrice) over(partition by companyName order by day) R1 from stocks;
++-----+-------------------------+------------+---------+
+| day | companyName             | stockPrice | R1      |
++-----+-------------------------+------------+---------+
+|   8 | Only Vimal              |    3494.93 | 3494.93 |
+|   9 | Only Vimal              |    2833.22 | 3494.93 |
+|  10 | Only Vimal              |    1904.43 | 3494.93 |
+|  11 | Only Vimal              |    4303.98 | 4303.98 |
+|  12 | Only Vimal              |    2357.97 | 4303.98 |
+|  13 | Only Vimal              |    1432.34 | 4303.98 |
+|  14 | Only Vimal              |    5400.43 | 5400.43 |
+|  15 | Only Vimal              |    1402.77 | 5400.43 |
+|  16 | Only Vimal              |    1402.78 | 5400.43 |
+|  17 | Raymonds                |    1254.00 | 1254.00 |
+|  18 | Raymonds                |    2833.22 | 2833.22 |
+|  19 | Raymonds                |    1904.43 | 2833.22 |
+|  20 | Raymonds                |    4303.98 | 4303.98 |
+|  21 | Raymonds                |    2357.97 | 4303.98 |
+|  22 | Raymonds                |    3423.34 | 4303.98 |
+|  23 | Raymonds                |    5313.43 | 5313.43 |
+|  24 | Raymonds                |    6543.77 | 6543.77 |
+|  25 | Raymonds                |    1402.78 | 6543.77 |
+|   1 | Reliance Industries Ltd |    1429.70 | 1429.70 |
+|   2 | Reliance Industries Ltd |    1429.70 | 1429.70 |
+|   3 | Reliance Industries Ltd |    1449.12 | 1449.12 |
+|   4 | Reliance Industries Ltd |    1200.98 | 1449.12 |
+|   5 | Reliance Industries Ltd |    1557.97 | 1557.97 |
+|   6 | Reliance Industries Ltd |    1432.27 | 1557.97 |
+|   7 | Reliance Industries Ltd |    2642.43 | 2642.43 |
++-----+-------------------------+------------+---------+
+25 rows in set (0.01 sec)
+
+mysql> select job from emp;
++---------------------+
+| job                 |
++---------------------+
+| Compliance officers |
+| Compliance officers |
+| Public Relation     |
+| Public Relation     |
+| CLERK               |
+| CLERK               |
+| CLERK               |
+| SALESMAN            |
+| SALESMAN            |
+| MANAGER             |
+| SALESMAN            |
+| MANAGER             |
+| MANAGER             |
+| ANALYST             |
+| PRESIDENT           |
+| vice PRESIDENT      |
+| SALESMAN            |
+| CLERK               |
+| Network             |
+| vice PRESIDENT      |
+| CLERK               |
+| ANALYST             |
+| MANAGER             |
+| SALESMAN            |
+| CLERK               |
+| SALESMAN            |
+| MANAGER             |
+| CLERK               |
+| Compliance officers |
+| ANALYST             |
++---------------------+
+30 rows in set (0.00 sec)
+
+mysql> select count(job) from emp;
++------------+
+| count(job) |
++------------+
+|         30 |
++------------+
+1 row in set (0.01 sec)
+
+mysql> select sum(sal) from emp;
++----------+
+| sum(sal) |
++----------+
+|    63700 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select job from emp;
++---------------------+
+| job                 |
++---------------------+
+| Compliance officers |
+| Compliance officers |
+| Public Relation     |
+| Public Relation     |
+| CLERK               |
+| CLERK               |
+| CLERK               |
+| SALESMAN            |
+| SALESMAN            |
+| MANAGER             |
+| SALESMAN            |
+| MANAGER             |
+| MANAGER             |
+| ANALYST             |
+| PRESIDENT           |
+| vice PRESIDENT      |
+| SALESMAN            |
+| CLERK               |
+| Network             |
+| vice PRESIDENT      |
+| CLERK               |
+| ANALYST             |
+| MANAGER             |
+| SALESMAN            |
+| CLERK               |
+| SALESMAN            |
+| MANAGER             |
+| CLERK               |
+| Compliance officers |
+| ANALYST             |
++---------------------+
+30 rows in set (0.00 sec)
+
+mysql> select job from emp group by job;
++---------------------+
+| job                 |
++---------------------+
+| Compliance officers |
+| Public Relation     |
+| CLERK               |
+| SALESMAN            |
+| MANAGER             |
+| ANALYST             |
+| PRESIDENT           |
+| vice PRESIDENT      |
+| Network             |
++---------------------+
+9 rows in set (0.01 sec)
+
+mysql> select ename, job from emp group by job;
+ERROR 1055 (42000): Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db1.emp.ENAME' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+mysql>
+mysql>
+mysql>
+mysql> select ename, job from emp group by job, ename;
++----------+---------------------+
+| ename    | job                 |
++----------+---------------------+
+| GITA     | Compliance officers |
+| VRUSHALI | Compliance officers |
+| SHARMIN  | Public Relation     |
+| BANDISH  | Public Relation     |
+| SMITH    | CLERK               |
+| AARAV    | CLERK               |
+| THOMAS   | CLERK               |
+| ALLEN    | SALESMAN            |
+| WARD     | SALESMAN            |
+| JONES    | MANAGER             |
+| MARTIN   | SALESMAN            |
+| BLAKE    | MANAGER             |
+| CLARK    | MANAGER             |
+| SCOTT    | ANALYST             |
+| KING     | PRESIDENT           |
+| FRED     | vice PRESIDENT      |
+| TURNER   | SALESMAN            |
+| ADAMS    | CLERK               |
+| Ruhan    | Network             |
+| Neel     | vice PRESIDENT      |
+| JAMES    | CLERK               |
+| FORD     | ANALYST             |
+| HOFFMAN  | MANAGER             |
+| GRASS    | SALESMAN            |
+| MILLER   | CLERK               |
+| AARUSH   | SALESMAN            |
+| ALEX     | MANAGER             |
+| NATASHA  | CLERK               |
+| SANGITA  | Compliance officers |
+| SUPRIYA  | ANALYST             |
++----------+---------------------+
+30 rows in set (0.00 sec)
+
+mysql> select job from emp group by job;
++---------------------+
+| job                 |
++---------------------+
+| Compliance officers |
+| Public Relation     |
+| CLERK               |
+| SALESMAN            |
+| MANAGER             |
+| ANALYST             |
+| PRESIDENT           |
+| vice PRESIDENT      |
+| Network             |
++---------------------+
+9 rows in set (0.00 sec)
+
+mysql> select job, count(*) from emp group by job;
++---------------------+----------+
+| job                 | count(*) |
++---------------------+----------+
+| Compliance officers |        3 |
+| Public Relation     |        2 |
+| CLERK               |        7 |
+| SALESMAN            |        6 |
+| MANAGER             |        5 |
+| ANALYST             |        3 |
+| PRESIDENT           |        1 |
+| vice PRESIDENT      |        2 |
+| Network             |        1 |
++---------------------+----------+
+9 rows in set (0.01 sec)
+
+mysql> select job, count(*) from emp group by job;
++---------------------+----------+
+| job                 | count(*) |
++---------------------+----------+
+| Compliance officers |        3 |
+| Public Relation     |        2 |
+| CLERK               |        7 |
+| SALESMAN            |        6 |
+| MANAGER             |        5 |
+| ANALYST             |        3 |
+| PRESIDENT           |        1 |
+| vice PRESIDENT      |        2 |
+| Network             |        1 |
++---------------------+----------+
+9 rows in set (0.00 sec)
+
+mysql> select count(*) from emp group by job;
++----------+
+| count(*) |
++----------+
+|        3 |
+|        2 |
+|        7 |
+|        6 |
+|        5 |
+|        3 |
+|        1 |
+|        2 |
+|        1 |
++----------+
+9 rows in set (0.00 sec)
+
+mysql> select job, count(*) from emp;
+ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'db1.emp.JOB'; this is incompatible with sql_mode=only_full_group_by
+mysql> select job, count(*) from emp group by job;
++---------------------+----------+
+| job                 | count(*) |
++---------------------+----------+
+| Compliance officers |        3 |
+| Public Relation     |        2 |
+| CLERK               |        7 |
+| SALESMAN            |        6 |
+| MANAGER             |        5 |
+| ANALYST             |        3 |
+| PRESIDENT           |        1 |
+| vice PRESIDENT      |        2 |
+| Network             |        1 |
++---------------------+----------+
+9 rows in set (0.00 sec)
+
+mysql> select job, sum(Sal) from emp group by job;
++---------------------+----------+
+| job                 | sum(Sal) |
++---------------------+----------+
+| Compliance officers |     5250 |
+| Public Relation     |     3500 |
+| CLERK               |    11000 |
+| SALESMAN            |     9525 |
+| MANAGER             |    13675 |
+| ANALYST             |     7750 |
+| PRESIDENT           |     5000 |
+| vice PRESIDENT      |     6000 |
+| Network             |     2000 |
++---------------------+----------+
+9 rows in set (0.00 sec)
+
+mysql> select ename, job from emp;
++----------+---------------------+
+| ename    | job                 |
++----------+---------------------+
+| GITA     | Compliance officers |
+| VRUSHALI | Compliance officers |
+| SHARMIN  | Public Relation     |
+| BANDISH  | Public Relation     |
+| SMITH    | CLERK               |
+| AARAV    | CLERK               |
+| THOMAS   | CLERK               |
+| ALLEN    | SALESMAN            |
+| WARD     | SALESMAN            |
+| JONES    | MANAGER             |
+| MARTIN   | SALESMAN            |
+| BLAKE    | MANAGER             |
+| CLARK    | MANAGER             |
+| SCOTT    | ANALYST             |
+| KING     | PRESIDENT           |
+| FRED     | vice PRESIDENT      |
+| TURNER   | SALESMAN            |
+| ADAMS    | CLERK               |
+| Ruhan    | Network             |
+| Neel     | vice PRESIDENT      |
+| JAMES    | CLERK               |
+| FORD     | ANALYST             |
+| HOFFMAN  | MANAGER             |
+| GRASS    | SALESMAN            |
+| MILLER   | CLERK               |
+| AARUSH   | SALESMAN            |
+| ALEX     | MANAGER             |
+| NATASHA  | CLERK               |
+| SANGITA  | Compliance officers |
+| SUPRIYA  | ANALYST             |
++----------+---------------------+
+30 rows in set (0.00 sec)
+
+mysql> select job, count(*) from emp group by job;
++---------------------+----------+
+| job                 | count(*) |
++---------------------+----------+
+| Compliance officers |        3 |
+| Public Relation     |        2 |
+| CLERK               |        7 |
+| SALESMAN            |        6 |
+| MANAGER             |        5 |
+| ANALYST             |        3 |
+| PRESIDENT           |        1 |
+| vice PRESIDENT      |        2 |
+| Network             |        1 |
++---------------------+----------+
+9 rows in set (0.00 sec)
+
+mysql> select job, count(*) R1 from emp group by job;
++---------------------+----+
+| job                 | R1 |
++---------------------+----+
+| Compliance officers |  3 |
+| Public Relation     |  2 |
+| CLERK               |  7 |
+| SALESMAN            |  6 |
+| MANAGER             |  5 |
+| ANALYST             |  3 |
+| PRESIDENT           |  1 |
+| vice PRESIDENT      |  2 |
+| Network             |  1 |
++---------------------+----+
+9 rows in set (0.00 sec)
+
+mysql> select job, count(*) R1 from emp where R1 > 5 group by job;
+ERROR 1054 (42S22): Unknown column 'R1' in 'where clause'
+mysql> select job, count(*) R1 from emp where count(*) > 5 group by job;
+ERROR 1111 (HY000): Invalid use of group function
+mysql>
+mysql>
+mysql> select job, count(*) R1 from emp having count(*) > 5 group by job;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'group by job' at line 1
+mysql>
+mysql> select job, count(*) R1 from emp group by job having count(*) > 5;
++----------+----+
+| job      | R1 |
++----------+----+
+| CLERK    |  7 |
+| SALESMAN |  6 |
++----------+----+
+2 rows in set (0.00 sec)
+
+mysql> select job, count(*) R1 from emp having count(*) > 5;
+ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'db1.emp.JOB'; this is incompatible with sql_mode=only_full_group_by
+mysql> select job, count(*) R1 from emp group by job;
++---------------------+----+
+| job                 | R1 |
++---------------------+----+
+| Compliance officers |  3 |
+| Public Relation     |  2 |
+| CLERK               |  7 |
+| SALESMAN            |  6 |
+| MANAGER             |  5 |
+| ANALYST             |  3 |
+| PRESIDENT           |  1 |
+| vice PRESIDENT      |  2 |
+| Network             |  1 |
++---------------------+----+
+9 rows in set (0.00 sec)
+
+mysql> select job, count(*) R1 from emp having count(*) > 5;
+ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'db1.emp.JOB'; this is incompatible with sql_mode=only_full_group_by
+mysql> select job, count(*) R1 from emp;
+ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'db1.emp.JOB'; this is incompatible with sql_mode=only_full_group_by
+mysql> select job, count(*) R1 from emp group by job;
++---------------------+----+
+| job                 | R1 |
++---------------------+----+
+| Compliance officers |  3 |
+| Public Relation     |  2 |
+| CLERK               |  7 |
+| SALESMAN            |  6 |
+| MANAGER             |  5 |
+| ANALYST             |  3 |
+| PRESIDENT           |  1 |
+| vice PRESIDENT      |  2 |
+| Network             |  1 |
++---------------------+----+
+9 rows in set (0.00 sec)
+
+mysql>
+mysql> select job, deptno count(*) R1 from emp group by job;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'count(*) R1 from emp group by job' at line 1
+mysql> select job, deptno count(*) R1 from emp group by job, deptno;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'count(*) R1 from emp group by job, deptno' at line 1
+mysql>
+mysql>
+mysql> select job, deptno, count(*) R1 from emp group by job, deptno;
++---------------------+--------+----+
+| job                 | deptno | R1 |
++---------------------+--------+----+
+| Compliance officers |     30 |  1 |
+| Compliance officers |     50 |  2 |
+| Public Relation     |     20 |  2 |
+| CLERK               |     20 |  2 |
+| CLERK               |     10 |  3 |
+| SALESMAN            |     30 |  6 |
+| MANAGER             |     20 |  1 |
+| MANAGER             |     30 |  3 |
+| MANAGER             |     10 |  1 |
+| ANALYST             |     20 |  2 |
+| PRESIDENT           |     10 |  1 |
+| vice PRESIDENT      |     20 |  1 |
+| Network             |     60 |  1 |
+| vice PRESIDENT      |     60 |  1 |
+| CLERK               |     30 |  2 |
+| ANALYST             |     50 |  1 |
++---------------------+--------+----+
+16 rows in set (0.00 sec)
+
+mysql> select job, sum(sal) R1 from emp group by job;
++---------------------+-------+
+| job                 | R1    |
++---------------------+-------+
+| Compliance officers |  5250 |
+| Public Relation     |  3500 |
+| CLERK               | 11000 |
+| SALESMAN            |  9525 |
+| MANAGER             | 13675 |
+| ANALYST             |  7750 |
+| PRESIDENT           |  5000 |
+| vice PRESIDENT      |  6000 |
+| Network             |  2000 |
++---------------------+-------+
+9 rows in set (0.00 sec)
+
+mysql> select job, sum(sal) R1 from emp group by job with rollup;
++---------------------+-------+
+| job                 | R1    |
++---------------------+-------+
+| ANALYST             |  7750 |
+| CLERK               | 11000 |
+| Compliance officers |  5250 |
+| MANAGER             | 13675 |
+| Network             |  2000 |
+| PRESIDENT           |  5000 |
+| Public Relation     |  3500 |
+| SALESMAN            |  9525 |
+| vice PRESIDENT      |  6000 |
+| NULL                | 63700 |
++---------------------+-------+
+10 rows in set (0.01 sec)
+
+mysql>
+mysql>
+mysql> select ifnull(job, 'Grand Total'), sum(sal) R1 from emp group by job with rollup;
++----------------------------+-------+
+| ifnull(job, 'Grand Total') | R1    |
++----------------------------+-------+
+| ANALYST                    |  7750 |
+| CLERK                      | 11000 |
+| Compliance officers        |  5250 |
+| MANAGER                    | 13675 |
+| Network                    |  2000 |
+| PRESIDENT                  |  5000 |
+| Public Relation            |  3500 |
+| SALESMAN                   |  9525 |
+| vice PRESIDENT             |  6000 |
+| Grand Total                | 63700 |
++----------------------------+-------+
+10 rows in set (0.01 sec)
+
+mysql> use x;
+Database changed
+mysql> shoW Tables;
++-------------+
+| Tables_in_x |
++-------------+
+| a           |
+| b           |
++-------------+
+2 rows in set (0.05 sec)
+
+mysql> drop table a, b;
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table a (c4 int);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> desc a;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c4    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+1 row in set (0.02 sec)
+
+mysql> alter table a add c5 int;
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc a;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c4    | int  | YES  |     | NULL    |       |
+| c5    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> alter table a add (c6 char, c7 date) ;
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc a;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| c4    | int     | YES  |     | NULL    |       |
+| c5    | int     | YES  |     | NULL    |       |
+| c6    | char(1) | YES  |     | NULL    |       |
+| c7    | date    | YES  |     | NULL    |       |
++-------+---------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table a add id int first;
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc a;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| id    | int     | YES  |     | NULL    |       |
+| c4    | int     | YES  |     | NULL    |       |
+| c5    | int     | YES  |     | NULL    |       |
+| c6    | char(1) | YES  |     | NULL    |       |
+| c7    | date    | YES  |     | NULL    |       |
++-------+---------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table a add ename varcahr(20) after id;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'varcahr(20) after id' at line 1
+mysql> alter table a add ename varchar(20) after id;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc a;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | YES  |     | NULL    |       |
+| ename | varchar(20) | YES  |     | NULL    |       |
+| c4    | int         | YES  |     | NULL    |       |
+| c5    | int         | YES  |     | NULL    |       |
+| c6    | char(1)     | YES  |     | NULL    |       |
+| c7    | date        | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> alter table a change c7 salary int after ename;
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc a;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | YES  |     | NULL    |       |
+| ename  | varchar(20) | YES  |     | NULL    |       |
+| salary | int         | YES  |     | NULL    |       |
+| c4     | int         | YES  |     | NULL    |       |
+| c5     | int         | YES  |     | NULL    |       |
+| c6     | char(1)     | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> alter table a modify ename varchar(40);
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc a;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | YES  |     | NULL    |       |
+| ename  | varchar(40) | YES  |     | NULL    |       |
+| salary | int         | YES  |     | NULL    |       |
+| c4     | int         | YES  |     | NULL    |       |
+| c5     | int         | YES  |     | NULL    |       |
+| c6     | char(1)     | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> alter table a drop c4;
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc a;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | YES  |     | NULL    |       |
+| ename  | varchar(40) | YES  |     | NULL    |       |
+| salary | int         | YES  |     | NULL    |       |
+| c5     | int         | YES  |     | NULL    |       |
+| c6     | char(1)     | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table a drop c5, c6;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'c6' at line 1
+mysql>
+mysql>
+mysql>
+mysql> alter table a drop c5, drop column c6;
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc a;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | YES  |     | NULL    |       |
+| ename  | varchar(40) | YES  |     | NULL    |       |
+| salary | int         | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql> select empno, ename, sal from emp where job='manager';
+ERROR 1146 (42S02): Table 'x.emp' doesn't exist
+mysql> select empno, ename, sal from db1.emp where job='manager';
++-------+---------+------+
+| empno | ename   | sal  |
++-------+---------+------+
+|  7566 | JONES   | 2975 |
+|  7698 | BLAKE   | 2850 |
+|  7782 | CLARK   | 2450 |
+|  7919 | HOFFMAN | 4150 |
+|  7949 | ALEX    | 1250 |
++-------+---------+------+
+5 rows in set (0.00 sec)
+
+mysql> select empno, ename, sal from db1.emp where job='manager';
++-------+---------+------+
+| empno | ename   | sal  |
++-------+---------+------+
+|  7566 | JONES   | 2975 |
+|  7698 | BLAKE   | 2850 |
+|  7782 | CLARK   | 2450 |
+|  7919 | HOFFMAN | 4150 |
+|  7949 | ALEX    | 1250 |
++-------+---------+------+
+5 rows in set (0.00 sec)
+
+mysql> desc a;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | YES  |     | NULL    |       |
+| ename  | varchar(40) | YES  |     | NULL    |       |
+| salary | int         | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> insert into a select empno, ename, sal from db1.emp where job='manager';
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select * from a;
++------+---------+--------+
+| id   | ename   | salary |
++------+---------+--------+
+| 7566 | JONES   |   2975 |
+| 7698 | BLAKE   |   2850 |
+| 7782 | CLARK   |   2450 |
+| 7919 | HOFFMAN |   4150 |
+| 7949 | ALEX    |   1250 |
++------+---------+--------+
+5 rows in set (0.00 sec)
+
+mysql> insert into a select empno, ename, sal from db1.emp where job='manager';
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql>
+mysql> desc a;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | YES  |     | NULL    |       |
+| ename  | varchar(40) | YES  |     | NULL    |       |
+| salary | int         | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from a;
++------+---------+--------+
+| id   | ename   | salary |
++------+---------+--------+
+| 7566 | JONES   |   2975 |
+| 7698 | BLAKE   |   2850 |
+| 7782 | CLARK   |   2450 |
+| 7919 | HOFFMAN |   4150 |
+| 7949 | ALEX    |   1250 |
+| 7566 | JONES   |   2975 |
+| 7698 | BLAKE   |   2850 |
+| 7782 | CLARK   |   2450 |
+| 7919 | HOFFMAN |   4150 |
+| 7949 | ALEX    |   1250 |
++------+---------+--------+
+10 rows in set (0.00 sec)
+
+mysql> alter table a add column job varchar(20) after ename;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from a;
++------+---------+------+--------+
+| id   | ename   | job  | salary |
++------+---------+------+--------+
+| 7566 | JONES   | NULL |   2975 |
+| 7698 | BLAKE   | NULL |   2850 |
+| 7782 | CLARK   | NULL |   2450 |
+| 7919 | HOFFMAN | NULL |   4150 |
+| 7949 | ALEX    | NULL |   1250 |
+| 7566 | JONES   | NULL |   2975 |
+| 7698 | BLAKE   | NULL |   2850 |
+| 7782 | CLARK   | NULL |   2450 |
+| 7919 | HOFFMAN | NULL |   4150 |
+| 7949 | ALEX    | NULL |   1250 |
++------+---------+------+--------+
+10 rows in set (0.00 sec)
+
+mysql> desc a;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | YES  |     | NULL    |       |
+| ename  | varchar(40) | YES  |     | NULL    |       |
+| job    | varchar(20) | YES  |     | NULL    |       |
+| salary | int         | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table a add column city varchar(20) default 'Baroda' after job;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc a;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | YES  |     | NULL    |       |
+| ename  | varchar(40) | YES  |     | NULL    |       |
+| job    | varchar(20) | YES  |     | NULL    |       |
+| city   | varchar(20) | YES  |     | Baroda  |       |
+| salary | int         | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from a;
++------+---------+------+--------+--------+
+| id   | ename   | job  | city   | salary |
++------+---------+------+--------+--------+
+| 7566 | JONES   | NULL | Baroda |   2975 |
+| 7698 | BLAKE   | NULL | Baroda |   2850 |
+| 7782 | CLARK   | NULL | Baroda |   2450 |
+| 7919 | HOFFMAN | NULL | Baroda |   4150 |
+| 7949 | ALEX    | NULL | Baroda |   1250 |
+| 7566 | JONES   | NULL | Baroda |   2975 |
+| 7698 | BLAKE   | NULL | Baroda |   2850 |
+| 7782 | CLARK   | NULL | Baroda |   2450 |
+| 7919 | HOFFMAN | NULL | Baroda |   4150 |
+| 7949 | ALEX    | NULL | Baroda |   1250 |
++------+---------+------+--------+--------+
+10 rows in set (0.00 sec)
+
+mysql> alter table a add column hra int generated always as (salary*.1);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc a;
++--------+-------------+------+-----+---------+-------------------+
+| Field  | Type        | Null | Key | Default | Extra             |
++--------+-------------+------+-----+---------+-------------------+
+| id     | int         | YES  |     | NULL    |                   |
+| ename  | varchar(40) | YES  |     | NULL    |                   |
+| job    | varchar(20) | YES  |     | NULL    |                   |
+| city   | varchar(20) | YES  |     | Baroda  |                   |
+| salary | int         | YES  |     | NULL    |                   |
+| hra    | int         | YES  |     | NULL    | VIRTUAL GENERATED |
++--------+-------------+------+-----+---------+-------------------+
+6 rows in set (0.00 sec)
+
+mysql> select * from a;
++------+---------+------+--------+--------+------+
+| id   | ename   | job  | city   | salary | hra  |
++------+---------+------+--------+--------+------+
+| 7566 | JONES   | NULL | Baroda |   2975 |  298 |
+| 7698 | BLAKE   | NULL | Baroda |   2850 |  285 |
+| 7782 | CLARK   | NULL | Baroda |   2450 |  245 |
+| 7919 | HOFFMAN | NULL | Baroda |   4150 |  415 |
+| 7949 | ALEX    | NULL | Baroda |   1250 |  125 |
+| 7566 | JONES   | NULL | Baroda |   2975 |  298 |
+| 7698 | BLAKE   | NULL | Baroda |   2850 |  285 |
+| 7782 | CLARK   | NULL | Baroda |   2450 |  245 |
+| 7919 | HOFFMAN | NULL | Baroda |   4150 |  415 |
+| 7949 | ALEX    | NULL | Baroda |   1250 |  125 |
++------+---------+------+--------+--------+------+
+10 rows in set (0.00 sec)
+
+mysql> alter table a add column srno int primary key auto_increment first;
+Query OK, 10 rows affected (0.06 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> desc a;
++--------+-------------+------+-----+---------+-------------------+
+| Field  | Type        | Null | Key | Default | Extra             |
++--------+-------------+------+-----+---------+-------------------+
+| srno   | int         | NO   | PRI | NULL    | auto_increment    |
+| id     | int         | YES  |     | NULL    |                   |
+| ename  | varchar(40) | YES  |     | NULL    |                   |
+| job    | varchar(20) | YES  |     | NULL    |                   |
+| city   | varchar(20) | YES  |     | Baroda  |                   |
+| salary | int         | YES  |     | NULL    |                   |
+| hra    | int         | YES  |     | NULL    | VIRTUAL GENERATED |
++--------+-------------+------+-----+---------+-------------------+
+7 rows in set (0.00 sec)
+
+mysql> select * from a;
++------+------+---------+------+--------+--------+------+
+| srno | id   | ename   | job  | city   | salary | hra  |
++------+------+---------+------+--------+--------+------+
+|    1 | 7566 | JONES   | NULL | Baroda |   2975 |  298 |
+|    2 | 7698 | BLAKE   | NULL | Baroda |   2850 |  285 |
+|    3 | 7782 | CLARK   | NULL | Baroda |   2450 |  245 |
+|    4 | 7919 | HOFFMAN | NULL | Baroda |   4150 |  415 |
+|    5 | 7949 | ALEX    | NULL | Baroda |   1250 |  125 |
+|    6 | 7566 | JONES   | NULL | Baroda |   2975 |  298 |
+|    7 | 7698 | BLAKE   | NULL | Baroda |   2850 |  285 |
+|    8 | 7782 | CLARK   | NULL | Baroda |   2450 |  245 |
+|    9 | 7919 | HOFFMAN | NULL | Baroda |   4150 |  415 |
+|   10 | 7949 | ALEX    | NULL | Baroda |   1250 |  125 |
++------+------+---------+------+--------+--------+------+
+10 rows in set (0.00 sec)
+
+mysql> desc a;
++--------+-------------+------+-----+---------+-------------------+
+| Field  | Type        | Null | Key | Default | Extra             |
++--------+-------------+------+-----+---------+-------------------+
+| srno   | int         | NO   | PRI | NULL    | auto_increment    |
+| id     | int         | YES  |     | NULL    |                   |
+| ename  | varchar(40) | YES  |     | NULL    |                   |
+| job    | varchar(20) | YES  |     | NULL    |                   |
+| city   | varchar(20) | YES  |     | Baroda  |                   |
+| salary | int         | YES  |     | NULL    |                   |
+| hra    | int         | YES  |     | NULL    | VIRTUAL GENERATED |
++--------+-------------+------+-----+---------+-------------------+
+7 rows in set (0.00 sec)
+
+mysql> alter table a modify ename varchar(40) not null;
+Query OK, 0 rows affected (0.12 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc a;
++--------+-------------+------+-----+---------+-------------------+
+| Field  | Type        | Null | Key | Default | Extra             |
++--------+-------------+------+-----+---------+-------------------+
+| srno   | int         | NO   | PRI | NULL    | auto_increment    |
+| id     | int         | YES  |     | NULL    |                   |
+| ename  | varchar(40) | NO   |     | NULL    |                   |
+| job    | varchar(20) | YES  |     | NULL    |                   |
+| city   | varchar(20) | YES  |     | Baroda  |                   |
+| salary | int         | YES  |     | NULL    |                   |
+| hra    | int         | YES  |     | NULL    | VIRTUAL GENERATED |
++--------+-------------+------+-----+---------+-------------------+
+7 rows in set (0.00 sec)
+
+mysql> alter table a modify job varchar(20) not null;
+ERROR 1138 (22004): Invalid use of NULL value
+mysql> desc a;
++--------+-------------+------+-----+---------+-------------------+
+| Field  | Type        | Null | Key | Default | Extra             |
++--------+-------------+------+-----+---------+-------------------+
+| srno   | int         | NO   | PRI | NULL    | auto_increment    |
+| id     | int         | YES  |     | NULL    |                   |
+| ename  | varchar(40) | NO   |     | NULL    |                   |
+| job    | varchar(20) | YES  |     | NULL    |                   |
+| city   | varchar(20) | YES  |     | Baroda  |                   |
+| salary | int         | YES  |     | NULL    |                   |
+| hra    | int         | YES  |     | NULL    | VIRTUAL GENERATED |
++--------+-------------+------+-----+---------+-------------------+
+7 rows in set (0.00 sec)
+
+mysql> select * from a;
++------+------+---------+------+--------+--------+------+
+| srno | id   | ename   | job  | city   | salary | hra  |
++------+------+---------+------+--------+--------+------+
+|    1 | 7566 | JONES   | NULL | Baroda |   2975 |  298 |
+|    2 | 7698 | BLAKE   | NULL | Baroda |   2850 |  285 |
+|    3 | 7782 | CLARK   | NULL | Baroda |   2450 |  245 |
+|    4 | 7919 | HOFFMAN | NULL | Baroda |   4150 |  415 |
+|    5 | 7949 | ALEX    | NULL | Baroda |   1250 |  125 |
+|    6 | 7566 | JONES   | NULL | Baroda |   2975 |  298 |
+|    7 | 7698 | BLAKE   | NULL | Baroda |   2850 |  285 |
+|    8 | 7782 | CLARK   | NULL | Baroda |   2450 |  245 |
+|    9 | 7919 | HOFFMAN | NULL | Baroda |   4150 |  415 |
+|   10 | 7949 | ALEX    | NULL | Baroda |   1250 |  125 |
++------+------+---------+------+--------+--------+------+
+10 rows in set (0.00 sec)
+
+mysql> select srno from a;
++------+
+| srno |
++------+
+|    1 |
+|    2 |
+|    3 |
+|    4 |
+|    5 |
+|    6 |
+|    7 |
+|    8 |
+|    9 |
+|   10 |
++------+
+10 rows in set (0.00 sec)
+
+mysql> select srno, _rowid from a;
++------+--------+
+| srno | _rowid |
++------+--------+
+|    1 |      1 |
+|    2 |      2 |
+|    3 |      3 |
+|    4 |      4 |
+|    5 |      5 |
+|    6 |      6 |
+|    7 |      7 |
+|    8 |      8 |
+|    9 |      9 |
+|   10 |     10 |
++------+--------+
+10 rows in set (0.00 sec)
+
+mysql> use db1
+Database changed
+mysql> desc emp;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EMPNO     | int         | NO   | PRI | NULL    |       |
+| ENAME     | varchar(12) | YES  |     | NULL    |       |
+| GENDER    | char(1)     | YES  |     | NULL    |       |
+| JOB       | varchar(20) | YES  |     | NULL    |       |
+| MGR       | int         | YES  | MUL | NULL    |       |
+| HIREDATE  | date        | YES  |     | NULL    |       |
+| SAL       | int         | YES  |     | NULL    |       |
+| COMM      | int         | YES  |     | NULL    |       |
+| DEPTNO    | int         | NO   | MUL | NULL    |       |
+| BONUSID   | int         | YES  |     | NULL    |       |
+| USER NAME | varchar(20) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| PHONE     | varchar(45) | YES  |     | NULL    |       |
+| isActive  | tinyint(1)  | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+14 rows in set (0.00 sec)
+
+mysql> select _rowid from emp;
++--------+
+| _rowid |
++--------+
+|   7415 |
+|   7421 |
+|   7782 |
+|   7839 |
+|   7934 |
+|   6473 |
+|   6781 |
+|   7369 |
+|   7566 |
+|   7788 |
+|   7840 |
+|   7876 |
+|   7902 |
+|   6001 |
+|   7499 |
+|   7521 |
+|   7654 |
+|   7698 |
+|   7844 |
+|   7900 |
+|   7919 |
+|   7920 |
+|   7945 |
+|   7949 |
+|   8433 |
+|   6129 |
+|   9400 |
+|   9473 |
+|   7888 |
+|   7889 |
++--------+
+30 rows in set (0.00 sec)
+
+mysql> select empno, _rowid from emp;
++-------+--------+
+| empno | _rowid |
++-------+--------+
+|  7415 |   7415 |
+|  7421 |   7421 |
+|  7782 |   7782 |
+|  7839 |   7839 |
+|  7934 |   7934 |
+|  6473 |   6473 |
+|  6781 |   6781 |
+|  7369 |   7369 |
+|  7566 |   7566 |
+|  7788 |   7788 |
+|  7840 |   7840 |
+|  7876 |   7876 |
+|  7902 |   7902 |
+|  6001 |   6001 |
+|  7499 |   7499 |
+|  7521 |   7521 |
+|  7654 |   7654 |
+|  7698 |   7698 |
+|  7844 |   7844 |
+|  7900 |   7900 |
+|  7919 |   7919 |
+|  7920 |   7920 |
+|  7945 |   7945 |
+|  7949 |   7949 |
+|  8433 |   8433 |
+|  6129 |   6129 |
+|  9400 |   9400 |
+|  9473 |   9473 |
+|  7888 |   7888 |
+|  7889 |   7889 |
++-------+--------+
+30 rows in set (0.00 sec)
+
+mysql> use x;
+Database changed
+mysql> create table b(c1 int unique auto_increment, c2 int);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc b;
++-------+------+------+-----+---------+----------------+
+| Field | Type | Null | Key | Default | Extra          |
++-------+------+------+-----+---------+----------------+
+| c1    | int  | NO   | PRI | NULL    | auto_increment |
+| c2    | int  | YES  |     | NULL    |                |
++-------+------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> create table c(c1 int primary key, c2 unique auto_increment);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'unique auto_increment)' at line 1
+mysql>
+mysql> create table c(c1 int primary key, c2 int unique auto_increment);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> desc c;
++-------+------+------+-----+---------+----------------+
+| Field | Type | Null | Key | Default | Extra          |
++-------+------+------+-----+---------+----------------+
+| c1    | int  | NO   | PRI | NULL    |                |
+| c2    | int  | NO   | UNI | NULL    | auto_increment |
++-------+------+------+-----+---------+----------------+
+2 rows in set (0.01 sec)
+
+mysql> create table d(c1 int primary key, c2 int primary key auto_increment);
+ERROR 1068 (42000): Multiple primary key defined
+mysql> create table t1(c1 int primary key, c2 int);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> create table t2(c1 int, c2 int, primary key (c1) );
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc t1;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   | PRI | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc t2;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   | PRI | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> create table t3(c1 int primary key, c2 int primary key);
+ERROR 1068 (42000): Multiple primary key defined
+mysql> create table t4(c1 int, c2 int, primary key (c1, c2));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc t3;
+ERROR 1146 (42S02): Table 'x.t3' doesn't exist
+mysql> desc t4;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   | PRI | NULL    |       |
+| c2    | int  | NO   | PRI | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> create table t4(c1 int, c2 int);
+ERROR 1050 (42S01): Table 't4' already exists
+mysql> create table t5(c1 int, c2 int);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc t5;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | YES  |     | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> alter table t5 primary key(c1);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'primary key(c1)' at line 1
+mysql> alter table t5 add primary key(c1);
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> dese t5;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dese t5' at line 1
+mysql> desc t5;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   | PRI | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> create table t6(c1 int, c2 int);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc t6;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | YES  |     | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> alter table t6 modify c1 int primary key;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc t6;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   | PRI | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> create table t7(c1 int, c2 int);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc t7;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | YES  |     | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> alter table t7 modify c1 int primary key, modify c2 int primary key;
+ERROR 1068 (42000): Multiple primary key defined
+mysql>
+mysql>
+mysql> alter table t7 add primary key(c1, c2);
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc t7;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   | PRI | NULL    |       |
+| c2    | int  | NO   | PRI | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc t6;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   | PRI | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql> desc t7;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   | PRI | NULL    |       |
+| c2    | int  | NO   | PRI | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> alter table t6 drop primary key;
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc t6;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   |     | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> alter table t7 drop primary key;
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc t7
+    -> ;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   |     | NULL    |       |
+| c2    | int  | NO   |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc t6;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   |     | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> alter table t6 modify c1 int null;
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc t6;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | YES  |     | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql>
