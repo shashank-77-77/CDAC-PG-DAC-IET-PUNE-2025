@@ -1,0 +1,924 @@
+Microsoft Windows [Version 10.0.19045.6456]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\IET>mysql --host=192.168.10.117 --port=3306 --user=dac83 --password=welcome
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 328
+Server version: 8.0.44 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> /c
+    -> /c;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/c
+/c' at line 1
+mysql> \c;
+ERROR:
+No query specified
+
+mysql> \c
+mysql> show database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'database' at line 1
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| dac83              |
+| information_schema |
+| performance_schema |
++--------------------+
+3 rows in set (0.00 sec)
+
+mysql> use dac83;
+Database changed
+mysql> \c
+mysql> '\c'
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''\c'' at line 1
+mysql> select cityname from city;
++----------+
+| cityname |
++----------+
+| Baroda   |
+| Surat    |
+| Bharuch  |
+| Rajkot   |
+| Jamnagar |
++----------+
+5 rows in set (0.01 sec)
+
+mysql> select ename ,lag(ename) over(order by empno) R1 from emp;
++----------+----------+
+| ename    | R1       |
++----------+----------+
+| GITA     | NULL     |
+| VRUSHALI | GITA     |
+| SHARMIN  | VRUSHALI |
+| BANDISH  | SHARMIN  |
+| SMITH    | BANDISH  |
+| AARAV    | SMITH    |
+| THOMAS   | AARAV    |
+| ALLEN    | THOMAS   |
+| WARD     | ALLEN    |
+| JONES    | WARD     |
+| MARTIN   | JONES    |
+| BLAKE    | MARTIN   |
+| CLARK    | BLAKE    |
+| SCOTT    | CLARK    |
+| KING     | SCOTT    |
+| FRED     | KING     |
+| TURNER   | FRED     |
+| ADAMS    | TURNER   |
+| Ruhan    | ADAMS    |
+| Neel     | Ruhan    |
+| JAMES    | Neel     |
+| FORD     | JAMES    |
+| HOFFMAN  | FORD     |
+| GRASS    | HOFFMAN  |
+| MILLER   | GRASS    |
+| AARUSH   | MILLER   |
+| ALEX     | AARUSH   |
+| NATASHA  | ALEX     |
+| SANGITA  | NATASHA  |
+| SUPRIYA  | SANGITA  |
++----------+----------+
+30 rows in set (0.00 sec)
+
+mysql> select ename,lead(ename) over (order by empno) R1 from emp;
++----------+----------+
+| ename    | R1       |
++----------+----------+
+| GITA     | VRUSHALI |
+| VRUSHALI | SHARMIN  |
+| SHARMIN  | BANDISH  |
+| BANDISH  | SMITH    |
+| SMITH    | AARAV    |
+| AARAV    | THOMAS   |
+| THOMAS   | ALLEN    |
+| ALLEN    | WARD     |
+| WARD     | JONES    |
+| JONES    | MARTIN   |
+| MARTIN   | BLAKE    |
+| BLAKE    | CLARK    |
+| CLARK    | SCOTT    |
+| SCOTT    | KING     |
+| KING     | FRED     |
+| FRED     | TURNER   |
+| TURNER   | ADAMS    |
+| ADAMS    | Ruhan    |
+| Ruhan    | Neel     |
+| Neel     | JAMES    |
+| JAMES    | FORD     |
+| FORD     | HOFFMAN  |
+| HOFFMAN  | GRASS    |
+| GRASS    | MILLER   |
+| MILLER   | AARUSH   |
+| AARUSH   | ALEX     |
+| ALEX     | NATASHA  |
+| NATASHA  | SANGITA  |
+| SANGITA  | SUPRIYA  |
+| SUPRIYA  | NULL     |
++----------+----------+
+30 rows in set (0.00 sec)
+
+mysql> select row_number() over() R1 ,ename from emp;
++----+----------+
+| R1 | ename    |
++----+----------+
+|  1 | GITA     |
+|  2 | VRUSHALI |
+|  3 | SHARMIN  |
+|  4 | BANDISH  |
+|  5 | SMITH    |
+|  6 | AARAV    |
+|  7 | THOMAS   |
+|  8 | ALLEN    |
+|  9 | WARD     |
+| 10 | JONES    |
+| 11 | MARTIN   |
+| 12 | BLAKE    |
+| 13 | CLARK    |
+| 14 | SCOTT    |
+| 15 | KING     |
+| 16 | FRED     |
+| 17 | TURNER   |
+| 18 | ADAMS    |
+| 19 | Ruhan    |
+| 20 | Neel     |
+| 21 | JAMES    |
+| 22 | FORD     |
+| 23 | HOFFMAN  |
+| 24 | GRASS    |
+| 25 | MILLER   |
+| 26 | AARUSH   |
+| 27 | ALEX     |
+| 28 | NATASHA  |
+| 29 | SANGITA  |
+| 30 | SUPRIYA  |
++----+----------+
+30 rows in set (0.00 sec)
+
+mysql> select row_number() over(partition by job) R1,ename ,job from emp;
++----+----------+---------------------+
+| R1 | ename    | job                 |
++----+----------+---------------------+
+|  1 | SCOTT    | ANALYST             |
+|  2 | FORD     | ANALYST             |
+|  3 | SUPRIYA  | ANALYST             |
+|  1 | SMITH    | CLERK               |
+|  2 | AARAV    | CLERK               |
+|  3 | THOMAS   | CLERK               |
+|  4 | ADAMS    | CLERK               |
+|  5 | JAMES    | CLERK               |
+|  6 | MILLER   | CLERK               |
+|  7 | NATASHA  | CLERK               |
+|  1 | GITA     | Compliance officers |
+|  2 | VRUSHALI | Compliance officers |
+|  3 | SANGITA  | Compliance officers |
+|  1 | JONES    | MANAGER             |
+|  2 | BLAKE    | MANAGER             |
+|  3 | CLARK    | MANAGER             |
+|  4 | HOFFMAN  | MANAGER             |
+|  5 | ALEX     | MANAGER             |
+|  1 | Ruhan    | Network             |
+|  1 | KING     | PRESIDENT           |
+|  1 | SHARMIN  | Public Relation     |
+|  2 | BANDISH  | Public Relation     |
+|  1 | ALLEN    | SALESMAN            |
+|  2 | WARD     | SALESMAN            |
+|  3 | MARTIN   | SALESMAN            |
+|  4 | TURNER   | SALESMAN            |
+|  5 | GRASS    | SALESMAN            |
+|  6 | AARUSH   | SALESMAN            |
+|  1 | FRED     | vice PRESIDENT      |
+|  2 | Neel     | vice PRESIDENT      |
++----+----------+---------------------+
+30 rows in set (0.00 sec)
+
+mysql> select ename,sal,rank() over(order by sal) R1 from emp;
++----------+------+----+
+| ename    | sal  | R1 |
++----------+------+----+
+| SMITH    |  800 |  1 |
+| JAMES    |  950 |  2 |
+| Neel     | 1000 |  3 |
+| ADAMS    | 1100 |  4 |
+| WARD     | 1250 |  5 |
+| MARTIN   | 1250 |  5 |
+| ALEX     | 1250 |  5 |
+| MILLER   | 1300 |  8 |
+| AARUSH   | 1350 |  9 |
+| TURNER   | 1500 | 10 |
+| ALLEN    | 1600 | 11 |
+| GITA     | 1750 | 12 |
+| VRUSHALI | 1750 | 12 |
+| SHARMIN  | 1750 | 12 |
+| BANDISH  | 1750 | 12 |
+| THOMAS   | 1750 | 12 |
+| NATASHA  | 1750 | 12 |
+| SANGITA  | 1750 | 12 |
+| SUPRIYA  | 1750 | 12 |
+| Ruhan    | 2000 | 20 |
+| CLARK    | 2450 | 21 |
+| GRASS    | 2575 | 22 |
+| BLAKE    | 2850 | 23 |
+| JONES    | 2975 | 24 |
+| SCOTT    | 3000 | 25 |
+| FORD     | 3000 | 25 |
+| AARAV    | 3350 | 27 |
+| HOFFMAN  | 4150 | 28 |
+| KING     | 5000 | 29 |
+| FRED     | 5000 | 29 |
++----------+------+----+
+30 rows in set (0.00 sec)
+
+mysql> select ename,sal, rank() over(order by sal) R1,dense_rank() over(order by sal) R2 from emp;
++----------+------+----+----+
+| ename    | sal  | R1 | R2 |
++----------+------+----+----+
+| SMITH    |  800 |  1 |  1 |
+| JAMES    |  950 |  2 |  2 |
+| Neel     | 1000 |  3 |  3 |
+| ADAMS    | 1100 |  4 |  4 |
+| WARD     | 1250 |  5 |  5 |
+| MARTIN   | 1250 |  5 |  5 |
+| ALEX     | 1250 |  5 |  5 |
+| MILLER   | 1300 |  8 |  6 |
+| AARUSH   | 1350 |  9 |  7 |
+| TURNER   | 1500 | 10 |  8 |
+| ALLEN    | 1600 | 11 |  9 |
+| GITA     | 1750 | 12 | 10 |
+| VRUSHALI | 1750 | 12 | 10 |
+| SHARMIN  | 1750 | 12 | 10 |
+| BANDISH  | 1750 | 12 | 10 |
+| THOMAS   | 1750 | 12 | 10 |
+| NATASHA  | 1750 | 12 | 10 |
+| SANGITA  | 1750 | 12 | 10 |
+| SUPRIYA  | 1750 | 12 | 10 |
+| Ruhan    | 2000 | 20 | 11 |
+| CLARK    | 2450 | 21 | 12 |
+| GRASS    | 2575 | 22 | 13 |
+| BLAKE    | 2850 | 23 | 14 |
+| JONES    | 2975 | 24 | 15 |
+| SCOTT    | 3000 | 25 | 16 |
+| FORD     | 3000 | 25 | 16 |
+| AARAV    | 3350 | 27 | 17 |
+| HOFFMAN  | 4150 | 28 | 18 |
+| KING     | 5000 | 29 | 19 |
+| FRED     | 5000 | 29 | 19 |
++----------+------+----+----+
+30 rows in set (0.00 sec)
+
+mysql> select ename,job,sal,dense_rank() over(partition by job order by sal desc) R2 from emp;
++----------+---------------------+------+----+
+| ename    | job                 | sal  | R2 |
++----------+---------------------+------+----+
+| SCOTT    | ANALYST             | 3000 |  1 |
+| FORD     | ANALYST             | 3000 |  1 |
+| SUPRIYA  | ANALYST             | 1750 |  2 |
+| AARAV    | CLERK               | 3350 |  1 |
+| THOMAS   | CLERK               | 1750 |  2 |
+| NATASHA  | CLERK               | 1750 |  2 |
+| MILLER   | CLERK               | 1300 |  3 |
+| ADAMS    | CLERK               | 1100 |  4 |
+| JAMES    | CLERK               |  950 |  5 |
+| SMITH    | CLERK               |  800 |  6 |
+| GITA     | Compliance officers | 1750 |  1 |
+| VRUSHALI | Compliance officers | 1750 |  1 |
+| SANGITA  | Compliance officers | 1750 |  1 |
+| HOFFMAN  | MANAGER             | 4150 |  1 |
+| JONES    | MANAGER             | 2975 |  2 |
+| BLAKE    | MANAGER             | 2850 |  3 |
+| CLARK    | MANAGER             | 2450 |  4 |
+| ALEX     | MANAGER             | 1250 |  5 |
+| Ruhan    | Network             | 2000 |  1 |
+| KING     | PRESIDENT           | 5000 |  1 |
+| SHARMIN  | Public Relation     | 1750 |  1 |
+| BANDISH  | Public Relation     | 1750 |  1 |
+| GRASS    | SALESMAN            | 2575 |  1 |
+| ALLEN    | SALESMAN            | 1600 |  2 |
+| TURNER   | SALESMAN            | 1500 |  3 |
+| AARUSH   | SALESMAN            | 1350 |  4 |
+| WARD     | SALESMAN            | 1250 |  5 |
+| MARTIN   | SALESMAN            | 1250 |  5 |
+| FRED     | vice PRESIDENT      | 5000 |  1 |
+| Neel     | vice PRESIDENT      | 1000 |  2 |
++----------+---------------------+------+----+
+30 rows in set (0.00 sec)
+
+mysql> select ename,job,sal,dense_rank() over(partition by job order by sal desc) R2 from emp;
++----------+---------------------+------+----+
+| ename    | job                 | sal  | R2 |
++----------+---------------------+------+----+
+| SCOTT    | ANALYST             | 3000 |  1 |
+| FORD     | ANALYST             | 3000 |  1 |
+| SUPRIYA  | ANALYST             | 1750 |  2 |
+| AARAV    | CLERK               | 3350 |  1 |
+| THOMAS   | CLERK               | 1750 |  2 |
+| NATASHA  | CLERK               | 1750 |  2 |
+| MILLER   | CLERK               | 1300 |  3 |
+| ADAMS    | CLERK               | 1100 |  4 |
+| JAMES    | CLERK               |  950 |  5 |
+| SMITH    | CLERK               |  800 |  6 |
+| GITA     | Compliance officers | 1750 |  1 |
+| VRUSHALI | Compliance officers | 1750 |  1 |
+| SANGITA  | Compliance officers | 1750 |  1 |
+| HOFFMAN  | MANAGER             | 4150 |  1 |
+| JONES    | MANAGER             | 2975 |  2 |
+| BLAKE    | MANAGER             | 2850 |  3 |
+| CLARK    | MANAGER             | 2450 |  4 |
+| ALEX     | MANAGER             | 1250 |  5 |
+| Ruhan    | Network             | 2000 |  1 |
+| KING     | PRESIDENT           | 5000 |  1 |
+| SHARMIN  | Public Relation     | 1750 |  1 |
+| BANDISH  | Public Relation     | 1750 |  1 |
+| GRASS    | SALESMAN            | 2575 |  1 |
+| ALLEN    | SALESMAN            | 1600 |  2 |
+| TURNER   | SALESMAN            | 1500 |  3 |
+| AARUSH   | SALESMAN            | 1350 |  4 |
+| WARD     | SALESMAN            | 1250 |  5 |
+| MARTIN   | SALESMAN            | 1250 |  5 |
+| FRED     | vice PRESIDENT      | 5000 |  1 |
+| Neel     | vice PRESIDENT      | 1000 |  2 |
++----------+---------------------+------+----+
+30 rows in set (0.00 sec)
+
+mysql> select ename from emp where job=`manager`;
+ERROR 1054 (42S22): Unknown column 'manager' in 'where clause'
+mysql> select ename from emp where job='manager';
++---------+
+| ename   |
++---------+
+| JONES   |
+| BLAKE   |
+| CLARK   |
+| HOFFMAN |
+| ALEX    |
++---------+
+5 rows in set (0.00 sec)
+
+mysql> select ename , lag(ename) over() R1 from emp where job='manager';
++---------+---------+
+| ename   | R1      |
++---------+---------+
+| JONES   | NULL    |
+| BLAKE   | JONES   |
+| CLARK   | BLAKE   |
+| HOFFMAN | CLARK   |
+| ALEX    | HOFFMAN |
++---------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select ename,lead(ename) over() R1 from emp where job='manager';
++---------+---------+
+| ename   | R1      |
++---------+---------+
+| JONES   | BLAKE   |
+| BLAKE   | CLARK   |
+| CLARK   | HOFFMAN |
+| HOFFMAN | ALEX    |
+| ALEX    | NULL    |
++---------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select * from traintimetable;
++----+---------+----------------------------+----------+----------+
+| id | trainID | stationname                | distance | timing   |
++----+---------+----------------------------+----------+----------+
+|  1 |   22863 | mumbai central             |        0 | 08:30:00 |
+|  2 |   22863 | surat                      |      262 | 12:40:13 |
+|  3 |   22863 | baroda                     |      129 | 14:42:00 |
+|  4 |   22863 | ahmednagar JN              |      100 | 17:10:00 |
+|  5 |   22863 | surendranagar              |      130 | 20:00:00 |
+|  6 |   22863 | rajkot JN                  |      116 | 23:40:00 |
+|  7 |   22863 | hapa                       |       75 | 00:05:00 |
+|  8 |   22868 | pune JN                    |        0 | 17:20:00 |
+|  9 |   22868 | uruli                      |       30 | 17:47:13 |
+| 10 |   22868 | daund chord line           |     87.1 | 18:27:00 |
+| 11 |   22868 | ahmednagar                 |       71 | 20:10:00 |
+| 12 |   22868 | belapur                    |       61 | 21:15:00 |
+| 13 |   22868 | kopargaon                  |       44 | 21:57:00 |
+| 14 |   22868 | manmad JN                  |    41.84 | 23:25:13 |
+| 15 |   22868 | daund chord line           |      249 | 18:27:00 |
+| 16 |   22868 | bhopal                     |      728 | 08:55:00 |
+| 17 |   12267 | mumbai central             |        0 | 23:00:00 |
+| 18 |   12267 | ahmedabad JN               |      534 | 05:00:00 |
+| 19 |   12267 | surendranagar              |      131 | 07:20:00 |
+| 20 |   12267 | rajkot JN                  |      106 | 09:15:00 |
+| 21 |   12267 | hapa                       |      191 | 12:45:00 |
+| 22 |   12307 | HOWRAH JN                  |     2271 | 23:25:00 |
+| 23 |   12307 | BARDDHAMAN JN              |     99.6 | 00:31:00 |
+| 24 |   12307 | ASANSOL JN                 |      107 | 02:09:00 |
+| 25 |   12307 | DHANBAD JN                 |       65 | 03:25:00 |
+| 26 |   12307 | PARASNATH                  |       49 | 04:02:00 |
+| 27 |   12307 | KODERMA                    |      115 | 04:54:00 |
+| 28 |   12307 | GAYA JN                    |       76 | 06:30:00 |
+| 29 |   12307 | ANUGRAHA NARAYAN ROAD      |      115 | 07:20:00 |
+| 30 |   12307 | DEHRI ON SONE              |       17 | 07:40:00 |
+| 31 |   12307 | SASARAM                    |       55 | 07:58:00 |
+| 32 |   12307 | BHABUA ROAD                |       31 | 08:38:00 |
+| 33 |   12307 | PT DEEN DAYAL UPADHYAYA JN |       90 | 09:55:00 |
+| 34 |   12307 | MIRZAPUR                   |    155.5 | 10:55:00 |
+| 35 |   12307 | PRAYAGRAJ JN               |       99 | 12:20:00 |
+| 36 |   12307 | FATEHPUR                   |      155 | 13:32:00 |
+| 37 |   12307 | KANPUR CENTRAL             |       75 | 14:55:00 |
+| 38 |   12307 | ETAWAH                     |       47 | 16:27:00 |
+| 39 |   12307 | TUNDLA JN                  |       54 | 18:35:00 |
+| 40 |   12307 | AGRA FORT                  |       21 | 19:30:00 |
+| 41 |   12307 | ACHHNERA JN                |      227 | 20:14:00 |
+| 42 |   12307 | BHARATPUR JN               |      746 | 20:44:00 |
+| 43 |   12307 | GAYA JN                    |       90 | 06:30:00 |
+| 44 |   12307 | JAIPUR                     |       33 | 00:05:00 |
+| 45 |   12307 | NAWA CITY                  |       14 | 01:38:00 |
+| 46 |   12307 | KUCHAMAN CITY              |       44 | 01:55:00 |
+| 47 |   12307 | MAKRANA JN                 |       59 | 02:03:00 |
+| 48 |   12307 | DEGANA JN                  |      104 | 02:37:00 |
+| 49 |   12307 | MERTA ROAD JN              |        0 | 03:15:00 |
+| 50 |   12307 | JODHPUR JN                 |       89 | 04:20:00 |
+| 51 |   12308 | JAIPUR                     |       21 | 00:05:00 |
+| 52 |   12308 | NAWA CITY                  |       14 | 01:38:00 |
+| 53 |   12308 | KUCHAMAN CITY              |       44 | 01:55:00 |
+| 54 |   12308 | MAKRANA JN                 |       46 | 02:03:00 |
+| 55 |   12308 | DEGANA JN                  |      103 | 02:37:00 |
+| 56 |   12308 | MERTA ROAD JN              |     NULL | 03:15:00 |
+| 57 |   12308 | JODHPUR JN                 |     NULL | 04:20:00 |
++----+---------+----------------------------+----------+----------+
+57 rows in set (0.05 sec)
+
+mysql>  select id, trainID, stationname 'Current Station', lead(stationname) over(partition by trainID order by id) 'Next Station' from traintimetable;
++----+---------+----------------------------+----------------------------+
+| id | trainID | Current Station            | Next Station               |
++----+---------+----------------------------+----------------------------+
+| 17 |   12267 | mumbai central             | ahmedabad JN               |
+| 18 |   12267 | ahmedabad JN               | surendranagar              |
+| 19 |   12267 | surendranagar              | rajkot JN                  |
+| 20 |   12267 | rajkot JN                  | hapa                       |
+| 21 |   12267 | hapa                       | NULL                       |
+| 22 |   12307 | HOWRAH JN                  | BARDDHAMAN JN              |
+| 23 |   12307 | BARDDHAMAN JN              | ASANSOL JN                 |
+| 24 |   12307 | ASANSOL JN                 | DHANBAD JN                 |
+| 25 |   12307 | DHANBAD JN                 | PARASNATH                  |
+| 26 |   12307 | PARASNATH                  | KODERMA                    |
+| 27 |   12307 | KODERMA                    | GAYA JN                    |
+| 28 |   12307 | GAYA JN                    | ANUGRAHA NARAYAN ROAD      |
+| 29 |   12307 | ANUGRAHA NARAYAN ROAD      | DEHRI ON SONE              |
+| 30 |   12307 | DEHRI ON SONE              | SASARAM                    |
+| 31 |   12307 | SASARAM                    | BHABUA ROAD                |
+| 32 |   12307 | BHABUA ROAD                | PT DEEN DAYAL UPADHYAYA JN |
+| 33 |   12307 | PT DEEN DAYAL UPADHYAYA JN | MIRZAPUR                   |
+| 34 |   12307 | MIRZAPUR                   | PRAYAGRAJ JN               |
+| 35 |   12307 | PRAYAGRAJ JN               | FATEHPUR                   |
+| 36 |   12307 | FATEHPUR                   | KANPUR CENTRAL             |
+| 37 |   12307 | KANPUR CENTRAL             | ETAWAH                     |
+| 38 |   12307 | ETAWAH                     | TUNDLA JN                  |
+| 39 |   12307 | TUNDLA JN                  | AGRA FORT                  |
+| 40 |   12307 | AGRA FORT                  | ACHHNERA JN                |
+| 41 |   12307 | ACHHNERA JN                | BHARATPUR JN               |
+| 42 |   12307 | BHARATPUR JN               | GAYA JN                    |
+| 43 |   12307 | GAYA JN                    | JAIPUR                     |
+| 44 |   12307 | JAIPUR                     | NAWA CITY                  |
+| 45 |   12307 | NAWA CITY                  | KUCHAMAN CITY              |
+| 46 |   12307 | KUCHAMAN CITY              | MAKRANA JN                 |
+| 47 |   12307 | MAKRANA JN                 | DEGANA JN                  |
+| 48 |   12307 | DEGANA JN                  | MERTA ROAD JN              |
+| 49 |   12307 | MERTA ROAD JN              | JODHPUR JN                 |
+| 50 |   12307 | JODHPUR JN                 | NULL                       |
+| 51 |   12308 | JAIPUR                     | NAWA CITY                  |
+| 52 |   12308 | NAWA CITY                  | KUCHAMAN CITY              |
+| 53 |   12308 | KUCHAMAN CITY              | MAKRANA JN                 |
+| 54 |   12308 | MAKRANA JN                 | DEGANA JN                  |
+| 55 |   12308 | DEGANA JN                  | MERTA ROAD JN              |
+| 56 |   12308 | MERTA ROAD JN              | JODHPUR JN                 |
+| 57 |   12308 | JODHPUR JN                 | NULL                       |
+|  1 |   22863 | mumbai central             | surat                      |
+|  2 |   22863 | surat                      | baroda                     |
+|  3 |   22863 | baroda                     | ahmednagar JN              |
+|  4 |   22863 | ahmednagar JN              | surendranagar              |
+|  5 |   22863 | surendranagar              | rajkot JN                  |
+|  6 |   22863 | rajkot JN                  | hapa                       |
+|  7 |   22863 | hapa                       | NULL                       |
+|  8 |   22868 | pune JN                    | uruli                      |
+|  9 |   22868 | uruli                      | daund chord line           |
+| 10 |   22868 | daund chord line           | ahmednagar                 |
+| 11 |   22868 | ahmednagar                 | belapur                    |
+| 12 |   22868 | belapur                    | kopargaon                  |
+| 13 |   22868 | kopargaon                  | manmad JN                  |
+| 14 |   22868 | manmad JN                  | daund chord line           |
+| 15 |   22868 | daund chord line           | bhopal                     |
+| 16 |   22868 | bhopal                     | NULL                       |
++----+---------+----------------------------+----------------------------+
+57 rows in set (0.00 sec)
+
+mysql> select id, trainID, stationname 'Current Station', lead(stationname, 2) over(partition by trainID order by id) 'Next Station' from traintimetable;
++----+---------+----------------------------+----------------------------+
+| id | trainID | Current Station            | Next Station               |
++----+---------+----------------------------+----------------------------+
+| 17 |   12267 | mumbai central             | surendranagar              |
+| 18 |   12267 | ahmedabad JN               | rajkot JN                  |
+| 19 |   12267 | surendranagar              | hapa                       |
+| 20 |   12267 | rajkot JN                  | NULL                       |
+| 21 |   12267 | hapa                       | NULL                       |
+| 22 |   12307 | HOWRAH JN                  | ASANSOL JN                 |
+| 23 |   12307 | BARDDHAMAN JN              | DHANBAD JN                 |
+| 24 |   12307 | ASANSOL JN                 | PARASNATH                  |
+| 25 |   12307 | DHANBAD JN                 | KODERMA                    |
+| 26 |   12307 | PARASNATH                  | GAYA JN                    |
+| 27 |   12307 | KODERMA                    | ANUGRAHA NARAYAN ROAD      |
+| 28 |   12307 | GAYA JN                    | DEHRI ON SONE              |
+| 29 |   12307 | ANUGRAHA NARAYAN ROAD      | SASARAM                    |
+| 30 |   12307 | DEHRI ON SONE              | BHABUA ROAD                |
+| 31 |   12307 | SASARAM                    | PT DEEN DAYAL UPADHYAYA JN |
+| 32 |   12307 | BHABUA ROAD                | MIRZAPUR                   |
+| 33 |   12307 | PT DEEN DAYAL UPADHYAYA JN | PRAYAGRAJ JN               |
+| 34 |   12307 | MIRZAPUR                   | FATEHPUR                   |
+| 35 |   12307 | PRAYAGRAJ JN               | KANPUR CENTRAL             |
+| 36 |   12307 | FATEHPUR                   | ETAWAH                     |
+| 37 |   12307 | KANPUR CENTRAL             | TUNDLA JN                  |
+| 38 |   12307 | ETAWAH                     | AGRA FORT                  |
+| 39 |   12307 | TUNDLA JN                  | ACHHNERA JN                |
+| 40 |   12307 | AGRA FORT                  | BHARATPUR JN               |
+| 41 |   12307 | ACHHNERA JN                | GAYA JN                    |
+| 42 |   12307 | BHARATPUR JN               | JAIPUR                     |
+| 43 |   12307 | GAYA JN                    | NAWA CITY                  |
+| 44 |   12307 | JAIPUR                     | KUCHAMAN CITY              |
+| 45 |   12307 | NAWA CITY                  | MAKRANA JN                 |
+| 46 |   12307 | KUCHAMAN CITY              | DEGANA JN                  |
+| 47 |   12307 | MAKRANA JN                 | MERTA ROAD JN              |
+| 48 |   12307 | DEGANA JN                  | JODHPUR JN                 |
+| 49 |   12307 | MERTA ROAD JN              | NULL                       |
+| 50 |   12307 | JODHPUR JN                 | NULL                       |
+| 51 |   12308 | JAIPUR                     | KUCHAMAN CITY              |
+| 52 |   12308 | NAWA CITY                  | MAKRANA JN                 |
+| 53 |   12308 | KUCHAMAN CITY              | DEGANA JN                  |
+| 54 |   12308 | MAKRANA JN                 | MERTA ROAD JN              |
+| 55 |   12308 | DEGANA JN                  | JODHPUR JN                 |
+| 56 |   12308 | MERTA ROAD JN              | NULL                       |
+| 57 |   12308 | JODHPUR JN                 | NULL                       |
+|  1 |   22863 | mumbai central             | baroda                     |
+|  2 |   22863 | surat                      | ahmednagar JN              |
+|  3 |   22863 | baroda                     | surendranagar              |
+|  4 |   22863 | ahmednagar JN              | rajkot JN                  |
+|  5 |   22863 | surendranagar              | hapa                       |
+|  6 |   22863 | rajkot JN                  | NULL                       |
+|  7 |   22863 | hapa                       | NULL                       |
+|  8 |   22868 | pune JN                    | daund chord line           |
+|  9 |   22868 | uruli                      | ahmednagar                 |
+| 10 |   22868 | daund chord line           | belapur                    |
+| 11 |   22868 | ahmednagar                 | kopargaon                  |
+| 12 |   22868 | belapur                    | manmad JN                  |
+| 13 |   22868 | kopargaon                  | daund chord line           |
+| 14 |   22868 | manmad JN                  | bhopal                     |
+| 15 |   22868 | daund chord line           | NULL                       |
+| 16 |   22868 | bhopal                     | NULL                       |
++----+---------+----------------------------+----------------------------+
+57 rows in set (0.00 sec)
+
+mysql> select id, trainID, stationname 'Current Station', lead(stationname, 1) over(partition by trainID order by id) 'Next Station' from traintimetable;
++----+---------+----------------------------+----------------------------+
+| id | trainID | Current Station            | Next Station               |
++----+---------+----------------------------+----------------------------+
+| 17 |   12267 | mumbai central             | ahmedabad JN               |
+| 18 |   12267 | ahmedabad JN               | surendranagar              |
+| 19 |   12267 | surendranagar              | rajkot JN                  |
+| 20 |   12267 | rajkot JN                  | hapa                       |
+| 21 |   12267 | hapa                       | NULL                       |
+| 22 |   12307 | HOWRAH JN                  | BARDDHAMAN JN              |
+| 23 |   12307 | BARDDHAMAN JN              | ASANSOL JN                 |
+| 24 |   12307 | ASANSOL JN                 | DHANBAD JN                 |
+| 25 |   12307 | DHANBAD JN                 | PARASNATH                  |
+| 26 |   12307 | PARASNATH                  | KODERMA                    |
+| 27 |   12307 | KODERMA                    | GAYA JN                    |
+| 28 |   12307 | GAYA JN                    | ANUGRAHA NARAYAN ROAD      |
+| 29 |   12307 | ANUGRAHA NARAYAN ROAD      | DEHRI ON SONE              |
+| 30 |   12307 | DEHRI ON SONE              | SASARAM                    |
+| 31 |   12307 | SASARAM                    | BHABUA ROAD                |
+| 32 |   12307 | BHABUA ROAD                | PT DEEN DAYAL UPADHYAYA JN |
+| 33 |   12307 | PT DEEN DAYAL UPADHYAYA JN | MIRZAPUR                   |
+| 34 |   12307 | MIRZAPUR                   | PRAYAGRAJ JN               |
+| 35 |   12307 | PRAYAGRAJ JN               | FATEHPUR                   |
+| 36 |   12307 | FATEHPUR                   | KANPUR CENTRAL             |
+| 37 |   12307 | KANPUR CENTRAL             | ETAWAH                     |
+| 38 |   12307 | ETAWAH                     | TUNDLA JN                  |
+| 39 |   12307 | TUNDLA JN                  | AGRA FORT                  |
+| 40 |   12307 | AGRA FORT                  | ACHHNERA JN                |
+| 41 |   12307 | ACHHNERA JN                | BHARATPUR JN               |
+| 42 |   12307 | BHARATPUR JN               | GAYA JN                    |
+| 43 |   12307 | GAYA JN                    | JAIPUR                     |
+| 44 |   12307 | JAIPUR                     | NAWA CITY                  |
+| 45 |   12307 | NAWA CITY                  | KUCHAMAN CITY              |
+| 46 |   12307 | KUCHAMAN CITY              | MAKRANA JN                 |
+| 47 |   12307 | MAKRANA JN                 | DEGANA JN                  |
+| 48 |   12307 | DEGANA JN                  | MERTA ROAD JN              |
+| 49 |   12307 | MERTA ROAD JN              | JODHPUR JN                 |
+| 50 |   12307 | JODHPUR JN                 | NULL                       |
+| 51 |   12308 | JAIPUR                     | NAWA CITY                  |
+| 52 |   12308 | NAWA CITY                  | KUCHAMAN CITY              |
+| 53 |   12308 | KUCHAMAN CITY              | MAKRANA JN                 |
+| 54 |   12308 | MAKRANA JN                 | DEGANA JN                  |
+| 55 |   12308 | DEGANA JN                  | MERTA ROAD JN              |
+| 56 |   12308 | MERTA ROAD JN              | JODHPUR JN                 |
+| 57 |   12308 | JODHPUR JN                 | NULL                       |
+|  1 |   22863 | mumbai central             | surat                      |
+|  2 |   22863 | surat                      | baroda                     |
+|  3 |   22863 | baroda                     | ahmednagar JN              |
+|  4 |   22863 | ahmednagar JN              | surendranagar              |
+|  5 |   22863 | surendranagar              | rajkot JN                  |
+|  6 |   22863 | rajkot JN                  | hapa                       |
+|  7 |   22863 | hapa                       | NULL                       |
+|  8 |   22868 | pune JN                    | uruli                      |
+|  9 |   22868 | uruli                      | daund chord line           |
+| 10 |   22868 | daund chord line           | ahmednagar                 |
+| 11 |   22868 | ahmednagar                 | belapur                    |
+| 12 |   22868 | belapur                    | kopargaon                  |
+| 13 |   22868 | kopargaon                  | manmad JN                  |
+| 14 |   22868 | manmad JN                  | daund chord line           |
+| 15 |   22868 | daund chord line           | bhopal                     |
+| 16 |   22868 | bhopal                     | NULL                       |
++----+---------+----------------------------+----------------------------+
+57 rows in set (0.00 sec)
+
+mysql> select id, trainID, stationname 'Current Station', lead(stationname, 1, 'End of ...') over(partition by trainID order by id) 'Next Station' from traintimetable;
++----+---------+----------------------------+----------------------------+
+| id | trainID | Current Station            | Next Station               |
++----+---------+----------------------------+----------------------------+
+| 17 |   12267 | mumbai central             | ahmedabad JN               |
+| 18 |   12267 | ahmedabad JN               | surendranagar              |
+| 19 |   12267 | surendranagar              | rajkot JN                  |
+| 20 |   12267 | rajkot JN                  | hapa                       |
+| 21 |   12267 | hapa                       | End of ...                 |
+| 22 |   12307 | HOWRAH JN                  | BARDDHAMAN JN              |
+| 23 |   12307 | BARDDHAMAN JN              | ASANSOL JN                 |
+| 24 |   12307 | ASANSOL JN                 | DHANBAD JN                 |
+| 25 |   12307 | DHANBAD JN                 | PARASNATH                  |
+| 26 |   12307 | PARASNATH                  | KODERMA                    |
+| 27 |   12307 | KODERMA                    | GAYA JN                    |
+| 28 |   12307 | GAYA JN                    | ANUGRAHA NARAYAN ROAD      |
+| 29 |   12307 | ANUGRAHA NARAYAN ROAD      | DEHRI ON SONE              |
+| 30 |   12307 | DEHRI ON SONE              | SASARAM                    |
+| 31 |   12307 | SASARAM                    | BHABUA ROAD                |
+| 32 |   12307 | BHABUA ROAD                | PT DEEN DAYAL UPADHYAYA JN |
+| 33 |   12307 | PT DEEN DAYAL UPADHYAYA JN | MIRZAPUR                   |
+| 34 |   12307 | MIRZAPUR                   | PRAYAGRAJ JN               |
+| 35 |   12307 | PRAYAGRAJ JN               | FATEHPUR                   |
+| 36 |   12307 | FATEHPUR                   | KANPUR CENTRAL             |
+| 37 |   12307 | KANPUR CENTRAL             | ETAWAH                     |
+| 38 |   12307 | ETAWAH                     | TUNDLA JN                  |
+| 39 |   12307 | TUNDLA JN                  | AGRA FORT                  |
+| 40 |   12307 | AGRA FORT                  | ACHHNERA JN                |
+| 41 |   12307 | ACHHNERA JN                | BHARATPUR JN               |
+| 42 |   12307 | BHARATPUR JN               | GAYA JN                    |
+| 43 |   12307 | GAYA JN                    | JAIPUR                     |
+| 44 |   12307 | JAIPUR                     | NAWA CITY                  |
+| 45 |   12307 | NAWA CITY                  | KUCHAMAN CITY              |
+| 46 |   12307 | KUCHAMAN CITY              | MAKRANA JN                 |
+| 47 |   12307 | MAKRANA JN                 | DEGANA JN                  |
+| 48 |   12307 | DEGANA JN                  | MERTA ROAD JN              |
+| 49 |   12307 | MERTA ROAD JN              | JODHPUR JN                 |
+| 50 |   12307 | JODHPUR JN                 | End of ...                 |
+| 51 |   12308 | JAIPUR                     | NAWA CITY                  |
+| 52 |   12308 | NAWA CITY                  | KUCHAMAN CITY              |
+| 53 |   12308 | KUCHAMAN CITY              | MAKRANA JN                 |
+| 54 |   12308 | MAKRANA JN                 | DEGANA JN                  |
+| 55 |   12308 | DEGANA JN                  | MERTA ROAD JN              |
+| 56 |   12308 | MERTA ROAD JN              | JODHPUR JN                 |
+| 57 |   12308 | JODHPUR JN                 | End of ...                 |
+|  1 |   22863 | mumbai central             | surat                      |
+|  2 |   22863 | surat                      | baroda                     |
+|  3 |   22863 | baroda                     | ahmednagar JN              |
+|  4 |   22863 | ahmednagar JN              | surendranagar              |
+|  5 |   22863 | surendranagar              | rajkot JN                  |
+|  6 |   22863 | rajkot JN                  | hapa                       |
+|  7 |   22863 | hapa                       | End of ...                 |
+|  8 |   22868 | pune JN                    | uruli                      |
+|  9 |   22868 | uruli                      | daund chord line           |
+| 10 |   22868 | daund chord line           | ahmednagar                 |
+| 11 |   22868 | ahmednagar                 | belapur                    |
+| 12 |   22868 | belapur                    | kopargaon                  |
+| 13 |   22868 | kopargaon                  | manmad JN                  |
+| 14 |   22868 | manmad JN                  | daund chord line           |
+| 15 |   22868 | daund chord line           | bhopal                     |
+| 16 |   22868 | bhopal                     | End of ...                 |
++----+---------+----------------------------+----------------------------+
+57 rows in set (0.00 sec)
+
+mysql> select * from pune_metro_stations;
++---------+---------------------------------------------------+----------+------+--------------+---------------------+
+| stop_id | stop_name                                         | route_no | city | next_stop_id | distance_to_next_km |
++---------+---------------------------------------------------+----------+------+--------------+---------------------+
+|       1 | Chandni Chowk                                     | Line-1   | pune |            2 |                1.43 |
+|       2 | Kothrud Bus Depot                                 | Line-1   | pune |            3 |                2.86 |
+|       3 | Vanaz                                             | Line-1   | pune |            4 |                1.00 |
+|       4 | Anand Nagar                                       | Line-1   | pune |            5 |                1.43 |
+|       5 | Ideal Colony                                      | Line-1   | pune |            6 |                1.15 |
+|       6 | Nal Stop                                          | Line-1   | pune |            7 |                2.47 |
+|       7 | Garware College                                   | Line-1   | pune |            8 |                1.88 |
+|       8 | Deccan Gymkhana                                   | Line-1   | pune |            9 |                1.01 |
+|       9 | Chhatrapati Sambhaji Udyan                        | Line-1   | pune |           10 |                2.40 |
+|      10 | PMC Bhavan                                        | Line-1   | pune |           11 |                1.99 |
+|      11 | Civil Court (interchange station with the Line-2) | Line-1   | pune |           12 |                1.73 |
+|      12 | Mangalwar Peth                                    | Line-1   | pune |           13 |                1.69 |
+|      13 | Pune Railway Station                              | Line-1   | pune |           14 |                2.28 |
+|      14 | Ruby Hall Clinic                                  | Line-1   | pune |           15 |                1.30 |
+|      15 | Bund Garden                                       | Line-1   | pune |           16 |                2.66 |
+|      16 | Yerawada                                          | Line-1   | pune |           17 |                2.41 |
+|      17 | Kalyani Nagar                                     | Line-1   | pune |           18 |                1.08 |
+|      18 | Ramwadi                                           | Line-1   | pune |         NULL |                1.16 |
+|      19 | Bhakti Shakti                                     | Line-2   | pune |           20 |                1.54 |
+|      20 | Nigdi                                             | Line-2   | pune |           21 |                1.23 |
+|      21 | Akurdi                                            | Line-2   | pune |           22 |                2.55 |
+|      22 | Chinchwad                                         | Line-2   | pune |           23 |                2.06 |
+|      23 | PCMC Bhavan                                       | Line-2   | pune |           24 |                1.66 |
+|      24 | Sant Tukaram Nagar                                | Line-2   | pune |           25 |                1.09 |
+|      25 | Nashik Phata                                      | Line-2   | pune |           26 |                1.47 |
+|      26 | Kasarwadi                                         | Line-2   | pune |           27 |                1.10 |
+|      27 | Phugewadi                                         | Line-2   | pune |           28 |                2.08 |
+|      28 | Dapodi                                            | Line-2   | pune |           29 |                2.11 |
+|      29 | Bopodi                                            | Line-2   | pune |           30 |                1.29 |
+|      30 | Khadki                                            | Line-2   | pune |           31 |                1.13 |
+|      31 | Range Hills                                       | Line-2   | pune |           32 |                2.79 |
+|      32 | Shivaji Nagar                                     | Line-2   | pune |           33 |                1.55 |
+|      33 | Chinchwad                                         | Line-2   | pune |           34 |                2.36 |
+|      34 | Kasba Peth                                        | Line-2   | pune |           35 |                2.18 |
+|      35 | Mandai                                            | Line-2   | pune |           36 |                2.81 |
+|      36 | Swargate                                          | Line-2   | pune |         NULL |                2.52 |
+|      37 | Market Yard                                       | Line-2   | pune |           38 |                1.15 |
+|      38 | Bibwewadi                                         | Line-2   | pune |           39 |                1.18 |
+|      39 | Padmavati                                         | Line-2   | pune |           40 |                1.47 |
+|      40 | Balaji Nagar                                      | Line-2   | pune |           41 |                2.82 |
+|      41 | Katraj                                            | Line-2   | pune |           42 |                2.67 |
+|      42 | Civil Court                                       | Line-3   | pune |           43 |                1.89 |
+|      43 | Shivaji Nagar                                     | Line-3   | pune |           44 |                2.45 |
+|      44 | Agriculture College                               | Line-3   | pune |           45 |                1.56 |
+|      45 | R.B.I.                                            | Line-3   | pune |           46 |                1.48 |
+|      46 | University                                        | Line-3   | pune |           47 |                1.69 |
+|      47 | Sakal Nagar                                       | Line-3   | pune |           48 |                1.01 |
+|      48 | Krushi Anusadhan                                  | Line-3   | pune |           49 |                2.97 |
+|      49 | Baner                                             | Line-3   | pune |           50 |                2.84 |
+|      50 | Baner Gaon                                        | Line-3   | pune |           51 |                2.28 |
+|      51 | Balewadi Phata                                    | Line-3   | pune |           52 |                1.89 |
+|      52 | Laxmi Nagar                                       | Line-3   | pune |           53 |                1.59 |
+|      53 | Ram Nagar (Nashik Phata)                          | Line-3   | pune |           54 |                1.28 |
+|      54 | NICMAR                                            | Line-3   | pune |           55 |                2.64 |
+|      55 | Balewadi Stadium                                  | Line-3   | pune |           56 |                2.35 |
+|      56 | Wakad Chowk                                       | Line-3   | pune |           57 |                2.84 |
+|      57 | Hinjewadi                                         | Line-3   | pune |           58 |                2.13 |
+|      58 | Shivaji Chowk                                     | Line-3   | pune |           59 |                1.15 |
+|      59 | Pall India                                        | Line-3   | pune |           60 |                2.35 |
+|      60 | Wipro Phase II                                    | Line-3   | pune |           61 |                1.30 |
+|      61 | Infosys Phase II                                  | Line-3   | pune |           62 |                2.45 |
+|      62 | Dohler                                            | Line-3   | pune |           63 |                1.35 |
+|      63 | Embassy Quadron Business Park                     | Line-3   | pune |           64 |                2.38 |
+|      64 | Megapolis Circle                                  | Line-3   | pune |         NULL |                2.87 |
++---------+---------------------------------------------------+----------+------+--------------+---------------------+
+64 rows in set (0.03 sec)
+
+mysql> select stop_id, stop_name 'Current station', lead(stop_name) over(partition by route_no order by stop_id) 'next station' from pune_metro_stations;
++---------+---------------------------------------------------+---------------------------------------------------+
+| stop_id | Current station                                   | next station                                      |
++---------+---------------------------------------------------+---------------------------------------------------+
+|       1 | Chandni Chowk                                     | Kothrud Bus Depot                                 |
+|       2 | Kothrud Bus Depot                                 | Vanaz                                             |
+|       3 | Vanaz                                             | Anand Nagar                                       |
+|       4 | Anand Nagar                                       | Ideal Colony                                      |
+|       5 | Ideal Colony                                      | Nal Stop                                          |
+|       6 | Nal Stop                                          | Garware College                                   |
+|       7 | Garware College                                   | Deccan Gymkhana                                   |
+|       8 | Deccan Gymkhana                                   | Chhatrapati Sambhaji Udyan                        |
+|       9 | Chhatrapati Sambhaji Udyan                        | PMC Bhavan                                        |
+|      10 | PMC Bhavan                                        | Civil Court (interchange station with the Line-2) |
+|      11 | Civil Court (interchange station with the Line-2) | Mangalwar Peth                                    |
+|      12 | Mangalwar Peth                                    | Pune Railway Station                              |
+|      13 | Pune Railway Station                              | Ruby Hall Clinic                                  |
+|      14 | Ruby Hall Clinic                                  | Bund Garden                                       |
+|      15 | Bund Garden                                       | Yerawada                                          |
+|      16 | Yerawada                                          | Kalyani Nagar                                     |
+|      17 | Kalyani Nagar                                     | Ramwadi                                           |
+|      18 | Ramwadi                                           | NULL                                              |
+|      19 | Bhakti Shakti                                     | Nigdi                                             |
+|      20 | Nigdi                                             | Akurdi                                            |
+|      21 | Akurdi                                            | Chinchwad                                         |
+|      22 | Chinchwad                                         | PCMC Bhavan                                       |
+|      23 | PCMC Bhavan                                       | Sant Tukaram Nagar                                |
+|      24 | Sant Tukaram Nagar                                | Nashik Phata                                      |
+|      25 | Nashik Phata                                      | Kasarwadi                                         |
+|      26 | Kasarwadi                                         | Phugewadi                                         |
+|      27 | Phugewadi                                         | Dapodi                                            |
+|      28 | Dapodi                                            | Bopodi                                            |
+|      29 | Bopodi                                            | Khadki                                            |
+|      30 | Khadki                                            | Range Hills                                       |
+|      31 | Range Hills                                       | Shivaji Nagar                                     |
+|      32 | Shivaji Nagar                                     | Chinchwad                                         |
+|      33 | Chinchwad                                         | Kasba Peth                                        |
+|      34 | Kasba Peth                                        | Mandai                                            |
+|      35 | Mandai                                            | Swargate                                          |
+|      36 | Swargate                                          | Market Yard                                       |
+|      37 | Market Yard                                       | Bibwewadi                                         |
+|      38 | Bibwewadi                                         | Padmavati                                         |
+|      39 | Padmavati                                         | Balaji Nagar                                      |
+|      40 | Balaji Nagar                                      | Katraj                                            |
+|      41 | Katraj                                            | NULL                                              |
+|      42 | Civil Court                                       | Shivaji Nagar                                     |
+|      43 | Shivaji Nagar                                     | Agriculture College                               |
+|      44 | Agriculture College                               | R.B.I.                                            |
+|      45 | R.B.I.                                            | University                                        |
+|      46 | University                                        | Sakal Nagar                                       |
+|      47 | Sakal Nagar                                       | Krushi Anusadhan                                  |
+|      48 | Krushi Anusadhan                                  | Baner                                             |
+|      49 | Baner                                             | Baner Gaon                                        |
+|      50 | Baner Gaon                                        | Balewadi Phata                                    |
+|      51 | Balewadi Phata                                    | Laxmi Nagar                                       |
+|      52 | Laxmi Nagar                                       | Ram Nagar (Nashik Phata)                          |
+|      53 | Ram Nagar (Nashik Phata)                          | NICMAR                                            |
+|      54 | NICMAR                                            | Balewadi Stadium                                  |
+|      55 | Balewadi Stadium                                  | Wakad Chowk                                       |
+|      56 | Wakad Chowk                                       | Hinjewadi                                         |
+|      57 | Hinjewadi                                         | Shivaji Chowk                                     |
+|      58 | Shivaji Chowk                                     | Pall India                                        |
+|      59 | Pall India                                        | Wipro Phase II                                    |
+|      60 | Wipro Phase II                                    | Infosys Phase II                                  |
+|      61 | Infosys Phase II                                  | Dohler                                            |
+|      62 | Dohler                                            | Embassy Quadron Business Park                     |
+|      63 | Embassy Quadron Business Park                     | Megapolis Circle                                  |
+|      64 | Megapolis Circle                                  | NULL                                              |
++---------+---------------------------------------------------+---------------------------------------------------+
+64 rows in set (0.00 sec)
+
+mysql> select stop_id, stop_name 'Current station', lead(stop_name) over(partition by route_no order by stop_id) 'next station' from pune_metro_stations;
++---------+---------------------------------------------------+---------------------------------------------------+
+| stop_id | Current station                                   | next station                                      |
++---------+---------------------------------------------------+---------------------------------------------------+
+|       1 | Chandni Chowk                                     | Kothrud Bus Depot                                 |
+|       2 | Kothrud Bus Depot                                 | Vanaz                                             |
+|       3 | Vanaz                                             | Anand Nagar                                       |
+|       4 | Anand Nagar                                       | Ideal Colony                                      |
+|       5 | Ideal Colony                                      | Nal Stop                                          |
+|       6 | Nal Stop                                          | Garware College                                   |
+|       7 | Garware College                                   | Deccan Gymkhana                                   |
+|       8 | Deccan Gymkhana                                   | Chhatrapati Sambhaji Udyan                        |
+|       9 | Chhatrapati Sambhaji Udyan                        | PMC Bhavan                                        |
+|      10 | PMC Bhavan                                        | Civil Court (interchange station with the Line-2) |
+|      11 | Civil Court (interchange station with the Line-2) | Mangalwar Peth                                    |
+|      12 | Mangalwar Peth                                    | Pune Railway Station                              |
+|      13 | Pune Railway Station                              | Ruby Hall Clinic                                  |
+|      14 | Ruby Hall Clinic                                  | Bund Garden                                       |
+|      15 | Bund Garden                                       | Yerawada                                          |
+|      16 | Yerawada                                          | Kalyani Nagar                                     |
+|      17 | Kalyani Nagar                                     | Ramwadi                                           |
+|      18 | Ramwadi                                           | NULL                                              |
+|      19 | Bhakti Shakti                                     | Nigdi                                             |
+|      20 | Nigdi                                             | Akurdi                                            |
+|      21 | Akurdi                                            | Chinchwad                                         |
+|      22 | Chinchwad                                         | PCMC Bhavan                                       |
+|      23 | PCMC Bhavan                                       | Sant Tukaram Nagar                                |
+|      24 | Sant Tukaram Nagar                                | Nashik Phata                                      |
+|      25 | Nashik Phata                                      | Kasarwadi                                         |
+|      26 | Kasarwadi                                         | Phugewadi                                         |
+|      27 | Phugewadi                                         | Dapodi                                            |
+|      28 | Dapodi                                            | Bopodi                                            |
+|      29 | Bopodi                                            | Khadki                                            |
+|      30 | Khadki                                            | Range Hills                                       |
+|      31 | Range Hills                                       | Shivaji Nagar                                     |
+|      32 | Shivaji Nagar                                     | Chinchwad                                         |
+|      33 | Chinchwad                                         | Kasba Peth                                        |
+|      34 | Kasba Peth                                        | Mandai                                            |
+|      35 | Mandai                                            | Swargate                                          |
+|      36 | Swargate                                          | Market Yard                                       |
+|      37 | Market Yard                                       | Bibwewadi                                         |
+|      38 | Bibwewadi                                         | Padmavati                                         |
+|      39 | Padmavati                                         | Balaji Nagar                                      |
+|      40 | Balaji Nagar                                      | Katraj                                            |
+|      41 | Katraj                                            | NULL                                              |
+|      42 | Civil Court                                       | Shivaji Nagar                                     |
+|      43 | Shivaji Nagar                                     | Agriculture College                               |
+|      44 | Agriculture College                               | R.B.I.                                            |
+|      45 | R.B.I.                                            | University                                        |
+|      46 | University                                        | Sakal Nagar                                       |
+|      47 | Sakal Nagar                                       | Krushi Anusadhan                                  |
+|      48 | Krushi Anusadhan                                  | Baner                                             |
+|      49 | Baner                                             | Baner Gaon                                        |
+|      50 | Baner Gaon                                        | Balewadi Phata                                    |
+|      51 | Balewadi Phata                                    | Laxmi Nagar                                       |
+|      52 | Laxmi Nagar                                       | Ram Nagar (Nashik Phata)                          |
+|      53 | Ram Nagar (Nashik Phata)                          | NICMAR                                            |
+|      54 | NICMAR                                            | Balewadi Stadium                                  |
+|      55 | Balewadi Stadium                                  | Wakad Chowk                                       |
+|      56 | Wakad Chowk                                       | Hinjewadi                                         |
+|      57 | Hinjewadi                                         | Shivaji Chowk                                     |
+|      58 | Shivaji Chowk                                     | Pall India                                        |
+|      59 | Pall India                                        | Wipro Phase II                                    |
+|      60 | Wipro Phase II                                    | Infosys Phase II                                  |
+|      61 | Infosys Phase II                                  | Dohler                                            |
+|      62 | Dohler                                            | Embassy Quadron Business Park                     |
+|      63 | Embassy Quadron Business Park                     | Megapolis Circle                                  |
+|      64 | Megapolis Circle                                  | NULL                                              |
++---------+---------------------------------------------------+---------------------------------------------------+
+64 rows in set (0.00 sec)
+
+  
