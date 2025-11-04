@@ -1,0 +1,2073 @@
+mysql> exit
+Bye
+
+C:\Users\SALEEL>mysql --user=root --password=root db1
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.41 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use x;
+Database changed
+mysql> create table b(c1 varchar(10) primary key, c2 date unique);
+ERROR 1050 (42S01): Table 'b' already exists
+mysql> create table c(c1 varchar(10) primary key, c2 date unique);
+ERROR 1050 (42S01): Table 'c' already exists
+mysql> create table d(c1 varchar(10) primary key, c2 date unique);
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> desc d;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(10) | NO   | PRI | NULL    |       |
+| c2    | date        | YES  | UNI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.05 sec)
+
+mysql> alter tabe d c3 int unique key;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tabe d c3 int unique key' at line 1
+mysql> alter table d add c3 int unique key
+    -> ;
+Query OK, 0 rows affected (0.10 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc d;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(10) | NO   | PRI | NULL    |       |
+| c2    | date        | YES  | UNI | NULL    |       |
+| c3    | int         | YES  | UNI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> show indexs from d;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'indexs from d' at line 1
+mysql> show index from d;
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| d     |          0 | PRIMARY  |            1 | c1          | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| d     |          0 | c2       |            1 | c2          | A         |           0 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
+| d     |          0 | c3       |            1 | c3          | A         |           0 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+3 rows in set (0.03 sec)
+       show index from d;
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| d     |          0 | PRIMARY  |            1 | c1          | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| d     |          0 | c2       |            1 | c2          | A         |           0 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
+| d     |          0 | c3       |            1 | c3          | A         |           0 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+3 rows in set (0.01 sec)
+
+mysql> desc d;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(10) | NO   | PRI | NULL    |       |
+| c2    | date        | YES  | UNI | NULL    |       |
+| c3    | int         | YES  | UNI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select empno, ename, job from emp;
+ERROR 1146 (42S02): Table 'x.emp' doesn't exist
+mysql> use db1
+Database changed
+mysql> select empno, ename, job from emp;
++-------+----------+---------------------+
+| empno | ename    | job                 |
++-------+----------+---------------------+
+|  6001 | GITA     | Compliance officers |
+|  6129 | VRUSHALI | Compliance officers |
+|  6473 | SHARMIN  | Public Relation     |
+|  6781 | BANDISH  | Public Relation     |
+|  7369 | SMITH    | CLERK               |
+|  7415 | AARAV    | CLERK               |
+|  7421 | THOMAS   | CLERK               |
+|  7499 | ALLEN    | SALESMAN            |
+|  7521 | WARD     | SALESMAN            |
+|  7566 | JONES    | MANAGER             |
+|  7654 | MARTIN   | SALESMAN            |
+|  7698 | BLAKE    | MANAGER             |
+|  7782 | CLARK    | MANAGER             |
+|  7788 | SCOTT    | ANALYST             |
+|  7839 | KING     | PRESIDENT           |
+|  7840 | FRED     | vice PRESIDENT      |
+|  7844 | TURNER   | SALESMAN            |
+|  7876 | ADAMS    | CLERK               |
+|  7888 | Ruhan    | Network             |
+|  7889 | Neel     | vice PRESIDENT      |
+|  7900 | JAMES    | CLERK               |
+|  7902 | FORD     | ANALYST             |
+|  7919 | HOFFMAN  | MANAGER             |
+|  7920 | GRASS    | SALESMAN            |
+|  7934 | MILLER   | CLERK               |
+|  7945 | AARUSH   | SALESMAN            |
+|  7949 | ALEX     | MANAGER             |
+|  8433 | NATASHA  | CLERK               |
+|  9400 | SANGITA  | Compliance officers |
+|  9473 | SUPRIYA  | ANALYST             |
++-------+----------+---------------------+
+30 rows in set (0.00 sec)
+
+mysql>
+mysql> select empno, ename, job from emp where job='manager';
++-------+---------+---------+
+| empno | ename   | job     |
++-------+---------+---------+
+|  7566 | JONES   | MANAGER |
+|  7698 | BLAKE   | MANAGER |
+|  7782 | CLARK   | MANAGER |
+|  7919 | HOFFMAN | MANAGER |
+|  7949 | ALEX    | MANAGER |
++-------+---------+---------+
+5 rows in set (0.00 sec)
+
+mysql> desc emp;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EMPNO     | int         | NO   | PRI | NULL    |       |
+| ENAME     | varchar(12) | YES  |     | NULL    |       |
+| GENDER    | char(1)     | YES  |     | NULL    |       |
+| JOB       | varchar(20) | YES  |     | NULL    |       |
+| MGR       | int         | YES  | MUL | NULL    |       |
+| HIREDATE  | date        | YES  |     | NULL    |       |
+| SAL       | int         | YES  |     | NULL    |       |
+| COMM      | int         | YES  |     | NULL    |       |
+| DEPTNO    | int         | NO   | MUL | NULL    |       |
+| BONUSID   | int         | YES  |     | NULL    |       |
+| USER NAME | varchar(20) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| PHONE     | varchar(45) | YES  |     | NULL    |       |
+| isActive  | tinyint(1)  | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+14 rows in set (0.00 sec)
+
+mysql> select empno, ename, job from emp where job='manager';
++-------+---------+---------+
+| empno | ename   | job     |
++-------+---------+---------+
+|  7566 | JONES   | MANAGER |
+|  7698 | BLAKE   | MANAGER |
+|  7782 | CLARK   | MANAGER |
+|  7919 | HOFFMAN | MANAGER |
+|  7949 | ALEX    | MANAGER |
++-------+---------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select empno, ename, job from emp where empno=7788;
++-------+-------+---------+
+| empno | ename | job     |
++-------+-------+---------+
+|  7788 | SCOTT | ANALYST |
++-------+-------+---------+
+1 row in set (0.00 sec)
+
+mysql> explain select empno, ename, job from emp where job='manager';
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+| id | select_type | table | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra       |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+|  1 | SIMPLE      | emp   | NULL       | ALL  | NULL          | NULL | NULL    | NULL |   30 |    10.00 | Using where |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+1 row in set, 1 warning (0.01 sec)
+
+mysql> explainselect empno, ename, job from emp where empno=7788;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'explainselect empno, ename, job from emp where empno=7788' at line 1
+mysql> explain select empno, ename, job from emp where job='manager';
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+| id | select_type | table | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra       |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+|  1 | SIMPLE      | emp   | NULL       | ALL  | NULL          | NULL | NULL    | NULL |   30 |    10.00 | Using where |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> explain select empno, ename, job from emp where empno=7788;
++----+-------------+-------+------------+-------+---------------+---------+---------+-------+------+----------+-------+
+| id | select_type | table | partitions | type  | possible_keys | key     | key_len | ref   | rows | filtered | Extra |
++----+-------------+-------+------------+-------+---------------+---------+---------+-------+------+----------+-------+
+|  1 | SIMPLE      | emp   | NULL       | const | PRIMARY       | PRIMARY | 4       | const |    1 |   100.00 | NULL  |
++----+-------------+-------+------------+-------+---------------+---------+---------+-------+------+----------+-------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> euse x;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'euse x' at line 1
+mysql> use x;
+Database changed
+mysql> show tables;
++-------------+
+| Tables_in_x |
++-------------+
+| a           |
+| b           |
+| c           |
+| d           |
+| t1          |
+| t2          |
+| t4          |
+| t5          |
+| t6          |
+| t7          |
++-------------+
+10 rows in set (0.01 sec)
+
+mysql>
+mysql> use information_schema;
+Database changed
+mysql> show tables;
++---------------------------------------+
+| Tables_in_information_schema          |
++---------------------------------------+
+| ADMINISTRABLE_ROLE_AUTHORIZATIONS     |
+| APPLICABLE_ROLES                      |
+| CHARACTER_SETS                        |
+| CHECK_CONSTRAINTS                     |
+| COLLATION_CHARACTER_SET_APPLICABILITY |
+| COLLATIONS                            |
+| COLUMN_PRIVILEGES                     |
+| COLUMN_STATISTICS                     |
+| COLUMNS                               |
+| COLUMNS_EXTENSIONS                    |
+| ENABLED_ROLES                         |
+| ENGINES                               |
+| EVENTS                                |
+| FILES                                 |
+| INNODB_BUFFER_PAGE                    |
+| INNODB_BUFFER_PAGE_LRU                |
+| INNODB_BUFFER_POOL_STATS              |
+| INNODB_CACHED_INDEXES                 |
+| INNODB_CMP                            |
+| INNODB_CMP_PER_INDEX                  |
+| INNODB_CMP_PER_INDEX_RESET            |
+| INNODB_CMP_RESET                      |
+| INNODB_CMPMEM                         |
+| INNODB_CMPMEM_RESET                   |
+| INNODB_COLUMNS                        |
+| INNODB_DATAFILES                      |
+| INNODB_FIELDS                         |
+| INNODB_FOREIGN                        |
+| INNODB_FOREIGN_COLS                   |
+| INNODB_FT_BEING_DELETED               |
+| INNODB_FT_CONFIG                      |
+| INNODB_FT_DEFAULT_STOPWORD            |
+| INNODB_FT_DELETED                     |
+| INNODB_FT_INDEX_CACHE                 |
+| INNODB_FT_INDEX_TABLE                 |
+| INNODB_INDEXES                        |
+| INNODB_METRICS                        |
+| INNODB_SESSION_TEMP_TABLESPACES       |
+| INNODB_TABLES                         |
+| INNODB_TABLESPACES                    |
+| INNODB_TABLESPACES_BRIEF              |
+| INNODB_TABLESTATS                     |
+| INNODB_TEMP_TABLE_INFO                |
+| INNODB_TRX                            |
+| INNODB_VIRTUAL                        |
+| KEY_COLUMN_USAGE                      |
+| KEYWORDS                              |
+| OPTIMIZER_TRACE                       |
+| PARAMETERS                            |
+| PARTITIONS                            |
+| PLUGINS                               |
+| PROCESSLIST                           |
+| PROFILING                             |
+| REFERENTIAL_CONSTRAINTS               |
+| RESOURCE_GROUPS                       |
+| ROLE_COLUMN_GRANTS                    |
+| ROLE_ROUTINE_GRANTS                   |
+| ROLE_TABLE_GRANTS                     |
+| ROUTINES                              |
+| SCHEMA_PRIVILEGES                     |
+| SCHEMATA                              |
+| SCHEMATA_EXTENSIONS                   |
+| ST_GEOMETRY_COLUMNS                   |
+| ST_SPATIAL_REFERENCE_SYSTEMS          |
+| ST_UNITS_OF_MEASURE                   |
+| STATISTICS                            |
+| TABLE_CONSTRAINTS                     |
+| TABLE_CONSTRAINTS_EXTENSIONS          |
+| TABLE_PRIVILEGES                      |
+| TABLES                                |
+| TABLES_EXTENSIONS                     |
+| TABLESPACES                           |
+| TABLESPACES_EXTENSIONS                |
+| TRIGGERS                              |
+| USER_ATTRIBUTES                       |
+| USER_PRIVILEGES                       |
+| VIEW_ROUTINE_USAGE                    |
+| VIEW_TABLE_USAGE                      |
+| VIEWS                                 |
++---------------------------------------+
+79 rows in set (0.01 sec)
+
+mysql> desc tables;
++-----------------+--------------------------------------------------------------------+------+-----+---------+-------+
+| Field           | Type                                                               | Null | Key | Default | Extra |
++-----------------+--------------------------------------------------------------------+------+-----+---------+-------+
+| TABLE_CATALOG   | varchar(64)                                                        | YES  |     | NULL    |       |
+| TABLE_SCHEMA    | varchar(64)                                                        | YES  |     | NULL    |       |
+| TABLE_NAME      | varchar(64)                                                        | YES  |     | NULL    |       |
+| TABLE_TYPE      | enum('BASE TABLE','VIEW','SYSTEM VIEW')                            | NO   |     | NULL    |       |
+| ENGINE          | varchar(64)                                                        | YES  |     | NULL    |       |
+| VERSION         | int                                                                | YES  |     | NULL    |       |
+| ROW_FORMAT      | enum('Fixed','Dynamic','Compressed','Redundant','Compact','Paged') | YES  |     | NULL    |       |
+| TABLE_ROWS      | bigint unsigned                                                    | YES  |     | NULL    |       |
+| AVG_ROW_LENGTH  | bigint unsigned                                                    | YES  |     | NULL    |       |
+| DATA_LENGTH     | bigint unsigned                                                    | YES  |     | NULL    |       |
+| MAX_DATA_LENGTH | bigint unsigned                                                    | YES  |     | NULL    |       |
+| INDEX_LENGTH    | bigint unsigned                                                    | YES  |     | NULL    |       |
+| DATA_FREE       | bigint unsigned                                                    | YES  |     | NULL    |       |
+| AUTO_INCREMENT  | bigint unsigned                                                    | YES  |     | NULL    |       |
+| CREATE_TIME     | timestamp                                                          | NO   |     | NULL    |       |
+| UPDATE_TIME     | datetime                                                           | YES  |     | NULL    |       |
+| CHECK_TIME      | datetime                                                           | YES  |     | NULL    |       |
+| TABLE_COLLATION | varchar(64)                                                        | YES  |     | NULL    |       |
+| CHECKSUM        | bigint                                                             | YES  |     | NULL    |       |
+| CREATE_OPTIONS  | varchar(256)                                                       | YES  |     | NULL    |       |
+| TABLE_COMMENT   | text                                                               | YES  |     | NULL    |       |
++-----------------+--------------------------------------------------------------------+------+-----+---------+-------+
+21 rows in set (0.00 sec)
+
+mysql> select TABLE_SCHEMA,TABLE_NAME, TABLE_TYPE,ENGINE,TABLE_ROWS from  information_schema.tables;
++--------------------+------------------------------------------------------+-------------+--------------------+------------+
+| TABLE_SCHEMA       | TABLE_NAME                                           | TABLE_TYPE  | ENGINE             | TABLE_ROWS |
++--------------------+------------------------------------------------------+-------------+--------------------+------------+
+| mysql              | innodb_table_stats                                   | BASE TABLE  | InnoDB             |        215 |
+| mysql              | innodb_index_stats                                   | BASE TABLE  | InnoDB             |        883 |
+| information_schema | CHARACTER_SETS                                       | SYSTEM VIEW | NULL               |          0 |
+| information_schema | CHECK_CONSTRAINTS                                    | SYSTEM VIEW | NULL               |          0 |
+| information_schema | COLLATIONS                                           | SYSTEM VIEW | NULL               |          0 |
+| information_schema | COLLATION_CHARACTER_SET_APPLICABILITY                | SYSTEM VIEW | NULL               |          0 |
+| information_schema | COLUMNS                                              | SYSTEM VIEW | NULL               |          0 |
+| information_schema | COLUMNS_EXTENSIONS                                   | SYSTEM VIEW | NULL               |          0 |
+| information_schema | COLUMN_STATISTICS                                    | SYSTEM VIEW | NULL               |          0 |
+| information_schema | EVENTS                                               | SYSTEM VIEW | NULL               |          0 |
+| information_schema | FILES                                                | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_DATAFILES                                     | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_FOREIGN                                       | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_FOREIGN_COLS                                  | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_FIELDS                                        | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_TABLESPACES_BRIEF                             | SYSTEM VIEW | NULL               |          0 |
+| information_schema | KEY_COLUMN_USAGE                                     | SYSTEM VIEW | NULL               |          0 |
+| information_schema | KEYWORDS                                             | SYSTEM VIEW | NULL               |          0 |
+| information_schema | PARAMETERS                                           | SYSTEM VIEW | NULL               |          0 |
+| information_schema | PARTITIONS                                           | SYSTEM VIEW | NULL               |          0 |
+| information_schema | REFERENTIAL_CONSTRAINTS                              | SYSTEM VIEW | NULL               |          0 |
+| information_schema | RESOURCE_GROUPS                                      | SYSTEM VIEW | NULL               |          0 |
+| information_schema | ROUTINES                                             | SYSTEM VIEW | NULL               |          0 |
+| information_schema | SCHEMATA                                             | SYSTEM VIEW | NULL               |          0 |
+| information_schema | SCHEMATA_EXTENSIONS                                  | SYSTEM VIEW | NULL               |          0 |
+| information_schema | ST_SPATIAL_REFERENCE_SYSTEMS                         | SYSTEM VIEW | NULL               |          0 |
+| information_schema | ST_UNITS_OF_MEASURE                                  | SYSTEM VIEW | NULL               |          0 |
+| information_schema | ST_GEOMETRY_COLUMNS                                  | SYSTEM VIEW | NULL               |          0 |
+| information_schema | STATISTICS                                           | SYSTEM VIEW | NULL               |          0 |
+| information_schema | TABLE_CONSTRAINTS                                    | SYSTEM VIEW | NULL               |          0 |
+| information_schema | TABLE_CONSTRAINTS_EXTENSIONS                         | SYSTEM VIEW | NULL               |          0 |
+| information_schema | TABLES                                               | SYSTEM VIEW | NULL               |          0 |
+| information_schema | TABLES_EXTENSIONS                                    | SYSTEM VIEW | NULL               |          0 |
+| information_schema | TABLESPACES_EXTENSIONS                               | SYSTEM VIEW | NULL               |          0 |
+| information_schema | TRIGGERS                                             | SYSTEM VIEW | NULL               |          0 |
+| information_schema | VIEW_ROUTINE_USAGE                                   | SYSTEM VIEW | NULL               |          0 |
+| information_schema | VIEW_TABLE_USAGE                                     | SYSTEM VIEW | NULL               |          0 |
+| information_schema | VIEWS                                                | SYSTEM VIEW | NULL               |          0 |
+| information_schema | COLUMN_PRIVILEGES                                    | SYSTEM VIEW | NULL               |          0 |
+| information_schema | ENGINES                                              | SYSTEM VIEW | NULL               |          0 |
+| information_schema | OPTIMIZER_TRACE                                      | SYSTEM VIEW | NULL               |          0 |
+| information_schema | PLUGINS                                              | SYSTEM VIEW | NULL               |          0 |
+| information_schema | PROCESSLIST                                          | SYSTEM VIEW | NULL               |          0 |
+| information_schema | PROFILING                                            | SYSTEM VIEW | NULL               |          0 |
+| information_schema | SCHEMA_PRIVILEGES                                    | SYSTEM VIEW | NULL               |          0 |
+| information_schema | TABLESPACES                                          | SYSTEM VIEW | NULL               |          0 |
+| information_schema | TABLE_PRIVILEGES                                     | SYSTEM VIEW | NULL               |          0 |
+| information_schema | USER_PRIVILEGES                                      | SYSTEM VIEW | NULL               |          0 |
+| performance_schema | cond_instances                                       | BASE TABLE  | PERFORMANCE_SCHEMA |        256 |
+| performance_schema | error_log                                            | BASE TABLE  | PERFORMANCE_SCHEMA |       1033 |
+| performance_schema | events_waits_current                                 | BASE TABLE  | PERFORMANCE_SCHEMA |       1536 |
+| performance_schema | events_waits_history                                 | BASE TABLE  | PERFORMANCE_SCHEMA |       2560 |
+| performance_schema | events_waits_history_long                            | BASE TABLE  | PERFORMANCE_SCHEMA |      10000 |
+| performance_schema | events_waits_summary_by_host_by_event_name           | BASE TABLE  | PERFORMANCE_SCHEMA |      83712 |
+| performance_schema | events_waits_summary_by_instance                     | BASE TABLE  | PERFORMANCE_SCHEMA |      10752 |
+| performance_schema | events_waits_summary_by_thread_by_event_name         | BASE TABLE  | PERFORMANCE_SCHEMA |     167424 |
+| performance_schema | events_waits_summary_by_user_by_event_name           | BASE TABLE  | PERFORMANCE_SCHEMA |      83712 |
+| performance_schema | events_waits_summary_by_account_by_event_name        | BASE TABLE  | PERFORMANCE_SCHEMA |      83712 |
+| performance_schema | events_waits_summary_global_by_event_name            | BASE TABLE  | PERFORMANCE_SCHEMA |        654 |
+| performance_schema | file_instances                                       | BASE TABLE  | PERFORMANCE_SCHEMA |       4096 |
+| performance_schema | file_summary_by_event_name                           | BASE TABLE  | PERFORMANCE_SCHEMA |         80 |
+| performance_schema | file_summary_by_instance                             | BASE TABLE  | PERFORMANCE_SCHEMA |       4096 |
+| performance_schema | host_cache                                           | BASE TABLE  | PERFORMANCE_SCHEMA |        279 |
+| performance_schema | mutex_instances                                      | BASE TABLE  | PERFORMANCE_SCHEMA |       4096 |
+| performance_schema | objects_summary_global_by_type                       | BASE TABLE  | PERFORMANCE_SCHEMA |       4096 |
+| performance_schema | performance_timers                                   | BASE TABLE  | PERFORMANCE_SCHEMA |          5 |
+| performance_schema | processlist                                          | BASE TABLE  | PERFORMANCE_SCHEMA |        256 |
+| performance_schema | rwlock_instances                                     | BASE TABLE  | PERFORMANCE_SCHEMA |       2048 |
+| performance_schema | setup_actors                                         | BASE TABLE  | PERFORMANCE_SCHEMA |        128 |
+| performance_schema | setup_consumers                                      | BASE TABLE  | PERFORMANCE_SCHEMA |         16 |
+| performance_schema | setup_instruments                                    | BASE TABLE  | PERFORMANCE_SCHEMA |       1500 |
+| performance_schema | setup_objects                                        | BASE TABLE  | PERFORMANCE_SCHEMA |        128 |
+| performance_schema | setup_threads                                        | BASE TABLE  | PERFORMANCE_SCHEMA |        100 |
+| performance_schema | table_io_waits_summary_by_index_usage                | BASE TABLE  | PERFORMANCE_SCHEMA |       8192 |
+| performance_schema | table_io_waits_summary_by_table                      | BASE TABLE  | PERFORMANCE_SCHEMA |       4096 |
+| performance_schema | table_lock_waits_summary_by_table                    | BASE TABLE  | PERFORMANCE_SCHEMA |       4096 |
+| performance_schema | threads                                              | BASE TABLE  | PERFORMANCE_SCHEMA |        256 |
+| performance_schema | events_stages_current                                | BASE TABLE  | PERFORMANCE_SCHEMA |        256 |
+| performance_schema | events_stages_history                                | BASE TABLE  | PERFORMANCE_SCHEMA |       2560 |
+| performance_schema | events_stages_history_long                           | BASE TABLE  | PERFORMANCE_SCHEMA |      10000 |
+| performance_schema | events_stages_summary_by_thread_by_event_name        | BASE TABLE  | PERFORMANCE_SCHEMA |      44800 |
+| performance_schema | events_stages_summary_by_account_by_event_name       | BASE TABLE  | PERFORMANCE_SCHEMA |      22400 |
+| performance_schema | events_stages_summary_by_user_by_event_name          | BASE TABLE  | PERFORMANCE_SCHEMA |      22400 |
+| performance_schema | events_stages_summary_by_host_by_event_name          | BASE TABLE  | PERFORMANCE_SCHEMA |      22400 |
+| performance_schema | events_stages_summary_global_by_event_name           | BASE TABLE  | PERFORMANCE_SCHEMA |        175 |
+| performance_schema | events_statements_current                            | BASE TABLE  | PERFORMANCE_SCHEMA |       2560 |
+| performance_schema | events_statements_history                            | BASE TABLE  | PERFORMANCE_SCHEMA |       2560 |
+| performance_schema | events_statements_history_long                       | BASE TABLE  | PERFORMANCE_SCHEMA |      10000 |
+| performance_schema | events_statements_summary_by_thread_by_event_name    | BASE TABLE  | PERFORMANCE_SCHEMA |      56064 |
+| performance_schema | events_statements_summary_by_account_by_event_name   | BASE TABLE  | PERFORMANCE_SCHEMA |      28032 |
+| performance_schema | events_statements_summary_by_user_by_event_name      | BASE TABLE  | PERFORMANCE_SCHEMA |      28032 |
+| performance_schema | events_statements_summary_by_host_by_event_name      | BASE TABLE  | PERFORMANCE_SCHEMA |      28032 |
+| performance_schema | events_statements_summary_global_by_event_name       | BASE TABLE  | PERFORMANCE_SCHEMA |        219 |
+| performance_schema | events_statements_summary_by_digest                  | BASE TABLE  | PERFORMANCE_SCHEMA |      10000 |
+| performance_schema | events_statements_summary_by_program                 | BASE TABLE  | PERFORMANCE_SCHEMA |          0 |
+| performance_schema | events_statements_histogram_global                   | BASE TABLE  | PERFORMANCE_SCHEMA |        450 |
+| performance_schema | events_statements_histogram_by_digest                | BASE TABLE  | PERFORMANCE_SCHEMA |      10000 |
+| performance_schema | events_transactions_current                          | BASE TABLE  | PERFORMANCE_SCHEMA |        256 |
+| performance_schema | events_transactions_history                          | BASE TABLE  | PERFORMANCE_SCHEMA |       2560 |
+| performance_schema | events_transactions_history_long                     | BASE TABLE  | PERFORMANCE_SCHEMA |      10000 |
+| performance_schema | events_transactions_summary_by_thread_by_event_name  | BASE TABLE  | PERFORMANCE_SCHEMA |        256 |
+| performance_schema | events_transactions_summary_by_account_by_event_name | BASE TABLE  | PERFORMANCE_SCHEMA |        128 |
+| performance_schema | events_transactions_summary_by_user_by_event_name    | BASE TABLE  | PERFORMANCE_SCHEMA |        128 |
+| performance_schema | events_transactions_summary_by_host_by_event_name    | BASE TABLE  | PERFORMANCE_SCHEMA |        128 |
+| performance_schema | events_transactions_summary_global_by_event_name     | BASE TABLE  | PERFORMANCE_SCHEMA |          1 |
+| performance_schema | events_errors_summary_by_user_by_error               | BASE TABLE  | PERFORMANCE_SCHEMA |     209920 |
+| performance_schema | events_errors_summary_by_host_by_error               | BASE TABLE  | PERFORMANCE_SCHEMA |     209920 |
+| performance_schema | events_errors_summary_by_account_by_error            | BASE TABLE  | PERFORMANCE_SCHEMA |     209920 |
+| performance_schema | events_errors_summary_by_thread_by_error             | BASE TABLE  | PERFORMANCE_SCHEMA |     419840 |
+| performance_schema | events_errors_summary_global_by_error                | BASE TABLE  | PERFORMANCE_SCHEMA |       5314 |
+| performance_schema | users                                                | BASE TABLE  | PERFORMANCE_SCHEMA |        128 |
+| performance_schema | accounts                                             | BASE TABLE  | PERFORMANCE_SCHEMA |        128 |
+| performance_schema | hosts                                                | BASE TABLE  | PERFORMANCE_SCHEMA |        128 |
+| performance_schema | socket_instances                                     | BASE TABLE  | PERFORMANCE_SCHEMA |        256 |
+| performance_schema | socket_summary_by_instance                           | BASE TABLE  | PERFORMANCE_SCHEMA |        256 |
+| performance_schema | socket_summary_by_event_name                         | BASE TABLE  | PERFORMANCE_SCHEMA |         10 |
+| performance_schema | session_connect_attrs                                | BASE TABLE  | PERFORMANCE_SCHEMA |     131072 |
+| performance_schema | session_account_connect_attrs                        | BASE TABLE  | PERFORMANCE_SCHEMA |     131072 |
+| performance_schema | keyring_keys                                         | BASE TABLE  | PERFORMANCE_SCHEMA |         96 |
+| performance_schema | memory_summary_global_by_event_name                  | BASE TABLE  | PERFORMANCE_SCHEMA |        450 |
+| performance_schema | memory_summary_by_account_by_event_name              | BASE TABLE  | PERFORMANCE_SCHEMA |      57600 |
+| performance_schema | memory_summary_by_host_by_event_name                 | BASE TABLE  | PERFORMANCE_SCHEMA |      57600 |
+| performance_schema | memory_summary_by_thread_by_event_name               | BASE TABLE  | PERFORMANCE_SCHEMA |     115200 |
+| performance_schema | memory_summary_by_user_by_event_name                 | BASE TABLE  | PERFORMANCE_SCHEMA |      57600 |
+| performance_schema | table_handles                                        | BASE TABLE  | PERFORMANCE_SCHEMA |       1024 |
+| performance_schema | metadata_locks                                       | BASE TABLE  | PERFORMANCE_SCHEMA |       1024 |
+| performance_schema | data_locks                                           | BASE TABLE  | PERFORMANCE_SCHEMA |      99999 |
+| performance_schema | data_lock_waits                                      | BASE TABLE  | PERFORMANCE_SCHEMA |      99999 |
+| performance_schema | replication_connection_configuration                 | BASE TABLE  | PERFORMANCE_SCHEMA |        256 |
+| performance_schema | replication_group_members                            | BASE TABLE  | PERFORMANCE_SCHEMA |          0 |
+| performance_schema | replication_connection_status                        | BASE TABLE  | PERFORMANCE_SCHEMA |        256 |
+| performance_schema | replication_applier_configuration                    | BASE TABLE  | PERFORMANCE_SCHEMA |        256 |
+| performance_schema | replication_applier_status                           | BASE TABLE  | PERFORMANCE_SCHEMA |        256 |
+| performance_schema | replication_applier_status_by_coordinator            | BASE TABLE  | PERFORMANCE_SCHEMA |        256 |
+| performance_schema | replication_applier_status_by_worker                 | BASE TABLE  | PERFORMANCE_SCHEMA |       8192 |
+| performance_schema | replication_group_member_stats                       | BASE TABLE  | PERFORMANCE_SCHEMA |          0 |
+| performance_schema | replication_applier_filters                          | BASE TABLE  | PERFORMANCE_SCHEMA |          0 |
+| performance_schema | replication_applier_global_filters                   | BASE TABLE  | PERFORMANCE_SCHEMA |          0 |
+| performance_schema | replication_asynchronous_connection_failover         | BASE TABLE  | PERFORMANCE_SCHEMA |          0 |
+| performance_schema | replication_asynchronous_connection_failover_managed | BASE TABLE  | PERFORMANCE_SCHEMA |          0 |
+| performance_schema | log_status                                           | BASE TABLE  | PERFORMANCE_SCHEMA |          1 |
+| performance_schema | prepared_statements_instances                        | BASE TABLE  | PERFORMANCE_SCHEMA |          0 |
+| performance_schema | user_variables_by_thread                             | BASE TABLE  | PERFORMANCE_SCHEMA |       2560 |
+| performance_schema | status_by_account                                    | BASE TABLE  | PERFORMANCE_SCHEMA |      33024 |
+| performance_schema | status_by_host                                       | BASE TABLE  | PERFORMANCE_SCHEMA |      33024 |
+| performance_schema | status_by_thread                                     | BASE TABLE  | PERFORMANCE_SCHEMA |      66048 |
+| performance_schema | status_by_user                                       | BASE TABLE  | PERFORMANCE_SCHEMA |      33024 |
+| performance_schema | global_status                                        | BASE TABLE  | PERFORMANCE_SCHEMA |        258 |
+| performance_schema | session_status                                       | BASE TABLE  | PERFORMANCE_SCHEMA |        258 |
+| performance_schema | variables_by_thread                                  | BASE TABLE  | PERFORMANCE_SCHEMA |     172800 |
+| performance_schema | global_variables                                     | BASE TABLE  | PERFORMANCE_SCHEMA |        675 |
+| performance_schema | session_variables                                    | BASE TABLE  | PERFORMANCE_SCHEMA |        675 |
+| performance_schema | variables_info                                       | BASE TABLE  | PERFORMANCE_SCHEMA |        675 |
+| performance_schema | persisted_variables                                  | BASE TABLE  | PERFORMANCE_SCHEMA |          0 |
+| performance_schema | user_defined_functions                               | BASE TABLE  | PERFORMANCE_SCHEMA |         16 |
+| performance_schema | binary_log_transaction_compression_stats             | BASE TABLE  | PERFORMANCE_SCHEMA |          0 |
+| performance_schema | tls_channel_status                                   | BASE TABLE  | PERFORMANCE_SCHEMA |         96 |
+| performance_schema | keyring_component_status                             | BASE TABLE  | PERFORMANCE_SCHEMA |         64 |
+| mysql              | db                                                   | BASE TABLE  | InnoDB             |          2 |
+| mysql              | user                                                 | BASE TABLE  | InnoDB             |          6 |
+| mysql              | default_roles                                        | BASE TABLE  | InnoDB             |          0 |
+| mysql              | role_edges                                           | BASE TABLE  | InnoDB             |          0 |
+| mysql              | global_grants                                        | BASE TABLE  | InnoDB             |         49 |
+| mysql              | password_history                                     | BASE TABLE  | InnoDB             |          0 |
+| mysql              | func                                                 | BASE TABLE  | InnoDB             |          0 |
+| mysql              | plugin                                               | BASE TABLE  | InnoDB             |          0 |
+| mysql              | help_topic                                           | BASE TABLE  | InnoDB             |        588 |
+| mysql              | help_category                                        | BASE TABLE  | InnoDB             |         53 |
+| mysql              | help_relation                                        | BASE TABLE  | InnoDB             |       1713 |
+| mysql              | servers                                              | BASE TABLE  | InnoDB             |          0 |
+| mysql              | tables_priv                                          | BASE TABLE  | InnoDB             |          3 |
+| mysql              | columns_priv                                         | BASE TABLE  | InnoDB             |          0 |
+| mysql              | help_keyword                                         | BASE TABLE  | InnoDB             |        939 |
+| mysql              | time_zone_name                                       | BASE TABLE  | InnoDB             |          0 |
+| mysql              | time_zone                                            | BASE TABLE  | InnoDB             |          0 |
+| mysql              | time_zone_transition                                 | BASE TABLE  | InnoDB             |          0 |
+| mysql              | time_zone_transition_type                            | BASE TABLE  | InnoDB             |          0 |
+| mysql              | time_zone_leap_second                                | BASE TABLE  | InnoDB             |          0 |
+| mysql              | procs_priv                                           | BASE TABLE  | InnoDB             |          0 |
+| mysql              | general_log                                          | BASE TABLE  | CSV                |          2 |
+| mysql              | slow_log                                             | BASE TABLE  | CSV                |          2 |
+| mysql              | component                                            | BASE TABLE  | InnoDB             |          0 |
+| mysql              | slave_relay_log_info                                 | BASE TABLE  | InnoDB             |          0 |
+| mysql              | slave_master_info                                    | BASE TABLE  | InnoDB             |          0 |
+| mysql              | slave_worker_info                                    | BASE TABLE  | InnoDB             |          0 |
+| mysql              | gtid_executed                                        | BASE TABLE  | InnoDB             |          0 |
+| mysql              | replication_asynchronous_connection_failover         | BASE TABLE  | InnoDB             |          0 |
+| mysql              | replication_asynchronous_connection_failover_managed | BASE TABLE  | InnoDB             |          0 |
+| mysql              | replication_group_member_actions                     | BASE TABLE  | InnoDB             |          2 |
+| mysql              | replication_group_configuration_version              | BASE TABLE  | InnoDB             |          1 |
+| mysql              | server_cost                                          | BASE TABLE  | InnoDB             |          6 |
+| mysql              | engine_cost                                          | BASE TABLE  | InnoDB             |          2 |
+| mysql              | proxies_priv                                         | BASE TABLE  | InnoDB             |          1 |
+| mysql              | ndb_binlog_index                                     | BASE TABLE  | InnoDB             |          0 |
+| sys                | version                                              | VIEW        | NULL               |       NULL |
+| sys                | sys_config                                           | BASE TABLE  | InnoDB             |          6 |
+| sys                | innodb_buffer_stats_by_schema                        | VIEW        | NULL               |       NULL |
+| sys                | x$innodb_buffer_stats_by_schema                      | VIEW        | NULL               |       NULL |
+| sys                | innodb_buffer_stats_by_table                         | VIEW        | NULL               |       NULL |
+| sys                | x$innodb_buffer_stats_by_table                       | VIEW        | NULL               |       NULL |
+| sys                | schema_object_overview                               | VIEW        | NULL               |       NULL |
+| sys                | schema_auto_increment_columns                        | VIEW        | NULL               |       NULL |
+| sys                | x$schema_flattened_keys                              | VIEW        | NULL               |       NULL |
+| sys                | schema_redundant_indexes                             | VIEW        | NULL               |       NULL |
+| sys                | ps_check_lost_instrumentation                        | VIEW        | NULL               |       NULL |
+| sys                | latest_file_io                                       | VIEW        | NULL               |       NULL |
+| sys                | x$latest_file_io                                     | VIEW        | NULL               |       NULL |
+| sys                | io_by_thread_by_latency                              | VIEW        | NULL               |       NULL |
+| sys                | x$io_by_thread_by_latency                            | VIEW        | NULL               |       NULL |
+| sys                | io_global_by_file_by_bytes                           | VIEW        | NULL               |       NULL |
+| sys                | x$io_global_by_file_by_bytes                         | VIEW        | NULL               |       NULL |
+| sys                | io_global_by_file_by_latency                         | VIEW        | NULL               |       NULL |
+| sys                | x$io_global_by_file_by_latency                       | VIEW        | NULL               |       NULL |
+| sys                | io_global_by_wait_by_bytes                           | VIEW        | NULL               |       NULL |
+| sys                | x$io_global_by_wait_by_bytes                         | VIEW        | NULL               |       NULL |
+| sys                | io_global_by_wait_by_latency                         | VIEW        | NULL               |       NULL |
+| sys                | x$io_global_by_wait_by_latency                       | VIEW        | NULL               |       NULL |
+| sys                | innodb_lock_waits                                    | VIEW        | NULL               |       NULL |
+| sys                | x$innodb_lock_waits                                  | VIEW        | NULL               |       NULL |
+| sys                | memory_by_user_by_current_bytes                      | VIEW        | NULL               |       NULL |
+| sys                | x$memory_by_user_by_current_bytes                    | VIEW        | NULL               |       NULL |
+| sys                | memory_by_host_by_current_bytes                      | VIEW        | NULL               |       NULL |
+| sys                | x$memory_by_host_by_current_bytes                    | VIEW        | NULL               |       NULL |
+| sys                | memory_by_thread_by_current_bytes                    | VIEW        | NULL               |       NULL |
+| sys                | x$memory_by_thread_by_current_bytes                  | VIEW        | NULL               |       NULL |
+| sys                | memory_global_by_current_bytes                       | VIEW        | NULL               |       NULL |
+| sys                | x$memory_global_by_current_bytes                     | VIEW        | NULL               |       NULL |
+| sys                | memory_global_total                                  | VIEW        | NULL               |       NULL |
+| sys                | x$memory_global_total                                | VIEW        | NULL               |       NULL |
+| sys                | schema_index_statistics                              | VIEW        | NULL               |       NULL |
+| sys                | x$schema_index_statistics                            | VIEW        | NULL               |       NULL |
+| sys                | x$ps_schema_table_statistics_io                      | VIEW        | NULL               |       NULL |
+| sys                | schema_table_statistics                              | VIEW        | NULL               |       NULL |
+| sys                | x$schema_table_statistics                            | VIEW        | NULL               |       NULL |
+| sys                | schema_table_statistics_with_buffer                  | VIEW        | NULL               |       NULL |
+| sys                | x$schema_table_statistics_with_buffer                | VIEW        | NULL               |       NULL |
+| sys                | schema_tables_with_full_table_scans                  | VIEW        | NULL               |       NULL |
+| sys                | x$schema_tables_with_full_table_scans                | VIEW        | NULL               |       NULL |
+| sys                | schema_unused_indexes                                | VIEW        | NULL               |       NULL |
+| sys                | schema_table_lock_waits                              | VIEW        | NULL               |       NULL |
+| sys                | x$schema_table_lock_waits                            | VIEW        | NULL               |       NULL |
+| sys                | statement_analysis                                   | VIEW        | NULL               |       NULL |
+| sys                | x$statement_analysis                                 | VIEW        | NULL               |       NULL |
+| sys                | statements_with_errors_or_warnings                   | VIEW        | NULL               |       NULL |
+| sys                | x$statements_with_errors_or_warnings                 | VIEW        | NULL               |       NULL |
+| sys                | statements_with_full_table_scans                     | VIEW        | NULL               |       NULL |
+| sys                | x$statements_with_full_table_scans                   | VIEW        | NULL               |       NULL |
+| sys                | x$ps_digest_avg_latency_distribution                 | VIEW        | NULL               |       NULL |
+| sys                | x$ps_digest_95th_percentile_by_avg_us                | VIEW        | NULL               |       NULL |
+| sys                | statements_with_runtimes_in_95th_percentile          | VIEW        | NULL               |       NULL |
+| sys                | x$statements_with_runtimes_in_95th_percentile        | VIEW        | NULL               |       NULL |
+| sys                | statements_with_sorting                              | VIEW        | NULL               |       NULL |
+| sys                | x$statements_with_sorting                            | VIEW        | NULL               |       NULL |
+| sys                | statements_with_temp_tables                          | VIEW        | NULL               |       NULL |
+| sys                | x$statements_with_temp_tables                        | VIEW        | NULL               |       NULL |
+| sys                | user_summary_by_file_io_type                         | VIEW        | NULL               |       NULL |
+| sys                | x$user_summary_by_file_io_type                       | VIEW        | NULL               |       NULL |
+| sys                | user_summary_by_file_io                              | VIEW        | NULL               |       NULL |
+| sys                | x$user_summary_by_file_io                            | VIEW        | NULL               |       NULL |
+| sys                | user_summary_by_statement_type                       | VIEW        | NULL               |       NULL |
+| sys                | x$user_summary_by_statement_type                     | VIEW        | NULL               |       NULL |
+| sys                | user_summary_by_statement_latency                    | VIEW        | NULL               |       NULL |
+| sys                | x$user_summary_by_statement_latency                  | VIEW        | NULL               |       NULL |
+| sys                | user_summary_by_stages                               | VIEW        | NULL               |       NULL |
+| sys                | x$user_summary_by_stages                             | VIEW        | NULL               |       NULL |
+| sys                | user_summary                                         | VIEW        | NULL               |       NULL |
+| sys                | x$user_summary                                       | VIEW        | NULL               |       NULL |
+| sys                | host_summary_by_file_io_type                         | VIEW        | NULL               |       NULL |
+| sys                | x$host_summary_by_file_io_type                       | VIEW        | NULL               |       NULL |
+| sys                | host_summary_by_file_io                              | VIEW        | NULL               |       NULL |
+| sys                | x$host_summary_by_file_io                            | VIEW        | NULL               |       NULL |
+| sys                | host_summary_by_statement_type                       | VIEW        | NULL               |       NULL |
+| sys                | x$host_summary_by_statement_type                     | VIEW        | NULL               |       NULL |
+| sys                | host_summary_by_statement_latency                    | VIEW        | NULL               |       NULL |
+| sys                | x$host_summary_by_statement_latency                  | VIEW        | NULL               |       NULL |
+| sys                | host_summary_by_stages                               | VIEW        | NULL               |       NULL |
+| sys                | x$host_summary_by_stages                             | VIEW        | NULL               |       NULL |
+| sys                | host_summary                                         | VIEW        | NULL               |       NULL |
+| sys                | x$host_summary                                       | VIEW        | NULL               |       NULL |
+| sys                | wait_classes_global_by_avg_latency                   | VIEW        | NULL               |       NULL |
+| sys                | x$wait_classes_global_by_avg_latency                 | VIEW        | NULL               |       NULL |
+| sys                | wait_classes_global_by_latency                       | VIEW        | NULL               |       NULL |
+| sys                | x$wait_classes_global_by_latency                     | VIEW        | NULL               |       NULL |
+| sys                | waits_by_user_by_latency                             | VIEW        | NULL               |       NULL |
+| sys                | x$waits_by_user_by_latency                           | VIEW        | NULL               |       NULL |
+| sys                | waits_by_host_by_latency                             | VIEW        | NULL               |       NULL |
+| sys                | x$waits_by_host_by_latency                           | VIEW        | NULL               |       NULL |
+| sys                | waits_global_by_latency                              | VIEW        | NULL               |       NULL |
+| sys                | x$waits_global_by_latency                            | VIEW        | NULL               |       NULL |
+| sys                | metrics                                              | VIEW        | NULL               |       NULL |
+| sys                | processlist                                          | VIEW        | NULL               |       NULL |
+| sys                | x$processlist                                        | VIEW        | NULL               |       NULL |
+| sys                | session                                              | VIEW        | NULL               |       NULL |
+| sys                | x$session                                            | VIEW        | NULL               |       NULL |
+| sys                | session_ssl_status                                   | VIEW        | NULL               |       NULL |
+| information_schema | ENABLED_ROLES                                        | SYSTEM VIEW | NULL               |          0 |
+| information_schema | APPLICABLE_ROLES                                     | SYSTEM VIEW | NULL               |          0 |
+| information_schema | ADMINISTRABLE_ROLE_AUTHORIZATIONS                    | SYSTEM VIEW | NULL               |          0 |
+| information_schema | ROLE_COLUMN_GRANTS                                   | SYSTEM VIEW | NULL               |          0 |
+| information_schema | ROLE_ROUTINE_GRANTS                                  | SYSTEM VIEW | NULL               |          0 |
+| information_schema | ROLE_TABLE_GRANTS                                    | SYSTEM VIEW | NULL               |          0 |
+| information_schema | USER_ATTRIBUTES                                      | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_CMP                                           | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_CMPMEM                                        | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_TRX                                           | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_CMP_PER_INDEX                                 | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_CMP_RESET                                     | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_FT_DELETED                                    | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_BUFFER_POOL_STATS                             | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_CMPMEM_RESET                                  | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_BUFFER_PAGE_LRU                               | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_CMP_PER_INDEX_RESET                           | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_FT_CONFIG                                     | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_BUFFER_PAGE                                   | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_TABLESPACES                                   | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_FT_BEING_DELETED                              | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_TEMP_TABLE_INFO                               | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_FT_DEFAULT_STOPWORD                           | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_METRICS                                       | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_FT_INDEX_CACHE                                | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_FT_INDEX_TABLE                                | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_TABLES                                        | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_TABLESTATS                                    | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_INDEXES                                       | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_COLUMNS                                       | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_VIRTUAL                                       | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_CACHED_INDEXES                                | SYSTEM VIEW | NULL               |          0 |
+| information_schema | INNODB_SESSION_TEMP_TABLESPACES                      | SYSTEM VIEW | NULL               |          0 |
+| sakila             | actor                                                | BASE TABLE  | InnoDB             |        200 |
+| sakila             | address                                              | BASE TABLE  | InnoDB             |        603 |
+| sakila             | category                                             | BASE TABLE  | InnoDB             |         16 |
+| sakila             | city                                                 | BASE TABLE  | InnoDB             |        600 |
+| sakila             | country                                              | BASE TABLE  | InnoDB             |        109 |
+| sakila             | customer                                             | BASE TABLE  | InnoDB             |        599 |
+| sakila             | film                                                 | BASE TABLE  | InnoDB             |       1000 |
+| sakila             | film_actor                                           | BASE TABLE  | InnoDB             |       5462 |
+| sakila             | film_category                                        | BASE TABLE  | InnoDB             |       1000 |
+| sakila             | film_text                                            | BASE TABLE  | InnoDB             |       1000 |
+| sakila             | inventory                                            | BASE TABLE  | InnoDB             |       4581 |
+| sakila             | language                                             | BASE TABLE  | InnoDB             |          6 |
+| sakila             | payment                                              | BASE TABLE  | InnoDB             |      16500 |
+| sakila             | rental                                               | BASE TABLE  | InnoDB             |      16010 |
+| sakila             | staff                                                | BASE TABLE  | InnoDB             |          2 |
+| sakila             | store                                                | BASE TABLE  | InnoDB             |          2 |
+| sakila             | customer_list                                        | VIEW        | NULL               |       NULL |
+| sakila             | film_list                                            | VIEW        | NULL               |       NULL |
+| sakila             | nicer_but_slower_film_list                           | VIEW        | NULL               |       NULL |
+| sakila             | staff_list                                           | VIEW        | NULL               |       NULL |
+| sakila             | sales_by_store                                       | VIEW        | NULL               |       NULL |
+| sakila             | sales_by_film_category                               | VIEW        | NULL               |       NULL |
+| sakila             | actor_info                                           | VIEW        | NULL               |       NULL |
+| world              | city                                                 | BASE TABLE  | InnoDB             |       4046 |
+| world              | country                                              | BASE TABLE  | InnoDB             |        239 |
+| world              | countrylanguage                                      | BASE TABLE  | InnoDB             |        984 |
+| movies             | movies                                               | BASE TABLE  | InnoDB             |         28 |
+| movies             | actor                                                | BASE TABLE  | InnoDB             |         24 |
+| movies             | director                                             | BASE TABLE  | InnoDB             |         23 |
+| movies             | movie_director                                       | BASE TABLE  | InnoDB             |         23 |
+| movies             | genres                                               | BASE TABLE  | InnoDB             |         13 |
+| movies             | movie_genres                                         | BASE TABLE  | InnoDB             |         19 |
+| movies             | movie_cast                                           | BASE TABLE  | InnoDB             |         23 |
+| movies             | movie_review                                         | BASE TABLE  | InnoDB             |         20 |
+| movies             | movie_rating                                         | BASE TABLE  | InnoDB             |         19 |
+| test               | item                                                 | BASE TABLE  | InnoDB             |          5 |
+| test               | item_rate                                            | BASE TABLE  | InnoDB             |          0 |
+| test               | item_new_rate                                        | BASE TABLE  | InnoDB             |          2 |
+| db1                | rockets                                              | BASE TABLE  | InnoDB             |         20 |
+| db1                | loan                                                 | BASE TABLE  | InnoDB             |          0 |
+| db1                | task1                                                | BASE TABLE  | InnoDB             |          4 |
+| db1                | managers                                             | BASE TABLE  | InnoDB             |          4 |
+| db1                | trainers                                             | BASE TABLE  | InnoDB             |          3 |
+| db1                | population                                           | BASE TABLE  | InnoDB             |         31 |
+| db1                | bankloan                                             | BASE TABLE  | InnoDB             |          8 |
+| db1                | onlineorders                                         | BASE TABLE  | InnoDB             |          7 |
+| db1                | fromstoreorders                                      | BASE TABLE  | InnoDB             |          9 |
+| db1                | trains                                               | BASE TABLE  | InnoDB             |          7 |
+| db1                | reservations                                         | BASE TABLE  | InnoDB             |          7 |
+| db1                | countnulls                                           | BASE TABLE  | InnoDB             |          5 |
+| db1                | countnumbers                                         | BASE TABLE  | InnoDB             |         20 |
+| db1                | fedex                                                | BASE TABLE  | InnoDB             |          7 |
+| db1                | dhl                                                  | BASE TABLE  | InnoDB             |          8 |
+| db1                | ups                                                  | BASE TABLE  | InnoDB             |         10 |
+| db1                | cnumbers                                             | BASE TABLE  | InnoDB             |         16 |
+| db1                | repeatingnumbers                                     | BASE TABLE  | InnoDB             |          4 |
+| db1                | cashpayments                                         | BASE TABLE  | InnoDB             |          9 |
+| db1                | cardpayments                                         | BASE TABLE  | InnoDB             |          7 |
+| db1                | category                                             | BASE TABLE  | InnoDB             |          9 |
+| db1                | years                                                | BASE TABLE  | InnoDB             |         26 |
+| db1                | year_of_service                                      | BASE TABLE  | InnoDB             |         34 |
+| db1                | fruits                                               | BASE TABLE  | InnoDB             |         11 |
+| db1                | rooms                                                | BASE TABLE  | InnoDB             |         40 |
+| db1                | room_staff                                           | BASE TABLE  | InnoDB             |          3 |
+| db1                | cafe                                                 | BASE TABLE  | InnoDB             |         13 |
+| db1                | stocks                                               | BASE TABLE  | InnoDB             |         25 |
+| db1                | hall_ticket                                          | BASE TABLE  | InnoDB             |         31 |
+| db1                | overlapping_dates                                    | BASE TABLE  | InnoDB             |          9 |
+| db1                | room_assigned                                        | BASE TABLE  | InnoDB             |         17 |
+| db1                | airline_seats                                        | BASE TABLE  | InnoDB             |         22 |
+| db1                | bitwise                                              | BASE TABLE  | InnoDB             |         11 |
+| db1                | activity                                             | BASE TABLE  | InnoDB             |         12 |
+| db1                | food_category_tags                                   | BASE TABLE  | InnoDB             |         12 |
+| db1                | food_items                                           | BASE TABLE  | InnoDB             |         31 |
+| db1                | brands                                               | BASE TABLE  | InnoDB             |          7 |
+| db1                | cricketwinnerteam                                    | BASE TABLE  | InnoDB             |          5 |
+| db1                | student                                              | BASE TABLE  | InnoDB             |         12 |
+| db1                | facebook                                             | BASE TABLE  | InnoDB             |          8 |
+| db1                | linkedin                                             | BASE TABLE  | InnoDB             |          7 |
+| db1                | sourcecity                                           | BASE TABLE  | InnoDB             |          4 |
+| db1                | targetcity                                           | BASE TABLE  | InnoDB             |          4 |
+| db1                | atm                                                  | BASE TABLE  | InnoDB             |          9 |
+| db1                | swapcity                                             | BASE TABLE  | InnoDB             |          7 |
+| db1                | classandsubjects                                     | BASE TABLE  | InnoDB             |         10 |
+| db1                | null1                                                | BASE TABLE  | InnoDB             |          4 |
+| db1                | null2                                                | BASE TABLE  | InnoDB             |          5 |
+| db1                | sales1                                               | BASE TABLE  | InnoDB             |          9 |
+| db1                | order1                                               | BASE TABLE  | InnoDB             |         10 |
+| db1                | ipl                                                  | BASE TABLE  | InnoDB             |          4 |
+| db1                | city                                                 | BASE TABLE  | InnoDB             |          5 |
+| db1                | batch_schedule                                       | BASE TABLE  | InnoDB             |          7 |
+| db1                | teams                                                | BASE TABLE  | InnoDB             |         10 |
+| db1                | order_items                                          | BASE TABLE  | InnoDB             |         20 |
+| db1                | stages                                               | BASE TABLE  | InnoDB             |          6 |
+| db1                | leading_zeroes                                       | BASE TABLE  | InnoDB             |          3 |
+| db1                | shop                                                 | BASE TABLE  | InnoDB             |         47 |
+| db1                | missingnumbers                                       | BASE TABLE  | InnoDB             |         17 |
+| db1                | fullname                                             | BASE TABLE  | InnoDB             |         11 |
+| db1                | phonecall                                            | BASE TABLE  | InnoDB             |         80 |
+| db1                | sourcenames                                          | BASE TABLE  | InnoDB             |          4 |
+| db1                | targetnames                                          | BASE TABLE  | InnoDB             |          4 |
+| db1                | job_list                                             | BASE TABLE  | InnoDB             |         18 |
+| db1                | overtime                                             | BASE TABLE  | InnoDB             |         17 |
+| db1                | labtestlist                                          | BASE TABLE  | InnoDB             |         33 |
+| db1                | medicinelist                                         | BASE TABLE  | InnoDB             |          0 |
+| db1                | patient                                              | BASE TABLE  | InnoDB             |         14 |
+| db1                | doctor                                               | BASE TABLE  | InnoDB             |         10 |
+| db1                | doctorvisits                                         | BASE TABLE  | InnoDB             |         87 |
+| db1                | orderdetails                                         | BASE TABLE  | InnoDB             |         34 |
+| db1                | pivot_table                                          | BASE TABLE  | InnoDB             |         46 |
+| db1                | unpivot_table                                        | BASE TABLE  | InnoDB             |         20 |
+| db1                | leadtable                                            | BASE TABLE  | InnoDB             |         11 |
+| db1                | traintimetable                                       | BASE TABLE  | InnoDB             |         57 |
+| db1                | product_sales                                        | BASE TABLE  | InnoDB             |         43 |
+| db1                | server                                               | BASE TABLE  | InnoDB             |         22 |
+| db1                | runningserver                                        | BASE TABLE  | InnoDB             |          6 |
+| db1                | r                                                    | BASE TABLE  | InnoDB             |         15 |
+| db1                | plumber                                              | BASE TABLE  | InnoDB             |         19 |
+| db1                | service                                              | BASE TABLE  | InnoDB             |         21 |
+| db1                | plumber_service_map                                  | BASE TABLE  | InnoDB             |         54 |
+| db1                | quarterly_revenue                                    | BASE TABLE  | InnoDB             |         32 |
+| db1                | yearly_revenue                                       | BASE TABLE  | InnoDB             |         10 |
+| db1                | vote_response                                        | BASE TABLE  | InnoDB             |          4 |
+| db1                | empj                                                 | BASE TABLE  | InnoDB             |         37 |
+| db1                | transactions                                         | BASE TABLE  | InnoDB             |         33 |
+| db1                | stadium                                              | BASE TABLE  | InnoDB             |         10 |
+| db1                | andor                                                | BASE TABLE  | InnoDB             |          4 |
+| db1                | points                                               | BASE TABLE  | InnoDB             |          6 |
+| db1                | candidate                                            | BASE TABLE  | InnoDB             |          4 |
+| db1                | votes                                                | BASE TABLE  | InnoDB             |         27 |
+| db1                | food                                                 | BASE TABLE  | InnoDB             |         14 |
+| db1                | company                                              | BASE TABLE  | InnoDB             |          5 |
+| db1                | key_parts                                            | BASE TABLE  | InnoDB             |         26 |
+| db1                | books                                                | BASE TABLE  | InnoDB             |          7 |
+| db1                | newbooks                                             | BASE TABLE  | InnoDB             |          7 |
+| db1                | runners                                              | BASE TABLE  | InnoDB             |          5 |
+| db1                | races                                                | BASE TABLE  | InnoDB             |          7 |
+| db1                | mass_table                                           | BASE TABLE  | InnoDB             |          8 |
+| db1                | agent                                                | BASE TABLE  | InnoDB             |          6 |
+| db1                | licence                                              | BASE TABLE  | InnoDB             |         17 |
+| db1                | blog                                                 | BASE TABLE  | InnoDB             |         10 |
+| db1                | comments                                             | BASE TABLE  | InnoDB             |         27 |
+| db1                | sales_channel                                        | BASE TABLE  | InnoDB             |          4 |
+| db1                | warehouse                                            | BASE TABLE  | InnoDB             |          6 |
+| db1                | tablea                                               | BASE TABLE  | InnoDB             |          9 |
+| db1                | tableb                                               | BASE TABLE  | InnoDB             |         10 |
+| db1                | envelope                                             | BASE TABLE  | InnoDB             |          3 |
+| db1                | docs                                                 | BASE TABLE  | InnoDB             |          3 |
+| db1                | r1                                                   | BASE TABLE  | InnoDB             |          4 |
+| db1                | r2                                                   | BASE TABLE  | InnoDB             |          6 |
+| db1                | tasks                                                | BASE TABLE  | InnoDB             |         16 |
+| db1                | revenue                                              | BASE TABLE  | InnoDB             |          7 |
+| db1                | products                                             | BASE TABLE  | InnoDB             |         77 |
+| db1                | z                                                    | BASE TABLE  | InnoDB             |          2 |
+| db1                | salesperson                                          | BASE TABLE  | InnoDB             |          7 |
+| db1                | states                                               | BASE TABLE  | InnoDB             |         33 |
+| db1                | station                                              | BASE TABLE  | InnoDB             |        218 |
+| db1                | seta                                                 | BASE TABLE  | InnoDB             |          6 |
+| db1                | setb                                                 | BASE TABLE  | InnoDB             |          7 |
+| db1                | menucard                                             | BASE TABLE  | InnoDB             |         15 |
+| db1                | softdrink                                            | BASE TABLE  | InnoDB             |          5 |
+| db1                | status                                               | BASE TABLE  | InnoDB             |         11 |
+| db1                | nullif                                               | BASE TABLE  | InnoDB             |         12 |
+| db1                | duplicate                                            | BASE TABLE  | InnoDB             |         32 |
+| db1                | coalesce                                             | BASE TABLE  | InnoDB             |         19 |
+| db1                | nearest                                              | BASE TABLE  | InnoDB             |         17 |
+| db1                | new                                                  | BASE TABLE  | InnoDB             |          0 |
+| db1                | blanktablea                                          | BASE TABLE  | InnoDB             |         11 |
+| db1                | blanktableb                                          | BASE TABLE  | InnoDB             |         11 |
+| db1                | hobby                                                | BASE TABLE  | InnoDB             |         13 |
+| db1                | dept                                                 | BASE TABLE  | InnoDB             |          6 |
+| db1                | replacedept                                          | BASE TABLE  | InnoDB             |          4 |
+| db1                | demodept1                                            | BASE TABLE  | InnoDB             |         12 |
+| db1                | demodept2                                            | BASE TABLE  | InnoDB             |         12 |
+| db1                | emp                                                  | BASE TABLE  | InnoDB             |         30 |
+| db1                | bonus                                                | BASE TABLE  | InnoDB             |         10 |
+| db1                | salgrade                                             | BASE TABLE  | InnoDB             |         10 |
+| db1                | dummy                                                | BASE TABLE  | InnoDB             |          0 |
+| db1                | customer                                             | BASE TABLE  | InnoDB             |         13 |
+| db1                | ord                                                  | BASE TABLE  | InnoDB             |         33 |
+| db1                | item                                                 | BASE TABLE  | InnoDB             |         64 |
+| db1                | product                                              | BASE TABLE  | InnoDB             |         18 |
+| db1                | price                                                | BASE TABLE  | InnoDB             |         17 |
+| db1                | sales                                                | VIEW        | NULL               |       NULL |
+| db1                | location                                             | BASE TABLE  | InnoDB             |         20 |
+| db1                | dept1                                                | BASE TABLE  | InnoDB             |         21 |
+| db1                | emp1                                                 | BASE TABLE  | InnoDB             |         68 |
+| db1                | emp_cards                                            | BASE TABLE  | InnoDB             |         54 |
+| db1                | emp_phone                                            | BASE TABLE  | InnoDB             |         23 |
+| db1                | emp2                                                 | BASE TABLE  | InnoDB             |         68 |
+| db1                | regexpr                                              | BASE TABLE  | InnoDB             |         30 |
+| db1                | temp1                                                | BASE TABLE  | InnoDB             |         29 |
+| db1                | sort                                                 | BASE TABLE  | InnoDB             |         41 |
+| db1                | tableaa                                              | BASE TABLE  | InnoDB             |          7 |
+| db1                | tablebb                                              | BASE TABLE  | InnoDB             |          6 |
+| db1                | salespeople                                          | BASE TABLE  | InnoDB             |          9 |
+| db1                | customers                                            | BASE TABLE  | InnoDB             |         11 |
+| db1                | client                                               | BASE TABLE  | InnoDB             |         19 |
+| db1                | emp_attendance                                       | BASE TABLE  | InnoDB             |         30 |
+| db1                | numberstring                                         | BASE TABLE  | InnoDB             |         36 |
+| db1                | stringnumber                                         | BASE TABLE  | InnoDB             |         36 |
+| db1                | x                                                    | BASE TABLE  | InnoDB             |          0 |
+| db1                | ord1                                                 | BASE TABLE  | InnoDB             |          2 |
+| db1                | betweensalary                                        | BASE TABLE  | InnoDB             |          0 |
+| db1                | categories                                           | BASE TABLE  | InnoDB             |         35 |
+| db1                | y                                                    | BASE TABLE  | InnoDB             |          0 |
+| db1                | bus_stops                                            | BASE TABLE  | InnoDB             |         30 |
+| db1                | pune_metro_stations                                  | BASE TABLE  | InnoDB             |         64 |
+| db1                | orders                                               | BASE TABLE  | InnoDB             |         61 |
+| db1                | a                                                    | BASE TABLE  | InnoDB             |          2 |
+| x                  | a                                                    | BASE TABLE  | InnoDB             |         10 |
+| x                  | b                                                    | BASE TABLE  | InnoDB             |          0 |
+| x                  | c                                                    | BASE TABLE  | InnoDB             |          0 |
+| x                  | t1                                                   | BASE TABLE  | InnoDB             |          0 |
+| x                  | t2                                                   | BASE TABLE  | InnoDB             |          0 |
+| x                  | t4                                                   | BASE TABLE  | InnoDB             |          0 |
+| x                  | t5                                                   | BASE TABLE  | InnoDB             |          0 |
+| x                  | t7                                                   | BASE TABLE  | InnoDB             |          0 |
+| x                  | t6                                                   | BASE TABLE  | InnoDB             |          0 |
+| performance_schema | innodb_redo_log_files                                | BASE TABLE  | PERFORMANCE_SCHEMA |          1 |
+| x                  | d                                                    | BASE TABLE  | InnoDB             |          0 |
++--------------------+------------------------------------------------------+-------------+--------------------+------------+
+549 rows in set (0.53 sec)
+
+mysql>
+mysql>
+mysql> select TABLE_SCHEMA,TABLE_NAME, TABLE_TYPE,ENGINE,TABLE_ROWS from  information_schema.tables where TABLE_SCHEMA='x';
++--------------+------------+------------+--------+------------+
+| TABLE_SCHEMA | TABLE_NAME | TABLE_TYPE | ENGINE | TABLE_ROWS |
++--------------+------------+------------+--------+------------+
+| x            | a          | BASE TABLE | InnoDB |         10 |
+| x            | b          | BASE TABLE | InnoDB |          0 |
+| x            | c          | BASE TABLE | InnoDB |          0 |
+| x            | d          | BASE TABLE | InnoDB |          0 |
+| x            | t1         | BASE TABLE | InnoDB |          0 |
+| x            | t2         | BASE TABLE | InnoDB |          0 |
+| x            | t4         | BASE TABLE | InnoDB |          0 |
+| x            | t5         | BASE TABLE | InnoDB |          0 |
+| x            | t6         | BASE TABLE | InnoDB |          0 |
+| x            | t7         | BASE TABLE | InnoDB |          0 |
++--------------+------------+------------+--------+------------+
+10 rows in set (0.00 sec)
+
+mysql> select count(*) from a;
+ERROR 1109 (42S02): Unknown table 'A' in information_schema
+mysql> select count(*) from x.a;
++----------+
+| count(*) |
++----------+
+|       10 |
++----------+
+1 row in set (0.04 sec)
+
+mysql> select * from x.a;
++------+------+---------+------+--------+--------+------+
+| srno | id   | ename   | job  | city   | salary | hra  |
++------+------+---------+------+--------+--------+------+
+|    1 | 7566 | JONES   | NULL | Baroda |   2975 |  298 |
+|    2 | 7698 | BLAKE   | NULL | Baroda |   2850 |  285 |
+|    3 | 7782 | CLARK   | NULL | Baroda |   2450 |  245 |
+|    4 | 7919 | HOFFMAN | NULL | Baroda |   4150 |  415 |
+|    5 | 7949 | ALEX    | NULL | Baroda |   1250 |  125 |
+|    6 | 7566 | JONES   | NULL | Baroda |   2975 |  298 |
+|    7 | 7698 | BLAKE   | NULL | Baroda |   2850 |  285 |
+|    8 | 7782 | CLARK   | NULL | Baroda |   2450 |  245 |
+|    9 | 7919 | HOFFMAN | NULL | Baroda |   4150 |  415 |
+|   10 | 7949 | ALEX    | NULL | Baroda |   1250 |  125 |
++------+------+---------+------+--------+--------+------+
+10 rows in set (0.00 sec)
+
+mysql> desc x.a;
++--------+-------------+------+-----+---------+-------------------+
+| Field  | Type        | Null | Key | Default | Extra             |
++--------+-------------+------+-----+---------+-------------------+
+| srno   | int         | NO   | PRI | NULL    | auto_increment    |
+| id     | int         | YES  |     | NULL    |                   |
+| ename  | varchar(40) | NO   |     | NULL    |                   |
+| job    | varchar(20) | YES  |     | NULL    |                   |
+| city   | varchar(20) | YES  |     | Baroda  |                   |
+| salary | int         | YES  |     | NULL    |                   |
+| hra    | int         | YES  |     | NULL    | VIRTUAL GENERATED |
++--------+-------------+------+-----+---------+-------------------+
+7 rows in set (0.00 sec)
+
+mysql> desc tables;
++-----------------+--------------------------------------------------------------------+------+-----+---------+-------+
+| Field           | Type                                                               | Null | Key | Default | Extra |
++-----------------+--------------------------------------------------------------------+------+-----+---------+-------+
+| TABLE_CATALOG   | varchar(64)                                                        | YES  |     | NULL    |       |
+| TABLE_SCHEMA    | varchar(64)                                                        | YES  |     | NULL    |       |
+| TABLE_NAME      | varchar(64)                                                        | YES  |     | NULL    |       |
+| TABLE_TYPE      | enum('BASE TABLE','VIEW','SYSTEM VIEW')                            | NO   |     | NULL    |       |
+| ENGINE          | varchar(64)                                                        | YES  |     | NULL    |       |
+| VERSION         | int                                                                | YES  |     | NULL    |       |
+| ROW_FORMAT      | enum('Fixed','Dynamic','Compressed','Redundant','Compact','Paged') | YES  |     | NULL    |       |
+| TABLE_ROWS      | bigint unsigned                                                    | YES  |     | NULL    |       |
+| AVG_ROW_LENGTH  | bigint unsigned                                                    | YES  |     | NULL    |       |
+| DATA_LENGTH     | bigint unsigned                                                    | YES  |     | NULL    |       |
+| MAX_DATA_LENGTH | bigint unsigned                                                    | YES  |     | NULL    |       |
+| INDEX_LENGTH    | bigint unsigned                                                    | YES  |     | NULL    |       |
+| DATA_FREE       | bigint unsigned                                                    | YES  |     | NULL    |       |
+| AUTO_INCREMENT  | bigint unsigned                                                    | YES  |     | NULL    |       |
+| CREATE_TIME     | timestamp                                                          | NO   |     | NULL    |       |
+| UPDATE_TIME     | datetime                                                           | YES  |     | NULL    |       |
+| CHECK_TIME      | datetime                                                           | YES  |     | NULL    |       |
+| TABLE_COLLATION | varchar(64)                                                        | YES  |     | NULL    |       |
+| CHECKSUM        | bigint                                                             | YES  |     | NULL    |       |
+| CREATE_OPTIONS  | varchar(256)                                                       | YES  |     | NULL    |       |
+| TABLE_COMMENT   | text                                                               | YES  |     | NULL    |       |
++-----------------+--------------------------------------------------------------------+------+-----+---------+-------+
+21 rows in set (0.00 sec)
+
+mysql> desc columns;
++--------------------------+----------------------------+------+-----+---------+-------+
+| Field                    | Type                       | Null | Key | Default | Extra |
++--------------------------+----------------------------+------+-----+---------+-------+
+| TABLE_CATALOG            | varchar(64)                | YES  |     | NULL    |       |
+| TABLE_SCHEMA             | varchar(64)                | YES  |     | NULL    |       |
+| TABLE_NAME               | varchar(64)                | YES  |     | NULL    |       |
+| COLUMN_NAME              | varchar(64)                | YES  |     | NULL    |       |
+| ORDINAL_POSITION         | int unsigned               | NO   |     | NULL    |       |
+| COLUMN_DEFAULT           | text                       | YES  |     | NULL    |       |
+| IS_NULLABLE              | varchar(3)                 | NO   |     |         |       |
+| DATA_TYPE                | longtext                   | YES  |     | NULL    |       |
+| CHARACTER_MAXIMUM_LENGTH | bigint                     | YES  |     | NULL    |       |
+| CHARACTER_OCTET_LENGTH   | bigint                     | YES  |     | NULL    |       |
+| NUMERIC_PRECISION        | bigint unsigned            | YES  |     | NULL    |       |
+| NUMERIC_SCALE            | bigint unsigned            | YES  |     | NULL    |       |
+| DATETIME_PRECISION       | int unsigned               | YES  |     | NULL    |       |
+| CHARACTER_SET_NAME       | varchar(64)                | YES  |     | NULL    |       |
+| COLLATION_NAME           | varchar(64)                | YES  |     | NULL    |       |
+| COLUMN_TYPE              | mediumtext                 | NO   |     | NULL    |       |
+| COLUMN_KEY               | enum('','PRI','UNI','MUL') | NO   |     | NULL    |       |
+| EXTRA                    | varchar(256)               | YES  |     | NULL    |       |
+| PRIVILEGES               | varchar(154)               | YES  |     | NULL    |       |
+| COLUMN_COMMENT           | text                       | NO   |     | NULL    |       |
+| GENERATION_EXPRESSION    | longtext                   | NO   |     | NULL    |       |
+| SRS_ID                   | int unsigned               | YES  |     | NULL    |       |
++--------------------------+----------------------------+------+-----+---------+-------+
+22 rows in set (0.00 sec)
+
+mysql> select TABLE_NAME,COLUMN_NAME,ORDINAL_POSITION,  DATA_TYPE,EXTRA from columns where TABLE_SCHEMA='x' and TABLE_NAME= 'A';
++------------+-------------+------------------+-----------+-------------------+
+| TABLE_NAME | COLUMN_NAME | ORDINAL_POSITION | DATA_TYPE | EXTRA             |
++------------+-------------+------------------+-----------+-------------------+
+| a          | srno        |                1 | int       | auto_increment    |
+| a          | id          |                2 | int       |                   |
+| a          | ename       |                3 | varchar   |                   |
+| a          | job         |                4 | varchar   |                   |
+| a          | city        |                5 | varchar   |                   |
+| a          | salary      |                6 | int       |                   |
+| a          | hra         |                7 | int       | VIRTUAL GENERATED |
++------------+-------------+------------------+-----------+-------------------+
+7 rows in set (0.00 sec)
+
+mysql> DESC X.A
+    -> ;
++--------+-------------+------+-----+---------+-------------------+
+| Field  | Type        | Null | Key | Default | Extra             |
++--------+-------------+------+-----+---------+-------------------+
+| srno   | int         | NO   | PRI | NULL    | auto_increment    |
+| id     | int         | YES  |     | NULL    |                   |
+| ename  | varchar(40) | NO   |     | NULL    |                   |
+| job    | varchar(20) | YES  |     | NULL    |                   |
+| city   | varchar(20) | YES  |     | Baroda  |                   |
+| salary | int         | YES  |     | NULL    |                   |
+| hra    | int         | YES  |     | NULL    | VIRTUAL GENERATED |
++--------+-------------+------+-----+---------+-------------------+
+7 rows in set (0.00 sec)
+
+mysql> select TABLE_NAME,COLUMN_NAME,ORDINAL_POSITION,  DATA_TYPE,EXTRA from columns where TABLE_SCHEMA='x' and TABLE_NAME= 'd';
++------------+-------------+------------------+-----------+-------+
+| TABLE_NAME | COLUMN_NAME | ORDINAL_POSITION | DATA_TYPE | EXTRA |
++------------+-------------+------------------+-----------+-------+
+| d          | c1          |                1 | varchar   |       |
+| d          | c2          |                2 | date      |       |
+| d          | c3          |                3 | int       |       |
++------------+-------------+------------------+-----------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc x.d;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(10) | NO   | PRI | NULL    |       |
+| c2    | date        | YES  | UNI | NULL    |       |
+| c3    | int         | YES  | UNI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc constraints;
+ERROR 1109 (42S02): Unknown table 'CONSTRAINTS' in information_schema
+mysql> desc table_constraints;
++--------------------+-------------+------+-----+---------+-------+
+| Field              | Type        | Null | Key | Default | Extra |
++--------------------+-------------+------+-----+---------+-------+
+| CONSTRAINT_CATALOG | varchar(64) | YES  |     | NULL    |       |
+| CONSTRAINT_SCHEMA  | varchar(64) | YES  |     | NULL    |       |
+| CONSTRAINT_NAME    | varchar(64) | YES  |     | NULL    |       |
+| TABLE_SCHEMA       | varchar(64) | YES  |     | NULL    |       |
+| TABLE_NAME         | varchar(64) | YES  |     | NULL    |       |
+| CONSTRAINT_TYPE    | varchar(11) | NO   |     |         |       |
+| ENFORCED           | varchar(3)  | NO   |     |         |       |
++--------------------+-------------+------+-----+---------+-------+
+7 rows in set (0.01 sec)
+
+mysql> select CONSTRAINT_NAME,CONSTRAINT_TYPE from table_constraints where CONSTRAINT_SCHEMA='x' and TABLE_NAME='d';
++-----------------+-----------------+
+| CONSTRAINT_NAME | CONSTRAINT_TYPE |
++-----------------+-----------------+
+| c2              | UNIQUE          |
+| c3              | UNIQUE          |
+| PRIMARY         | PRIMARY KEY     |
++-----------------+-----------------+
+3 rows in set (0.01 sec)
+
+mysql> alter table x.d add column c4 int constraint 'abc' unique key;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''abc' unique key' at line 1
+mysql> alter table x.d add column c4 int constraint 'abc' unique key;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''abc' unique key' at line 1
+mysql> alter table x.d add column c4 int add constraint 'abc' unique key;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'add constraint 'abc' unique key' at line 1
+mysql> alter table x.d add column c4 int constraints 'abc' unique key;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'constraints 'abc' unique key' at line 1
+mysql> alter table x.d add column c4 int;
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table x.d add constraint 'ABC' unique(c4);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''ABC' unique(c4)' at line 1
+
+mysql>
+mysql> alter table x.d add constraint ABC unique(c4);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select CONSTRAINT_NAME,CONSTRAINT_TYPE from table_constraints where CONSTRAINT_SCHEMA='x' and TABLE_NAME='d';
++-----------------+-----------------+
+| CONSTRAINT_NAME | CONSTRAINT_TYPE |
++-----------------+-----------------+
+| ABC             | UNIQUE          |
+| c2              | UNIQUE          |
+| c3              | UNIQUE          |
+| PRIMARY         | PRIMARY KEY     |
++-----------------+-----------------+
+4 rows in set (0.00 sec)
+
+mysql>
+mysql> desc x.d;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(10) | NO   | PRI | NULL    |       |
+| c2    | date        | YES  | UNI | NULL    |       |
+| c3    | int         | YES  | UNI | NULL    |       |
+| c4    | int         | YES  | UNI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table x.d add c5 int;
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc x.d;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(10) | NO   | PRI | NULL    |       |
+| c2    | date        | YES  | UNI | NULL    |       |
+| c3    | int         | YES  | UNI | NULL    |       |
+| c4    | int         | YES  | UNI | NULL    |       |
+| c5    | int         | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table x.d add constraint xyz unique(c5);
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc x.d;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(10) | NO   | PRI | NULL    |       |
+| c2    | date        | YES  | UNI | NULL    |       |
+| c3    | int         | YES  | UNI | NULL    |       |
+| c4    | int         | YES  | UNI | NULL    |       |
+| c5    | int         | YES  | UNI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select CONSTRAINT_NAME,CONSTRAINT_TYPE from table_constraints where CONSTRAINT_SCHEMA='x' and TABLE_NAME='d';
++-----------------+-----------------+
+| CONSTRAINT_NAME | CONSTRAINT_TYPE |
++-----------------+-----------------+
+| ABC             | UNIQUE          |
+| c2              | UNIQUE          |
+| c3              | UNIQUE          |
+| PRIMARY         | PRIMARY KEY     |
+| xyz             | UNIQUE          |
++-----------------+-----------------+
+5 rows in set (0.00 sec)
+
+mysql> desc x.d;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(10) | NO   | PRI | NULL    |       |
+| c2    | date        | YES  | UNI | NULL    |       |
+| c3    | int         | YES  | UNI | NULL    |       |
+| c4    | int         | YES  | UNI | NULL    |       |
+| c5    | int         | YES  | UNI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table x.d drop index c2;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc x.d;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(10) | NO   | PRI | NULL    |       |
+| c2    | date        | YES  |     | NULL    |       |
+| c3    | int         | YES  | UNI | NULL    |       |
+| c4    | int         | YES  | UNI | NULL    |       |
+| c5    | int         | YES  | UNI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table x.d drop index c3;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc x.d;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(10) | NO   | PRI | NULL    |       |
+| c2    | date        | YES  |     | NULL    |       |
+| c3    | int         | YES  |     | NULL    |       |
+| c4    | int         | YES  | UNI | NULL    |       |
+| c5    | int         | YES  | UNI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> alter table x.d drop index c4;
+ERROR 1091 (42000): Can't DROP 'c4'; check that column/key exists
+mysql>
+mysql>
+mysql> alter table x.d drop index abc;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc x.d;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(10) | NO   | PRI | NULL    |       |
+| c2    | date        | YES  |     | NULL    |       |
+| c3    | int         | YES  |     | NULL    |       |
+| c4    | int         | YES  |     | NULL    |       |
+| c5    | int         | YES  | UNI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table x.d drop index c5;
+ERROR 1091 (42000): Can't DROP 'c5'; check that column/key exists
+mysql> alter table x.d drop index xyz;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc x.d;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(10) | NO   | PRI | NULL    |       |
+| c2    | date        | YES  |     | NULL    |       |
+| c3    | int         | YES  |     | NULL    |       |
+| c4    | int         | YES  |     | NULL    |       |
+| c5    | int         | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> drop database x;
+Query OK, 10 rows affected (0.11 sec)
+
+mysql> create database x;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use x;
+Database changed
+mysql> create table p(c1 int primary key, c2 int);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> drop table p;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table orders(order_id int primary key, order_date date);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql>
+mysql>
+mysql> create table order_details(order_id int, product_name varchar(10), qty int, rate int, constraint fk_on_order_id foreign key(order_id) references orders(order_id));
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> desc orders;
++------------+------+------+-----+---------+-------+
+| Field      | Type | Null | Key | Default | Extra |
++------------+------+------+-----+---------+-------+
+| order_id   | int  | NO   | PRI | NULL    |       |
+| order_date | date | YES  |     | NULL    |       |
++------------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc order_details;;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| order_id     | int         | YES  | MUL | NULL    |       |
+| product_name | varchar(10) | YES  |     | NULL    |       |
+| qty          | int         | YES  |     | NULL    |       |
+| rate         | int         | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+ERROR:
+No query specified
+
+mysql> desc orders;
++------------+------+------+-----+---------+-------+
+| Field      | Type | Null | Key | Default | Extra |
++------------+------+------+-----+---------+-------+
+| order_id   | int  | NO   | PRI | NULL    |       |
+| order_date | date | YES  |     | NULL    |       |
++------------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc order_details;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| order_id     | int         | YES  | MUL | NULL    |       |
+| product_name | varchar(10) | YES  |     | NULL    |       |
+| qty          | int         | YES  |     | NULL    |       |
+| rate         | int         | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql>
+mysql> insert into orders values(1001, curdate()),(1002, curdate());
+Query OK, 2 rows affected (0.02 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from orders;
++----------+------------+
+| order_id | order_date |
++----------+------------+
+|     1001 | 2025-11-04 |
+|     1002 | 2025-11-04 |
++----------+------------+
+2 rows in set (0.00 sec)
+
+mysql> desc order_details;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| order_id     | int         | YES  | MUL | NULL    |       |
+| product_name | varchar(10) | YES  |     | NULL    |       |
+| qty          | int         | YES  |     | NULL    |       |
+| rate         | int         | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> insert into order_details values(1003, 'Bread',3,45);
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`x`.`order_details`, CONSTRAINT `fk_on_order_id` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`))
+mysql> insert into order_details values(1001, 'Bread',3,45);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from orders;
++----------+------------+
+| order_id | order_date |
++----------+------------+
+|     1001 | 2025-11-04 |
+|     1002 | 2025-11-04 |
++----------+------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from order_details;
++----------+--------------+------+------+
+| order_id | product_name | qty  | rate |
++----------+--------------+------+------+
+|     1001 | Bread        |    3 |   45 |
++----------+--------------+------+------+
+1 row in set (0.00 sec)
+
+mysql> insert into order_details values(1001, 'Butter', 4,145);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into order_details values(1001, 'Cheese', 4,145);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into order_details values(1001, 'Jam', 4,145);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from orders;
++----------+------------+
+| order_id | order_date |
++----------+------------+
+|     1001 | 2025-11-04 |
+|     1002 | 2025-11-04 |
++----------+------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from order_details;
++----------+--------------+------+------+
+| order_id | product_name | qty  | rate |
++----------+--------------+------+------+
+|     1001 | Bread        |    3 |   45 |
+|     1001 | Butter       |    4 |  145 |
+|     1001 | Cheese       |    4 |  145 |
+|     1001 | Jam          |    4 |  145 |
++----------+--------------+------+------+
+4 rows in set (0.00 sec)
+
+mysql> alter table orders add customer_id int unique auto_increment first;
+Query OK, 0 rows affected (0.12 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc orders;
++-------------+------+------+-----+---------+----------------+
+| Field       | Type | Null | Key | Default | Extra          |
++-------------+------+------+-----+---------+----------------+
+| customer_id | int  | NO   | UNI | NULL    | auto_increment |
+| order_id    | int  | NO   | PRI | NULL    |                |
+| order_date  | date | YES  |     | NULL    |                |
++-------------+------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from orders;
++-------------+----------+------------+
+| customer_id | order_id | order_date |
++-------------+----------+------------+
+|           1 |     1001 | 2025-11-04 |
+|           2 |     1002 | 2025-11-04 |
++-------------+----------+------------+
+2 rows in set (0.00 sec)
+
+mysql> desc orders;
++-------------+------+------+-----+---------+----------------+
+| Field       | Type | Null | Key | Default | Extra          |
++-------------+------+------+-----+---------+----------------+
+| customer_id | int  | NO   | UNI | NULL    | auto_increment |
+| order_id    | int  | NO   | PRI | NULL    |                |
+| order_date  | date | YES  |     | NULL    |                |
++-------------+------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> desc order_details;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| order_id     | int         | YES  | MUL | NULL    |       |
+| product_name | varchar(10) | YES  |     | NULL    |       |
+| qty          | int         | YES  |     | NULL    |       |
+| rate         | int         | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from orders;
++-------------+----------+------------+
+| customer_id | order_id | order_date |
++-------------+----------+------------+
+|           1 |     1001 | 2025-11-04 |
+|           2 |     1002 | 2025-11-04 |
++-------------+----------+------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from order_details;
++----------+--------------+------+------+
+| order_id | product_name | qty  | rate |
++----------+--------------+------+------+
+|     1001 | Bread        |    3 |   45 |
+|     1001 | Butter       |    4 |  145 |
+|     1001 | Cheese       |    4 |  145 |
+|     1001 | Jam          |    4 |  145 |
++----------+--------------+------+------+
+4 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> create table customer_address(customer_id int, city varchar(10), constraint fk_on_customer_address _customer_id_column foreign key(customer_id) references orders((customer_id));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '_customer_id_column foreign key(customer_id) references orders((customer_id))' at line 1
+mysql>
+mysql>
+mysql>
+mysql> show tables;
++---------------+
+| Tables_in_x   |
++---------------+
+| order_details |
+| orders        |
++---------------+
+2 rows in set (0.00 sec)
+
+mysql> desc orders;
++-------------+------+------+-----+---------+----------------+
+| Field       | Type | Null | Key | Default | Extra          |
++-------------+------+------+-----+---------+----------------+
+| customer_id | int  | NO   | UNI | NULL    | auto_increment |
+| order_id    | int  | NO   | PRI | NULL    |                |
+| order_date  | date | YES  |     | NULL    |                |
++-------------+------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> alter table orders  drop customer_id;
+Query OK, 0 rows affected (0.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> create table customer(customer_id int primary key, customer_name varchar(20));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc customer;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| customer_id   | int         | NO   | PRI | NULL    |       |
+| customer_name | varchar(20) | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc ordres;
+ERROR 1146 (42S02): Table 'x.ordres' doesn't exist
+mysql> desc orders;
++------------+------+------+-----+---------+-------+
+| Field      | Type | Null | Key | Default | Extra |
++------------+------+------+-----+---------+-------+
+| order_id   | int  | NO   | PRI | NULL    |       |
+| order_date | date | YES  |     | NULL    |       |
++------------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> aler table orders add customer_id int first;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'aler table orders add customer_id int first' at line 1
+mysql> alter table orders add customer_id int first;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc customer;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| customer_id   | int         | NO   | PRI | NULL    |       |
+| customer_name | varchar(20) | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc orders;
++-------------+------+------+-----+---------+-------+
+| Field       | Type | Null | Key | Default | Extra |
++-------------+------+------+-----+---------+-------+
+| customer_id | int  | YES  |     | NULL    |       |
+| order_id    | int  | NO   | PRI | NULL    |       |
+| order_date  | date | YES  |     | NULL    |       |
++-------------+------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> alter table orders add foreign key(customer_id) references customer(customer_id);
+Query OK, 2 rows affected (0.08 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> desc customer;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| customer_id   | int         | NO   | PRI | NULL    |       |
+| customer_name | varchar(20) | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc orders;
++-------------+------+------+-----+---------+-------+
+| Field       | Type | Null | Key | Default | Extra |
++-------------+------+------+-----+---------+-------+
+| customer_id | int  | YES  | MUL | NULL    |       |
+| order_id    | int  | NO   | PRI | NULL    |       |
+| order_date  | date | YES  |     | NULL    |       |
++-------------+------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc order_details;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| order_id     | int         | YES  | MUL | NULL    |       |
+| product_name | varchar(10) | YES  |     | NULL    |       |
+| qty          | int         | YES  |     | NULL    |       |
+| rate         | int         | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> create table customer_address(customer_id int unique not null, city varchar(10), foreign key(customer_id) references customer(customer_id));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> select * from customer;
+Empty set (0.00 sec)
+
+mysql> select * from customer_address;
+Empty set (0.00 sec)
+
+mysql> insert into customer values(1, 'saleel');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into customer_address values(2, 'pune');
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`x`.`customer_address`, CONSTRAINT `customer_address_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`))
+mysql> select * from customer;
++-------------+---------------+
+| customer_id | customer_name |
++-------------+---------------+
+|           1 | saleel        |
++-------------+---------------+
+1 row in set (0.00 sec)
+
+mysql> insert into customer_address values(1, 'baroda');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into customer_address values(1, 'surat');
+ERROR 1062 (23000): Duplicate entry '1' for key 'customer_address.customer_id'
+mysql> insert into customer_address values(null, 'surat');
+ERROR 1048 (23000): Column 'customer_id' cannot be null
+mysql>
+
+
+
+mysql> select * from customer;
++-------------+---------------+
+| customer_id | customer_name |
++-------------+---------------+
+|           1 | saleel        |
+|           2 | sharmin       |
++-------------+---------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from customer_address;
++-------------+--------+
+| customer_id | city   |
++-------------+--------+
+|           1 | baroda |
++-------------+--------+
+1 row in set (0.00 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from customer;
++-------------+---------------+
+| customer_id | customer_name |
++-------------+---------------+
+|           1 | saleel        |
+|          10 | sharmin       |
++-------------+---------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from customer_address;
++-------------+--------+
+| customer_id | city   |
++-------------+--------+
+|           1 | baroda |
++-------------+--------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> create table a(c1 int primary key, c2 int);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> create table b(c1 int, c2 int, foreign key (c1) references a(c1)) on delete casacde;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'on delete casacde' at line 1
+mysql> create table b(c1 int, c2 int, foreign key (c1) references a(c1) on delete casacde);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'casacde)' at line 1
+mysql> create table b(c1 int, c2 int, foreign key (c1) references a(c1) on delete cascase);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cascase)' at line 1
+mysql> create table b(c1 int, c2 int, foreign key (c1) references a(c1) on delete cascade);
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> desc a;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   | PRI | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc b;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | YES  | MUL | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> insert into a values(1,1),(2,2);
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> insert into b values(1,11),(2,12),(1,13);
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from a;
++----+------+
+| c1 | c2   |
++----+------+
+|  1 |    1 |
+|  2 |    2 |
++----+------+
+2 rows in set (0.00 sec)
+
+mysql> select * from b;
++------+------+
+| c1   | c2   |
++------+------+
+|    1 |   11 |
+|    2 |   12 |
+|    1 |   13 |
++------+------+
+3 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> delete from a where c1=1;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from a;
++----+------+
+| c1 | c2   |
++----+------+
+|  2 |    2 |
++----+------+
+1 row in set (0.00 sec)
+
+mysql> select * from b;
++------+------+
+| c1   | c2   |
++------+------+
+|    2 |   12 |
++------+------+
+1 row in set (0.00 sec)
+
+mysql> drop table b;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> create table b(c1 int, c2 int, foreign key (c1) references a(c1) on delete set null);
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> desc a;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   | PRI | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc b;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | YES  | MUL | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select * from a;
++----+------+
+| c1 | c2   |
++----+------+
+|  2 |    2 |
++----+------+
+1 row in set (0.00 sec)
+
+mysql> select * from b;
+Empty set (0.00 sec)
+
+mysql> insert into b values(2,22),(2,23),(2,24);
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from a;
++----+------+
+| c1 | c2   |
++----+------+
+|  2 |    2 |
++----+------+
+1 row in set (0.00 sec)
+
+mysql> select * from b;
++------+------+
+| c1   | c2   |
++------+------+
+|    2 |   22 |
+|    2 |   23 |
+|    2 |   24 |
++------+------+
+3 rows in set (0.00 sec)
+
+mysql> delete from a where c1=2;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from a;
+Empty set (0.00 sec)
+
+mysql> select * from b;
++------+------+
+| c1   | c2   |
++------+------+
+| NULL |   22 |
+| NULL |   23 |
+| NULL |   24 |
++------+------+
+3 rows in set (0.00 sec)
+
+mysql> create table c(c1 int, c2 int, check(c2 > 1000))
+    -> ;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert into c values(1,1);
+ERROR 3819 (HY000): Check constraint 'c_chk_1' is violated.
+mysql> insert into c values(1,1000);
+ERROR 3819 (HY000): Check constraint 'c_chk_1' is violated.
+mysql> insert into c values(1,1001);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> alter table c add (c3 int, c4 int)
+    -> ;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc c;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | YES  |     | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
+| c3    | int  | YES  |     | NULL    |       |
+| c4    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table c add ckeck(c3> 1000 and c3 < 5000);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(c3> 1000 and c3 < 5000)' at line 1
+mysql> alter table c add check(c3> 1000 and c3 < 5000);
+Query OK, 1 row affected (0.06 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql>
+mysql>
+mysql>
+mysql> alter table c add c6 varchar(10);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table c add check(c6 in ('baroda','surat'));
+Query OK, 1 row affected (0.05 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> insert into c(c6) values('abc');
+ERROR 3819 (HY000): Check constraint 'c_chk_3' is violated.
+mysql> insert into c(c6) values(BARODA');
+    '>  c1^C
+mysql>
+mysql>
+mysql>
+mysql> insert into c(c6) values('BARODA');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into c(c6) values('BARO');
+ERROR 3819 (HY000): Check constraint 'c_chk_3' is violated.
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> create table d(c1 int, city varchar(10), check(city=upper'baroda'));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''baroda'))' at line 1
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> create table d(c1 int, city varchar(10), check(city=upper('baroda'));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql>
+mysql>
+mysql> create table d(c1 int, city varchar(10), check(upper(city)='baroda');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql>
+mysql> create table d(c1 int, city varchar(10), check(upper(city)='baroda'));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> insert into d values('baroda');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into d values(1, 'baroda');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into d values(1, 'BARODA');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from d;
++------+--------+
+| c1   | city   |
++------+--------+
+|    1 | baroda |
+|    1 | BARODA |
++------+--------+
+2 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql> drop table d;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table d(c1 int, city varchar(10), check(binary city='BARODA'));
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+mysql> insert into d values(1,'baroda');
+ERROR 3819 (HY000): Check constraint 'd_chk_1' is violated.
+mysql> insert into d values(1,'BARODA');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from d;
++------+--------+
+| c1   | city   |
++------+--------+
+|    1 | BARODA |
++------+--------+
+1 row in set (0.00 sec)
+
+mysql> create table e(c1 date, city varchar(10), check(c1 = curdate());
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql>
+mysql>
+mysql> create table e(c1 date, city varchar(10), check(c1=now());
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql>
+mysql>
+mysql> create table e(c1 date, city varchar(10), check(c1=now()));
+ERROR 3814 (HY000): An expression of a check constraint 'e_chk_1' contains disallowed function: now.
+mysql>
+mysql>
+mysql> create table e(c1 date, city varchar(10), check(c1=curdate()));
+ERROR 3814 (HY000): An expression of a check constraint 'e_chk_1' contains disallowed function: curdate.
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> create table e(c1 varchar(10), city varchar(10), check(length(c1) > 6));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert inti e values('a', 'd');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'e values('a', 'd')' at line 1
+mysql>
+mysql> insert into e values('a', 'd');
+ERROR 3819 (HY000): Check constraint 'e_chk_1' is violated.
+mysql> insert into e values('anjkid', 'd');
+ERROR 3819 (HY000): Check constraint 'e_chk_1' is violated.
+mysql> insert into e values('anjkidd', 'd');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> create table x (c1 int, c2 int, primary key(c1,c2));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc x;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   | PRI | NULL    |       |
+| c2    | int  | NO   | PRI | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> create table y (c1 int, c2 int, foreign key(c1) references x(c2));
+ERROR 1822 (HY000): Failed to add the foreign key constraint. Missing index for constraint 'y_ibfk_1' in the referenced table 'x'
+mysql>
+mysql>
+mysql>
+mysql> create table y (c1 int, c2 int, foreign key(c1) references x(c1));
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> create table y1 (c1 int, c2 int, foreign key(c1, c2) references x(c1,c2));
+Query OK, 0 rows affected (0.06 sec)
+
+mysql>
+
+
+mysql> show tables;
++------------------+
+| Tables_in_x      |
++------------------+
+| customer         |
+| customer_address |
+| order_details    |
+| orders           |
++------------------+
+4 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> select * from customer;
++-------------+---------------+
+| customer_id | customer_name |
++-------------+---------------+
+|           1 | saleel        |
++-------------+---------------+
+1 row in set (0.00 sec)
+
+mysql> select * from customer_address;
++-------------+--------+
+| customer_id | city   |
++-------------+--------+
+|           1 | baroda |
++-------------+--------+
+1 row in set (0.00 sec)
+
+mysql> insert into customer(customer_name) values('abc');
+ERROR 1364 (HY000): Field 'customer_id' doesn't have a default value
+mysql> insert into customer(customer_id, customer_name) values(2,'sharmin');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> table customer;
++-------------+---------------+
+| customer_id | customer_name |
++-------------+---------------+
+|           1 | saleel        |
+|           2 | sharmin       |
++-------------+---------------+
+2 rows in set (0.00 sec)
+
+mysql> table customer_address;
++-------------+--------+
+| customer_id | city   |
++-------------+--------+
+|           1 | baroda |
++-------------+--------+
+1 row in set (0.00 sec)
+
+mysql> insert into customer_address(city) values('xyz');
+ERROR 1364 (HY000): Field 'customer_id' doesn't have a default value
+mysql> insert into customer_address(customer_id, city) values(1, 'xyz');
+ERROR 1062 (23000): Duplicate entry '1' for key 'customer_address.customer_id'
+mysql> update customer set customer_id=10 where customer_id = 2;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> commit;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> update customer set customer_id=20 where customer_id = 1;
+ERROR 1451 (23000): Cannot delete or update a parent row: a foreign key constraint fails (`x`.`customer_address`, CONSTRAINT `customer_address_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`))
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> delete from customer where customer_id=10;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> delete from customer where customer_id=1;
+ERROR 1451 (23000): Cannot delete or update a parent row: a foreign key constraint fails (`x`.`customer_address`, CONSTRAINT `customer_address_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`))
+mysql> delete from customer_address where customer_id=1;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> delete from customer where customer_id=1;
+Query OK, 1 row affected (0.01 sec)
+
+mysql>
+
+
+
+
+
+
+
+
+
+
