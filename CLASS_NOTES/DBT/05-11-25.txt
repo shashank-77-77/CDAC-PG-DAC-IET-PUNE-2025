@@ -1,0 +1,2033 @@
+mysql> select deptno from emp;
++--------+
+| deptno |
++--------+
+|     10 |
+|     10 |
+|     10 |
+|     10 |
+|     10 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     50 |
+|     50 |
+|     50 |
+|     60 |
+|     60 |
++--------+
+30 rows in set (0.09 sec)
+
+mysql> select deptno from dept;
++--------+
+| deptno |
++--------+
+|     10 |
+|     20 |
+|     30 |
+|     40 |
+|     50 |
+|     60 |
+|     70 |
++--------+
+7 rows in set (0.04 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
+|     70 | NULL       | NULL     | NULL       | NULL       |
++--------+------------+----------+------------+------------+
+7 rows in set (0.00 sec)
+
+mysql> select deptno from emp union select deptno,dname from dept;
+ERROR 1222 (21000): The used SELECT statements have a different number of columns
+mysql> select deptno, ename from emp union select deptno from dept;
+ERROR 1222 (21000): The used SELECT statements have a different number of columns
+mysql>
+mysql>
+mysql> select deptno from emp;
++--------+
+| deptno |
++--------+
+|     10 |
+|     10 |
+|     10 |
+|     10 |
+|     10 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     50 |
+|     50 |
+|     50 |
+|     60 |
+|     60 |
++--------+
+30 rows in set (0.00 sec)
+
+mysql> select dintinct deptno from emp;
+ERROR 1054 (42S22): Unknown column 'dintinct' in 'field list'
+mysql> select distinct deptno from emp;
++--------+
+| deptno |
++--------+
+|     10 |
+|     20 |
+|     30 |
+|     50 |
+|     60 |
++--------+
+5 rows in set (0.02 sec)
+
+mysql> select deptno from emp union select deptno from dept;
++--------+
+| deptno |
++--------+
+|     10 |
+|     20 |
+|     30 |
+|     50 |
+|     60 |
+|     40 |
+|     70 |
++--------+
+7 rows in set (0.03 sec)
+
+mysql> select deptno from emp union select dname from dept;
++------------+
+| deptno     |
++------------+
+| 10         |
+| 20         |
+| 30         |
+| 50         |
+| 60         |
+| ACCOUNTING |
+| RESEARCH   |
+| SALES      |
+| OPERATIONS |
+| HR         |
+| IT         |
+| NULL       |
++------------+
+12 rows in set (0.01 sec)
+
+mysql> select deptno from emp union select deptno from dept;
++--------+
+| deptno |
++--------+
+|     10 |
+|     20 |
+|     30 |
+|     50 |
+|     60 |
+|     40 |
+|     70 |
++--------+
+7 rows in set (0.00 sec)
+
+mysql> select deptno from emp union all select deptno from dept;
++--------+
+| deptno |
++--------+
+|     10 |
+|     10 |
+|     10 |
+|     10 |
+|     10 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     20 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     30 |
+|     50 |
+|     50 |
+|     50 |
+|     60 |
+|     60 |
+|     10 |
+|     20 |
+|     30 |
+|     40 |
+|     50 |
+|     60 |
+|     70 |
++--------+
+37 rows in set (0.00 sec)
+
+mysql> select deptno from emp intersect select deptno from dept;
++--------+
+| deptno |
++--------+
+|     10 |
+|     20 |
+|     30 |
+|     50 |
+|     60 |
++--------+
+5 rows in set (0.01 sec)
+
+mysql> select deptno from dept intersect select deptno from emp;
++--------+
+| deptno |
++--------+
+|     10 |
+|     20 |
+|     30 |
+|     50 |
+|     60 |
++--------+
+5 rows in set (0.00 sec)
+
+mysql> select deptno R1 from dept intersect select deptno  R2 from emp;
++----+
+| R1 |
++----+
+| 10 |
+| 20 |
+| 30 |
+| 50 |
+| 60 |
++----+
+5 rows in set (0.00 sec)
+
+mysql> select deptno R1 from dept except select deptno  R2 from emp;
++----+
+| R1 |
++----+
+| 40 |
+| 70 |
++----+
+2 rows in set (0.00 sec)
+
+mysql> select deptno R1 from emp except select deptno  R2 from dept;
+Empty set (0.00 sec)
+
+mysql> select * from books;
++----+------------+-----------+------+
+| ID | bookName   | Type      | Cost |
++----+------------+-----------+------+
+|  1 | DS         | Hardcover |  950 |
+|  2 | DS         | Hardcover |  950 |
+|  3 | JavaScript | Paperback |  700 |
+|  4 | JavaScript | Paperback |  700 |
+|  5 | Hbase      | Paperback |  760 |
+|  6 | Python     | Hardcover |  980 |
+|  8 | SQL        | Hardcover |  980 |
++----+------------+-----------+------+
+7 rows in set (0.04 sec)
+
+mysql> select * from newbooks;
++----+------------+-----------+------+
+| ID | bookName   | Type      | Cost |
++----+------------+-----------+------+
+|  1 | Redis      | Paperback |  850 |
+|  2 | Redis      | Paperback |  850 |
+|  3 | JavaScript | Paperback |  700 |
+|  4 | JavaScript | Paperback |  700 |
+|  5 | Hbase      | Paperback |  760 |
+|  7 | HTML       | Paperback |  900 |
+|  9 | CSS        | Paperback |  740 |
++----+------------+-----------+------+
+7 rows in set (0.04 sec)
+
+mysql> select bookname from books union select bookname from newbooks;;
++------------+
+| bookname   |
++------------+
+| DS         |
+| JavaScript |
+| Hbase      |
+| Python     |
+| SQL        |
+| Redis      |
+| HTML       |
+| CSS        |
++------------+
+8 rows in set (0.01 sec)
+
+ERROR:
+No query specified
+
+mysql> select bookname from books intersect select bookname from newbooks;;
++------------+
+| bookname   |
++------------+
+| JavaScript |
+| Hbase      |
++------------+
+2 rows in set (0.00 sec)
+
+ERROR:
+No query specified
+
+mysql> select bookname from newbooks except elect bookname from books;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'elect bookname from books' at line 1
+mysql>
+mysql> select bookname from newbooks except select bookname from books;
++----------+
+| bookname |
++----------+
+| Redis    |
+| HTML     |
+| CSS      |
++----------+
+3 rows in set (0.00 sec)
+
+mysql> select * from menucard;
++------+------------------------------+------+
+| ID   | NAME                         | RATE |
++------+------------------------------+------+
+|   14 | Onion Hamburger              |  115 |
+|    6 | Extra Long Cheeseburger      |  100 |
+|    2 | Double Stacker               |  125 |
+|    8 | Double Cheeseburger          |  100 |
+|   13 | Cheese Hamburger             |  125 |
+|    4 | Hamburger                    |   85 |
+|   11 | Classic Grilled Dog          |   95 |
+|    1 | Chili Cheese Grilled Dog     |  115 |
+|    7 | Flame Grilled Chicken Burger |  135 |
+|    3 | Original Chicken Sandwich    |   55 |
+|    9 | McALLO TIKKI                 |   45 |
+|   12 | Veg Maharaja Mac             |   75 |
+|    5 | Big Spicy Chicken Wrap       |  100 |
+|   15 | Cheese Onion Hamburger       |  145 |
+|   10 | McVeggie Schezwan            |   85 |
++------+------------------------------+------+
+15 rows in set (0.04 sec)
+
+mysql> select * from softdrink;
++------+----------------------+------+
+| ID   | NAME                 | RATE |
++------+----------------------+------+
+|    1 | Coca-Cola            |   45 |
+|    2 | Mello Yello          |   75 |
+|    3 | Diet Coke            |   60 |
+|    4 | Frozen Fanta Cherry  |   65 |
+|    5 | Iced Tea             |   35 |
++------+----------------------+------+
+5 rows in set (0.05 sec)
+
+mysql> select * from menucard union select * from softdrink;
++------+------------------------------+------+
+| ID   | NAME                         | RATE |
++------+------------------------------+------+
+|   14 | Onion Hamburger              |  115 |
+|    6 | Extra Long Cheeseburger      |  100 |
+|    2 | Double Stacker               |  125 |
+|    8 | Double Cheeseburger          |  100 |
+|   13 | Cheese Hamburger             |  125 |
+|    4 | Hamburger                    |   85 |
+|   11 | Classic Grilled Dog          |   95 |
+|    1 | Chili Cheese Grilled Dog     |  115 |
+|    7 | Flame Grilled Chicken Burger |  135 |
+|    3 | Original Chicken Sandwich    |   55 |
+|    9 | McALLO TIKKI                 |   45 |
+|   12 | Veg Maharaja Mac             |   75 |
+|    5 | Big Spicy Chicken Wrap       |  100 |
+|   15 | Cheese Onion Hamburger       |  145 |
+|   10 | McVeggie Schezwan            |   85 |
+|    1 | Coca-Cola                    |   45 |
+|    2 | Mello Yello                  |   75 |
+|    3 | Diet Coke                    |   60 |
+|    4 | Frozen Fanta Cherry          |   65 |
+|    5 | Iced Tea                     |   35 |
++------+------------------------------+------+
+20 rows in set (0.00 sec)
+
+mysql> select * from softdrink;
++------+----------------------+------+
+| ID   | NAME                 | RATE |
++------+----------------------+------+
+|    1 | Coca-Cola            |   45 |
+|    2 | Mello Yello          |   75 |
+|    3 | Diet Coke            |   60 |
+|    4 | Frozen Fanta Cherry  |   65 |
+|    5 | Iced Tea             |   35 |
++------+----------------------+------+
+5 rows in set (0.00 sec)
+
+mysql> select bookname from newbooks except select bookname from books;
++----------+
+| bookname |
++----------+
+| Redis    |
+| HTML     |
+| CSS      |
++----------+
+3 rows in set (0.00 sec)
+
+mysql> select * from menucard union select * from softdrink;
++------+------------------------------+------+
+| ID   | NAME                         | RATE |
++------+------------------------------+------+
+|   14 | Onion Hamburger              |  115 |
+|    6 | Extra Long Cheeseburger      |  100 |
+|    2 | Double Stacker               |  125 |
+|    8 | Double Cheeseburger          |  100 |
+|   13 | Cheese Hamburger             |  125 |
+|    4 | Hamburger                    |   85 |
+|   11 | Classic Grilled Dog          |   95 |
+|    1 | Chili Cheese Grilled Dog     |  115 |
+|    7 | Flame Grilled Chicken Burger |  135 |
+|    3 | Original Chicken Sandwich    |   55 |
+|    9 | McALLO TIKKI                 |   45 |
+|   12 | Veg Maharaja Mac             |   75 |
+|    5 | Big Spicy Chicken Wrap       |  100 |
+|   15 | Cheese Onion Hamburger       |  145 |
+|   10 | McVeggie Schezwan            |   85 |
+|    1 | Coca-Cola                    |   45 |
+|    2 | Mello Yello                  |   75 |
+|    3 | Diet Coke                    |   60 |
+|    4 | Frozen Fanta Cherry          |   65 |
+|    5 | Iced Tea                     |   35 |
++------+------------------------------+------+
+20 rows in set (0.00 sec)
+
+mysql>
+mysql> select * from dhl;
++-------------+---------+------------------+---------------+
+| tracking_id | carrier | status           | delivery_date |
++-------------+---------+------------------+---------------+
+| DHL100021   | DHL     | Delivered        | 2025-07-04    |
+| DHL100027   | DHL     | Pending          | 2025-07-23    |
+| DHL100022   | DHL     | In Transit       | 2025-07-05    |
+| DHL100023   | DHL     | Dispatched       | 2025-07-06    |
+| DHL100028   | DHL     | Pending          | 2025-12-23    |
+| DHL100024   | DHL     | Out for Delivery | 2025-07-07    |
+| DHL100025   | DHL     | Delayed          | 2025-07-08    |
+| DHL100026   | DHL     | In Transit       | 2025-07-03    |
++-------------+---------+------------------+---------------+
+8 rows in set (0.05 sec)
+
+mysql> select * from fedex;
++--------------+---------+------------------+---------------+
+| tracking_id  | carrier | status           | delivery_date |
++--------------+---------+------------------+---------------+
+| FEDEX100001  | FedEx   | Dispatched       | 2025-07-04    |
+| FEDEX100002  | FedEx   | In Transit       | 2025-07-05    |
+| FEDEX100006  | FedEx   | Pending          | 2025-06-29    |
+| FEDEX100003  | FedEx   | Delivered        | 2025-07-03    |
+| FEDEX100004  | FedEx   | Out for Delivery | 2025-07-07    |
+| FEDEX100007  | FedEx   | Pending          | 2025-01-09    |
+| FEDEX100005  | FedEx   | Delayed          | 2025-07-08    |
++--------------+---------+------------------+---------------+
+7 rows in set (0.05 sec)
+
+mysql> select * from ups;
++-------------+---------+------------------+---------------+
+| tracking_id | carrier | status           | delivery_date |
++-------------+---------+------------------+---------------+
+| UPS100032   | UPS     | Delivered        | 2025-07-01    |
+| UPS100042   | UPS     | Pending          | 2025-11-11    |
+| UPS100033   | UPS     | Dispatched       | 2025-07-07    |
+| UPS100034   | UPS     | Out for Delivery | 2025-07-08    |
+| UPS100035   | UPS     | Delayed          | 2025-07-09    |
+| UPS100036   | UPS     | In Transit       | 2025-07-03    |
+| UPS100037   | UPS     | Delivered        | 2025-07-05    |
+| UPS100038   | UPS     | Dispatched       | 2025-07-06    |
+| UPS100039   | UPS     | Out for Delivery | 2025-07-04    |
+| UPS100040   | UPS     | Delayed          | 2025-07-12    |
++-------------+---------+------------------+---------------+
+10 rows in set (0.04 sec)
+
+mysql> select * from dhl union select * from fedex union  select * from ups;
++--------------+---------+------------------+---------------+
+| tracking_id  | carrier | status           | delivery_date |
++--------------+---------+------------------+---------------+
+| DHL100021    | DHL     | Delivered        | 2025-07-04    |
+| DHL100027    | DHL     | Pending          | 2025-07-23    |
+| DHL100022    | DHL     | In Transit       | 2025-07-05    |
+| DHL100023    | DHL     | Dispatched       | 2025-07-06    |
+| DHL100028    | DHL     | Pending          | 2025-12-23    |
+| DHL100024    | DHL     | Out for Delivery | 2025-07-07    |
+| DHL100025    | DHL     | Delayed          | 2025-07-08    |
+| DHL100026    | DHL     | In Transit       | 2025-07-03    |
+| FEDEX100001  | FedEx   | Dispatched       | 2025-07-04    |
+| FEDEX100002  | FedEx   | In Transit       | 2025-07-05    |
+| FEDEX100006  | FedEx   | Pending          | 2025-06-29    |
+| FEDEX100003  | FedEx   | Delivered        | 2025-07-03    |
+| FEDEX100004  | FedEx   | Out for Delivery | 2025-07-07    |
+| FEDEX100007  | FedEx   | Pending          | 2025-01-09    |
+| FEDEX100005  | FedEx   | Delayed          | 2025-07-08    |
+| UPS100032    | UPS     | Delivered        | 2025-07-01    |
+| UPS100042    | UPS     | Pending          | 2025-11-11    |
+| UPS100033    | UPS     | Dispatched       | 2025-07-07    |
+| UPS100034    | UPS     | Out for Delivery | 2025-07-08    |
+| UPS100035    | UPS     | Delayed          | 2025-07-09    |
+| UPS100036    | UPS     | In Transit       | 2025-07-03    |
+| UPS100037    | UPS     | Delivered        | 2025-07-05    |
+| UPS100038    | UPS     | Dispatched       | 2025-07-06    |
+| UPS100039    | UPS     | Out for Delivery | 2025-07-04    |
+| UPS100040    | UPS     | Delayed          | 2025-07-12    |
++--------------+---------+------------------+---------------+
+25 rows in set (0.01 sec)
+
+mysql> select * from dhl where status='Delayed';
++-------------+---------+---------+---------------+
+| tracking_id | carrier | status  | delivery_date |
++-------------+---------+---------+---------------+
+| DHL100025   | DHL     | Delayed | 2025-07-08    |
++-------------+---------+---------+---------------+
+1 row in set (0.02 sec)
+
+mysql> select * from fedex where status='Delayed';
++-------------+---------+---------+---------------+
+| tracking_id | carrier | status  | delivery_date |
++-------------+---------+---------+---------------+
+| FEDEX100005 | FedEx   | Delayed | 2025-07-08    |
++-------------+---------+---------+---------------+
+1 row in set (0.00 sec)
+
+mysql> select * from ups where status='Delayed';
++-------------+---------+---------+---------------+
+| tracking_id | carrier | status  | delivery_date |
++-------------+---------+---------+---------------+
+| UPS100035   | UPS     | Delayed | 2025-07-09    |
+| UPS100040   | UPS     | Delayed | 2025-07-12    |
++-------------+---------+---------+---------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from dhl where status='Delayed'  union   select * from fedex where status='Delayed'    union select * from ups where status='Delayed';
++-------------+---------+---------+---------------+
+| tracking_id | carrier | status  | delivery_date |
++-------------+---------+---------+---------------+
+| DHL100025   | DHL     | Delayed | 2025-07-08    |
+| FEDEX100005 | FedEx   | Delayed | 2025-07-08    |
+| UPS100035   | UPS     | Delayed | 2025-07-09    |
+| UPS100040   | UPS     | Delayed | 2025-07-12    |
++-------------+---------+---------+---------------+
+4 rows in set (0.00 sec)
+
+mysql> select count(*) DHL from dhl;
++-----+
+| DHL |
++-----+
+|   8 |
++-----+
+1 row in set (0.03 sec)
+
+mysql> select count(*) fedex from fedex;
++-------+
+| fedex |
++-------+
+|     7 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) ups from ups;
++-----+
+| ups |
++-----+
+|  10 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select count(*) DHL from dhl union select count(*) fedex from fedex union select count(*) ups from ups;
++-----+
+| DHL |
++-----+
+|   8 |
+|   7 |
+|  10 |
++-----+
+3 rows in set (0.02 sec)
+
+mysql> select count(*) 'Total' from dhl union select count(*) fedex from fedex union select count(*) ups from ups;
++-------+
+| Total |
++-------+
+|     8 |
+|     7 |
+|    10 |
++-------+
+3 rows in set (0.02 sec)
+
+mysql> select count(*) 'Total', 'DHL' from dhl union select count(*), 'FedEX' fedex from fedex union select count(*), 'UPS' ups from ups;
++-------+-------+
+| Total | DHL   |
++-------+-------+
+|     8 | DHL   |
+|     7 | FedEX |
+|    10 | UPS   |
++-------+-------+
+3 rows in set (0.01 sec)
+
+mysql>
+mysql> select  'DHL', count(*) 'Total' from dhl union select 'FedEX' count(*) 'Total' fedex from fedex union select 'UPS' count(*) 'Total' ups from ups;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'count(*) 'Total' fedex from fedex union select 'UPS' count(*) 'Total' ups from u' at line 1
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> select  'DHL', count(*) 'Total' from dhl union select 'FedEX', count(*) 'Total' fedex from fedex union select 'UPS', count(*) 'Total' ups from ups;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'fedex from fedex union select 'UPS', count(*) 'Total' ups from ups' at line 1
+mysql>
+mysql>
+mysql>
+mysql> select  'DHL', count(*) 'Total' from dhl union select 'FedEX', count(*) 'Total' from fedex union select 'UPS', count(*) 'Total' from ups;
++-------+-------+
+| DHL   | Total |
++-------+-------+
+| DHL   |     8 |
+| FedEX |     7 |
+| UPS   |    10 |
++-------+-------+
+3 rows in set (0.01 sec)
+
+mysql> show tables;
++---------------------+
+| Tables_in_db1       |
++---------------------+
+| a                   |
+| activity            |
+| agent               |
+| airline_seats       |
+| andor               |
+| atm                 |
+| bankloan            |
+| batch_schedule      |
+| betweensalary       |
+| bitwise             |
+| blanktablea         |
+| blanktableb         |
+| blog                |
+| bonus               |
+| books               |
+| brands              |
+| bus_stops           |
+| cafe                |
+| candidate           |
+| cardpayments        |
+| cashpayments        |
+| categories          |
+| category            |
+| city                |
+| classandsubjects    |
+| client              |
+| cnumbers            |
+| coalesce            |
+| comments            |
+| company             |
+| countnulls          |
+| countnumbers        |
+| cricketwinnerteam   |
+| customer            |
+| customers           |
+| demodept1           |
+| demodept2           |
+| dept                |
+| dept1               |
+| dhl                 |
+| docs                |
+| doctor              |
+| doctorvisits        |
+| dummy               |
+| duplicate           |
+| emp                 |
+| emp1                |
+| emp2                |
+| emp_attendance      |
+| emp_cards           |
+| emp_phone           |
+| empj                |
+| envelope            |
+| facebook            |
+| fedex               |
+| food                |
+| food_category_tags  |
+| food_items          |
+| fromstoreorders     |
+| fruits              |
+| fullname            |
+| hall_ticket         |
+| hobby               |
+| ipl                 |
+| item                |
+| job_list            |
+| key_parts           |
+| labtestlist         |
+| leading_zeroes      |
+| leadtable           |
+| licence             |
+| linkedin            |
+| loan                |
+| location            |
+| managers            |
+| mass_table          |
+| medicinelist        |
+| menucard            |
+| missingnumbers      |
+| nearest             |
+| new                 |
+| newbooks            |
+| null1               |
+| null2               |
+| nullif              |
+| numberstring        |
+| onlineorders        |
+| ord                 |
+| ord1                |
+| order1              |
+| order_items         |
+| orderdetails        |
+| orders              |
+| overlapping_dates   |
+| overtime            |
+| patient             |
+| phonecall           |
+| pivot_table         |
+| plumber             |
+| plumber_service_map |
+| points              |
+| population          |
+| price               |
+| product             |
+| product_sales       |
+| products            |
+| pune_metro_stations |
+| quarterly_revenue   |
+| r                   |
+| r1                  |
+| r2                  |
+| races               |
+| regexpr             |
+| repeatingnumbers    |
+| replacedept         |
+| reservations        |
+| revenue             |
+| rockets             |
+| room_assigned       |
+| room_staff          |
+| rooms               |
+| runners             |
+| runningserver       |
+| sales               |
+| sales1              |
+| sales_channel       |
+| salespeople         |
+| salesperson         |
+| salgrade            |
+| server              |
+| service             |
+| seta                |
+| setb                |
+| shop                |
+| softdrink           |
+| sort                |
+| sourcecity          |
+| sourcenames         |
+| stadium             |
+| stages              |
+| states              |
+| station             |
+| status              |
+| stocks              |
+| stringnumber        |
+| student             |
+| swapcity            |
+| tablea              |
+| tableaa             |
+| tableb              |
+| tablebb             |
+| targetcity          |
+| targetnames         |
+| task1               |
+| tasks               |
+| teams               |
+| temp1               |
+| trainers            |
+| trains              |
+| traintimetable      |
+| transactions        |
+| unpivot_table       |
+| ups                 |
+| vote_response       |
+| votes               |
+| warehouse           |
+| x                   |
+| y                   |
+| year_of_service     |
+| yearly_revenue      |
+| years               |
+| z                   |
++---------------------+
+172 rows in set (0.07 sec)
+
+mysql> select * from onlineorders ;
++---------+------------+------------+-------------+----------+------------+--------+
+| orderID | customerID | product    | category    | quantity | orderDate  | amount |
++---------+------------+------------+-------------+----------+------------+--------+
+|    1001 | C001       | Laptop     | Electronics |        1 | 2025-07-01 |  83000 |
+|    1002 | C002       | Smartphone | Electronics |        2 | 2025-07-02 |  47000 |
+|    1003 | C003       | Headphones | Electronics |        1 | 2025-07-02 |   2500 |
+|    1004 | C004       | T-shirt    | Clothing    |        3 | 2025-07-03 |   1200 |
+|    1005 | C005       | Sneakers   | Footwear    |        1 | 2025-07-03 |   3200 |
+|    1006 | C006       | Book       | Books       |        2 | 2025-07-04 |    800 |
+|    1007 | C001       | Power Bank | Electronics |        1 | 2025-07-04 |   1700 |
++---------+------------+------------+-------------+----------+------------+--------+
+7 rows in set (0.04 sec)
+
+mysql> select * from ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql>
+mysql>
+mysql>
+mysql> select * from onlineorders ;
++---------+------------+------------+-------------+----------+------------+--------+
+| orderID | customerID | product    | category    | quantity | orderDate  | amount |
++---------+------------+------------+-------------+----------+------------+--------+
+|    1001 | C001       | Laptop     | Electronics |        1 | 2025-07-01 |  83000 |
+|    1002 | C002       | Smartphone | Electronics |        2 | 2025-07-02 |  47000 |
+|    1003 | C003       | Headphones | Electronics |        1 | 2025-07-02 |   2500 |
+|    1004 | C004       | T-shirt    | Clothing    |        3 | 2025-07-03 |   1200 |
+|    1005 | C005       | Sneakers   | Footwear    |        1 | 2025-07-03 |   3200 |
+|    1006 | C006       | Book       | Books       |        2 | 2025-07-04 |    800 |
+|    1007 | C001       | Power Bank | Electronics |        1 | 2025-07-04 |   1700 |
++---------+------------+------------+-------------+----------+------------+--------+
+7 rows in set (0.00 sec)
+
+mysql> select * from fromStoreOrders;
++---------+------------+--------------+-------------+----------+------------+--------+
+| orderID | customerID | product      | category    | quantity | orderDate  | amount |
++---------+------------+--------------+-------------+----------+------------+--------+
+|    2001 | C001       | T-shirt      | Clothing    |        2 | 2025-07-01 |   1200 |
+|    2002 | C003       | Smartphone   | Electronics |        1 | 2025-07-01 |  35000 |
+|    2003 | C007       | Formal Shoes | Footwear    |        1 | 2025-07-02 |   2000 |
+|    2004 | C004       | Jeans        | Clothing    |        1 | 2025-07-03 |   3500 |
+|    2005 | C008       | Book         | Books       |        3 | 2025-07-04 |    700 |
+|    2006 | C002       | Laptop       | Electronics |        1 | 2025-07-04 |  93500 |
+|    2007 | C009       | Power Bank   | Electronics |        1 | 2025-07-05 |   1800 |
+|    2008 | C021       | Mouse        | Electronics |        7 | 2025-07-09 |    350 |
+|    2009 | C002       | Smartphone   | Electronics |        1 | 2025-07-02 |  82000 |
++---------+------------+--------------+-------------+----------+------------+--------+
+9 rows in set (0.04 sec)
+
+mysql> select * from onlineorders except select * from fromStoreOrders;
++---------+------------+------------+-------------+----------+------------+--------+
+| orderID | customerID | product    | category    | quantity | orderDate  | amount |
++---------+------------+------------+-------------+----------+------------+--------+
+|    1001 | C001       | Laptop     | Electronics |        1 | 2025-07-01 |  83000 |
+|    1002 | C002       | Smartphone | Electronics |        2 | 2025-07-02 |  47000 |
+|    1003 | C003       | Headphones | Electronics |        1 | 2025-07-02 |   2500 |
+|    1004 | C004       | T-shirt    | Clothing    |        3 | 2025-07-03 |   1200 |
+|    1005 | C005       | Sneakers   | Footwear    |        1 | 2025-07-03 |   3200 |
+|    1006 | C006       | Book       | Books       |        2 | 2025-07-04 |    800 |
+|    1007 | C001       | Power Bank | Electronics |        1 | 2025-07-04 |   1700 |
++---------+------------+------------+-------------+----------+------------+--------+
+7 rows in set (0.00 sec)
+
+mysql> select product from onlineorders except select product from fromStoreOrders;
++------------+
+| product    |
++------------+
+| Headphones |
+| Sneakers   |
++------------+
+2 rows in set (0.00 sec)
+
+mysql> select product from fromStoreOrders;
++--------------+
+| product      |
++--------------+
+| T-shirt      |
+| Smartphone   |
+| Formal Shoes |
+| Jeans        |
+| Book         |
+| Laptop       |
+| Power Bank   |
+| Mouse        |
+| Smartphone   |
++--------------+
+9 rows in set (0.00 sec)
+
+mysql> select * from cashPayments;
++------------+--------------+--------+
+| student_id | student_name | amount |
++------------+--------------+--------+
+|         27 | saleel       |   4000 |
+|         43 | sharmin      |   2000 |
+|         25 | ruhan        |   2600 |
+|         41 | vrushali     |   2200 |
+|         20 | nitish       |   3200 |
+|          7 | neel         |   3400 |
+|         14 | bandish      |   3200 |
+|         17 | naresh       |   3400 |
+|         27 | saleel       |   2500 |
++------------+--------------+--------+
+9 rows in set (0.07 sec)
+
+mysql> select * from cardPayments;
++------------+--------------+--------+
+| student_id | student_name | amount |
++------------+--------------+--------+
+|         43 | sharmin      |   2300 |
+|          9 | bhuru        |   3200 |
+|         63 | bhavin       |   3000 |
+|         39 | boy          |   3400 |
+|         20 | nitish       |   1200 |
+|         27 | saleel       |   4000 |
+|         27 | saleel       |   3500 |
++------------+--------------+--------+
+7 rows in set (0.02 sec)
+
+mysql> select student_name from
+    -> cashPayment  union    select * from cardPayments;
+ERROR 1146 (42S02): Table 'db1.cashpayment' doesn't exist
+mysql>
+mysql>
+mysql> select student_name from cashPayments intersect   select * from cardPayments;
+ERROR 1222 (21000): The used SELECT statements have a different number of columns
+mysql>
+mysql>
+mysql> select student_name from cashPayments intersect   select student_name from cardPayments;
++--------------+
+| student_name |
++--------------+
+| saleel       |
+| sharmin      |
+| nitish       |
++--------------+
+3 rows in set (0.00 sec)
+
+mysql> select student_name from cashPayments except   select student_name from cardPayments;
++--------------+
+| student_name |
++--------------+
+| ruhan        |
+| vrushali     |
+| neel         |
+| bandish      |
+| naresh       |
++--------------+
+5 rows in set (0.00 sec)
+
+mysql> select student_name from  cardPayments except   select student_name from cashPayments;
++--------------+
+| student_name |
++--------------+
+| bhuru        |
+| bhavin       |
+| boy          |
++--------------+
+3 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> select job, count(*) from emp;
+ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'db1.emp.JOB'; this is incompatible with sql_mode=only_full_group_by
+mysql> select job, count(*) from emp group by job;
++---------------------+----------+
+| job                 | count(*) |
++---------------------+----------+
+| Compliance officers |        3 |
+| Public Relation     |        2 |
+| CLERK               |        7 |
+| SALESMAN            |        6 |
+| MANAGER             |        5 |
+| ANALYST             |        3 |
+| PRESIDENT           |        1 |
+| vice PRESIDENT      |        2 |
+| Network             |        1 |
++---------------------+----------+
+9 rows in set (0.01 sec)
+
+mysql> select count(*) from emp;
++----------+
+| count(*) |
++----------+
+|       30 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select 'Total Rows', count(*) from emp;
++------------+----------+
+| Total Rows | count(*) |
++------------+----------+
+| Total Rows |       30 |
++------------+----------+
+1 row in set (0.00 sec)
+
+mysql> select job, count(*) from emp group by job union   select 'Total Rows', count(*) from emp;
++---------------------+----------+
+| job                 | count(*) |
++---------------------+----------+
+| Compliance officers |        3 |
+| Public Relation     |        2 |
+| CLERK               |        7 |
+| SALESMAN            |        6 |
+| MANAGER             |        5 |
+| ANALYST             |        3 |
+| PRESIDENT           |        1 |
+| vice PRESIDENT      |        2 |
+| Network             |        1 |
+| Total Rows          |       30 |
++---------------------+----------+
+10 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql> select 1 n;
++---+
+| n |
++---+
+| 1 |
++---+
+1 row in set (0.00 sec)
+
+mysql> select 1 n union select 2;
++---+
+| n |
++---+
+| 1 |
+| 2 |
++---+
+2 rows in set (0.00 sec)
+
+mysql> select 1 n union select n + 1;
+ERROR 1054 (42S22): Unknown column 'n' in 'field list'
+mysql>
+mysql> select 1 n union select 1 + 1;
++---+
+| n |
++---+
+| 1 |
+| 2 |
++---+
+2 rows in set (0.00 sec)
+
+mysql> select ename, job, sal from emp
+    -> ;
++----------+---------------------+------+
+| ename    | job                 | sal  |
++----------+---------------------+------+
+| GITA     | Compliance officers | 1750 |
+| VRUSHALI | Compliance officers | 1750 |
+| SHARMIN  | Public Relation     | 1750 |
+| BANDISH  | Public Relation     | 1750 |
+| SMITH    | CLERK               |  800 |
+| AARAV    | CLERK               | 3350 |
+| THOMAS   | CLERK               | 1750 |
+| ALLEN    | SALESMAN            | 1600 |
+| WARD     | SALESMAN            | 1250 |
+| JONES    | MANAGER             | 2975 |
+| MARTIN   | SALESMAN            | 1250 |
+| BLAKE    | MANAGER             | 2850 |
+| CLARK    | MANAGER             | 2450 |
+| SCOTT    | ANALYST             | 3000 |
+| KING     | PRESIDENT           | 5000 |
+| FRED     | vice PRESIDENT      | 5000 |
+| TURNER   | SALESMAN            | 1500 |
+| ADAMS    | CLERK               | 1100 |
+| Ruhan    | Network             | 2000 |
+| Neel     | vice PRESIDENT      | 1000 |
+| JAMES    | CLERK               |  950 |
+| FORD     | ANALYST             | 3000 |
+| HOFFMAN  | MANAGER             | 4150 |
+| GRASS    | SALESMAN            | 2575 |
+| MILLER   | CLERK               | 1300 |
+| AARUSH   | SALESMAN            | 1350 |
+| ALEX     | MANAGER             | 1250 |
+| NATASHA  | CLERK               | 1750 |
+| SANGITA  | Compliance officers | 1750 |
+| SUPRIYA  | ANALYST             | 1750 |
++----------+---------------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, job, sal from emp;
++----------+---------------------+------+
+| ename    | job                 | sal  |
++----------+---------------------+------+
+| GITA     | Compliance officers | 1750 |
+| VRUSHALI | Compliance officers | 1750 |
+| SHARMIN  | Public Relation     | 1750 |
+| BANDISH  | Public Relation     | 1750 |
+| SMITH    | CLERK               |  800 |
+| AARAV    | CLERK               | 3350 |
+| THOMAS   | CLERK               | 1750 |
+| ALLEN    | SALESMAN            | 1600 |
+| WARD     | SALESMAN            | 1250 |
+| JONES    | MANAGER             | 2975 |
+| MARTIN   | SALESMAN            | 1250 |
+| BLAKE    | MANAGER             | 2850 |
+| CLARK    | MANAGER             | 2450 |
+| SCOTT    | ANALYST             | 3000 |
+| KING     | PRESIDENT           | 5000 |
+| FRED     | vice PRESIDENT      | 5000 |
+| TURNER   | SALESMAN            | 1500 |
+| ADAMS    | CLERK               | 1100 |
+| Ruhan    | Network             | 2000 |
+| Neel     | vice PRESIDENT      | 1000 |
+| JAMES    | CLERK               |  950 |
+| FORD     | ANALYST             | 3000 |
+| HOFFMAN  | MANAGER             | 4150 |
+| GRASS    | SALESMAN            | 2575 |
+| MILLER   | CLERK               | 1300 |
+| AARUSH   | SALESMAN            | 1350 |
+| ALEX     | MANAGER             | 1250 |
+| NATASHA  | CLERK               | 1750 |
+| SANGITA  | Compliance officers | 1750 |
+| SUPRIYA  | ANALYST             | 1750 |
++----------+---------------------+------+
+30 rows in set (0.00 sec)
+
+mysql> desc a;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | int         | YES  |     | NULL    |       |
+| c2    | varchar(10) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.03 sec)
+
+mysql> desc e;
+ERROR 1146 (42S02): Table 'db1.e' doesn't exist
+mysql> desc e;
+ERROR 1146 (42S02): Table 'db1.e' doesn't exist
+mysql> create table e  as select ename, job, sal from emp;
+Query OK, 30 rows affected (0.10 sec)
+Records: 30  Duplicates: 0  Warnings: 0
+
+mysql> desc e;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| ename | varchar(12) | YES  |     | NULL    |       |
+| job   | varchar(20) | YES  |     | NULL    |       |
+| sal   | int         | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> create table e1  as (select job, ename, comm, hiredate, sal from emp);
+Query OK, 30 rows affected (0.05 sec)
+Records: 30  Duplicates: 0  Warnings: 0
+
+mysql> dec e;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dec e' at line 1
+mysql>
+mysql>
+mysql>
+mysql> desc e;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| ename | varchar(12) | YES  |     | NULL    |       |
+| job   | varchar(20) | YES  |     | NULL    |       |
+| sal   | int         | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc e1;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| job      | varchar(20) | YES  |     | NULL    |       |
+| ename    | varchar(12) | YES  |     | NULL    |       |
+| comm     | int         | YES  |     | NULL    |       |
+| hiredate | date        | YES  |     | NULL    |       |
+| sal      | int         | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from e;
++----------+---------------------+------+
+| ename    | job                 | sal  |
++----------+---------------------+------+
+| GITA     | Compliance officers | 1750 |
+| VRUSHALI | Compliance officers | 1750 |
+| SHARMIN  | Public Relation     | 1750 |
+| BANDISH  | Public Relation     | 1750 |
+| SMITH    | CLERK               |  800 |
+| AARAV    | CLERK               | 3350 |
+| THOMAS   | CLERK               | 1750 |
+| ALLEN    | SALESMAN            | 1600 |
+| WARD     | SALESMAN            | 1250 |
+| JONES    | MANAGER             | 2975 |
+| MARTIN   | SALESMAN            | 1250 |
+| BLAKE    | MANAGER             | 2850 |
+| CLARK    | MANAGER             | 2450 |
+| SCOTT    | ANALYST             | 3000 |
+| KING     | PRESIDENT           | 5000 |
+| FRED     | vice PRESIDENT      | 5000 |
+| TURNER   | SALESMAN            | 1500 |
+| ADAMS    | CLERK               | 1100 |
+| Ruhan    | Network             | 2000 |
+| Neel     | vice PRESIDENT      | 1000 |
+| JAMES    | CLERK               |  950 |
+| FORD     | ANALYST             | 3000 |
+| HOFFMAN  | MANAGER             | 4150 |
+| GRASS    | SALESMAN            | 2575 |
+| MILLER   | CLERK               | 1300 |
+| AARUSH   | SALESMAN            | 1350 |
+| ALEX     | MANAGER             | 1250 |
+| NATASHA  | CLERK               | 1750 |
+| SANGITA  | Compliance officers | 1750 |
+| SUPRIYA  | ANALYST             | 1750 |
++----------+---------------------+------+
+30 rows in set (0.00 sec)
+
+mysql> select * from e1;
++---------------------+----------+------+------------+------+
+| job                 | ename    | comm | hiredate   | sal  |
++---------------------+----------+------+------------+------+
+| Compliance officers | GITA     | NULL | 1981-07-19 | 1750 |
+| Compliance officers | VRUSHALI | NULL | 1981-07-19 | 1750 |
+| Public Relation     | SHARMIN  | NULL | 1981-07-19 | 1750 |
+| Public Relation     | BANDISH  | NULL | 1981-07-19 | 1750 |
+| CLERK               | SMITH    | NULL | 1980-12-17 |  800 |
+| CLERK               | AARAV    | NULL | 1981-12-31 | 3350 |
+| CLERK               | THOMAS   | NULL | 1981-07-19 | 1750 |
+| SALESMAN            | ALLEN    |  300 | 1981-02-20 | 1600 |
+| SALESMAN            | WARD     |  500 | 1981-02-22 | 1250 |
+| MANAGER             | JONES    | NULL | 1981-04-02 | 2975 |
+| SALESMAN            | MARTIN   | 1400 | 1981-09-28 | 1250 |
+| MANAGER             | BLAKE    | NULL | 1981-05-01 | 2850 |
+| MANAGER             | CLARK    | NULL | 1981-06-09 | 2450 |
+| ANALYST             | SCOTT    | NULL | 1982-12-09 | 3000 |
+| PRESIDENT           | KING     | NULL | 1981-11-17 | 5000 |
+| vice PRESIDENT      | FRED     | NULL | 1983-08-09 | 5000 |
+| SALESMAN            | TURNER   |    0 | 1981-09-08 | 1500 |
+| CLERK               | ADAMS    | NULL | 1983-01-12 | 1100 |
+| Network             | Ruhan    | NULL | 1983-08-09 | 2000 |
+| vice PRESIDENT      | Neel     | NULL | 1983-08-09 | 1000 |
+| CLERK               | JAMES    | NULL | 1981-12-03 |  950 |
+| ANALYST             | FORD     | NULL | 1981-12-03 | 3000 |
+| MANAGER             | HOFFMAN  | NULL | 1982-03-24 | 4150 |
+| SALESMAN            | GRASS    | 2700 | 1980-02-14 | 2575 |
+| CLERK               | MILLER   | 1300 | 1982-01-23 | 1300 |
+| SALESMAN            | AARUSH   | 2700 | 1980-02-14 | 1350 |
+| MANAGER             | ALEX     |  500 | 1982-01-24 | 1250 |
+| CLERK               | NATASHA  | NULL | 1981-07-19 | 1750 |
+| Compliance officers | SANGITA  | NULL | 1981-07-19 | 1750 |
+| ANALYST             | SUPRIYA  | NULL | 1981-07-19 | 1750 |
++---------------------+----------+------+------------+------+
+30 rows in set (0.00 sec)
+
+mysql> create table e2 as select empno, ename, comm, sal, sal+comm from emp;
+Query OK, 30 rows affected (0.05 sec)
+Records: 30  Duplicates: 0  Warnings: 0
+
+mysql> desc e2;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| empno    | int         | NO   |     | NULL    |       |
+| ename    | varchar(12) | YES  |     | NULL    |       |
+| comm     | int         | YES  |     | NULL    |       |
+| sal      | int         | YES  |     | NULL    |       |
+| sal+comm | bigint      | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from e2;
++-------+----------+------+------+----------+
+| empno | ename    | comm | sal  | sal+comm |
++-------+----------+------+------+----------+
+|  6001 | GITA     | NULL | 1750 |     NULL |
+|  6129 | VRUSHALI | NULL | 1750 |     NULL |
+|  6473 | SHARMIN  | NULL | 1750 |     NULL |
+|  6781 | BANDISH  | NULL | 1750 |     NULL |
+|  7369 | SMITH    | NULL |  800 |     NULL |
+|  7415 | AARAV    | NULL | 3350 |     NULL |
+|  7421 | THOMAS   | NULL | 1750 |     NULL |
+|  7499 | ALLEN    |  300 | 1600 |     1900 |
+|  7521 | WARD     |  500 | 1250 |     1750 |
+|  7566 | JONES    | NULL | 2975 |     NULL |
+|  7654 | MARTIN   | 1400 | 1250 |     2650 |
+|  7698 | BLAKE    | NULL | 2850 |     NULL |
+|  7782 | CLARK    | NULL | 2450 |     NULL |
+|  7788 | SCOTT    | NULL | 3000 |     NULL |
+|  7839 | KING     | NULL | 5000 |     NULL |
+|  7840 | FRED     | NULL | 5000 |     NULL |
+|  7844 | TURNER   |    0 | 1500 |     1500 |
+|  7876 | ADAMS    | NULL | 1100 |     NULL |
+|  7888 | Ruhan    | NULL | 2000 |     NULL |
+|  7889 | Neel     | NULL | 1000 |     NULL |
+|  7900 | JAMES    | NULL |  950 |     NULL |
+|  7902 | FORD     | NULL | 3000 |     NULL |
+|  7919 | HOFFMAN  | NULL | 4150 |     NULL |
+|  7920 | GRASS    | 2700 | 2575 |     5275 |
+|  7934 | MILLER   | 1300 | 1300 |     2600 |
+|  7945 | AARUSH   | 2700 | 1350 |     4050 |
+|  7949 | ALEX     |  500 | 1250 |     1750 |
+|  8433 | NATASHA  | NULL | 1750 |     NULL |
+|  9400 | SANGITA  | NULL | 1750 |     NULL |
+|  9473 | SUPRIYA  | NULL | 1750 |     NULL |
++-------+----------+------+------+----------+
+30 rows in set (0.00 sec)
+
+mysql> select ename, sal+comm from emp;
++----------+----------+
+| ename    | sal+comm |
++----------+----------+
+| GITA     |     NULL |
+| VRUSHALI |     NULL |
+| SHARMIN  |     NULL |
+| BANDISH  |     NULL |
+| SMITH    |     NULL |
+| AARAV    |     NULL |
+| THOMAS   |     NULL |
+| ALLEN    |     1900 |
+| WARD     |     1750 |
+| JONES    |     NULL |
+| MARTIN   |     2650 |
+| BLAKE    |     NULL |
+| CLARK    |     NULL |
+| SCOTT    |     NULL |
+| KING     |     NULL |
+| FRED     |     NULL |
+| TURNER   |     1500 |
+| ADAMS    |     NULL |
+| Ruhan    |     NULL |
+| Neel     |     NULL |
+| JAMES    |     NULL |
+| FORD     |     NULL |
+| HOFFMAN  |     NULL |
+| GRASS    |     5275 |
+| MILLER   |     2600 |
+| AARUSH   |     4050 |
+| ALEX     |     1750 |
+| NATASHA  |     NULL |
+| SANGITA  |     NULL |
+| SUPRIYA  |     NULL |
++----------+----------+
+30 rows in set (0.00 sec)
+
+mysql> alter table e2  drop column sal;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc e2;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| empno    | int         | NO   |     | NULL    |       |
+| ename    | varchar(12) | YES  |     | NULL    |       |
+| comm     | int         | YES  |     | NULL    |       |
+| sal+comm | bigint      | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select ename, sal+comm from emp;
++----------+----------+
+| ename    | sal+comm |
++----------+----------+
+| GITA     |     NULL |
+| VRUSHALI |     NULL |
+| SHARMIN  |     NULL |
+| BANDISH  |     NULL |
+| SMITH    |     NULL |
+| AARAV    |     NULL |
+| THOMAS   |     NULL |
+| ALLEN    |     1900 |
+| WARD     |     1750 |
+| JONES    |     NULL |
+| MARTIN   |     2650 |
+| BLAKE    |     NULL |
+| CLARK    |     NULL |
+| SCOTT    |     NULL |
+| KING     |     NULL |
+| FRED     |     NULL |
+| TURNER   |     1500 |
+| ADAMS    |     NULL |
+| Ruhan    |     NULL |
+| Neel     |     NULL |
+| JAMES    |     NULL |
+| FORD     |     NULL |
+| HOFFMAN  |     NULL |
+| GRASS    |     5275 |
+| MILLER   |     2600 |
+| AARUSH   |     4050 |
+| ALEX     |     1750 |
+| NATASHA  |     NULL |
+| SANGITA  |     NULL |
+| SUPRIYA  |     NULL |
++----------+----------+
+30 rows in set (0.00 sec)
+
+mysql> desc e2;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| empno    | int         | NO   |     | NULL    |       |
+| ename    | varchar(12) | YES  |     | NULL    |       |
+| comm     | int         | YES  |     | NULL    |       |
+| sal+comm | bigint      | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select ename, sal+comm from e2;
+ERROR 1054 (42S22): Unknown column 'sal' in 'field list'
+mysql>
+mysql>
+mysql> select ename, `sal+comm` from e2;
++----------+----------+
+| ename    | sal+comm |
++----------+----------+
+| GITA     |     NULL |
+| VRUSHALI |     NULL |
+| SHARMIN  |     NULL |
+| BANDISH  |     NULL |
+| SMITH    |     NULL |
+| AARAV    |     NULL |
+| THOMAS   |     NULL |
+| ALLEN    |     1900 |
+| WARD     |     1750 |
+| JONES    |     NULL |
+| MARTIN   |     2650 |
+| BLAKE    |     NULL |
+| CLARK    |     NULL |
+| SCOTT    |     NULL |
+| KING     |     NULL |
+| FRED     |     NULL |
+| TURNER   |     1500 |
+| ADAMS    |     NULL |
+| Ruhan    |     NULL |
+| Neel     |     NULL |
+| JAMES    |     NULL |
+| FORD     |     NULL |
+| HOFFMAN  |     NULL |
+| GRASS    |     5275 |
+| MILLER   |     2600 |
+| AARUSH   |     4050 |
+| ALEX     |     1750 |
+| NATASHA  |     NULL |
+| SANGITA  |     NULL |
+| SUPRIYA  |     NULL |
++----------+----------+
+30 rows in set (0.00 sec)
+
+mysql> create table e3 as select empno, ename, comm, sal, sal+comm R1 from emp;
+Query OK, 30 rows affected (0.04 sec)
+Records: 30  Duplicates: 0  Warnings: 0
+
+mysql> desc e3;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| empno | int         | NO   |     | NULL    |       |
+| ename | varchar(12) | YES  |     | NULL    |       |
+| comm  | int         | YES  |     | NULL    |       |
+| sal   | int         | YES  |     | NULL    |       |
+| R1    | bigint      | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select ename, sal+comm, r1 from e3;
++----------+----------+------+
+| ename    | sal+comm | r1   |
++----------+----------+------+
+| GITA     |     NULL | NULL |
+| VRUSHALI |     NULL | NULL |
+| SHARMIN  |     NULL | NULL |
+| BANDISH  |     NULL | NULL |
+| SMITH    |     NULL | NULL |
+| AARAV    |     NULL | NULL |
+| THOMAS   |     NULL | NULL |
+| ALLEN    |     1900 | 1900 |
+| WARD     |     1750 | 1750 |
+| JONES    |     NULL | NULL |
+| MARTIN   |     2650 | 2650 |
+| BLAKE    |     NULL | NULL |
+| CLARK    |     NULL | NULL |
+| SCOTT    |     NULL | NULL |
+| KING     |     NULL | NULL |
+| FRED     |     NULL | NULL |
+| TURNER   |     1500 | 1500 |
+| ADAMS    |     NULL | NULL |
+| Ruhan    |     NULL | NULL |
+| Neel     |     NULL | NULL |
+| JAMES    |     NULL | NULL |
+| FORD     |     NULL | NULL |
+| HOFFMAN  |     NULL | NULL |
+| GRASS    |     5275 | 5275 |
+| MILLER   |     2600 | 2600 |
+| AARUSH   |     4050 | 4050 |
+| ALEX     |     1750 | 1750 |
+| NATASHA  |     NULL | NULL |
+| SANGITA  |     NULL | NULL |
+| SUPRIYA  |     NULL | NULL |
++----------+----------+------+
+30 rows in set (0.00 sec)
+
+mysql> alter table e3 drop sal;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc e3;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| empno | int         | NO   |     | NULL    |       |
+| ename | varchar(12) | YES  |     | NULL    |       |
+| comm  | int         | YES  |     | NULL    |       |
+| R1    | bigint      | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select r1 from e3;
++------+
+| r1   |
++------+
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| 1900 |
+| 1750 |
+| NULL |
+| 2650 |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| 1500 |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| 5275 |
+| 2600 |
+| 4050 |
+| 1750 |
+| NULL |
+| NULL |
+| NULL |
++------+
+30 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> select (select 1);
++------------+
+| (select 1) |
++------------+
+|          1 |
++------------+
+1 row in set (0.01 sec)
+
+mysql> select (select 1) n;
++---+
+| n |
++---+
+| 1 |
++---+
+1 row in set (0.00 sec)
+
+mysql>
+mysql> select (select 1, 2) n;
+ERROR 1241 (21000): Operand should contain 1 column(s)
+mysql>
+mysql>
+mysql>
+mysql> select (select 1) n;
++---+
+| n |
++---+
+| 1 |
++---+
+1 row in set (0.00 sec)
+
+mysql> select (select 1) n, (select 2) m;
++---+---+
+| n | m |
++---+---+
+| 1 | 2 |
++---+---+
+1 row in set (0.00 sec)
+
+mysql> select (select 1) n, (select 2) m, 1, 2;
++---+---+---+---+
+| n | m | 1 | 2 |
++---+---+---+---+
+| 1 | 2 | 1 | 2 |
++---+---+---+---+
+1 row in set (0.00 sec)
+
+mysql> select max(al),min(Sal) from emp;
+ERROR 1054 (42S22): Unknown column 'al' in 'field list'
+mysql> select max(sal),min(Sal) from emp;
++----------+----------+
+| max(sal) | min(Sal) |
++----------+----------+
+|     5000 |      800 |
++----------+----------+
+1 row in set (0.00 sec)
+
+mysql> select max(sal) from emp where job='manager';
++----------+
+| max(sal) |
++----------+
+|     4150 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select max(sal) from emp where job='salesman';
++----------+
+| max(sal) |
++----------+
+|     2575 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select max(sal) from emp where job='manager' union select max(sal) from emp where job='salesman';
++----------+
+| max(sal) |
++----------+
+|     4150 |
+|     2575 |
++----------+
+2 rows in set (0.00 sec)
+
+mysql> select 4150 - 2575;
++-------------+
+| 4150 - 2575 |
++-------------+
+|        1575 |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> select (4150) - (2575);
++-----------------+
+| (4150) - (2575) |
++-----------------+
+|            1575 |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> select (select max(sal) from emp where job='manager') - (select max(sal) from emp where job='salesman');
++--------------------------------------------------------------------------------------------------+
+| (select max(sal) from emp where job='manager') - (select max(sal) from emp where job='salesman') |
++--------------------------------------------------------------------------------------------------+
+|                                                                                             1575 |
++--------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select (select max(sal) from emp where job='manager') - (select max(sal) from emp where job='salesman') R1 ;
++------+
+| R1   |
++------+
+| 1575 |
++------+
+1 row in set (0.00 sec)
+
+mysql> select * from products;
++-----------+----------------------------------+------------+------------+----------------------+-----------+--------------+--------------+--------------+--------------+
+| ProductID | ProductName                      | SupplierID | CategoryID | QuantityPerUnit      | UnitPrice | UnitsInStock | UnitsOnOrder | ReorderLevel | Discontinued |
++-----------+----------------------------------+------------+------------+----------------------+-----------+--------------+--------------+--------------+--------------+
+|         1 | Chai                             |          1 |          1 | 10 boxes x 20 bags   |   18.0000 |           39 |            0 |           10 |            0 |
+|         2 | Chang                            |          1 |          1 | 24 - 12 oz bottles   |   19.0000 |           17 |           40 |           25 |            0 |
+|         3 | Aniseed Syrup                    |          1 |          2 | 12 - 550 ml bottles  |   10.0000 |           13 |           70 |           25 |            0 |
+|         4 | Chef Anton's Cajun Seasoning     |          2 |          2 | 48 - 6 oz jars       |   22.0000 |           53 |            0 |            0 |            0 |
+|         5 | Chef Anton's Gumbo Mix           |          2 |          2 | 36 boxes             |   21.3500 |            0 |            0 |            0 |            1 |
+|         6 | Grandma's Boysenberry Spread     |          3 |          2 | 12 - 8 oz jars       |   25.0000 |          120 |            0 |           25 |            0 |
+|         7 | Uncle Bob's Organic Dried Pears  |          3 |          7 | 12 - 1 lb pkgs.      |   30.0000 |           15 |            0 |           10 |            0 |
+|         8 | Northwoods Cranberry Sauce       |          3 |          2 | 12 - 12 oz jars      |   40.0000 |            6 |            0 |            0 |            0 |
+|         9 | Mishi Kobe Niku                  |          4 |          6 | 18 - 500 g pkgs.     |   97.0000 |           29 |            0 |            0 |            1 |
+|        10 | Ikura                            |          4 |          8 | 12 - 200 ml jars     |   31.0000 |           31 |            0 |            0 |            0 |
+|        11 | Queso Cabrales                   |          5 |          4 | 1 kg pkg.            |   21.0000 |           22 |           30 |           30 |            0 |
+|        12 | Queso Manchego La Pastora        |          5 |          4 | 10 - 500 g pkgs.     |   38.0000 |           86 |            0 |            0 |            0 |
+|        13 | Konbu                            |          6 |          8 | 2 kg box             |    6.0000 |           24 |            0 |            5 |            0 |
+|        14 | Tofu                             |          6 |          7 | 40 - 100 g pkgs.     |   23.2500 |           35 |            0 |            0 |            0 |
+|        15 | Genen Shouyu                     |          6 |          2 | 40 - 100 g pkgs.     |   15.5000 |           39 |            0 |            5 |            0 |
+|        16 | Pavlova                          |          7 |          3 | 32 - 500 g boxes     |   17.4500 |           29 |            0 |           10 |            0 |
+|        17 | Alice Mutton                     |          7 |          6 | 20 - 1 kg tins       |   39.0000 |            0 |            0 |            0 |            1 |
+|        18 | Carnarvon Tigers                 |          7 |          8 | 16 kg pkg.           |   62.5000 |           42 |            0 |            0 |            0 |
+|        19 | Teatime Chocolate Biscuits       |          8 |          3 | 10 boxes x 12 pieces |    9.2000 |           25 |            0 |            5 |            0 |
+|        20 | Sir Rodney's Marmalade           |          8 |          3 | 30 gift boxes        |   81.0000 |           40 |            0 |            0 |            0 |
+|        21 | Sir Rodney's Scones              |          8 |          3 | 24 pkgs. x 4 pieces  |   10.0000 |            3 |           40 |            5 |            0 |
+|        22 | Gustaf's Knckebrd                |          9 |          5 | 24 - 500 g pkgs.     |   21.0000 |          104 |            0 |           25 |            0 |
+|        23 | Tunnbrd                          |          9 |          5 | 12 - 250 g pkgs.     |    9.0000 |           61 |            0 |           25 |            0 |
+|        24 | Guaran Fantstica                 |         10 |          1 | 12 - 355 ml cans     |    4.5000 |           20 |            0 |            0 |            1 |
+|        25 | NuNuCa Nu-Nougat-Creme           |         11 |          3 | 20 - 450 g glasses   |   14.0000 |           76 |            0 |           30 |            0 |
+|        26 | Gumbr Gummibrchen                |         11 |          3 | 100 - 250 g bags     |   31.2300 |           15 |            0 |            0 |            0 |
+|        27 | Schoggi Schokolade               |         11 |          3 | 100 - 100 g pieces   |   43.9000 |           49 |            0 |           30 |            0 |
+|        28 | Rssle Sauerkraut                 |         12 |          7 | 25 - 825 g cans      |   45.6000 |           26 |            0 |            0 |            1 |
+|        29 | Thringer Rostbratwurst           |         12 |          6 | 50 bags x 30 sausgs. |  123.7900 |            0 |            0 |            0 |            1 |
+|        30 | Nord-Ost Matjeshering            |         13 |          8 | 10 - 200 g glasses   |   25.8900 |           10 |            0 |           15 |            0 |
+|        31 | Gorgonzola Telino                |         14 |          4 | 12 - 100 g pkgs      |   12.5000 |            0 |           70 |           20 |            0 |
+|        32 | Mascarpone Fabioli               |         14 |          4 | 24 - 200 g pkgs.     |   32.0000 |            9 |           40 |           25 |            0 |
+|        33 | Geitost                          |         15 |          4 | 500 g                |    2.5000 |          112 |            0 |           20 |            0 |
+|        34 | Sasquatch Ale                    |         16 |          1 | 24 - 12 oz bottles   |   14.0000 |          111 |            0 |           15 |            0 |
+|        35 | Steeleye Stout                   |         16 |          1 | 24 - 12 oz bottles   |   18.0000 |           20 |            0 |           15 |            0 |
+|        36 | Inlagd Sill                      |         17 |          8 | 24 - 250 g jars      |   19.0000 |          112 |            0 |           20 |            0 |
+|        37 | Gravad lax                       |         17 |          8 | 12 - 500 g pkgs.     |   26.0000 |           11 |           50 |           25 |            0 |
+|        38 | Cte de Blaye                     |         18 |          1 | 12 - 75 cl bottles   |  263.5000 |           17 |            0 |           15 |            0 |
+|        39 | Chartreuse verte                 |         18 |          1 | 750 cc per bottle    |   18.0000 |           69 |            0 |            5 |            0 |
+|        40 | Boston Crab Meat                 |         19 |          8 | 24 - 4 oz tins       |   18.4000 |          123 |            0 |           30 |            0 |
+|        41 | Jack's New England Clam Chowder  |         19 |          8 | 12 - 12 oz cans      |    9.6500 |           85 |            0 |           10 |            0 |
+|        42 | Singaporean Hokkien Fried Mee    |         20 |          5 | 32 - 1 kg pkgs.      |   14.0000 |           26 |            0 |            0 |            1 |
+|        43 | Ipoh Coffee                      |         20 |          1 | 16 - 500 g tins      |   46.0000 |           17 |           10 |           25 |            0 |
+|        44 | Gula Malacca                     |         20 |          2 | 20 - 2 kg bags       |   19.4500 |           27 |            0 |           15 |            0 |
+|        45 | Rogede sild                      |         21 |          8 | 1k pkg.              |    9.5000 |            5 |           70 |           15 |            0 |
+|        46 | Spegesild                        |         21 |          8 | 4 - 450 g glasses    |   12.0000 |           95 |            0 |            0 |            0 |
+|        47 | Zaanse koeken                    |         22 |          3 | 10 - 4 oz boxes      |    9.5000 |           36 |            0 |            0 |            0 |
+|        48 | Chocolade                        |         22 |          3 | 10 pkgs.             |   12.7500 |           15 |           70 |           25 |            0 |
+|        49 | Maxilaku                         |         23 |          3 | 24 - 50 g pkgs.      |   20.0000 |           10 |           60 |           15 |            0 |
+|        50 | Valkoinen suklaa                 |         23 |          3 | 12 - 100 g bars      |   16.2500 |           65 |            0 |           30 |            0 |
+|        51 | Manjimup Dried Apples            |         24 |          7 | 50 - 300 g pkgs.     |   53.0000 |           20 |            0 |           10 |            0 |
+|        52 | Filo Mix                         |         24 |          5 | 16 - 2 kg boxes      |    7.0000 |           38 |            0 |           25 |            0 |
+|        53 | Perth Pasties                    |         24 |          6 | 48 pieces            |   32.8000 |            0 |            0 |            0 |            1 |
+|        54 | Tourtire                         |         25 |          6 | 16 pies              |    7.4500 |           21 |            0 |           10 |            0 |
+|        55 | Pt chinois                       |         25 |          6 | 24 boxes x 2 pies    |   24.0000 |          115 |            0 |           20 |            0 |
+|        56 | Gnocchi di nonna Alice           |         26 |          5 | 24 - 250 g pkgs.     |   38.0000 |           21 |           10 |           30 |            0 |
+|        57 | Ravioli Angelo                   |         26 |          5 | 24 - 250 g pkgs.     |   19.5000 |           36 |            0 |           20 |            0 |
+|        58 | Escargots de Bourgogne           |         27 |          8 | 24 pieces            |   13.2500 |           62 |            0 |           20 |            0 |
+|        59 | Raclette Courdavault             |         28 |          4 | 5 kg pkg.            |   55.0000 |           79 |            0 |            0 |            0 |
+|        60 | Camembert Pierrot                |         28 |          4 | 15 - 300 g rounds    |   34.0000 |           19 |            0 |            0 |            0 |
+|        61 | Sirop d'rable                    |         29 |          2 | 24 - 500 ml bottles  |   28.5000 |          113 |            0 |           25 |            0 |
+|        62 | Tarte au sucre                   |         29 |          3 | 48 pies              |   49.3000 |           17 |            0 |            0 |            0 |
+|        63 | Vegie-spread                     |          7 |          2 | 15 - 625 g jars      |   43.9000 |           24 |            0 |            5 |            0 |
+|        64 | Wimmers gute Semmelkndel         |         12 |          5 | 20 bags x 4 pieces   |   33.2500 |           22 |           80 |           30 |            0 |
+|        65 | Louisiana Fiery Hot Pepper Sauce |          2 |          2 | 32 - 8 oz bottles    |   21.0500 |           76 |            0 |            0 |            0 |
+|        66 | Louisiana Hot Spiced Okra        |          2 |          2 | 24 - 8 oz jars       |   17.0000 |            4 |          100 |           20 |            0 |
+|        67 | Laughing Lumberjack Lager        |         16 |          1 | 24 - 12 oz bottles   |   14.0000 |           52 |            0 |           10 |            0 |
+|        68 | Scottish Longbreads              |          8 |          3 | 10 boxes x 8 pieces  |   12.5000 |            6 |           10 |           15 |            0 |
+|        69 | Gudbrandsdalsost                 |         15 |          4 | 10 kg pkg.           |   36.0000 |           26 |            0 |           15 |            0 |
+|        70 | Outback Lager                    |          7 |          1 | 24 - 355 ml bottles  |   15.0000 |           15 |           10 |           30 |            0 |
+|        71 | Flotemysost                      |         15 |          4 | 10 - 500 g pkgs.     |   21.5000 |           26 |            0 |            0 |            0 |
+|        72 | Mozzarella di Giovanni           |         14 |          4 | 24 - 200 g pkgs.     |   34.8000 |           14 |            0 |            0 |            0 |
+|        73 | Rd Kaviar                        |         17 |          8 | 24 - 150 g jars      |   15.0000 |          101 |            0 |            5 |            0 |
+|        74 | Longlife Tofu                    |          4 |          7 | 5 kg pkg.            |   10.0000 |            4 |           20 |            5 |            0 |
+|        75 | Rhnbru Klosterbier               |         12 |          1 | 24 - 0.5 l bottles   |    7.7500 |          125 |            0 |           25 |            0 |
+|        76 | Lakkalikri                       |         23 |          1 | 500 ml               |   18.0000 |           57 |            0 |           20 |            0 |
+|        77 | Original Frankfurter grne Soe    |         12 |          2 | 12 boxes             |   13.0000 |           32 |            0 |           15 |            0 |
++-----------+----------------------------------+------------+------------+----------------------+-----------+--------------+--------------+--------------+--------------+
+77 rows in set (0.03 sec)
+
+mysql>
+mysql>
+mysql> show tables like 'p%';
++---------------------+
+| Tables_in_db1 (p%)  |
++---------------------+
+| patient             |
+| phonecall           |
+| pivot_table         |
+| plumber             |
+| plumber_service_map |
+| points              |
+| population          |
+| price               |
+| product             |
+| product_sales       |
+| products            |
+| pune_metro_stations |
++---------------------+
+12 rows in set (0.01 sec)
+
+mysql> select * from price;
++--------+----------+----------+---------------------+---------------------+
+| PRODID | STDPRICE | MINPRICE | STARTDATE           | ENDDATE             |
++--------+----------+----------+---------------------+---------------------+
+| 100871 |     4.80 |     3.20 | 1985-01-01 00:00:00 | 1985-12-01 00:00:00 |
+| 100890 |    58.00 |    46.40 | 1985-01-01 00:00:00 | NULL                |
+| 100890 |    54.00 |    40.50 | 1984-06-01 00:00:00 | 1984-05-31 00:00:00 |
+| 100860 |    35.00 |    28.00 | 1986-06-01 00:00:00 | NULL                |
+| 100860 |    32.00 |    25.60 | 1986-01-01 00:00:00 | 1986-05-31 00:00:00 |
+| 100860 |    30.00 |    24.00 | 1985-01-01 00:00:00 | 1985-12-31 00:00:00 |
+| 100861 |    45.00 |    36.00 | 1986-06-01 00:00:00 | NULL                |
+| 100861 |    42.00 |    33.60 | 1986-01-01 00:00:00 | 1986-05-31 00:00:00 |
+| 100861 |    39.00 |    31.20 | 1985-01-01 00:00:00 | 1985-12-31 00:00:00 |
+| 100870 |     2.80 |     2.40 | 1986-01-01 00:00:00 | NULL                |
+| 100870 |     2.40 |     1.90 | 1985-01-01 00:00:00 | 1985-12-01 00:00:00 |
+| 100871 |     5.60 |     4.80 | 1986-01-01 00:00:00 | NULL                |
+| 101860 |    24.00 |    18.00 | 1985-02-15 00:00:00 | NULL                |
+| 101863 |    12.50 |     9.40 | 1985-02-15 00:00:00 | NULL                |
+| 102130 |     3.40 |     2.80 | 1985-08-18 00:00:00 | NULL                |
+| 200376 |     2.40 |     1.75 | 1986-10-15 00:00:00 | NULL                |
+| 200380 |     4.00 |     3.20 | 1986-10-15 00:00:00 | NULL                |
++--------+----------+----------+---------------------+---------------------+
+17 rows in set (0.03 sec)
+
+mysql> table product_sales;
++--------------+----------------+-----------+
+| product_name | store_location | num_sales |
++--------------+----------------+-----------+
+| Chair        | North          |        55 |
+| Desk         | Central        |       120 |
+| Couch        | Central        |        78 |
+| Chair        | South          |        23 |
+| Chair        | South          |        10 |
+| Chair        | North          |        98 |
+| Desk         | West           |        61 |
+| Couch        | North          |       180 |
+| Chair        | South          |        14 |
+| Desk         | North          |        45 |
+| Chair        | North          |        87 |
+| Chair        | Central        |        34 |
+| Desk         | South          |        42 |
+| Couch        | West           |        58 |
+| Couch        | Central        |        27 |
+| Chair        | South          |        91 |
+| Chair        | West           |        82 |
+| Chair        | North          |        37 |
+| Desk         | North          |        68 |
+| Couch        | Central        |        54 |
+| Chair        | South          |        81 |
+| Desk         | North          |        25 |
+| Chair        | North          |        46 |
+| Chair        | Central        |       121 |
+| Desk         | South          |        85 |
+| Couch        | North          |        43 |
+| Desk         | West           |        10 |
+| Chair        | North          |         5 |
+| Chair        | Central        |        16 |
+| Desk         | South          |         9 |
+| Couch        | West           |        22 |
+| Couch        | Central        |        59 |
+| Chair        | South          |        76 |
+| Chair        | West           |        48 |
+| Chair        | North          |        19 |
+| Desk         | North          |         3 |
+| Couch        | West           |        63 |
+| Chair        | South          |        81 |
+| Desk         | North          |        85 |
+| Chair        | North          |        90 |
+| Chair        | Central        |        47 |
+| Desk         | West           |        63 |
+| Couch        | North          |        28 |
++--------------+----------------+-----------+
+43 rows in set (0.03 sec)
+
+mysql>
+mysql>
+mysql> select * from product_sales where product_name='Chair';
++--------------+----------------+-----------+
+| product_name | store_location | num_sales |
++--------------+----------------+-----------+
+| Chair        | North          |        55 |
+| Chair        | South          |        23 |
+| Chair        | South          |        10 |
+| Chair        | North          |        98 |
+| Chair        | South          |        14 |
+| Chair        | North          |        87 |
+| Chair        | Central        |        34 |
+| Chair        | South          |        91 |
+| Chair        | West           |        82 |
+| Chair        | North          |        37 |
+| Chair        | South          |        81 |
+| Chair        | North          |        46 |
+| Chair        | Central        |       121 |
+| Chair        | North          |         5 |
+| Chair        | Central        |        16 |
+| Chair        | South          |        76 |
+| Chair        | West           |        48 |
+| Chair        | North          |        19 |
+| Chair        | South          |        81 |
+| Chair        | North          |        90 |
+| Chair        | Central        |        47 |
++--------------+----------------+-----------+
+21 rows in set (0.00 sec)
+
+mysql> select * from product_sales where product_name='Chair' order by 2;
++--------------+----------------+-----------+
+| product_name | store_location | num_sales |
++--------------+----------------+-----------+
+| Chair        | Central        |        34 |
+| Chair        | Central        |       121 |
+| Chair        | Central        |        16 |
+| Chair        | Central        |        47 |
+| Chair        | North          |        55 |
+| Chair        | North          |        98 |
+| Chair        | North          |        87 |
+| Chair        | North          |        37 |
+| Chair        | North          |        46 |
+| Chair        | North          |         5 |
+| Chair        | North          |        19 |
+| Chair        | North          |        90 |
+| Chair        | South          |        23 |
+| Chair        | South          |        10 |
+| Chair        | South          |        14 |
+| Chair        | South          |        91 |
+| Chair        | South          |        81 |
+| Chair        | South          |        76 |
+| Chair        | South          |        81 |
+| Chair        | West           |        82 |
+| Chair        | West           |        48 |
++--------------+----------------+-----------+
+21 rows in set (0.00 sec)
+
+mysql> select from product_sales where product_name='Chair' and store_location='North';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from product_sales where product_name='Chair' and store_location='North'' at line 1
+mysql>
+mysql> select * from product_sales where product_name='Chair' and store_location='North';
++--------------+----------------+-----------+
+| product_name | store_location | num_sales |
++--------------+----------------+-----------+
+| Chair        | North          |        55 |
+| Chair        | North          |        98 |
+| Chair        | North          |        87 |
+| Chair        | North          |        37 |
+| Chair        | North          |        46 |
+| Chair        | North          |         5 |
+| Chair        | North          |        19 |
+| Chair        | North          |        90 |
++--------------+----------------+-----------+
+8 rows in set (0.00 sec)
+
+mysql> select * from product_sales where product_name='Chair' and store_location='South';
++--------------+----------------+-----------+
+| product_name | store_location | num_sales |
++--------------+----------------+-----------+
+| Chair        | South          |        23 |
+| Chair        | South          |        10 |
+| Chair        | South          |        14 |
+| Chair        | South          |        91 |
+| Chair        | South          |        81 |
+| Chair        | South          |        76 |
+| Chair        | South          |        81 |
++--------------+----------------+-----------+
+7 rows in set (0.00 sec)
+
+mysql> select product_name, num_sales from product_sales where product_name='Chair' and store_location='North';
++--------------+-----------+
+| product_name | num_sales |
++--------------+-----------+
+| Chair        |        55 |
+| Chair        |        98 |
+| Chair        |        87 |
+| Chair        |        37 |
+| Chair        |        46 |
+| Chair        |         5 |
+| Chair        |        19 |
+| Chair        |        90 |
++--------------+-----------+
+8 rows in set (0.00 sec)
+
+mysql> select product_name, sum(num_sales) from product_sales where product_name='Chair' and store_location='North'group by product_name;
++--------------+----------------+
+| product_name | sum(num_sales) |
++--------------+----------------+
+| Chair        |            437 |
++--------------+----------------+
+1 row in set (0.01 sec)
+
+mysql> select product_name, sum(num_sales) R1 from product_sales where product_name='Chair' and store_location='North'group by product_name;
++--------------+------+
+| product_name | R1   |
++--------------+------+
+| Chair        |  437 |
++--------------+------+
+1 row in set (0.00 sec)
+
+mysql> select product_name, sum(num_sales) R1 from product_sales where product_name='Chair' and store_location='South'group by product_name;
++--------------+------+
+| product_name | R1   |
++--------------+------+
+| Chair        |  376 |
++--------------+------+
+1 row in set (0.00 sec)
+
+mysql> select (select product_name, sum(num_sales) R1 from product_sales where product_name='Chair' and store_location='North'group by product_name) North, (select product_name, sum(num_sales) R1 from product_sales where product_name='Chair' and store_location='South'group by product_name;) South
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+    -> ^C
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> select (select product_name, sum(num_sales) R1 from product_sales where product_name='Chair' and store_location='North'group by product_name) North, (select product_name, sum(num_sales) R1 from product_sales where product_name='Chair' and store_location='South'group by product_name) South;
+ERROR 1241 (21000): Operand should contain 1 column(s)
+mysql>
+mysql>
+mysql> select (select product_name, sum(num_sales) R1 from product_sales where product_name='Chair' and store_location='North' group by product_name) North, (select product_name, sum(num_sales) R1 from product_sales where product_name='Chair' and store_location='South' group by product_name) South;
+ERROR 1241 (21000): Operand should contain 1 column(s)
+mysql>
+mysql>
+mysql>
+mysql> select (select sum(num_sales) R1 from product_sales where product_name='Chair' and store_location='North' group by product_name) North, (select sum(num_sales) R2 from product_sales where product_name='Chair' and store_location='South' group by product_name) South;
++-------+-------+
+| North | South |
++-------+-------+
+|   437 |   376 |
++-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select (select 'Chair') 'Product Name', (select sum(num_sales) R1 from product_sales where product_name='Chair' and store_location='North' group by product_name) North, (select sum(num_sales) R2 from product_sales where product_name='Chair' and store_location='South' group by product_name) South;
++--------------+-------+-------+
+| Product Name | North | South |
++--------------+-------+-------+
+| Chair        |   437 |   376 |
++--------------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select (select 'Chair') 'Product Name', (select sum(num_sales) R1 from product_sales where product_name='Chair' and store_location='North' group by product_name) North, (select sum(num_sales) R2 from product_sales where product_name='Chair' and store_location='South' group by product_name) South, (select sum(num_sales) from product_sales where product_name='Chair' and store_location='North' ) - (select sum(num_sales) from product_sales where product_name='Chair' and store_location='South') 'Difference';
++--------------+-------+-------+------------+
+| Product Name | North | South | Difference |
++--------------+-------+-------+------------+
+| Chair        |   437 |   376 |         61 |
++--------------+-------+-------+------------+
+1 row in set (0.00 sec)
+
+mysql>
