@@ -1,0 +1,882 @@
+Microsoft Windows [Version 10.0.19045.6456]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\IET>mysql --host=192.168.10.117 --port=3306 --user=dac83 --password=welcome
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 488
+Server version: 8.0.44 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use dac83
+Database changed
+mysql> show tables;
++---------------------+
+| Tables_in_dac83     |
++---------------------+
+| a                   |
+| activity            |
+| agent               |
+| airline_seats       |
+| andor               |
+| atm                 |
+| autoinccc           |
+| b                   |
+| bankloan            |
+| batch_schedule      |
+| betweensalary       |
+| bitwise             |
+| blanktablea         |
+| blanktableb         |
+| blog                |
+| bonus               |
+| books               |
+| brands              |
+| bus_stops           |
+| c                   |
+| cafe                |
+| candidate           |
+| cardpayments        |
+| cashpayments        |
+| categories          |
+| category            |
+| city                |
+| classandsubjects    |
+| client              |
+| cnumbers            |
+| coalesce            |
+| comments            |
+| company             |
+| countnulls          |
+| countnumbers        |
+| cricketwinnerteam   |
+| customer            |
+| customers           |
+| demodept1           |
+| demodept2           |
+| dept                |
+| dept1               |
+| dhl                 |
+| docs                |
+| doctor              |
+| doctorvisits        |
+| don                 |
+| dummy               |
+| duplicate           |
+| emp                 |
+| emp1                |
+| emp2                |
+| emp33               |
+| emp_attendance      |
+| emp_cards           |
+| emp_phone           |
+| empj                |
+| envelope            |
+| facebook            |
+| fedex               |
+| food                |
+| food_category_tags  |
+| food_items          |
+| fromstoreorders     |
+| fruits              |
+| fullname            |
+| hall_ticket         |
+| hobby               |
+| ipl                 |
+| item                |
+| job_list            |
+| key_parts           |
+| labtestlist         |
+| leading_zeroes      |
+| leadtable           |
+| licence             |
+| linkedin            |
+| location            |
+| managers            |
+| mass_table          |
+| medicinelist        |
+| menucard            |
+| missingnumbers      |
+| nearest             |
+| new                 |
+| newbooks            |
+| null1               |
+| null2               |
+| nullif              |
+| numberstring        |
+| onlineorders        |
+| ord                 |
+| order1              |
+| order_items         |
+| orderdetails        |
+| orders              |
+| overlapping_dates   |
+| overtime            |
+| patient             |
+| phonecall           |
+| pivot_table         |
+| plumber             |
+| plumber_service_map |
+| points              |
+| population          |
+| price               |
+| product             |
+| product_sales       |
+| products            |
+| pune_metro_stations |
+| quarterly_revenue   |
+| r                   |
+| r1                  |
+| r2                  |
+| races               |
+| regexpr             |
+| repeatingnumbers    |
+| replacedept         |
+| reservations        |
+| revenue             |
+| rockets             |
+| room_assigned       |
+| room_staff          |
+| rooms               |
+| runners             |
+| runningserver       |
+| sales               |
+| sales1              |
+| sales_channel       |
+| salespeople         |
+| salesperson         |
+| salgrade            |
+| server              |
+| service             |
+| seta                |
+| setb                |
+| shop                |
+| softdrink           |
+| sort                |
+| sourcecity          |
+| sourcenames         |
+| stadium             |
+| stages              |
+| states              |
+| station             |
+| status              |
+| stocks              |
+| stringnumber        |
+| student             |
+| study               |
+| swapcity            |
+| t1                  |
+| t2                  |
+| t4                  |
+| t5                  |
+| t6                  |
+| t7                  |
+| tablea              |
+| tableaa             |
+| tableb              |
+| tablebb             |
+| targetcity          |
+| targetnames         |
+| tasks               |
+| teams               |
+| temp1               |
+| trainers            |
+| trains              |
+| traintimetable      |
+| transactions        |
+| unpivot_table       |
+| ups                 |
+| vote_response       |
+| votes               |
+| warehouse           |
+| x                   |
+| year_of_service     |
+| yearly_revenue      |
+| years               |
+| z                   |
++---------------------+
+180 rows in set (0.01 sec)
+
+mysql> create table d(c1 varchar(10) primary key ,c2 date unique);
+Query OK, 0 rows affected (0.30 sec)
+
+mysql> desc d;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(10) | NO   | PRI | NULL    |       |
+| c2    | date        | YES  | UNI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> alter table d c3 int unique key;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'c3 int unique key' at line 1
+mysql> alter table d add c3 int unique key;
+Query OK, 0 rows affected (0.96 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc d;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c1    | varchar(10) | NO   | PRI | NULL    |       |
+| c2    | date        | YES  | UNI | NULL    |       |
+| c3    | int         | YES  | UNI | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> show index from d;
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| d     |          0 | PRIMARY  |            1 | c1          | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| d     |          0 | c2       |            1 | c2          | A         |           0 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
+| d     |          0 | c3       |            1 | c3          | A         |           0 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+3 rows in set (0.06 sec)
+
+mysql> select empno, ename ,job from emp;
++-------+----------+---------------------+
+| empno | ename    | job                 |
++-------+----------+---------------------+
+|  6001 | GITA     | Compliance officers |
+|  6129 | VRUSHALI | Compliance officers |
+|  6473 | SHARMIN  | Public Relation     |
+|  6781 | BANDISH  | Public Relation     |
+|  7369 | SMITH    | CLERK               |
+|  7415 | AARAV    | CLERK               |
+|  7421 | THOMAS   | CLERK               |
+|  7499 | ALLEN    | SALESMAN            |
+|  7521 | WARD     | SALESMAN            |
+|  7566 | JONES    | MANAGER             |
+|  7654 | MARTIN   | SALESMAN            |
+|  7698 | BLAKE    | MANAGER             |
+|  7782 | CLARK    | MANAGER             |
+|  7788 | SCOTT    | ANALYST             |
+|  7839 | KING     | PRESIDENT           |
+|  7840 | FRED     | vice PRESIDENT      |
+|  7844 | TURNER   | SALESMAN            |
+|  7876 | ADAMS    | CLERK               |
+|  7888 | Ruhan    | Network             |
+|  7889 | Neel     | vice PRESIDENT      |
+|  7900 | JAMES    | CLERK               |
+|  7902 | FORD     | ANALYST             |
+|  7919 | HOFFMAN  | MANAGER             |
+|  7920 | GRASS    | SALESMAN            |
+|  7934 | MILLER   | CLERK               |
+|  7945 | AARUSH   | SALESMAN            |
+|  7949 | ALEX     | MANAGER             |
+|  8433 | NATASHA  | CLERK               |
+|  9400 | SANGITA  | Compliance officers |
+|  9473 | SUPRIYA  | ANALYST             |
++-------+----------+---------------------+
+30 rows in set (0.00 sec)
+
+mysql> select epmno, ename ,job where job='manager';
+ERROR 1054 (42S22): Unknown column 'epmno' in 'field list'
+mysql> select epmno, ename ,job from emp where job='manager';
+ERROR 1054 (42S22): Unknown column 'epmno' in 'field list'
+mysql> select empno, ename ,job from emp where job='manager';
++-------+---------+---------+
+| empno | ename   | job     |
++-------+---------+---------+
+|  7566 | JONES   | MANAGER |
+|  7698 | BLAKE   | MANAGER |
+|  7782 | CLARK   | MANAGER |
+|  7919 | HOFFMAN | MANAGER |
+|  7949 | ALEX    | MANAGER |
++-------+---------+---------+
+5 rows in set (0.00 sec)
+
+mysql> desc emp;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EMPNO     | int         | NO   | PRI | NULL    |       |
+| ENAME     | varchar(12) | YES  |     | NULL    |       |
+| GENDER    | char(1)     | YES  |     | NULL    |       |
+| JOB       | varchar(20) | YES  |     | NULL    |       |
+| MGR       | int         | YES  | MUL | NULL    |       |
+| HIREDATE  | date        | YES  |     | NULL    |       |
+| SAL       | int         | YES  |     | NULL    |       |
+| COMM      | int         | YES  |     | NULL    |       |
+| DEPTNO    | int         | NO   | MUL | NULL    |       |
+| BONUSID   | int         | YES  |     | NULL    |       |
+| USER NAME | varchar(20) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| PHONE     | varchar(45) | YES  |     | NULL    |       |
+| isActive  | tinyint(1)  | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+14 rows in set (0.01 sec)
+
+mysql> select empno,ename,job from emp where empno=7788;
++-------+-------+---------+
+| empno | ename | job     |
++-------+-------+---------+
+|  7788 | SCOTT | ANALYST |
++-------+-------+---------+
+1 row in set (0.00 sec)
+
+mysql> explain select empno, ename,job from emp where job='manager';
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+| id | select_type | table | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra       |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+|  1 | SIMPLE      | emp   | NULL       | ALL  | NULL          | NULL | NULL    | NULL |   30 |    10.00 | Using where |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+1 row in set, 1 warning (0.01 sec)
+
+mysql> desc tables;
+ERROR 1146 (42S02): Table 'dac83.tables' doesn't exist
+mysql> show tables;
++---------------------+
+| Tables_in_dac83     |
++---------------------+
+| a                   |
+| activity            |
+| agent               |
+| airline_seats       |
+| andor               |
+| atm                 |
+| autoinccc           |
+| b                   |
+| bankloan            |
+| batch_schedule      |
+| betweensalary       |
+| bitwise             |
+| blanktablea         |
+| blanktableb         |
+| blog                |
+| bonus               |
+| books               |
+| brands              |
+| bus_stops           |
+| c                   |
+| cafe                |
+| candidate           |
+| cardpayments        |
+| cashpayments        |
+| categories          |
+| category            |
+| city                |
+| classandsubjects    |
+| client              |
+| cnumbers            |
+| coalesce            |
+| comments            |
+| company             |
+| countnulls          |
+| countnumbers        |
+| cricketwinnerteam   |
+| customer            |
+| customers           |
+| d                   |
+| demodept1           |
+| demodept2           |
+| dept                |
+| dept1               |
+| dhl                 |
+| docs                |
+| doctor              |
+| doctorvisits        |
+| don                 |
+| dummy               |
+| duplicate           |
+| emp                 |
+| emp1                |
+| emp2                |
+| emp33               |
+| emp_attendance      |
+| emp_cards           |
+| emp_phone           |
+| empj                |
+| envelope            |
+| facebook            |
+| fedex               |
+| food                |
+| food_category_tags  |
+| food_items          |
+| fromstoreorders     |
+| fruits              |
+| fullname            |
+| hall_ticket         |
+| hobby               |
+| ipl                 |
+| item                |
+| job_list            |
+| key_parts           |
+| labtestlist         |
+| leading_zeroes      |
+| leadtable           |
+| licence             |
+| linkedin            |
+| location            |
+| managers            |
+| mass_table          |
+| medicinelist        |
+| menucard            |
+| missingnumbers      |
+| nearest             |
+| new                 |
+| newbooks            |
+| null1               |
+| null2               |
+| nullif              |
+| numberstring        |
+| onlineorders        |
+| ord                 |
+| order1              |
+| order_items         |
+| orderdetails        |
+| orders              |
+| overlapping_dates   |
+| overtime            |
+| patient             |
+| phonecall           |
+| pivot_table         |
+| plumber             |
+| plumber_service_map |
+| points              |
+| population          |
+| price               |
+| product             |
+| product_sales       |
+| products            |
+| pune_metro_stations |
+| quarterly_revenue   |
+| r                   |
+| r1                  |
+| r2                  |
+| races               |
+| regexpr             |
+| repeatingnumbers    |
+| replacedept         |
+| reservations        |
+| revenue             |
+| rockets             |
+| room_assigned       |
+| room_staff          |
+| rooms               |
+| runners             |
+| runningserver       |
+| sales               |
+| sales1              |
+| sales_channel       |
+| salespeople         |
+| salesperson         |
+| salgrade            |
+| server              |
+| service             |
+| seta                |
+| setb                |
+| shop                |
+| softdrink           |
+| sort                |
+| sourcecity          |
+| sourcenames         |
+| stadium             |
+| stages              |
+| states              |
+| station             |
+| status              |
+| stocks              |
+| stringnumber        |
+| student             |
+| study               |
+| swapcity            |
+| t1                  |
+| t2                  |
+| t4                  |
+| t5                  |
+| t6                  |
+| t7                  |
+| tablea              |
+| tableaa             |
+| tableb              |
+| tablebb             |
+| targetcity          |
+| targetnames         |
+| tasks               |
+| teams               |
+| temp1               |
+| trainers            |
+| trains              |
+| traintimetable      |
+| transactions        |
+| unpivot_table       |
+| ups                 |
+| vote_response       |
+| votes               |
+| warehouse           |
+| x                   |
+| year_of_service     |
+| yearly_revenue      |
+| years               |
+| z                   |
++---------------------+
+181 rows in set (0.01 sec)
+
+mysql> desc tables;
+ERROR 1146 (42S02): Table 'dac83.tables' doesn't exist
+mysql> use infromation_schema;
+ERROR 1044 (42000): Access denied for user 'dac83'@'%' to database 'infromation_schema'
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| dac83              |
+| information_schema |
+| performance_schema |
++--------------------+
+3 rows in set (0.00 sec)
+
+mysql> create database x;
+ERROR 1044 (42000): Access denied for user 'dac83'@'%' to database 'x'
+mysql> use dac83;
+Database changed
+mysql> create table orders(order_id int primary key , order_date date);
+ERROR 1050 (42S01): Table 'orders' already exists
+mysql> create table orders1(order_id int primary key , order_date date);
+Query OK, 0 rows affected (0.24 sec)
+
+mysql> create table order_details(order_id int ,product_name varchar(10),qty int,rate int,constraint fk_no_order_id foreign key(order_id) references orders(order_id);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> create table order_details(order_id int ,product_name varchar(10),qty int,rate int,constraint fk_no_order_id foreign key(order_id) references orders1(order_id);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> \c
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> create table order_details(order_id int, product_name varchar(10), qty int, rate int, constraint fk_on_order_id foreign key(order_id) references orders(order_id));
+ERROR 3734 (HY000): Failed to add the foreign key constraint. Missing column 'order_id' for constraint 'fk_on_order_id' in the referenced table 'orders'
+mysql> show tables;
++---------------------+
+| Tables_in_dac83     |
++---------------------+
+| a                   |
+| activity            |
+| agent               |
+| airline_seats       |
+| andor               |
+| atm                 |
+| autoinccc           |
+| b                   |
+| bankloan            |
+| batch_schedule      |
+| betweensalary       |
+| bitwise             |
+| blanktablea         |
+| blanktableb         |
+| blog                |
+| bonus               |
+| books               |
+| brands              |
+| bus_stops           |
+| c                   |
+| cafe                |
+| candidate           |
+| cardpayments        |
+| cashpayments        |
+| categories          |
+| category            |
+| city                |
+| classandsubjects    |
+| client              |
+| cnumbers            |
+| coalesce            |
+| comments            |
+| company             |
+| countnulls          |
+| countnumbers        |
+| cricketwinnerteam   |
+| customer            |
+| customers           |
+| d                   |
+| demodept1           |
+| demodept2           |
+| dept                |
+| dept1               |
+| dhl                 |
+| docs                |
+| doctor              |
+| doctorvisits        |
+| don                 |
+| dummy               |
+| duplicate           |
+| emp                 |
+| emp1                |
+| emp2                |
+| emp33               |
+| emp_attendance      |
+| emp_cards           |
+| emp_phone           |
+| empj                |
+| envelope            |
+| facebook            |
+| fedex               |
+| food                |
+| food_category_tags  |
+| food_items          |
+| fromstoreorders     |
+| fruits              |
+| fullname            |
+| hall_ticket         |
+| hobby               |
+| ipl                 |
+| item                |
+| job_list            |
+| key_parts           |
+| labtestlist         |
+| leading_zeroes      |
+| leadtable           |
+| licence             |
+| linkedin            |
+| location            |
+| managers            |
+| mass_table          |
+| medicinelist        |
+| menucard            |
+| missingnumbers      |
+| nearest             |
+| new                 |
+| newbooks            |
+| null1               |
+| null2               |
+| nullif              |
+| numberstring        |
+| onlineorders        |
+| ord                 |
+| order1              |
+| order_items         |
+| orderdetails        |
+| orders              |
+| orders1             |
+| overlapping_dates   |
+| overtime            |
+| patient             |
+| phonecall           |
+| pivot_table         |
+| plumber             |
+| plumber_service_map |
+| points              |
+| population          |
+| price               |
+| product             |
+| product_sales       |
+| products            |
+| pune_metro_stations |
+| quarterly_revenue   |
+| r                   |
+| r1                  |
+| r2                  |
+| races               |
+| regexpr             |
+| repeatingnumbers    |
+| replacedept         |
+| reservations        |
+| revenue             |
+| rockets             |
+| room_assigned       |
+| room_staff          |
+| rooms               |
+| runners             |
+| runningserver       |
+| sales               |
+| sales1              |
+| sales_channel       |
+| salespeople         |
+| salesperson         |
+| salgrade            |
+| server              |
+| service             |
+| seta                |
+| setb                |
+| shop                |
+| softdrink           |
+| sort                |
+| sourcecity          |
+| sourcenames         |
+| stadium             |
+| stages              |
+| states              |
+| station             |
+| status              |
+| stocks              |
+| stringnumber        |
+| student             |
+| study               |
+| swapcity            |
+| t1                  |
+| t2                  |
+| t4                  |
+| t5                  |
+| t6                  |
+| t7                  |
+| tablea              |
+| tableaa             |
+| tableb              |
+| tablebb             |
+| targetcity          |
+| targetnames         |
+| tasks               |
+| teams               |
+| temp1               |
+| trainers            |
+| trains              |
+| traintimetable      |
+| transactions        |
+| unpivot_table       |
+| ups                 |
+| vote_response       |
+| votes               |
+| warehouse           |
+| x                   |
+| year_of_service     |
+| yearly_revenue      |
+| years               |
+| z                   |
++---------------------+
+182 rows in set (0.01 sec)
+
+mysql> desc orders;
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| ONUM             | int         | NO   | PRI | NULL    |       |
+| AMT              | float       | YES  |     | NULL    |       |
+| ODATE            | datetime    | YES  |     | NULL    |       |
+| CNUM             | int         | YES  | MUL | NULL    |       |
+| SNUM             | int         | YES  | MUL | NULL    |       |
+| type             | varchar(10) | YES  |     | NULL    |       |
+| paymentType      | varchar(20) | YES  |     | NULL    |       |
+| registered       | tinyint(1)  | YES  |     | NULL    |       |
+| delivery_partner | varchar(12) | YES  |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
+
+mysql> desc orders1;
++------------+------+------+-----+---------+-------+
+| Field      | Type | Null | Key | Default | Extra |
++------------+------+------+-----+---------+-------+
+| order_id   | int  | NO   | PRI | NULL    |       |
+| order_date | date | YES  |     | NULL    |       |
++------------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc order_details;
+ERROR 1146 (42S02): Table 'dac83.order_details' doesn't exist
+mysql> create table order_details(order_id int ,product_name varchar(10),qty int ,rate int, constraint fk_on_order_id foreign key(order_id) references orders1(order_id));
+Query OK, 0 rows affected (0.95 sec)
+
+mysql> desc orders1;
++------------+------+------+-----+---------+-------+
+| Field      | Type | Null | Key | Default | Extra |
++------------+------+------+-----+---------+-------+
+| order_id   | int  | NO   | PRI | NULL    |       |
+| order_date | date | YES  |     | NULL    |       |
++------------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc order_details;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| order_id     | int         | YES  | MUL | NULL    |       |
+| product_name | varchar(10) | YES  |     | NULL    |       |
+| qty          | int         | YES  |     | NULL    |       |
+| rate         | int         | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> insert into orders1 values(1001 ,curdate()),(1002,curdate());
+Query OK, 2 rows affected (0.10 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from orders1;
++----------+------------+
+| order_id | order_date |
++----------+------------+
+|     1001 | 2025-11-05 |
+|     1002 | 2025-11-05 |
++----------+------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from order_details;
+Empty set (0.00 sec)
+
+mysql> insert into order_details values(1001,'butter',4,145);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into order_details values(1001,'Cheese',4,145);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into order_details values(1001,'Jam',4,145);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select * from orders1;
++----------+------------+
+| order_id | order_date |
++----------+------------+
+|     1001 | 2025-11-05 |
+|     1002 | 2025-11-05 |
++----------+------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from order_details;
++----------+--------------+------+------+
+| order_id | product_name | qty  | rate |
++----------+--------------+------+------+
+|     1001 | butter       |    4 |  145 |
+|     1001 | Cheese       |    4 |  145 |
+|     1001 | Jam          |    4 |  145 |
++----------+--------------+------+------+
+3 rows in set (0.00 sec)
+
+mysql> alter table orders1 and customer_id int unique auto_increment first;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and customer_id int unique auto_increment first' at line 1
+mysql> alter table orders1 add customer_id int unique auto_increment first;
+Query OK, 0 rows affected (0.89 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc orders1;
++-------------+------+------+-----+---------+----------------+
+| Field       | Type | Null | Key | Default | Extra          |
++-------------+------+------+-----+---------+----------------+
+| customer_id | int  | NO   | UNI | NULL    | auto_increment |
+| order_id    | int  | NO   | PRI | NULL    |                |
+| order_date  | date | YES  |     | NULL    |                |
++-------------+------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from orders1;
++-------------+----------+------------+
+| customer_id | order_id | order_date |
++-------------+----------+------------+
+|           1 |     1001 | 2025-11-05 |
+|           2 |     1002 | 2025-11-05 |
++-------------+----------+------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from order_details;
++----------+--------------+------+------+
+| order_id | product_name | qty  | rate |
++----------+--------------+------+------+
+|     1001 | butter       |    4 |  145 |
+|     1001 | Cheese       |    4 |  145 |
+|     1001 | Jam          |    4 |  145 |
++----------+--------------+------+------+
+3 rows in set (0.01 sec)
+
+mysql>
