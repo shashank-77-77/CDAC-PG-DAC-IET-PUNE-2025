@@ -1,0 +1,73 @@
+inbound rule
+
+    
+ 
+sudo yum update -y
+sudo yum install docker
+
+sudo docker --version
+
+                          sudo service docker start
+
+sudo docker login
+sudo docker pull ubuntu
+sudo docker images
+
+sudo docker pull redis
+
+sudo docker ps -a    // check status
+
+
+docker tag ae2f425fde40  AJ:BEST
+
+
+
+
+
+1)sudo yum install docker :- cmd to install docker
+
+2)docker --vesion :- shows the version of docker
+
+3)sudo docker version :- shows full details
+ 
+4)sudo docker login --> username->>password from docker hub 
+
+5)sudo docker image - runn the command 
+
+6)sudo service docker start -:  start the service 
+
+7) sudo docker images :- to make docker images
+
+8)sudo docker pull ubuntu :-
+
+9)sudo docker images :- shows the pulled images in docker (images are lightweight) 
+
+10)sudo docker pull redis :- 
+
+11)sudo docker images :- shows the downloaded images 
+
+12)sudo docker ps:- running images 
+
+13)sudo docker run redis :- active redis load the files
+
+14)sudo docker ps -a :-  shows total the all active images
+
+15)touch filename :- create the file
+
+16)nano filename :- open the file
+
+
+===============================================================
+put commands in the file 
+===============================================================
+(FROM ubuntu
+RUN apt-get update
+MAINTAINER Tushar)
+
+17) chmod 777 filename :- give permission to file 
+
+18)sudo docker build . :- execute the file
+
+19) sudo docker build -t filename:1.0 . :- open the file version 
+
+

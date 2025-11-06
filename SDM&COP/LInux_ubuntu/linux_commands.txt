@@ -1,0 +1,22 @@
+linux commands 
+ubuntu 
+
+pwd :  path of current location  // to see the current location 
+ls : list down all directorires files for the rescpective location //list down the things sthat we have  
+mkdir <directory name> : // make new directory
+rmdir : remove the directory 
+rm  <filename>// remove /delete files 
+whoami : user name // finds the user's name 
+cd <directory name> // change / move to particular directory 
+date : check the cuurent date (shows)  
+date +%D : change the format of date 
+date +%T : format for time 
+date +%H:%M : format Hours & Minutes 
+cd .. // coming back from directory (opting out from directory)
+ls -lt // all details of directory (recently make first )
+ls -ltr // Reverse the order 
+touch <filename.extension> // create a file  {touch abc.txt}
+nano <filename.ext>  // editor 
+cat <filename.ext>  // read the files 
+clear // Clears all the terminal
+mv <file_name> <directory>
