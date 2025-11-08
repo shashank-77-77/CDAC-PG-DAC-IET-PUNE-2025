@@ -1024,20 +1024,6 @@ mysql> select 'saleel' = binary 'SALEEL';
 |                          0 |
 +----------------------------+
 1 row in set, 1 warning (0.01 sec)
-mysql> select 'saleel' = binary 'SHASHANK';
-+----------------------------+
-| 'saleel' = binary 'SHASHANK' |
-+----------------------------+
-|                          0 |
-+----------------------------+
-1 row in set, 1 warning (0.01 sec)
-mysql> select 'saleel' = binary 'SOHAM';
-+----------------------------+
-| 'saleel' = binary 'SOHAM' |
-+----------------------------+
-|                          0 |
-+----------------------------+
-1 row in set, 1 warning (0.01 sec)
 
 mysql> select ename from emp;
 +----------+
