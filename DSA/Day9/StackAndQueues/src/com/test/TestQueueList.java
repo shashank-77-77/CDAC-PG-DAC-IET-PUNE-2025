@@ -4,6 +4,7 @@ import com.stackandqueue.MyQueueLinkedList;
 
 public class TestQueueList {
 
+	
 	public static void main(String[] args) {
 		
 	MyQueueLinkedList qlist=new MyQueueLinkedList();
@@ -17,8 +18,7 @@ public class TestQueueList {
 	System.out.println(qlist.deQueue());
 	System.out.println(qlist.deQueue());
 	System.out.println(qlist.deQueue());
-		
-
+	
 	}
 
 }
