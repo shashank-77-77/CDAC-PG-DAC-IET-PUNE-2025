@@ -9,14 +9,14 @@ public class TestBinarySearchTree
 	{
 		MyBinarySearchTree bst=new MyBinarySearchTree();
 		
-		bst.insertNode(35);
-		bst.insertNode(155);
-		bst.insertNode(177);
+		bst.insertNode(95);
+		bst.insertNode(145);
+		bst.insertNode(187);
 		bst.insertNode(185);
-		bst.insertNode(105);
+		bst.insertNode(905);
 		bst.insertNode(401);
 		bst.insertNode(328);
-		bst.insertNode(455);
+		bst.insertNode(485);
 		bst.insertNode(333);
 		
 		System.out.println("Inorder");
@@ -26,13 +26,13 @@ public class TestBinarySearchTree
 		System.out.println("postorder");
 		bst.postorder();
 		
-		bst.search(33);
-		bst.searchNonRecussive(333);
-		bst.search(38);
+		bst.search(401);
+		bst.searchNonRecussive(328);
+		bst.search(485);
 		
-		bst.deleteNode(177);
+		bst.deleteNode(145);
 		bst.inorder();
-		bst.deleteNode(105);
+		bst.deleteNode(185);
 		bst.inorder();
 		bst.deleteNode(328);
 		bst.inorder();
@@ -40,3 +40,28 @@ public class TestBinarySearchTree
 	}
 
 }
+
+
+//Output :
+ 
+//Inorder
+
+//95, 145, 185, 187, 328, 333, 401, 485, 905, 
+
+//preorder
+
+//95, 145, 187, 185, 905, 401, 328, 333, 485, 
+
+//postorder
+
+//185, 333, 328, 485, 401, 905, 187, 145, 95, 
+
+
+//401 data found
+//328 data found
+//485 data found
+
+
+//95, 185, 187, 328, 333, 401, 485, 905, 
+//95, 187, 328, 333, 401, 485, 905, 
+//95, 187, 333, 401, 485, 905, 
