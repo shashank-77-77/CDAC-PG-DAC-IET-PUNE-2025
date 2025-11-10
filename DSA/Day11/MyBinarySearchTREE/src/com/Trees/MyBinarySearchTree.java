@@ -3,7 +3,8 @@ package com.Trees;
 public class MyBinarySearchTree 
 {
     Node root;
-    class Node{
+    class Node
+    {
     	int data;
     	Node left;
     	Node right;
@@ -33,7 +34,9 @@ public class MyBinarySearchTree
 		{
 			root=newNode;
 			return root;
-		}else {
+		}
+		else
+		{
 			if(key<root.data)
 			{
 				root.left=insertData(root.left,key);
@@ -60,21 +63,22 @@ public class MyBinarySearchTree
 			System.out.print(root.data+", ");
 			inorderTraversal(root.right);
 		}
-		
 	}
 	
-	public void preorder() {
+	public void preorder() 
+	{
 		preorderTraversal(root);
 		System.out.println();
 	}
 
-	private void preorderTraversal(Node root) {
-		if(root!=null) {
+	private void preorderTraversal(Node root) 
+	{
+		if(root!=null) 
+		{
 			System.out.print(root.data+", ");
 			preorderTraversal(root.left);
 			preorderTraversal(root.right);
 		}
-		
 	}
 	
 	public void postorder()
@@ -86,7 +90,7 @@ public class MyBinarySearchTree
 	private void postorderTraversal(Node root) 
 	{
 		if(root!=null)
-{
+		{
 			postorderTraversal(root.left);
 			postorderTraversal(root.right);
 			System.out.print(root.data+", ");
@@ -104,12 +108,15 @@ public class MyBinarySearchTree
 		if(root==null) {
 			return root;
 		}
-		//traverse to find the node
-		if(key<root.data) {
+		if(key<root.data) 
+		{
 			root.left=deleteData(root.left,key);
-		}else if(key>root.data) {
+		}
+		else if(key>root.data)
+		{
 			root.right=deleteData(root.right,key);
-		}else 
+		}
+		else 
 		{
 			if(root.left==null && root.right==null)
 			{
@@ -193,8 +200,7 @@ public class MyBinarySearchTree
 		}
 		System.out.println(key+ " data not found");
 		return false;
-	}
-	
+	}	
 }
 
 
