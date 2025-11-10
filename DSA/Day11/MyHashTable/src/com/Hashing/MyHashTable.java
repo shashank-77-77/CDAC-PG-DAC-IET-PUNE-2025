@@ -53,7 +53,7 @@ public class MyHashTable
 			System.out.print(i+"--->");
 			while(temp!=null) 
 			{
-				System.out.print(temp.data+"----->");
+				System.out.print(temp.data+" -----> ");
 				temp=temp.next;
 			}
 			System.out.println("null");
@@ -77,7 +77,4 @@ public class MyHashTable
 		System.out.println(num + " not found in  bucket "+pos);
 		return false;
 	}
-	
-	
-
 }
