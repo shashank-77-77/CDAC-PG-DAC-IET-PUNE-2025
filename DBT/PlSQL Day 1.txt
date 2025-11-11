@@ -1,0 +1,65 @@
+
+mysql> call pos1();
+ERROR 1305 (42000): PROCEDURE dac83.pos1 does not exist
+mysql> call pro1();
++--------------+
+| R1           |
++--------------+
+| Hello World  |
++--------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source C:\Users\IET\Desktop\s\CDAC_PG-DAC\250845920083\DBT\pl1.sql
+Query OK, 0 rows affected (0.09 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> call pos1();
+ERROR 1305 (42000): PROCEDURE dac83.pos1 does not exist
+mysql> call pro1();
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
++--------+------------+----------+------------+------------+
+6 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> source C:\Users\IET\Desktop\s\CDAC_PG-DAC\250845920083\DBT\pl1.sql
+Query OK, 0 rows affected (0.10 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> call pro1();
++-------+
+| x + y |
++-------+
+|   300 |
++-------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+
+mysql> source C:\Users\IET\Desktop\s\CDAC_PG-DAC\250845920083\DBT\pl1.sql
+Query OK, 0 rows affected (0.10 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> call pro1(100,200,@z);
++------+
+| z    |
++------+
+|  300 |
++------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
