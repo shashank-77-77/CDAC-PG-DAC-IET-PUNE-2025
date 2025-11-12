@@ -63,3 +63,599 @@ mysql> call pro1(100,200,@z);
 1 row in set (0.00 sec)
 
 Query OK, 0 rows affected (0.00 sec)
+
+Microsoft Windows [Version 10.0.19045.6456]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\IET>mysql --host=192.168.10.117 --port=3306 --user=dac83 --password=welcome
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 884
+Server version: 8.0.44 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use dac83
+Database changed
+mysql> source C:\Users\IET\Desktop\s\CDAC_PG-DAC\250845920083\DBT\pl1.sql
+Query OK, 0 rows affected (0.07 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+        leave lbl1;
+        end if;
+
+        insert into t values(curdate() + ' at line 18
+mysql> source C:\Users\IET\Desktop\s\CDAC_PG-DAC\250845920083\DBT\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> call pro1()
+    -> ;
++------+
+| x    |
++------+
+|    1 |
++------+
+1 row in set (0.00 sec)
+
++------+
+| x    |
++------+
+|    2 |
++------+
+1 row in set (0.00 sec)
+
+ERROR 1146 (42S02): Table 'dac83.t' doesn't exist
+mysql> source C:\Users\IET\Desktop\s\CDAC_PG-DAC\250845920083\DBT\pl1.sql
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> call pro1();
+ERROR 1146 (42S02): Table 'dac83.a1' doesn't exist
+mysql> show tables;
++---------------------+
+| Tables_in_dac83     |
++---------------------+
+| a                   |
+| activity            |
+| agent               |
+| airline_seats       |
+| andor               |
+| atm                 |
+| autoinccc           |
+| b                   |
+| bankloan            |
+| batch_schedule      |
+| betweensalary       |
+| bitwise             |
+| blanktablea         |
+| blanktableb         |
+| blog                |
+| bonus               |
+| books               |
+| brands              |
+| bus_stops           |
+| c                   |
+| cafe                |
+| candidate           |
+| cardpayments        |
+| cashpayments        |
+| categories          |
+| category            |
+| city                |
+| classandsubjects    |
+| client              |
+| cnumbers            |
+| coalesce            |
+| comments            |
+| company             |
+| countnulls          |
+| countnumbers        |
+| cricketwinnerteam   |
+| customer            |
+| customers           |
+| d                   |
+| demodept1           |
+| demodept2           |
+| dept                |
+| dept1               |
+| dhl                 |
+| docs                |
+| doctor              |
+| doctorvisits        |
+| don                 |
+| dummy               |
+| duplicate           |
+| emp                 |
+| emp1                |
+| emp2                |
+| emp33               |
+| emp_attendance      |
+| emp_cards           |
+| emp_phone           |
+| empj                |
+| envelope            |
+| facebook            |
+| fedex               |
+| food                |
+| food_category_tags  |
+| food_items          |
+| fromstoreorders     |
+| fruits              |
+| fullname            |
+| hall_ticket         |
+| hobby               |
+| ipl                 |
+| item                |
+| job_list            |
+| key_parts           |
+| labtestlist         |
+| leading_zeroes      |
+| leadtable           |
+| licence             |
+| linkedin            |
+| location            |
+| managers            |
+| mass_table          |
+| medicinelist        |
+| menucard            |
+| missingnumbers      |
+| nearest             |
+| new                 |
+| newbooks            |
+| null1               |
+| null2               |
+| nullif              |
+| numberstring        |
+| onlineorders        |
+| ord                 |
+| order1              |
+| order_details       |
+| order_items         |
+| orderdetails        |
+| orders              |
+| orders1             |
+| overlapping_dates   |
+| overtime            |
+| patient             |
+| phonecall           |
+| pivot_table         |
+| plumber             |
+| plumber_service_map |
+| points              |
+| population          |
+| price               |
+| product             |
+| product_sales       |
+| products            |
+| pune_metro_stations |
+| quarterly_revenue   |
+| r                   |
+| r1                  |
+| r2                  |
+| races               |
+| regexpr             |
+| repeatingnumbers    |
+| replacedept         |
+| reservations        |
+| revenue             |
+| rockets             |
+| room_assigned       |
+| room_staff          |
+| rooms               |
+| runners             |
+| runningserver       |
+| sales               |
+| sales1              |
+| sales_channel       |
+| salespeople         |
+| salesperson         |
+| salgrade            |
+| server              |
+| service             |
+| seta                |
+| setb                |
+| shop                |
+| softdrink           |
+| sort                |
+| sourcecity          |
+| sourcenames         |
+| stadium             |
+| stages              |
+| states              |
+| station             |
+| status              |
+| stocks              |
+| stringnumber        |
+| student             |
+| study               |
+| swapcity            |
+| t1                  |
+| t2                  |
+| t4                  |
+| t5                  |
+| t6                  |
+| t7                  |
+| tablea              |
+| tableaa             |
+| tableb              |
+| tablebb             |
+| targetcity          |
+| targetnames         |
+| tasks               |
+| teams               |
+| temp1               |
+| trainers            |
+| trains              |
+| traintimetable      |
+| transactions        |
+| unpivot_table       |
+| ups                 |
+| vote_response       |
+| votes               |
+| warehouse           |
+| x                   |
+| year_of_service     |
+| yearly_revenue      |
+| years               |
+| z                   |
++---------------------+
+183 rows in set (0.01 sec)
+
+mysql> source C:\Users\IET\Desktop\s\CDAC_PG-DAC\250845920083\DBT\pl1.sql
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> call pro1();
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from t1;
++----+------+
+| c1 | c2   |
++----+------+
+|  1 |    1 |
++----+------+
+1 row in set (0.00 sec)
+
+mysql> select * from t2;
+Empty set (0.00 sec)
+
+mysql> source C:\Users\IET\Desktop\s\CDAC_PG-DAC\250845920083\DBT\pl1.sql
+Query OK, 0 rows affected (0.07 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> source C:\Users\IET\Desktop\s\CDAC_PG-DAC\250845920083\DBT\pl1.sql
+Query OK, 0 rows affected (0.16 sec)
+
+Query OK, 0 rows affected (0.24 sec)
+
+mysql> call pro1();
++----------------------+
+| Transaction undon... |
++----------------------+
+| Transaction undon... |
++----------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> source C:\Users\IET\Desktop\s\CDAC_PG-DAC\250845920083\DBT\pl1.sql
+Query OK, 0 rows affected (0.08 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> call pro1()
+    -> ;
++----------+------------+----------+--------+-------------+
+| v_deptno | v_dname    | v_loc    | v_pwd  | v_startedon |
++----------+------------+----------+--------+-------------+
+|       10 | ACCOUNTING | NEW YORK | r50mpm | 24/03/1989  |
++----------+------------+----------+--------+-------------+
+1 row in set (0.00 sec)
+
++----------+----------+--------+-----------+-------------+
+| v_deptno | v_dname  | v_loc  | v_pwd     | v_startedon |
++----------+----------+--------+-----------+-------------+
+|       20 | RESEARCH | DALLAS | a12recmpm | 12/04/1989  |
++----------+----------+--------+-----------+-------------+
+1 row in set (0.01 sec)
+
++----------+---------+---------+------------+-------------+
+| v_deptno | v_dname | v_loc   | v_pwd      | v_startedon |
++----------+---------+---------+------------+-------------+
+|       30 | SALES   | CHICAGO | sales@2017 | 13/04/1989  |
++----------+---------+---------+------------+-------------+
+1 row in set (0.02 sec)
+
++----------+------------+--------+---------+-------------+
+| v_deptno | v_dname    | v_loc  | v_pwd   | v_startedon |
++----------+------------+--------+---------+-------------+
+|       40 | OPERATIONS | BOSTON | opr@123 | 12/07/1989  |
++----------+------------+--------+---------+-------------+
+1 row in set (0.02 sec)
+
++----------+---------+-------+----------+-------------+
+| v_deptno | v_dname | v_loc | v_pwd    | v_startedon |
++----------+---------+-------+----------+-------------+
+|       50 | HR      | PUNE  | PUN@8877 | 22/12/1989  |
++----------+---------+-------+----------+-------------+
+1 row in set (0.03 sec)
+
++----------+---------+--------+----------+-------------+
+| v_deptno | v_dname | v_loc  | v_pwd    | v_startedon |
++----------+---------+--------+----------+-------------+
+|       60 | IT      | BARODA | BRD@1122 | 02/10/1989  |
++----------+---------+--------+----------+-------------+
+1 row in set (0.04 sec)
+
++----------+---------+--------+-------+-------------+
+| v_deptno | v_dname | v_loc  | v_pwd | v_startedon |
++----------+---------+--------+-------+-------------+
+|       81 | PQR     | baroda | xyz   | 24/03/1989  |
++----------+---------+--------+-------+-------------+
+1 row in set (0.04 sec)
+
++----------+----------+--------+-------------+-------------+
+| v_deptno | v_dname  | v_loc  | v_pwd       | v_startedon |
++----------+----------+--------+-------------+-------------+
+|       83 | SHASHANK | NAGPUR | shashank123 | 01/04/2022  |
++----------+----------+--------+-------------+-------------+
+1 row in set (0.05 sec)
+
++----------+----------+--------+-------------+-------------+
+| v_deptno | v_dname  | v_loc  | v_pwd       | v_startedon |
++----------+----------+--------+-------------+-------------+
+|       84 | SHASHANK | NAGPUR | shashank123 | 01/04/2022  |
++----------+----------+--------+-------------+-------------+
+1 row in set (0.06 sec)
+
++------+
+| done |
++------+
+| done |
++------+
+1 row in set (0.07 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> source C:\Users\IET\Desktop\s\CDAC_PG-DAC\250845920083\DBT\pl1.sql
+Query OK, 0 rows affected (0.08 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> call pro1();
+ERROR 1146 (42S02): Table 'dac83.e3' doesn't exist
+mysql> show tables;
++---------------------+
+| Tables_in_dac83     |
++---------------------+
+| a                   |
+| activity            |
+| agent               |
+| airline_seats       |
+| andor               |
+| atm                 |
+| autoinccc           |
+| b                   |
+| bankloan            |
+| batch_schedule      |
+| betweensalary       |
+| bitwise             |
+| blanktablea         |
+| blanktableb         |
+| blog                |
+| bonus               |
+| books               |
+| brands              |
+| bus_stops           |
+| c                   |
+| cafe                |
+| candidate           |
+| cardpayments        |
+| cashpayments        |
+| categories          |
+| category            |
+| city                |
+| classandsubjects    |
+| client              |
+| cnumbers            |
+| coalesce            |
+| comments            |
+| company             |
+| countnulls          |
+| countnumbers        |
+| cricketwinnerteam   |
+| customer            |
+| customers           |
+| d                   |
+| demodept1           |
+| demodept2           |
+| dept                |
+| dept1               |
+| dhl                 |
+| docs                |
+| doctor              |
+| doctorvisits        |
+| don                 |
+| dummy               |
+| duplicate           |
+| emp                 |
+| emp1                |
+| emp2                |
+| emp33               |
+| emp_attendance      |
+| emp_cards           |
+| emp_phone           |
+| empj                |
+| envelope            |
+| facebook            |
+| fedex               |
+| food                |
+| food_category_tags  |
+| food_items          |
+| fromstoreorders     |
+| fruits              |
+| fullname            |
+| hall_ticket         |
+| hobby               |
+| ipl                 |
+| item                |
+| job_list            |
+| key_parts           |
+| labtestlist         |
+| leading_zeroes      |
+| leadtable           |
+| licence             |
+| linkedin            |
+| location            |
+| managers            |
+| mass_table          |
+| medicinelist        |
+| menucard            |
+| missingnumbers      |
+| nearest             |
+| new                 |
+| newbooks            |
+| null1               |
+| null2               |
+| nullif              |
+| numberstring        |
+| onlineorders        |
+| ord                 |
+| order1              |
+| order_details       |
+| order_items         |
+| orderdetails        |
+| orders              |
+| orders1             |
+| overlapping_dates   |
+| overtime            |
+| patient             |
+| phonecall           |
+| pivot_table         |
+| plumber             |
+| plumber_service_map |
+| points              |
+| population          |
+| price               |
+| product             |
+| product_sales       |
+| products            |
+| pune_metro_stations |
+| quarterly_revenue   |
+| r                   |
+| r1                  |
+| r2                  |
+| races               |
+| regexpr             |
+| repeatingnumbers    |
+| replacedept         |
+| reservations        |
+| revenue             |
+| rockets             |
+| room_assigned       |
+| room_staff          |
+| rooms               |
+| runners             |
+| runningserver       |
+| sales               |
+| sales1              |
+| sales_channel       |
+| salespeople         |
+| salesperson         |
+| salgrade            |
+| server              |
+| service             |
+| seta                |
+| setb                |
+| shop                |
+| softdrink           |
+| sort                |
+| sourcecity          |
+| sourcenames         |
+| stadium             |
+| stages              |
+| states              |
+| station             |
+| status              |
+| stocks              |
+| stringnumber        |
+| student             |
+| study               |
+| swapcity            |
+| t1                  |
+| t2                  |
+| t4                  |
+| t5                  |
+| t6                  |
+| t7                  |
+| tablea              |
+| tableaa             |
+| tableb              |
+| tablebb             |
+| targetcity          |
+| targetnames         |
+| tasks               |
+| teams               |
+| temp1               |
+| trainers            |
+| trains              |
+| traintimetable      |
+| transactions        |
+| unpivot_table       |
+| ups                 |
+| vote_response       |
+| votes               |
+| warehouse           |
+| x                   |
+| year_of_service     |
+| yearly_revenue      |
+| years               |
+| z                   |
++---------------------+
+183 rows in set (0.01 sec)
+
+mysql> desc t1;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   | PRI | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc t2;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   | PRI | NULL    |       |
+| c2    | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc t3;
+ERROR 1146 (42S02): Table 'dac83.t3' doesn't exist
+mysql> desc t4;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| c1    | int  | NO   | PRI | NULL    |       |
+| c2    | int  | NO   | PRI | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql>
