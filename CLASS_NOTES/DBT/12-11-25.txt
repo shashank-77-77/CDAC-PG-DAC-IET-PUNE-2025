@@ -1,0 +1,1507 @@
+Microsoft Windows [Version 10.0.26200.7019]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\SALEEL>mysql --user=root --password=root db1
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.41 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.09 sec)
+
+ERROR 1415 (0A000): Not allowed to return a result set from a function
+mysql>
+mysql>
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you *might* want to use the less safe log_bin_trust_function_creators variable)
+mysql>
+mysql>
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> fn1();
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'fn1()' at line 1
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> fn1();
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'fn1()' at line 1
+mysql> selectfn1();
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'selectfn1()' at line 1
+mysql> select fn1();
++-------------+
+| fn1()       |
++-------------+
+| Hello World |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> select fn1() aaa;
++-------------+
+| aaa         |
++-------------+
+| Hello World |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select fn1();
++-------------+
+| fn1()       |
++-------------+
+| Hello World |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> slect @a;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'slect @a' at line 1
+mysql> select @a;
++-------------+
+| @a          |
++-------------+
+| Hello World |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+ERROR 1320 (42000): No RETURN found in FUNCTION db1.fn1
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select (2,3);
+ERROR 1241 (21000): Operand should contain 1 column(s)
+mysql> select fn1(2,3);
++----------+
+| fn1(2,3) |
++----------+
+| 5        |
++----------+
+1 row in set (0.01 sec)
+
+mysql> select fn1(2,3) * 2;
++--------------+
+| fn1(2,3) * 2 |
++--------------+
+|           10 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select fn1(2,3);
++----------+
+| fn1(2,3) |
++----------+
+|        5 |
++----------+
+1 row in set (0.01 sec)
+
+mysql> select fn1(2,33);
++-----------+
+| fn1(2,33) |
++-----------+
+|        35 |
++-----------+
+1 row in set (0.01 sec)
+
+mysql> select sal, comm, fn1(sal,comm) from emp;
++------+------+---------------+
+| sal  | comm | fn1(sal,comm) |
++------+------+---------------+
+| 1750 | NULL |          NULL |
+| 1750 | NULL |          NULL |
+| 1750 | NULL |          NULL |
+| 1750 | NULL |          NULL |
+|  800 | NULL |          NULL |
+| 3350 | NULL |          NULL |
+| 1750 | NULL |          NULL |
+| 1600 |  300 |          1900 |
+| 1250 |  500 |          1750 |
+| 2975 | NULL |          NULL |
+| 1250 | 1400 |          2650 |
+| 2850 | NULL |          NULL |
+| 2450 | NULL |          NULL |
+| 3000 | NULL |          NULL |
+| 5000 | NULL |          NULL |
+| 5000 | NULL |          NULL |
+| 1500 |    0 |          1500 |
+| 1100 | NULL |          NULL |
+| 2000 | NULL |          NULL |
+| 1000 | NULL |          NULL |
+|  950 | NULL |          NULL |
+| 3000 | NULL |          NULL |
+| 4150 | NULL |          NULL |
+| 2575 | 2700 |          5275 |
+| 1300 | 1300 |          2600 |
+| 1350 | 2700 |          4050 |
+| 1250 |  500 |          1750 |
+| 1750 | NULL |          NULL |
+| 1750 | NULL |          NULL |
+|   -1 | NULL |          NULL |
++------+------+---------------+
+30 rows in set (0.04 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select sal, comm, fn1(sal,comm) from emp;
++------+------+---------------+
+| sal  | comm | fn1(sal,comm) |
++------+------+---------------+
+| 1750 | NULL |          1750 |
+| 1750 | NULL |          1750 |
+| 1750 | NULL |          1750 |
+| 1750 | NULL |          1750 |
+|  800 | NULL |           800 |
+| 3350 | NULL |          3350 |
+| 1750 | NULL |          1750 |
+| 1600 |  300 |          1900 |
+| 1250 |  500 |          1750 |
+| 2975 | NULL |          2975 |
+| 1250 | 1400 |          2650 |
+| 2850 | NULL |          2850 |
+| 2450 | NULL |          2450 |
+| 3000 | NULL |          3000 |
+| 5000 | NULL |          5000 |
+| 5000 | NULL |          5000 |
+| 1500 |    0 |          1500 |
+| 1100 | NULL |          1100 |
+| 2000 | NULL |          2000 |
+| 1000 | NULL |          1000 |
+|  950 | NULL |           950 |
+| 3000 | NULL |          3000 |
+| 4150 | NULL |          4150 |
+| 2575 | 2700 |          5275 |
+| 1300 | 1300 |          2600 |
+| 1350 | 2700 |          4050 |
+| 1250 |  500 |          1750 |
+| 1750 | NULL |          1750 |
+| 1750 | NULL |          1750 |
+|   -1 | NULL |            -1 |
++------+------+---------------+
+30 rows in set (0.00 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'end' at line 7
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
++--------+------------+----------+------------+------------+
+6 rows in set (0.02 sec)
+
+mysql> select fn1();
++-------+
+| fn1() |
++-------+
+|    61 |
++-------+
+1 row in set (0.02 sec)
+
+mysql> select fn1();
++-------+
+| fn1() |
++-------+
+|    61 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> insert into dept values(fn1() , 111,111,111,11);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
+|     61 | 111        | 111      | 111        | 11         |
++--------+------------+----------+------------+------------+
+7 rows in set (0.00 sec)
+
+mysql> insert into dept values(fn1() , 111,111,111,11);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
+|     61 | 111        | 111      | 111        | 11         |
+|     62 | 111        | 111      | 111        | 11         |
++--------+------------+----------+------------+------------+
+8 rows in set (0.00 sec)
+
+mysql> insert into dept values(fn1() , 111,111,111,11);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
+|     61 | 111        | 111      | 111        | 11         |
+|     62 | 111        | 111      | 111        | 11         |
+|     63 | 111        | 111      | 111        | 11         |
++--------+------------+----------+------------+------------+
+9 rows in set (0.00 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> table dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
+|     61 | 111        | 111      | 111        | 11         |
+|     62 | 111        | 111      | 111        | 11         |
+|     63 | 111        | 111      | 111        | 11         |
++--------+------------+----------+------------+------------+
+9 rows in set (0.00 sec)
+
+mysql> call pro1(2,2,2,2);
++-----------------------+
+| Message               |
++-----------------------+
+| Record inserted ..... |
++-----------------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> call pro1(2,2,2,2);
++-----------------------+
+| Message               |
++-----------------------+
+| Record inserted ..... |
++-----------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> call pro1(2,2,2,2);
++-----------------------+
+| Message               |
++-----------------------+
+| Record inserted ..... |
++-----------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> table dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
+|     61 | 111        | 111      | 111        | 11         |
+|     62 | 111        | 111      | 111        | 11         |
+|     63 | 111        | 111      | 111        | 11         |
+|     64 | 2          | 2        | 2          | 2          |
+|     65 | 2          | 2        | 2          | 2          |
+|     66 | 2          | 2        | 2          | 2          |
++--------+------------+----------+------------+------------+
+12 rows in set (0.00 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select fn1();
++--------+
+| fn1()  |
++--------+
+| KiK{Vc |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select fn1();
++--------+
+| fn1()  |
++--------+
+| ZoVjMf |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select fn1();
++--------+
+| fn1()  |
++--------+
+| RoWnCz |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select fn1();
++--------+
+| fn1()  |
++--------+
+| MkOqMm |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select fn1();
++--------+
+| fn1()  |
++--------+
+| [lHaIn |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select fn1();
++--------+
+| fn1()  |
++--------+
+| NaRdVn |
++--------+
+1 row in set (0.00 sec)
+
+mysql> use information_schema;
+Database changed
+mysql> desc columns;
++--------------------------+----------------------------+------+-----+---------+-------+
+| Field                    | Type                       | Null | Key | Default | Extra |
++--------------------------+----------------------------+------+-----+---------+-------+
+| TABLE_CATALOG            | varchar(64)                | YES  |     | NULL    |       |
+| TABLE_SCHEMA             | varchar(64)                | YES  |     | NULL    |       |
+| TABLE_NAME               | varchar(64)                | YES  |     | NULL    |       |
+| COLUMN_NAME              | varchar(64)                | YES  |     | NULL    |       |
+| ORDINAL_POSITION         | int unsigned               | NO   |     | NULL    |       |
+| COLUMN_DEFAULT           | text                       | YES  |     | NULL    |       |
+| IS_NULLABLE              | varchar(3)                 | NO   |     |         |       |
+| DATA_TYPE                | longtext                   | YES  |     | NULL    |       |
+| CHARACTER_MAXIMUM_LENGTH | bigint                     | YES  |     | NULL    |       |
+| CHARACTER_OCTET_LENGTH   | bigint                     | YES  |     | NULL    |       |
+| NUMERIC_PRECISION        | bigint unsigned            | YES  |     | NULL    |       |
+| NUMERIC_SCALE            | bigint unsigned            | YES  |     | NULL    |       |
+| DATETIME_PRECISION       | int unsigned               | YES  |     | NULL    |       |
+| CHARACTER_SET_NAME       | varchar(64)                | YES  |     | NULL    |       |
+| COLLATION_NAME           | varchar(64)                | YES  |     | NULL    |       |
+| COLUMN_TYPE              | mediumtext                 | NO   |     | NULL    |       |
+| COLUMN_KEY               | enum('','PRI','UNI','MUL') | NO   |     | NULL    |       |
+| EXTRA                    | varchar(256)               | YES  |     | NULL    |       |
+| PRIVILEGES               | varchar(154)               | YES  |     | NULL    |       |
+| COLUMN_COMMENT           | text                       | NO   |     | NULL    |       |
+| GENERATION_EXPRESSION    | longtext                   | NO   |     | NULL    |       |
+| SRS_ID                   | int unsigned               | YES  |     | NULL    |       |
++--------------------------+----------------------------+------+-----+---------+-------+
+22 rows in set (0.08 sec)
+
+mysql> select COLUMN_NAME from information_schema where TABLE_SCHEMA='db1' and TABLE_NAME='emp';
+ERROR 1109 (42S02): Unknown table 'INFORMATION_SCHEMA' in information_schema
+mysql> select COLUMN_NAME from information_schema.columns where TABLE_SCHEMA='db1' and TABLE_NAME='emp';
++-------------+
+| COLUMN_NAME |
++-------------+
+| EMPNO       |
+| ENAME       |
+| GENDER      |
+| JOB         |
+| MGR         |
+| HIREDATE    |
+| SAL         |
+| COMM        |
+| DEPTNO      |
+| BONUSID     |
+| USER NAME   |
+| PWD         |
+| PHONE       |
+| isActive    |
++-------------+
+14 rows in set (0.00 sec)
+
+mysql> select group_concat(COLUMN_NAME) from information_schema.columns where TABLE_SCHEMA='db1' and TABLE_NAME='emp';
++------------------------------------------------------------------------------------------+
+| group_concat(COLUMN_NAME)                                                                |
++------------------------------------------------------------------------------------------+
+| EMPNO,ENAME,GENDER,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO,BONUSID,USER NAME,PWD,PHONE,isActive |
++------------------------------------------------------------------------------------------+
+1 row in set (0.01 sec)
+
+mysql> use db1;
+Database changed
+mysql> select group_concat(COLUMN_NAME) from information_schema.columns where TABLE_SCHEMA='db1' and TABLE_NAME='emp';
++------------------------------------------------------------------------------------------+
+| group_concat(COLUMN_NAME)                                                                |
++------------------------------------------------------------------------------------------+
+| EMPNO,ENAME,GENDER,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO,BONUSID,USER NAME,PWD,PHONE,isActive |
++------------------------------------------------------------------------------------------+
+1 row in set (0.01 sec)
+
+mysql> select * from (select group_concat(COLUMN_NAME) from information_schema.columns where TABLE_SCHEMA='db1' and TABLE_NAME='emp');
+ERROR 1248 (42000): Every derived table must have its own alias
+mysql> select * from (select group_concat(COLUMN_NAME) from information_schema.columns where TABLE_SCHEMA='db1' and TABLE_NAME='emp') t1;
++------------------------------------------------------------------------------------------+
+| group_concat(COLUMN_NAME)                                                                |
++------------------------------------------------------------------------------------------+
+| EMPNO,ENAME,GENDER,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO,BONUSID,USER NAME,PWD,PHONE,isActive |
++------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select (select group_concat(COLUMN_NAME) from information_schema.columns where TABLE_SCHEMA='db1' and TABLE_NAME='emp');
++------------------------------------------------------------------------------------------------------------------+
+| (select group_concat(COLUMN_NAME) from information_schema.columns where TABLE_SCHEMA='db1' and TABLE_NAME='emp') |
++------------------------------------------------------------------------------------------------------------------+
+| EMPNO,ENAME,GENDER,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO,BONUSID,USER NAME,PWD,PHONE,isActive                         |
++------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.01 sec)
+
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1();
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
+|     61 | 111        | 111      | 111        | 11         |
+|     62 | 111        | 111      | 111        | 11         |
+|     63 | 111        | 111      | 111        | 11         |
+|     64 | 2          | 2        | 2          | 2          |
+|     65 | 2          | 2        | 2          | 2          |
+|     66 | 2          | 2        | 2          | 2          |
++--------+------------+----------+------------+------------+
+12 rows in set (0.01 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> delete from dept where deptno<10;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> delete from dept where deptno>60;
+Query OK, 6 rows affected (0.02 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
++--------+------------+----------+------------+------------+
+6 rows in set (0.00 sec)
+
+mysql> select group_concat(COLUMN_NAME) R11 from information_schema.columns where TABLE_SCHEMA='db1' and TABLE_NAME='emp';
++------------------------------------------------------------------------------------------+
+| R11                                                                                      |
++------------------------------------------------------------------------------------------+
+| EMPNO,ENAME,GENDER,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO,BONUSID,USER NAME,PWD,PHONE,isActive |
++------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select EMPNO,ENAME,GENDER,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO,BONUSID,USER NAME,PWD,PHONE,isActive from emp;
+ERROR 1054 (42S22): Unknown column 'USER' in 'field list'
+mysql> select EMPNO,ENAME,GENDER,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO,BONUSID,`USER NAME`,PWD,PHONE,isActive from emp;
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+| EMPNO | ENAME    | GENDER | JOB                 | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME    | PWD        | PHONE      | isActive |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+|  6001 | GITA     | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | GITA         | sales@2017 | NULL       |        1 |
+|  6129 | VRUSHALI | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | VRUSHALI     | PUN@8877   | NULL       |        1 |
+|  6473 | SHARMIN  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | SHARMIN      | a12recmpm  | NULL       |        1 |
+|  6781 | BANDISH  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | BANDISH      | a12recmpm  | NULL       |        1 |
+|  7369 | SMITH    | M      | CLERK               | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | TRITONE      | a12recmpm  | 7032300023 |        0 |
+|  7415 | AARAV    | M      | CLERK               | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | AARAV        | NULL       | 7032300084 |        0 |
+|  7421 | THOMAS   | M      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | THOMAS       | r50mpm     | 7032300011 |        0 |
+|  7499 | ALLEN    | M      | SALESMAN            | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | ALWAYS TESTE | sales@2017 | 7032300096 |        1 |
+|  7521 | WARD     | M      | SALESMAN            | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | WARD         | sales@2017 | 7132300034 |        1 |
+|  7566 | JONES    | M      | MANAGER             | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB    | a12recmpm  | 7132300039 |        1 |
+|  7654 | MARTIN   | M      | SALESMAN            | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | LIFE RACER   | sales@2017 | 7132300050 |        1 |
+|  7698 | BLAKE    | M      | MANAGER             | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN      | sales@2017 | 7132300027 |        1 |
+|  7782 | CLARK    | M      | MANAGER             | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | CLARK        | r50mpm     | 7032300001 |        1 |
+|  7788 | SCOTT    | M      | ANALYST             | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND   | a12recmpm  | NULL       |        1 |
+|  7839 | KING     | M      | PRESIDENT           | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING         | r50mpm     | 7132300081 |        1 |
+|  7840 | FRED     | M      | vice PRESIDENT      | 7839 | 1983-08-09 | 5000 | NULL |     20 |       1 | SAND STONE   | a12recmpm  | NULL       |        1 |
+|  7844 | TURNER   | M      | SALESMAN            | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | SAND DUST    | sales@2017 | NULL       |        1 |
+|  7876 | ADAMS    | M      | CLERK               | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | CRAZY ANYONE | a12recmpm  | 7132300086 |        1 |
+|  7888 | Ruhan    | M      | Network             | 7888 | 1983-08-09 | 2000 | NULL |     60 |       1 | Ruhan        | BRD@1122   | NULL       |        1 |
+|  7889 | Neel     | M      | vice PRESIDENT      | 7839 | 1983-08-09 | 1000 | NULL |     60 |       0 | Neel         | BRD@1122   | NULL       |        1 |
+|  7900 | JAMES    | M      | CLERK               | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | CRAZY LEADER | sales@2017 | 7132300042 |        1 |
+|  7902 | FORD     | M      | ANALYST             | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO      | a12recmpm  | NULL       |        0 |
+|  7919 | HOFFMAN  | M      | MANAGER             | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | INTERVAL     | sales@2017 | NULL       |        1 |
+|  7920 | GRASS    | M      | SALESMAN            | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | GRASS        | sales@2017 | NULL       |        1 |
+|  7934 | MILLER   | M      | CLERK               | 7782 | 1982-01-23 | 1300 | 1300 |     10 |       2 | QUARTERNOTE  | r50mpm     | 7132300055 |        0 |
+|  7945 | AARUSH   | M      | SALESMAN            | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | AARUSH       | ABCDEF     | NULL       |        0 |
+|  7949 | ALEX     | M      | MANAGER             | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | QUARTERREST  | sales@2017 | 7156567183 |        1 |
+|  8433 | NATASHA  | F      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | NATASHA      | sales@2017 | NULL       |        1 |
+|  9400 | SANGITA  | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SANGITA      | NULL       | NULL       |        1 |
+|  9473 | SUPRIYA  | F      | ANALYST             | 7920 | 1981-07-19 |   -1 | NULL |     50 |       1 | SUPRIYA      | XYZ@1234   | NULL       |        1 |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+30 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.02 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'for @x;
+
+end b1' at line 4
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1();
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
++--------+------------+----------+------------+------------+
+6 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1();
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
++--------+------------+----------+------------+------------+
+6 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1(`dept`);
+ERROR 1054 (42S22): Unknown column 'dept' in 'field list'
+mysql>
+mysql> call pro1('dept');
+ERROR 1146 (42S02): Table 'db1.tname' doesn't exist
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'end b1' at line 5
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1('dept');
++--------------------+
+| @x                 |
++--------------------+
+| select * from dept |
++--------------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
++--------+------------+----------+------------+------------+
+6 rows in set (0.00 sec)
+
+mysql> call pro1('dept');
++--------------------+
+| @x                 |
++--------------------+
+| select * from dept |
++--------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1('dept');
++--------------------+
+| @x                 |
++--------------------+
+| select * from dept |
++--------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1(dept);
+ERROR 1054 (42S22): Unknown column 'dept' in 'field list'
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1('dept');
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
++--------+------------+----------+------------+------------+
+6 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> call pro1('emp');
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+| EMPNO | ENAME    | GENDER | JOB                 | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME    | PWD        | PHONE      | isActive |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+|  6001 | GITA     | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | GITA         | sales@2017 | NULL       |        1 |
+|  6129 | VRUSHALI | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | VRUSHALI     | PUN@8877   | NULL       |        1 |
+|  6473 | SHARMIN  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | SHARMIN      | a12recmpm  | NULL       |        1 |
+|  6781 | BANDISH  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | BANDISH      | a12recmpm  | NULL       |        1 |
+|  7369 | SMITH    | M      | CLERK               | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | TRITONE      | a12recmpm  | 7032300023 |        0 |
+|  7415 | AARAV    | M      | CLERK               | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | AARAV        | NULL       | 7032300084 |        0 |
+|  7421 | THOMAS   | M      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | THOMAS       | r50mpm     | 7032300011 |        0 |
+|  7499 | ALLEN    | M      | SALESMAN            | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | ALWAYS TESTE | sales@2017 | 7032300096 |        1 |
+|  7521 | WARD     | M      | SALESMAN            | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | WARD         | sales@2017 | 7132300034 |        1 |
+|  7566 | JONES    | M      | MANAGER             | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB    | a12recmpm  | 7132300039 |        1 |
+|  7654 | MARTIN   | M      | SALESMAN            | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | LIFE RACER   | sales@2017 | 7132300050 |        1 |
+|  7698 | BLAKE    | M      | MANAGER             | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN      | sales@2017 | 7132300027 |        1 |
+|  7782 | CLARK    | M      | MANAGER             | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | CLARK        | r50mpm     | 7032300001 |        1 |
+|  7788 | SCOTT    | M      | ANALYST             | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND   | a12recmpm  | NULL       |        1 |
+|  7839 | KING     | M      | PRESIDENT           | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING         | r50mpm     | 7132300081 |        1 |
+|  7840 | FRED     | M      | vice PRESIDENT      | 7839 | 1983-08-09 | 5000 | NULL |     20 |       1 | SAND STONE   | a12recmpm  | NULL       |        1 |
+|  7844 | TURNER   | M      | SALESMAN            | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | SAND DUST    | sales@2017 | NULL       |        1 |
+|  7876 | ADAMS    | M      | CLERK               | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | CRAZY ANYONE | a12recmpm  | 7132300086 |        1 |
+|  7888 | Ruhan    | M      | Network             | 7888 | 1983-08-09 | 2000 | NULL |     60 |       1 | Ruhan        | BRD@1122   | NULL       |        1 |
+|  7889 | Neel     | M      | vice PRESIDENT      | 7839 | 1983-08-09 | 1000 | NULL |     60 |       0 | Neel         | BRD@1122   | NULL       |        1 |
+|  7900 | JAMES    | M      | CLERK               | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | CRAZY LEADER | sales@2017 | 7132300042 |        1 |
+|  7902 | FORD     | M      | ANALYST             | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO      | a12recmpm  | NULL       |        0 |
+|  7919 | HOFFMAN  | M      | MANAGER             | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | INTERVAL     | sales@2017 | NULL       |        1 |
+|  7920 | GRASS    | M      | SALESMAN            | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | GRASS        | sales@2017 | NULL       |        1 |
+|  7934 | MILLER   | M      | CLERK               | 7782 | 1982-01-23 | 1300 | 1300 |     10 |       2 | QUARTERNOTE  | r50mpm     | 7132300055 |        0 |
+|  7945 | AARUSH   | M      | SALESMAN            | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | AARUSH       | ABCDEF     | NULL       |        0 |
+|  7949 | ALEX     | M      | MANAGER             | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | QUARTERREST  | sales@2017 | 7156567183 |        1 |
+|  8433 | NATASHA  | F      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | NATASHA      | sales@2017 | NULL       |        1 |
+|  9400 | SANGITA  | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SANGITA      | NULL       | NULL       |        1 |
+|  9473 | SUPRIYA  | F      | ANALYST             | 7920 | 1981-07-19 |   -1 | NULL |     50 |       1 | SUPRIYA      | XYZ@1234   | NULL       |        1 |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+30 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> call pro1('orders');
++------+---------+---------------------+------+------+--------+--------------+------------+------------------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type   | paymentType  | registered | delivery_partner |
++------+---------+---------------------+------+------+--------+--------------+------------+------------------+
+| 2322 |   750.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 2364 |   750.1 | 1996-10-03 12:07:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 2475 |   750.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 3001 |   18.69 | 1996-10-03 12:30:00 | 2008 | 1007 | Online | Credit Cards |          1 | NULL             |
+| 3002 |  1900.1 | 1996-10-03 12:30:00 | 2007 | 1004 | Online | Wallets      |          1 | NULL             |
+| 3003 |  767.19 | 1996-10-03 13:45:00 | 2001 | 1001 | Online | Debit Cards  |          1 | NULL             |
+| 3005 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1002 | Online | Debit Cards  |          1 | NULL             |
+| 3006 | 1098.16 | 1996-10-03 13:37:00 | 2008 | 1007 | Online | Wallets      |          1 | NULL             |
+| 3007 |   75.75 | 1996-10-04 15:21:00 | 2002 | 1003 | Online | Credit Cards |          1 | NULL             |
+| 3008 |    4723 | 1996-10-05 12:07:00 | 2006 | 1001 | Cash   | COD          |          0 | NULL             |
+| 3009 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Online | Credit Cards |          1 | NULL             |
+| 3010 | 1309.95 | 1996-10-06 13:12:00 | 2004 | 1002 | Online | EMI Options  |          1 | NULL             |
+| 3011 | 9891.88 | 1996-10-06 13:09:00 | 2006 | 1001 | Online | EMI Options  |          1 | NULL             |
+| 3012 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3013 | 1245.98 | 1996-10-04 16:32:00 | 2002 | 1003 | Online | EMI Options  |          1 | NULL             |
+| 3014 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Cash   | COD          |          0 | NULL             |
+| 3015 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Online | EMI Options  |          1 | NULL             |
+| 3016 | 1729.67 | 1996-10-06 13:18:00 | 2006 | 1001 | Online | Wallets      |          1 | NULL             |
+| 3017 |   18.69 | 1996-10-03 12:30:00 | 2001 | 1007 | Online | Credit Cards |          1 | NULL             |
+| 3018 |  767.19 | 1996-10-03 12:05:00 | 2002 | 1001 | Online | Wallets      |          1 | NULL             |
+| 3019 |  1900.1 | 1996-10-03 12:05:00 | 2007 | 1004 | Online | EMI Options  |          1 | NULL             |
+| 3020 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1007 | Cash   | COD          |          0 | NULL             |
+| 3021 | 1098.16 | 1996-10-03 13:37:00 | 2008 | 1007 | Online | Debit Cards  |          1 | NULL             |
+| 3022 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3023 |   75.75 | 1996-10-04 16:02:00 | 2002 | 1004 | Online | Wallets      |          1 | NULL             |
+| 3024 |    4723 | 1996-10-05 12:07:00 | 2006 | 1002 | Online | Credit Cards |          1 | NULL             |
+| 3025 | 1309.95 | 1996-10-06 13:12:00 | 2002 | 1002 | Online | Wallets      |          1 | NULL             |
+| 3026 | 9891.88 | 1996-10-06 13:09:00 | 2006 | 1001 | Online | Wallets      |          1 | NULL             |
+| 3027 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3028 | 1245.98 | 1996-10-04 16:32:00 | 2002 | 1003 | Online | Debit Cards  |          1 | NULL             |
+| 3029 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Online | Credit Cards |          1 | NULL             |
+| 3030 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Cash   | COD          |          0 | NULL             |
+| 3031 | 1729.67 | 1996-10-06 13:07:00 | 2006 | 1007 | Online | Wallets      |          1 | NULL             |
+| 3032 | 3434.55 | 1996-01-26 17:09:12 | 2006 | 1007 | Online | Wallets      |          1 | NULL             |
+| 3033 |  522.23 | 1996-12-24 14:23:00 | 2002 | 1002 | Cash   | COD          |          0 | NULL             |
+| 3049 |  500.58 | 1996-03-14 07:45:19 | 2001 | 1003 | Cash   | COD          |          0 | NULL             |
+| 3050 |  1900.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 3074 |   457.4 | 1996-04-19 05:13:00 | 2008 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 3119 |   125.5 | 1996-07-26 18:37:00 | 2007 | 1001 | Online | Wallets      |          1 | NULL             |
+| 4001 |   145.2 | 1996-05-13 20:47:00 | 2008 | 1003 | Online | EMI Options  |          1 | NULL             |
+| 4012 |   245.6 | 1996-03-06 13:07:00 | 2001 | 1002 | Online | Wallets      |          1 | NULL             |
+| 4021 |  600.65 | 1996-08-12 13:07:00 | 2001 | 1002 | Online | Wallets      |          1 | NULL             |
+| 4054 |  1200.8 | 1996-11-22 13:07:00 | 2004 | 1003 | Cash   | COD          |          0 | NULL             |
+| 5001 |  325.23 | 1996-11-04 15:21:00 | NULL | 1002 | Online | GPay         |          1 | NULL             |
+| 5011 |  138.35 | 1996-09-14 13:07:00 | 2001 | 1007 | Cash   | COD          |          0 | NULL             |
+| 5014 |  980.65 | 1996-08-23 13:07:00 | 2002 | 1007 | Online | Wallets      |          1 | NULL             |
+| 5015 | 2133.35 | 1996-06-23 13:07:00 | 2004 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 5016 | 1000.95 | 1996-03-12 13:07:00 | 2002 | 1007 | Cash   | COD          |          0 | NULL             |
+| 5020 |  950.45 | 1996-10-03 14:00:00 | NULL | 1007 | Online | Paytm        |          1 | NULL             |
+| 5034 |  120.16 | 1996-11-03 13:37:00 | NULL | 1003 | Cash   | COD          |          0 | NULL             |
+| 5053 |  1500.5 | 1996-01-01 13:07:00 | 2006 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 5056 |   750.1 | 1996-10-03 12:05:00 | NULL | 1007 | Online | PhonePe      |          1 | NULL             |
+| 5099 |  790.75 | 1996-04-24 13:07:00 | 2002 | 1007 | Online | EMI Options  |          1 | NULL             |
+| 6501 |  125.45 | 1996-06-13 13:07:00 | 2001 | 1001 | Online | EMI Options  |          1 | NULL             |
+| 6502 |  535.25 | 1996-08-24 13:07:00 | 2006 | 1004 | Cash   | COD          |          0 | NULL             |
+| 6503 | 1100.25 | 1996-07-26 13:07:00 | 2006 | 1007 | Online | Wallets      |          1 | NULL             |
+| 6504 | 1350.75 | 1996-07-21 13:07:00 | 2008 | 1007 | Cash   | COD          |          0 | NULL             |
+| 6605 |  1900.1 | 1996-10-03 12:05:00 | NULL | 1004 | Online | PhonePe      |          1 | NULL             |
+| 6606 | 5160.45 | 1996-10-03 14:00:00 | NULL | 1002 | Online | Paytm        |          1 | NULL             |
+| 6607 | 1098.16 | 1996-11-03 13:37:00 | NULL | 1007 | Cash   | COD          |          0 | NULL             |
+| 6608 | 1713.23 | 1996-11-04 15:21:00 | NULL | 1003 | Online | GPay         |          1 | NULL             |
++------+---------+---------------------+------+------+--------+--------------+------------+------------------+
+61 rows in set (0.04 sec)
+
+Query OK, 0 rows affected (0.15 sec)
+
+mysql> call pro1('ord');
++-------+------------+----------+--------+------------+----------------+------------+------------+----------+
+| ORDID | ORDERDATE  | COMMPLAN | CUSTID | SHIPDATE   | actualShipDate | STATUSDATE | STATUS     | TOTAL    |
++-------+------------+----------+--------+------------+----------------+------------+------------+----------+
+|   601 | 1986-05-01 | A        |    106 | 1986-05-30 | 1986-06-02     | NULL       | In Process |     2.40 |
+|   602 | 1986-06-05 | B        |    102 | 1986-06-20 | NULL           | 1986-07-09 | On Hold    |    56.00 |
+|   603 | 1986-06-05 | NULL     |    102 | 1986-06-05 | 1986-06-07     | 1986-06-10 | Cancelled  |   224.00 |
+|   604 | 1986-06-15 | A        |    106 | 1986-05-30 | NULL           | 1986-07-04 | Resolved   |   698.00 |
+|   606 | 1986-07-14 | A        |    100 | 1986-07-30 | 1986-07-30     | NULL       | Shipped    |     3.40 |
+|   607 | 1986-07-18 | C        |    104 | 1986-07-18 | 1986-07-20     | NULL       | In Process |     5.60 |
+|   608 | 1986-07-25 | C        |    104 | 1986-07-25 | 1986-07-25     | NULL       | Shipped    |    35.20 |
+|   609 | 1986-08-01 | B        |    100 | 1986-08-15 | NULL           | 1986-08-19 | On Hold    |    97.50 |
+|   610 | 1987-01-07 | A        |    101 | 1987-01-08 | 1987-01-08     | NULL       | In Process |   101.40 |
+|   611 | 1987-01-11 | B        |    102 | 1987-01-11 | NULL           | NULL       | Shipped    |    45.00 |
+|   612 | 1987-01-15 | C        |    104 | 1987-01-20 | 1987-01-23     | 1987-01-21 | Cancelled  |  5860.00 |
+|   613 | 1987-02-01 | NULL     |    108 | 1987-02-01 | 1987-02-01     | NULL       | Shipped    |  6400.00 |
+|   614 | 1987-02-01 | NULL     |    102 | 1987-02-05 | 1987-02-06     | NULL       | In Process | 23940.00 |
+|   615 | 1987-02-01 | NULL     |    107 | 1987-02-06 | 1987-02-12     | NULL       | In Process |   710.00 |
+|   616 | 1987-02-03 | NULL     |    103 | 1987-02-10 | 1987-02-10     | 1987-02-10 | Resolved   |   764.00 |
+|   617 | 1987-02-05 | NULL     |    105 | 1987-03-03 | 1987-03-03     | NULL       | Shipped    | 46370.00 |
+|   618 | 1987-02-15 | A        |    102 | 1987-03-06 | NULL           | 1987-03-16 | On Hold    |  3510.50 |
+|   619 | 1987-02-22 | NULL     |    104 | 1987-02-04 | 1987-02-04     | NULL       | In Process |  1260.00 |
+|   620 | 1987-03-12 | NULL     |    100 | 1987-03-12 | NULL           | 1987-03-12 | Cancelled  |  4450.00 |
+|   621 | 1987-03-15 | A        |    100 | 1987-03-01 | 1987-01-06     | NULL       | Shipped    |   730.00 |
+|   622 | 1986-12-31 | a        |    105 | 1987-01-01 | NULL           | 1987-01-06 | Delivered  |  1125.00 |
+|   624 | 1987-01-06 | c        |    105 | 1987-01-06 | 1987-01-06     | 1987-01-09 | Delivered  |   189.00 |
+|   625 | 1987-01-09 | NULL     |    105 | 1987-01-10 | 1987-01-12     | 1987-01-16 | Delivered  |  1255.00 |
+|   626 | 1987-01-31 | NULL     |    107 | 1987-02-01 | NULL           | 1987-02-06 | shipped    |  1675.00 |
+|   627 | 1987-02-13 | NULL     |    100 | 1987-02-14 | 1987-02-17     | 1987-02-22 | Delivered  |   250.00 |
+|   628 | 1987-03-13 | A        |    100 | 1987-03-14 | 1987-03-19     | 1987-03-15 | Shipped    |   473.93 |
+|   629 | 1987-03-14 | A        |    100 | 1987-03-16 | 1987-03-16     | 1987-03-17 | Shipped    |   289.99 |
+|   630 | 1987-02-21 | D        |    104 | 1987-02-22 | 1987-02-23     | 1987-02-23 | Delivered  |   362.12 |
+|   631 | 1987-02-23 | F        |    104 | 1987-02-23 | NULL           | 1987-02-24 | Delivered  |   232.87 |
+|   632 | 1987-03-13 | A        |   NULL | 1987-03-14 | 1987-03-14     | 1987-03-15 | Shipped    |   473.93 |
+|   633 | 1987-03-14 | A        |   NULL | 1987-03-16 | 1987-03-20     | 1987-03-17 | Shipped    |   289.99 |
+|   634 | 1987-02-21 | D        |   NULL | 1987-02-22 | 1987-02-24     | 1987-02-23 | Delivered  |   362.12 |
+|   635 | 1987-02-23 | F        |   NULL | 1987-02-23 | 1987-02-23     | 1987-02-24 | Delivered  |   232.87 |
++-------+------------+----------+--------+------------+----------------+------------+------------+----------+
+33 rows in set (0.02 sec)
+
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'varcahr(64),  tName varchar(64))
+b1:BEGIN
+        set @x := concat("select ", cName, " ' at line 1
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1('ename', 'emp');
++-----------------------+
+| @x                    |
++-----------------------+
+| select ename from emp |
++-----------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select ename from emp;
++----------+
+| ename    |
++----------+
+| GITA     |
+| VRUSHALI |
+| SHARMIN  |
+| BANDISH  |
+| SMITH    |
+| AARAV    |
+| THOMAS   |
+| ALLEN    |
+| WARD     |
+| JONES    |
+| MARTIN   |
+| BLAKE    |
+| CLARK    |
+| SCOTT    |
+| KING     |
+| FRED     |
+| TURNER   |
+| ADAMS    |
+| Ruhan    |
+| Neel     |
+| JAMES    |
+| FORD     |
+| HOFFMAN  |
+| GRASS    |
+| MILLER   |
+| AARUSH   |
+| ALEX     |
+| NATASHA  |
+| SANGITA  |
+| SUPRIYA  |
++----------+
+30 rows in set (0.00 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1('ename', 'emp');
++----------+
+| ename    |
++----------+
+| GITA     |
+| VRUSHALI |
+| SHARMIN  |
+| BANDISH  |
+| SMITH    |
+| AARAV    |
+| THOMAS   |
+| ALLEN    |
+| WARD     |
+| JONES    |
+| MARTIN   |
+| BLAKE    |
+| CLARK    |
+| SCOTT    |
+| KING     |
+| FRED     |
+| TURNER   |
+| ADAMS    |
+| Ruhan    |
+| Neel     |
+| JAMES    |
+| FORD     |
+| HOFFMAN  |
+| GRASS    |
+| MILLER   |
+| AARUSH   |
+| ALEX     |
+| NATASHA  |
+| SANGITA  |
+| SUPRIYA  |
++----------+
+30 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> call pro1('ename', 'dept');
+ERROR 1054 (42S22): Unknown column 'ename' in 'field list'
+mysql> call pro1('dname', 'dept');
++------------+
+| dname      |
++------------+
+| ACCOUNTING |
+| RESEARCH   |
+| SALES      |
+| OPERATIONS |
+| HR         |
+| IT         |
++------------+
+6 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1('ename', 'job', 'emp');
++----------+---------------------+
+| ename    | job                 |
++----------+---------------------+
+| GITA     | Compliance officers |
+| VRUSHALI | Compliance officers |
+| SHARMIN  | Public Relation     |
+| BANDISH  | Public Relation     |
+| SMITH    | CLERK               |
+| AARAV    | CLERK               |
+| THOMAS   | CLERK               |
+| ALLEN    | SALESMAN            |
+| WARD     | SALESMAN            |
+| JONES    | MANAGER             |
+| MARTIN   | SALESMAN            |
+| BLAKE    | MANAGER             |
+| CLARK    | MANAGER             |
+| SCOTT    | ANALYST             |
+| KING     | PRESIDENT           |
+| FRED     | vice PRESIDENT      |
+| TURNER   | SALESMAN            |
+| ADAMS    | CLERK               |
+| Ruhan    | Network             |
+| Neel     | vice PRESIDENT      |
+| JAMES    | CLERK               |
+| FORD     | ANALYST             |
+| HOFFMAN  | MANAGER             |
+| GRASS    | SALESMAN            |
+| MILLER   | CLERK               |
+| AARUSH   | SALESMAN            |
+| ALEX     | MANAGER             |
+| NATASHA  | CLERK               |
+| SANGITA  | Compliance officers |
+| SUPRIYA  | ANALYST             |
++----------+---------------------+
+30 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro1('ename, job', 'emp');
++----------+---------------------+
+| ename    | job                 |
++----------+---------------------+
+| GITA     | Compliance officers |
+| VRUSHALI | Compliance officers |
+| SHARMIN  | Public Relation     |
+| BANDISH  | Public Relation     |
+| SMITH    | CLERK               |
+| AARAV    | CLERK               |
+| THOMAS   | CLERK               |
+| ALLEN    | SALESMAN            |
+| WARD     | SALESMAN            |
+| JONES    | MANAGER             |
+| MARTIN   | SALESMAN            |
+| BLAKE    | MANAGER             |
+| CLARK    | MANAGER             |
+| SCOTT    | ANALYST             |
+| KING     | PRESIDENT           |
+| FRED     | vice PRESIDENT      |
+| TURNER   | SALESMAN            |
+| ADAMS    | CLERK               |
+| Ruhan    | Network             |
+| Neel     | vice PRESIDENT      |
+| JAMES    | CLERK               |
+| FORD     | ANALYST             |
+| HOFFMAN  | MANAGER             |
+| GRASS    | SALESMAN            |
+| MILLER   | CLERK               |
+| AARUSH   | SALESMAN            |
+| ALEX     | MANAGER             |
+| NATASHA  | CLERK               |
+| SANGITA  | Compliance officers |
+| SUPRIYA  | ANALYST             |
++----------+---------------------+
+30 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> call pro1('ename, job, sal', 'emp');
++----------+---------------------+------+
+| ename    | job                 | sal  |
++----------+---------------------+------+
+| GITA     | Compliance officers | 1750 |
+| VRUSHALI | Compliance officers | 1750 |
+| SHARMIN  | Public Relation     | 1750 |
+| BANDISH  | Public Relation     | 1750 |
+| SMITH    | CLERK               |  800 |
+| AARAV    | CLERK               | 3350 |
+| THOMAS   | CLERK               | 1750 |
+| ALLEN    | SALESMAN            | 1600 |
+| WARD     | SALESMAN            | 1250 |
+| JONES    | MANAGER             | 2975 |
+| MARTIN   | SALESMAN            | 1250 |
+| BLAKE    | MANAGER             | 2850 |
+| CLARK    | MANAGER             | 2450 |
+| SCOTT    | ANALYST             | 3000 |
+| KING     | PRESIDENT           | 5000 |
+| FRED     | vice PRESIDENT      | 5000 |
+| TURNER   | SALESMAN            | 1500 |
+| ADAMS    | CLERK               | 1100 |
+| Ruhan    | Network             | 2000 |
+| Neel     | vice PRESIDENT      | 1000 |
+| JAMES    | CLERK               |  950 |
+| FORD     | ANALYST             | 3000 |
+| HOFFMAN  | MANAGER             | 4150 |
+| GRASS    | SALESMAN            | 2575 |
+| MILLER   | CLERK               | 1300 |
+| AARUSH   | SALESMAN            | 1350 |
+| ALEX     | MANAGER             | 1250 |
+| NATASHA  | CLERK               | 1750 |
+| SANGITA  | Compliance officers | 1750 |
+| SUPRIYA  | ANALYST             |   -1 |
++----------+---------------------+------+
+30 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> call pro1('ename, job, sal, comm', 'emp');
++----------+---------------------+------+------+
+| ename    | job                 | sal  | comm |
++----------+---------------------+------+------+
+| GITA     | Compliance officers | 1750 | NULL |
+| VRUSHALI | Compliance officers | 1750 | NULL |
+| SHARMIN  | Public Relation     | 1750 | NULL |
+| BANDISH  | Public Relation     | 1750 | NULL |
+| SMITH    | CLERK               |  800 | NULL |
+| AARAV    | CLERK               | 3350 | NULL |
+| THOMAS   | CLERK               | 1750 | NULL |
+| ALLEN    | SALESMAN            | 1600 |  300 |
+| WARD     | SALESMAN            | 1250 |  500 |
+| JONES    | MANAGER             | 2975 | NULL |
+| MARTIN   | SALESMAN            | 1250 | 1400 |
+| BLAKE    | MANAGER             | 2850 | NULL |
+| CLARK    | MANAGER             | 2450 | NULL |
+| SCOTT    | ANALYST             | 3000 | NULL |
+| KING     | PRESIDENT           | 5000 | NULL |
+| FRED     | vice PRESIDENT      | 5000 | NULL |
+| TURNER   | SALESMAN            | 1500 |    0 |
+| ADAMS    | CLERK               | 1100 | NULL |
+| Ruhan    | Network             | 2000 | NULL |
+| Neel     | vice PRESIDENT      | 1000 | NULL |
+| JAMES    | CLERK               |  950 | NULL |
+| FORD     | ANALYST             | 3000 | NULL |
+| HOFFMAN  | MANAGER             | 4150 | NULL |
+| GRASS    | SALESMAN            | 2575 | 2700 |
+| MILLER   | CLERK               | 1300 | 1300 |
+| AARUSH   | SALESMAN            | 1350 | 2700 |
+| ALEX     | MANAGER             | 1250 |  500 |
+| NATASHA  | CLERK               | 1750 | NULL |
+| SANGITA  | Compliance officers | 1750 | NULL |
+| SUPRIYA  | ANALYST             |   -1 | NULL |
++----------+---------------------+------+------+
+30 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> call pro1('ename, job, sal, comm, fn1(sal, comm)', 'emp');
+ERROR 1318 (42000): Incorrect number of arguments for FUNCTION db1.fn1; expected 0, got 2
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> call pro1('ename, job, sal, comm', 'emp where job='manager');
+    '> ;
+    '> ^C
+mysql>
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> call pro1('ename, job, sal, comm', "emp where job='manager'");
++---------+---------+------+------+
+| ename   | job     | sal  | comm |
++---------+---------+------+------+
+| ALEX    | MANAGER | 1250 |  500 |
+| CLARK   | MANAGER | 2450 | NULL |
+| BLAKE   | MANAGER | 2850 | NULL |
+| JONES   | MANAGER | 2975 | NULL |
+| HOFFMAN | MANAGER | 4150 | NULL |
++---------+---------+------+------+
+5 rows in set (0.01 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> call pro1('ename, dname', "emp, dept where emp.deptno=dept.deptno");
++----------+------------+
+| ename    | dname      |
++----------+------------+
+| AARAV    | ACCOUNTING |
+| THOMAS   | ACCOUNTING |
+| CLARK    | ACCOUNTING |
+| KING     | ACCOUNTING |
+| MILLER   | ACCOUNTING |
+| SHARMIN  | RESEARCH   |
+| BANDISH  | RESEARCH   |
+| SMITH    | RESEARCH   |
+| JONES    | RESEARCH   |
+| SCOTT    | RESEARCH   |
+| FRED     | RESEARCH   |
+| ADAMS    | RESEARCH   |
+| FORD     | RESEARCH   |
+| GITA     | SALES      |
+| ALLEN    | SALES      |
+| WARD     | SALES      |
+| MARTIN   | SALES      |
+| BLAKE    | SALES      |
+| TURNER   | SALES      |
+| JAMES    | SALES      |
+| HOFFMAN  | SALES      |
+| GRASS    | SALES      |
+| AARUSH   | SALES      |
+| ALEX     | SALES      |
+| NATASHA  | SALES      |
+| VRUSHALI | HR         |
+| SANGITA  | HR         |
+| SUPRIYA  | HR         |
+| Ruhan    | IT         |
+| Neel     | IT         |
++----------+------------+
+30 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+ERROR 1415 (0A000): Not allowed to return a result set from a trigger
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> select @x;
++-----------------------------------------------------------------+
+| @x                                                              |
++-----------------------------------------------------------------+
+| select ename, dname from emp, dept where emp.deptno=dept.deptno |
++-----------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> insert into dept(detpno) values(-1);
+ERROR 1054 (42S22): Unknown column 'detpno' in 'field list'
+mysql>
+mysql>
+mysql> insert into dept(deptno) values(-1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select @x;
++----------------+
+| @x             |
++----------------+
+| Hello World... |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> insert into dept(deptno) values(-2);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> table dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     -2 | NULL       | NULL     | NULL       | NULL       |
+|     -1 | NULL       | NULL     | NULL       | NULL       |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
++--------+------------+----------+------------+------------+
+8 rows in set (0.00 sec)
+
+mysql> select @x;
++-----------------------+
+| @x                    |
++-----------------------+
+| Hello World... by you |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> desc detp;
+ERROR 1146 (42S02): Table 'db1.detp' doesn't exist
+mysql> desc detp;
+ERROR 1146 (42S02): Table 'db1.detp' doesn't exist
+mysql> desc dept;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| DEPTNO    | int         | NO   | PRI | NULL    |       |
+| DNAME     | varchar(12) | YES  |     | NULL    |       |
+| LOC       | varchar(10) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| STARTEDON | varchar(10) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table dept add(Who varchar(40), when varchar(40));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'when varchar(40))' at line 1
+mysql> alter table dept add(Who varchar(40), when1 varchar(40));
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc dept;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| DEPTNO    | int         | NO   | PRI | NULL    |       |
+| DNAME     | varchar(12) | YES  |     | NULL    |       |
+| LOC       | varchar(10) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| STARTEDON | varchar(10) | YES  |     | NULL    |       |
+| Who       | varchar(40) | YES  |     | NULL    |       |
+| when1     | varchar(40) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> select user();
++----------------+
+| user()         |
++----------------+
+| root@localhost |
++----------------+
+1 row in set (0.01 sec)
+
+mysql> select user(), curdate();;
++----------------+------------+
+| user()         | curdate()  |
++----------------+------------+
+| root@localhost | 2025-11-12 |
++----------------+------------+
+1 row in set (0.01 sec)
+
+ERROR:
+No query specified
+
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+ERROR 1362 (HY000): Updating of NEW row is not allowed in after trigger
+mysql> source C:\Users\SALEEL\Desktop\IET\pl1.sql
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> desc dept;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| DEPTNO    | int         | NO   | PRI | NULL    |       |
+| DNAME     | varchar(12) | YES  |     | NULL    |       |
+| LOC       | varchar(10) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| STARTEDON | varchar(10) | YES  |     | NULL    |       |
+| Who       | varchar(40) | YES  |     | NULL    |       |
+| when1     | varchar(40) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> create view v1 as select deptno, dname,loc,pwd,startedon from dept;
+ERROR 1050 (42S01): Table 'v1' already exists
+mysql> create view v2 as select deptno, dname,loc,pwd,startedon from dept;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc dept;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| DEPTNO    | int         | NO   | PRI | NULL    |       |
+| DNAME     | varchar(12) | YES  |     | NULL    |       |
+| LOC       | varchar(10) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| STARTEDON | varchar(10) | YES  |     | NULL    |       |
+| Who       | varchar(40) | YES  |     | NULL    |       |
+| when1     | varchar(40) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> desc v2;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| deptno    | int         | NO   |     | NULL    |       |
+| dname     | varchar(12) | YES  |     | NULL    |       |
+| loc       | varchar(10) | YES  |     | NULL    |       |
+| pwd       | varchar(20) | YES  |     | NULL    |       |
+| startedon | varchar(10) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+------------+------+-------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  | Who  | when1 |
++--------+------------+----------+------------+------------+------+-------+
+|     -2 | NULL       | NULL     | NULL       | NULL       | NULL | NULL  |
+|     -1 | NULL       | NULL     | NULL       | NULL       | NULL | NULL  |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 | NULL | NULL  |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 | NULL | NULL  |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 | NULL | NULL  |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 | NULL | NULL  |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 | NULL | NULL  |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 | NULL | NULL  |
++--------+------------+----------+------------+------------+------+-------+
+8 rows in set (0.00 sec)
+
+mysql> insert into v2(deptno) values(-3);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> table v2;
++--------+------------+----------+------------+------------+
+| deptno | dname      | loc      | pwd        | startedon  |
++--------+------------+----------+------------+------------+
+|     -3 | NULL       | NULL     | NULL       | NULL       |
+|     -2 | NULL       | NULL     | NULL       | NULL       |
+|     -1 | NULL       | NULL     | NULL       | NULL       |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 |
++--------+------------+----------+------------+------------+
+9 rows in set (0.00 sec)
+
+mysql> table dept;
++--------+------------+----------+------------+------------+----------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  | Who            | when1      |
++--------+------------+----------+------------+------------+----------------+------------+
+|     -3 | NULL       | NULL     | NULL       | NULL       | root@localhost | 2025-11-12 |
+|     -2 | NULL       | NULL     | NULL       | NULL       | NULL           | NULL       |
+|     -1 | NULL       | NULL     | NULL       | NULL       | NULL           | NULL       |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 | NULL           | NULL       |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 | NULL           | NULL       |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 | NULL           | NULL       |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 | NULL           | NULL       |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 | NULL           | NULL       |
+|     60 | IT         | BARODA   | BRD@1122   | 02/10/1989 | NULL           | NULL       |
++--------+------------+----------+------------+------------+----------------+------------+
+9 rows in set (0.00 sec)
+
+mysql>
