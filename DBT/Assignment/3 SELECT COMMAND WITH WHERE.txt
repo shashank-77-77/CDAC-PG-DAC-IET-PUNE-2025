@@ -1,0 +1,652 @@
+1.	List names of employees whose job is MANAGER.
+
+mysql> select ename, job from emp where job='Manager';
++---------+---------+
+| ename   | job     |
++---------+---------+
+| JONES   | MANAGER |
+| BLAKE   | MANAGER |
+| CLARK   | MANAGER |
+| HOFFMAN | MANAGER |
+| ALEX    | MANAGER |
++---------+---------+
+5 rows in set (0.00 sec)
+
+2.	List names of employee having salary greater than equal to 3000.
+
+mysql> select ename ,sal from emp where sal >= 3000;
++---------+------+
+| ename   | sal  |
++---------+------+
+| AARAV   | 3350 |
+| SCOTT   | 3000 |
+| KING    | 5000 |
+| FRED    | 5000 |
+| FORD    | 3000 |
+| HOFFMAN | 4150 |
++---------+------+
+6 rows in set (0.00 sec)
+
+3.	List all employees having ‘A’ as second letter in their names.
+
+mysql> select ename from emp where ename Like '_A%';
++---------+
+| ename   |
++---------+
+| BANDISH |
+| AARAV   |
+| WARD    |
+| MARTIN  |
+| JAMES   |
+| AARUSH  |
+| NATASHA |
+| SANGITA |
++---------+
+8 rows in set (0.00 sec)
+
+4.	List the Employee Number, Name, Hiredate and Job Title of the Employees in the Department 10.
+
+mysql> select empno,ename,hiredate,job,deptno from emp where deptno=10;
++-------+--------+------------+-----------+--------+
+| empno | ename  | hiredate   | job       | deptno |
++-------+--------+------------+-----------+--------+
+|  7415 | AARAV  | 1981-12-31 | CLERK     |     10 |
+|  7421 | THOMAS | 1981-07-19 | CLERK     |     10 |
+|  7782 | CLARK  | 1981-06-09 | MANAGER   |     10 |
+|  7839 | KING   | 1981-11-17 | PRESIDENT |     10 |
+|  7934 | MILLER | 1982-01-23 | CLERK     |     10 |
++-------+--------+------------+-----------+--------+
+5 rows in set (0.00 sec)
+
+5.	Display the details of those Employees who earn a monthly Salary of more than 2000.
+
+mysql> select ename ,sal from emp where sal >2000;
++---------+------+
+| ename   | sal  |
++---------+------+
+| AARAV   | 3350 |
+| JONES   | 2975 |
+| BLAKE   | 2850 |
+| CLARK   | 2450 |
+| SCOTT   | 3000 |
+| KING    | 5000 |
+| FRED    | 5000 |
+| FORD    | 3000 |
+| HOFFMAN | 4150 |
+| GRASS   | 2575 |
++---------+------+
+10 rows in set (0.00 sec)
+
+6.	Display the names of all Employees from Department 10 and 20 whose name start with “A” and ends with “S”.
+
+mysql> select ename,deptno from emp where (deptno=10 or deptno=20) and ename like 'A%S';
++-------+--------+
+| ename | deptno |
++-------+--------+
+| ADAMS |     20 |
++-------+--------+
+1 row in set (0.00 sec)
+
+7.	Display the details of the employees who have joined on 1981-07-19.
+
+mysql> select * from emp where hiredate='1981-07-19';
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+-----------+------------+------------+----------+
+| EMPNO | ENAME    | GENDER | JOB                 | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME | PWD        | PHONE      | isActive |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+-----------+------------+------------+----------+
+|  6001 | GITA     | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | GITA      | sales@2017 | NULL       |        1 |
+|  6129 | VRUSHALI | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | VRUSHALI  | PUN@8877   | NULL       |        1 |
+|  6473 | SHARMIN  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | SHARMIN   | a12recmpm  | NULL       |        1 |
+|  6781 | BANDISH  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | BANDISH   | a12recmpm  | NULL       |        1 |
+|  7421 | THOMAS   | M      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | THOMAS    | r50mpm     | 7032300011 |        0 |
+|  8433 | NATASHA  | F      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | NATASHA   | sales@2017 | NULL       |        1 |
+|  9400 | SANGITA  | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SANGITA   | NULL       | NULL       |        1 |
+|  9473 | SUPRIYA  | F      | ANALYST             | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SUPRIYA   | XYZ@1234   | NULL       |        1 |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+-----------+------------+------------+----------+
+8 rows in set (0.00 sec)
+
+8.	Display the Employee Code, Name, Job & Annual Salary for all Employees belonging to Department Number 10. 
+
+mysql> select empno,ename,job ,sal,deptno  from emp where deptno =10;
++-------+--------+-----------+------+--------+
+| empno | ename  | job       | sal  | deptno |
++-------+--------+-----------+------+--------+
+|  7415 | AARAV  | CLERK     | 3350 |     10 |
+|  7421 | THOMAS | CLERK     | 1750 |     10 |
+|  7782 | CLARK  | MANAGER   | 2450 |     10 |
+|  7839 | KING   | PRESIDENT | 5000 |     10 |
+|  7934 | MILLER | CLERK     | 1300 |     10 |
++-------+--------+-----------+------+--------+
+5 rows in set (0.00 sec)
+
+9.	Display the details of the Employees who earn an Annual salary of more than 25000. Sort the records in the descending order of Salary.
+
+mysql> select * from emp where (sal > 2500) order by (sal) desc;
++-------+---------+--------+----------------+------+------------+------+------+--------+---------+------------+------------+------------+----------+
+| EMPNO | ENAME   | GENDER | JOB            | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME  | PWD        | PHONE      | isActive |
++-------+---------+--------+----------------+------+------------+------+------+--------+---------+------------+------------+------------+----------+
+|  7839 | KING    | M      | PRESIDENT      | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING       | r50mpm     | 7132300081 |        1 |
+|  7840 | FRED    | M      | vice PRESIDENT | 7839 | 1983-08-09 | 5000 | NULL |     20 |       1 | SAND STONE | a12recmpm  | NULL       |        1 |
+|  7919 | HOFFMAN | M      | MANAGER        | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | INTERVAL   | sales@2017 | NULL       |        1 |
+|  7415 | AARAV   | M      | CLERK          | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | AARAV      | NULL       | 7032300084 |        0 |
+|  7788 | SCOTT   | M      | ANALYST        | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND | a12recmpm  | NULL       |        1 |
+|  7902 | FORD    | M      | ANALYST        | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO    | a12recmpm  | NULL       |        0 |
+|  7566 | JONES   | M      | MANAGER        | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB  | a12recmpm  | 7132300039 |        1 |
+|  7698 | BLAKE   | M      | MANAGER        | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN    | sales@2017 | 7132300027 |        1 |
+|  7920 | GRASS   | M      | SALESMAN       | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | GRASS      | sales@2017 | NULL       |        1 |
++-------+---------+--------+----------------+------+------------+------+------+--------+---------+------------+------------+------------+----------+
+9 rows in set (0.00 sec)
+
+10.	Display the names of Employees whose names contain the character “F”.
+
+mysql> select ename from emp where ename like '%f%';
++---------+
+| ename   |
++---------+
+| FRED    |
+| FORD    |
+| HOFFMAN |
++---------+
+3 rows in set (0.00 sec)
+
+11.	Display the Employee Code, Name, Job & Annual Salary for all Employees belonging to Department Number 10. 
+
+mysql> select empno,ename,job ,sal,deptno  from emp where deptno =10;
++-------+--------+-----------+------+--------+
+| empno | ename  | job       | sal  | deptno |
++-------+--------+-----------+------+--------+
+|  7415 | AARAV  | CLERK     | 3350 |     10 |
+|  7421 | THOMAS | CLERK     | 1750 |     10 |
+|  7782 | CLARK  | MANAGER   | 2450 |     10 |
+|  7839 | KING   | PRESIDENT | 5000 |     10 |
+|  7934 | MILLER | CLERK     | 1300 |     10 |
++-------+--------+-----------+------+--------+
+5 rows in set (0.00 sec)
+
+12.	Display the details of the Employees who earn an Annual salary of more than 25000. Sort the records in the descending order of Salary.
+
+mysql> select * from emp where (sal > 2500) order by (sal) desc;
++-------+---------+--------+----------------+------+------------+------+------+--------+---------+------------+------------+------------+----------+
+| EMPNO | ENAME   | GENDER | JOB            | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME  | PWD        | PHONE      | isActive |
++-------+---------+--------+----------------+------+------------+------+------+--------+---------+------------+------------+------------+----------+
+|  7839 | KING    | M      | PRESIDENT      | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING       | r50mpm     | 7132300081 |        1 |
+|  7840 | FRED    | M      | vice PRESIDENT | 7839 | 1983-08-09 | 5000 | NULL |     20 |       1 | SAND STONE | a12recmpm  | NULL       |        1 |
+|  7919 | HOFFMAN | M      | MANAGER        | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | INTERVAL   | sales@2017 | NULL       |        1 |
+|  7415 | AARAV   | M      | CLERK          | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | AARAV      | NULL       | 7032300084 |        0 |
+|  7788 | SCOTT   | M      | ANALYST        | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND | a12recmpm  | NULL       |        1 |
+|  7902 | FORD    | M      | ANALYST        | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO    | a12recmpm  | NULL       |        0 |
+|  7566 | JONES   | M      | MANAGER        | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB  | a12recmpm  | 7132300039 |        1 |
+|  7698 | BLAKE   | M      | MANAGER        | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN    | sales@2017 | 7132300027 |        1 |
+|  7920 | GRASS   | M      | SALESMAN       | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | GRASS      | sales@2017 | NULL       |        1 |
++-------+---------+--------+----------------+------+------------+------+------+--------+---------+------------+------------+------------+----------+
+9 rows in set (0.00 sec)
+
+14.	Display the Names and Numbers of all Departments in the descending order of the Department Names.
+
+mysql> select dname,deptno from dept order by dname desc;
++------------+--------+
+| dname      | deptno |
++------------+--------+
+| SHASHANK   |     83 |
+| SHASHANK   |     84 |
+| SALES      |     30 |
+| RESEARCH   |     20 |
+| PQR        |     81 |
+| OPERATIONS |     40 |
+| IT         |     60 |
+| HR         |     50 |
+| ACCOUNTING |     10 |
++------------+--------+
+9 rows in set (0.00 sec)
+
+15.	Display the Name, Employee Number, Designation and Salary of those Employees who earn a monthly salary of not less than 1000 and not more than 2000.
+
+mysql> select ename, empno,job,sal from emp where sal between 1000 and 2000;
++----------+-------+---------------------+------+
+| ename    | empno | job                 | sal  |
++----------+-------+---------------------+------+
+| GITA     |  6001 | Compliance officers | 1750 |
+| VRUSHALI |  6129 | Compliance officers | 1750 |
+| SHARMIN  |  6473 | Public Relation     | 1750 |
+| BANDISH  |  6781 | Public Relation     | 1750 |
+| THOMAS   |  7421 | CLERK               | 1750 |
+| ALLEN    |  7499 | SALESMAN            | 1600 |
+| WARD     |  7521 | SALESMAN            | 1250 |
+| MARTIN   |  7654 | SALESMAN            | 1250 |
+| TURNER   |  7844 | SALESMAN            | 1500 |
+| ADAMS    |  7876 | CLERK               | 1100 |
+| Ruhan    |  7888 | Network             | 2000 |
+| Neel     |  7889 | vice PRESIDENT      | 1000 |
+| MILLER   |  7934 | CLERK               | 1300 |
+| AARUSH   |  7945 | SALESMAN            | 1350 |
+| ALEX     |  7949 | MANAGER             | 1250 |
+| NATASHA  |  8433 | CLERK               | 1750 |
+| SANGITA  |  9400 | Compliance officers | 1750 |
+| SUPRIYA  |  9473 | ANALYST             | 1750 |
++----------+-------+---------------------+------+
+18 rows in set (0.00 sec)
+
+16.	Find out the Bonus (Bonus 1.1% of Annual Salary) that every person will receive at the end of the year.
+
+mysql> select ename ,sal ,(sal * 12 * 0.011) as bonus from emp;
++----------+------+---------+
+| ename    | sal  | bonus   |
++----------+------+---------+
+| GITA     | 1750 | 231.000 |
+| VRUSHALI | 1750 | 231.000 |
+| SHARMIN  | 1750 | 231.000 |
+| BANDISH  | 1750 | 231.000 |
+| SMITH    |  800 | 105.600 |
+| AARAV    | 3350 | 442.200 |
+| THOMAS   | 1750 | 231.000 |
+| ALLEN    | 1600 | 211.200 |
+| WARD     | 1250 | 165.000 |
+| JONES    | 2975 | 392.700 |
+| MARTIN   | 1250 | 165.000 |
+| BLAKE    | 2850 | 376.200 |
+| CLARK    | 2450 | 323.400 |
+| SCOTT    | 3000 | 396.000 |
+| KING     | 5000 | 660.000 |
+| FRED     | 5000 | 660.000 |
+| TURNER   | 1500 | 198.000 |
+| ADAMS    | 1100 | 145.200 |
+| Ruhan    | 2000 | 264.000 |
+| Neel     | 1000 | 132.000 |
+| JAMES    |  950 | 125.400 |
+| FORD     | 3000 | 396.000 |
+| HOFFMAN  | 4150 | 547.800 |
+| GRASS    | 2575 | 339.900 |
+| MILLER   | 1300 | 171.600 |
+| AARUSH   | 1350 | 178.200 |
+| ALEX     | 1250 | 165.000 |
+| NATASHA  | 1750 | 231.000 |
+| SANGITA  | 1750 | 231.000 |
+| SUPRIYA  | 1750 | 231.000 |
++----------+------+---------+
+30 rows in set (0.00 sec)
+
+17.	Display the Name, Job and Dept No. of all the Employees who either work in Department 30 or in Department 40.
+
+mysql> select ename ,job, deptno from emp where deptno=30 or deptno=40;
++---------+---------------------+--------+
+| ename   | job                 | deptno |
++---------+---------------------+--------+
+| GITA    | Compliance officers |     30 |
+| ALLEN   | SALESMAN            |     30 |
+| WARD    | SALESMAN            |     30 |
+| MARTIN  | SALESMAN            |     30 |
+| BLAKE   | MANAGER             |     30 |
+| TURNER  | SALESMAN            |     30 |
+| JAMES   | CLERK               |     30 |
+| HOFFMAN | MANAGER             |     30 |
+| GRASS   | SALESMAN            |     30 |
+| AARUSH  | SALESMAN            |     30 |
+| ALEX    | MANAGER             |     30 |
+| NATASHA | CLERK               |     30 |
++---------+---------------------+--------+
+12 rows in set (0.00 sec)
+
+18.	Display the Employee Number, Name for Clerks and Managers who’s Salary is more than 1500.
+
+mysql> select empno,ename,job,sal from emp where (job='clerk' or job='manager') and sal > 1500;
++-------+---------+---------+------+
+| empno | ename   | job     | sal  |
++-------+---------+---------+------+
+|  7415 | AARAV   | CLERK   | 3350 |
+|  7421 | THOMAS  | CLERK   | 1750 |
+|  7566 | JONES   | MANAGER | 2975 |
+|  7698 | BLAKE   | MANAGER | 2850 |
+|  7782 | CLARK   | MANAGER | 2450 |
+|  7919 | HOFFMAN | MANAGER | 4150 |
+|  8433 | NATASHA | CLERK   | 1750 |
++-------+---------+---------+------+
+7 rows in set (0.00 sec)
+
+19.	Display the Name, Annual Salary and Commission as “Commission Earned” of all employees whose monthly salary is greater than their Commission. The output should be in decreasing order of salary. If two or more employees have same salary, then sort them by name within the highest order of salary. 
+
+mysql> SELECT ename,sal * 12 AS annual_salary, comm AS "Commission Earned" FROM emp where sal > comm ORDER BY sal DESC, ename ASC;
++--------+---------------+-------------------+
+| ename  | annual_salary | Commission Earned |
++--------+---------------+-------------------+
+| ALLEN  |         19200 |               300 |
+| TURNER |         18000 |                 0 |
+| ALEX   |         15000 |               500 |
+| WARD   |         15000 |               500 |
++--------+---------------+-------------------+
+4 rows in set (0.00 sec)
+
+20.	Display the Name and Job of sales executives or managers whose names end with the letter ‘S’. 
+
+mysql> select ename, job from emp  where (job='manager' or job='SALESMAN') and ename like '%s';
++-------+----------+
+| ename | job      |
++-------+----------+
+| JONES | MANAGER  |
+| GRASS | SALESMAN |
++-------+----------+
+2 rows in set (0.00 sec)
+
+21.	Display all the Names of the Employees whose Salary is either more than 1000 but not more than 2200.
+
+mysql> select ename, sal from emp where sal between 1000 and 2200;
++----------+------+
+| ename    | sal  |
++----------+------+
+| GITA     | 1750 |
+| VRUSHALI | 1750 |
+| SHARMIN  | 1750 |
+| BANDISH  | 1750 |
+| THOMAS   | 1750 |
+| ALLEN    | 1600 |
+| WARD     | 1250 |
+| MARTIN   | 1250 |
+| TURNER   | 1500 |
+| ADAMS    | 1100 |
+| Ruhan    | 2000 |
+| Neel     | 1000 |
+| MILLER   | 1300 |
+| AARUSH   | 1350 |
+| ALEX     | 1250 |
+| NATASHA  | 1750 |
+| SANGITA  | 1750 |
+| SUPRIYA  | 1750 |
++----------+------+
+18 rows in set (0.00 sec)
+
+22.	Select Name & Salary of employees who are clerks.
+
+mysql> select ename, sal from emp where job='clerk';
++---------+------+
+| ename   | sal  |
++---------+------+
+| SMITH   |  800 |
+| AARAV   | 3350 |
+| THOMAS  | 1750 |
+| ADAMS   | 1100 |
+| JAMES   |  950 |
+| MILLER  | 1300 |
+| NATASHA | 1750 |
++---------+------+
+7 rows in set (0.00 sec)
+
+23.	List the Department Number and Names of all Employees having Salary less than 2500.
+
+mysql> select ename, deptno, sal from emp where sal<2500;
++----------+--------+------+
+| ename    | deptno | sal  |
++----------+--------+------+
+| GITA     |     30 | 1750 |
+| VRUSHALI |     50 | 1750 |
+| SHARMIN  |     20 | 1750 |
+| BANDISH  |     20 | 1750 |
+| SMITH    |     20 |  800 |
+| THOMAS   |     10 | 1750 |
+| ALLEN    |     30 | 1600 |
+| WARD     |     30 | 1250 |
+| MARTIN   |     30 | 1250 |
+| CLARK    |     10 | 2450 |
+| TURNER   |     30 | 1500 |
+| ADAMS    |     20 | 1100 |
+| Ruhan    |     60 | 2000 |
+| Neel     |     60 | 1000 |
+| JAMES    |     30 |  950 |
+| MILLER   |     10 | 1300 |
+| AARUSH   |     30 | 1350 |
+| ALEX     |     30 | 1250 |
+| NATASHA  |     30 | 1750 |
+| SANGITA  |     50 | 1750 |
+| SUPRIYA  |     50 | 1750 |
++----------+--------+------+
+21 rows in set (0.00 sec)
+
+24.	List the Employee Number and the Name of the President.
+
+mysql> select ename, empno,job from emp where job='PRESIDENT';
++-------+-------+-----------+
+| ename | empno | job       |
++-------+-------+-----------+
+| KING  |  7839 | PRESIDENT |
++-------+-------+-----------+
+1 row in set (0.00 sec)
+
+25.	Display Names whose job is either Clerk or Analyst or Salesman.
+
+mysql> select ename, job from emp where job in ('CLERK','SALESMAN','ANALYST');
++---------+----------+
+| ename   | job      |
++---------+----------+
+| SMITH   | CLERK    |
+| AARAV   | CLERK    |
+| THOMAS  | CLERK    |
+| ALLEN   | SALESMAN |
+| WARD    | SALESMAN |
+| MARTIN  | SALESMAN |
+| SCOTT   | ANALYST  |
+| TURNER  | SALESMAN |
+| ADAMS   | CLERK    |
+| JAMES   | CLERK    |
+| FORD    | ANALYST  |
+| GRASS   | SALESMAN |
+| MILLER  | CLERK    |
+| AARUSH  | SALESMAN |
+| NATASHA | CLERK    |
+| SUPRIYA | ANALYST  |
++---------+----------+
+16 rows in set (0.00 sec)
+
+26.	List the Employees whose names start with ‘B’ or ‘M’
+
+mysql> select ename from emp where ename like 'B%' or ename like 'M%';
++---------+
+| ename   |
++---------+
+| BANDISH |
+| MARTIN  |
+| BLAKE   |
+| MILLER  |
++---------+
+4 rows in set (0.00 sec)
+
+27.	Give a list of Employees sorted in alphabetic order of Names.
+
+mysql> select ename from emp order by ename;
++----------+
+| ename    |
++----------+
+| AARAV    |
+| AARUSH   |
+| ADAMS    |
+| ALEX     |
+| ALLEN    |
+| BANDISH  |
+| BLAKE    |
+| CLARK    |
+| FORD     |
+| FRED     |
+| GITA     |
+| GRASS    |
+| HOFFMAN  |
+| JAMES    |
+| JONES    |
+| KING     |
+| MARTIN   |
+| MILLER   |
+| NATASHA  |
+| Neel     |
+| Ruhan    |
+| SANGITA  |
+| SCOTT    |
+| SHARMIN  |
+| SMITH    |
+| SUPRIYA  |
+| THOMAS   |
+| TURNER   |
+| VRUSHALI |
+| WARD     |
++----------+
+30 rows in set (0.00 sec)
+
+28.	Find out details of Employees where Commission is greater than 5% of the Salary.
+
+mysql> select ename,sal,comm from emp  where comm > 0.05 * sal;
++--------+------+------+
+| ename  | sal  | comm |
++--------+------+------+
+| ALLEN  | 1600 |  300 |
+| WARD   | 1250 |  500 |
+| MARTIN | 1250 | 1400 |
+| GRASS  | 2575 | 2700 |
+| MILLER | 1300 | 1300 |
+| AARUSH | 1350 | 2700 |
+| ALEX   | 1250 |  500 |
++--------+------+------+
+7 rows in set (0.00 sec)
+
+29.	Create query to display the Employee Name and Department Number for empno 7566.
+
+mysql> select ename ,empno,deptno from emp where empno=7566;
++-------+-------+--------+
+| ename | empno | deptno |
++-------+-------+--------+
+| JONES |  7566 |     20 |
++-------+-------+--------+
+1 row in set (0.00 sec)
+
+30.	List the Name and Salary of Employees who earn more than $1500 and are in Department 10 or 30. Label the columns NAME and Monthly Salary, respectively.
+
+mysql> select ename Name,deptno,sal 'Monthly Sal'  from emp where sal > 1500 and (deptno=10 or deptno=30);
++---------+--------+-------------+
+| Name    | deptno | Monthly Sal |
++---------+--------+-------------+
+| GITA    |     30 |        1750 |
+| AARAV   |     10 |        3350 |
+| THOMAS  |     10 |        1750 |
+| ALLEN   |     30 |        1600 |
+| BLAKE   |     30 |        2850 |
+| CLARK   |     10 |        2450 |
+| KING    |     10 |        5000 |
+| HOFFMAN |     30 |        4150 |
+| GRASS   |     30 |        2575 |
+| NATASHA |     30 |        1750 |
++---------+--------+-------------+
+10 rows in set (0.00 sec)
+
+31.	Display the Name, Salary and Commission for all Employees who earn Commission. Sort data in descending order of Salary and Commission. 
+
+mysql> select ename,sal,comm from emp where comm is not null and comm>0 order by sal desc,comm desc;
++--------+------+------+
+| ename  | sal  | comm |
++--------+------+------+
+| GRASS  | 2575 | 2700 |
+| ALLEN  | 1600 |  300 |
+| AARUSH | 1350 | 2700 |
+| MILLER | 1300 | 1300 |
+| MARTIN | 1250 | 1400 |
+| WARD   | 1250 |  500 |
+| ALEX   | 1250 |  500 |
++--------+------+------+
+7 rows in set (0.00 sec)
+
+32.	Display the Names of all Employees with the third letter of their Name as an “A”.
+
+mysql> select ename from emp where ename like '__A%';
++---------+
+| ename   |
++---------+
+| SHARMIN |
+| BLAKE   |
+| CLARK   |
+| ADAMS   |
+| GRASS   |
++---------+
+5 rows in set (0.00 sec)
+
+33.	Display the name of all Employees that have two ‘AS’ in the name and are in department 30 or their manager is 7782.
+
+mysql> select ename from emp where ename like '%a%s' and (deptno=30 or empno=7782);
++-------+
+| ename |
++-------+
+| JAMES |
+| GRASS |
++-------+
+2 rows in set (0.00 sec)
+
+34.	Display Name, Job & Sal for all Emp whose job is Clerk or Analyst and their Sal is not equal to 1000, 3000 & 5000.
+
+mysql> select ename,sal, job from emp where (job='clerk' or job='ANALYST') and sal not in (1000,3000,5000);
++---------+------+---------+
+| ename   | sal  | job     |
++---------+------+---------+
+| SMITH   |  800 | CLERK   |
+| AARAV   | 3350 | CLERK   |
+| THOMAS  | 1750 | CLERK   |
+| ADAMS   | 1100 | CLERK   |
+| JAMES   |  950 | CLERK   |
+| MILLER  | 1300 | CLERK   |
+| NATASHA | 1750 | CLERK   |
+| SUPRIYA | 1750 | ANALYST |
++---------+------+---------+
+8 rows in set (0.00 sec)
+
+35.	Display the Name, Sal & Comm for all Employees whose Comm amount is greater than their Sal increased by 10%.
+
+mysql> select ename,sal ,comm from emp where comm> sal * 1.10;
++--------+------+------+
+| ename  | sal  | comm |
++--------+------+------+
+| MARTIN | 1250 | 1400 |
+| AARUSH | 1350 | 2700 |
++--------+------+------+
+2 rows in set (0.00 sec)
+
+
+36.	 Display Employee Number, Name, Gross Salary (Bonus + Salary*12 + Commission) for all those Employees who belong to Department Number 20 or 30 in the ascending order of Employee Numbers.
+
+SELECT empno, ename,(NVL(bonus,0) + sal*12 + NVL(comm,0)) AS gross_salary FROM emp WHERE deptno IN (20, 30) ORDER BY empno ASC;
+
+
+37.	Display the Employee Number, Name, Salary, and Salary Increase by 15% expressed as a whole number. Label the column New Salary.
+
+mysql> select empno, ename,sal ,round(sal * 1.15,0) 'New Salaray' from emp;
++-------+----------+------+-------------+
+| empno | ename    | sal  | New Salaray |
++-------+----------+------+-------------+
+|  6001 | GITA     | 1750 |        2013 |
+|  6129 | VRUSHALI | 1750 |        2013 |
+|  6473 | SHARMIN  | 1750 |        2013 |
+|  6781 | BANDISH  | 1750 |        2013 |
+|  7369 | SMITH    |  800 |         920 |
+|  7415 | AARAV    | 3350 |        3853 |
+|  7421 | THOMAS   | 1750 |        2013 |
+|  7499 | ALLEN    | 1600 |        1840 |
+|  7521 | WARD     | 1250 |        1438 |
+|  7566 | JONES    | 2975 |        3421 |
+|  7654 | MARTIN   | 1250 |        1438 |
+|  7698 | BLAKE    | 2850 |        3278 |
+|  7782 | CLARK    | 2450 |        2818 |
+|  7788 | SCOTT    | 3000 |        3450 |
+|  7839 | KING     | 5000 |        5750 |
+|  7840 | FRED     | 5000 |        5750 |
+|  7844 | TURNER   | 1500 |        1725 |
+|  7876 | ADAMS    | 1100 |        1265 |
+|  7888 | Ruhan    | 2000 |        2300 |
+|  7889 | Neel     | 1000 |        1150 |
+|  7900 | JAMES    |  950 |        1093 |
+|  7902 | FORD     | 3000 |        3450 |
+|  7919 | HOFFMAN  | 4150 |        4773 |
+|  7920 | GRASS    | 2575 |        2961 |
+|  7934 | MILLER   | 1300 |        1495 |
+|  7945 | AARUSH   | 1350 |        1553 |
+|  7949 | ALEX     | 1250 |        1438 |
+|  8433 | NATASHA  | 1750 |        2013 |
+|  9400 | SANGITA  | 1750 |        2013 |
+|  9473 | SUPRIYA  | 1750 |        2013 |
++-------+----------+------+-------------+
+30 rows in set (0.00 sec)
+
+
+
+
+
+
+
