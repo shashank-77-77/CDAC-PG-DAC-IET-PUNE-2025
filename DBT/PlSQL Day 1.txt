@@ -647,8 +647,6 @@ mysql> desc t2;
 +-------+------+------+-----+---------+-------+
 2 rows in set (0.00 sec)
 
-mysql> desc t3;
-ERROR 1146 (42S02): Table 'dac83.t3' doesn't exist
 mysql> desc t4;
 +-------+------+------+-----+---------+-------+
 | Field | Type | Null | Key | Default | Extra |
@@ -657,5 +655,3 @@ mysql> desc t4;
 | c2    | int  | NO   | PRI | NULL    |       |
 +-------+------+------+-----+---------+-------+
 2 rows in set (0.00 sec)
-
-mysql>
