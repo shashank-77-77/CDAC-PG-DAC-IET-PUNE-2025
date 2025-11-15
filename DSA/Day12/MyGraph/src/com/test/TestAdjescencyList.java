@@ -36,6 +36,7 @@ public class TestAdjescencyList {
 
 }
 
+
 /*
  Output
 How many vertices?
@@ -138,6 +139,8 @@ Is there a edge between6---5
 0
 Is there a edge between6---6
 0
+
+
 0-------
 3----->
 2----->

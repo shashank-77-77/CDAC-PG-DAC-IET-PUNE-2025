@@ -50,7 +50,7 @@ public class EmployeeBubbleSort {
 		}
 		
 		
-		
+		sc.close();
 	}
 	
 }
