@@ -645,7 +645,44 @@ mysql> select empno, ename,sal ,round(sal * 1.15,0) 'New Salaray' from emp;
 30 rows in set (0.00 sec)
 
 
+39.	Create a query that will display the Employees name and commission amount. If the employee does not earn commission, put “No Commission”.
 
+mysql> select ename , sal , ifnull(comm,'No Commision') Commision from emp;
++----------+------+--------------+
+| ename    | sal  | Commision    |
++----------+------+--------------+
+| GITA     | 1750 | No Commision |
+| VRUSHALI | 1750 | No Commision |
+| SHARMIN  | 1750 | No Commision |
+| BANDISH  | 1750 | No Commision |
+| SMITH    |  800 | No Commision |
+| AARAV    | 3350 | No Commision |
+| THOMAS   | 1750 | No Commision |
+| ALLEN    | 1600 | 300          |
+| WARD     | 1250 | 500          |
+| JONES    | 2975 | No Commision |
+| MARTIN   | 1250 | 1400         |
+| BLAKE    | 2850 | No Commision |
+| CLARK    | 2450 | No Commision |
+| SCOTT    | 3000 | No Commision |
+| KING     | 5000 | No Commision |
+| FRED     | 5000 | No Commision |
+| TURNER   | 1500 | 0            |
+| ADAMS    | 1100 | No Commision |
+| Ruhan    | 2000 | No Commision |
+| Neel     | 1000 | No Commision |
+| JAMES    |  950 | No Commision |
+| FORD     | 3000 | No Commision |
+| HOFFMAN  | 4150 | No Commision |
+| GRASS    | 2575 | 2700         |
+| MILLER   | 1300 | 1300         |
+| AARUSH   | 1350 | 2700         |
+| ALEX     | 1250 | 500          |
+| NATASHA  | 1750 | No Commision |
+| SANGITA  | 1750 | No Commision |
+| SUPRIYA  | 1750 | No Commision |
++----------+------+--------------+
+30 rows in set (0.00 sec)
 
 
 
