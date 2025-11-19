@@ -2,6 +2,7 @@ package com.demo.service;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Scanner;
 
 import com.demo.beans.Product;
@@ -18,7 +19,7 @@ public class ProductServiceImpl implements ProductService{
 @Override
 public boolean addNewProduct() {
 	Scanner sc=new Scanner(System.in);
-	System.out.println("ene	tr pid");
+	System.out.println("enetr pid");
 	int pid=sc.nextInt();
 	System.out.println("enter product name");
 	String pname=sc.next();
@@ -31,6 +32,37 @@ public boolean addNewProduct() {
 	LocalDate ldt=LocalDate.parse(dt,DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 	Product p=new Product(pid,pname,qty,price,ldt);
 	return pdao.save(p);
+}
+
+@Override
+public List<Product> getAllProducts() {
+	return pdao.findAllProducts();
+}
+
+@Override
+public Product getById(int id) {
+	return pdao.findById(id);
+}
+
+@Override
+public boolean modifyById(int id, int qty, double price) {
+	return pdao.updateById(id,qty,price);
+}
+
+@Override
+public boolean deleteById(int id) {
+	return pdao.removeById(id);
+}
+
+@Override
+public List<Product> sortByPrice() {
+	return pdao.arrangeByPrice();
+}
+
+@Override
+public void closeMyConnetion() {
+	pdao.closeConnection();
+	
 }
    
 }
