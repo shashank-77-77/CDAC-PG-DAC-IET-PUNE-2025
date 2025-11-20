@@ -2,6 +2,7 @@ package com.service;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Scanner;
 
 import com.beans.Product;
@@ -50,6 +51,33 @@ public class ProductServiceImpl implements  ProductService{
 	@Override
 	public boolean modifyById(int id, int qty, double price) {
 		return pdao.updateById(id,qty,price);
+	}
+
+
+	@Override
+	public Product getById(int id) {
+		
+		return pdao.findById(id);
+	}
+
+
+	@Override
+	public List<Product> getAllProduct() {
+		return pdao.findAllProducts();
+	}
+
+
+	@Override
+	public List<Product> sortByPrice() {
+		
+		return pdao.arrangeByPrice();
+	}
+
+
+	@Override
+	public void closeMyConnection() {
+		pdao.closeConnection();
+		
 	}
 	
 	

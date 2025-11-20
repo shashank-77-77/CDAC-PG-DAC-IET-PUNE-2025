@@ -1,6 +1,9 @@
 package com.test;
 
+import java.util.List;
 import java.util.Scanner;
+
+import com.beans.Product;
 import com.service.ProductService;
 
 import com.service.ProductServiceImpl;
@@ -59,8 +62,32 @@ public class ProductManagementTest {
 				{
 					System.out.println("Not updated");
 				}
-	
-				
+			  }
+			case 4->{
+				System.out.println("Enter Id");
+				int id=sc.nextInt();
+				Product p=pservice.getById(id);
+				if(p==null) {
+					System.out.println("Not Found");
+				}else {
+			      System.out.println(p);      
+				}
+			   }
+			
+			case 5->{
+				List<Product> plst=pservice.getAllProduct();
+				plst.forEach(System.out::println);
+			}
+			
+			case 6->{
+				List<Product> plst=pservice.sortByPrice();
+				plst.forEach(System.out::println);
+			}
+			
+			case 7 ->{
+				System.out.println("Thankyou for Visiting.... ");
+				sc.close();
+				pservice.closeMyConnection();
 			}
 			
 		}
@@ -69,3 +96,81 @@ public class ProductManagementTest {
 
 }
 }
+
+
+
+
+
+
+// Output :
+
+//1.add new product 
+//2.delete product 
+//3.modify product
+//4. Find by Id 
+//5.display all
+//6. Display in sorted order 
+//7. Exit
+//choice :
+//5
+//Product [pid=112, pname=Pen, qty=33, price=45.0, ldt=2025-01-12]
+//Product [pid=113, pname=Pencil, qty=24, price=120.0, ldt=2025-12-24]
+//Product [pid=114, pname=Book, qty=45, price=130.0, ldt=2024-12-12]
+//Product [pid=114, pname=Notebook, qty=120, price=1450.0, ldt=2023-02-13]
+//1.add new product 
+//2.delete product 
+//3.modify product
+//4. Find by Id 
+//5.display all
+//6. Display in sorted order 
+//7. Exit
+//choice :
+//6
+//Product [pid=112, pname=Pen, qty=33, price=45.0, ldt=2025-01-12]
+//Product [pid=113, pname=Pencil, qty=24, price=120.0, ldt=2025-12-24]
+//Product [pid=114, pname=Book, qty=45, price=130.0, ldt=2024-12-12]
+//Product [pid=114, pname=Notebook, qty=120, price=1450.0, ldt=2023-02-13]
+//1.add new product 
+//2.delete product 
+//3.modify product
+//4. Find by Id 
+//5.display all
+//6. Display in sorted order 
+//7. Exit
+//choice :
+//1
+//Enter pid
+//117
+//Enter product name 
+//notepad
+//Enter qty
+//23
+//Enter price
+//100
+//Enter mfgdate (dd/MM/yyyy
+//12/12/2012
+//Product added successfully
+//1.add new product 
+//2.delete product 
+//3.modify product
+//4. Find by Id 
+//5.display all
+//6. Display in sorted order 
+//7. Exit
+//choice :
+//6
+//Product [pid=112, pname=Pen, qty=33, price=45.0, ldt=2025-01-12]
+//Product [pid=117, pname=notepad, qty=23, price=100.0, ldt=2012-12-12]
+//Product [pid=113, pname=Pencil, qty=24, price=120.0, ldt=2025-12-24]
+//Product [pid=114, pname=Book, qty=45, price=130.0, ldt=2024-12-12]
+//Product [pid=114, pname=Notebook, qty=120, price=1450.0, ldt=2023-02-13]
+//1.add new product 
+//2.delete product 
+//3.modify product
+//4. Find by Id 
+//5.display all
+//6. Display in sorted order 
+//7. Exit
+//choice :
+//7
+//Thankyou for Visiting.... 
