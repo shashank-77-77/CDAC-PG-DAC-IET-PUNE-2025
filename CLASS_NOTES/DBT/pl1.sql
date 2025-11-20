@@ -187,21 +187,6 @@ BEGIN
 			leave lbl1;
 		end if;
 		
-	end loop lbl1;
-	
-	
-end $
-delimiter ;
-
-
-drop procedure if exists pro1;
-delimiter $
-create procedure pro1()
-BEGIN
-	declare x int default 1; 
-	
-	lbl1:LOOP
-		
 		select x;
 		set x := x + 1;
 		
