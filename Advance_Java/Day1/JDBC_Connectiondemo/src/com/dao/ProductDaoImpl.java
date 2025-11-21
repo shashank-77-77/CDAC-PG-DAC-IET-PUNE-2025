@@ -21,9 +21,7 @@ public class ProductDaoImpl implements ProductDao{
 			findById=conn.prepareStatement("Select * from MyProduct Where pid = ?");
 			updateById=conn.prepareStatement("update MyProduct Set qty=? ,price=? where pid=?");
 		    deleteById=conn.prepareStatement("delete from MyProduct where pid=?");
-		    sortByPrice=conn.prepareStatement("Select * from MyProduct Order By price");
-		    
-					
+		    sortByPrice=conn.prepareStatement("Select * from MyProduct Order By price");			
 		}
 		catch (SQLException e)
 		{
