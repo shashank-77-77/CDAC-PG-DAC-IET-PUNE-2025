@@ -187,6 +187,21 @@ BEGIN
 			leave lbl1;
 		end if;
 		
+	end loop lbl1;
+	
+	
+end $
+delimiter ;
+
+
+drop procedure if exists pro1;
+delimiter $
+create procedure pro1()
+BEGIN
+	declare x int default 1; 
+	
+	lbl1:LOOP
+		
 		select x;
 		set x := x + 1;
 		
@@ -253,7 +268,7 @@ b1:BEGIN
 	close c1;
 end b1$
 delimiter ;
-*/
+
 
 drop procedure if exists pro1;
 delimiter $
@@ -288,21 +303,129 @@ delimiter ;
 
 
 
+drop function if exists fn1;
+delimiter $
+create function fn1() returns varchar(20)
+DETERMINISTIC
+b1:BEGIN
+	declare x varchar(20);
+   select 'Hello World' into x;
+   set @a := x;
+   return x;
+end b1$
+delimiter ;
 
 
 
+drop function if exists fn1;
+delimiter $
+create function fn1(x int, y int) returns int
+DETERMINISTIC
+b1:BEGIN
+	return ifnull(x,0) + ifnull(y,0);
+end b1$
+delimiter ;
+
+
+drop function if exists fn1;
+delimiter $
+create function fn1() returns int
+DETERMINISTIC
+BEGIN
+	declare v_deptno int default 0;
+	select max(deptno) + 1 into v_deptno from dept;	
+	return v_deptno;
+end $
+delimiter ;
+
+
+drop procedure if exists pro1;
+delimiter $
+create procedure pro1(p_dname varchar(20), p_loc varchar(20), p_pwd varchar(20), p_STARTEDON varchar(20) )
+BEGIN
+	insert into dept values(fn1(), upper(p_dname),  upper(p_loc) , p_pwd, p_STARTEDON);
+	select  "Record inserted ....." as Message;
+end $
+delimiter ;
 
 
 
+drop function if exists fn1;
+delimiter $
+create function fn1() returns int
+DETERMINISTIC
+BEGIN
+	return (select max(deptno) + 1 from dept);
+end $
+delimiter ;
+
+drop function if exists fn1;
+delimiter $
+create function fn1() returns int
+DETERMINISTIC
+BEGIN
+	declare v_deptno int default 0;
+	select max(deptno) + 1 into v_deptno from dept;	
+	return v_deptno;
+end $
+delimiter ;
+
+
+DROP FUNCTION IF EXISTS fn1;
+delimiter $
+CREATE FUNCTION fn1() RETURNS VARCHAR(40)
+deterministic
+begin
+    declare x, y, z VARCHAR(40) default "";
+    declare cnt INT default 1;
+    lbl:loop
+       SELECT CAST(CHAR(FLOOR(65 + RAND() * 27)) as CHAR) INTO y;
+       SELECT CAST(CHAR(FLOOR( 97 + RAND() * 27)) as CHAR) INTO z;
+       SET x := CONCAT(x, y, z);
+       if cnt > 2 then
+          leave lbl;
+       end if;
+       SET cnt := cnt + 1;
+    end loop lbl;
+    return(x);
+end $
+delimiter ;
 
 
 
+drop procedure if exists pro1;
+delimiter $
+create procedure pro1()
+b1:BEGIN
+	set @x := "select * from dept";
+	prepare  y from "select * from dept";
+	execute y;
+	
+end b1$
+delimiter ;
+
+prepare a from @x;
+	execute a;
 
 
 
+drop procedure if exists pro1;
+delimiter $
+create procedure pro1(cName varchar(64),  tName varchar(64))
+b1:BEGIN
+	set @x := concat("select ", cName, " from ", tName);
+	prepare z from @x;
+	execute z;
+end b1$
+delimiter ;
+*/
 
 
-
-
-
-
+drop trigger if exists tr1;
+delimiter $
+create trigger tr1 before insert on dept for each row
+b1:BEGIN
+	set new.who := user();
+	set new.when1 := curdate();
+end b1$
+delimiter ;
