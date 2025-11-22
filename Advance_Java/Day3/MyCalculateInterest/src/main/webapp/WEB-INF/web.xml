@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>MyCalculateInterest</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+    <servlet>
+  <servlet-name>calc</servlet-name>
+  <servlet-class>com.servlets.CalculateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>calc</servlet-name>
+      <url-pattern>/calculate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  <servlet-name>mseb</servlet-name>
+  <servlet-class>com.servlets.MsebBillCalculate</servlet-class>
+  
+  <init-param>
+     <param-name>rate1</param-name>
+     <param-value>1</param-value>
+  </init-param>
+    <init-param>
+     <param-name>rate2</param-name>
+     <param-value>2</param-value>
+  </init-param>
+    <init-param>
+     <param-name>rate3</param-name>
+     <param-value>4</param-value>
+  </init-param>
+  <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>mseb</servlet-name>
+  <url-pattern>/billcalc</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+   <servlet>
+  <servlet-name>interest</servlet-name>
+  <servlet-class>com.servlets.CalculateInterest</servlet-class>
+  <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>interest</servlet-name>
+  <url-pattern>/calcinterest</url-pattern>
+  </servlet-mapping>
+</web-app>
