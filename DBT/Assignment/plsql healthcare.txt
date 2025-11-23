@@ -1,0 +1,201 @@
+CREATE TABLE patients (
+    patient_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    insurance VARCHAR(3) CHECK (insurance IN ('YES','NO'))
+);
+
+
+CREATE TABLE treatment (
+    treatment_id INT PRIMARY KEY,
+    patient_id INT,
+    doctor_fee INT,
+    medicine_fee INT,
+    FOREIGN KEY (patient_id) REFERENCES patients(patient_id)
+);
+
+INSERT INTO patients (patient_id, name, insurance) VALUES
+(1, 'Ravi Sharma', 'YES'),
+(2, 'Sneha Iyer', 'NO'),
+(3, 'Karan Patel', 'YES'),
+(4, 'Anita Verma', 'NO');
+
+INSERT INTO treatment (treatment_id, patient_id, doctor_fee, medicine_fee) VALUES
+(101, 1, 1500, 600),
+(102, 2, 2000, 900),
+(103, 3, 1800, 700),
+(104, 4, 1200, 400);
+
+---------------------------------------------------------------------------------
+
+DELIMITER $$
+CREATE FUNCTION total_treatment_cost(p_patient_id INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE v_total INT;
+    SELECT doctor_fee + medicine_fee INTO v_total
+    FROM treatment
+    WHERE patient_id = p_patient_id;
+    RETURN IFNULL(v_total, 0);
+END$$
+DELIMITER ;
+
+--------------------------------------------------------------------------------
+
+DELIMITER $$
+CREATE FUNCTION medicine_expense(p_patient_id INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE v_med INT;
+    SELECT SUM(medicine_fee) INTO v_med
+    FROM treatment
+    WHERE patient_id = p_patient_id;
+    RETURN IFNULL(v_med, 0);
+END$$
+DELIMITER ;
+-------------------------------------------------------------------------------
+DELIMITER $$
+CREATE FUNCTION doctor_expense(p_patient_id INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE v_doc INT;
+    SELECT SUM(doctor_fee) INTO v_doc
+    FROM treatment
+    WHERE patient_id = p_patient_id;
+    RETURN IFNULL(v_doc, 0);
+END$$
+DELIMITER ;
+
+----------------------------------------------------------------------------
+DELIMITER $$
+CREATE FUNCTION patient_status(p_patient_id INT)
+RETURNS VARCHAR(20)
+DETERMINISTIC
+BEGIN
+    DECLARE v_ins VARCHAR(3);
+    SELECT insurance INTO v_ins FROM patients WHERE patient_id = p_patient_id;
+    IF v_ins = 'YES' THEN
+        RETURN 'Insured';
+    ELSE
+        RETURN 'Not Insured';
+    END IF;
+END$$
+DELIMITER ;
+
+
+--------------------------------------------------------------------------
+
+DELIMITER $$
+CREATE FUNCTION insurance_coverage(p_patient_id INT)
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+    DECLARE v_ins VARCHAR(3);
+    DECLARE v_total INT;
+    SELECT insurance INTO v_ins FROM patients WHERE patient_id = p_patient_id;
+    SET v_total = total_treatment_cost(p_patient_id);
+    IF v_ins = 'YES' THEN
+        RETURN v_total * 0.20;
+    ELSE
+        RETURN 0.00;
+    END IF;
+END$$
+DELIMITER ;
+
+-------------------------------------------------------------------------------
+
+DELIMITER $$
+CREATE FUNCTION highest_bill_patient()
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE v_id INT;
+    SELECT patient_id INTO v_id
+    FROM treatment
+    ORDER BY (doctor_fee + medicine_fee) DESC
+    LIMIT 1;
+    RETURN v_id;
+END$$
+DELIMITER ;
+
+--------------------------------------------------------------------------------
+
+DELIMITER $$
+CREATE FUNCTION calc_bill(p_patient_id INT)
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+    DECLARE v_total INT;
+    DECLARE v_ins DECIMAL(10,2);
+    SET v_total = total_treatment_cost(p_patient_id);
+    SET v_ins = insurance_coverage(p_patient_id);
+    RETURN v_total - v_ins;
+END$$
+DELIMITER ;
+
+
+------------------------------------------------------------------------------
+
+DELIMITER $$
+CREATE FUNCTION net_payable_with_tax(p_patient_id INT, tax_rate DECIMAL(5,2))
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+    DECLARE v_total INT;
+    DECLARE v_ins DECIMAL(10,2);
+    DECLARE v_after_insurance DECIMAL(10,2);
+    DECLARE v_final DECIMAL(10,2);
+
+    SET v_total = total_treatment_cost(p_patient_id);
+    SET v_ins = insurance_coverage(p_patient_id);
+    SET v_after_insurance = v_total - v_ins;
+    SET v_final = v_after_insurance * (1 + (tax_rate / 100));
+    RETURN ROUND(v_final, 2);
+END$$
+DELIMITER ;
+
+-------------------------------------------------------------------------------
+
+-- 1) total cost for patient 1
+SELECT total_treatment_cost(1);
+
+-- 2) insurance coverage amount for patient 1
+SELECT insurance_coverage(1);
+
+-- 3) status label
+SELECT patient_status(1);
+
+-- 4) final payable after insurance (pre-tax)
+SELECT calc_bill(1);
+
+-- 5) net payable with 5% tax
+SELECT net_payable_with_tax(1, 5.00);
+
+-- 6) patient with highest bill
+SELECT highest_bill_patient();
+
+-- 7) medicine and doctor expense breakdown
+SELECT medicine_expense(2), doctor_expense(2);
+
+
+
+---------------------------------------------------
+USE healthcare_demo;
+
+-- Check seeded patients
+SELECT * FROM patients;
+
+-- Check seeded treatments
+SELECT * FROM treatment;
+
+-- Verify computations for patient 1
+SELECT
+  total_treatment_cost(1) AS total_cost,
+  insurance_coverage(1) AS insurance_amt,
+  calc_bill(1) AS payable_pre_tax,
+  net_payable_with_tax(1, 18.00) AS payable_including_18pct_tax;
+
+
+
