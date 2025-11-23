@@ -1,0 +1,76 @@
+
+7. Banking – Fixed Deposit Interest
+•	Procedure calculate_fd_interest(p_fd_id)
+•	Compute maturity amount = principal + (principal * rate * years).
+•	Insert into fd_history.
+
+Table Structure
+1.	CREATE TABLE fixed_deposit (fd_id INT PRIMARY KEY, customer_id INT, principal INT, rate INT, years INT);
+
+2.	CREATE TABLE fd_history (hist_id INT AUTO_INCREMENT PRIMARY KEY, fd_id INT, maturity_amount INT, calc_date DATE DEFAULT CURDATE());
+
+----------------------------------------------------------------------
+
+
+CREATE TABLE fixed_deposit (
+    fd_id INT PRIMARY KEY,
+    customer_id INT,
+    principal INT,
+    rate INT,      -- annual interest rate in percentage
+    years INT
+);
+
+CREATE TABLE fd_history (
+    hist_id INT AUTO_INCREMENT PRIMARY KEY,
+    fd_id INT,
+    maturity_amount INT,
+    calc_date DATE
+);
+
+INSERT INTO fixed_deposit (fd_id, customer_id, principal, rate, years) VALUES
+(1, 101, 50000, 7, 3),
+(2, 102, 100000, 8, 5),
+(3, 103, 75000, 6, 2);
+
+
+-----------------------------------------------------------------------
+
+DELIMITER $$
+
+CREATE PROCEDURE calculate_fd_interest(p_fd_id INT)
+BEGIN
+    DECLARE v_principal INT;
+    DECLARE v_rate INT;
+    DECLARE v_years INT;
+    DECLARE v_maturity INT;
+
+    -- Fetch deposit details
+    SELECT principal, rate, years
+    INTO v_principal, v_rate, v_years
+    FROM fixed_deposit
+    WHERE fd_id = p_fd_id;
+
+    -- Validate FD exists
+    IF v_principal IS NULL THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Fixed Deposit ID does not exist.';
+    END IF;
+
+    -- Calculate maturity amount (simple interest)
+    SET v_maturity = v_principal + (v_principal * v_rate * v_years / 100);
+
+    -- Insert into history log
+    INSERT INTO fd_history (fd_id, maturity_amount, calc_date)
+    VALUES (p_fd_id, v_maturity, CURDATE());
+END$$
+
+DELIMITER ;
+
+
+
+-----------------------------------------------------------------------
+CALL calculate_fd_interest(1);
+--------------------------------------------------
+
+SELECT * FROM fd_history;
+

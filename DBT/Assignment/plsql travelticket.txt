@@ -1,0 +1,110 @@
+5. Travel – Ticket Booking System
+•	Create a procedure book_ticket(p_passenger, p_train_id)
+•	Check seat availability.
+•	If available, assign seat and confirm booking.
+•	If not, put passenger in a waiting list.
+
+Table Structure
+1.	CREATE TABLE trains (train_id INT PRIMARY KEY, train_name VARCHAR(50), total_seats INT, booked_seats INT DEFAULT 0);
+
+2.	CREATE TABLE tickets (ticket_id INT AUTO_INCREMENT PRIMARY KEY, passenger_name VARCHAR(50), train_id INT, seat_no INT, booking_date DATE DEFAULT CURDATE(), status VARCHAR(20) DEFAULT 'CONFIRMED');
+
+3.	CREATE TABLE waiting_list (wait_id INT AUTO_INCREMENT PRIMARY KEY, passenger_name VARCHAR(50), train_id INT, request_date DATE DEFAULT CURDATE());
+
+
+--------------------------------------------
+CREATE TABLE trains (
+    train_id INT PRIMARY KEY,
+    train_name VARCHAR(50),
+    total_seats INT,
+    booked_seats INT DEFAULT 0
+);
+
+
+
+CREATE TABLE tickets (
+    ticket_id INT AUTO_INCREMENT PRIMARY KEY,
+    passenger_name VARCHAR(50),
+    train_id INT,
+    seat_no INT,
+    booking_date DATE,
+    status VARCHAR(20) DEFAULT 'CONFIRMED',
+    FOREIGN KEY (train_id) REFERENCES trains(train_id)
+);
+
+
+
+CREATE TABLE waiting_list (
+    wait_id INT AUTO_INCREMENT PRIMARY KEY,
+    passenger_name VARCHAR(50),
+    train_id INT,
+    request_date DATE,
+    FOREIGN KEY (train_id) REFERENCES trains(train_id)
+);
+
+
+
+INSERT INTO trains (train_id, train_name, total_seats, booked_seats) VALUES
+(101, 'Mumbai Express', 3, 0),
+(102, 'Delhi Superfast', 2, 1),
+(103, 'Nagpur Intercity', 4, 4);   -- full train
+
+
+
+------------------------------------------
+
+INSERT INTO tickets (passenger_name, train_id, seat_no, status)
+VALUES ('Ravi Sharma', 102, 1, 'CONFIRMED');
+
+
+------------------------------------------
+
+DELIMITER $$
+
+CREATE PROCEDURE book_ticket(p_passenger VARCHAR(50), p_train_id INT)
+BEGIN
+    DECLARE v_total INT;
+    DECLARE v_booked INT;
+    DECLARE v_next_seat INT;
+
+    -- Fetch train seat info
+    SELECT total_seats, booked_seats
+    INTO v_total, v_booked
+    FROM trains
+    WHERE train_id = p_train_id;
+
+    -- Error if train doesn't exist
+    IF v_total IS NULL THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Train does not exist.';
+    END IF;
+
+    -- If seats available
+    IF v_booked < v_total THEN
+        SET v_next_seat = v_booked + 1;
+
+        INSERT INTO tickets (passenger_name, train_id, seat_no, booking_date, status)
+        VALUES (p_passenger, p_train_id, v_next_seat, CURDATE(), 'CONFIRMED');
+
+        UPDATE trains
+        SET booked_seats = booked_seats + 1
+        WHERE train_id = p_train_id;
+
+    ELSE
+        -- Add to waiting list
+        INSERT INTO waiting_list (passenger_name, train_id, request_date)
+        VALUES (p_passenger, p_train_id, CURDATE());
+    END IF;
+
+END $$
+
+DELIMITER ;
+
+----------------------------------------------
+
+CALL book_ticket('Shashank', 101);
+
+-----------------------------------------------
+
+SELECT * FROM tickets;
+SELECT * FROM waiting_list;
+SELECT * FROM trains;

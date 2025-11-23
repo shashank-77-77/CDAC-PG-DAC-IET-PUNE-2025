@@ -1,0 +1,74 @@
+10. Hotel Management – Check-in
+•	Write a procedure check_in(p_guest_id, p_room_no)
+•	Update room status to “Occupied”.
+•	Insert record in checkin_log.
+
+Table Structure
+1.	CREATE TABLE rooms (room_no INT PRIMARY KEY, status VARCHAR(20) DEFAULT 'Available');
+
+2.	CREATE TABLE checkin_log (log_id INT AUTO_INCREMENT PRIMARY KEY, guest_id INT, room_no INT, checkin_date DATE DEFAULT CURDATE());
+
+-------------------------------------------------------------------------
+
+CREATE TABLE rooms (
+    room_no INT PRIMARY KEY,
+    status VARCHAR(20) DEFAULT 'Available'
+);
+
+
+CREATE TABLE checkin_log (
+    log_id INT AUTO_INCREMENT PRIMARY KEY,
+    guest_id INT,
+    room_no INT,
+    checkin_date DATE
+);
+
+
+----------------------------------------------------------
+
+DELIMITER $$
+
+CREATE PROCEDURE check_in(IN p_guest_id INT, IN p_room_no INT)
+BEGIN
+    DECLARE v_status VARCHAR(20);
+
+    -- Fetch current room state
+    SELECT status INTO v_status
+    FROM rooms
+    WHERE room_no = p_room_no;
+
+    -- Validate room existence
+    IF v_status IS NULL THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Room does not exist.';
+    END IF;
+
+    -- Block double occupancy
+    IF v_status = 'Occupied' THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Room already occupied.';
+    END IF;
+
+    -- Flip room status
+    UPDATE rooms
+    SET status = 'Occupied'
+    WHERE room_no = p_room_no;
+
+    -- Log transaction
+    INSERT INTO checkin_log (guest_id, room_no, checkin_date)
+    VALUES (p_guest_id, p_room_no, CURDATE());
+END$$
+
+DELIMITER ;
+
+
+-------------------------------------------------
+
+CALL check_in(501, 102);
+
+
+-----------------------------------------------------
+
+SELECT * FROM rooms;
+SELECT * FROM checkin_log;
+

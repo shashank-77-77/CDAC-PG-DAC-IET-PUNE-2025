@@ -1,0 +1,359 @@
+8.0.1. Online Shopping – Cancel Order
+•	Write a procedure cancel_order(p_order_id)
+•	Update status to “CANCELLED”.
+•	Add cancelled quantity back to stock and
+•	Insert into order_log
+
+8.0.2. Place a New Order
+•	Write a procedure place_order(IN p_order_id INT, IN p_product_id INT, IN p_qty INT)
+•	Update status to 'PLACED'.
+•	Reduce stock quantity and
+•	Insert into order_log
+
+8.0.3. Update Order Quantity
+•	Write a procedure update_order_qty(IN p_order_id INT, IN p_new_qty INT)
+•	Update the stock quantity and
+•	Update into order_log
+
+8.0.4. Add New Product
+•	Write a procedure add_product(IN p_product_id INT, IN p_name VARCHAR(50), IN p_stock INT)
+
+8.0.5. Get All Orders for a Product
+•	Write a procedure get_orders_for_product(IN p_product_id INT)
+
+Table Structure
+1.	CREATE TABLE shop_orders (order_id INT PRIMARY KEY, product_id INT, qty INT, status VARCHAR(20) DEFAULT 'PLACED');
+
+2.	CREATE TABLE shop_products (product_id INT PRIMARY KEY, product_name VARCHAR(50), stock INT);
+
+3.	CREATE TABLE order_log (log_id INT AUTO_INCREMENT PRIMARY KEY, order_id INT, action VARCHAR(20), log_date DATE DEFAULT CURDATE());
+
+8.1. UDF to Check Status Before Cancelling (use the above tables)
+•	Write a function check_order_status(p_order_id INT)
+•	status = 'CANCELLED' RETURN 'Order already cancelled'.
+•	status = 'PLACED' THEN RETURN 'Order can be cancelled'.
+8.2. UDF to Return Total Cancelled Orders for a Product
+•	Write a function product_cancel_count(p_product_id INT)
+8.3. UDF to Get Product Stock After Cancellation
+•	Write a function get_stock(p_product_id INT)
+8.4. UDF to Return Total Cancelled Quantity of a Product
+•	Write a function product_cancelled_qty(p_product_id INT)
+8.5.a. UDF to Return First Action of an Order
+•	Write a function first_order_action(p_order_id INT)
+8.5.b. UDF to Return Last Action of an Order
+•	Write a function last_order_action(p_order_id INT)
+8.6. UDF to Check if Product is Out of Stock
+•	Write a function is_out_of_stock(p_product_id INT)
+8.7. UDF to Get Current Order Status
+•	Write a function get_order_status(p_order_id INT)
+8.8. UDF to Check if Order Can Be Cancelled, if order status is ‘Placed’
+•	Write a function can_cancel(p_order_id INT)
+8.9. UDF to Return Days Since Order Placement
+•	Write a function days_since_order(p_order_id INT)
+
+--------------------------------------------------------------------------
+CREATE TABLE shop_orders (
+    order_id INT PRIMARY KEY,
+    product_id INT,
+    qty INT,
+    status VARCHAR(20) DEFAULT 'PLACED'
+);
+
+
+CREATE TABLE shop_products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(50),
+    stock INT
+);
+
+CREATE TABLE order_log (
+    log_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    action VARCHAR(20),
+    log_date DATE
+);
+
+INSERT INTO shop_products VALUES
+(1, 'Laptop', 20),
+(2, 'Mouse', 50),
+(3, 'Keyboard', 30);
+
+INSERT INTO shop_orders VALUES
+(1001, 1, 2, 'PLACED'),
+(1002, 2, 5, 'PLACED');
+
+--------------------------------------------------------------------------
+
+DELIMITER $$
+
+CREATE PROCEDURE cancel_order(p_order_id INT)
+BEGIN
+    DECLARE v_pid INT;
+    DECLARE v_qty INT;
+    DECLARE v_status VARCHAR(20);
+
+    SELECT product_id, qty, status
+    INTO v_pid, v_qty, v_status
+    FROM shop_orders
+    WHERE order_id = p_order_id;
+
+    IF v_status = 'CANCELLED' THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Order already cancelled.';
+    END IF;
+
+    UPDATE shop_orders
+    SET status = 'CANCELLED'
+    WHERE order_id = p_order_id;
+
+    UPDATE shop_products
+    SET stock = stock + v_qty
+    WHERE product_id = v_pid;
+
+    INSERT INTO order_log(order_id, action, log_date)
+    VALUES(p_order_id, 'CANCELLED', CURDATE());
+END$$
+
+DELIMITER ;
+
+---------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE PROCEDURE place_order(IN p_order_id INT, IN p_product_id INT, IN p_qty INT)
+BEGIN
+    DECLARE v_stock INT;
+
+    SELECT stock INTO v_stock
+    FROM shop_products
+    WHERE product_id = p_product_id;
+
+    IF v_stock < p_qty THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Not enough stock.';
+    END IF;
+
+    INSERT INTO shop_orders(order_id, product_id, qty, status)
+    VALUES(p_order_id, p_product_id, p_qty, 'PLACED');
+
+    UPDATE shop_products
+    SET stock = stock - p_qty
+    WHERE product_id = p_product_id;
+
+    INSERT INTO order_log(order_id, action, log_date)
+    VALUES(p_order_id, 'PLACED', CURDATE());
+END$$
+
+DELIMITER ;
+
+
+---------------------------------------------------------------------------
+
+DELIMITER $$
+
+CREATE PROCEDURE update_order_qty(IN p_order_id INT, IN p_new_qty INT)
+BEGIN
+    DECLARE v_old_qty INT;
+    DECLARE v_pid INT;
+
+    SELECT qty, product_id
+    INTO v_old_qty, v_pid
+    FROM shop_orders
+    WHERE order_id = p_order_id;
+
+    UPDATE shop_products
+    SET stock = stock + (v_old_qty - p_new_qty)
+    WHERE product_id = v_pid;
+
+    UPDATE shop_orders
+    SET qty = p_new_qty
+    WHERE order_id = p_order_id;
+
+    INSERT INTO order_log(order_id, action, log_date)
+    VALUES(p_order_id, 'UPDATED', CURDATE());
+END$$
+
+DELIMITER ;
+
+
+---------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE PROCEDURE add_product(IN p_product_id INT, IN p_name VARCHAR(50), IN p_stock INT)
+BEGIN
+    INSERT INTO shop_products(product_id, product_name, stock)
+    VALUES(p_product_id, p_name, p_stock);
+END$$
+
+DELIMITER ;
+
+---------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE PROCEDURE get_orders_for_product(IN p_product_id INT)
+BEGIN
+    SELECT *
+    FROM shop_orders
+    WHERE product_id = p_product_id;
+END$$
+
+DELIMITER ;
+
+
+--------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+DELIMITER $$
+
+CREATE FUNCTION check_order_status(p_order_id INT)
+RETURNS VARCHAR(50)
+DETERMINISTIC
+BEGIN
+    DECLARE v_status VARCHAR(20);
+
+    SELECT status INTO v_status
+    FROM shop_orders WHERE order_id = p_order_id;
+
+    IF v_status = 'CANCELLED' THEN
+        RETURN 'Order already cancelled';
+    ELSE
+        RETURN 'Order can be cancelled';
+    END IF;
+END$$
+
+DELIMITER ;
+
+-------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE FUNCTION product_cancel_count(p_product_id INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    RETURN (
+        SELECT COUNT(*) FROM shop_orders
+        WHERE product_id = p_product_id AND status = 'CANCELLED'
+    );
+END$$
+
+DELIMITER ;
+
+-------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE FUNCTION get_stock(p_product_id INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    RETURN (SELECT stock FROM shop_products WHERE product_id = p_product_id);
+END$$
+
+DELIMITER ;
+
+------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE FUNCTION product_cancelled_qty(p_product_id INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    RETURN (
+        SELECT COALESCE(SUM(qty),0)
+        FROM shop_orders
+        WHERE product_id = p_product_id AND status = 'CANCELLED'
+    );
+END$$
+
+DELIMITER ;
+
+---------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE FUNCTION first_order_action(p_order_id INT)
+RETURNS VARCHAR(20)
+DETERMINISTIC
+BEGIN
+    RETURN (
+        SELECT action FROM order_log
+        WHERE order_id = p_order_id
+        ORDER BY log_id ASC LIMIT 1
+    );
+END$$
+
+DELIMITER ;
+
+
+--------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE FUNCTION last_order_action(p_order_id INT)
+RETURNS VARCHAR(20)
+DETERMINISTIC
+BEGIN
+    RETURN (
+        SELECT action FROM order_log
+        WHERE order_id = p_order_id
+        ORDER BY log_id DESC LIMIT 1
+    );
+END$$
+
+DELIMITER ;
+---------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE FUNCTION is_out_of_stock(p_product_id INT)
+RETURNS VARCHAR(20)
+DETERMINISTIC
+BEGIN
+    DECLARE v_stock INT;
+
+    SELECT stock INTO v_stock
+    FROM shop_products WHERE product_id = p_product_id;
+
+    IF v_stock <= 0 THEN
+        RETURN 'OUT OF STOCK';
+    ELSE
+        RETURN 'AVAILABLE';
+    END IF;
+END$$
+
+DELIMITER ;
+
+-------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE FUNCTION can_cancel(p_order_id INT)
+RETURNS VARCHAR(30)
+DETERMINISTIC
+BEGIN
+    DECLARE v_status VARCHAR(20);
+
+    SELECT status INTO v_status
+    FROM shop_orders WHERE order_id = p_order_id;
+
+    IF v_status = 'PLACED' THEN
+        RETURN 'YES';
+    ELSE
+        RETURN 'NO';
+    END IF;
+END$$
+
+DELIMITER ;
+
+---------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE FUNCTION days_since_order(p_order_id INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    RETURN (
+        SELECT DATEDIFF(CURDATE(), log_date)
+        FROM order_log
+        WHERE order_id = p_order_id
+        ORDER BY log_id ASC LIMIT 1
+    );
+END$$
+
+DELIMITER ;
+-------------------------------------------------------------------------------------
+

@@ -1,0 +1,102 @@
+11. Inventory Stock Alert System
+•	Scan all items.
+•	Check if stock < reorder_level.
+•	Automatically insert a reorder request.
+
+Table Structure
+1.	CREATE TABLE Inventory (inventory_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, product_id INT, quantity INT DEFAULT 0, reorder_level INT DEFAULT 10, last_updated DATE DEFAULT (CURRENT_DATE), FOREIGN KEY (product_id) REFERENCES Products(product_id));
+
+2.	CREATE TABLE ReorderRequests (reorder_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, inventory_id INT, request_date DATE DEFAULT CURRENT_DATE, quantity_requested INT, status VARCHAR(20) DEFAULT 'pending', FOREIGN KEY (inventory_id) REFERENCES Inventory(inventory_id));
+
+----------------------------------------------------------------------------------------
+
+
+
+CREATE TABLE Products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(50)
+);
+
+
+CREATE TABLE Inventory (
+    inventory_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    product_id INT,
+    quantity INT DEFAULT 0,
+    reorder_level INT DEFAULT 10,
+    last_updated DATE,
+    FOREIGN KEY (product_id) REFERENCES Products(product_id)
+);
+
+
+CREATE TABLE ReorderRequests (
+    reorder_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    inventory_id INT,
+    request_date DATE,
+    quantity_requested INT,
+    status VARCHAR(20) DEFAULT 'pending',
+    FOREIGN KEY (inventory_id) REFERENCES Inventory(inventory_id)
+);
+
+
+------------------------------------------------------------------------------------------
+
+DELIMITER $$
+
+CREATE PROCEDURE generate_reorder_requests()
+BEGIN
+    DECLARE done INT DEFAULT 0;
+    DECLARE v_inventory_id INT;
+    DECLARE v_qty INT;
+    DECLARE v_reorder_level INT;
+
+    -- Cursor scans all inventory items
+    DECLARE cur CURSOR FOR
+        SELECT inventory_id, quantity, reorder_level
+        FROM Inventory;
+
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+
+    OPEN cur;
+
+    scan_loop: LOOP
+        FETCH cur INTO v_inventory_id, v_qty, v_reorder_level;
+        IF done = 1 THEN 
+            LEAVE scan_loop;
+        END IF;
+
+        -- Condition check: insufficient stock
+        IF v_qty < v_reorder_level THEN
+            INSERT INTO ReorderRequests (inventory_id, request_date, quantity_requested, status)
+            VALUES (v_inventory_id, CURDATE(), (v_reorder_level - v_qty), 'pending');
+        END IF;
+    END LOOP;
+
+    CLOSE cur;
+
+END$$
+
+DELIMITER ;
+
+
+------------------------------------------------------------------------------------------
+
+
+INSERT INTO Products VALUES
+(1, 'Laptop'),
+(2, 'Headphones'),
+(3, 'Charger');
+
+INSERT INTO Inventory (product_id, quantity, reorder_level, last_updated) VALUES
+(1, 5, 10, CURDATE()),     -- should trigger reorder
+(2, 50, 20, CURDATE()),    -- no reorder needed
+(3, 2, 15, CURDATE());     -- should trigger reorder
+
+----------------------------------------------------------------
+
+CALL generate_reorder_requests();
+
+---------------------------------------------------------------
+SELECT * FROM ReorderRequests;
+
+
+

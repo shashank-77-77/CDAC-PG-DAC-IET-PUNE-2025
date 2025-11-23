@@ -1,3 +1,39 @@
+3. Healthcare – Patient Billing Function
+•	Write a function calc_bill(p_patient_id)
+•	Fetches doctor fee and medicine fee from the treatment table.
+•	Checks insurance status from the patients table.
+•	Applies an insurance discount (say 20% if insurance = 'YES').
+•	Returns the final payable amount.
+
+Table Structure
+1.	CREATE TABLE patients (patient_id INT PRIMARY KEY, name VARCHAR(50), insurance VARCHAR(3) CHECK (insurance IN ('YES','NO')));
+
+2.	CREATE TABLE treatment (treatment_id INT PRIMARY KEY, patient_id INT, doctor_fee INT, medicine_fee INT);
+
+3.1. Returns the sum of doctor and medicine fees for a patient
+•	Write a function total_treatment_cost(p_patient_id INT)
+
+3.2. Returns the insurance coverage amount (20% of total bill if insured, else 0). 
+•	Write a function insurance_coverage(p_patient_id)
+
+3.3. Returns a status message: "Insured" or "Not Insured".
+•	Write a function patient_status(p_patient_id INT)
+
+3.4. Returns the patient_id of the patient with highest bill.
+•	Write a function highest_bill_patient()
+
+3.5. Returns total medicine expense for a patient.
+•	Write a function medicine_expense(p_patient_id INT)
+
+3.6. Returns total doctor fee expense for a patient.
+•	Write a function doctor_expense(p_patient_id INT)
+
+3.7. Returns final bill including tax.
+•	Write a function net_payable_with_tax(p_patient_id INT, tax_rate DECIMAL(5,2))
+
+
+----------------------------------------------------------------------------------------
+
 CREATE TABLE patients (
     patient_id INT PRIMARY KEY,
     name VARCHAR(50),

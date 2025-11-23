@@ -1,0 +1,75 @@
+4. HR – Payroll Processing
+•	Write a procedure process_salary(p_emp_id)
+•	Fetch basic, allowances, deductions.
+•	Calculate net salary.
+•	Insert salary slip record in payroll_history.
+
+Table Structure
+1.	CREATE TABLE employees (emp_id INT PRIMARY KEY, name VARCHAR2(50), basic INT, Allowance INT, deduction INT);
+
+2.	CREATE TABLE payroll_history (payroll_id INT AUTO_INCREMENT PRIMARY KEY, emp_id INT, net_salary INT, payroll_date DATE DEFAULT CURDATE());
+
+
+----------------------------------------
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    basic INT,
+    allowance INT,
+    deduction INT
+);
+
+CREATE TABLE payroll_history (
+    payroll_id INT AUTO_INCREMENT PRIMARY KEY,
+    emp_id INT,
+    net_salary INT,
+    payroll_date DATE DEFAULT CURDATE(),
+    FOREIGN KEY (emp_id) REFERENCES employees(emp_id)
+);
+
+INSERT INTO employees (emp_id, name, basic, allowance, deduction) VALUES
+(1, 'Ravi Sharma', 30000, 8000, 2000),
+(2, 'Sneha Iyer', 45000, 12000, 5000),
+(3, 'Karan Patel', 28000, 6000, 1500),
+(4, 'Anita Verma', 52000, 15000, 7000);
+
+
+
+-------------------------------------------
+
+DELIMITER $$
+CREATE PROCEDURE process_salary(p_emp_id INT)
+BEGIN
+    DECLARE v_basic INT;
+    DECLARE v_allow INT;
+    DECLARE v_deduct INT;
+    DECLARE v_net INT;
+
+    -- Fetch salary components
+    SELECT basic, allowance, deduction
+    INTO v_basic, v_allow, v_deduct
+    FROM employees
+    WHERE emp_id = p_emp_id;
+
+    -- If employee not found
+    IF v_basic IS NULL THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Employee does not exist.';
+    END IF;
+
+    -- Calculate net salary
+    SET v_net = v_basic + v_allow - v_deduct;
+
+    -- Insert record into payroll history
+    INSERT INTO payroll_history (emp_id, net_salary, payroll_date)
+    VALUES (p_emp_id, v_net, CURDATE());
+END$$
+DELIMITER ;
+
+-------------------------------------------
+
+CALL process_salary(1);
+
+--------------------------------------------
+
+SELECT * FROM payroll_history;
+

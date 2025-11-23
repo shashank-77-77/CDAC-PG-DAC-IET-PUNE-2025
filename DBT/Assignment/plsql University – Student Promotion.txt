@@ -1,0 +1,94 @@
+9. University – Student Promotion
+•	Write a procedure promote_students(p_course_id)
+•	If marks ≥ 50 → promote to next semester.
+•	Update student_academic table.
+
+Table Structure
+CREATE TABLE student_academic (student_id INT PRIMARY KEY, course_id INT, semester INT, marks INT);
+9.1 University – Student 
+•	A stored procedure that assigns students to random batches (A/B/C
+
+
+------------------------------------------------
+
+CREATE TABLE student_academic (
+    student_id INT PRIMARY KEY,
+    course_id INT,
+    semester INT,
+    marks INT
+);
+
+
+CREATE TABLE student_batch (
+    student_id INT PRIMARY KEY,
+    batch VARCHAR(1)
+);
+
+----------------------------------------
+DELIMITER $$
+
+CREATE PROCEDURE promote_students(IN p_course_id INT)
+BEGIN
+    -- Promote eligible students within the specified course
+    UPDATE student_academic
+    SET semester = semester + 1
+    WHERE course_id = p_course_id
+      AND marks >= 50;
+END$$
+
+DELIMITER ;
+----------------------------------------------------
+
+
+DELIMITER $$
+
+CREATE PROCEDURE assign_random_batches()
+BEGIN
+    DECLARE v_batch CHAR(1);
+
+    -- For each student, assign random batch A/B/C
+    UPDATE student_academic
+    SET semester = semester  -- no change, just used to anchor update
+        ,
+        marks = marks        -- anchor
+        ,
+        course_id = course_id
+        -- but assign batch through correlated subquery or separate table
+    ;
+
+    -- If maintaining batch in same table, add column first:
+    -- ALTER TABLE student_academic ADD batch VARCHAR(1);
+
+    UPDATE student_academic
+    SET batch = ELT(FLOOR(1 + RAND() * 3), 'A', 'B', 'C');
+END$$
+
+DELIMITER ;
+
+-----------------------------------------------------------
+
+DELIMITER $$
+
+CREATE PROCEDURE assign_random_batches_external()
+BEGIN
+    DELETE FROM student_batch; -- reset if needed
+
+    INSERT INTO student_batch (student_id, batch)
+    SELECT 
+        student_id,
+        ELT(FLOOR(1 + RAND() * 3), 'A', 'B', 'C')
+    FROM student_academic;
+END$$
+
+DELIMITER ;
+
+------------------------------------------------------
+CALL promote_students(10);
+-------------------------------------------------------
+
+CALL assign_random_batches();
+----------------------------------------------------------
+
+CALL assign_random_batches_external();
+
+
