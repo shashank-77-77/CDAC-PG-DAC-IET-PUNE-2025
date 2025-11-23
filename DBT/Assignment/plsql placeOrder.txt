@@ -1,0 +1,211 @@
+ /*•	Create a procedure place_order(p_customer_id, p_product_id, p_qty)
+•	Check if stock is available.
+•	If yes, reduce stock, insert into orders, and calculate bill with 18% GST.
+•	If not, raise an exception.
+•	Assign random discounts between 5% and 30% whenever a product is added.
+•	Whenever a new order is placed, assign a random cashback (0 to ₹100).
+*/
+
+
+--------------------------------------------------------------
+
+
+CREATE TABLE ecom_product (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price INT,
+    stock INT
+);
+
+INSERT INTO ecom_product (product_id, product_name, price, stock) VALUES
+(1, 'Smartphone A1', 15000, 20),
+(2, 'Wireless Earbuds Z', 2500, 50),
+(3, 'Laptop Pro 14', 62000, 10),
+(4, 'Bluetooth Speaker X', 3200, 30),
+(5, 'Smartwatch Lite', 4500, 25);
+
+CREATE TABLE ecom_customer (
+    customer_id INT PRIMARY KEY,
+    cust_name VARCHAR(100),
+    email VARCHAR(100)
+);
+
+INSERT INTO ecom_customer (customer_id, cust_name, email) VALUES
+(101, 'Ravi Sharma', 'ravi@gmail.com'),
+(102, 'Anita Verma', 'anita@gmail.com'),
+(103, 'Karan Patel', 'karan@gmail.com'),
+(104, 'Sneha Iyer', 'sneha@gmail.com'),
+(105, 'Vikram Mehta', 'vikram@gmail.com');
+
+CREATE TABLE ecom_order (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT,
+    product_id INT,
+    qty INT,
+    total_price DECIMAL(10,2),
+    discount_percent INT,
+    cashback INT,
+    order_date DATETIME DEFAULT NOW(),
+    FOREIGN KEY (customer_id) REFERENCES ecom_customer(customer_id),
+    FOREIGN KEY (product_id) REFERENCES ecom_product(product_id)
+);
+
+
+INSERT INTO ecom_order (customer_id, product_id, qty, total_price, discount_percent, cashback, order_date)
+VALUES
+(101, 1, 1, 15000 * 1.18, 10, 50, '2025-01-10 10:30:00'),
+(102, 3, 1, 62000 * 1.18, 15, 30, '2025-01-11 15:20:00'),
+(103, 2, 2, 2500 * 2 * 1.18, 20, 70, '2025-01-12 09:45:00');
+
+
+----------------------------------------------------------------
+.sql
+
+drop procedure if EXISTS place_order;
+ DELIMITER $
+ CREATE PROCEDURE place_order (IN p_customer_id INT, IN p_product_id INT, IN p_qty INT)
+ 
+ BEGIN
+ -- •	Check if stock is available.
+ DECLARE stock_bal int;
+ DECLARE p_price int;
+ START TRANSACTION;
+ 
+select  stock INTO  stock_bal from ecom_product 
+WHERE product_id=  p_product_id;
+
+select price into p_price from ecom_product where product_id=p_product_id;
+ 
+  IF stock_bal IS NULL THEN
+        ROLLBACK;
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Product does not exist.';
+    ELSEIF stock_bal < p_qty THEN
+        ROLLBACK;
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Insufficient stock.';
+    ELSE
+	
+update ecom_product 
+ set stock= stock- p_qty
+ where product_id=p_product_id;
+ 
+ 
+ INSERT INTO ecom_order (customer_id,product_id,qty, total_price, order_date) VALUES (p_customer_id,p_product_id,p_qty, p_price*p_qty*1.18,NOW());
+COMMIT;
+END IF;
+ 
+ 
+ END $
+ DELIMITER ;
+
+
+-------------------------------------------------------------------------
+
+op
+
+mysql> CREATE TABLE ecom_product (
+    ->     product_id INT PRIMARY KEY,
+    ->     product_name VARCHAR(100),
+    ->     price INT,
+    ->     stock INT
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> INSERT INTO ecom_product (product_id, product_name, price, stock) VALUES
+    -> (1, 'Smartphone A1', 15000, 20),
+    -> (2, 'Wireless Earbuds Z', 2500, 50),
+    -> (3, 'Laptop Pro 14', 62000, 10),
+    -> (4, 'Bluetooth Speaker X', 3200, 30),
+    -> (5, 'Smartwatch Lite', 4500, 25);
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> CREATE TABLE ecom_customer (
+    ->     customer_id INT PRIMARY KEY,
+    ->     cust_name VARCHAR(100),
+    ->     email VARCHAR(100)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> INSERT INTO ecom_customer (customer_id, cust_name, email) VALUES
+    -> (101, 'Ravi Sharma', 'ravi@gmail.com'),
+    -> (102, 'Anita Verma', 'anita@gmail.com'),
+    -> (103, 'Karan Patel', 'karan@gmail.com'),
+    -> (104, 'Sneha Iyer', 'sneha@gmail.com'),
+    -> (105, 'Vikram Mehta', 'vikram@gmail.com');
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> CREATE TABLE ecom_order (
+    ->     order_id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     customer_id INT,
+    ->     product_id INT,
+    ->     qty INT,
+    ->     total_price DECIMAL(10,2),
+    ->     discount_percent INT,
+    ->     cashback INT,
+    ->     order_date DATETIME DEFAULT NOW(),
+    ->     FOREIGN KEY (customer_id) REFERENCES ecom_customer(customer_id),
+    ->     FOREIGN KEY (product_id) REFERENCES ecom_product(product_id)
+    -> );
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> INSERT INTO ecom_order (customer_id, product_id, qty, total_price, discount_percent, cashback, order_date)
+    -> VALUES
+    -> (101, 1, 1, 15000 * 1.18, 10, 50, '2025-01-10 10:30:00'),
+    -> (102, 3, 1, 62000 * 1.18, 15, 30, '2025-01-11 15:20:00'),
+    -> (103, 2, 2, 2500 * 2 * 1.18, 20, 70, '2025-01-12 09:45:00');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from ecom_product;
++------------+---------------------+-------+-------+
+| product_id | product_name        | price | stock |
++------------+---------------------+-------+-------+
+|          1 | Smartphone A1       | 15000 |    20 |
+|          2 | Wireless Earbuds Z  |  2500 |    50 |
+|          3 | Laptop Pro 14       | 62000 |    10 |
+|          4 | Bluetooth Speaker X |  3200 |    30 |
+|          5 | Smartwatch Lite     |  4500 |    25 |
++------------+---------------------+-------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from ecom_customer;
++-------------+--------------+------------------+
+| customer_id | cust_name    | email            |
++-------------+--------------+------------------+
+|         101 | Ravi Sharma  | ravi@gmail.com   |
+|         102 | Anita Verma  | anita@gmail.com  |
+|         103 | Karan Patel  | karan@gmail.com  |
+|         104 | Sneha Iyer   | sneha@gmail.com  |
+|         105 | Vikram Mehta | vikram@gmail.com |
++-------------+--------------+------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from ecom_order;
++----------+-------------+------------+------+-------------+------------------+----------+---------------------+
+| order_id | customer_id | product_id | qty  | total_price | discount_percent | cashback | order_date          |
++----------+-------------+------------+------+-------------+------------------+----------+---------------------+
+|        1 |         101 |          1 |    1 |    17700.00 |               10 |       50 | 2025-01-10 10:30:00 |
+|        2 |         102 |          3 |    1 |    73160.00 |               15 |       30 | 2025-01-11 15:20:00 |
+|        3 |         103 |          2 |    2 |     5900.00 |               20 |       70 | 2025-01-12 09:45:00 |
++----------+-------------+------------+------+-------------+------------------+----------+---------------------+
+3 rows in set (0.00 sec)
+
+mysql> source D:\CDAC\DBT\Assignment\PLSqlAssign\assign2.sql
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> call place_order(105,3,3);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select * from ecom_order;
++----------+-------------+------------+------+-------------+------------------+----------+---------------------+
+| order_id | customer_id | product_id | qty  | total_price | discount_percent | cashback | order_date          |
++----------+-------------+------------+------+-------------+------------------+----------+---------------------+
+|        1 |         101 |          1 |    1 |    17700.00 |               10 |       50 | 2025-01-10 10:30:00 |
+|        2 |         102 |          3 |    1 |    73160.00 |               15 |       30 | 2025-01-11 15:20:00 |
+|        3 |         103 |          2 |    2 |     5900.00 |               20 |       70 | 2025-01-12 09:45:00 |
+|        4 |         105 |          3 |    3 |   219480.00 |             NULL |     NULL | 2025-11-23 22:40:17 |
++----------+-------------+------------+------+-------------+------------------+----------+---------------------+
+4 rows in set (0.00 sec)

@@ -2,7 +2,7 @@ Write a procedure transfer_funds(p_from_acc, p_to_acc, p_amount)
 Deduct amount from sender, add to receiver.
 If balance is insufficient then all transactions should be rollbacked.
 Insert a log entry into transaction_history.
-1CREATE TABLE accounts (acc_no INT PRIMARY KEY, cust_name VARCHAR(50), balance INT);
+CREATE TABLE accounts (acc_no INT PRIMARY KEY, cust_name VARCHAR(50), balance INT);
 
 CREATE TABLE transaction_history (txn_id INT AUTO_INCREMENT PRIMARY KEY, from_acc INT, to_acc INT, amount INT, txn_date DATE DEFAULT CURDATE
 
@@ -42,6 +42,8 @@ INSERT INTO transaction_history (from_acc, to_acc, amount, txn_date) VALUES
 
 
 ----------------------------------------------
+
+.sql file
 
 drop procedure if exists transfer_funds;
 DELIMITER $
@@ -94,6 +96,43 @@ INSERT INTO transaction_history (from_acc,to_acc,amount, txn_date) VALUES (p_fro
  END IF;
 END $
 DELIMITER ;
+
+
+
+
+o/p----------------------------------------------
+
+mysql> source D:\CDAC\DBT\Assignment\PLSqlAssign\assign1.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> call transfer_funds(101,102,500);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from accounts;
++--------+--------------+---------+
+| acc_no | cust_name    | balance |
++--------+--------------+---------+
+|    101 | Ravi Sharma  |    4500 |
+|    102 | Anita Verma  |   12500 |
+|    103 | Karan Patel  |    8000 |
+|    104 | Sneha Iyer   |    3000 |
+|    105 | Vikram Mehta |   15000 |
++--------+--------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select * from transaction_history;
++--------+----------+--------+--------+---------------------+
+| txn_id | from_acc | to_acc | amount | txn_date            |
++--------+----------+--------+--------+---------------------+
+|      1 |      101 |    102 |    500 | 2025-01-10 10:30:00 |
+|      2 |      102 |    103 |   1500 | 2025-01-11 12:45:00 |
+|      3 |      103 |    104 |    700 | 2025-01-12 09:20:00 |
+|      4 |      105 |    101 |   2000 | 2025-01-13 14:10:00 |
+|      5 |      101 |    102 |    500 | 2025-11-23 22:18:15 |
++--------+----------+--------+--------+---------------------+
+5 rows in set (0.00 sec)
 
 
 
