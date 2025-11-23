@@ -226,4 +226,19 @@
 -- delimiter ;
 
 
+DROP TRIGGER IF EXISTS insert_in_item_ordered;
+ delimiter $$
+ CREATE TRIGGER insert_in_item_ordered BEFORE INSERT ON item_ordered FOR EACH ROW
+ begin
+ declare x INT;
+ set NEW.orderDate := current_date();
+ set NEW.orderTime := current_time();
+ SELECT itemID INTO x FROM item WHERE itemID = NEW.itemID;
+ if x is null then
+ signal sqlstate ‘45000' set message_text = "Item not found in item table!";
+ end if;
+ end $$
+ delimiter ;
+
+
 
