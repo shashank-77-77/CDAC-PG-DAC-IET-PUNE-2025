@@ -64,6 +64,27 @@
    <url-pattern>/deleteproduct</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  <servlet-name>Register</servlet-name>
+  <servlet-class>com.servlets.RegisterServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>Register</servlet-name>
+  <url-pattern>/registeruser</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>ForgotPassword</servlet-name>
+  <servlet-class>com.servlets.ForgotPasswordServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>ForgotPassword</servlet-name>
+  <url-pattern>/forgotpassword</url-pattern>
+</servlet-mapping>
+  
+  
+  
+  
   
   
 </web-app>

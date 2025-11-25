@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ProductCURD</name>
+	<name>HiddenFields</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -30,7 +30,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1764050640541</id>
+			<id>1764050640506</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

@@ -25,6 +25,7 @@ public class ShowProduct extends HttpServlet {
 		}
 		out.println("</table>");
 		out.println("<a href='addproduct.html'>Add new product</a>");
+		out.println("<a href='Login.html'>Back to Login</a>");
 	}
 	public void doGet(HttpServletRequest req,HttpServletResponse resp) throws IOException {
 		doPost(req,resp);
