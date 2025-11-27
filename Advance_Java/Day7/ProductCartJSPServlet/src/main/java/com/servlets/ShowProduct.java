@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,6 +17,7 @@ import com.service.ProductServiceImpl;
 
 
 //it will retrieve all products from databse and show it in table form
+@WebServlet("/showproduct")
 public class ShowProduct extends HttpServlet{
 	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException {
 		response.setContentType("text/html");
