@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+C:\Users\IET\Desktop\Maven\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2942286481.index
