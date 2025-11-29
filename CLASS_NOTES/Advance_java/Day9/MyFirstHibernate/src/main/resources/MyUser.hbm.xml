@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+  <hibernate-mapping>
+    <class name="com.demo.beans.MyUser" >
+       <id name="uid">
+           <generator class="assigned"></generator>
+       </id>
+       <property name="uname" type="string" column="uname" not-null="true"></property>
+       <property name="email" type="string" column="email" ></property>
+    </class>
+    
+  </hibernate-mapping>
