@@ -1,14 +1,43 @@
 1.	Display Name of the salesperson, customer name and amount of sales. 
+
+SELECT s.sname AS Salesperson, c.cname AS Customer, o.amt   AS Amount FROM salesman s JOIN orders o   ON s.salesman_id = o.salesman_id JOIN customer c ON o.customer_id = c.customer_id;
+
 2.	List employee name and name of managers.
+
+SELECT e.ename AS Employee, m.ename AS Manager FROM emp e LEFT JOIN emp m ON e.mgr = m.empno;
+
 3.	Display details of all departments and the corresponding employees 
+
+SELECT d.deptno, d.dname, d.loc, e.empno, e.ename, e.job FROM dept d LEFT JOIN emp e ON d.deptno = e.deptno;
+
 4.	Display all customer names with their order details (order number and ship date) for the orders shipped in 1987.
+
+SELECT c.cname, o.ord_no, o.ship_date FROM customer c JOIN orders o ON c.customer_id = o.customer_id WHERE EXTRACT(YEAR FROM o.ship_date)=1987;
+
 5.	Display salesman names and names of customers they are dealing with.
+
+SELECT s.sname AS Salesman, c.cname AS Customer FROM salesman s JOIN customer c ON s.salesman_id = c.salesman_id WHERE s.commission=0 OR s.commission IS NULL;
+
 6.	Display salesman who did not earn commission, with customer names whom they are dealing with.	
+
+SELECT s.sname AS Salesman, c.cname AS Customer FROM salesman s JOIN customer c ON s.salesman_id = c.salesman_id WHERE s.commission=0 OR s.commission IS NULL;
+
 7.	Display salesman names, salary, commission and their salary grades.
+
+SELECT s.sname, s.salary, s.commission, g.grade FROM salesman s JOIN salgrade g ON s.salary BETWEEN g.losal AND g.hisal;
+
 8.	Display all Tennis products and their price details (standard and minimum price).
+
+SELECT p.product_name, pr.standard_price, pr.min_price FROM product p JOIN price pr ON p.product_id = pr.product_id WHERE p.product_category='TENNIS';
+
 9.	Display the products purchased by either JOCKSPORTS (customer number 100) or JUST TENNIS (customer number 103) or both of them.
+
+SELECT DISTINCT p.product_name FROM orders o JOIN order_items oi ON o.order_id=oi.order_id JOIN product p ON oi.product_id=p.product_id WHERE o.customer_id IN (100,103);
+
 10.	Display the department name, and salary of any employee whose salary and commission matches both the salary and commission of any employee in DALLAS.
+
+SELECT d.dname, e.ename, e.sal, e.comm FROM emp e JOIN dept d ON e.deptno=d.deptno WHERE (e.sal,e.comm) IN (SELECT e2.sal,e2.comm FROM emp e2 JOIN dept d2 ON e2.deptno=d2.deptno WHERE d2.loc='DALLAS');
+
 11.	List out the common jobs in Research and Accounting Departments in ascending order.
 
-SELECT s.name AS Salesperson, c.name AS Customer, o.amount AS Sales_Amount FROM Salesperson s JOIN Orders o ON s.id = o.salesperson_id
-JOIN Customer c ON o.customer_id = c.id;
+SELECT s.name AS Salesperson, c.name AS Customer, o.amount AS Sales_Amount FROM Salesperson s JOIN Orders o ON s.id = o.salesperson_id JOIN Customer c ON o.customer_id = c.id;

@@ -563,27 +563,103 @@ mysql> SELECT MAX(LENGTH(ename)) AS max_name_length FROM emp GROUP BY ename HAVI
 30 rows in set (0.00 sec)
 
 31.	Write a query to list the length of service of the employees (of the form n years and m months).
+
+SELECT ename || ' - ' || FLOOR(MONTHS_BETWEEN(SYSDATE,hiredate)/12) || ' years ' || MOD(FLOOR(MONTHS_BETWEEN(SYSDATE,hiredate)),12) || ' months' AS service FROM emp;
+
 32.	How many employees who are joined in 1985.
+
+SELECT COUNT(*) FROM emp WHERE EXTRACT(YEAR FROM hiredate)=1985;
+
 33.	How many employees joined each month in 1985.
+
+SELECT EXTRACT(MONTH FROM hiredate) AS month,COUNT(*) FROM emp WHERE EXTRACT(YEAR FROM hiredate)=1985 GROUP BY EXTRACT(MONTH FROM hiredate);
+
 34.	How many employees who are joined in March 1985.
+
+SELECT COUNT(*) FROM emp WHERE EXTRACT(YEAR FROM hiredate)=1985 AND EXTRACT(MONTH FROM hiredate)=3;
+
 35.	Find the total sales amount
+
+SELECT SUM(amt) FROM orders;
+
 36.	Find the customer-wise lowest and highest sales amount
+
+SELECT customer_id,MIN(amt),MAX(amt) FROM orders GROUP BY customer_id;
+
 37.	Find product-wise lowest, highest and total sales.
+
+SELECT product_id,MIN(amount),MAX(amount),SUM(amount) FROM sales GROUP BY product_id;
+
 38.	Find department-wise average salary for all the departments employing more than three employees
+
+SELECT customer_id,SUM(amt) FROM orders WHERE customer_id<>(SELECT customer_id FROM customer WHERE cname='TKB SPORT SHOP') GROUP BY customer_id HAVING COUNT(*)<=4;
+
 39.	Find the customer-wise total sales for all the customers except ‘TKB SPORT SHOP’ who came to purchase various sports items maximum four times.
+
+SELECT customer_id,SUM(amt) FROM orders WHERE customer_id<>(SELECT customer_id FROM customer WHERE cname='TKB SPORT SHOP') GROUP BY customer_id HAVING COUNT(*)<=4;
+
 40.	Display the highest, lowest, sum and average salary for all employees. Label the columns appropriately.
+
+SELECT MAX(sal) AS highest,MIN(sal) AS lowest,SUM(sal) AS total,AVG(sal) AS average FROM emp;
+
 41.	Modify the above query and display the output for each job type.
+
+SELECT MAX(sal) AS highest,MIN(sal) AS lowest,SUM(sal) AS total,AVG(sal) AS average FROM emp;
+
 42.	List names of people who have salary less than the average salary for dept 20
+
+SELECT ename FROM emp WHERE sal < (SELECT AVG(sal) FROM emp WHERE deptno=20);
+
 43.	Find the average annual salary per job in each department. 
+
+SELECT deptno,job,AVG(sal*12) AS annual_avg FROM emp GROUP BY deptno,job;
+
 44.	Count the number of people in department 30 who receive a salary and the number of people who receive a commission
+
+SELECT (SELECT COUNT(*) FROM emp WHERE deptno=30 AND sal IS NOT NULL) AS salary_count,(SELECT COUNT(*) FROM emp WHERE deptno=30 AND comm IS NOT NULL) AS commission_count FROM dual;
+
+
 45.	Compute the average, minimum and maximum salaries of these groups of employees having job as Clerk or manager, Display the job as well
+
+SELECT job,AVG(sal),MIN(sal),MAX(sal) FROM emp WHERE job IN ('CLERK','MANAGER') GROUP BY job;
+
 46.	Write an SQL command that displays 2nd highest salary paid
+
+SELECT MAX(sal) FROM emp WHERE sal < (SELECT MAX(sal) FROM emp);
+
 47.	Write a query to find the employees who are earning the maximum salary in their departments.
+
+SELECT * FROM emp e WHERE sal=(SELECT MAX(sal) FROM emp WHERE deptno=e.deptno);
+
 48.	Write a query to find the salesman number (repid) who has achieved the maximum total sales among the entire salesman.
+
+SELECT salesman_id FROM orders GROUP BY salesman_id HAVING SUM(amt)=(SELECT MAX(SUM(amt)) FROM orders GROUP BY salesman_id);
+
 49.	List the highest salary paid for each job.
+
+SELECT job,MAX(sal) FROM emp GROUP BY job;
+
 50.	Find the most recently hired employee in each department.
+
+SELECT * FROM emp e WHERE hiredate=(SELECT MAX(hiredate) FROM emp WHERE deptno=e.deptno);
+
 51.	In which year did most people join the company? Display the year and the number of employees.
+
+SELECT EXTRACT(YEAR FROM hiredate) AS year,COUNT(*) AS total FROM emp GROUP BY EXTRACT(YEAR FROM hiredate) HAVING COUNT(*)=(SELECT MAX(COUNT(*)) FROM emp GROUP BY EXTRACT(YEAR FROM hiredate));
+
 52.	Write a query to display employee name whose name occurs only once in the table.
+
+SELECT ename FROM emp GROUP BY ename HAVING COUNT(*)=1;
+
 53.	Write a query to display all the details from dept table along with the no. of employee working in each dept.
+
+SELECT deptno,dname,loc,(SELECT COUNT(*) FROM emp WHERE emp.deptno=dept.deptno) AS emp_count FROM dept;
+
 54.	Find out which department does not have any employees.
+
+SELECT deptno,dname FROM dept WHERE deptno NOT IN (SELECT deptno FROM emp);
+
 55.	List out the no. of employees joined in every month in ascending order.
+
+SELECT EXTRACT(MONTH FROM hiredate) AS month,COUNT(*) FROM emp GROUP BY EXTRACT(MONTH FROM hiredate) ORDER BY month ASC;
+

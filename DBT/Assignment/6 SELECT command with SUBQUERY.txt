@@ -61,33 +61,125 @@ SELECT * FROM Emp WHERE SAL = (SELECT MIN(SAL)FROM Emp);
 
 12.	What length of longest ename and by how many characters is it long than its nearest one?
 
-
+SELECT MAX(LENGTH(ename)) AS longest, MAX(LENGTH(ename)) - (SELECT MAX(LENGTH(ename)) FROM emp e2 WHERE LENGTH(e2.ename) < (SELECT MAX(LENGTH(ename)) FROM emp)) AS difference FROM emp;
 
 13.	Which employees earn less than 30% of president s salary?
+
+SELECT * FROM emp WHERE sal < 0.3 * (SELECT sal FROM emp WHERE job='PRESIDENT');
+
 14.	List the department spending highest on salary.
+
+SELECT deptno FROM emp GROUP BY deptno HAVING SUM(sal) = (SELECT MAX(SUM(sal)) FROM emp GROUP BY deptno);
+
+
 15.	List the department having least number of staff.
+
+SELECT deptno FROM emp GROUP BY deptno HAVING COUNT(*) = (SELECT MIN(COUNT(*)) FROM emp GROUP BY deptno);
+
+
 16.	List the department having neither the highest not the lowest of avg salary.
+
+SELECT deptno FROM emp GROUP BY deptno HAVING AVG(sal) NOT IN ((SELECT MAX(AVG(sal)) FROM emp GROUP BY deptno),(SELECT MIN(AVG(sal)) FROM emp GROUP BY deptno));
+
+
 17.	Display details of all employees as Mr. Ford works under <manger name>.
+
+SELECT 'Mr. '||ename||' works under '||(SELECT ename FROM emp m WHERE m.empno=e.mgr) FROM emp e;
+
+
 18.	Display employee information who have joined the organization before 'BLAKE'
+
+SELECT * FROM emp WHERE hiredate < (SELECT hiredate FROM emp WHERE ename='BLAKE');
+
+
 19.	Display employee information that has joined the organization before their subordinates.
+
+SELECT * FROM emp e WHERE hiredate < (SELECT MIN(hiredate) FROM emp s WHERE s.mgr=e.empno);
+
 20.	List the employee (s) who earns the highest.
+
+SELECT * FROM emp WHERE sal=(SELECT MAX(sal) FROM emp);
+
 21.	List the mgr in dept 10 along with their dept details as well manager refers to anyone to whom at least 1 person reports.
+
+SELECT * FROM emp WHERE empno IN (SELECT mgr FROM emp WHERE mgr IS NOT NULL) AND deptno=10;
+
+
 22.	In which year did the most people join the organization? Display the year and the number of employees.
+
+SELECT EXTRACT(YEAR FROM hiredate) FROM emp GROUP BY EXTRACT(YEAR FROM hiredate) HAVING COUNT(*) = (SELECT MAX(COUNT(*)) FROM emp GROUP BY EXTRACT(YEAR FROM hiredate));
+
+
 23.	List number, name, job, manager number and manager’s job of each employee reporting to them
+
+SELECT empno,ename,job,mgr,(SELECT job FROM emp m WHERE m.empno=e.mgr) FROM emp e;
+
+
 24.	Display information about employees who have the maximum number of employees reporting to him
+
+SELECT * FROM emp WHERE empno = (SELECT mgr FROM emp GROUP BY mgr HAVING COUNT(*) = (SELECT MAX(COUNT(*)) FROM emp GROUP BY mgr));
+
 25.	Display the details of all employees who report to BLAKE
+
+SELECT * FROM emp WHERE mgr = (SELECT empno FROM emp WHERE ename='BLAKE');
+
 26.	Display the department no of all departments having more than 1 clerks
+
+SELECT deptno FROM emp WHERE job='CLERK' GROUP BY deptno HAVING COUNT(*) > 1;
+
 27.	Which employees earn less than 30% of the president’s salary?
+
+SELECT * FROM emp WHERE sal < (0.3 * (SELECT sal FROM emp WHERE job='PRESIDENT'));
+
 28.	Display all employee names and the locations of their departments except ‘CHICAGO’
+
+SELECT ename,(SELECT loc FROM dept d WHERE d.deptno=e.deptno) FROM emp e WHERE (SELECT loc FROM dept d2 WHERE d2.deptno=e.deptno) <> 'CHICAGO';
+
 29.	Display department that has no employees
+
+SELECT deptno FROM dept WHERE deptno NOT IN (SELECT deptno FROM emp);
+
 30.	Display the products purchased by JOCK SPORTS which are not purchased by JUST TENNIS
+
+SELECT DISTINCT product_id FROM order_items WHERE order_id IN (SELECT order_id FROM orders WHERE customer_id=100) AND product_id NOT IN (SELECT product_id FROM order_items WHERE order_id IN (SELECT order_id FROM orders WHERE customer_id=103));
+
 31.	Write a query to find out the employees who are first to join their departments 
+
+SELECT * FROM emp e WHERE hiredate = (SELECT MIN(hiredate) FROM emp WHERE deptno=e.deptno);
+
 32.	Create a query to display the name, hiredate, and salary for all employees who have both the same salary and commission as Scott.
+
+SELECT ename,hiredate,sal FROM emp WHERE sal=(SELECT sal FROM emp WHERE ename='SCOTT') AND NVL(comm,0)=NVL((SELECT comm FROM emp WHERE ename='SCOTT'),0);
+
+
 33.	List all the employees who have at least one person reporting to them.
+
+SELECT * FROM emp WHERE empno IN (SELECT mgr FROM emp WHERE mgr IS NOT NULL);
+
 34.	List the name of the employees with their immediate higher authority.
+
+SELECT ename,(SELECT ename FROM emp m WHERE m.empno=e.mgr) AS manager FROM emp e;
+
 35.	List all the employees who do not manage any one.
+
+SELECT * FROM emp WHERE empno NOT IN (SELECT mgr FROM emp WHERE mgr IS NOT NULL);
+
 36.	Write a query to display a ‘*’ against the row of the most recently hired employee.
+
+SELECT CASE WHEN hiredate=(SELECT MAX(hiredate) FROM emp) THEN '*' ELSE '' END, emp.* FROM emp;
+
 37.	Write a correlated sub-query to list out the employees who earn more than the average salary of their department.
+
+SELECT * FROM emp e WHERE sal > (SELECT AVG(sal) FROM emp WHERE deptno=e.deptno);
+
 38.	Find the 2nd maximum salary.
+
+SELECT MAX(sal) FROM emp WHERE sal < (SELECT MAX(sal) FROM emp);
+
 39.	Select the duplicate records (Records, which are inserted, that already exist) in the EMP table.
+
+SELECT empno,ename,job,mgr,hiredate,sal,comm,deptno FROM emp GROUP BY empno,ename,job,mgr,hiredate,sal,comm,deptno HAVING COUNT(*)>1;
+
 40.	List the Employees in Deptno 10 other than King.
+
+SELECT * FROM emp WHERE deptno=10 AND ename <> 'KING';

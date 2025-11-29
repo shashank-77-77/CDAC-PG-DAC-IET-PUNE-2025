@@ -500,6 +500,7 @@ mysql> SELECT
 
 13.Modify the above query to add a column that will subtract the Old Salary from the New Salary. 
 
+SELECT empno, ename, sal AS old_salary, sal*1.10 AS new_salary, (sal*1.10 - sal) AS salary_difference FROM emp;
 
 
 
