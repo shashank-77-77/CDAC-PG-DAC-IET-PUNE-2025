@@ -1,0 +1,2 @@
+mysql --host=192.168.10.117 --port=3306 --user=dac83 --password=welcome
+mysql --host=192.168.10.117 --port=3306 --user=dac82 --password=welcome
