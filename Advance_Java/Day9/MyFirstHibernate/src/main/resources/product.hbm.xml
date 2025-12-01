@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+  <hibernate-mapping>
+  <class name="com.demo.beans.Product">
+     <id name="pid">
+        <generator class="increment"></generator>
+     </id>
+     <property name="pname" type="string"></property>
+     <property name="qty" type="int"></property>
+     <property name="price" type="double"></property>
+     
+  </class>
+  </hibernate-mapping>
