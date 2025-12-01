@@ -15,9 +15,9 @@ public class TestMyUser {
 		SessionFactory sf=new Configuration().configure().buildSessionFactory();
 		Session session=sf.openSession();
 		Transaction tr=session.beginTransaction();
-		Address a1=new Address(12,"F.C.Road","Pune","411016");
-		MyUser u1=new MyUser(17,"Akshay","122",a1);
-		MyUser u2=new MyUser(18,"Manas","243",a1);
+		Address a1=new Address(12,"F.S.Road","Pune Shivaji","412016");
+		MyUser u1=new MyUser(19,"Akshu","102",a1);
+		MyUser u2=new MyUser(20,"Manasi","203",a1);
 		session.save(u1);
 		session.save(u2);
 		tr.commit();

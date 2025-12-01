@@ -5,28 +5,30 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import com.demo.beans.Address;
 import com.demo.beans.MyUser;
-import com.demo.beans.Product;
 
-public class TestMyuser {
+public class TestMyUser {
 
 	public static void main(String[] args) {
 		SessionFactory sf=new Configuration().configure().buildSessionFactory();
 		Session session=sf.openSession();
 		Transaction tr=session.beginTransaction();
-		MyUser u1=new MyUser(3,"Rushi","rushi@gmail.com");
-		MyUser u2=new MyUser(4,"Aditya","adi@gmail.com");
-		Product p1=new Product("lays2",29,85);
-		Product p2=new Product("nachos3",28,253);
+		Address a1=new Address("RD. B. Road","Pune","4144016");
+		MyUser u1=new MyUser(12,"Ashwini","4551",a1);
+		Address a2=new Address("Baner","Pune","4110995");
+		MyUser u2=new MyUser(13,"Rajanish","4422",a2);
+		session.save(a1);
 		session.save(u1);
+		session.save(a2);
 		session.save(u2);
-		session.save(p1);
-		session.save(p2);
 		tr.commit();
 		session.close();
 		sf.close();
+		
+		
+		
 
 	}
 
 }
-
