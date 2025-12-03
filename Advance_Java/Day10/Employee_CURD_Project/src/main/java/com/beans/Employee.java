@@ -1,10 +1,14 @@
 package com.beans;
 
 import java.time.LocalDate;
+
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 @Entity
@@ -15,7 +19,12 @@ public class Employee {
 	private String ename;
 	private LocalDate hiredate;
 	private double sal;
-	@ManyToMany
+    @ManyToMany(fetch=FetchType.EAGER)
+    @JoinTable(
+	        name = "emp_project",
+	        joinColumns = @JoinColumn(name = "eid"),
+	        inverseJoinColumns = @JoinColumn(name = "pid")
+	    )
 	Set<Project> pset;
 	public Employee()
 	{

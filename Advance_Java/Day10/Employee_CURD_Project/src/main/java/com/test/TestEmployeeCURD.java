@@ -1,8 +1,9 @@
 package com.test;
 
+import java.util.List;
 import java.util.Scanner;
 
-
+import com.beans.Employee;
 import com.service.EmployeeService;
 import com.service.EmployeeServiceImpl;
 import com.service.ProjectService;
@@ -43,6 +44,43 @@ public class TestEmployeeCURD {
 					System.out.println("not added");
 				}
 			}
+			case 3->{
+				List<Employee> elist =eservice.getAllEmployee();
+				elist.stream().forEach(System.out::println);
+			}
+			
+			case 4->{
+				System.out.println("Enter Employee ID to delete");
+				int empid=sc.nextInt();
+				boolean status=eservice.deleteById(empid);
+				if(status)
+				{
+					System.out.println("Employee Deleted Successfully");
+				}
+				else
+				{
+					System.out.println("Not Deleted");
+				}
+			}
+			
+			case 5->{
+				System.out.println("Enter Employee id to update");
+				int empid=sc.nextInt();
+				System.out.println("Enter new salary");
+				double sal=sc.nextDouble();
+				System.out.println("Enter new name");
+				String name=sc.next();
+				boolean status=eservice.UpdateEmpById(empid,name,sal);
+				if(status)
+				{
+					System.out.println("Employee updated successfully");
+				}
+				else
+				{
+					System.out.println("not updated");
+				}
+			}
+			
 			}
 		}while(choice != 6);
 	}

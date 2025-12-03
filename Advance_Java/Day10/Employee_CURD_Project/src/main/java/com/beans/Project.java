@@ -16,7 +16,7 @@ public class Project {
 	private int pid;
 	private String pname;
 	private LocalDate startdate;
-	@ManyToMany(mappedBy="pset",cascade=CascadeType.ALL)
+	@ManyToMany(mappedBy="pset")
 	Set<Employee> eset;
 	public Project() {
 		super();
@@ -60,7 +60,7 @@ public class Project {
 	}
 	@Override
 	public String toString() {
-		return "Project [pid=" + pid + ", pname=" + pname + ", startdate=" + startdate + ", eset=" + eset + "]";
+		return "Project [pid=" + pid + ", pname=" + pname + ", startdate=" + startdate + "]";
 	}
 	
 	
