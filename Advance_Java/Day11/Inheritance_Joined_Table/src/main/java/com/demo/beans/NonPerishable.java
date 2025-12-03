@@ -1,0 +1,40 @@
+package com.demo.beans;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="nonperishable")
+public class NonPerishable extends Product {
+	private int garentee;
+
+	public NonPerishable() {
+		super();
+	}
+
+	public NonPerishable(int pid,String pname,int qty,double price,LocalDate mgdate,int garentee) {
+		super(pid,pname,qty,price,mgdate);
+		this.garentee = garentee;
+	}
+
+	public int getGarentee() {
+		return garentee;
+	}
+
+	public void setGarentee(int garentee) {
+		this.garentee = garentee;
+	}
+
+	@Override
+	public String toString() {
+		return "NonPerishable [garentee=" + garentee + "]";
+	}
+
+	
+	
+		
+	
+	
+}
