@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+https://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean id="hw" class="com.demo.bean.HelloWorld">
+</bean>
+
+<bean id="emp1" class="com.demo.bean.Employee">
+<property name="eid" value="12"></property>
+<property name="ename" value="Soham"></property>
+<property name="sal" value="40000"></property>
+</bean>
+
+<bean id="emp2" class="com.demo.bean.Employee">
+<property name="eid" value="12"></property>
+<property name="ename" value="Shashank"></property>
+<property name="sal" value="30000"></property>
+</bean>
+
+<bean id="ad1" class="com.demo.bean.Address">
+<property name="street" value="Shivaji nagar"></property>
+<property name="city" value="pune"></property>
+<property name="pincode" value="411016"></property>
+</bean>
+
+<bean id="u1" class="com.demo.bean.MyUser">
+<property name="uid" value="101"></property>
+<property name="uname" value="Rohit"></property>
+<property name="email" value="rr123@gmail.com"></property>
+<property name="addr" ref="ad1"></property>
+
+</bean>
+
+
+</beans>
