@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+https://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean id="p1" class="com.demo.beans.Product">
+    <property name="id" value="10"></property>
+    <property name="pname" value="chair"></property>
+    <property name="qty" value="10"></property>
+    <property name="price" value="4500.00"></property>
+</bean>
+
+<bean id="p2" class="com.demo.beans.Product">
+    <property name="id" value="11"></property>
+    <property name="pname" value="table"></property>
+    <property name="qty" value="100"></property>
+    <property name="price" value="7500.00"></property>
+</bean>
+
+<bean id="p3" class="com.demo.beans.Product">
+    <property name="id" value="12"></property>
+    <property name="pname" value="shelf"></property>
+    <property name="qty" value="17"></property>
+    <property name="price" value="2500.00"></property>
+</bean>
+
+<bean id="ord1" class="com.demo.beans.Order" init-method="myinit" destroy-method="mydestroy">
+   
+    <property name="orderid" value="100"></property>
+    <property name="cname" value="Ramesh"></property>
+    <property name="plist">
+       <list>
+        <ref bean="p1"></ref>
+        <ref bean="p2"></ref>
+        <ref bean="p3"></ref>
+       </list>
+    </property>
+   
+
+</bean>
+
+</beans>
