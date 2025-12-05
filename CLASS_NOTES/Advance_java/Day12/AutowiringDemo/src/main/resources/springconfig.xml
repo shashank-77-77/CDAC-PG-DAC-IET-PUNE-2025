@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+https://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean id="f1" class="com.demo.beans.Faculty" autowire="byName">
+<property name="fid" value="12"></property>
+<property name="fname" value="xxxx"></property>
+<!--   <property name="spskill" ref="sk1"></property>
+<property name="addr" ref="ad1"></property>-->
+</bean>
+
+<bean id="spskill" class="com.demo.beans.Skill" scope="prototype">
+   <property name="skid" value="100"></property>
+   <property name="skname" value="Java"></property>
+   <property name="experience" value="12"></property>
+</bean>
+<!--  <bean id="ad1" class="com.demo.beans.Address">
+   <property name="street" value="sb road"></property>
+   <property name="city" value="Pune"></property>
+   <property name="pincode" value="411016"></property>
+</bean>-->
+
+<bean id="addr" class="com.demo.beans.Address">
+   <property name="street" value="prabhat road"></property>
+   <property name="city" value="Pune"></property>
+   <property name="pincode" value="411016"></property>
+</bean>
+
+
+<bean id="f2" class="com.demo.beans.Faculty" autowire="constructor">
+  <constructor-arg index="0" value="12"></constructor-arg>
+  <constructor-arg index="1" value="xxxxxx"></constructor-arg>
+</bean>
+
+<!--  
+<bean id="addr1" class="com.demo.beans.Address">
+   <constructor-arg index="0" value="prabhat road"></constructor-arg>
+   <constructor-arg index="1" value="Pune"></constructor-arg>
+   <constructor-arg index="2" value="411016"></constructor-arg>
+</bean>
+
+<bean id="spskill1" class="com.demo.beans.Skill" >
+   <constructor-arg index="0" value="101"></constructor-arg>
+   <constructor-arg index="1" value="C++"></constructor-arg>
+   <constructor-arg index="2" value="10"></constructor-arg>
+</bean>
+-->
+
+</beans>
