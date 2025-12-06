@@ -7,10 +7,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HelloController {
-	@GetMapping("/hello")
+	@GetMapping("/")
 	public String sayHello()
 	{
-		return "hello";
+		return "index";
 	}
 	
 	@GetMapping("/welcome")
