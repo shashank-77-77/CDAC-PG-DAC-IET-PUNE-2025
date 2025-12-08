@@ -6,7 +6,7 @@
   <packaging>war</packaging>
   <name>MySpringMVCDemo</name>
   <description>MySpringMVCDemo</description>
-    <properties>
+   <properties>
   
       
 		<jstl.version>1.2.1</jstl.version>

@@ -1,11 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.demo</groupId>
-  <artifactId>MySpringMVCDemo</artifactId>
+  <artifactId>MySpringWebserviceProductCrud</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>MySpringMVCDemo</name>
-  <description>MySpringMVCDemo</description>
+  <name>MySpringWebserviceProductCrud</name>
+  <description>MySpringWebserviceProductCrud</description>
+  
    <properties>
   
       
@@ -40,18 +41,7 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
-		<!-- JSTL Dependency -->
-		<dependency>
-			<groupId>javax.servlet.jsp.jstl</groupId>
-			<artifactId>javax.servlet.jsp.jstl-api</artifactId>
-			<version>${jstl.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>taglibs</groupId>
-			<artifactId>standard</artifactId>
-			<version>${tld.version}</version>
-		</dependency>
+		
 
 		<!-- Servlet Dependency -->
 		<dependency>
@@ -60,15 +50,41 @@
 			<version>${servlets.version}</version>
 			<scope>provided</scope>
 		</dependency>
+			<!-- Commons FileUpload / IO and Commons DBCP for DataSource --> 
+   <dependency> 
+	   <groupId>commons-fileupload</groupId> 
+	   <artifactId>commons-fileupload</artifactId> 
+	   <version>1.4</version> 
+   </dependency> 
+   <dependency> 
+	   <groupId>commons-io</groupId> 
+	   <artifactId>commons-io</artifactId> 
+	   <version>2.11.0</version> 
+   </dependency> 
+   <dependency> 
+	   <groupId>org.apache.commons</groupId> 
+	   <artifactId>commons-dbcp2</artifactId> 
+	   <version>2.9.0</version> 
+   </dependency> 
 
-
-		<!-- JSP Dependency -->
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
 		<dependency>
-			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>javax.servlet.jsp-api</artifactId>
-			<version>${jsp.version}</version>
-			<scope>provided</scope>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-core</artifactId>
+		    <version>2.11.3</version>
 		</dependency>
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>2.11.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-mapper-asl -->
+		<dependency>
+		    <groupId>org.codehaus.jackson</groupId>
+		    <artifactId>jackson-mapper-asl</artifactId>
+		    <version>1.9.13</version>
+		</dependency>
+		
 
 		<!-- mysql-connector-java -->
 		<dependency>
