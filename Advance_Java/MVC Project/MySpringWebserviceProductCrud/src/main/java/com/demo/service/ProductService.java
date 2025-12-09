@@ -10,16 +10,14 @@ public interface ProductService {
 
 	List<ProductDto> getAllProducts();
 
-	boolean addproduct(Product p);
+	boolean addproduct(ProductDto p);
 
 	ProductDto getById(int pid);
 
-	boolean updateproduct(Product p);
+
 
 	boolean deleteById(int pid);
 
 	boolean updateproduct(ProductDto p);
-
-	boolean addproduct(ProductDto p);
 
 }

@@ -36,15 +36,15 @@ public class ProductDaoImpl implements ProductDao {
 		return plist;
 	}
 
-	@Override
+	
 	public boolean save(Product p) {
-		int n=jdbctemplate.update("insert into product values(?,?,?,?,?,?)",new Object[]{
+		int n=jdbctemplate.update("insert into myproduct values(?,?,?,?,?,?)",new Object[]{
 				p.getPid(),p.getPname(),p.getQty(),p.getPrice(),p.getMfgdate(),p.getCid()
 		});
 		return n>0;
 	}
 
-	@Override
+
 	public Product findById(int pid) {
 		try
 		{
@@ -58,17 +58,24 @@ public class ProductDaoImpl implements ProductDao {
 		
 	}
 
-	@Override
+	
 	public boolean modifyProduct(Product p) {
-		// TODO Auto-generated method stub
-		return false;
+		int n=jdbctemplate.update("update myproduct set pname=?,qty=?,price=?,cid=? where pid=?",
+				new Object[] {
+						p.getPname(),p.getQty(),p.getPrice(),p.getCid(),p.getPid()
+				});
+		return n>0;
 	}
 
 	@Override
 	public boolean removeById(int pid) {
-		// TODO Auto-generated method stub
-		return false;
+		int n=jdbctemplate.update("delete from myproduct where pid=?",
+				new Object[] {pid});
+		return n>0;
 	}
+
+
+
 	
 	
 }

@@ -1,6 +1,7 @@
 package com.demo.test;
 
 import java.util.Locale;
+
 import java.util.Scanner;
 
 import org.springframework.context.ApplicationContext;
@@ -14,15 +15,14 @@ public class TestLocalization {
 		Scanner sc=new Scanner(System.in);
 		ApplicationContext ctx=new ClassPathXmlApplicationContext("springconfig.xml");
         MessageSource ms=(MessageSource)ctx.getBean(ResourceBundleMessageSource.class);
-        System.out.println("1. Marathi \n2. US English\n3. UK english\n4. others \n5.Exit \n choice:");
+        System.out.println("1. Marathi \n2. US English\n3. UK english\n4. others \n choice:");
         int choice=sc.nextInt();
         Locale locale=null;
         switch(choice) {
         case 1:{
         	locale=new Locale("my","marathi");
         	System.out.println("Country name :"+locale.getCountry()+"language: "+locale.getLanguage());
-        	break;
-        	
+        	break;	
         }
         case 2:{
         	locale=Locale.US;
@@ -51,7 +51,6 @@ public class TestLocalization {
         System.out.println(billmsg);
         double amount=sc.nextDouble();
         System.out.println("Your bill amount : "+ amount+" "+currency+"is receieved");
-        
+       
 	}
-
 }

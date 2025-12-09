@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.demo.beans.Product;
 import com.demo.dao.ProductDao;
 import com.demo.dto.ProductDto;
+import com.demo.mapper.ProductDtoMapper;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -24,37 +25,25 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public boolean addproduct(Product p) {
-	
-		return pdao.save(p);
+	public boolean addproduct(ProductDto p) {
+		Product prod=ProductDtoMapper.mapToProduct(p);
+		return pdao.save(prod);
 	}
-
 	@Override
 	public ProductDto getById(int pid) {
-		return pdao.findById(pid);
-
+		Product p=pdao.findById(pid);
+		ProductDto prod=ProductDtoMapper.mapToProductDto(p);
+		return prod;
 	}
 
 	@Override
-	public boolean updateproduct(Product p) {
-		
-		return pdao.modifyProduct(p);
+	public boolean updateproduct(ProductDto p) {
+		Product prod=ProductDtoMapper.mapToProduct(p);
+		return pdao.modifyProduct(prod);
 	}
 
 	@Override
 	public boolean deleteById(int pid) {
 		return pdao.removeById(pid);
-	}
-
-	@Override
-	public boolean updateproduct(ProductDto p) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean addproduct(ProductDto p) {
-		// TODO Auto-generated method stub
-		return false;
 	}
 }

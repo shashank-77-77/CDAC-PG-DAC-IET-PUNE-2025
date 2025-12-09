@@ -7,7 +7,7 @@
   <name>MySpringWebserviceProductCrud</name>
   <description>MySpringWebserviceProductCrud</description>
   
-   <properties>
+<properties>
   
       
 		<jstl.version>1.2.1</jstl.version>
