@@ -1,0 +1,12 @@
+
+<web-app>
+    <servlet>
+        <servlet-name>AttendanceController</servlet-name>
+        <servlet-class>com.college.attendance.controller.AttendanceController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AttendanceController</servlet-name>
+        <url-pattern>/attendance</url-pattern>
+    </servlet-mapping>
+</web-app>
