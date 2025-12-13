@@ -1,2 +1,33 @@
+cdac login
+
 mysql --host=192.168.10.117 --port=3306 --user=dac83 --password=welcome
 mysql --host=192.168.10.117 --port=3306 --user=dac82 --password=welcome
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+laptop Login mysql
+
+mysql --version   //to check sql version
+
+
+MySQL -u root -p
+root
+
+
+
+C:\Users\shash>MySQL -u root -p
+Enter password: ****  pass = root
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.44 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;

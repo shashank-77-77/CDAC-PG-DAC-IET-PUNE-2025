@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="content">
+<div>
+    <div class="mb-3">
+        <a class="btn btn-primary" th:href="@{/bookings/new}">Create Booking</a>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Travel Date</th>
+            <th>Seats</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="b : ${bookings}">
+            <td th:text="${b.id}">1</td>
+            <td th:text="${b.customerName}">John</td>
+            <td th:text="${b.source}">City A</td>
+            <td th:text="${b.destination}">City B</td>
+            <td th:text="${b.travelDate}">2025-12-12</td>
+            <td th:text="${b.seats}">2</td>
+            <td th:text="${b.price}">100.0</td>
+            <td>
+                <a th:href="@{/bookings/view/{id}(id=${b.id})}" class="btn btn-sm btn-info">View</a>
+                <a th:href="@{/bookings/edit/{id}(id=${b.id})}" class="btn btn-sm btn-warning">Edit</a>
+                <a th:href="@{/bookings/delete/{id}(id=${b.id})}" class="btn btn-sm btn-danger" onclick="return confirm('Delete booking?');">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</html>

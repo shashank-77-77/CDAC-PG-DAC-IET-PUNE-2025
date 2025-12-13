@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="content">
+<div>
+    <dl class="row">
+        <dt class="col-sm-3">ID</dt>
+        <dd class="col-sm-9" th:text="${booking.id}"></dd>
+
+        <dt class="col-sm-3">Customer</dt>
+        <dd class="col-sm-9" th:text="${booking.customerName}"></dd>
+
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9" th:text="${booking.email}"></dd>
+
+        <dt class="col-sm-3">From</dt>
+        <dd class="col-sm-9" th:text="${booking.source}"></dd>
+
+        <dt class="col-sm-3">To</dt>
+        <dd class="col-sm-9" th:text="${booking.destination}"></dd>
+
+        <dt class="col-sm-3">Travel Date</dt>
+        <dd class="col-sm-9" th:text="${booking.travelDate}"></dd>
+
+        <dt class="col-sm-3">Seats</dt>
+        <dd class="col-sm-9" th:text="${booking.seats}"></dd>
+
+        <dt class="col-sm-3">Price</dt>
+        <dd class="col-sm-9" th:text="${booking.price}"></dd>
+    </dl>
+
+    <a class="btn btn-secondary" th:href="@{/bookings}">Back</a>
+    <a class="btn btn-warning" th:href="@{/bookings/edit/{id}(id=${booking.id})}">Edit</a>
+</div>
+</html>
