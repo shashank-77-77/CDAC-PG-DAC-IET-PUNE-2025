@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\bin\Debug\net8.0\01HelloWorldNewVersion.exe
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\bin\Debug\net8.0\01HelloWorldNewVersion.deps.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\bin\Debug\net8.0\01HelloWorldNewVersion.runtimeconfig.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\bin\Debug\net8.0\01HelloWorldNewVersion.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\bin\Debug\net8.0\01HelloWorldNewVersion.pdb
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\obj\Debug\net8.0\01HelloWorldNewVersion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\obj\Debug\net8.0\01HelloWorldNewVersion.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\obj\Debug\net8.0\01HelloWorldNewVersion.AssemblyInfo.cs
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\obj\Debug\net8.0\01HelloWorldNewVersion.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\obj\Debug\net8.0\01HelloWorldNewVersion.sourcelink.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\obj\Debug\net8.0\01HelloWorldNewVersion.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\obj\Debug\net8.0\refint\01HelloWorldNewVersion.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\obj\Debug\net8.0\01HelloWorldNewVersion.pdb
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\obj\Debug\net8.0\01HelloWorldNewVersion.genruntimeconfig.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\01HelloWorldNewVersion\obj\Debug\net8.0\ref\01HelloWorldNewVersion.dll
