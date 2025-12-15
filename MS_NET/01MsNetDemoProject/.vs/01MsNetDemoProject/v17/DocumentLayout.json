@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\MS_NET\\01MsNetDemoProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC056946-E63A-4D30-B719-88FD2C25152A}|Pattern1\\Pattern1.csproj|c:\\users\\iet\\desktop\\soham cdac\\cdac_pg-dac\\250845920083\\ms_net\\01msnetdemoproject\\pattern1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC056946-E63A-4D30-B719-88FD2C25152A}|Pattern1\\Pattern1.csproj|solutionrelative:pattern1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC056946-E63A-4D30-B719-88FD2C25152A}|Pattern1\\Pattern1.csproj|c:\\users\\iet\\desktop\\soham cdac\\cdac_pg-dac\\250845920083\\ms_net\\01msnetdemoproject\\pattern1\\pattern1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CC056946-E63A-4D30-B719-88FD2C25152A}|Pattern1\\Pattern1.csproj|solutionrelative:pattern1\\pattern1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AD451F9-69A3-4CC8-8961-807BF3CA2E9B}|HelloWorldOldVersion\\HelloWorldOldVersion.csproj|c:\\users\\iet\\desktop\\soham cdac\\cdac_pg-dac\\250845920083\\ms_net\\01msnetdemoproject\\helloworldoldversion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AD451F9-69A3-4CC8-8961-807BF3CA2E9B}|HelloWorldOldVersion\\HelloWorldOldVersion.csproj|solutionrelative:helloworldoldversion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5264B1F-087B-4A5D-AAD0-3874DE542463}|01HelloWorldNewVersion\\01HelloWorldNewVersion.csproj|c:\\users\\iet\\desktop\\soham cdac\\cdac_pg-dac\\250845920083\\ms_net\\01msnetdemoproject\\01helloworldnewversion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5264B1F-087B-4A5D-AAD0-3874DE542463}|01HelloWorldNewVersion\\01HelloWorldNewVersion.csproj|solutionrelative:01helloworldnewversion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pattern1",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\MS_NET\\01MsNetDemoProject\\Pattern1\\Pattern1.csproj",
+              "RelativeDocumentMoniker": "Pattern1\\Pattern1.csproj",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\MS_NET\\01MsNetDemoProject\\Pattern1\\Pattern1.csproj",
+              "RelativeToolTip": "Pattern1\\Pattern1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-15T13:12:10.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\MS_NET\\01MsNetDemoProject\\Pattern1\\Program.cs",
+              "RelativeDocumentMoniker": "Pattern1\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\MS_NET\\01MsNetDemoProject\\Pattern1\\Program.cs",
+              "RelativeToolTip": "Pattern1\\Program.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAAC0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T13:04:31.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\MS_NET\\01MsNetDemoProject\\HelloWorldOldVersion\\Program.cs",
+              "RelativeDocumentMoniker": "HelloWorldOldVersion\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\MS_NET\\01MsNetDemoProject\\HelloWorldOldVersion\\Program.cs",
+              "RelativeToolTip": "HelloWorldOldVersion\\Program.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T12:53:47.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\MS_NET\\01MsNetDemoProject\\01HelloWorldNewVersion\\Program.cs",
+              "RelativeDocumentMoniker": "01HelloWorldNewVersion\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\MS_NET\\01MsNetDemoProject\\01HelloWorldNewVersion\\Program.cs",
+              "RelativeToolTip": "01HelloWorldNewVersion\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T12:46:27.414Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
