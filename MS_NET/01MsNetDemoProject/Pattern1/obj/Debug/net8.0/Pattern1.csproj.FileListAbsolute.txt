@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\obj\Debug\net8.0\Pattern1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\obj\Debug\net8.0\Pattern1.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\obj\Debug\net8.0\Pattern1.AssemblyInfo.cs
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\obj\Debug\net8.0\Pattern1.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\obj\Debug\net8.0\Pattern1.sourcelink.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\bin\Debug\net8.0\Pattern1.exe
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\bin\Debug\net8.0\Pattern1.deps.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\bin\Debug\net8.0\Pattern1.runtimeconfig.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\bin\Debug\net8.0\Pattern1.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\bin\Debug\net8.0\Pattern1.pdb
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\obj\Debug\net8.0\Pattern1.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\obj\Debug\net8.0\refint\Pattern1.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\obj\Debug\net8.0\Pattern1.pdb
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\obj\Debug\net8.0\Pattern1.genruntimeconfig.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\01MsNetDemoProject\Pattern1\obj\Debug\net8.0\ref\Pattern1.dll
