@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\bin\Debug\net8.0\BoxingandUnBoxing.exe
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\bin\Debug\net8.0\BoxingandUnBoxing.deps.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\bin\Debug\net8.0\BoxingandUnBoxing.runtimeconfig.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\bin\Debug\net8.0\BoxingandUnBoxing.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\bin\Debug\net8.0\BoxingandUnBoxing.pdb
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\obj\Debug\net8.0\BoxingandUnBoxing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\obj\Debug\net8.0\BoxingandUnBoxing.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\obj\Debug\net8.0\BoxingandUnBoxing.AssemblyInfo.cs
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\obj\Debug\net8.0\BoxingandUnBoxing.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\obj\Debug\net8.0\BoxingandUnBoxing.sourcelink.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\obj\Debug\net8.0\BoxingandUnBoxing.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\obj\Debug\net8.0\refint\BoxingandUnBoxing.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\obj\Debug\net8.0\BoxingandUnBoxing.pdb
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\obj\Debug\net8.0\BoxingandUnBoxing.genruntimeconfig.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\BoxingandUnBoxing\obj\Debug\net8.0\ref\BoxingandUnBoxing.dll
