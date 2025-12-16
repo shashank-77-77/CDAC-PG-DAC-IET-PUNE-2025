@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\bin\Debug\net8.0\InheritanceClass.exe
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\bin\Debug\net8.0\InheritanceClass.deps.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\bin\Debug\net8.0\InheritanceClass.runtimeconfig.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\bin\Debug\net8.0\InheritanceClass.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\bin\Debug\net8.0\InheritanceClass.pdb
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\obj\Debug\net8.0\InheritanceClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\obj\Debug\net8.0\InheritanceClass.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\obj\Debug\net8.0\InheritanceClass.AssemblyInfo.cs
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\obj\Debug\net8.0\InheritanceClass.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\obj\Debug\net8.0\InheritanceClass.sourcelink.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\obj\Debug\net8.0\InheritanceClass.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\obj\Debug\net8.0\refint\InheritanceClass.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\obj\Debug\net8.0\InheritanceClass.pdb
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\obj\Debug\net8.0\InheritanceClass.genruntimeconfig.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\InheritanceClass\obj\Debug\net8.0\ref\InheritanceClass.dll
