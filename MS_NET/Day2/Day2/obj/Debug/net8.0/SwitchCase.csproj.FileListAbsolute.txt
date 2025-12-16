@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\bin\Debug\net8.0\SwitchCase.exe
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\bin\Debug\net8.0\SwitchCase.deps.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\bin\Debug\net8.0\SwitchCase.runtimeconfig.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\bin\Debug\net8.0\SwitchCase.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\bin\Debug\net8.0\SwitchCase.pdb
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\obj\Debug\net8.0\SwitchCase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\obj\Debug\net8.0\SwitchCase.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\obj\Debug\net8.0\SwitchCase.AssemblyInfo.cs
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\obj\Debug\net8.0\SwitchCase.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\obj\Debug\net8.0\SwitchCase.sourcelink.json
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\obj\Debug\net8.0\SwitchCase.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\obj\Debug\net8.0\refint\SwitchCase.dll
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\obj\Debug\net8.0\SwitchCase.pdb
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\obj\Debug\net8.0\SwitchCase.genruntimeconfig.cache
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\Day2\obj\Debug\net8.0\ref\SwitchCase.dll
