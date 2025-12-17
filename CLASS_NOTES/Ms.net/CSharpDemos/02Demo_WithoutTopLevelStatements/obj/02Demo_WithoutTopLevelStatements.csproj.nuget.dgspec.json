@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\IET_Dec_2025_Batch\\CSharpDemos\\02Demo_WithoutTopLevelStatements\\02Demo_WithoutTopLevelStatements.csproj": {}
+    "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\02Demo_WithoutTopLevelStatements\\02Demo_WithoutTopLevelStatements.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\IET_Dec_2025_Batch\\CSharpDemos\\02Demo_WithoutTopLevelStatements\\02Demo_WithoutTopLevelStatements.csproj": {
+    "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\02Demo_WithoutTopLevelStatements\\02Demo_WithoutTopLevelStatements.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\IET_Dec_2025_Batch\\CSharpDemos\\02Demo_WithoutTopLevelStatements\\02Demo_WithoutTopLevelStatements.csproj",
+        "projectUniqueName": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\02Demo_WithoutTopLevelStatements\\02Demo_WithoutTopLevelStatements.csproj",
         "projectName": "02Demo_WithoutTopLevelStatements",
-        "projectPath": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\IET_Dec_2025_Batch\\CSharpDemos\\02Demo_WithoutTopLevelStatements\\02Demo_WithoutTopLevelStatements.csproj",
+        "projectPath": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\02Demo_WithoutTopLevelStatements\\02Demo_WithoutTopLevelStatements.csproj",
         "packagesPath": "C:\\Users\\IET\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\IET_Dec_2025_Batch\\CSharpDemos\\02Demo_WithoutTopLevelStatements\\obj\\",
+        "outputPath": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\02Demo_WithoutTopLevelStatements\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

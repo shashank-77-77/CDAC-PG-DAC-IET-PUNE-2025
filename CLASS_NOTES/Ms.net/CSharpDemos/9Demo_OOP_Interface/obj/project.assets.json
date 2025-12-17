@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\IET_Dec_2025_Batch\\CSharpDemos\\9Demo_OOP_Interface\\9Demo_OOP_Interface.csproj",
-      "projectName": "9Demo_OOP_Interface",
-      "projectPath": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\IET_Dec_2025_Batch\\CSharpDemos\\9Demo_OOP_Interface\\9Demo_OOP_Interface.csproj",
+      "projectUniqueName": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\9Demo_OOP_Interface\\09Demo_OOP_Interface.csproj",
+      "projectName": "09Demo_OOP_Interface",
+      "projectPath": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\9Demo_OOP_Interface\\09Demo_OOP_Interface.csproj",
       "packagesPath": "C:\\Users\\IET\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\IET\\Desktop\\Soham Cdac\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\IET_Dec_2025_Batch\\CSharpDemos\\9Demo_OOP_Interface\\obj\\",
+      "outputPath": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\9Demo_OOP_Interface\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

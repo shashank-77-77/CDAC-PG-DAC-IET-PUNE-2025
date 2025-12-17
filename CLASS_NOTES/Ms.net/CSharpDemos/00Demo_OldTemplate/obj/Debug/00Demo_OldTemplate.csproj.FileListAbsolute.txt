@@ -1,0 +1,7 @@
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\Notes\Ms.net\CSharpDemos\00Demo_OldTemplate\bin\Debug\00Demo_OldTemplate.exe.config
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\Notes\Ms.net\CSharpDemos\00Demo_OldTemplate\bin\Debug\00Demo_OldTemplate.exe
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\Notes\Ms.net\CSharpDemos\00Demo_OldTemplate\bin\Debug\00Demo_OldTemplate.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\Notes\Ms.net\CSharpDemos\00Demo_OldTemplate\obj\Debug\00Demo_OldTemplate.csproj.AssemblyReference.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\Notes\Ms.net\CSharpDemos\00Demo_OldTemplate\obj\Debug\00Demo_OldTemplate.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\Notes\Ms.net\CSharpDemos\00Demo_OldTemplate\obj\Debug\00Demo_OldTemplate.exe
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\Notes\Ms.net\CSharpDemos\00Demo_OldTemplate\obj\Debug\00Demo_OldTemplate.pdb
