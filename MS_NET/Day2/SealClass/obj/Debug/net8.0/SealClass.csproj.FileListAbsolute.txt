@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\bin\Debug\net8.0\SealClass.exe
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\bin\Debug\net8.0\SealClass.deps.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\bin\Debug\net8.0\SealClass.runtimeconfig.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\bin\Debug\net8.0\SealClass.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\bin\Debug\net8.0\SealClass.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\obj\Debug\net8.0\SealClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\obj\Debug\net8.0\SealClass.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\obj\Debug\net8.0\SealClass.AssemblyInfo.cs
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\obj\Debug\net8.0\SealClass.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\obj\Debug\net8.0\SealClass.sourcelink.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\obj\Debug\net8.0\SealClass.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\obj\Debug\net8.0\refint\SealClass.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\obj\Debug\net8.0\SealClass.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\obj\Debug\net8.0\SealClass.genruntimeconfig.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\SealClass\obj\Debug\net8.0\ref\SealClass.dll

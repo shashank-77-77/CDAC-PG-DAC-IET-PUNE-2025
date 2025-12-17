@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\bin\Debug\net8.0\Report_Demo.exe
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\bin\Debug\net8.0\Report_Demo.deps.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\bin\Debug\net8.0\Report_Demo.runtimeconfig.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\bin\Debug\net8.0\Report_Demo.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\bin\Debug\net8.0\Report_Demo.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\obj\Debug\net8.0\Report_Demo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\obj\Debug\net8.0\Report_Demo.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\obj\Debug\net8.0\Report_Demo.AssemblyInfo.cs
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\obj\Debug\net8.0\Report_Demo.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\obj\Debug\net8.0\Report_Demo.sourcelink.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\obj\Debug\net8.0\Report_Demo.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\obj\Debug\net8.0\refint\Report_Demo.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\obj\Debug\net8.0\Report_Demo.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\obj\Debug\net8.0\Report_Demo.genruntimeconfig.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\Report_Demo\obj\Debug\net8.0\ref\Report_Demo.dll

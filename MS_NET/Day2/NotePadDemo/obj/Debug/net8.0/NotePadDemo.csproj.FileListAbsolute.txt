@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\bin\Debug\net8.0\NotePadDemo.exe
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\bin\Debug\net8.0\NotePadDemo.deps.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\bin\Debug\net8.0\NotePadDemo.runtimeconfig.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\bin\Debug\net8.0\NotePadDemo.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\bin\Debug\net8.0\NotePadDemo.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\obj\Debug\net8.0\NotePadDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\obj\Debug\net8.0\NotePadDemo.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\obj\Debug\net8.0\NotePadDemo.AssemblyInfo.cs
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\obj\Debug\net8.0\NotePadDemo.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\obj\Debug\net8.0\NotePadDemo.sourcelink.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\obj\Debug\net8.0\NotePadDemo.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\obj\Debug\net8.0\refint\NotePadDemo.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\obj\Debug\net8.0\NotePadDemo.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\obj\Debug\net8.0\NotePadDemo.genruntimeconfig.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\NotePadDemo\obj\Debug\net8.0\ref\NotePadDemo.dll

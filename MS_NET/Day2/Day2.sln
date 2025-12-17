@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36804.6 d17.14
+VisualStudioVersion = 17.14.36804.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchCase", "Day2\SwitchCase.csproj", "{8A6D8EC3-D1DD-4195-8361-CE57A4925EB3}"
 EndProject
@@ -10,6 +10,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxingandUnBoxing", "BoxingandUnBoxing\BoxingandUnBoxing.csproj", "{3B245BD5-5AB8-4D18-BF8C-B5B1BC564C25}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceClass", "InheritanceClass\InheritanceClass.csproj", "{C66CE419-5A85-4FE8-8D55-266BFC9B7400}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Report_Demo", "Report_Demo\Report_Demo.csproj", "{2343D96D-F875-4C7E-B3FC-722B12DEEFCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseServerDemo", "DatabaseServerDemo\DatabaseServerDemo.csproj", "{A9F372EE-364D-41B9-88AD-EBB97B19D01C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SealClass", "SealClass\SealClass.csproj", "{246CA394-DC13-41E8-8FA3-98804FC72FAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotePadDemo", "NotePadDemo\NotePadDemo.csproj", "{0306922E-1B2C-480C-804C-77982BCAB0CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +41,22 @@ Global
 		{C66CE419-5A85-4FE8-8D55-266BFC9B7400}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C66CE419-5A85-4FE8-8D55-266BFC9B7400}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C66CE419-5A85-4FE8-8D55-266BFC9B7400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2343D96D-F875-4C7E-B3FC-722B12DEEFCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2343D96D-F875-4C7E-B3FC-722B12DEEFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2343D96D-F875-4C7E-B3FC-722B12DEEFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2343D96D-F875-4C7E-B3FC-722B12DEEFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9F372EE-364D-41B9-88AD-EBB97B19D01C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9F372EE-364D-41B9-88AD-EBB97B19D01C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9F372EE-364D-41B9-88AD-EBB97B19D01C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9F372EE-364D-41B9-88AD-EBB97B19D01C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{246CA394-DC13-41E8-8FA3-98804FC72FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{246CA394-DC13-41E8-8FA3-98804FC72FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{246CA394-DC13-41E8-8FA3-98804FC72FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{246CA394-DC13-41E8-8FA3-98804FC72FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0306922E-1B2C-480C-804C-77982BCAB0CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0306922E-1B2C-480C-804C-77982BCAB0CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0306922E-1B2C-480C-804C-77982BCAB0CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0306922E-1B2C-480C-804C-77982BCAB0CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

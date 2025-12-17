@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\bin\Debug\net8.0\DatabaseServerDemo.exe
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\bin\Debug\net8.0\DatabaseServerDemo.deps.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\bin\Debug\net8.0\DatabaseServerDemo.runtimeconfig.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\bin\Debug\net8.0\DatabaseServerDemo.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\bin\Debug\net8.0\DatabaseServerDemo.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\obj\Debug\net8.0\DatabaseServerDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\obj\Debug\net8.0\DatabaseServerDemo.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\obj\Debug\net8.0\DatabaseServerDemo.AssemblyInfo.cs
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\obj\Debug\net8.0\DatabaseServerDemo.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\obj\Debug\net8.0\DatabaseServerDemo.sourcelink.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\obj\Debug\net8.0\DatabaseServerDemo.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\obj\Debug\net8.0\refint\DatabaseServerDemo.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\obj\Debug\net8.0\DatabaseServerDemo.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\obj\Debug\net8.0\DatabaseServerDemo.genruntimeconfig.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\Day2\DatabaseServerDemo\obj\Debug\net8.0\ref\DatabaseServerDemo.dll

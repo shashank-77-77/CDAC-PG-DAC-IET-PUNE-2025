@@ -1,0 +1,1 @@
+C:\Users\IET\Desktop\Soham Cdac\CDAC_PG-DAC\250845920083\MS_NET\Day2\01InheritanceColdDrinks\obj\Debug\net8.0\01InheritanceDatabase.GeneratedMSBuildEditorConfig.editorconfig
