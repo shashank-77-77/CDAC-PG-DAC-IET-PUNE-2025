@@ -31,7 +31,7 @@
 
                 if (ynChoice == "n")
                 {
-    ""                break;
+                    break;
                 }
             }
         }

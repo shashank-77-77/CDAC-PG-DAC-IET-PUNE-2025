@@ -29,7 +29,7 @@
         }
     }
     public class Notepad
-        {
+    {
         private ISpellChecker _checker;
         // Notepad has dependency based on some Interface/ Abstract class in constructors. : Constructor level Dependency Injection Design Pattern
         public Notepad(ISpellChecker checker)
