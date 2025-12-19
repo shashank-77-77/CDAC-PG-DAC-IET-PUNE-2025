@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\bin\Debug\net8.0\MultiCastDelegate.exe
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\bin\Debug\net8.0\MultiCastDelegate.deps.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\bin\Debug\net8.0\MultiCastDelegate.runtimeconfig.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\bin\Debug\net8.0\MultiCastDelegate.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\bin\Debug\net8.0\MultiCastDelegate.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\obj\Debug\net8.0\MultiCastDelegate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\obj\Debug\net8.0\MultiCastDelegate.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\obj\Debug\net8.0\MultiCastDelegate.AssemblyInfo.cs
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\obj\Debug\net8.0\MultiCastDelegate.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\obj\Debug\net8.0\MultiCastDelegate.sourcelink.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\obj\Debug\net8.0\MultiCastDelegate.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\obj\Debug\net8.0\refint\MultiCastDelegate.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\obj\Debug\net8.0\MultiCastDelegate.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\obj\Debug\net8.0\MultiCastDelegate.genruntimeconfig.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\MultiCastDelegate\obj\Debug\net8.0\ref\MultiCastDelegate.dll

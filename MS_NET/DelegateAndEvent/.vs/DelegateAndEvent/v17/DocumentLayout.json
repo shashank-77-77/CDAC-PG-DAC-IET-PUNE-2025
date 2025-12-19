@@ -1,0 +1,183 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8FA47B6E-1E1F-462A-8D47-86CF525B00AC}|MultiCastDelegate\\MultiCastDelegate.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\ms_net\\delegateandevent\\multicastdelegate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FA47B6E-1E1F-462A-8D47-86CF525B00AC}|MultiCastDelegate\\MultiCastDelegate.csproj|solutionrelative:multicastdelegate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B765C66-73E5-4DC7-9065-81C0C6BE9DE5}|EventAndDelegate\\EventAndDelegate.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\ms_net\\delegateandevent\\eventanddelegate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B765C66-73E5-4DC7-9065-81C0C6BE9DE5}|EventAndDelegate\\EventAndDelegate.csproj|solutionrelative:eventanddelegate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65645BA7-A7BB-4722-A7A4-688BC059DCAF}|DelegatesDemo\\DelegatesDemo.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\ms_net\\delegateandevent\\delegatesdemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65645BA7-A7BB-4722-A7A4-688BC059DCAF}|DelegatesDemo\\DelegatesDemo.csproj|solutionrelative:delegatesdemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{989216DD-1765-4C41-AFF4-4AE10A820526}|WinFormApp\\WinFormApp.csproj|C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\winformapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{989216DD-1765-4C41-AFF4-4AE10A820526}|WinFormApp\\WinFormApp.csproj|solutionrelative:winformapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{125E5FEB-41CF-4857-B8D4-6DC4CFDC8AB5}|DelegateAndEvent\\DelegateAndEvent.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\ms_net\\delegateandevent\\delegateandevent\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{125E5FEB-41CF-4857-B8D4-6DC4CFDC8AB5}|DelegateAndEvent\\DelegateAndEvent.csproj|solutionrelative:delegateandevent\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{989216DD-1765-4C41-AFF4-4AE10A820526}|WinFormApp\\WinFormApp.csproj|C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\winformapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{989216DD-1765-4C41-AFF4-4AE10A820526}|WinFormApp\\WinFormApp.csproj|solutionrelative:winformapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{989216DD-1765-4C41-AFF4-4AE10A820526}|WinFormApp\\WinFormApp.csproj|C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\winformapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{989216DD-1765-4C41-AFF4-4AE10A820526}|WinFormApp\\WinFormApp.csproj|solutionrelative:winformapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F8C2325-903B-4FDF-9239-E589F33053E8}|CMathUser\\CMathUser.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\ms_net\\delegateandevent\\cmathuser\\cmathuser.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1F8C2325-903B-4FDF-9239-E589F33053E8}|CMathUser\\CMathUser.csproj|solutionrelative:cmathuser\\cmathuser.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F8C2325-903B-4FDF-9239-E589F33053E8}|CMathUser\\CMathUser.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\ms_net\\delegateandevent\\cmathuser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F8C2325-903B-4FDF-9239-E589F33053E8}|CMathUser\\CMathUser.csproj|solutionrelative:cmathuser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F4CB7A3-A9A3-4195-8475-98E08A9E49B8}|CMathLibDemo\\CMathLibDemo.csproj|C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\cmathlibdemo\\cmath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F4CB7A3-A9A3-4195-8475-98E08A9E49B8}|CMathLibDemo\\CMathLibDemo.csproj|solutionrelative:cmathlibdemo\\cmath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\MultiCastDelegate\\Program.cs",
+              "RelativeDocumentMoniker": "MultiCastDelegate\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\MultiCastDelegate\\Program.cs",
+              "RelativeToolTip": "MultiCastDelegate\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T12:46:19.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\EventAndDelegate\\Program.cs",
+              "RelativeDocumentMoniker": "EventAndDelegate\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\EventAndDelegate\\Program.cs",
+              "RelativeToolTip": "EventAndDelegate\\Program.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAcwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T12:25:38.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\DelegatesDemo\\Program.cs",
+              "RelativeDocumentMoniker": "DelegatesDemo\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\DelegatesDemo\\Program.cs",
+              "RelativeToolTip": "DelegatesDemo\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwBAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T10:35:44.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\WinFormApp\\Program.cs",
+              "RelativeDocumentMoniker": "WinFormApp\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\WinFormApp\\Program.cs",
+              "RelativeToolTip": "WinFormApp\\Program.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAABUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T10:28:31.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\WinFormApp\\Form1.cs",
+              "RelativeDocumentMoniker": "WinFormApp\\Form1.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\WinFormApp\\Form1.cs",
+              "RelativeToolTip": "WinFormApp\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T10:28:10.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\WinFormApp\\Form1.cs",
+              "RelativeDocumentMoniker": "WinFormApp\\Form1.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\WinFormApp\\Form1.cs [Design]",
+              "RelativeToolTip": "WinFormApp\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T10:12:15.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CMathUser.csproj",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\CMathUser\\CMathUser.csproj",
+              "RelativeDocumentMoniker": "CMathUser\\CMathUser.csproj",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\CMathUser\\CMathUser.csproj",
+              "RelativeToolTip": "CMathUser\\CMathUser.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-18T10:01:57.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\CMathUser\\Program.cs",
+              "RelativeDocumentMoniker": "CMathUser\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\CMathUser\\Program.cs",
+              "RelativeToolTip": "CMathUser\\Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T09:46:15.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CMath.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\CMathLibDemo\\CMath.cs",
+              "RelativeDocumentMoniker": "CMathLibDemo\\CMath.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\CMathLibDemo\\CMath.cs",
+              "RelativeToolTip": "CMathLibDemo\\CMath.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T09:43:34.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\DelegateAndEvent\\Program.cs",
+              "RelativeDocumentMoniker": "DelegateAndEvent\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\DelegateAndEvent\\DelegateAndEvent\\Program.cs",
+              "RelativeToolTip": "DelegateAndEvent\\Program.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAYwGQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T08:49:58.309Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

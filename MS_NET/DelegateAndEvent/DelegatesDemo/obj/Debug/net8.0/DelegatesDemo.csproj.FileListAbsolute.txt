@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\bin\Debug\net8.0\DelegatesDemo.exe
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\bin\Debug\net8.0\DelegatesDemo.deps.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\bin\Debug\net8.0\DelegatesDemo.runtimeconfig.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\bin\Debug\net8.0\DelegatesDemo.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\bin\Debug\net8.0\DelegatesDemo.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\obj\Debug\net8.0\DelegatesDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\obj\Debug\net8.0\DelegatesDemo.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\obj\Debug\net8.0\DelegatesDemo.AssemblyInfo.cs
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\obj\Debug\net8.0\DelegatesDemo.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\obj\Debug\net8.0\DelegatesDemo.sourcelink.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\obj\Debug\net8.0\DelegatesDemo.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\obj\Debug\net8.0\refint\DelegatesDemo.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\obj\Debug\net8.0\DelegatesDemo.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\obj\Debug\net8.0\DelegatesDemo.genruntimeconfig.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\DelegatesDemo\obj\Debug\net8.0\ref\DelegatesDemo.dll

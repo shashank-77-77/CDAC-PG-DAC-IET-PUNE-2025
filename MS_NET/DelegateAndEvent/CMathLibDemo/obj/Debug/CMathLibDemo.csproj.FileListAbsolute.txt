@@ -1,0 +1,6 @@
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\CMathLibDemo\bin\Debug\CMathLibDemo.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\CMathLibDemo\bin\Debug\CMathLibDemo.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\CMathLibDemo\obj\Debug\CMathLibDemo.csproj.AssemblyReference.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\CMathLibDemo\obj\Debug\CMathLibDemo.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\CMathLibDemo\obj\Debug\CMathLibDemo.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\CMathLibDemo\obj\Debug\CMathLibDemo.pdb

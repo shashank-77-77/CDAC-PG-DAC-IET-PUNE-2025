@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\bin\Debug\net8.0\EventAndDelegate.exe
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\bin\Debug\net8.0\EventAndDelegate.deps.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\bin\Debug\net8.0\EventAndDelegate.runtimeconfig.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\bin\Debug\net8.0\EventAndDelegate.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\bin\Debug\net8.0\EventAndDelegate.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\obj\Debug\net8.0\EventAndDelegate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\obj\Debug\net8.0\EventAndDelegate.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\obj\Debug\net8.0\EventAndDelegate.AssemblyInfo.cs
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\obj\Debug\net8.0\EventAndDelegate.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\obj\Debug\net8.0\EventAndDelegate.sourcelink.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\obj\Debug\net8.0\EventAndDelegate.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\obj\Debug\net8.0\refint\EventAndDelegate.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\obj\Debug\net8.0\EventAndDelegate.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\obj\Debug\net8.0\EventAndDelegate.genruntimeconfig.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\DelegateAndEvent\EventAndDelegate\obj\Debug\net8.0\ref\EventAndDelegate.dll
