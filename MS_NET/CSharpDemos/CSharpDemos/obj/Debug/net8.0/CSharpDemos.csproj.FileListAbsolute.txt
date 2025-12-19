@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\bin\Debug\net8.0\CSharpDemos.exe
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\bin\Debug\net8.0\CSharpDemos.deps.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\bin\Debug\net8.0\CSharpDemos.runtimeconfig.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\bin\Debug\net8.0\CSharpDemos.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\bin\Debug\net8.0\CSharpDemos.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\obj\Debug\net8.0\CSharpDemos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\obj\Debug\net8.0\CSharpDemos.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\obj\Debug\net8.0\CSharpDemos.AssemblyInfo.cs
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\obj\Debug\net8.0\CSharpDemos.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\obj\Debug\net8.0\CSharpDemos.sourcelink.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\obj\Debug\net8.0\CSharpDemos.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\obj\Debug\net8.0\refint\CSharpDemos.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\obj\Debug\net8.0\CSharpDemos.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\obj\Debug\net8.0\CSharpDemos.genruntimeconfig.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpDemos\obj\Debug\net8.0\ref\CSharpDemos.dll
