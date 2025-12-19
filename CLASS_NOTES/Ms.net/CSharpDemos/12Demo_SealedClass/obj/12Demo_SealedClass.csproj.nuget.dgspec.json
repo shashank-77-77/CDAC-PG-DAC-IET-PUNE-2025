@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\12Demo_SealedClass\\12Demo_SealedClass.csproj": {}
+    "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\12Demo_SealedClass\\12Demo_SealedClass.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\12Demo_SealedClass\\12Demo_SealedClass.csproj": {
+    "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\12Demo_SealedClass\\12Demo_SealedClass.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\12Demo_SealedClass\\12Demo_SealedClass.csproj",
+        "projectUniqueName": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\12Demo_SealedClass\\12Demo_SealedClass.csproj",
         "projectName": "12Demo_SealedClass",
-        "projectPath": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\12Demo_SealedClass\\12Demo_SealedClass.csproj",
+        "projectPath": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\12Demo_SealedClass\\12Demo_SealedClass.csproj",
         "packagesPath": "C:\\Users\\IET\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\12Demo_SealedClass\\obj\\",
+        "outputPath": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\12Demo_SealedClass\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

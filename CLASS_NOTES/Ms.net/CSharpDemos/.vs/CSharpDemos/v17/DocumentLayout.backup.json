@@ -1,57 +1,101 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\",
+  "WorkspaceRootPath": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A4A2034B-5B24-447F-AADD-BF80A5212C70}|13Demo_Notepad\\13Demo_Notepad.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\notes\\ms.net\\csharpdemos\\13demo_notepad\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4A2034B-5B24-447F-AADD-BF80A5212C70}|13Demo_Notepad\\13Demo_Notepad.csproj|solutionrelative:13demo_notepad\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDD8432F-7BA8-4A8F-8D00-58CC047A61C9}|18Demo_Delegates\\18Demo_Delegates.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\18demo_delegates\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDD8432F-7BA8-4A8F-8D00-58CC047A61C9}|18Demo_Delegates\\18Demo_Delegates.csproj|solutionrelative:18demo_delegates\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E88C6733-B33A-4131-85D7-A9B9065B19D2}|06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\notes\\ms.net\\csharpdemos\\06demo_oop_inheritance\\logic\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E88C6733-B33A-4131-85D7-A9B9065B19D2}|06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj|solutionrelative:06demo_oop_inheritance\\logic\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4602561-95EE-48C7-A0E0-85EE9E0E3D52}|19Demo_EventAndDelegate\\19Demo_EventAndDelegate.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\19demo_eventanddelegate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4602561-95EE-48C7-A0E0-85EE9E0E3D52}|19Demo_EventAndDelegate\\19Demo_EventAndDelegate.csproj|solutionrelative:19demo_eventanddelegate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E88C6733-B33A-4131-85D7-A9B9065B19D2}|06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\notes\\ms.net\\csharpdemos\\06demo_oop_inheritance\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E88C6733-B33A-4131-85D7-A9B9065B19D2}|06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj|solutionrelative:06demo_oop_inheritance\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\17demo_winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|solutionrelative:17demo_winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{233B0E3F-E602-4208-8134-F76240EB36A6}|07Demo_Inheritance\\07Demo_Inheritance.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\notes\\ms.net\\csharpdemos\\07demo_inheritance\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233B0E3F-E602-4208-8134-F76240EB36A6}|07Demo_Inheritance\\07Demo_Inheritance.csproj|solutionrelative:07demo_inheritance\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\17demo_winform\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|solutionrelative:17demo_winform\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16906215-E776-41EB-8686-42E3575DBC38}|08Demo_OOP_interface\\08Demo_OOP_interface.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\notes\\ms.net\\csharpdemos\\08demo_oop_interface\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16906215-E776-41EB-8686-42E3575DBC38}|08Demo_OOP_interface\\08Demo_OOP_interface.csproj|solutionrelative:08demo_oop_interface\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\17demo_winform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|solutionrelative:17demo_winform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADCEED79-B0F0-486F-B92C-1492C91BA48A}|9Demo_OOP_Interface\\09Demo_OOP_Interface.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\notes\\ms.net\\csharpdemos\\9demo_oop_interface\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADCEED79-B0F0-486F-B92C-1492C91BA48A}|9Demo_OOP_Interface\\09Demo_OOP_Interface.csproj|solutionrelative:9demo_oop_interface\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\17demo_winform\\testdataset.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|solutionrelative:17demo_winform\\testdataset.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA9D0D92-7350-4515-AC23-F85C65E819DC}|10Demo_Report\\10Demo_Report.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\notes\\ms.net\\csharpdemos\\10demo_report\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\17demo_winform\\testdataset.xss||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|solutionrelative:17demo_winform\\testdataset.xss||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\17demo_winform\\testdataset.xsc||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|solutionrelative:17demo_winform\\testdataset.xsc||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\17demo_winform\\testdataset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|solutionrelative:17demo_winform\\testdataset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\17demo_winform\\testdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{A9B94F38-8AE1-4493-B90F-98F2CA6FB22A}|17Demo_WinForm\\17Demo_WinForm.csproj|solutionrelative:17demo_winform\\testdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89D9CB88-3E72-4D8C-BDB4-90F643CCBBD9}|16Demo_CMathClient\\16Demo_CMathClient.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\16demo_cmathclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89D9CB88-3E72-4D8C-BDB4-90F643CCBBD9}|16Demo_CMathClient\\16Demo_CMathClient.csproj|solutionrelative:16demo_cmathclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB91074-D727-45E4-ACAC-5A1F0F6F3055}|15Demo_CMathLib\\15Demo_CMathLib.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\15demo_cmathlib\\cmath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB91074-D727-45E4-ACAC-5A1F0F6F3055}|15Demo_CMathLib\\15Demo_CMathLib.csproj|solutionrelative:15demo_cmathlib\\cmath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E26C0832-1BBC-45BF-ACAE-0414D58FB75E}|14Demo_Properties\\14Demo_Properties.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\14demo_properties\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E26C0832-1BBC-45BF-ACAE-0414D58FB75E}|14Demo_Properties\\14Demo_Properties.csproj|solutionrelative:14demo_properties\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA9D0D92-7350-4515-AC23-F85C65E819DC}|10Demo_Report\\10Demo_Report.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\10demo_report\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA9D0D92-7350-4515-AC23-F85C65E819DC}|10Demo_Report\\10Demo_Report.csproj|solutionrelative:10demo_report\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3D63751-468D-4645-B041-2693A6261AFC}|11Demo_Singleton\\11Demo_Singleton.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\notes\\ms.net\\csharpdemos\\11demo_singleton\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3D63751-468D-4645-B041-2693A6261AFC}|11Demo_Singleton\\11Demo_Singleton.csproj|solutionrelative:11demo_singleton\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADCEED79-B0F0-486F-B92C-1492C91BA48A}|9Demo_OOP_Interface\\09Demo_OOP_Interface.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\9demo_oop_interface\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADCEED79-B0F0-486F-B92C-1492C91BA48A}|9Demo_OOP_Interface\\09Demo_OOP_Interface.csproj|solutionrelative:9demo_oop_interface\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{233B0E3F-E602-4208-8134-F76240EB36A6}|07Demo_Inheritance\\07Demo_Inheritance.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\notes\\ms.net\\csharpdemos\\07demo_inheritance\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{233B0E3F-E602-4208-8134-F76240EB36A6}|07Demo_Inheritance\\07Demo_Inheritance.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\07demo_inheritance\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{233B0E3F-E602-4208-8134-F76240EB36A6}|07Demo_Inheritance\\07Demo_Inheritance.csproj|solutionrelative:07demo_inheritance\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{233B0E3F-E602-4208-8134-F76240EB36A6}|07Demo_Inheritance\\07Demo_Inheritance.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\notes\\ms.net\\csharpdemos\\07demo_inheritance\\demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{233B0E3F-E602-4208-8134-F76240EB36A6}|07Demo_Inheritance\\07Demo_Inheritance.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\07demo_inheritance\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{233B0E3F-E602-4208-8134-F76240EB36A6}|07Demo_Inheritance\\07Demo_Inheritance.csproj|solutionrelative:07demo_inheritance\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{233B0E3F-E602-4208-8134-F76240EB36A6}|07Demo_Inheritance\\07Demo_Inheritance.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\07demo_inheritance\\demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{233B0E3F-E602-4208-8134-F76240EB36A6}|07Demo_Inheritance\\07Demo_Inheritance.csproj|solutionrelative:07demo_inheritance\\demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9DEA21A-65EB-400E-93B5-D40A34F5059F}|05Demo_OOP_Basics\\05Demo_OOP_Basics.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\notes\\ms.net\\csharpdemos\\05demo_oop_basics\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E88C6733-B33A-4131-85D7-A9B9065B19D2}|06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\06demo_oop_inheritance\\logic\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E88C6733-B33A-4131-85D7-A9B9065B19D2}|06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj|solutionrelative:06demo_oop_inheritance\\logic\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E88C6733-B33A-4131-85D7-A9B9065B19D2}|06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\06demo_oop_inheritance\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E88C6733-B33A-4131-85D7-A9B9065B19D2}|06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj|solutionrelative:06demo_oop_inheritance\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9DEA21A-65EB-400E-93B5-D40A34F5059F}|05Demo_OOP_Basics\\05Demo_OOP_Basics.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\05demo_oop_basics\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9DEA21A-65EB-400E-93B5-D40A34F5059F}|05Demo_OOP_Basics\\05Demo_OOP_Basics.csproj|solutionrelative:05demo_oop_basics\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9DEA21A-65EB-400E-93B5-D40A34F5059F}|05Demo_OOP_Basics\\05Demo_OOP_Basics.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\notes\\ms.net\\csharpdemos\\05demo_oop_basics\\myclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C9DEA21A-65EB-400E-93B5-D40A34F5059F}|05Demo_OOP_Basics\\05Demo_OOP_Basics.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\05demo_oop_basics\\myclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9DEA21A-65EB-400E-93B5-D40A34F5059F}|05Demo_OOP_Basics\\05Demo_OOP_Basics.csproj|solutionrelative:05demo_oop_basics\\myclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E88C6733-B33A-4131-85D7-A9B9065B19D2}|06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\notes\\ms.net\\csharpdemos\\06demo_oop_inheritance\\06demo_oop_inheritance.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{16906215-E776-41EB-8686-42E3575DBC38}|08Demo_OOP_interface\\08Demo_OOP_interface.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\08demo_oop_interface\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16906215-E776-41EB-8686-42E3575DBC38}|08Demo_OOP_interface\\08Demo_OOP_interface.csproj|solutionrelative:08demo_oop_interface\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E88C6733-B33A-4131-85D7-A9B9065B19D2}|06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\06demo_oop_inheritance\\06demo_oop_inheritance.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{E88C6733-B33A-4131-85D7-A9B9065B19D2}|06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj|solutionrelative:06demo_oop_inheritance\\06demo_oop_inheritance.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -62,143 +106,208 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\13Demo_Notepad\\Program.cs",
-              "RelativeDocumentMoniker": "13Demo_Notepad\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\13Demo_Notepad\\Program.cs",
-              "RelativeToolTip": "13Demo_Notepad\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\19Demo_EventAndDelegate\\Program.cs",
+              "RelativeDocumentMoniker": "19Demo_EventAndDelegate\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\19Demo_EventAndDelegate\\Program.cs",
+              "RelativeToolTip": "19Demo_EventAndDelegate\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T12:19:47.419Z",
+              "WhenOpened": "2025-12-18T10:07:51.981Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\10Demo_Report\\Program.cs",
-              "RelativeDocumentMoniker": "10Demo_Report\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\10Demo_Report\\Program.cs",
-              "RelativeToolTip": "10Demo_Report\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T12:11:01.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\11Demo_Singleton\\Program.cs",
-              "RelativeDocumentMoniker": "11Demo_Singleton\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\11Demo_Singleton\\Program.cs",
-              "RelativeToolTip": "11Demo_Singleton\\Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T12:10:44.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\9Demo_OOP_Interface\\Program.cs",
-              "RelativeDocumentMoniker": "9Demo_OOP_Interface\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\9Demo_OOP_Interface\\Program.cs",
-              "RelativeToolTip": "9Demo_OOP_Interface\\Program.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAQwB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T13:49:20.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\07Demo_Inheritance\\Program.cs",
-              "RelativeDocumentMoniker": "07Demo_Inheritance\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\07Demo_Inheritance\\Program.cs",
-              "RelativeToolTip": "07Demo_Inheritance\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T13:42:15.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Demo.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\07Demo_Inheritance\\Demo.cs",
-              "RelativeDocumentMoniker": "07Demo_Inheritance\\Demo.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\07Demo_Inheritance\\Demo.cs",
-              "RelativeToolTip": "07Demo_Inheritance\\Demo.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAwwA0AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T13:42:46.729Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\08Demo_OOP_interface\\Program.cs",
-              "RelativeDocumentMoniker": "08Demo_OOP_interface\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\08Demo_OOP_interface\\Program.cs",
-              "RelativeToolTip": "08Demo_OOP_interface\\Program.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAAwCkAAAAZAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\Program.cs",
+              "RelativeDocumentMoniker": "17Demo_WinForm\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\Program.cs",
+              "RelativeToolTip": "17Demo_WinForm\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T12:13:23.923Z",
+              "WhenOpened": "2025-12-18T10:06:14.862Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Person.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\06Demo_OOP_Inheritance\\logic\\Person.cs",
-              "RelativeDocumentMoniker": "06Demo_OOP_Inheritance\\logic\\Person.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\06Demo_OOP_Inheritance\\logic\\Person.cs",
-              "RelativeToolTip": "06Demo_OOP_Inheritance\\logic\\Person.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "TestDataSet.xss",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xss",
+              "RelativeDocumentMoniker": "17Demo_WinForm\\TestDataSet.xss",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xss",
+              "RelativeToolTip": "17Demo_WinForm\\TestDataSet.xss",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEQSURBVDhPpZIxDoIwFIYfbsAiNxBu4KKwMnMBmDyCJxFXndy4AHcgunADdGdAE4EwVV4pWqEgiV/y0uZ/7Z\u002B\u002B1wdjlGW5KYoiroN0IsYcEEIkdrZHfchPkmQbRREEQcDUBtd1wbIsMAxjz6Rvsiybp2lKDocjuWcPYfg7n75mxu4IyfOc7fo8WW6sBOI4DugLHVbrNVMbLuczXG9XCMPw2wAvse0bNBkCDXol4IU2pjDagyn0DPBZ/PoLaoC1i\u002BpH0EhkpqoqXWkT244PgQZ83jRN8DzvM0hoYNs2P6rvGNCbUa6ZoUBdOBRFEc5HVVUa5upYyrJ8Qo32oH1et4yurmnanW44/v5GaaiEaaUBvACMFdHTTBiv\u002BAAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-12-18T10:06:06.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TestDataSet.xsc",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xsc",
+              "RelativeDocumentMoniker": "17Demo_WinForm\\TestDataSet.xsc",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xsc",
+              "RelativeToolTip": "17Demo_WinForm\\TestDataSet.xsc",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001612|",
+              "WhenOpened": "2025-12-18T10:06:06.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TestDataSet.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.Designer.cs",
+              "RelativeDocumentMoniker": "17Demo_WinForm\\TestDataSet.Designer.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.Designer.cs",
+              "RelativeToolTip": "17Demo_WinForm\\TestDataSet.Designer.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAAwA0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T11:17:39.767Z",
+              "WhenOpened": "2025-12-18T10:05:55.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\App.config",
+              "RelativeDocumentMoniker": "17Demo_WinForm\\App.config",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\App.config",
+              "RelativeToolTip": "17Demo_WinForm\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-12-18T10:05:22.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\18Demo_Delegates\\Program.cs",
+              "RelativeDocumentMoniker": "18Demo_Delegates\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\18Demo_Delegates\\Program.cs",
+              "RelativeToolTip": "18Demo_Delegates\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T09:56:29.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TestDataSet.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.cs",
+              "RelativeDocumentMoniker": "17Demo_WinForm\\TestDataSet.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.cs",
+              "RelativeToolTip": "17Demo_WinForm\\TestDataSet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T10:05:42.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\Form1.cs",
+              "RelativeDocumentMoniker": "17Demo_WinForm\\Form1.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\Form1.cs [Design]",
+              "RelativeToolTip": "17Demo_WinForm\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T10:04:28.368Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TestDataSet.xsd",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xsd",
+              "RelativeDocumentMoniker": "17Demo_WinForm\\TestDataSet.xsd",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xsd",
+              "RelativeToolTip": "17Demo_WinForm\\TestDataSet.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2025-12-18T10:05:30.671Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\05Demo_OOP_Basics\\Program.cs",
-              "RelativeDocumentMoniker": "05Demo_OOP_Basics\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\05Demo_OOP_Basics\\Program.cs",
-              "RelativeToolTip": "05Demo_OOP_Basics\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAATAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\16Demo_CMathClient\\Program.cs",
+              "RelativeDocumentMoniker": "16Demo_CMathClient\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\16Demo_CMathClient\\Program.cs",
+              "RelativeToolTip": "16Demo_CMathClient\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T11:17:26.824Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\06Demo_OOP_Inheritance\\Program.cs",
-              "RelativeDocumentMoniker": "06Demo_OOP_Inheritance\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\06Demo_OOP_Inheritance\\Program.cs",
-              "RelativeToolTip": "06Demo_OOP_Inheritance\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T11:15:47.049Z",
+              "WhenOpened": "2025-12-18T09:46:24.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
+              "Title": "CMath.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\15Demo_CMathLib\\CMath.cs",
+              "RelativeDocumentMoniker": "15Demo_CMathLib\\CMath.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\15Demo_CMathLib\\CMath.cs",
+              "RelativeToolTip": "15Demo_CMathLib\\CMath.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T09:20:51.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\14Demo_Properties\\Program.cs",
+              "RelativeDocumentMoniker": "14Demo_Properties\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\14Demo_Properties\\Program.cs",
+              "RelativeToolTip": "14Demo_Properties\\Program.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAA6wEsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T08:53:51.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\10Demo_Report\\Program.cs",
+              "RelativeDocumentMoniker": "10Demo_Report\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\10Demo_Report\\Program.cs",
+              "RelativeToolTip": "10Demo_Report\\Program.cs",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAAACQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T08:53:15.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\9Demo_OOP_Interface\\Program.cs",
+              "RelativeDocumentMoniker": "9Demo_OOP_Interface\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\9Demo_OOP_Interface\\Program.cs",
+              "RelativeToolTip": "9Demo_OOP_Interface\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:49:20.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Test.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\07Demo_Inheritance\\Test.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Test.cs",
               "RelativeDocumentMoniker": "07Demo_Inheritance\\Test.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\07Demo_Inheritance\\Test.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Test.cs",
               "RelativeToolTip": "07Demo_Inheritance\\Test.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -206,11 +315,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Program.cs",
+              "RelativeDocumentMoniker": "07Demo_Inheritance\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Program.cs",
+              "RelativeToolTip": "07Demo_Inheritance\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:42:15.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Demo.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Demo.cs",
+              "RelativeDocumentMoniker": "07Demo_Inheritance\\Demo.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Demo.cs",
+              "RelativeToolTip": "07Demo_Inheritance\\Demo.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAwwA0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:42:46.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\08Demo_OOP_interface\\Program.cs",
+              "RelativeDocumentMoniker": "08Demo_OOP_interface\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\08Demo_OOP_interface\\Program.cs",
+              "RelativeToolTip": "08Demo_OOP_interface\\Program.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAIwEMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T12:13:23.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\logic\\Person.cs",
+              "RelativeDocumentMoniker": "06Demo_OOP_Inheritance\\logic\\Person.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\logic\\Person.cs",
+              "RelativeToolTip": "06Demo_OOP_Inheritance\\logic\\Person.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T11:17:39.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\05Demo_OOP_Basics\\Program.cs",
+              "RelativeDocumentMoniker": "05Demo_OOP_Basics\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\05Demo_OOP_Basics\\Program.cs",
+              "RelativeToolTip": "05Demo_OOP_Basics\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T11:17:26.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "MyClass.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\05Demo_OOP_Basics\\MyClass.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\05Demo_OOP_Basics\\MyClass.cs",
               "RelativeDocumentMoniker": "05Demo_OOP_Basics\\MyClass.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\05Demo_OOP_Basics\\MyClass.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\05Demo_OOP_Basics\\MyClass.cs",
               "RelativeToolTip": "05Demo_OOP_Basics\\MyClass.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -218,15 +387,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\Program.cs",
+              "RelativeDocumentMoniker": "06Demo_OOP_Inheritance\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\Program.cs",
+              "RelativeToolTip": "06Demo_OOP_Inheritance\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T11:15:47.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "06Demo_OOP_Inheritance.csproj",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj",
               "RelativeDocumentMoniker": "06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj",
               "RelativeToolTip": "06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-16T11:15:36.773Z"
+              "WhenOpened": "2025-12-16T11:15:36.773Z",
+              "EditorCaption": ""
             }
           ]
         }

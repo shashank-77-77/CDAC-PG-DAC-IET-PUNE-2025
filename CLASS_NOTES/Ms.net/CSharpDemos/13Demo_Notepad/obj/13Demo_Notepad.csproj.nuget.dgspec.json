@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\13Demo_Notepad\\13Demo_Notepad.csproj": {}
+    "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\13Demo_Notepad\\13Demo_Notepad.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\13Demo_Notepad\\13Demo_Notepad.csproj": {
+    "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\13Demo_Notepad\\13Demo_Notepad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\13Demo_Notepad\\13Demo_Notepad.csproj",
+        "projectUniqueName": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\13Demo_Notepad\\13Demo_Notepad.csproj",
         "projectName": "13Demo_Notepad",
-        "projectPath": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\13Demo_Notepad\\13Demo_Notepad.csproj",
+        "projectPath": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\13Demo_Notepad\\13Demo_Notepad.csproj",
         "packagesPath": "C:\\Users\\IET\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\Notes\\Ms.net\\CSharpDemos\\13Demo_Notepad\\obj\\",
+        "outputPath": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\13Demo_Notepad\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
