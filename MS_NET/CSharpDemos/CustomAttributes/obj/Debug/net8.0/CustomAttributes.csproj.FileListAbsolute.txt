@@ -1,0 +1,12 @@
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CustomAttributes\bin\Debug\net8.0\CustomAttributes.deps.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CustomAttributes\bin\Debug\net8.0\CustomAttributes.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CustomAttributes\bin\Debug\net8.0\CustomAttributes.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CustomAttributes\obj\Debug\net8.0\CustomAttributes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CustomAttributes\obj\Debug\net8.0\CustomAttributes.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CustomAttributes\obj\Debug\net8.0\CustomAttributes.AssemblyInfo.cs
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CustomAttributes\obj\Debug\net8.0\CustomAttributes.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CustomAttributes\obj\Debug\net8.0\CustomAttributes.sourcelink.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CustomAttributes\obj\Debug\net8.0\CustomAttributes.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CustomAttributes\obj\Debug\net8.0\refint\CustomAttributes.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CustomAttributes\obj\Debug\net8.0\CustomAttributes.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CustomAttributes\obj\Debug\net8.0\ref\CustomAttributes.dll
