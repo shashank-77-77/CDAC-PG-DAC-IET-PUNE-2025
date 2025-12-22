@@ -3,120 +3,80 @@
   "WorkspaceRootPath": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\23Demo_Generic\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:23Demo_Generic\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{30C2AE2D-9751-4879-8A13-9B692473DC4A}|31Demo_BVSAttribute\\31Demo_BVSAttribute.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\31demo_bvsattribute\\bvs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30C2AE2D-9751-4879-8A13-9B692473DC4A}|31Demo_BVSAttribute\\31Demo_BVSAttribute.csproj|solutionrelative:31demo_bvsattribute\\bvs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\22Demo_Collection\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:22Demo_Collection\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF1D60A7-0001-45D0-9B1A-E2856FC35FF7}|33Demo_EmpLib\\33Demo_EmpLib.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\33demo_emplib\\emp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF1D60A7-0001-45D0-9B1A-E2856FC35FF7}|33Demo_EmpLib\\33Demo_EmpLib.csproj|solutionrelative:33demo_emplib\\emp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\21Demo_ObserverPattern\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:21Demo_ObserverPattern\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF1D60A7-0001-45D0-9B1A-E2856FC35FF7}|33Demo_EmpLib\\33Demo_EmpLib.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\33demo_emplib\\33demo_emplib.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EF1D60A7-0001-45D0-9B1A-E2856FC35FF7}|33Demo_EmpLib\\33Demo_EmpLib.csproj|solutionrelative:33demo_emplib\\33demo_emplib.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\20Demo_MultiCastDelegate\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:20Demo_MultiCastDelegate\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9BA5B80-C2BA-44F0-BFDF-2502017DD9D6}|32Demo_MyApplication\\32Demo_MyApplication.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\32demo_myapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9BA5B80-C2BA-44F0-BFDF-2502017DD9D6}|32Demo_MyApplication\\32Demo_MyApplication.csproj|solutionrelative:32demo_myapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\19Demo_EventAndDelegate\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:19Demo_EventAndDelegate\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74B4C5DB-7401-49C5-ACA9-479FD980D7EF}|30Demo_MyMath\\30Demo_MyMath.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\30demo_mymath\\cmath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74B4C5DB-7401-49C5-ACA9-479FD980D7EF}|30Demo_MyMath\\30Demo_MyMath.csproj|solutionrelative:30demo_mymath\\cmath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\18Demo_Delegates\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:18Demo_Delegates\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED81ECC0-1589-4497-AF76-0EE8608532F8}|29Demo_Refelction\\29Demo_Refelction.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\29demo_refelction\\program -v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED81ECC0-1589-4497-AF76-0EE8608532F8}|29Demo_Refelction\\29Demo_Refelction.csproj|solutionrelative:29demo_refelction\\program -v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\18Demo_Delegates\\18Demo_Delegates.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:18Demo_Delegates\\18Demo_Delegates.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{ED81ECC0-1589-4497-AF76-0EE8608532F8}|29Demo_Refelction\\29Demo_Refelction.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\29demo_refelction\\program -v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED81ECC0-1589-4497-AF76-0EE8608532F8}|29Demo_Refelction\\29Demo_Refelction.csproj|solutionrelative:29demo_refelction\\program -v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:17Demo_WinForm\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED81ECC0-1589-4497-AF76-0EE8608532F8}|29Demo_Refelction\\29Demo_Refelction.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\29demo_refelction\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED81ECC0-1589-4497-AF76-0EE8608532F8}|29Demo_Refelction\\29Demo_Refelction.csproj|solutionrelative:29demo_refelction\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xss||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:17Demo_WinForm\\TestDataSet.xss||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{31810D42-7179-470C-ACAB-8E274A93A732}|28Demo_Serialization\\28Demo_Serialization.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\28demo_serialization\\28demo_serialization.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{31810D42-7179-470C-ACAB-8E274A93A732}|28Demo_Serialization\\28Demo_Serialization.csproj|solutionrelative:28demo_serialization\\28demo_serialization.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xsc||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:17Demo_WinForm\\TestDataSet.xsc||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{31810D42-7179-470C-ACAB-8E274A93A732}|28Demo_Serialization\\28Demo_Serialization.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\28demo_serialization\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31810D42-7179-470C-ACAB-8E274A93A732}|28Demo_Serialization\\28Demo_Serialization.csproj|solutionrelative:28demo_serialization\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:17Demo_WinForm\\TestDataSet.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6142F0AE-FE2E-45B5-84F5-51F9FDF2CCC7}|27Demo_BinarySerialization\\27Demo_BinarySerialization.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\27demo_binaryserialization\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6142F0AE-FE2E-45B5-84F5-51F9FDF2CCC7}|27Demo_BinarySerialization\\27Demo_BinarySerialization.csproj|solutionrelative:27demo_binaryserialization\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:17Demo_WinForm\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{6142F0AE-FE2E-45B5-84F5-51F9FDF2CCC7}|27Demo_BinarySerialization\\27Demo_BinarySerialization.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\27demo_binaryserialization\\27demo_binaryserialization.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6142F0AE-FE2E-45B5-84F5-51F9FDF2CCC7}|27Demo_BinarySerialization\\27Demo_BinarySerialization.csproj|solutionrelative:27demo_binaryserialization\\27demo_binaryserialization.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:17Demo_WinForm\\TestDataSet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A71E6E64-0E48-487C-83BF-1DC3AF337A74}|26Demo_FileIO\\26Demo_FileIO.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\26demo_fileio\\files\\demo.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A71E6E64-0E48-487C-83BF-1DC3AF337A74}|26Demo_FileIO\\26Demo_FileIO.csproj|solutionrelative:26demo_fileio\\files\\demo.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17demo_winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:17demo_winform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A71E6E64-0E48-487C-83BF-1DC3AF337A74}|26Demo_FileIO\\26Demo_FileIO.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\26demo_fileio\\files\\demo1.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A71E6E64-0E48-487C-83BF-1DC3AF337A74}|26Demo_FileIO\\26Demo_FileIO.csproj|solutionrelative:26demo_fileio\\files\\demo1.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:17Demo_WinForm\\TestDataSet.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+      "AbsoluteMoniker": "D:0:0:{A71E6E64-0E48-487C-83BF-1DC3AF337A74}|26Demo_FileIO\\26Demo_FileIO.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\26demo_fileio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71E6E64-0E48-487C-83BF-1DC3AF337A74}|26Demo_FileIO\\26Demo_FileIO.csproj|solutionrelative:26demo_fileio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\16Demo_CMathClient\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:16Demo_CMathClient\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9476293F-153E-486B-8370-B1F2D539949A}|25Demo_GenericDelegate\\25Demo_GenericDelegate.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\25demo_genericdelegate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9476293F-153E-486B-8370-B1F2D539949A}|25Demo_GenericDelegate\\25Demo_GenericDelegate.csproj|solutionrelative:25demo_genericdelegate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\15Demo_CMathLib\\CMath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:15Demo_CMathLib\\CMath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29C79BE3-A5EE-4A04-B216-A3C6C69007A9}|22Demo_Collection\\22Demo_Collection.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\22demo_collection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29C79BE3-A5EE-4A04-B216-A3C6C69007A9}|22Demo_Collection\\22Demo_Collection.csproj|solutionrelative:22demo_collection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\14Demo_Properties\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:14Demo_Properties\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2FCDB2C-6419-4BF9-97AB-3A1F90188C4B}|24Demo_GenericCollections\\24Demo_GenericCollections.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\24demo_genericcollections\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2FCDB2C-6419-4BF9-97AB-3A1F90188C4B}|24Demo_GenericCollections\\24Demo_GenericCollections.csproj|solutionrelative:24demo_genericcollections\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\10Demo_Report\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:10Demo_Report\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\9Demo_OOP_Interface\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:9Demo_OOP_Interface\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:07Demo_Inheritance\\Test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:07Demo_Inheritance\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:07Demo_Inheritance\\Demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\08Demo_OOP_interface\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:08Demo_OOP_interface\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\logic\\Person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:06Demo_OOP_Inheritance\\logic\\Person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\05Demo_OOP_Basics\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:05Demo_OOP_Basics\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\05Demo_OOP_Basics\\MyClass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:05Demo_OOP_Basics\\MyClass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:06Demo_OOP_Inheritance\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{2F9F4928-083E-4CB1-A5F7-5DAA78B5EE3B}|23Demo_Generic\\23Demo_Generic.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\csharpdemos\\23demo_generic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F9F4928-083E-4CB1-A5F7-5DAA78B5EE3B}|23Demo_Generic\\23Demo_Generic.csproj|solutionrelative:23demo_generic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -126,361 +86,253 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\23Demo_Generic\\Program.cs",
-              "RelativeDocumentMoniker": "23Demo_Generic\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\23Demo_Generic\\Program.cs",
-              "RelativeToolTip": "23Demo_Generic\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T14:24:14.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\22Demo_Collection\\Program.cs",
-              "RelativeDocumentMoniker": "22Demo_Collection\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\22Demo_Collection\\Program.cs",
-              "RelativeToolTip": "22Demo_Collection\\Program.cs",
-              "ViewState": "AgIAAOIAAAAAAAAAAAAAAMsAAAAMAAAAAAAAAA==",
+              "Title": "Emp.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\33Demo_EmpLib\\Emp.cs",
+              "RelativeDocumentMoniker": "33Demo_EmpLib\\Emp.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\33Demo_EmpLib\\Emp.cs",
+              "RelativeToolTip": "33Demo_EmpLib\\Emp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T13:18:49.01Z",
+              "WhenOpened": "2025-12-22T13:02:09.254Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\21Demo_ObserverPattern\\Program.cs",
-              "RelativeDocumentMoniker": "21Demo_ObserverPattern\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\21Demo_ObserverPattern\\Program.cs",
-              "RelativeToolTip": "21Demo_ObserverPattern\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T13:04:58.705Z",
+              "Title": "33Demo_EmpLib",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\33Demo_EmpLib\\33Demo_EmpLib.csproj",
+              "RelativeDocumentMoniker": "33Demo_EmpLib\\33Demo_EmpLib.csproj",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\33Demo_EmpLib\\33Demo_EmpLib.csproj",
+              "RelativeToolTip": "33Demo_EmpLib\\33Demo_EmpLib.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-22T13:02:06.198Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\20Demo_MultiCastDelegate\\Program.cs",
-              "RelativeDocumentMoniker": "20Demo_MultiCastDelegate\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\20Demo_MultiCastDelegate\\Program.cs",
-              "RelativeToolTip": "20Demo_MultiCastDelegate\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\32Demo_MyApplication\\Program.cs",
+              "RelativeDocumentMoniker": "32Demo_MyApplication\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\32Demo_MyApplication\\Program.cs",
+              "RelativeToolTip": "32Demo_MyApplication\\Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T12:45:42.913Z",
+              "WhenOpened": "2025-12-22T13:01:53.167Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "18Demo_Delegates.csproj",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\18Demo_Delegates\\18Demo_Delegates.csproj",
-              "RelativeDocumentMoniker": "18Demo_Delegates\\18Demo_Delegates.csproj",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\18Demo_Delegates\\18Demo_Delegates.csproj",
-              "RelativeToolTip": "18Demo_Delegates\\18Demo_Delegates.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-19T12:13:19.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TestDataSet.xss",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xss",
-              "RelativeDocumentMoniker": "17Demo_WinForm\\TestDataSet.xss",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xss",
-              "RelativeToolTip": "17Demo_WinForm\\TestDataSet.xss",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEQSURBVDhPpZIxDoIwFIYfbsAiNxBu4KKwMnMBmDyCJxFXndy4AHcgunADdGdAE4EwVV4pWqEgiV/y0uZ/7Z\u002B\u002B1wdjlGW5KYoiroN0IsYcEEIkdrZHfchPkmQbRREEQcDUBtd1wbIsMAxjz6Rvsiybp2lKDocjuWcPYfg7n75mxu4IyfOc7fo8WW6sBOI4DugLHVbrNVMbLuczXG9XCMPw2wAvse0bNBkCDXol4IU2pjDagyn0DPBZ/PoLaoC1i\u002BpH0EhkpqoqXWkT244PgQZ83jRN8DzvM0hoYNs2P6rvGNCbUa6ZoUBdOBRFEc5HVVUa5upYyrJ8Qo32oH1et4yurmnanW44/v5GaaiEaaUBvACMFdHTTBiv\u002BAAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-12-18T10:06:06.529Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TestDataSet.xsc",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xsc",
-              "RelativeDocumentMoniker": "17Demo_WinForm\\TestDataSet.xsc",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xsc",
-              "RelativeToolTip": "17Demo_WinForm\\TestDataSet.xsc",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001612|",
-              "WhenOpened": "2025-12-18T10:06:06.932Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TestDataSet.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.Designer.cs",
-              "RelativeDocumentMoniker": "17Demo_WinForm\\TestDataSet.Designer.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.Designer.cs",
-              "RelativeToolTip": "17Demo_WinForm\\TestDataSet.Designer.cs",
-              "ViewState": "AgIAAIUAAAAAAAAAAAAAwA0AAAAEAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "BVS.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\31Demo_BVSAttribute\\BVS.cs",
+              "RelativeDocumentMoniker": "31Demo_BVSAttribute\\BVS.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\31Demo_BVSAttribute\\BVS.cs",
+              "RelativeToolTip": "31Demo_BVSAttribute\\BVS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T10:05:55.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\App.config",
-              "RelativeDocumentMoniker": "17Demo_WinForm\\App.config",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\App.config",
-              "RelativeToolTip": "17Demo_WinForm\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-12-18T10:05:22.755Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\18Demo_Delegates\\Program.cs",
-              "RelativeDocumentMoniker": "18Demo_Delegates\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\18Demo_Delegates\\Program.cs",
-              "RelativeToolTip": "18Demo_Delegates\\Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T09:56:29.007Z",
+              "WhenOpened": "2025-12-22T13:01:30.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\19Demo_EventAndDelegate\\Program.cs",
-              "RelativeDocumentMoniker": "19Demo_EventAndDelegate\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\19Demo_EventAndDelegate\\Program.cs",
-              "RelativeToolTip": "19Demo_EventAndDelegate\\Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAwwEIAAAAMAAAAAAAAAA==",
+              "Title": "CMath.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\30Demo_MyMath\\CMath.cs",
+              "RelativeDocumentMoniker": "30Demo_MyMath\\CMath.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\30Demo_MyMath\\CMath.cs",
+              "RelativeToolTip": "30Demo_MyMath\\CMath.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T10:07:51.981Z",
+              "WhenOpened": "2025-12-22T12:30:38.597Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\Program.cs",
-              "RelativeDocumentMoniker": "17Demo_WinForm\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\Program.cs",
-              "RelativeToolTip": "17Demo_WinForm\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\29Demo_Refelction\\Program.cs",
+              "RelativeDocumentMoniker": "29Demo_Refelction\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\29Demo_Refelction\\Program.cs",
+              "RelativeToolTip": "29Demo_Refelction\\Program.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAuwDwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T10:06:14.862Z"
+              "WhenOpened": "2025-12-22T12:29:17.236Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TestDataSet.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.cs",
-              "RelativeDocumentMoniker": "17Demo_WinForm\\TestDataSet.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.cs",
-              "RelativeToolTip": "17Demo_WinForm\\TestDataSet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Program -v2.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\29Demo_Refelction\\Program -v2.cs",
+              "RelativeDocumentMoniker": "29Demo_Refelction\\Program -v2.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\29Demo_Refelction\\Program -v2.cs",
+              "RelativeToolTip": "29Demo_Refelction\\Program -v2.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAuwCYAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T10:05:42.697Z"
+              "WhenOpened": "2025-12-22T12:29:13.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program -v1.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\29Demo_Refelction\\Program -v1.cs",
+              "RelativeDocumentMoniker": "29Demo_Refelction\\Program -v1.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\29Demo_Refelction\\Program -v1.cs",
+              "RelativeToolTip": "29Demo_Refelction\\Program -v1.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T12:29:07.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "28Demo_Serialization",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\28Demo_Serialization\\28Demo_Serialization.csproj",
+              "RelativeDocumentMoniker": "28Demo_Serialization\\28Demo_Serialization.csproj",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\28Demo_Serialization\\28Demo_Serialization.csproj",
+              "RelativeToolTip": "28Demo_Serialization\\28Demo_Serialization.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-22T12:17:43.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\28Demo_Serialization\\Program.cs",
+              "RelativeDocumentMoniker": "28Demo_Serialization\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\28Demo_Serialization\\Program.cs",
+              "RelativeToolTip": "28Demo_Serialization\\Program.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAuwHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T12:16:54.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "27Demo_BinarySerialization",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\27Demo_BinarySerialization\\27Demo_BinarySerialization.csproj",
+              "RelativeDocumentMoniker": "27Demo_BinarySerialization\\27Demo_BinarySerialization.csproj",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\27Demo_BinarySerialization\\27Demo_BinarySerialization.csproj",
+              "RelativeToolTip": "27Demo_BinarySerialization\\27Demo_BinarySerialization.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-22T11:55:09.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\27Demo_BinarySerialization\\Program.cs",
+              "RelativeDocumentMoniker": "27Demo_BinarySerialization\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\27Demo_BinarySerialization\\Program.cs",
+              "RelativeToolTip": "27Demo_BinarySerialization\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T11:53:35.493Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\Form1.cs",
-              "RelativeDocumentMoniker": "17Demo_WinForm\\Form1.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\Form1.cs [Design]",
-              "RelativeToolTip": "17Demo_WinForm\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T10:04:28.368Z"
+              "Title": "demo1.txt",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\26Demo_FileIO\\Files\\demo1.txt",
+              "RelativeDocumentMoniker": "26Demo_FileIO\\Files\\demo1.txt",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\26Demo_FileIO\\Files\\demo1.txt",
+              "RelativeToolTip": "26Demo_FileIO\\Files\\demo1.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-12-22T11:53:19.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "demo.txt",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\26Demo_FileIO\\Files\\demo.txt",
+              "RelativeDocumentMoniker": "26Demo_FileIO\\Files\\demo.txt",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\26Demo_FileIO\\Files\\demo.txt",
+              "RelativeToolTip": "26Demo_FileIO\\Files\\demo.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-12-22T11:53:16.498Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "TestDataSet.xsd",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xsd",
-              "RelativeDocumentMoniker": "17Demo_WinForm\\TestDataSet.xsd",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\17Demo_WinForm\\TestDataSet.xsd",
-              "RelativeToolTip": "17Demo_WinForm\\TestDataSet.xsd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2025-12-18T10:05:30.671Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\26Demo_FileIO\\Program.cs",
+              "RelativeDocumentMoniker": "26Demo_FileIO\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\26Demo_FileIO\\Program.cs",
+              "RelativeToolTip": "26Demo_FileIO\\Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA1wAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T11:37:16.586Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\16Demo_CMathClient\\Program.cs",
-              "RelativeDocumentMoniker": "16Demo_CMathClient\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\16Demo_CMathClient\\Program.cs",
-              "RelativeToolTip": "16Demo_CMathClient\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\25Demo_GenericDelegate\\Program.cs",
+              "RelativeDocumentMoniker": "25Demo_GenericDelegate\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\25Demo_GenericDelegate\\Program.cs",
+              "RelativeToolTip": "25Demo_GenericDelegate\\Program.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAkwFMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T09:46:24.163Z"
+              "WhenOpened": "2025-12-22T11:31:43.445Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "CMath.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\15Demo_CMathLib\\CMath.cs",
-              "RelativeDocumentMoniker": "15Demo_CMathLib\\CMath.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\15Demo_CMathLib\\CMath.cs",
-              "RelativeToolTip": "15Demo_CMathLib\\CMath.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\22Demo_Collection\\Program.cs",
+              "RelativeDocumentMoniker": "22Demo_Collection\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\22Demo_Collection\\Program.cs",
+              "RelativeToolTip": "22Demo_Collection\\Program.cs",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAkwP0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T09:20:51.596Z"
+              "WhenOpened": "2025-12-22T11:29:26.704Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\14Demo_Properties\\Program.cs",
-              "RelativeDocumentMoniker": "14Demo_Properties\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\14Demo_Properties\\Program.cs",
-              "RelativeToolTip": "14Demo_Properties\\Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAA6wEsAAAAYAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\24Demo_GenericCollections\\Program.cs",
+              "RelativeDocumentMoniker": "24Demo_GenericCollections\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\24Demo_GenericCollections\\Program.cs",
+              "RelativeToolTip": "24Demo_GenericCollections\\Program.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwEoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T08:53:51.298Z"
+              "WhenOpened": "2025-12-19T15:13:54.866Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\10Demo_Report\\Program.cs",
-              "RelativeDocumentMoniker": "10Demo_Report\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\10Demo_Report\\Program.cs",
-              "RelativeToolTip": "10Demo_Report\\Program.cs",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAAACQAAAAJAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\23Demo_Generic\\Program.cs",
+              "RelativeDocumentMoniker": "23Demo_Generic\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\23Demo_Generic\\Program.cs",
+              "RelativeToolTip": "23Demo_Generic\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAJwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T08:53:15.436Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\9Demo_OOP_Interface\\Program.cs",
-              "RelativeDocumentMoniker": "9Demo_OOP_Interface\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\9Demo_OOP_Interface\\Program.cs",
-              "RelativeToolTip": "9Demo_OOP_Interface\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T13:49:20.052Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Test.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Test.cs",
-              "RelativeDocumentMoniker": "07Demo_Inheritance\\Test.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Test.cs",
-              "RelativeToolTip": "07Demo_Inheritance\\Test.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T13:48:25.376Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Program.cs",
-              "RelativeDocumentMoniker": "07Demo_Inheritance\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Program.cs",
-              "RelativeToolTip": "07Demo_Inheritance\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T13:42:15.756Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Demo.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Demo.cs",
-              "RelativeDocumentMoniker": "07Demo_Inheritance\\Demo.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\07Demo_Inheritance\\Demo.cs",
-              "RelativeToolTip": "07Demo_Inheritance\\Demo.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAwwA0AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T13:42:46.729Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\08Demo_OOP_interface\\Program.cs",
-              "RelativeDocumentMoniker": "08Demo_OOP_interface\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\08Demo_OOP_interface\\Program.cs",
-              "RelativeToolTip": "08Demo_OOP_interface\\Program.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAIwEMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T12:13:23.923Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Person.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\logic\\Person.cs",
-              "RelativeDocumentMoniker": "06Demo_OOP_Inheritance\\logic\\Person.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\logic\\Person.cs",
-              "RelativeToolTip": "06Demo_OOP_Inheritance\\logic\\Person.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T11:17:39.767Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\05Demo_OOP_Basics\\Program.cs",
-              "RelativeDocumentMoniker": "05Demo_OOP_Basics\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\05Demo_OOP_Basics\\Program.cs",
-              "RelativeToolTip": "05Demo_OOP_Basics\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T11:17:26.824Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "MyClass.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\05Demo_OOP_Basics\\MyClass.cs",
-              "RelativeDocumentMoniker": "05Demo_OOP_Basics\\MyClass.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\05Demo_OOP_Basics\\MyClass.cs",
-              "RelativeToolTip": "05Demo_OOP_Basics\\MyClass.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T11:17:22.645Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\Program.cs",
-              "RelativeDocumentMoniker": "06Demo_OOP_Inheritance\\Program.cs",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\Program.cs",
-              "RelativeToolTip": "06Demo_OOP_Inheritance\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T11:15:47.049Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "06Demo_OOP_Inheritance.csproj",
-              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj",
-              "RelativeDocumentMoniker": "06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj",
-              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\CSharpDemos\\06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj",
-              "RelativeToolTip": "06Demo_OOP_Inheritance\\06Demo_OOP_Inheritance.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-16T11:15:36.773Z"
+              "WhenOpened": "2025-12-19T14:42:03.269Z"
             }
           ]
         }

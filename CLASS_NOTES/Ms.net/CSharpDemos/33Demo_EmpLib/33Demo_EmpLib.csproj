@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>_33Demo_EmpLib</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\31Demo_BVSAttribute\31Demo_BVSAttribute.csproj" />
+    <ProjectReference Include="..\34Demo_CustomAttributes\34Demo_CustomAttributes.csproj" />
+  </ItemGroup>
+
+</Project>

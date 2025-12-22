@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\23Demo_Generic"
+    "\\07Demo_Inheritance",
+    "\\24Demo_GenericCollections"
   ],
-  "SelectedNode": "\\23Demo_Generic\\Program.cs",
+  "SelectedNode": "\\24Demo_GenericCollections\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
