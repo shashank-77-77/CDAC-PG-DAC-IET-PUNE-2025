@@ -1,0 +1,130 @@
+2054. Two Best Non-Overlapping Events
+Solved
+Medium
+Topics
+premium lock icon
+Companies
+Hint
+You are given a 0-indexed 2D integer array of events where events[i] = [startTimei, endTimei, valuei]. The ith event starts at startTimei and ends at endTimei, and if you attend this event, you will receive a value of valuei. You can choose at most two non-overlapping events to attend such that the sum of their values is maximized.
+
+Return this maximum sum.
+
+Note that the start time and end time is inclusive: that is, you cannot attend two events where one of them starts and the other ends at the same time. More specifically, if you attend an event with end time t, the next event must start at or after t + 1.
+
+ 
+
+Example 1:
+
+
+Input: events = [[1,3,2],[4,5,2],[2,4,3]]
+Output: 4
+Explanation: Choose the green events, 0 and 1 for a sum of 2 + 2 = 4.
+Example 2:
+
+Example 1 Diagram
+Input: events = [[1,3,2],[4,5,2],[1,5,5]]
+Output: 5
+Explanation: Choose event 2 for a sum of 5.
+Example 3:
+
+
+Input: events = [[1,5,3],[1,5,1],[6,6,5]]
+Output: 8
+Explanation: Choose events 0 and 2 for a sum of 3 + 5 = 8.
+ 
+
+Constraints:
+
+2 <= events.length <= 105
+events[i].length == 3
+1 <= startTimei <= endTimei <= 109
+1 <= valuei <= 106
+ 
+
+
+
+
+SOLUTION----------------------------
+
+class Solution {
+
+    // Core delivery method: computes the maximum achievable value
+    // by attending at most two non-overlapping events
+    public int maxTwoEvents(int[][] events) {
+
+        // Establish total count of events to drive downstream iterations
+        int totalEvents = events.length;
+
+        // Sort events by start time to enable binary search and suffix optimization
+        // Comparator ensures chronological alignment
+        Arrays.sort(events, (e1, e2) -> e1[0] - e2[0]);
+
+        // Suffix array to track the maximum event value from index i to end
+        // This enables O(1) lookup for best future event
+        int[] suffixMaxValue = new int[totalEvents];
+
+        // Initialize suffix with the last event's value
+        suffixMaxValue[totalEvents - 1] = events[totalEvents - 1][2];
+
+        // Populate suffix array in reverse order
+        // Each position holds the max value seen from this index forward
+        for (int i = totalEvents - 2; i >= 0; i--) {
+            suffixMaxValue[i] = Math.max(
+                suffixMaxValue[i + 1], // best value after this event
+                events[i][2]           // value of current event
+            );
+        }
+
+        // Baseline KPI: at minimum, we can attend one event
+        int maximumTotalValue = 1;
+
+        // Iterate through each event as the first selection candidate
+        for (int i = 0; i < totalEvents; i++) {
+
+            // Capture current event’s value as initial contribution
+            int currentEventValue = events[i][2];
+
+            // Define earliest permissible start time for the next event
+            // Ensures strict non-overlap
+            int nextValidStartTime = events[i][1] + 1;
+
+            // Binary search boundaries for identifying next compatible event
+            int low = i + 1;
+            int high = totalEvents - 1;
+
+            // Placeholder for index of next valid event
+            int nextEventIndex = -1;
+
+            // Binary search to find the earliest event
+            // whose start time satisfies non-overlap constraint
+            while (low <= high) {
+
+                // Midpoint calculation using unsigned shift for overflow safety
+                int mid = (low + high) >>> 1;
+
+                // If candidate event starts late enough, mark as valid
+                if (events[mid][0] >= nextValidStartTime) {
+                    nextEventIndex = mid; // potential best fit
+                    high = mid - 1;       // tighten search to earlier index
+                } else {
+                    low = mid + 1;        // move right to find valid start
+                }
+            }
+
+            // If a valid second event exists, add its maximum possible value
+            if (nextEventIndex != -1) {
+                currentEventValue += suffixMaxValue[nextEventIndex];
+            }
+
+            // Update global maximum to reflect best observed outcome
+            maximumTotalValue = Math.max(
+                maximumTotalValue,
+                currentEventValue
+            );
+        }
+
+        // Return final optimized business outcome
+        return maximumTotalValue;
+    }
+}
+
