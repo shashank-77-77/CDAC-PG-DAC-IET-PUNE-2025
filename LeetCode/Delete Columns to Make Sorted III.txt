@@ -39,4 +39,67 @@ n == strs.length
 1 <= n <= 100
 1 <= strs[i].length <= 100
 strs[i] consists of lowercase English letters.
+
+
+
+
+Solution -----------------
+
+
+class Solution {
+
+    // Core method to compute minimum column deletions
+    public int minDeletionSize(String[] strs) {
+
+        // Total number of rows
+        int rows = strs.length;
+
+        // Total number of columns (all rows have equal length)
+        int cols = strs[0].length();
+
+        // dp[j] represents the maximum number of columns
+        // that can be kept ending exactly at column j
+        int[] dp = new int[cols];
+
+        // Baseline initialization:
+        // each column can always stand alone
+        for (int j = 0; j < cols; j++) {
+            dp[j] = 1;
+        }
+
+        // Iterate over all column pairs (i < j)
+        for (int j = 0; j < cols; j++) {
+
+            for (int i = 0; i < j; i++) {
+
+                // Assume column i can precede column j
+                boolean valid = true;
+
+                // Validate monotonicity across all rows
+                for (int r = 0; r < rows; r++) {
+                    if (strs[r].charAt(i) > strs[r].charAt(j)) {
+                        valid = false;
+                        break;
+                    }
+                }
+
+                // If valid, update DP state
+                if (valid) {
+                    dp[j] = Math.max(dp[j], dp[i] + 1);
+                }
+            }
+        }
+
+        // Extract the longest valid column sequence
+        int maxKeptColumns = 0;
+        for (int val : dp) {
+            maxKeptColumns = Math.max(maxKeptColumns, val);
+        }
+
+        // Minimum deletions = total columns - columns kept
+        return cols - maxKeptColumns;
+    }
+}
+
+
  
