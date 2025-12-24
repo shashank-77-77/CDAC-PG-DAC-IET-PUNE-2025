@@ -17,8 +17,13 @@ namespace Serialization
             emp.Name = "Shashank Mankar";
             emp.Address = "Gokhale Nagar";
 
-            //Type type = emp.GetType();
-            //XmlSerializer xr = new XmlSerializer(type);
+            Emp emp1 = new Emp();
+            emp.Id = 112;
+            emp1.Name = "Soham Shelar";
+            emp1.Address = "Gokhale Nagar";
+
+            Type type = emp1.GetType();
+            XmlSerializer xr = new XmlSerializer(type);
 
             #region XML Serialization 
             //FileStream fs = null;
@@ -33,7 +38,7 @@ namespace Serialization
             //}
 
             //XmlSerializer xr = new XmlSerializer(typeof(Emp));
-            //xr.Serialize(fs, emp);
+            //xr.Serialize(fs, emp1);
             //fs.Close();
             //Console.WriteLine("Done");
             #endregion

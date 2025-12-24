@@ -16,7 +16,7 @@ namespace MyApplication
             for (int i = 0; i < allTypes.Length; i++)
             {
                 Type type = allTypes[i];
-                //Console.WriteLine(type.Name);
+               
                 Attribute[] allAttributes = type.GetCustomAttributes().ToArray();
                 for (int j = 0; j < allAttributes.Length; j++)
                 {

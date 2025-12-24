@@ -13,7 +13,7 @@ namespace MyORM
             Type[] allTypes = asm.GetTypes();
             for (int i = 0; i < allTypes.Length; i++)
             {
-                Type type = allTypes[i]; //Emp
+                Type type = allTypes[i]; 
 
                 string createTableQuery = "CREATE TABLE ";
 
