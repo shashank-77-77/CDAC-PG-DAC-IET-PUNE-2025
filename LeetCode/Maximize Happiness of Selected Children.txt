@@ -48,3 +48,28 @@ Constraints:
 Solution -------------------------------------------
 
 
+import java.util.*;
+
+class Solution {
+    public long maximumHappinessSum(int[] happiness, int k) {
+
+        Arrays.sort(happiness); // ascending
+
+        long total = 0;
+        int n = happiness.length;
+        int dec = 0; // global depreciation counter
+
+        // start from the biggest happiness values
+        for (int i = n - 1; i >= n - k; i--) {
+
+            int effective = happiness[i] - dec;
+
+            if (effective <= 0) break; // no more profit possible
+
+            total += effective;
+            dec++; // every pick depreciates remaining children
+        }
+
+        return total;
+    }
+}
