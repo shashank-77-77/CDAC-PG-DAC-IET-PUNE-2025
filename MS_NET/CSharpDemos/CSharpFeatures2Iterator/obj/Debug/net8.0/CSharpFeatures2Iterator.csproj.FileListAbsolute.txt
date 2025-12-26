@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\bin\Debug\net8.0\CSharpFeatures2Iterator.exe
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\bin\Debug\net8.0\CSharpFeatures2Iterator.deps.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\bin\Debug\net8.0\CSharpFeatures2Iterator.runtimeconfig.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\bin\Debug\net8.0\CSharpFeatures2Iterator.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\bin\Debug\net8.0\CSharpFeatures2Iterator.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\obj\Debug\net8.0\CSharpFeatures2Iterator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\obj\Debug\net8.0\CSharpFeatures2Iterator.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\obj\Debug\net8.0\CSharpFeatures2Iterator.AssemblyInfo.cs
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\obj\Debug\net8.0\CSharpFeatures2Iterator.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\obj\Debug\net8.0\CSharpFeatures2Iterator.sourcelink.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\obj\Debug\net8.0\CSharpFeatures2Iterator.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\obj\Debug\net8.0\refint\CSharpFeatures2Iterator.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\obj\Debug\net8.0\CSharpFeatures2Iterator.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\obj\Debug\net8.0\CSharpFeatures2Iterator.genruntimeconfig.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures2Iterator\obj\Debug\net8.0\ref\CSharpFeatures2Iterator.dll

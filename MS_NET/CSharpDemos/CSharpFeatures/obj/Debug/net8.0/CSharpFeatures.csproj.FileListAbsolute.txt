@@ -1,0 +1,15 @@
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\bin\Debug\net8.0\CSharpFeatures.exe
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\bin\Debug\net8.0\CSharpFeatures.deps.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\bin\Debug\net8.0\CSharpFeatures.runtimeconfig.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\bin\Debug\net8.0\CSharpFeatures.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\bin\Debug\net8.0\CSharpFeatures.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\obj\Debug\net8.0\CSharpFeatures.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\obj\Debug\net8.0\CSharpFeatures.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\obj\Debug\net8.0\CSharpFeatures.AssemblyInfo.cs
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\obj\Debug\net8.0\CSharpFeatures.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\obj\Debug\net8.0\CSharpFeatures.sourcelink.json
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\obj\Debug\net8.0\CSharpFeatures.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\obj\Debug\net8.0\refint\CSharpFeatures.dll
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\obj\Debug\net8.0\CSharpFeatures.pdb
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\obj\Debug\net8.0\CSharpFeatures.genruntimeconfig.cache
+C:\Users\IET\Desktop\soham sss\CDAC_PG-DAC\250845920083\MS_NET\CSharpDemos\CSharpFeatures\obj\Debug\net8.0\ref\CSharpFeatures.dll
