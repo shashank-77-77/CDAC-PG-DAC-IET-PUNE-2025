@@ -44,9 +44,9 @@
             //    //Console.WriteLine($"Id: {emp.Id}, Name: {emp.Name}, Address: {emp.Address}");
             //}
 
-            var filteredEmpCollectionBasedOnCity = (from emp in emps
-                                                  where emp.Address.ToLower().StartsWith(ch)
-                                                  select emp);
+  var filteredEmpCollectionBasedOnCity = (from emp in emps
+                                          where emp.Address.ToLower().StartsWith(ch)
+                                          select emp);
 
             
 

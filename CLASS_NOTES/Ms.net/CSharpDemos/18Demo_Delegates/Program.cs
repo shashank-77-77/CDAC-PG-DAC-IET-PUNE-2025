@@ -11,7 +11,7 @@
     public delegate int MyAddDelegate(int p, int q);
     public delegate int MySquareDelegate(int x);
     internal class Program
-    
+    {
         static void Main(string[] args)
         {
             #region Demo 00 : Delagate and Old syntax for Method calls 

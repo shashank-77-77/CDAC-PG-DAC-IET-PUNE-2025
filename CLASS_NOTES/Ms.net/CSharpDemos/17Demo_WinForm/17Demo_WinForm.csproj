@@ -54,9 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestDataSet.cs">
-      <DependentUpon>TestDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="TestDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
