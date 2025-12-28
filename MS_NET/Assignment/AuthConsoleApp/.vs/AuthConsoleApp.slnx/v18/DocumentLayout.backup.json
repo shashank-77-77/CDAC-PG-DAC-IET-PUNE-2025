@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\CDAC\\MS_NET\\Assignment\\AuthConsoleApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E7C8CE5-9E07-4E2F-B87C-98CA736A6A0E}|AuthConsoleApp\\AuthConsoleApp.csproj|d:\\cdac\\ms_net\\assignment\\authconsoleapp\\authconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E7C8CE5-9E07-4E2F-B87C-98CA736A6A0E}|AuthConsoleApp\\AuthConsoleApp.csproj|solutionrelative:authconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49D3CD1A-A089-2D16-99FA-6067EF16D612}|AuthConsoleApp\\AuthConsoleApp.csproj|d:\\cdac\\ms_net\\assignment\\authconsoleapp\\authconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D3CD1A-A089-2D16-99FA-6067EF16D612}|AuthConsoleApp\\AuthConsoleApp.csproj|solutionrelative:authconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E7C8CE5-9E07-4E2F-B87C-98CA736A6A0E}|AuthConsoleApp\\AuthConsoleApp.csproj|d:\\cdac\\ms_net\\assignment\\authconsoleapp\\authconsoleapp\\authconsoleapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0E7C8CE5-9E07-4E2F-B87C-98CA736A6A0E}|AuthConsoleApp\\AuthConsoleApp.csproj|solutionrelative:authconsoleapp\\authconsoleapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{49D3CD1A-A089-2D16-99FA-6067EF16D612}|AuthConsoleApp\\AuthConsoleApp.csproj|d:\\cdac\\ms_net\\assignment\\authconsoleapp\\authconsoleapp\\authconsoleapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{49D3CD1A-A089-2D16-99FA-6067EF16D612}|AuthConsoleApp\\AuthConsoleApp.csproj|solutionrelative:authconsoleapp\\authconsoleapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,15 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AuthConsoleApp",
+              "Title": "AuthConsoleApp.csproj",
               "DocumentMoniker": "D:\\CDAC\\MS_NET\\Assignment\\AuthConsoleApp\\AuthConsoleApp\\AuthConsoleApp.csproj",
               "RelativeDocumentMoniker": "AuthConsoleApp\\AuthConsoleApp.csproj",
               "ToolTip": "D:\\CDAC\\MS_NET\\Assignment\\AuthConsoleApp\\AuthConsoleApp\\AuthConsoleApp.csproj",
               "RelativeToolTip": "AuthConsoleApp\\AuthConsoleApp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-28T06:53:13.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-28T06:53:13.278Z"
             },
             {
               "$type": "Document",
@@ -41,7 +40,7 @@
               "RelativeDocumentMoniker": "AuthConsoleApp\\Program.cs",
               "ToolTip": "D:\\CDAC\\MS_NET\\Assignment\\AuthConsoleApp\\AuthConsoleApp\\Program.cs",
               "RelativeToolTip": "AuthConsoleApp\\Program.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAGsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-28T06:33:19.653Z",
               "EditorCaption": ""

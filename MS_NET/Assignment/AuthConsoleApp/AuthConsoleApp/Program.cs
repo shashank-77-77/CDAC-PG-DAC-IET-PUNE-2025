@@ -16,6 +16,7 @@ class Program
             Console.WriteLine("1. Login");
             Console.WriteLine("2. Create User");
             Console.WriteLine("3. Forgot Password");
+            Console.WriteLine("4. Exit");
             Console.Write("Select: ");
 
             switch (Console.ReadLine())
@@ -23,6 +24,7 @@ class Program
                 case "1": Login(); break;
                 case "2": CreateUser(); break;
                 case "3": ResetPassword(); break;
+                case "4": return;
                 default: Console.WriteLine("Invalid Choice"); break;
             }
 
@@ -30,6 +32,7 @@ class Program
             Console.ReadKey();
         }
     }
+
 
     static List<User> FetchUsers()
     {
