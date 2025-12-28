@@ -1,0 +1,25 @@
+-------------.NET Assignmet---------------
+
+1. Login
+2. Create User 
+3. Forgot Password 
+
+
+Constraints : -  
+1.LINQ
+2.Database Connectivity 
+3.Table 
+4.Realtime database update delete or modifty id and password
+
+
+create a console app that accepts username , password 
+after validating credentials 
+show message login successful 
+redirect button for login page 
+
+if not 
+show invalid username or password / invalid credentials 
+
+DeadLine : Monday 29 dec 2025 
+
+   
