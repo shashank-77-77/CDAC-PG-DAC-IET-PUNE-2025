@@ -23,3 +23,40 @@ show invalid username or password / invalid credentials
 DeadLine : Monday 29 dec 2025 
 
    
+------------------------------------------------------------
+
+
+---------------------------for Server and Db----------------
+
+Microsoft Windows [Version 10.0.26200.7462]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\shash>sqlcmd -S SHASHANK\SQLEXPRESS01 -E
+1> CREATE DATABASE AuthDB
+2> GO
+1> USE AuthDB
+2> GO
+Changed database context to 'AuthDB'.
+1> CREATE TABLE Users
+2> (
+3>     UserId INT IDENTITY PRIMARY KEY,
+4>     Username VARCHAR(50) UNIQUE,
+5>     Password VARCHAR(50)
+6> )
+7> GO
+1> INSERT INTO Users VALUES ('admin','1234'),('user1','pass1')
+2> GO
+
+(2 rows affected)
+1> SELECT * FROM Users
+2> GO
+UserId      Username                                           Password
+----------- -------------------------------------------------- --------------------------------------------------
+          1 admin                                              1234
+          2 user1                                              pass1
+
+(2 rows affected)
+1> EXIT
+
+
+Data Source=SHASHANK\SQLEXPRESS01;Initial Catalog=AuthDB;Integrated Security=True
