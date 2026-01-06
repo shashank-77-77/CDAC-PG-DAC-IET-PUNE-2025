@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\WebApplicationsDemo\\MVC_Template\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{105F9546-927B-4EF2-A455-E75F442A433A}|ViewBag_ViewData_TempData\\ViewBag_ViewData_TempData.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\ms_net\\webapplicationsdemo\\mvc_template\\viewbag_viewdata_tempdata\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{105F9546-927B-4EF2-A455-E75F442A433A}|ViewBag_ViewData_TempData\\ViewBag_ViewData_TempData.csproj|solutionrelative:viewbag_viewdata_tempdata\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{105F9546-927B-4EF2-A455-E75F442A433A}|ViewBag_ViewData_TempData\\ViewBag_ViewData_TempData.csproj|c:\\users\\iet\\desktop\\soham sss\\cdac_pg-dac\\250845920083\\ms_net\\webapplicationsdemo\\mvc_template\\viewbag_viewdata_tempdata\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{105F9546-927B-4EF2-A455-E75F442A433A}|ViewBag_ViewData_TempData\\ViewBag_ViewData_TempData.csproj|solutionrelative:viewbag_viewdata_tempdata\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\WebApplicationsDemo\\MVC_Template\\ViewBag_ViewData_TempData\\Program.cs",
+              "RelativeDocumentMoniker": "ViewBag_ViewData_TempData\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\WebApplicationsDemo\\MVC_Template\\ViewBag_ViewData_TempData\\Program.cs",
+              "RelativeToolTip": "ViewBag_ViewData_TempData\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T12:26:53.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\WebApplicationsDemo\\MVC_Template\\ViewBag_ViewData_TempData\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ViewBag_ViewData_TempData\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham sss\\CDAC_PG-DAC\\250845920083\\MS_NET\\WebApplicationsDemo\\MVC_Template\\ViewBag_ViewData_TempData\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ViewBag_ViewData_TempData\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T12:23:20.041Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
