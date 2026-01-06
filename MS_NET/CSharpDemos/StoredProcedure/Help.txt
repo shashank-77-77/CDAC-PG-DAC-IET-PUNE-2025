@@ -1,0 +1,45 @@
+CREATE TABLE Department(
+	DepartmentId INT PRIMARY KEY IDENTITY(1,1),
+	DepartmentName NVARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Employee(
+	EmployeeId INT PRIMARY KEY IDENTITY(1,1),
+	EmployeeName NVARCHAR(100) NOT NULL,
+	DepartmentId INT,
+	FOREIGN KEY (DepartmentId) REFERENCES Department(DepartmentId)
+);
+
+//------------------Stored Procedure------------------------------
+
+CREATE PROCEDURE InsertDepartment
+	@DepartmentName NVARCHAR(100)
+AS
+BEGIN
+	INSERT INTO Department (DepartmentName)
+	VALUES (@DepartmentName)
+END;
+
+//--------------------------------------------
+
+CREATE PROCEDURE InsertEmployee
+	@EmployeeName NVARCHAR(100),
+	@DepartmentId INT
+AS
+BEGIN
+	INSERT INTO Employee (EmployeeName, DepartmentId)
+	VALUES (@EmployeeName, @DepartmentId)
+END;
+GO
+
+//---------------------------------------
+
+CREATE PROCEDURE GetEmployeeByDepartment
+	@DepartmentId INT
+AS
+BEGIN
+	SELECT EmployeeId, EmployeeName
+	FROM Employee
+	WHERE DepartmentId = @DepartmentId
+END;
+GO
