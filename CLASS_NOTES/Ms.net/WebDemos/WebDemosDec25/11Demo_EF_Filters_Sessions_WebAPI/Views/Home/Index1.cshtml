@@ -1,0 +1,51 @@
+﻿@model IEnumerable<_11Demo_EF_Filters_Sessions_WebAPI.Models.Emp>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container">
+    <a href="/Home/Create" class="text-primary">Create</a>
+</div>
+<div class="container table-responsive">
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        @foreach (var prop in typeof(Emp).GetProperties())
+                        {
+                            <th>@prop.Name</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var emp in Model)
+                    {
+                        <tr>
+                            <td>@emp.Id</td>
+                            <td>@emp.Name</td>
+                            <td>@emp.Address</td>
+                            <td>
+                                <a href="/Home/Edit/@emp.Id" 
+                                    class="text-info">
+                                    Edit
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/Home/Details/@emp.Id"
+                                   class="text-warning">
+                                    Details
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/Home/Delete/@emp.Id"
+                                   class="text-danger">
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

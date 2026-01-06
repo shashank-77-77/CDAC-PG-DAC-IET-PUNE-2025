@@ -1,0 +1,5 @@
+﻿Scaffold-DbContext "Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=IETDb;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+// To refelct change of Db in Code use below command
+
+Scaffold-DbContext "Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=IETDb;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force

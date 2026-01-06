@@ -1,0 +1,30 @@
+﻿@model IEnumerable<_08Demo_Bootstrap_Layout_PartialView.Models.Emp>
+@{
+    ViewData["title"] = "Index";
+}
+<h3 class="text-primary">Index Page Contents</h3>
+<hr />
+<div class="table-responsive">
+    <div class="row">
+        <div class="col">
+            <table class="table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var emp in Model)
+                    {
+                        <partial name="_EmpPartialView" model="emp" />
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

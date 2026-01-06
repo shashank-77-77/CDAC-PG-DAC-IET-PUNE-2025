@@ -1,0 +1,12 @@
+﻿@model _08Demo_Bootstrap_Layout_PartialView.Models.Product
+
+<div class="card" style="width: 18rem;">
+    <img src="@(Model.Image)" asp-append-version=true class="card-img-top" alt="product info">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">@Model.Description</p>
+        <p class="card-text">@Model.Price</p>
+        <a href="#" class="btn btn-primary">Add To cart OR Deatils</a>
+        @* <a href="/Home/ProductDeatils/@Model.Id" class="btn btn-primary">Details</a> *@
+    </div>
+</div>

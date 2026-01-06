@@ -1,0 +1,44 @@
+﻿@model _07Demo_ViewBag_ViewData_TempData.Models.IETDbViewModel
+
+<h3>Emp Records</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model.allEmps)
+        {
+            <tr>
+                <td>@emp.Id</td>
+                <td>@emp.Name</td>
+                <td>@emp.Address</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr />
+<h3>Customer Records</h3>
+<table>
+    <thead>
+        <tr>
+            <th>CId</th>
+            <th>CName</th>
+            <th>BillNo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cust in Model.allCusts)
+        {
+            <tr>
+                <td>@cust.CId</td>
+                <td>@cust.CName</td>
+                <td>@cust.BillNo</td>
+            </tr>
+        }
+    </tbody>
+</table>
+    

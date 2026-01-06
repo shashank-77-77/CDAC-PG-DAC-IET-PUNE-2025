@@ -1,0 +1,27 @@
+﻿<h3>Index : Demo</h3>
+<hr />
+@* Temp Data : PIN : @TempData["PIN"] *@
+<hr />
+<p style="color:dodgerblue">@ViewBag.message</p>
+<ul style="color:rebeccapurple">
+    @{
+        Emp emp = ViewBag.empInfo;
+        <li>@emp.Id</li>
+        <li>@emp.Name</li>
+        <li>@emp.Address</li>
+    }
+</ul>
+@* <p>@ViewBag.number</p> *@
+
+<p>@ViewData["number"]</p>
+
+<ul style="color:rebeccapurple">
+    @{
+        Emp emp1 = ViewData["emp1"] as Emp;
+        <li>@emp1.Id</li>
+        <li>@emp1.Name</li>
+        <li>@emp1.Address</li>
+    }
+</ul>
+
+<h4 style="color:crimson">@ViewData["message"]</h4>

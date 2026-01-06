@@ -1,0 +1,230 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B8EE0317-412A-43E1-A7E7-2384F141453E}|07Demo_ViewBag_ViewData_TempData\\07Demo_ViewBag_ViewData_TempData.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\webdemos\\webdemosdec25\\07demo_viewbag_viewdata_tempdata\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8EE0317-412A-43E1-A7E7-2384F141453E}|07Demo_ViewBag_ViewData_TempData\\07Demo_ViewBag_ViewData_TempData.csproj|solutionrelative:07demo_viewbag_viewdata_tempdata\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8EE0317-412A-43E1-A7E7-2384F141453E}|07Demo_ViewBag_ViewData_TempData\\07Demo_ViewBag_ViewData_TempData.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\webdemos\\webdemosdec25\\07demo_viewbag_viewdata_tempdata\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8EE0317-412A-43E1-A7E7-2384F141453E}|07Demo_ViewBag_ViewData_TempData\\07Demo_ViewBag_ViewData_TempData.csproj|solutionrelative:07demo_viewbag_viewdata_tempdata\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80D08326-E201-4EE0-8362-0BCC7A3C8DFA}|06Demo_ReturnTypesOfActionMethod\\06Demo_ReturnTypesOfActionMethod.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\webdemos\\webdemosdec25\\06demo_returntypesofactionmethod\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80D08326-E201-4EE0-8362-0BCC7A3C8DFA}|06Demo_ReturnTypesOfActionMethod\\06Demo_ReturnTypesOfActionMethod.csproj|solutionrelative:06demo_returntypesofactionmethod\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80D08326-E201-4EE0-8362-0BCC7A3C8DFA}|06Demo_ReturnTypesOfActionMethod\\06Demo_ReturnTypesOfActionMethod.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\webdemos\\webdemosdec25\\06demo_returntypesofactionmethod\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80D08326-E201-4EE0-8362-0BCC7A3C8DFA}|06Demo_ReturnTypesOfActionMethod\\06Demo_ReturnTypesOfActionMethod.csproj|solutionrelative:06demo_returntypesofactionmethod\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80D08326-E201-4EE0-8362-0BCC7A3C8DFA}|06Demo_ReturnTypesOfActionMethod\\06Demo_ReturnTypesOfActionMethod.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\webdemos\\webdemosdec25\\06demo_returntypesofactionmethod\\06demo_returntypesofactionmethod.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{80D08326-E201-4EE0-8362-0BCC7A3C8DFA}|06Demo_ReturnTypesOfActionMethod\\06Demo_ReturnTypesOfActionMethod.csproj|solutionrelative:06demo_returntypesofactionmethod\\06demo_returntypesofactionmethod.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\webdemos\\webdemosdec25\\05demo_attributebasedrouting\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|solutionrelative:05demo_attributebasedrouting\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\webdemos\\webdemosdec25\\05demo_attributebasedrouting\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|solutionrelative:05demo_attributebasedrouting\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\webdemos\\webdemosdec25\\05demo_attributebasedrouting\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|solutionrelative:05demo_attributebasedrouting\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\webdemos\\webdemosdec25\\05demo_attributebasedrouting\\views\\demo\\data.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|solutionrelative:05demo_attributebasedrouting\\views\\demo\\data.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\webdemos\\webdemosdec25\\05demo_attributebasedrouting\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|solutionrelative:05demo_attributebasedrouting\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\webdemos\\webdemosdec25\\05demo_attributebasedrouting\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|solutionrelative:05demo_attributebasedrouting\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\webdemos\\webdemosdec25\\05demo_attributebasedrouting\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|solutionrelative:05demo_attributebasedrouting\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|c:\\users\\iet\\desktop\\soham\\iet_dec_2025_batch\\webdemos\\webdemosdec25\\05demo_attributebasedrouting\\05demo_attributebasedrouting.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FA5DFC1B-FB82-408D-BB33-59706E1D8383}|05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj|solutionrelative:05demo_attributebasedrouting\\05demo_attributebasedrouting.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DemoController.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\07Demo_ViewBag_ViewData_TempData\\Controllers\\DemoController.cs",
+              "RelativeDocumentMoniker": "07Demo_ViewBag_ViewData_TempData\\Controllers\\DemoController.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\07Demo_ViewBag_ViewData_TempData\\Controllers\\DemoController.cs",
+              "RelativeToolTip": "07Demo_ViewBag_ViewData_TempData\\Controllers\\DemoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-02T11:35:58.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\07Demo_ViewBag_ViewData_TempData\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "07Demo_ViewBag_ViewData_TempData\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\07Demo_ViewBag_ViewData_TempData\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "07Demo_ViewBag_ViewData_TempData\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAIwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T12:22:56.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\06Demo_ReturnTypesOfActionMethod\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "06Demo_ReturnTypesOfActionMethod\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\06Demo_ReturnTypesOfActionMethod\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "06Demo_ReturnTypesOfActionMethod\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAkwEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T12:17:30.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\06Demo_ReturnTypesOfActionMethod\\Program.cs",
+              "RelativeDocumentMoniker": "06Demo_ReturnTypesOfActionMethod\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\06Demo_ReturnTypesOfActionMethod\\Program.cs",
+              "RelativeToolTip": "06Demo_ReturnTypesOfActionMethod\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T12:15:23.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "06Demo_ReturnTypesOfActionMethod.csproj",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\06Demo_ReturnTypesOfActionMethod\\06Demo_ReturnTypesOfActionMethod.csproj",
+              "RelativeDocumentMoniker": "06Demo_ReturnTypesOfActionMethod\\06Demo_ReturnTypesOfActionMethod.csproj",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\06Demo_ReturnTypesOfActionMethod\\06Demo_ReturnTypesOfActionMethod.csproj",
+              "RelativeToolTip": "06Demo_ReturnTypesOfActionMethod\\06Demo_ReturnTypesOfActionMethod.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-31T12:09:56.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "05Demo_AttributeBasedRouting\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "05Demo_AttributeBasedRouting\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAcwBcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T11:18:10.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DemoController.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\Controllers\\DemoController.cs",
+              "RelativeDocumentMoniker": "05Demo_AttributeBasedRouting\\Controllers\\DemoController.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\Controllers\\DemoController.cs",
+              "RelativeToolTip": "05Demo_AttributeBasedRouting\\Controllers\\DemoController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T11:17:34.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "05Demo_AttributeBasedRouting\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "05Demo_AttributeBasedRouting\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T11:17:04.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Data.cshtml",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\Views\\Demo\\Data.cshtml",
+              "RelativeDocumentMoniker": "05Demo_AttributeBasedRouting\\Views\\Demo\\Data.cshtml",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\Views\\Demo\\Data.cshtml",
+              "RelativeToolTip": "05Demo_AttributeBasedRouting\\Views\\Demo\\Data.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T11:17:00.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "05Demo_AttributeBasedRouting\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "05Demo_AttributeBasedRouting\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T11:16:58.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "05Demo_AttributeBasedRouting\\Views\\Home\\About.cshtml",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "05Demo_AttributeBasedRouting\\Views\\Home\\About.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T11:16:56.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\Program.cs",
+              "RelativeDocumentMoniker": "05Demo_AttributeBasedRouting\\Program.cs",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\Program.cs",
+              "RelativeToolTip": "05Demo_AttributeBasedRouting\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T11:16:49.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "05Demo_AttributeBasedRouting.csproj",
+              "DocumentMoniker": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj",
+              "RelativeDocumentMoniker": "05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj",
+              "ToolTip": "C:\\Users\\IET\\Desktop\\soham\\IET_Dec_2025_Batch\\WebDemos\\WebDemosDec25\\05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj",
+              "RelativeToolTip": "05Demo_AttributeBasedRouting\\05Demo_AttributeBasedRouting.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-31T11:16:02.773Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

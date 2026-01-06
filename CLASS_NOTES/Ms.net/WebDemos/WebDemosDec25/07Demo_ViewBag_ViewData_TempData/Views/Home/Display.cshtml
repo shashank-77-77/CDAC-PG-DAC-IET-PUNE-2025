@@ -1,0 +1,32 @@
+﻿@model System.Collections.ArrayList
+
+<h3>Emp Data</h3>
+    @*Razor Block *@
+    @foreach (var ele in Model)
+    {
+        if (ele is Emp)
+        {
+            Emp emp = ele as Emp;
+            <ul>
+                <li>Id: @emp.Id</li>
+                <li>Name: @emp.Name</li>
+                <li>Address: @emp.Address</li>
+            </ul>
+        }
+    }
+
+<hr/>
+<h3>Customer Data</h3>
+
+@foreach (var ele in Model)
+{
+    if (ele is Customer)
+    {
+        Customer c = ele as Customer;
+        <ul>
+            <li>CId: @c.CId</li>
+            <li>CName: @c.CName</li>
+            <li>BillNo: @c.BillNo</li>
+        </ul>
+    }
+}

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["title"]</title>
+    <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header style="background-color:dodgerblue; color:white; display:flex; padding:5px">
+        <img src="~/images/logo.jpg" alt="logo" height="100" width="100" style="border-radius:50%;"/>
+        <p class="text-dark"><i>Bonaventure Systems</i></p>
+    </header>
+    <nav>
+        <a href="/Home/Index">Home</a> |
+        <a href="/Home/About">About</a> |
+        <a href="/Home/Contact">Contact</a> |
+        <a href="/Home/Courses">Courses</a> |
+        <a href="/Home/ProductData">Product Data</a> |
+    </nav>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    @* This method will load page contents dynamically *@
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer style="background-color:gold; color:blueviolet">
+        <h3>(C)BVS, Pune</h3>
+    </footer>
+    <script src="~/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

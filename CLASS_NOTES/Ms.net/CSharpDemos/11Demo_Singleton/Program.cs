@@ -39,7 +39,7 @@
             }
 
         }
-
+             
     }
     public abstract class Database
     {
@@ -56,7 +56,7 @@
         public void Insert()
         {
             DoInsert();
-            _logger.Log($"Insert From {GetDataBaseName()} done.");
+               _logger.Log($"Insert From {GetDataBaseName()} done.");
         }
         public void Update()
         {
@@ -89,7 +89,7 @@
                     db = null;
                     break;
             }
-            return db;
+            return db;  
         }
     }
     public class MySqlServer :Database

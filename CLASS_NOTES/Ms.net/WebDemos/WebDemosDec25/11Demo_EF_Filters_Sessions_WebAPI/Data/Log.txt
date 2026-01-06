@@ -1,0 +1,44 @@
+--Logged at 02-01-2026 11:07:48 - Calling :/ 
+--Logged at 02-01-2026 11:07:49 - Called:  / 
+--Logged at 02-01-2026 11:07:49 - Generating View: / 
+--Logged at 02-01-2026 11:07:49 - Generated View: / 
+--Logged at 02-01-2026 11:07:52 - Calling :/Home/Create 
+--Logged at 02-01-2026 11:07:52 - Called:  /Home/Create 
+--Logged at 02-01-2026 11:07:52 - Generating View: /Home/Create 
+--Logged at 02-01-2026 11:07:52 - Generated View: /Home/Create 
+--Logged at 02-01-2026 11:08:07 - Calling :/Home/AfterCreate 
+--Logged at 02-01-2026 11:08:07 - Called:  /Home/AfterCreate 
+--Logged at 02-01-2026 11:08:07 - Generating View: /Home/AfterCreate 
+--Logged at 02-01-2026 11:08:07 - Generated View: /Home/AfterCreate 
+--Logged at 02-01-2026 11:08:07 - Calling :/ 
+--Logged at 02-01-2026 11:08:07 - Called:  / 
+--Logged at 02-01-2026 11:08:07 - Generating View: / 
+--Logged at 02-01-2026 11:08:07 - Generated View: / 
+--Logged at 02-01-2026 11:08:10 - Calling :/Home/Edit/5 
+--Logged at 02-01-2026 11:08:10 - Called:  /Home/Edit/5 
+--Logged at 02-01-2026 11:08:10 - Generating View: /Home/Edit/5 
+--Logged at 02-01-2026 11:08:10 - Generated View: /Home/Edit/5 
+--Logged at 02-01-2026 11:08:26 - Calling :/Home/Edit/5 
+--Logged at 02-01-2026 11:08:26 - Called:  /Home/Edit/5 
+--Logged at 02-01-2026 11:08:26 - Generating View: /Home/Edit/5 
+--Logged at 02-01-2026 11:08:26 - Generated View: /Home/Edit/5 
+--Logged at 02-01-2026 11:08:26 - Calling :/ 
+--Logged at 02-01-2026 11:08:26 - Called:  / 
+--Logged at 02-01-2026 11:08:26 - Generating View: / 
+--Logged at 02-01-2026 11:08:26 - Generated View: / 
+--Logged at 02-01-2026 11:08:28 - Calling :/Home/Details/5 
+--Logged at 02-01-2026 11:08:28 - Called:  /Home/Details/5 
+--Logged at 02-01-2026 11:08:28 - Generating View: /Home/Details/5 
+--Logged at 02-01-2026 11:08:28 - Generated View: /Home/Details/5 
+--Logged at 02-01-2026 11:08:31 - Calling :/ 
+--Logged at 02-01-2026 11:08:31 - Called:  / 
+--Logged at 02-01-2026 11:08:31 - Generating View: / 
+--Logged at 02-01-2026 11:08:31 - Generated View: / 
+--Logged at 02-01-2026 11:08:32 - Calling :/Home/Delete/5 
+--Logged at 02-01-2026 11:08:32 - Called:  /Home/Delete/5 
+--Logged at 02-01-2026 11:08:32 - Generating View: /Home/Delete/5 
+--Logged at 02-01-2026 11:08:32 - Generated View: /Home/Delete/5 
+--Logged at 02-01-2026 11:08:32 - Calling :/ 
+--Logged at 02-01-2026 11:08:32 - Called:  / 
+--Logged at 02-01-2026 11:08:32 - Generating View: / 
+--Logged at 02-01-2026 11:08:32 - Generated View: / 

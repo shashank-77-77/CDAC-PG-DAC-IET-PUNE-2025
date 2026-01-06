@@ -1,0 +1,17 @@
+﻿@model IEnumerable<_08Demo_Bootstrap_Layout_PartialView.Models.Product>
+@{
+    ViewData["Title"] = "ProductData";
+}
+
+<h1 class="text-bg-secondary">Product Data :</h1>
+<div class="container">
+    <div class="row p-1">
+        @{
+            @foreach (var product in Model)
+            {
+                <partial name="_ProductPartialView" model="product" />
+            }
+        }
+    </div>
+</div>
+
