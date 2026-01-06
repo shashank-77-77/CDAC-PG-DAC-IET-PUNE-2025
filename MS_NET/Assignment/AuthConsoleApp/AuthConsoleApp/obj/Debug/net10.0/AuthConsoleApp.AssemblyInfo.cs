@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AuthConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c45e4691e2262ae757da929eef03c6231ac522e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7dfa092048c1c98b12739fd584151e50164820ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("AuthConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AuthConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

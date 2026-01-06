@@ -6,7 +6,7 @@ using Microsoft.Data.SqlClient;
 class Program
 {
     static string cs =
-@"Server=SHASHANK\SQLEXPRESS01;Database=AuthDB;Trusted_Connection=True;TrustServerCertificate=True;";
+@"Server=SHASHANK\SQLEXPRESS;Database=AuthDB;Trusted_Connection=True;TrustServerCertificate=True;";
 
     static void Main()
     {
