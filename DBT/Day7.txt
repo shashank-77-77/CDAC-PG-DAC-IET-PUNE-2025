@@ -1,6 +1,3 @@
-Microsoft Windows [Version 10.0.19045.6456]
-(c) Microsoft Corporation. All rights reserved.
-
 C:\Users\IET>mysql --host=192.168.10.117 --port=3306 --user=dac83 --password=welcome
 mysql: [Warning] Using a password on the command line interface can be insecure.
 Welcome to the MySQL monitor.  Commands end with ; or \g.
