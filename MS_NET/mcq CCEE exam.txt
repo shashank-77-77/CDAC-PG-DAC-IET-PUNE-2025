@@ -18,9 +18,6 @@ Ans: Language Compiler
 Garbage Collector works on
 Ans: Managed Heap
 
-AppDomain provides
-Ans: Isolation within a process
-
 EXE assemblies
 Ans: Can be entry points
 
