@@ -635,7 +635,7 @@ Ans: Data Annotations
 Lazy loading requires
 Ans: virtual navigation properties
 
-Session 21–23: Web API
+Session 21–23: Web APi
 
 REST uses
 Ans: HTTP verbs
