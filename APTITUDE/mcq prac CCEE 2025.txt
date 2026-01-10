@@ -1,0 +1,507 @@
+SESSION 1 – NUMBER SYSTEM (10 MCQs)
+
+Unit digit of 
+7
+103
++
+3
+58
+7
+103
++3
+58
+
+A) 0 B) 2 C) 6 D) 8
+Ans: C
+
+Last two digits of 
+13
+27
+13
+27
+
+A) 73 B) 29 C) 17 D) 41
+Ans: A
+
+Remainder when 
+5
+87
+÷
+24
+5
+87
+÷24
+A) 1 B) 5 C) 13 D) 17
+Ans: C
+
+Smallest number to add to 792 to make divisible by 11
+A) 2 B) 3 C) 4 D) 5
+Ans: B
+
+Cyclicity length of unit digit of 
+9
+𝑛
+9
+n
+
+A) 1 B) 2 C) 3 D) 4
+Ans: B
+
+HCF of 
+2
+10
+3
+4
+2
+10
+3
+4
+ and 
+2
+8
+3
+6
+2
+8
+3
+6
+
+A) 
+2
+8
+3
+4
+2
+8
+3
+4
+ B) 
+2
+10
+3
+4
+2
+10
+3
+4
+ C) 
+2
+8
+3
+6
+2
+8
+3
+6
+ D) 
+2
+6
+3
+4
+2
+6
+3
+4
+
+Ans: A
+
+LCM of 96 and 144
+A) 288 B) 432 C) 576 D) 864
+Ans: C
+
+If LCM = 180, HCF = 6, then product of numbers
+A) 1080 B) 540 C) 720 D) 900
+Ans: A
+
+Remainder when 
+999
+999
+÷
+8
+999
+999
+÷8
+A) 1 B) 3 C) 7 D) 0
+Ans: C
+
+Number of trailing zeros in 50!
+A) 10 B) 11 C) 12 D) 13
+Ans: C
+
+SESSION 2 – RATIO & PROPORTION / PARTNERSHIP (10 MCQs)
+
+If A:B = 3:5 and B:C = 4:7, A:C = ?
+A) 12:35 B) 3:7 C) 12:28 D) 4:7
+Ans: A
+
+Divide ₹720 in ratio (1/2):(2/3):(3/4)
+A) 120,240,360 B) 180,240,300 C) 144,192,384 D) 160,240,320
+Ans: C
+
+If a:b = b:c = 2:3, then a:b:c
+A) 2:3:4 B) 4:6:9 C) 2:3:5 D) 4:6:8
+Ans: B
+
+A:B investment = 5:7, profit ₹9600. B’s share
+A) 4000 B) 4800 C) 5600 D) 6000
+Ans: C
+
+A invests ₹6000 for 12 months, B ₹8000 for 9 months
+A) 1:1 B) 2:3 C) 3:4 D) 5:6
+Ans: B
+
+If income ↑20% and savings ↑50%, expenditure change
+A) 10% B) 15% C) 20% D) Cannot be determined
+Ans: D
+
+A gets ₹200 more than B, profit ratio 3:2. Total profit
+A) 1000 B) 1200 C) 1400 D) 1600
+Ans: B
+
+A joins business later by 4 months. Original ratio 2:3
+A) 1:3 B) 2:3 C) 3:2 D) 2:5
+Ans: A
+
+If x:y = 4:5 and y:z = 10:11, x:z
+A) 8:11 B) 4:11 C) 40:55 D) 16:11
+Ans: A
+
+If a:b = b:c, then a²:b²:c²
+A) a:b:c B) 1:1:1 C) a²:b²:c² D) a:c:b
+Ans: A
+
+SESSION 3 – PERCENTAGE / PROFIT & LOSS (10 MCQs)
+
+20% of 30% of x = 180
+A) 2000 B) 3000 C) 4000 D) 6000
+Ans: B
+
+CP ₹800, SP ₹920. Profit %
+A) 12% B) 15% C) 18% D) 20%
+Ans: B
+
+Price ↓10% then ↑10%. Net change
+A) 0% B) 1% loss C) 1% gain D) 2% loss
+Ans: B
+
+Gain 25% by selling at ₹500. CP?
+A) 375 B) 400 C) 425 D) 450
+Ans: B
+
+Marked ↑40%, discount 10%. Profit %
+A) 20% B) 24% C) 26% D) 30%
+Ans: B
+
+30% of number exceeds 20% by 40
+A) 200 B) 300 C) 400 D) 500
+Ans: C
+
+Successive discounts 10% & 20%
+A) 28% B) 30% C) 32% D) 35%
+Ans: A
+
+SP is 80% of CP. Loss %
+A) 15% B) 18% C) 20% D) 25%
+Ans: C
+
+Price ↑25%, consumption ↓
+A) 20% B) 25% C) 30% D) 35%
+Ans: A
+
+Profit on 15 items = loss on 10 items
+A) 20% loss B) 25% gain C) 50% gain D) No profit
+Ans: B
+
+SESSION 4 – SI / CI (10 MCQs)
+
+SI on ₹5000 at 8% for 3 years
+A) 1000 B) 1100 C) 1200 D) 1300
+Ans: C
+
+CI on ₹4000 at 10% for 2 years
+A) 800 B) 820 C) 840 D) 880
+Ans: B
+
+Difference CI − SI for 2 years @5% on ₹2000
+A) 5 B) 10 C) 15 D) 20
+Ans: B
+
+SI doubles in 10 years. Rate?
+A) 5% B) 8% C) 10% D) 12%
+Ans: C
+
+CI half-yearly @10% for 1 year
+A) 10.25% B) 10.5% C) 10.75% D) 11%
+Ans: A
+
+SI exceeds CI by ₹36 in 2 years
+A) 4% B) 5% C) 6% D) 8%
+Ans: B
+
+Amount doubles in CI in 5 years
+A) 12% B) 14% C) 15% D) 18%
+Ans: B
+
+CI = ₹420, SI = ₹400 for 2 years
+A) 2000 B) 2500 C) 3000 D) 4000
+Ans: A
+
+₹1000 becomes ₹1331 @10% CI
+A) 2 B) 3 C) 4 D) 5
+Ans: B
+
+Effective rate of 8% quarterly
+A) 8.16% B) 8.24% C) 8.32% D) 8.48%
+Ans: C
+
+SESSION 5 – TIME & DISTANCE / TRAINS (10 MCQs)
+
+A is 10 km/h faster, saves 2 hours over 180 km
+A) 30 B) 35 C) 40 D) 45
+Ans: B
+
+Train 150 m passes pole in 15 sec
+A) 30 B) 36 C) 40 D) 45
+Ans: B
+
+Two trains cross in 10 sec, lengths 120 & 180
+A) 108 B) 120 C) 144 D) 180
+Ans: C
+
+Walk 5 km/h, run 10 km/h, 30 km total
+A) 4 B) 4.5 C) 5 D) 6
+Ans: B
+
+Same train crosses 300 m platform in 30 sec
+A) 150 B) 200 C) 250 D) 300
+Ans: B
+
+Avg speed for equal distances 40 & 60
+A) 48 B) 50 C) 52 D) 54
+Ans: A
+
+Boat upstream 6h, downstream 4h
+A) 8 B) 10 C) 12 D) 15
+Ans: C
+
+Circular track, opposite direction meet
+A) 200 B) 250 C) 400 D) 500
+Ans: B
+
+Speed ↑25%, time ↓
+A) 15% B) 20% C) 25% D) 30%
+Ans: B
+
+Train crosses man in 6 sec, pole in 10 sec
+A) 90 B) 100 C) 120 D) 150
+Ans: B
+
+SESSION 6 – TIME & WORK / WAGES (10)
+
+A alone 12d, B alone 18d. Together?
+A) 6 B) 7.2 C) 8 D) 9
+Ans: B
+
+A is 50% more efficient than B. Ratio of times?
+A) 2:3 B) 3:2 C) 4:5 D) 5:4
+Ans: A
+
+12 men finish work in 10d. 15 men take?
+A) 6 B) 7 C) 8 D) 9
+Ans: C
+
+A+B finish in 8d, A alone 12d. B alone?
+A) 18 B) 20 C) 24 D) 30
+Ans: C
+
+10 men earn ₹540 in 6d. Wage of 15 men for 4d?
+A) 360 B) 480 C) 540 D) 600
+Ans: B
+
+A does 1/3 work, B does rest in 10d. Total time?
+A) 12 B) 13 C) 14 D) 15
+Ans: C
+
+A:B efficiency = 2:3. Together 10d. A alone?
+A) 15 B) 18 C) 20 D) 25
+Ans: C
+
+6 women = 10 men. 30 women = ? men
+A) 45 B) 50 C) 55 D) 60
+Ans: B
+
+A can do work in 20d, leaves after 5d. B finishes in 10d. B alone?
+A) 12 B) 15 C) 18 D) 20
+Ans: B
+
+If work doubles, time becomes?
+A) half B) same C) double D) triple
+Ans: C
+
+SESSION 7 – PIPES & CISTERNS / BOATS & STREAMS (10)
+
+Pipe A fills in 12h, B in 18h. Together?
+A) 7.2 B) 8 C) 9 D) 10
+Ans: A
+
+Inlet fills in 10h, outlet empties in 20h. Net?
+A) 10 B) 15 C) 20 D) 30
+Ans: B
+
+Two pipes fill in 6h, one alone 10h. Other?
+A) 12 B) 15 C) 20 D) 30
+Ans: C
+
+Boat speed still 12, stream 3. Upstream?
+A) 6 B) 8 C) 9 D) 10
+Ans: C
+
+Downstream 20 km in 2h, upstream in 4h. Still speed?
+A) 6 B) 7.5 C) 8 D) 10
+Ans: C
+
+Pipe empties tank in 15h. Fill pipe takes? (net 30h)
+A) 10 B) 12 C) 15 D) 20
+Ans: B
+
+Boat goes 30 km downstream in 3h. Stream 2 km/h. Still?
+A) 8 B) 10 C) 12 D) 14
+Ans: B
+
+Two outlets empty in 12h & 18h. Together?
+A) 6 B) 7.2 C) 8 D) 9
+Ans: B
+
+Pipe fills 1/6 tank per hr, leak empties 1/12. Net?
+A) 12 B) 10 C) 8 D) 6
+Ans: A
+
+Boat covers equal distances up/down, avg speed 9. Still?
+A) 9 B) 10 C) 12 D) Cannot determine
+Ans: D
+
+SESSION 8 – AVERAGES / MIXTURES (10)
+
+Avg of 10 numbers is 20. Add one → avg 22. New no.?
+A) 40 B) 42 C) 44 D) 46
+Ans: C
+
+Avg age of 5 is 30. One replaced, avg 32. New age?
+A) 40 B) 42 C) 44 D) 46
+Ans: C
+
+Mix milk:water = 3:2. 10L removed & replaced by water. New ratio?
+A) 3:4 B) 2:3 C) 9:11 D) 7:9
+Ans: D
+
+Avg of first 50 naturals?
+A) 24.5 B) 25 C) 25.5 D) 26
+Ans: C
+
+Two alloys 2:3 and 5:7 copper. Final ratio?
+A) 1:2 B) 2:3 C) 3:4 D) 4:5
+Ans: B
+
+Avg runs of 20 innings is 40. Last score 60. Previous avg?
+A) 38 B) 39 C) 40 D) 41
+Ans: A
+
+Replace 20% liquid thrice. Remaining original?
+A) 51.2% B) 49.6% C) 48.8% D) 46.4%
+Ans: A
+
+Avg of A,B,C = 10. Avg of B,C,D = 12. A−D?
+A) −2 B) 0 C) 2 D) 4
+Ans: C
+
+Mixture price ₹15 & ₹20 mixed 2:3. Mean price?
+A) 17 B) 18 C) 19 D) 20
+Ans: C
+
+Avg of 8 numbers is 25. Four removed avg 20. Remaining avg?
+A) 25 B) 28 C) 30 D) 35
+Ans: C
+
+SESSION 9 – PROBABILITY (10)
+
+Toss 2 coins. Probability of exactly one head?
+A) 1/4 B) 1/2 C) 3/4 D) 1
+Ans: B
+
+Die thrown. P(prime)?
+A) 1/6 B) 1/3 C) 1/2 D) 2/3
+Ans: B
+
+Card drawn. P(ace or king)?
+A) 2/13 B) 4/13 C) 6/13 D) 8/13
+Ans: C
+
+Two dice sum 8?
+A) 1/9 B) 5/36 C) 1/6 D) 7/36
+Ans: B
+
+Bag 5R 3B. One drawn. P(B)?
+A) 3/5 B) 3/8 C) 5/8 D) 1/2
+Ans: B
+
+Toss 3 coins. P(at least 2 heads)?
+A) 1/8 B) 3/8 C) 1/2 D) 5/8
+Ans: D
+
+Two cards drawn. P(both red)?
+A) 1/4 B) 13/51 C) 1/13 D) 26/51
+Ans: B
+
+Die thrown twice. P(sum even)?
+A) 1/4 B) 1/2 C) 3/4 D) 5/6
+Ans: C
+
+P(A)=0.4, P(B)=0.5, independent. P(A∩B)?
+A) 0.2 B) 0.25 C) 0.3 D) 0.4
+Ans: A
+
+Probability of impossible event?
+A) 0 B) 1 C) −1 D) ∞
+Ans: A
+
+SESSION 10 – PERMUTATIONS & COMBINATIONS (10)
+
+Arrangements of 5 distinct items?
+A) 60 B) 120 C) 240 D) 720
+Ans: B
+
+Combinations of 5 taken 2?
+A) 5 B) 10 C) 15 D) 20
+Ans: B
+
+Arrangements of word “LEVEL”?
+A) 20 B) 30 C) 60 D) 120
+Ans: B
+
+7 people seated in row. Ways?
+A) 720 B) 840 C) 5040 D) 10080
+Ans: C
+
+Choose 3 from 8?
+A) 48 B) 56 C) 64 D) 72
+Ans: B
+
+No. of diagonals in hexagon?
+A) 6 B) 9 C) 12 D) 15
+Ans: C
+
+Arrangements of 4 boys, 3 girls alternately?
+A) 144 B) 288 C) 432 D) 720
+Ans: B
+
+Circular permutations of 6?
+A) 120 B) 240 C) 720 D) 60
+Ans: A
+
+Number of subsets of 5 elements?
+A) 16 B) 25 C) 32 D) 64
+Ans: C
+
+Arrangements of digits 1–5 divisible by 5?
+A) 12 B) 18 C) 24 D) 36
+Ans: C
