@@ -1,0 +1,763 @@
+1. Which of the following statements about exceptions in Java is correct?
+
+A) All exceptions inherit directly from Throwable.
+B) Error and Exception are both subclasses of Throwable, but only Error can be caught using a try-catch block.
+C) Error is a subclass of Exception, and it should be caught in the try-catch block.
+D) Checked exceptions are those that are instances of Error, and unchecked exceptions are those that are instances of Exception.
+
+✅ Answer: A
+
+2. Which of the following is the correct way to handle multi-catch in Java?
+
+A) Use multiple catch blocks for each exception type.
+B) Use a single catch block with multiple exceptions, separated by commas.
+C) Use catch (Exception | Throwable ex) to catch all types of exceptions.
+D) Use catch with | inside a try-catch block, and each exception should be an instance of Throwable.
+
+✅ Answer: B
+
+3. What is the primary difference between StringBuilder and StringBuffer in Java?
+
+A) StringBuilder is synchronized, while StringBuffer is not.
+B) StringBuffer is synchronized, while StringBuilder is not.
+C) StringBuilder and StringBuffer are identical.
+D) StringBuilder is only for concatenation.
+
+✅ Answer: B
+
+4. Output of the following code?
+Person [name=Alice, age=25]
+true
+true
+
+
+A) Person [name=Alice, age=25]truetrue
+B) Person [name=Alice, age=25]falsefalse
+C) Person [name=Alice, age=25]truefalse
+D) Person [name=Alice, age=25]falsetrue
+
+✅ Answer: A
+
+5. What is the output of the following Java code (method overriding)?
+
+A) Animal sound
+B) Bark
+C) Compilation error
+D) Runtime error
+
+✅ Answer: B
+
+6. Which of the following is a correct definition of a functional interface?
+
+A) One abstract method, multiple default methods allowed
+B) One abstract method, no default methods
+C) Multiple abstract methods
+D) No methods
+
+✅ Answer: A
+
+7. Output of the reference assignment code?
+
+A) Alice
+B) Bob
+C) Compilation Error
+D) null
+
+✅ Answer: B
+
+8. Which statement is TRUE about Java memory management?
+
+A) Manual memory management
+B) JVM garbage collector manages memory
+C) JVM doesn’t handle garbage collection
+D) Unsafe direct memory access
+
+✅ Answer: B
+
+9. Which statement is true about Vector?
+
+a) Not synchronized
+b) Automatically increases size
+c) Fixed size
+d) No dynamic resizing
+
+✅ Answer: b
+
+10. In Java NIO, which is used to transfer data between FileChannel and buffer?
+
+A) read() and write()
+B) select() and deselect()
+C) put() and get()
+D) flush() and close()
+
+✅ Answer: A
+
+11. Difference between shallow copy and deep copy?
+
+A) Shallow copies references, deep copies full object graph
+B) Shallow copies primitives only
+C) Deep copies immutable fields only
+D) Serialization vs cloning
+
+✅ Answer: A
+
+12. Which is TRUE about constructors?
+
+A) Have return types
+B) Explicitly invoked
+C) Called once per object lifecycle
+D) Superclass constructor invoked using super()
+
+✅ Answer: D
+
+13. Output of matrix[1][1]?
+
+A) 3
+B) 4
+C) 5
+D) 6
+
+✅ Answer: B
+
+14. Which interface supports serialization?
+
+A) Cloneable
+B) Serializable
+C) Externalizable
+D) Runnable
+
+✅ Answer: B
+
+15. Which condition is NOT required for deadlock?
+
+a) Mutual exclusion
+b) Hold and wait
+c) No preemption
+d) Limited threads
+
+✅ Answer: d
+
+16. Advantage of Generics?
+
+a) Runtime binding
+b) Primitive collections
+c) Compile-time type safety
+d) Removes reflection
+
+✅ Answer: c
+
+17. Output of LinkedList removal?
+
+A) [a, c]
+B) [b, c]
+C) [a, b, c]
+D) [a]
+
+✅ Answer: A
+
+18. Calendar class is:
+
+A) Immutable
+B) Concrete
+C) Abstract
+D) Thread-safe
+
+✅ Answer: C
+
+19. Which method pauses a thread?
+
+a) join()
+b) sleep()
+c) yield()
+d) wait()
+
+✅ Answer: b
+
+20. Which is NOT a valid Java token?
+
+A) class
+B) @Override
+C) main
+D) ++
+
+✅ Answer: B
+
+21. Output after inserting 25 at index 1?
+
+A) 25
+B) 20
+C) 30
+D) Compilation error
+
+✅ Answer: A
+
+22. Output of StringBuffer code?
+
+A) Java
+B) Java Programming
+C) Programming Java
+D) Error
+
+✅ Answer: B
+
+23. Which handles characters instead of bytes?
+
+A) InputStream
+B) OutputStream
+C) Reader
+D) Writer
+
+✅ Answer: C
+
+24. Composition in Java means:
+
+A) Independent lifetime
+B) Controlled lifetime
+C) Multiple inheritance
+D) Weak association
+
+✅ Answer: B
+
+25. Passing variables to methods – TRUE statement?
+
+A) All by reference
+B) Primitives by value, objects by reference
+C) Primitives by value, object references by value
+D) All by reference
+
+✅ Answer: C
+
+26. HashMap vs TreeMap difference?
+
+a) Order maintained by HashMap
+b) TreeMap uses red-black tree
+c) TreeMap allows null keys
+d) HashMap stores only String
+
+✅ Answer: b
+
+27. Which statement about downcasting is true?
+
+A) Always safe
+B) Casting superclass reference to subclass
+C) No restrictions
+D) Not allowed
+
+✅ Answer: B
+
+28. Which statement about ArrayList is true?
+
+a) Synchronized
+b) Allows duplicates
+c) Implements Queue
+d) One null only
+
+✅ Answer: b
+
+29. JVM component loading classes?
+
+A) Class Loader
+B) Execution Engine
+C) Garbage Collector
+D) JIT
+
+✅ Answer: A
+
+30. Producer–Consumer correct statement?
+
+a) wait pauses producer, notify wakes consumer
+b) notify pauses consumer
+c) notifyAll after produce, wait when empty
+d) wait notifies consumer
+
+✅ Answer: a
+
+31. Multiple interface implementation output?
+
+A) Compilation Error
+B) Method A
+C) Method A followed by Method B
+D) Runtime Error
+
+✅ Answer: C
+
+32. Output of nested if?
+
+A) True
+B) No output
+C) Compilation Error
+D) Runtime Exception
+
+✅ Answer: A
+
+33. Garbage collection TRUE statement?
+
+A) Fixed intervals
+B) Only via System.gc()
+C) Unreachable objects eligible
+D) new objects not collected
+
+✅ Answer: C
+
+34. Highest precedence operator?
+
+A) &&
+B) ++
+C) =
+D) ==
+
+✅ Answer: B
+
+35. Purpose of throw keyword?
+
+A) Propagate exception
+B) Explicitly throw exception
+C) Declare exception
+D) Handle exception
+
+✅ Answer: B
+
+36. What happens when the finalize() method is called on an object in Java?
+
+A) Automatically called by GC before reclaiming memory
+B) Must be called manually
+C) Cannot be overridden
+D) Called when object is dereferenced
+
+✅ Answer: A
+
+37. Which method is used to assign thread priority?
+
+a) setPriority()
+b) setThreadPriority()
+c) getPriority()
+d) assignPriority()
+
+✅ Answer: a
+
+38. Output of the following String pool comparison?
+String str1 = "Hello";
+String str2 = new String("Hello");
+System.out.println(str1 == str2);
+
+
+A) true
+B) false
+C) Compilation error
+D) Runtime exception
+
+✅ Answer: B
+
+39. Which statement about enums is TRUE?
+
+A) Enum can extend another class
+B) Enum can implement interfaces
+C) Enum constants are static and final
+D) Enum cannot have constructors
+
+✅ Answer: C
+
+40. Correct use of Selector in Java NIO?
+
+A) File manipulation
+B) Non-blocking I/O on channels
+C) Encoding/decoding
+D) Memory mapping
+
+✅ Answer: B
+
+41. Which method removes an element from Queue?
+
+a) remove()
+b) pop()
+c) delete()
+d) poll()
+
+✅ Answer: a
+
+42. Where are primitives and objects stored?
+
+A) Primitives–heap, Objects–stack
+B) Both in stack
+C) Primitives–stack, Objects–heap
+D) Both in heap
+
+✅ Answer: C
+
+43. Correct Date format for dd/MM/yyyy?
+
+A) MM/dd/yyyy
+B) yyyy-MM-dd
+C) dd/MM/yyyy
+D) yyyy/MM/dd
+
+✅ Answer: C
+
+44. Result of overridden exception method code?
+
+A) Exception from A
+B) Exception from B
+C) Compilation error
+D) Runtime exception not caught
+
+✅ Answer: B
+
+45. Correct Date ↔ String conversion using SimpleDateFormat?
+
+A) parse(date) → format
+B) format(date) → parse
+C) parse(date) → parse
+D) parse only
+
+✅ Answer: B
+
+46. Characteristic feature of Hashtable?
+
+a) Thread-safe, no null keys/values
+b) Not synchronized
+c) Allows null
+d) Duplicate keys allowed
+
+✅ Answer: a
+
+47. Serialization means:
+
+A) Object → byte stream
+B) Shallow copy
+C) Deep copy
+D) Human-readable format
+
+✅ Answer: A
+
+48. NOT allowed in Java interfaces?
+
+A) Multiple implementation
+B) Interface inheritance
+C) Concrete methods (pre-Java 8)
+D) Default methods
+
+✅ Answer: C
+
+49. True about inner classes?
+
+A) Inner class accesses static only
+B) Method-local accesses static only
+C) Anonymous class has no name
+D) Static inner accesses instance freely
+
+✅ Answer: C
+
+50. Output of LinkedHashMap insertion?
+
+A) Sorted order
+B) Insertion order
+C) Random order
+D) Reverse order
+
+✅ Answer: B
+
+51. Purpose of static imports?
+
+A) Import static members without class name
+B) Import static classes only
+C) Access constructors
+D) Import non-static members
+
+✅ Answer: A
+
+52. Effect of Thread.yield()?
+
+a) Terminates thread
+b) Pauses to allow same-priority threads
+c) Suspends indefinitely
+d) Sleeps
+
+✅ Answer: b
+
+53. Incorrect statement about finally block?
+
+A) Executes even if no exception
+B) Executes only if exception caught
+C) Executes unless JVM exits
+D) Skipped on System.exit()
+
+✅ Answer: B
+
+54. Thread vs Runnable difference?
+
+a) Thread = execution, Runnable = task
+b) Runnable manages threads
+c) Thread is interface
+d) Runnable blocks
+
+✅ Answer: a
+
+55. True about HashSet?
+
+a) Allows duplicates
+b) No nulls
+c) No order guarantee
+d) Sorted
+
+✅ Answer: c
+
+56. finalize() behavior?
+
+A) Always called
+B) May or may not be called
+C) Called immediately
+D) Manual invocation
+
+✅ Answer: B
+
+57. True about String pool?
+
+A) Only new String() stored
+B) Literals reused to save memory
+C) No GC
+D) Separate memory only
+
+✅ Answer: B
+
+58. Class used for non-blocking I/O?
+
+A) BufferedReader
+B) FileInputStream
+C) Selector
+D) PrintWriter
+
+✅ Answer: C
+
+59. Concept demonstrated by overridden speed()?
+
+A) Encapsulation
+B) Inheritance
+C) Polymorphism
+D) Abstraction
+
+✅ Answer: C
+
+60. Not inherited from Object class?
+
+A) clone()
+B) toString()
+C) equals()
+D) hashCode()
+
+✅ Answer: A
+
+61. Primitive memory allocation truth?
+
+A) All heap
+B) JVM dependent
+C) Stack for primitives
+D) Variable size
+
+✅ Answer: C
+
+62. Constructor behavior for references?
+
+A) Only primitives
+B) Initializes references via new
+C) Cannot initialize references
+D) Resets references
+
+✅ Answer: B
+
+63. Method to wait for thread completion?
+
+a) sleep()
+b) join()
+c) wait()
+d) stop()
+
+✅ Answer: b
+
+64. Make object eligible for GC?
+
+A) Set reference to null
+B) Reassign reference
+C) Island of isolation
+D) All of the above
+
+✅ Answer: D
+
+65. Constructor chaining truth?
+
+A) Same class only
+B) Cross-package allowed
+C) Uses super()
+D) Not possible
+
+✅ Answer: C
+
+66. Purpose of Comparable?
+
+a) Compare different classes
+b) Define natural sorting
+c) Collection operations
+d) Set insertion
+
+✅ Answer: b
+
+67. JVM platform independence?
+
+A) JVM independent
+B) JVM rewritten per platform
+C) Native binaries
+D) Platform-specific bytecode
+
+✅ Answer: B
+
+68. Method to wait for signal from another thread?
+
+a) wait()
+b) notify()
+c) sleep()
+d) join()
+
+✅ Answer: a
+
+69. Correct TreeSet statement?
+
+a) Allows duplicates
+b) Uses Comparator by default
+c) Red-black tree sorted
+d) Allows null
+
+✅ Answer: c
+
+70. Wrapper classes purpose?
+
+A) Primitive ↔ Object conversion
+B) Arithmetic ops
+C) Memory optimization
+D) GC enablement
+
+✅ Answer: A
+
+71. Result of int a = a + b; (float involved)?
+
+A) Compilation error
+B) 30.5
+C) 30
+D) Runtime error
+
+✅ Answer: A
+
+72. Java 8 interface feature with body?
+
+A) Abstract
+B) Default
+C) Static
+D) Private
+
+✅ Answer: B
+
+73. Abstraction vs Encapsulation?
+
+A) Same
+B) Abstraction hides behavior
+C) Encapsulation hides state
+D) No difference
+
+✅ Answer: C
+
+74. Checked exception creation?
+
+A) Extends RuntimeException
+B) Extends Exception
+C) Extends Throwable
+D) Extends Error
+
+✅ Answer: B
+
+75. Java source → bytecode relationship?
+
+A) Native code
+B) JVM executes bytecode
+C) CPU execution
+D) OS execution
+
+✅ Answer: B
+
+76. Accessing protected member across package?
+
+A) Compilation error
+B) Same package only
+C) Accessible via subclass
+D) Inherited but denied
+
+✅ Answer: C
+
+77. Explicit GC request methods?
+
+A) System.gc()
+B) Runtime.gc()
+C) runFinalization()
+D) All
+
+✅ Answer: D
+
+78. Correct use of final keyword?
+
+A) Override final method
+B) Final class no subclasses
+C) Reassign final variable
+D) No constructor
+
+✅ Answer: B
+
+79. Serialize without Serializable?
+
+A) CloneNotSupportedException
+B) NotSerializableException
+C) Ignored
+D) Default serialization
+
+✅ Answer: B
+
+80. Convert String → primitive using wrapper?
+
+A) parse()
+B) valueOf()
+C) toPrimitive()
+D) parseInt()/parseDouble()
+
+✅ Answer: D
+
+81. Reassign reference variable result?
+
+A) Old object eligible for GC
+B) Reference unchanged
+C) Assignment ignored
+D) Immediate deletion
+
+✅ Answer: A
+
+82. Lambda output?
+
+A) Compilation error
+B) Lambda Expression in Java!
+C) run() missing
+D) Runnable executed
+
+✅ Answer: B
+
+83. FALSE about inheritance?
+
+A) Multiple class inheritance
+B) Inherits fields and methods
+C) Method overriding
+D) Access public/protected
+
+✅ Answer: A
+
+84. Overloading vs overriding difference?
+
+A) Runtime vs compile-time
+B) Signature vs implementation
+C) Not allowed
+D) Return type change
+
+✅ Answer: B
