@@ -1153,9 +1153,548 @@ D) Enable polymorphism
 ✅ Answer: C
 
 --------------------------------------------------------------
+SESSION 9 – Constructors and Destructors (20 MCQs | HARD)
+1. What is the primary purpose of a constructor in C++?
 
+A) Allocate memory
+B) Initialize data members of an object
+C) Destroy objects
+D) Perform input/output
+
+✅ Answer: B
+
+2. Which of the following statements about constructors is TRUE?
+
+A) Constructors have a return type
+B) Constructors can be virtual
+C) Constructors are invoked automatically
+D) Constructors must be public
+
+✅ Answer: C
+
+3. What is a parameterized constructor?
+
+A) Constructor with no arguments
+B) Constructor with default values
+C) Constructor that accepts arguments
+D) Constructor defined outside class
+
+✅ Answer: C
+
+4. How many constructors can a class have in C++?
+
+A) Only one
+B) Only two
+C) Any number with different parameter lists
+D) Only default and copy
+
+✅ Answer: C
+
+5. Which constructor is invoked when an object is created with another object of the same class?
+
+A) Default constructor
+B) Parameterized constructor
+C) Copy constructor
+D) Destructor
+
+✅ Answer: C
+
+6. Which of the following correctly declares a copy constructor?
+
+A) ClassName(ClassName obj);
+B) ClassName(ClassName &obj);
+C) ClassName(const ClassName &obj);
+D) Both B and C
+
+✅ Answer: D
+
+7. What happens if a copy constructor is not explicitly defined?
+
+A) Compilation error
+B) Runtime error
+C) Compiler provides a default copy constructor
+D) Object cannot be copied
+
+✅ Answer: C
+
+8. Which scenario invokes a copy constructor?
+
+A) Passing object by value to a function
+B) Returning object by value from a function
+C) Initializing object with another object
+D) All of the above
+
+✅ Answer: D
+
+9. What is dynamic initialization of objects?
+
+A) Initializing objects at compile time
+B) Initializing objects using constant values
+C) Initializing objects at runtime
+D) Initializing static objects
+
+✅ Answer: C
+
+10. Which of the following is TRUE about destructors?
+
+A) They take arguments
+B) They can be overloaded
+C) They are called automatically
+D) They return a value
+
+✅ Answer: C
+
+11. What is the correct syntax of a destructor?
+
+A) ~ClassName();
+B) ClassName~();
+C) delete ClassName();
+D) !ClassName();
+
+✅ Answer: A
+
+12. How many destructors can a class have?
+
+A) One
+B) Two
+C) Any number
+D) Depends on constructors
+
+✅ Answer: A
+
+13. When is a destructor called for a local object?
+
+A) When object is created
+B) When program starts
+C) When object goes out of scope
+D) When delete is called
+
+✅ Answer: C
+
+14. What is the order of constructor calls in inheritance?
+
+A) Derived → Base
+B) Base → Derived
+C) Random
+D) Depends on compiler
+
+✅ Answer: B
+
+15. What is the order of destructor calls in inheritance?
+
+A) Base → Derived
+B) Derived → Base
+C) Same as constructor
+D) Undefined
+
+✅ Answer: B
+
+16. Which constructor is best suited for initializing const data members?
+
+A) Default constructor
+B) Copy constructor
+C) Constructor initializer list
+D) Destructor
+
+✅ Answer: C
+
+17. What happens if a destructor is declared private?
+
+A) Object cannot be destroyed
+B) Object cannot be created on stack
+C) Object cannot be created dynamically
+D) Compiler error
+
+✅ Answer: B
+
+18. Which of the following is NOT a valid use of a destructor?
+
+A) Releasing dynamically allocated memory
+B) Closing files
+C) Returning a value
+D) Releasing resources
+
+✅ Answer: C
+
+19. Which operator is automatically invoked when an object is destroyed using delete?
+
+A) Constructor
+B) Copy constructor
+C) Destructor
+D) Assignment operator
+
+✅ Answer: C
+
+20. What will happen if an exception is thrown during object construction?
+
+A) Destructor is called for fully constructed objects only
+B) Destructor is called for all objects
+C) Program terminates immediately
+D) Undefined behavior
+
+✅ Answer: A
 --------------------------------------------------------------
+SESSION 10 – Inheritance: Extending Class (20 MCQs | HARD)
+1. What is inheritance in C++?
+
+A) Mechanism to reuse code using functions
+B) Mechanism to acquire properties of another class
+C) Mechanism to hide data
+D) Mechanism to overload operators
+
+✅ Answer: B
+
+2. Which inheritance allows one class to inherit from more than one base class?
+
+A) Single inheritance
+B) Multilevel inheritance
+C) Multiple inheritance
+D) Hierarchical inheritance
+
+✅ Answer: C
+
+3. Which inheritance involves a chain of inheritance?
+
+A) Single
+B) Multiple
+C) Multilevel
+D) Hybrid
+
+✅ Answer: C
+
+4. Which inheritance involves one base class and multiple derived classes?
+
+A) Multiple
+B) Multilevel
+C) Hierarchical
+D) Hybrid
+
+✅ Answer: C
+
+5. Which inheritance is a combination of more than one type of inheritance?
+
+A) Multiple
+B) Multilevel
+C) Hierarchical
+D) Hybrid
+
+✅ Answer: D
+
+6. What is the default inheritance access specifier for a class in C++?
+
+A) public
+B) protected
+C) private
+D) none
+
+✅ Answer: C
+
+7. Which access specifier makes base class members accessible in derived class but not outside?
+
+A) public
+B) private
+C) protected
+D) default
+
+✅ Answer: C
+
+8. What happens to private members of a base class in derived class?
+
+A) Become public
+B) Become protected
+C) Are not accessible directly
+D) Are inherited as private
+
+✅ Answer: C
+
+9. What is the purpose of a virtual base class?
+
+A) Improve performance
+B) Avoid ambiguity in multiple inheritance
+C) Enable polymorphism
+D) Reduce memory usage
+
+✅ Answer: B
+
+10. Which problem is solved using virtual base classes?
+
+A) Deadlock problem
+B) Memory leak
+C) Diamond problem
+D) Dangling pointer
+
+✅ Answer: C
+
+11. What is the order of constructor calls in multiple inheritance?
+
+A) Derived → Base
+B) Base → Derived
+C) Random order
+D) Order of inheritance declaration
+
+✅ Answer: D
+
+12. Which keyword is used to declare a virtual base class?
+
+A) virtual
+B) base
+C) override
+D) abstract
+
+✅ Answer: A
+
+13. Which of the following is TRUE about constructors in inheritance?
+
+A) Derived constructor executes before base constructor
+B) Base constructor must be explicitly called
+C) Base constructor executes before derived constructor
+D) Constructors are inherited
+
+✅ Answer: C
+
+14. Which statement about destructor calls in inheritance is correct?
+
+A) Base destructor is called first
+B) Derived destructor is called first
+C) Order is random
+D) Destructor is not called
+
+✅ Answer: B
+
+15. Can constructors be inherited in C++?
+
+A) Yes, always
+B) No, never
+C) Yes, using using declaration (C++11+)
+D) Only default constructors
+
+✅ Answer: C
+
+16. Which keyword allows derived class to redefine a base class function?
+
+A) virtual
+B) override
+C) final
+D) static
+
+✅ Answer: B
+
+17. What happens if a base class destructor is not declared virtual?
+
+A) Compilation error
+B) Memory leak during polymorphic deletion
+C) Faster execution always
+D) No effect
+
+✅ Answer: B
+
+18. Which inheritance access makes public members of base class private in derived class?
+
+A) public
+B) protected
+C) private
+D) default
+
+✅ Answer: C
+
+19. Which of the following best describes the diamond problem?
+
+A) Multiple constructors conflict
+B) Multiple paths to same base class
+C) Multiple derived classes share one method
+D) Multiple objects share memory
+
+✅ Answer: B
+
+20. Which of the following is NOT inherited from a base class?
+
+A) Public members
+B) Protected members
+C) Private members
+D) Public functions
+
+✅ Answer: C
 --------------------------------------------------------------
+SESSION 11 – Polymorphism (20 MCQs | HARD)
+1. What is polymorphism in C++?
+
+A) Ability of a variable to store multiple data types
+B) Ability of a function to perform multiple tasks based on context
+C) Ability to create multiple objects
+D) Ability to access private data
+
+✅ Answer: B
+
+2. Which type of polymorphism is resolved at compile time?
+
+A) Dynamic polymorphism
+B) Runtime polymorphism
+C) Compile-time polymorphism
+D) Late binding
+
+✅ Answer: C
+
+3. Which mechanism implements compile-time polymorphism?
+
+A) Virtual functions
+B) Function overloading
+C) Base class pointers
+D) Dynamic casting
+
+✅ Answer: B
+
+4. Which mechanism implements runtime polymorphism?
+
+A) Function overloading
+B) Operator overloading
+C) Virtual functions
+D) Templates
+
+✅ Answer: C
+
+5. What is function overriding?
+
+A) Same function name, different parameters
+B) Same function name and signature in base and derived class
+C) Different function name, same parameters
+D) Same function name, different return type only
+
+✅ Answer: B
+
+6. Which keyword ensures runtime binding of a member function?
+
+A) static
+B) inline
+C) virtual
+D) const
+
+✅ Answer: C
+
+7. What will happen if a virtual function is called using a base class pointer?
+
+A) Base class function is always called
+B) Derived class function is called if overridden
+C) Compilation error
+D) Undefined behavior
+
+✅ Answer: B
+
+8. Which operator cannot be overloaded in C++?
+
+A) +
+B) []
+C) ::
+D) <<
+
+✅ Answer: C
+
+9. Which of the following operators MUST be overloaded as a member function?
+
+A) <<
+B) ==
+C) []
+D) +
+
+✅ Answer: C
+
+10. Which statement about operator overloading is TRUE?
+
+A) It can change operator precedence
+B) It can change operator associativity
+C) It cannot change number of operands
+D) It allows new operators
+
+✅ Answer: C
+
+11. What is the role of a friend function in polymorphism?
+
+A) Enables inheritance
+B) Enables operator overloading for non-member functions
+C) Enables virtual dispatch
+D) Enables dynamic binding
+
+✅ Answer: B
+
+12. Which statement about friend functions is correct?
+
+A) They are members of the class
+B) They cannot access private members
+C) They break encapsulation intentionally
+D) They support inheritance
+
+✅ Answer: C
+
+13. What happens if a base class destructor is not virtual and object is deleted via base pointer?
+
+A) Both destructors are called
+B) Only base destructor is called
+C) Only derived destructor is called
+D) Compilation error
+
+✅ Answer: B
+
+14. Which keyword prevents further overriding of a virtual function?
+
+A) virtual
+B) static
+C) final
+D) const
+
+✅ Answer: C
+
+15. Which of the following is TRUE about const member functions?
+
+A) They can modify data members
+B) They can be called only by const objects
+C) They cannot modify object state
+D) They are static by default
+
+✅ Answer: C
+
+16. What happens if a non-const member function is called on a const object?
+
+A) Executes normally
+B) Executes but cannot modify data
+C) Compilation error
+D) Runtime error
+
+✅ Answer: C
+
+17. Which operator is commonly overloaded using friend functions?
+
+A) =
+B) []
+C) <<
+D) ()
+
+✅ Answer: C
+
+18. Which polymorphism type allows behavior to change at runtime?
+
+A) Compile-time
+B) Static
+C) Runtime
+D) Inline
+
+✅ Answer: C
+
+19. Which of the following is required for runtime polymorphism?
+
+A) Base class pointer/reference
+B) Inline functions
+C) Static binding
+D) Function templates
+
+✅ Answer: A
+
+20. What is early binding in C++?
+
+A) Function call resolved at runtime
+B) Function call resolved at compile time
+C) Function call resolved during linking
+D) Function call resolved during execution
+
+✅ Answer: B
 --------------------------------------------------------------
 
 --------------------------------------------------------------
