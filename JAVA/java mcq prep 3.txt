@@ -1,0 +1,721 @@
+1. Which of the following best describes Java?
+
+A) Platform dependent language
+B) Procedural language
+C) Object-oriented, platform-independent language
+D) Low-level language
+
+✅ Answer: C
+
+2. Which component of JVM loads class files into memory?
+
+A) Execution Engine
+B) Garbage Collector
+C) Class Loader
+D) JIT Compiler
+
+✅ Answer: C
+
+3. Which of the following is NOT a feature of Java?
+
+A) Object-oriented
+B) Portable
+C) Use of pointers
+D) Secure
+
+✅ Answer: C
+
+4. Which of the following is a valid Java class structure?
+
+A) Explain class first
+B) main() outside class
+C) main() inside class
+D) No class required
+
+✅ Answer: C
+
+5. Which primitive data type occupies 8 bytes?
+
+A) int
+B) float
+C) long
+D) short
+
+✅ Answer: C
+
+6. Which is NOT a Java token?
+
+A) Identifier
+B) Keyword
+C) Operator
+D) Pointer
+
+✅ Answer: D
+
+7. Which operator has the highest precedence?
+
+A) +
+B) *
+C) ++
+D) ==
+
+✅ Answer: C
+
+8. Which control statement is used for decision making?
+
+A) for
+B) while
+C) if
+D) break
+
+✅ Answer: C
+
+9. Default value of an instance variable?
+
+A) Garbage value
+B) Depends on datatype
+C) Zero / null
+D) Undefined
+
+✅ Answer: C
+
+10. Which array declaration is valid?
+
+A) int arr[] = new int(5);
+B) int[] arr = new int[5];
+C) int arr = new int[5];
+D) array int arr[5];
+
+✅ Answer: B
+
+11. Which OOP principle hides internal implementation?
+
+A) Inheritance
+B) Polymorphism
+C) Abstraction
+D) Association
+
+✅ Answer: C
+
+12. Which keyword is used to inherit a class?
+
+A) implements
+B) inherit
+C) extends
+D) super
+
+✅ Answer: C
+
+13. Method overloading is resolved at:
+
+A) Runtime
+B) Compile time
+C) JVM shutdown
+D) Memory allocation
+
+✅ Answer: B
+
+14. Which keyword refers to the current object?
+
+A) super
+B) this
+C) self
+D) object
+
+✅ Answer: B
+
+15. Which statement about constructors is TRUE?
+
+A) Constructors have return types
+B) Constructors can be inherited
+C) Constructors initialize objects
+D) Constructors are static
+
+✅ Answer: C
+
+16. In Java, arguments are passed:
+
+A) By reference
+B) By value only
+C) Objects by reference
+D) Pointers
+
+✅ Answer: B
+
+17. Which memory stores objects?
+
+A) Stack
+B) Heap
+C) Register
+D) Cache
+
+✅ Answer: B
+
+18. Which keyword prevents inheritance?
+
+A) static
+B) abstract
+C) final
+D) private
+
+✅ Answer: C
+
+19. Which interface allows multiple inheritance?
+
+A) Class
+B) Abstract class
+C) Interface
+D) Object
+
+✅ Answer: C
+
+20. Which concept allows one reference to point to many forms?
+
+A) Encapsulation
+B) Abstraction
+C) Polymorphism
+D) Composition
+
+✅ Answer: C
+
+1. Which class is the root of the Java exception hierarchy?
+
+A) Exception
+B) Error
+C) RuntimeException
+D) Throwable
+
+✅ Answer: D
+
+2. Which of the following is a checked exception?
+
+A) NullPointerException
+B) ArithmeticException
+C) IOException
+D) ArrayIndexOutOfBoundsException
+
+✅ Answer: C
+
+3. Which of the following is an unchecked exception?
+
+A) SQLException
+B) IOException
+C) ClassNotFoundException
+D) RuntimeException
+
+✅ Answer: D
+
+4. Which keyword is used to explicitly throw an exception?
+
+A) throws
+B) throw
+C) finally
+D) catch
+
+✅ Answer: B
+
+5. Which keyword is used to declare exceptions in method signature?
+
+A) throw
+B) throws
+C) try
+D) catch
+
+✅ Answer: B
+
+6. Which block is executed regardless of exception occurrence?
+
+A) try
+B) catch
+C) throws
+D) finally
+
+✅ Answer: D
+
+7. What happens if an exception is not handled?
+
+A) JVM ignores it
+B) Program continues normally
+C) Program terminates abnormally
+D) Exception is logged automatically
+
+✅ Answer: C
+
+8. Which of the following statements is TRUE?
+
+A) Checked exceptions occur at runtime
+B) Unchecked exceptions are checked by compiler
+C) Checked exceptions must be handled
+D) Errors should be caught
+
+✅ Answer: C
+
+9. Which exception occurs when dividing by zero?
+
+A) IOException
+B) NullPointerException
+C) ArithmeticException
+D) NumberFormatException
+
+✅ Answer: C
+
+10. Which block can have multiple catch clauses?
+
+A) try
+B) catch
+C) finally
+D) throws
+
+✅ Answer: A
+
+11. Multi-catch was introduced in which Java version?
+
+A) Java 5
+B) Java 6
+C) Java 7
+D) Java 8
+
+✅ Answer: C
+
+12. Correct syntax for multi-catch?
+
+A) catch(Exception, IOException e)
+B) catch(Exception || IOException e)
+C) catch(Exception | IOException e)
+D) catch(Exception & IOException e)
+
+✅ Answer: C
+
+13. Can finally block be skipped?
+
+A) Never
+B) Always
+C) Only if JVM crashes or System.exit() is called
+D) If exception is handled
+
+✅ Answer: C
+
+14. Which exception is thrown when accessing invalid array index?
+
+A) NullPointerException
+B) ArithmeticException
+C) ArrayIndexOutOfBoundsException
+D) ClassCastException
+
+✅ Answer: C
+
+15. Which statement about Error is TRUE?
+
+A) Errors should be handled using try-catch
+B) Errors occur due to programmer mistakes
+C) Errors represent serious system problems
+D) Errors are checked exceptions
+
+✅ Answer: C
+
+16. How do you create a user-defined checked exception?
+
+A) Extend RuntimeException
+B) Extend Throwable
+C) Extend Exception
+D) Extend Error
+
+✅ Answer: C
+
+17. Which method is called when exception propagates?
+
+A) main()
+B) catch()
+C) calling method
+D) finalize()
+
+✅ Answer: C
+
+18. Which block executes first?
+
+A) catch
+B) finally
+C) try
+D) throws
+
+✅ Answer: C
+
+19. Can a try block exist without a catch block?
+
+A) No
+B) Yes, with finally
+C) Yes, always
+D) Only in Java 8
+
+✅ Answer: B
+
+20. Which exception is thrown when a class is not found at runtime?
+
+A) IOException
+B) ClassNotFoundException
+C) NoClassDefFoundError
+D) RuntimeException
+
+✅ Answer: C
+
+
+1. Which interface is the root of the Java Collections Framework?
+
+A) List
+B) Set
+C) Collection
+D) Map
+
+✅ Answer: C
+
+2. Which collection allows duplicate elements and maintains insertion order?
+
+A) HashSet
+B) TreeSet
+C) ArrayList
+D) HashMap
+
+✅ Answer: C
+
+3. Which collection does NOT allow duplicate elements?
+
+A) ArrayList
+B) LinkedList
+C) HashSet
+D) Vector
+
+✅ Answer: C
+
+4. Which List implementation is synchronized?
+
+A) ArrayList
+B) LinkedList
+C) Vector
+D) Stack
+
+✅ Answer: C
+
+5. Which collection maintains elements in sorted order?
+
+A) HashSet
+B) LinkedHashSet
+C) TreeSet
+D) ArrayList
+
+✅ Answer: C
+
+6. Which Map implementation maintains insertion order?
+
+A) HashMap
+B) TreeMap
+C) Hashtable
+D) LinkedHashMap
+
+✅ Answer: D
+
+7. Which Map implementation stores keys in sorted order?
+
+A) HashMap
+B) LinkedHashMap
+C) TreeMap
+D) Hashtable
+
+✅ Answer: C
+
+8. Which collection allows only one null element?
+
+A) HashSet
+B) TreeSet
+C) LinkedHashSet
+D) Vector
+
+✅ Answer: A
+
+9. Which Map does NOT allow null keys or values?
+
+A) HashMap
+B) TreeMap
+C) LinkedHashMap
+D) Hashtable
+
+✅ Answer: D
+
+10. Which interface is used to define natural ordering of objects?
+
+A) Comparator
+B) Comparable
+C) Collection
+D) Map
+
+✅ Answer: B
+
+11. Which method must be implemented when using Comparable?
+
+A) compare()
+B) compareTo()
+C) equals()
+D) sort()
+
+✅ Answer: B
+
+12. Which interface is used to define custom sorting logic?
+
+A) Comparable
+B) Serializable
+C) Comparator
+D) Cloneable
+
+✅ Answer: C
+
+13. Which Queue method removes and returns the head, throwing exception if empty?
+
+A) poll()
+B) peek()
+C) remove()
+D) element()
+
+✅ Answer: C
+
+14. Which Queue method returns null if the queue is empty?
+
+A) remove()
+B) element()
+C) poll()
+D) add()
+
+✅ Answer: C
+
+15. Which class is legacy and synchronized by default?
+
+A) ArrayList
+B) HashMap
+C) Vector
+D) LinkedList
+
+✅ Answer: C
+
+16. Which collection is best suited for frequent insertion and deletion?
+
+A) ArrayList
+B) LinkedList
+C) Vector
+D) Stack
+
+✅ Answer: B
+
+17. Which utility class provides static methods like sort(), reverse(), shuffle()?
+
+A) Collection
+B) Arrays
+C) Collections
+D) Comparator
+
+✅ Answer: C
+
+18. Which collection is based on a red-black tree?
+
+A) HashSet
+B) LinkedHashSet
+C) TreeSet
+D) ArrayList
+
+✅ Answer: C
+
+19. Which collection allows key–value pairs?
+
+A) List
+B) Set
+C) Queue
+D) Map
+
+✅ Answer: D
+
+20. Which statement about HashMap is TRUE?
+
+A) Maintains sorted order
+B) Does not allow null keys
+C) Is synchronized
+D) Allows one null key and multiple null values
+
+✅ Answer: D
+
+
+1. Which is the correct way to create a thread in Java?
+
+A) Extending Object class
+B) Implementing Serializable interface
+C) Extending Thread class or implementing Runnable
+D) Using Executor only
+
+✅ Answer: C
+
+2. Which method starts a new thread?
+
+A) run()
+B) start()
+C) execute()
+D) init()
+
+✅ Answer: B
+
+3. Which method causes the currently executing thread to sleep?
+
+A) wait()
+B) sleep()
+C) yield()
+D) stop()
+
+✅ Answer: B
+
+4. Which method waits for a thread to die?
+
+A) sleep()
+B) wait()
+C) join()
+D) yield()
+
+✅ Answer: C
+
+5. Which method temporarily pauses execution to give chance to other threads?
+
+A) wait()
+B) sleep()
+C) yield()
+D) join()
+
+✅ Answer: C
+
+6. Which keyword is used for synchronization in Java?
+
+A) static
+B) volatile
+C) synchronized
+D) transient
+
+✅ Answer: C
+
+7. Which resource sharing issue is prevented by synchronization?
+
+A) Deadlock
+B) Starvation
+C) Race condition
+D) Livelock
+
+✅ Answer: C
+
+8. Which method must be called inside a synchronized block?
+
+A) sleep()
+B) join()
+C) wait()
+D) yield()
+
+✅ Answer: C
+
+9. Which object’s monitor is used for synchronization?
+
+A) Thread
+B) ClassLoader
+C) Object
+D) JVM
+
+✅ Answer: C
+
+10. Which method wakes up a single waiting thread?
+
+A) notify()
+B) notifyAll()
+C) wake()
+D) resume()
+
+✅ Answer: A
+
+11. Which method wakes up all waiting threads?
+
+A) notify()
+B) notifyAll()
+C) interrupt()
+D) yield()
+
+✅ Answer: B
+
+12. Which of the following is NOT a thread lifecycle state?
+
+A) New
+B) Runnable
+C) Running
+D) Dead
+
+✅ Answer: C
+
+13. Which condition is NOT necessary for deadlock?
+
+A) Mutual exclusion
+B) Hold and wait
+C) No preemption
+D) Priority inversion
+
+✅ Answer: D
+
+14. Which problem occurs when threads wait forever?
+
+A) Starvation
+B) Deadlock
+C) Livelock
+D) Race condition
+
+✅ Answer: B
+
+15. Producer–Consumer problem uses which methods?
+
+A) sleep() and yield()
+B) wait() and notify()
+C) join() and stop()
+D) suspend() and resume()
+
+✅ Answer: B
+
+16. Which class groups multiple threads together?
+
+A) Thread
+B) ThreadGroup
+C) Runnable
+D) Executor
+
+✅ Answer: B
+
+17. Which thread priority is the highest?
+
+A) Thread.MIN_PRIORITY
+B) Thread.NORM_PRIORITY
+C) Thread.MAX_PRIORITY
+D) Thread.DEFAULT_PRIORITY
+
+✅ Answer: C
+
+18. Which method assigns priority to a thread?
+
+A) getPriority()
+B) setPriority()
+C) assignPriority()
+D) priority()
+
+✅ Answer: B
+
+19. Which method stops execution until another thread notifies?
+
+A) sleep()
+B) join()
+C) wait()
+D) yield()
+
+✅ Answer: C
+
+20. Which statement about multithreading is TRUE?
+
+A) Java supports multiple inheritance using threads
+B) Threads share heap memory
+C) Each thread has separate heap memory
+D) Threads cannot run concurrently
+
+✅ Answer: B
