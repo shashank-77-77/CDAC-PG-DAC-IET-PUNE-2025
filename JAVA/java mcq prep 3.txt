@@ -719,3 +719,183 @@ C) Each thread has separate heap memory
 D) Threads cannot run concurrently
 
 ✅ Answer: B
+
+1. What is the primary objective of Generics in Java?
+
+A) Improve runtime performance
+B) Enable dynamic typing
+C) Ensure type safety at compile time
+D) Reduce memory usage
+
+✅ Answer: C
+
+2. Which symbol is used to define a generic type?
+
+A) @
+B) #
+C) < >
+D) { }
+
+✅ Answer: C
+
+3. Which of the following is a valid generic class declaration?
+
+A) class Test<T> { }
+B) class Test(int T) { }
+C) class <T> Test { }
+D) generic class Test { }
+
+✅ Answer: A
+
+4. Which wildcard is used for upper bound in generics?
+
+A) ? super
+B) ? extends
+C) ? implements
+D) ? inherits
+
+✅ Answer: B
+
+5. Which wildcard allows a method to accept a superclass type?
+
+A) ? extends Number
+B) ? super Number
+C) ? Number
+D) ? implements Number
+
+✅ Answer: B
+
+6. Which of the following is NOT allowed with generics?
+
+A) Generic classes
+B) Generic methods
+C) Primitive data types as type parameters
+D) Wildcards
+
+✅ Answer: C
+
+7. Which package provides Reflection API in Java?
+
+A) java.lang.reflect
+B) java.util.reflect
+C) java.reflection
+D) java.lang.runtime
+
+✅ Answer: A
+
+8. Which class is used to get metadata of a class at runtime?
+
+A) Method
+B) Object
+C) Class
+D) Field
+
+✅ Answer: C
+
+9. Which method returns the Class object of a class?
+
+A) getClass()
+B) class()
+C) forName()
+D) loadClass()
+
+✅ Answer: A
+
+10. Which Reflection feature allows invoking private methods?
+
+A) Method.invoke() with access override
+B) Constructor.new()
+C) ClassLoader.load()
+D) Object.clone()
+
+✅ Answer: A
+
+11. What does metadata represent in Java?
+
+A) Data stored in heap
+B) Information about classes, methods, fields
+C) JVM bytecode
+D) Garbage collection data
+
+✅ Answer: B
+
+12. Which Java version introduced Stream API?
+
+A) Java 6
+B) Java 7
+C) Java 8
+D) Java 11
+
+✅ Answer: C
+
+13. Which interface represents a sequence of elements supporting aggregate operations?
+
+A) Collection
+B) Iterator
+C) Stream
+D) List
+
+✅ Answer: C
+
+14. Which stream operation transforms elements?
+
+A) filter()
+B) forEach()
+C) map()
+D) reduce()
+
+✅ Answer: C
+
+15. Which stream operation is a terminal operation?
+
+A) map()
+B) filter()
+C) reduce()
+D) sorted()
+
+✅ Answer: C
+
+16. Which stream operation is used to select elements based on a condition?
+
+A) map()
+B) filter()
+C) collect()
+D) reduce()
+
+✅ Answer: B
+
+17. Which method converts a stream into a collection?
+
+A) toList()
+B) collect()
+C) forEach()
+D) reduce()
+
+✅ Answer: B
+
+18. Which of the following is NOT a stream characteristic?
+
+A) Lazy evaluation
+B) Internal iteration
+C) Modifies source data
+D) Functional-style operations
+
+✅ Answer: C
+
+19. Which interface represents a functional interface used in streams?
+
+A) Runnable
+B) Comparator
+C) Predicate
+D) Serializable
+
+✅ Answer: C
+
+20. Which statement about streams is TRUE?
+
+A) Streams store data
+B) Streams modify original collection
+C) Streams can be reused
+D) Streams process data on demand
+
+✅ Answer: D
