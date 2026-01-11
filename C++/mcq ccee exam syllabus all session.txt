@@ -1,0 +1,220 @@
+SESSION 1 – Getting Started with C++ (20 MCQs | HARD)
+1. Why was C++ designed as an extension of C?
+
+A) To replace assembly language
+B) To add object-oriented features while retaining C efficiency
+C) To simplify syntax for beginners
+D) To remove pointers
+
+✅ Answer: B
+
+2. Which feature of C++ directly supports data hiding?
+
+A) Templates
+B) Inheritance
+C) Encapsulation
+D) Polymorphism
+
+✅ Answer: C
+
+3. Which of the following is NOT a valid reason for using C++?
+
+A) Low-level memory manipulation
+B) Platform independence without recompilation
+C) Object-oriented design
+D) High performance
+
+✅ Answer: B
+
+4. Which version of C++ first officially introduced auto type deduction?
+
+A) C++03
+B) C++11
+C) C++14
+D) C++17
+
+✅ Answer: B
+
+5. In C++, which header is mandatory for using cout?
+
+A) <stdio.h>
+B) <iostream>
+C) <conio.h>
+D) <ostream>
+
+✅ Answer: B
+
+6. What is the correct structure of a basic C++ program?
+
+A) Header → main → namespace
+B) Namespace → header → main
+C) Header → namespace → main
+D) main → header → namespace
+
+✅ Answer: C
+
+7. Which of the following differentiates C++ from C most fundamentally?
+
+A) Faster execution
+B) Object-oriented programming
+C) Rich standard library
+D) Simpler syntax
+
+✅ Answer: B
+
+8. Who developed C++?
+
+A) Dennis Ritchie
+B) James Gosling
+C) Bjarne Stroustrup
+D) Ken Thompson
+
+✅ Answer: C
+
+9. Which concept allows C++ to support both procedural and object-oriented programming?
+
+A) Hybrid programming
+B) Encapsulation
+C) Templates
+D) STL
+
+✅ Answer: A
+
+10. What will be the output of the following code?
+#include<iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello";
+    return 0;
+}
+
+
+A) Compilation error
+B) Hello
+C) hello
+D) No output
+
+✅ Answer: B
+
+11. Which operator is used to calculate power in C++?
+
+A) ^
+B) **
+C) pow()
+D) No direct operator
+
+✅ Answer: D
+
+12. Which header file is required for pow()?
+
+A) <cmath>
+B) <math>
+C) <stdlib.h>
+D) <algorithm>
+
+✅ Answer: A
+
+13. What is the default return type of main() in C++?
+
+A) void
+B) int
+C) char
+D) auto
+
+✅ Answer: B
+
+14. Which of the following is a valid C++ comment?
+
+A) <!-- comment -->
+B) # comment
+C) /* comment */
+D) Both C and // comment
+
+✅ Answer: D
+
+15. Which feature allows function names to be reused with different parameters?
+
+A) Encapsulation
+B) Function overriding
+C) Function overloading
+D) Inheritance
+
+✅ Answer: C
+
+16. What is the scope of variables declared inside main()?
+
+A) Global
+B) Local to file
+C) Local to function
+D) Static
+
+✅ Answer: C
+
+17. Which of the following correctly swaps two numbers using a temporary variable?
+
+A) a = b; b = a;
+B) temp = a; a = b; b = temp;
+C) swap(a,b);
+D) a ^= b ^= a ^= b;
+
+✅ Answer: B
+
+18. What happens if return 0; is omitted from main() in C++?
+
+A) Compilation error
+B) Runtime error
+C) Undefined behavior
+D) Compiler inserts return 0 implicitly
+
+✅ Answer: D
+
+19. Which of the following is NOT a core feature of C++?
+
+A) Object-oriented programming
+B) Garbage collection
+C) Low-level memory access
+D) Templates
+
+✅ Answer: B
+
+20. Which standard guarantees backward compatibility with C?
+
+A) C++17
+B) C++14
+C) Core C++ philosophy
+D) ISO C++ does not guarantee it
+
+✅ Answer: D
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
