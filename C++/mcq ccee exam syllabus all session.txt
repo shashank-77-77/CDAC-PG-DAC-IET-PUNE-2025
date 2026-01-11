@@ -188,11 +188,970 @@ D) ISO C++ does not guarantee it
 ✅ Answer: D
 
 --------------------------------------------------------------
---------------------------------------------------------------
---------------------------------------------------------------
+SESSIONS 2 & 3 – Beginning with C++ (20 MCQs | HARD)
+1. Which of the following correctly represents the compilation flow of a C++ program?
+
+A) Preprocessor → Linker → Compiler → Loader
+B) Compiler → Preprocessor → Linker → Loader
+C) Preprocessor → Compiler → Linker → Loader
+D) Compiler → Linker → Preprocessor → Loader
+
+✅ Answer: C
+
+2. Which of the following is NOT a valid C++ token?
+
+A) Keyword
+B) Identifier
+C) Operator
+D) Pointer
+
+✅ Answer: D
+
+3. What is the purpose of the scope resolution operator ::?
+
+A) Access global variables
+B) Resolve namespace or class scope
+C) Allocate memory dynamically
+D) Perform type casting
+
+✅ Answer: B
+
+4. Which of the following initializations is invalid in C++?
+
+A) int a = 10;
+B) int b(20);
+C) int c = (30);
+D) int d = int;
+
+✅ Answer: D
+
+5. What happens if a static data member is not explicitly initialized?
+
+A) Garbage value
+B) Compilation error
+C) Initialized to zero
+D) Undefined behavior
+
+✅ Answer: C
+
+6. Which statement about const data members is TRUE?
+
+A) They can be initialized inside the constructor body
+B) They must be initialized using initializer list
+C) They can be modified using mutable
+D) They behave like static members
+
+✅ Answer: B
+
+7. Which operator has the highest precedence in C++?
+
+A) *
+B) ++ (postfix)
+C) =
+D) &&
+
+✅ Answer: B
+
+8. What will be the output of the following code?
+int x = 5;
+cout << x++ << ++x;
+
+
+A) 56
+B) 67
+C) Undefined behavior
+D) 66
+
+✅ Answer: C
+
+9. Which operator is known as the conditional operator?
+
+A) ?:
+B) &&
+C) ||
+D) ==
+
+✅ Answer: A
+
+10. Which of the following is TRUE about static member functions?
+
+A) They can access non-static data members directly
+B) They require an object to be called
+C) They can access only static members
+D) They have a this pointer
+
+✅ Answer: C
+
+11. What is the size of bool in C++ (most implementations)?
+
+A) 1 bit
+B) 1 byte
+C) 2 bytes
+D) Compiler dependent but minimum 1 byte
+
+✅ Answer: D
+
+12. Which of the following expressions results in logical TRUE?
+
+A) 5 && 0
+B) 0 || 0
+C) !0
+D) 0 && 1
+
+✅ Answer: C
+
+13. Which operator is overloaded by default in C++?
+
+A) .
+B) ::
+C) sizeof
+D) None
+
+✅ Answer: D
+
+14. What is the default value of an uninitialized local variable?
+
+A) Zero
+B) NULL
+C) Garbage value
+D) Compiler dependent but safe
+
+✅ Answer: C
+
+15. Which of the following statements about expressions is correct?
+
+A) All expressions produce a value
+B) All expressions modify memory
+C) Expressions cannot include function calls
+D) Assignment is also an expression
+
+✅ Answer: D
+
+16. Which operator is right associative?
+
+A) +
+B) *
+C) =
+D) &&
+
+✅ Answer: C
+
+17. What will be the output of the following code?
+int a = 10;
+int b = a += 5;
+cout << a << " " << b;
+
+
+A) 10 15
+B) 15 15
+C) 15 10
+D) Compilation error
+
+✅ Answer: B
+
+18. Which keyword prevents a variable from being modified after initialization?
+
+A) static
+B) final
+C) const
+D) immutable
+
+✅ Answer: C
+
+19. Which of the following operators cannot be overloaded?
+
+A) +
+B) []
+C) ?:
+D) <<
+
+✅ Answer: C
+
+20. Which C++17 feature allows compile-time conditional code execution?
+
+A) constexpr if
+B) auto
+C) decltype
+D) lambda
+
+✅ Answer: A
 
 --------------------------------------------------------------
+
+SESSION 4 – Conditional and Looping Statements (20 MCQs | HARD)
+1. Which of the following statements about if–else is correct in C++?
+
+A) else must always be paired with the nearest if
+B) else pairs with the first unmatched if
+C) else pairs with the last if regardless of scope
+D) else can exist without if
+
+✅ Answer: B
+
+2. What will be the output of the following code?
+int x = 5;
+if (x = 0)
+    cout << "True";
+else
+    cout << "False";
+
+
+A) True
+B) False
+C) Compilation error
+D) Undefined behavior
+
+✅ Answer: B
+
+3. Which data type is NOT allowed in a switch expression in C++?
+
+A) int
+B) char
+C) enum
+D) float
+
+✅ Answer: D
+
+4. What happens if a break statement is omitted in a switch case?
+
+A) Compilation error
+B) Only that case executes
+C) Control falls through to the next case
+D) Program terminates
+
+✅ Answer: C
+
+5. Which loop is guaranteed to execute at least once?
+
+A) for
+B) while
+C) do-while
+D) None
+
+✅ Answer: C
+
+6. How many times will the following loop execute?
+for(int i = 1; i <= 10; i += 3)
+    cout << i << " ";
+
+
+A) 3
+B) 4
+C) 5
+D) Infinite
+
+✅ Answer: B
+
+7. What is the output of the following code?
+int i = 5;
+while(i--) {
+    cout << i << " ";
+}
+
+
+A) 5 4 3 2 1
+B) 4 3 2 1 0
+C) 5 4 3 2 1 0
+D) Infinite loop
+
+✅ Answer: B
+
+8. Which statement immediately terminates a loop and transfers control outside it?
+
+A) continue
+B) exit
+C) return
+D) break
+
+✅ Answer: D
+
+9. What does the continue statement do in a loop?
+
+A) Terminates the loop
+B) Skips the current iteration
+C) Exits the program
+D) Restarts the loop from beginning
+
+✅ Answer: B
+
+10. What will be the output of the following code?
+for(int i = 1; i <= 5; i++) {
+    if(i == 3)
+        continue;
+    cout << i;
+}
+
+
+A) 12345
+B) 1245
+C) 1345
+D) 12
+
+✅ Answer: B
+
+11. What is the index of the first element in a C++ array?
+
+A) 1
+B) 0
+C) -1
+D) Depends on compiler
+
+✅ Answer: B
+
+12. What will be the output?
+int arr[5] = {1,2,3};
+cout << arr[3] << arr[4];
+
+
+A) 00
+B) Garbage values
+C) Compilation error
+D) 34
+
+✅ Answer: A
+
+13. Which of the following correctly declares a 2-D array?
+
+A) int a[3,3];
+B) int a[3][3];
+C) int a[][];
+D) int a(3)(3);
+
+✅ Answer: B
+
+14. How are elements stored in a 2-D array in C++?
+
+A) Column-major order
+B) Row-major order
+C) Random order
+D) Compiler dependent
+
+✅ Answer: B
+
+15. Which loop is best suited when the number of iterations is known in advance?
+
+A) while
+B) do-while
+C) for
+D) Infinite loop
+
+✅ Answer: C
+
+16. What is the purpose of command-line arguments in C++?
+
+A) To pass input during compilation
+B) To pass input at runtime
+C) To store global constants
+D) To handle exceptions
+
+✅ Answer: B
+
+17. Which parameters receive command-line arguments in main()?
+
+A) int argc, char* argv[]
+B) char argc, int argv
+C) string argc, string argv
+D) void argc, void argv
+
+✅ Answer: A
+
+18. What does argc represent?
+
+A) Number of arguments excluding program name
+B) Number of arguments including program name
+C) Length of arguments
+D) Index of arguments
+
+✅ Answer: B
+
+19. What happens if array bounds are exceeded in C++?
+
+A) Compiler error
+B) Runtime bounds check
+C) Undefined behavior
+D) Automatic resizing
+
+✅ Answer: C
+
+20. Which statement exits the current function and returns control to the caller?
+
+A) break
+B) continue
+C) exit()
+D) return
+
+✅ Answer: D
 --------------------------------------------------------------
+SESSION 5 – Functions in C++ (20 MCQs | HARD)
+1. Why is a function prototype required in C++?
+
+A) To allocate memory for the function
+B) To allow function calls before definition
+C) To improve execution speed
+D) To enable recursion
+
+✅ Answer: B
+
+2. Which of the following correctly declares a function prototype?
+
+A) int sum(int, int);
+B) int sum(a, b);
+C) int sum(int a; int b);
+D) sum(int a, int b);
+
+✅ Answer: A
+
+3. Which of the following supports call-by-reference in C++?
+
+A) Pointers only
+B) Reference variables
+C) Macros
+D) Inline functions
+
+✅ Answer: B
+
+4. What happens when arguments are passed by reference?
+
+A) Copies are passed
+B) Original variables are modified
+C) Values become constant
+D) Only read access is allowed
+
+✅ Answer: B
+
+5. What is the major advantage of inline functions?
+
+A) Reduced memory usage
+B) Faster execution by avoiding function call overhead
+C) Automatic recursion support
+D) Better security
+
+✅ Answer: B
+
+6. Which of the following functions cannot be declared inline?
+
+A) Recursive function
+B) Small function
+C) Member function
+D) Template function
+
+✅ Answer: A
+
+7. What will be the output of the following code?
+void fun(int &x) {
+    x += 10;
+}
+
+int main() {
+    int a = 5;
+    fun(a);
+    cout << a;
+}
+
+
+A) 5
+B) 10
+C) 15
+D) Garbage
+
+✅ Answer: C
+
+8. Which header file is required for mathematical functions like sqrt() and pow()?
+
+A) <math>
+B) <cmath>
+C) <stdlib>
+D) <algorithm>
+
+✅ Answer: B
+
+9. What is function overloading?
+
+A) Defining multiple functions with same name and parameters
+B) Defining multiple functions with same name but different parameters
+C) Defining a function inside another function
+D) Replacing a function at runtime
+
+✅ Answer: B
+
+10. Which of the following is NOT allowed in function overloading?
+
+A) Different number of parameters
+B) Different parameter types
+C) Different return type only
+D) Different parameter order
+
+✅ Answer: C
+
+11. What is the default return type of a function if not specified in C++?
+
+A) int
+B) void
+C) Compiler dependent
+D) No default return type
+
+✅ Answer: D
+
+12. What will be the output?
+int fun(int x = 5) {
+    return x;
+}
+
+int main() {
+    cout << fun();
+}
+
+
+A) 0
+B) 5
+C) Compilation error
+D) Undefined
+
+✅ Answer: B
+
+13. Which keyword prevents multiple definitions of the same function across files?
+
+A) static
+B) extern
+C) inline
+D) virtual
+
+✅ Answer: C
+
+14. Which type of function call uses actual memory address?
+
+A) Call by value
+B) Call by reference
+C) Inline call
+D) Recursive call
+
+✅ Answer: B
+
+15. Which function is invoked automatically at program termination?
+
+A) main()
+B) exit()
+C) Destructor
+D) return
+
+✅ Answer: C
+
+16. What happens if a function is declared but never defined?
+
+A) Runtime error
+B) Compilation error
+C) Linker error
+D) No error
+
+✅ Answer: C
+
+17. Which of the following best describes recursion?
+
+A) Function calling another function
+B) Function calling itself
+C) Inline expansion
+D) Function overloading
+
+✅ Answer: B
+
+18. Which is the correct syntax for call-by-reference?
+
+A) void fun(int x);
+B) void fun(int &x);
+C) void fun(int *x);
+D) void fun(const int x);
+
+✅ Answer: B
+
+19. Which of the following functions is most suitable to be declared inline?
+
+A) Large function with loops
+B) Recursive function
+C) Small frequently used function
+D) Function with static variables
+
+✅ Answer: C
+
+20. Which statement about inline functions is FALSE?
+
+A) They reduce function call overhead
+B) They increase binary size
+C) They guarantee faster execution
+D) They are expanded at compile time
+
+✅ Answer: C
+
+--------------------------------------------------------------
+SESSIONS 6 & 7 – Memory Management and Pointers (20 MCQs | HARD)
+1. Which memory area stores dynamically allocated variables in C++?
+
+A) Stack
+B) Heap
+C) Data segment
+D) Code segment
+
+✅ Answer: B
+
+2. What is the default value of a pointer that is not initialized?
+
+A) NULL
+B) 0
+C) Garbage value
+D) Compiler assigns safe value
+
+✅ Answer: C
+
+3. Which operator is used to allocate memory dynamically in C++?
+
+A) malloc
+B) calloc
+C) new
+D) alloc
+
+✅ Answer: C
+
+4. What is the correct way to deallocate memory allocated using new?
+
+A) free(ptr);
+B) delete ptr;
+C) remove ptr;
+D) dealloc ptr;
+
+✅ Answer: B
+
+5. What happens if memory allocated using new is not deallocated?
+
+A) Compilation error
+B) Runtime exception
+C) Memory leak
+D) Automatic cleanup
+
+✅ Answer: C
+
+6. Which of the following correctly declares a pointer to an integer?
+
+A) int *p;
+B) int p*;
+C) *int p;
+D) int &p;
+
+✅ Answer: A
+
+7. What will be the output of the following code?
+int x = 10;
+int *p = &x;
+cout << *p;
+
+
+A) Address of x
+B) 10
+C) Garbage value
+D) Compilation error
+
+✅ Answer: B
+
+8. Which pointer always points to the first element of an array?
+
+A) Pointer declared inside loop
+B) Array name
+C) NULL pointer
+D) Dangling pointer
+
+✅ Answer: B
+
+9. What is a dangling pointer?
+
+A) Pointer pointing to NULL
+B) Pointer not initialized
+C) Pointer pointing to freed memory
+D) Pointer pointing to constant data
+
+✅ Answer: C
+
+10. What is the difference between malloc and new?
+
+A) malloc calls constructor, new does not
+B) new returns void pointer
+C) new calls constructor, malloc does not
+D) No difference
+
+✅ Answer: C
+
+11. What will be the output?
+int arr[3] = {10, 20, 30};
+int *p = arr;
+cout << *(p + 1);
+
+
+A) 10
+B) 20
+C) 30
+D) Address
+
+✅ Answer: B
+
+12. Which of the following is TRUE about pointer arithmetic?
+
+A) Incrementing pointer increases it by 1 byte
+B) Increment depends on data type size
+C) Pointer arithmetic is same for all types
+D) Pointer arithmetic is not allowed
+
+✅ Answer: B
+
+13. What is the use of this pointer in C++?
+
+A) Points to parent class
+B) Refers to current object
+C) Refers to static members
+D) Used only in constructors
+
+✅ Answer: B
+
+14. Which of the following cannot be accessed using this pointer?
+
+A) Non-static data members
+B) Member functions
+C) Static data members
+D) Current object
+
+✅ Answer: C
+
+15. What is the size of a pointer variable on a 64-bit system (typically)?
+
+A) 2 bytes
+B) 4 bytes
+C) 8 bytes
+D) Compiler dependent
+
+✅ Answer: C
+
+16. Which keyword is used to define user-defined data type aliases?
+
+A) enum
+B) struct
+C) typedef
+D) using
+
+✅ Answer: C
+
+17. Which statement about enum is correct?
+
+A) Enum values are strings
+B) Enum improves code readability
+C) Enum occupies zero memory
+D) Enum cannot be type-safe
+
+✅ Answer: B
+
+18. What will happen if delete is used on a pointer not allocated by new?
+
+A) Safe operation
+B) Compilation error
+C) Undefined behavior
+D) Pointer becomes NULL
+
+✅ Answer: C
+
+19. Which function is used to free memory allocated by calloc?
+
+A) delete
+B) free
+C) remove
+D) dealloc
+
+✅ Answer: B
+
+20. What is the key advantage of new over malloc in C++?
+
+A) Faster execution
+B) Type safety and constructor call
+C) Less memory usage
+D) Works only for arrays
+
+✅ Answer: B
+--------------------------------------------------------------
+SESSION 8 – OOP Concepts (20 MCQs | HARD)
+1. Which of the following best defines an object in C++?
+
+A) A logical entity
+B) A blueprint of a class
+C) An instance of a class
+D) A function inside a class
+
+✅ Answer: C
+
+2. Which feature of OOP allows bundling data and functions together?
+
+A) Inheritance
+B) Encapsulation
+C) Polymorphism
+D) Abstraction
+
+✅ Answer: B
+
+3. Which access specifier makes members accessible only within the class?
+
+A) public
+B) protected
+C) private
+D) default
+
+✅ Answer: C
+
+4. What is the default access specifier for members of a C++ class?
+
+A) public
+B) protected
+C) private
+D) none
+
+✅ Answer: C
+
+5. Which of the following is TRUE about function overloading?
+
+A) Only return type must differ
+B) Parameter list must differ
+C) Function name must differ
+D) Scope must differ
+
+✅ Answer: B
+
+6. Which form of polymorphism is achieved using function overloading?
+
+A) Runtime polymorphism
+B) Compile-time polymorphism
+C) Dynamic polymorphism
+D) Late binding
+
+✅ Answer: B
+
+7. Which keyword is used to create an object dynamically in C++?
+
+A) malloc
+B) alloc
+C) new
+D) create
+
+✅ Answer: C
+
+8. Which of the following is NOT a valid class member in C++?
+
+A) Data member
+B) Member function
+C) Constructor
+D) Loop
+
+✅ Answer: D
+
+9. What is the role of a constructor in a class?
+
+A) Destroy objects
+B) Initialize objects
+C) Allocate static memory
+D) Overload operators
+
+✅ Answer: B
+
+10. Which of the following correctly defines inheritance?
+
+A) One class accessing another class’s private data
+B) One class acquiring properties of another class
+C) Multiple objects sharing one class
+D) Multiple classes sharing functions
+
+✅ Answer: B
+
+11. Which inheritance type involves one base class and multiple derived classes?
+
+A) Multiple
+B) Multilevel
+C) Hierarchical
+D) Hybrid
+
+✅ Answer: C
+
+12. Which keyword allows access to members of a namespace?
+
+A) include
+B) using
+C) namespace
+D) scope
+
+✅ Answer: B
+
+13. What will happen if a derived class does not specify an access specifier while inheriting?
+
+A) Inheritance becomes public
+B) Inheritance becomes private
+C) Compilation error
+D) Undefined behavior
+
+✅ Answer: B
+
+14. Which OOP principle hides implementation details and shows only essential features?
+
+A) Encapsulation
+B) Abstraction
+C) Polymorphism
+D) Inheritance
+
+✅ Answer: B
+
+15. Which keyword is used to define a namespace?
+
+A) using
+B) namespace
+C) scope
+D) define
+
+✅ Answer: B
+
+16. Which statement about classes and structures in C++ is TRUE?
+
+A) Structures do not support functions
+B) Classes do not support public members
+C) Default access specifier differs
+D) Structures do not support inheritance
+
+✅ Answer: C
+
+17. What happens when an object goes out of scope?
+
+A) Constructor is called
+B) Destructor is called
+C) Object remains in memory
+D) Program terminates
+
+✅ Answer: B
+
+18. Which of the following supports runtime polymorphism?
+
+A) Function overloading
+B) Operator overloading
+C) Virtual functions
+D) Inline functions
+
+✅ Answer: C
+
+19. Which keyword prevents inheritance of a class?
+
+A) private
+B) static
+C) final
+D) sealed
+
+✅ Answer: C
+
+20. What is the purpose of namespaces in C++?
+
+A) Improve execution speed
+B) Reduce memory usage
+C) Avoid name conflicts
+D) Enable polymorphism
+
+✅ Answer: C
+
 --------------------------------------------------------------
 
 --------------------------------------------------------------
