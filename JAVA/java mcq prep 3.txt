@@ -899,3 +899,534 @@ C) Streams can be reused
 D) Streams process data on demand
 
 ✅ Answer: D
+
+
+-------------------------------------------
+
+SECTION A: Java Basics, JVM, Datatypes (Q1–15)
+
+1. Java achieves platform independence primarily because of:
+A) JDK
+B) JVM
+C) JRE
+D) Bytecode + JVM
+✅ Answer: D
+
+2. Which memory area is NOT part of JVM runtime data areas?
+A) Heap
+B) Stack
+C) Method Area
+D) Register File
+✅ Answer: D
+
+3. Which statement about bytecode is TRUE?
+A) Platform dependent
+B) Executed directly by OS
+C) Interpreted/compiled by JVM
+D) Same as machine code
+✅ Answer: C
+
+4. Default value of instance boolean variable is:
+A) true
+B) false
+C) 0
+D) null
+✅ Answer: B
+
+5. Which primitive type is NOT signed?
+A) int
+B) byte
+C) char
+D) short
+✅ Answer: C
+
+6. Which is NOT a valid Java identifier?
+A) _count
+B) $value
+C) 2num
+D) value2
+✅ Answer: C
+
+7. What happens if main() is declared private?
+A) Compilation error
+B) Runtime error
+C) JVM cannot access main
+D) Program runs normally
+✅ Answer: C
+
+8. Which operator has lowest precedence?
+A) ++
+B) *
+C) ==
+D) =
+✅ Answer: D
+
+9. Arrays in Java are:
+A) Value types
+B) Objects
+C) Stored on stack
+D) Immutable
+✅ Answer: B
+
+10. Multidimensional arrays in Java are implemented as:
+A) True matrices
+B) Contiguous blocks
+C) Arrays of arrays
+D) Linked lists
+✅ Answer: C
+
+11. Which keyword prevents variable modification?
+A) static
+B) volatile
+C) final
+D) transient
+✅ Answer: C
+
+12. Which is evaluated first?
+A) a++
+B) ++a
+C) Both same
+D) Depends on JVM
+✅ Answer: B
+
+13. What is size of float?
+A) 2 bytes
+B) 4 bytes
+C) 8 bytes
+D) JVM dependent
+✅ Answer: B
+
+14. Java source is compiled into:
+A) Native code
+B) Assembly
+C) Bytecode
+D) Object file
+✅ Answer: C
+
+15. Which loop executes at least once?
+A) for
+B) while
+C) do-while
+D) enhanced for
+✅ Answer: C
+
+SECTION B: OOP Concepts (Q16–35)
+
+16. Encapsulation is achieved using:
+A) Inheritance
+B) Interfaces
+C) Access modifiers
+D) Polymorphism
+✅ Answer: C
+
+17. Which is NOT an OOP principle?
+A) Abstraction
+B) Compilation
+C) Inheritance
+D) Polymorphism
+✅ Answer: B
+
+18. Method overloading is based on:
+A) Return type
+B) Method name only
+C) Parameter list
+D) Access modifier
+✅ Answer: C
+
+19. Runtime polymorphism uses:
+A) Method overloading
+B) Method overriding
+C) Constructor chaining
+D) Encapsulation
+✅ Answer: B
+
+20. Which keyword refers to parent class object?
+A) this
+B) parent
+C) super
+D) base
+✅ Answer: C
+
+21. Constructors:
+A) Can be inherited
+B) Have return types
+C) Initialize objects
+D) Are static
+✅ Answer: C
+
+22. If no constructor is defined:
+A) Compilation error
+B) JVM inserts parameterized constructor
+C) Compiler provides default constructor
+D) Object cannot be created
+✅ Answer: C
+
+23. Java supports multiple inheritance via:
+A) Classes
+B) Abstract classes
+C) Interfaces
+D) Packages
+✅ Answer: C
+
+24. Which cannot be overridden?
+A) static method
+B) final method
+C) private method
+D) All of the above
+✅ Answer: D
+
+25. Association represents:
+A) “is-a” relationship
+B) “has-a” relationship
+C) Inheritance only
+D) Dependency injection
+✅ Answer: B
+
+26. Composition implies:
+A) Weak ownership
+B) Strong ownership
+C) No ownership
+D) Temporary reference
+✅ Answer: B
+
+27. Abstract class can have:
+A) No methods
+B) Only abstract methods
+C) Abstract + concrete methods
+D) Only static methods
+✅ Answer: C
+
+28. Interface variables are implicitly:
+A) private
+B) protected
+C) static final
+D) transient
+✅ Answer: C
+
+29. Lambda expressions require:
+A) Abstract class
+B) Functional interface
+C) Marker interface
+D) Serializable
+✅ Answer: B
+
+30. Which interface has exactly one abstract method?
+A) Runnable
+B) Comparator
+C) Serializable
+D) Cloneable
+✅ Answer: A
+
+31. Inner class can access:
+A) Only static members
+B) Only instance members
+C) Both static & instance
+D) Neither
+✅ Answer: C
+
+32. Anonymous inner class:
+A) Has name
+B) Cannot implement interfaces
+C) Has no constructor
+D) No class name
+✅ Answer: D
+
+33. Enum constants are:
+A) Objects
+B) Static final
+C) Primitive
+D) Mutable
+✅ Answer: B
+
+34. Upcasting is:
+A) Explicit
+B) Implicit
+C) Unsafe
+D) Illegal
+✅ Answer: B
+
+35. Downcasting requires:
+A) No check
+B) instanceof check
+C) JVM flag
+D) Compilation error
+✅ Answer: B
+
+SECTION C: Strings, Wrappers, GC (Q36–55)
+
+36. String objects are:
+A) Mutable
+B) Immutable
+C) Thread-unsafe
+D) Stack allocated
+✅ Answer: B
+
+37. String pool exists to:
+A) Improve speed
+B) Reduce memory usage
+C) Enable GC
+D) Support threading
+✅ Answer: B
+
+38. StringBuilder vs StringBuffer:
+A) Same
+B) Builder is synchronized
+C) Buffer is synchronized
+D) Both immutable
+✅ Answer: C
+
+39. Wrapper classes enable:
+A) Boxing/unboxing
+B) Memory reduction
+C) Faster execution
+D) Primitive inheritance
+✅ Answer: A
+
+40. Which is NOT wrapper class?
+A) Integer
+B) Character
+C) String
+D) Boolean
+✅ Answer: C
+
+41. Autoboxing introduced in:
+A) Java 1.4
+B) Java 5
+C) Java 7
+D) Java 8
+✅ Answer: B
+
+42. Garbage collection is:
+A) Manual
+B) Automatic
+C) Predictable
+D) Deterministic
+✅ Answer: B
+
+43. Object eligible for GC when:
+A) new keyword used
+B) Reference lost
+C) finalize() called
+D) Heap full
+✅ Answer: B
+
+44. finalize() is:
+A) Guaranteed
+B) Deprecated and unreliable
+C) Mandatory
+D) Static
+✅ Answer: B
+
+45. System.gc():
+A) Forces GC
+B) Requests GC
+C) Stops JVM
+D) Frees memory immediately
+✅ Answer: B
+
+46. Heap stores:
+A) Methods
+B) Local variables
+C) Objects
+D) Bytecode
+✅ Answer: C
+
+47. Stack stores:
+A) Objects
+B) Static data
+C) Method calls
+D) String literals
+✅ Answer: C
+
+48. Island of isolation refers to:
+A) Circular references
+B) Memory leak
+C) Deadlock
+D) Stack overflow
+✅ Answer: A
+
+49. Wrapper comparison using == compares:
+A) Values
+B) References
+C) Hashcode
+D) String pool
+✅ Answer: B
+
+50. equals() compares:
+A) References only
+B) Content (default: reference)
+C) Hashcode
+D) JVM address
+✅ Answer: B
+
+51. hashCode contract relates to:
+A) equals()
+B) GC
+C) Threading
+D) Serialization
+✅ Answer: A
+
+52. Constant pool is stored in:
+A) Stack
+B) Heap
+C) Method area
+D) Register
+✅ Answer: C
+
+53. Boxing converts:
+A) Object → primitive
+B) Primitive → object
+C) String → object
+D) Reference → value
+✅ Answer: B
+
+54. Unboxing risk:
+A) StackOverflowError
+B) NullPointerException
+C) IOException
+D) ClassCastException
+✅ Answer: B
+
+55. Which is immutable?
+A) String
+B) StringBuilder
+C) StringBuffer
+D) All
+✅ Answer: A
+
+SECTION D: Exceptions, Collections, Threads (Q56–100)
+
+56. Root of exception hierarchy: Throwable
+✅ Answer: D
+
+57. Checked exception: IOException
+✅ Answer: C
+
+58. Unchecked exception: NullPointerException
+✅ Answer: A
+
+59. finally block skipped when: System.exit()
+✅ Answer: D
+
+60. Multi-catch introduced in: Java 7
+✅ Answer: C
+
+61. User-defined checked exception extends: Exception
+✅ Answer: B
+
+62. Collection root interface: Collection
+✅ Answer: C
+
+63. List allows: Duplicates
+✅ Answer: A
+
+64. Set uniqueness via: equals() + hashCode()
+✅ Answer: D
+
+65. Sorted Map: TreeMap
+✅ Answer: C
+
+66. Insertion order Map: LinkedHashMap
+✅ Answer: D
+
+67. Thread-safe legacy class: Vector
+✅ Answer: C
+
+68. Comparator defines: Custom ordering
+✅ Answer: C
+
+69. Queue head removal exception method: remove()
+✅ Answer: C
+
+70. HashMap allows: One null key
+✅ Answer: D
+
+71. Thread created using: Runnable / Thread
+✅ Answer: C
+
+72. start() vs run(): start() creates new thread
+✅ Answer: B
+
+73. wait() must be called inside: synchronized block
+✅ Answer: C
+
+74. notifyAll() wakes: All waiting threads
+✅ Answer: B
+
+75. Deadlock requires: Mutual exclusion
+✅ Answer: A
+
+76. Yield(): Hints scheduler
+✅ Answer: B
+
+77. join(): Waits for thread completion
+✅ Answer: C
+
+78. Priority range: 1–10
+✅ Answer: C
+
+79. Threads share: Heap memory
+✅ Answer: B
+
+80. Synchronization avoids: Race condition
+✅ Answer: C
+
+81. Stream API introduced: Java 8
+✅ Answer: C
+
+82. Terminal stream operation: reduce()
+✅ Answer: C
+
+83. Reflection API package: java.lang.reflect
+✅ Answer: A
+
+84. Class metadata via: Class object
+✅ Answer: C
+
+85. Serialization converts object to: Byte stream
+✅ Answer: A
+
+86. Serializable is: Marker interface
+✅ Answer: B
+
+87. Transient fields are: Not serialized
+✅ Answer: C
+
+88. Date formatting via: SimpleDateFormat
+✅ Answer: C
+
+89. Comparable method: compareTo()
+✅ Answer: B
+
+90. TreeSet uses: Red-Black tree
+✅ Answer: C
+
+91. Stream intermediate operation: map()
+✅ Answer: C
+
+92. Predicate functional interface returns: boolean
+✅ Answer: A
+
+93. Reflection can access private members using: setAccessible(true)
+✅ Answer: B
+
+94. Lambda expressions reduce: Boilerplate code
+✅ Answer: C
+
+95. ThreadGroup manages: Group of threads
+✅ Answer: B
+
+96. JVM loads classes using: ClassLoader
+✅ Answer: A
+
+97. Map does NOT extend: Collection
+✅ Answer: C
+
+98. finalize() status: Deprecated
+✅ Answer: B
+
+99. Deadlock prevention by breaking: Hold and wait
+✅ Answer: B
+
+100. Best practice for GC: Let JVM manage
+✅ Answer: D
