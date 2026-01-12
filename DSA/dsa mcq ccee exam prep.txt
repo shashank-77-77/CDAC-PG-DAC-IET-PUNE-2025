@@ -1,0 +1,657 @@
+CLUSTER 1 – MCQ BANK
+(Sessions 1, 2 & 3)
+SECTION A — EASY LEVEL (10 MCQs)
+
+(Baseline competence, quick wins)
+
+Q1. The first step in systematic problem solving is to:
+A. Write code
+B. Optimize the algorithm
+C. Define the problem clearly
+D. Choose a data structure
+Answer: C
+
+Q2. Which notation is used to describe algorithm efficiency?
+A. Sigma notation
+B. Big-O notation
+C. Lambda calculus
+D. Set notation
+Answer: B
+
+Q3. A stack follows which access discipline?
+A. FIFO
+B. Random access
+C. LIFO
+D. Priority based
+Answer: C
+
+Q4. Which data structure is best suited for printer job scheduling?
+A. Stack
+B. Queue
+C. Array
+D. Tree
+Answer: B
+
+Q5. In arrays, memory allocation is:
+A. Dynamic and scattered
+B. Static and contiguous
+C. Dynamic and linked
+D. Virtual and sparse
+Answer: B
+
+Q6. Which operation is NOT standard for stacks?
+A. Push
+B. Pop
+C. Peek
+D. Insert-at-middle
+Answer: D
+
+Q7. Best-case time complexity of linear search is:
+A. O(n)
+B. O(log n)
+C. O(1)
+D. O(n²)
+Answer: C
+
+Q8. Circular queues primarily solve which issue?
+A. Stack overflow
+B. Fragmentation
+C. Wasted space in linear queues
+D. Sorting inefficiency
+Answer: C
+
+Q9. An Abstract Data Type focuses on:
+A. Memory layout
+B. Implementation details
+C. Data behavior and operations
+D. Compiler design
+Answer: C
+
+Q10. Which of the following is NOT an algorithm construct?
+A. Sequence
+B. Selection
+C. Iteration
+D. Compilation
+Answer: D
+
+SECTION B — HARD LEVEL (40 MCQs)
+
+(CCEE pressure-tested, concept-dense)
+
+Q11. A problem is computationally solvable if:
+A. It can be coded in C
+B. It has a finite, well-defined algorithm
+C. It executes within constant time
+D. It avoids recursion
+Answer: B
+
+Q12. Problem abstraction primarily helps to:
+A. Reduce coding effort
+B. Ignore irrelevant real-world details
+C. Improve execution speed
+D. Select programming language
+Answer: B
+
+Q13. Which factor does NOT influence algorithm selection?
+A. Input size
+B. Hardware constraints
+C. Programmer preference
+D. Time complexity
+Answer: C
+
+Q14. Worst-case complexity of an algorithm is defined as:
+A. Expected runtime
+B. Best observed runtime
+C. Maximum runtime over all inputs of size n
+D. Average runtime
+Answer: C
+
+Q15. If an algorithm runs in O(n²) time, doubling input size increases time by approximately:
+A. 2×
+B. 4×
+C. 8×
+D. n×
+Answer: B
+
+Q16. Which Big-O expression dominates asymptotically?
+A. O(n log n)
+B. O(n)
+C. O(log n)
+D. O(n²)
+Answer: D
+
+Q17. ADTs enable which architectural advantage?
+A. Faster execution
+B. Loose coupling
+C. Reduced memory usage
+D. Hardware independence
+Answer: B
+
+Q18. In an array-based stack of size N, overflow occurs when:
+A. top = 0
+B. top = N
+C. top = N-1
+D. top = −1
+Answer: C
+
+Q19. Time complexity of POP operation in stack is:
+A. O(n)
+B. O(log n)
+C. O(1)
+D. O(n²)
+Answer: C
+
+Q20. A queue implemented using an array wastes space because:
+A. Memory is dynamic
+B. Deletions do not free front indices
+C. Indexing is expensive
+D. Data is unordered
+Answer: B
+
+Q21. Circular queue eliminates wasted space by:
+A. Shifting elements
+B. Using modulo arithmetic
+C. Dynamic resizing
+D. Linked nodes
+Answer: B
+
+Q22. Which condition represents a full circular queue (size N)?
+A. rear = N
+B. front = rear
+C. (rear + 1) % N = front
+D. front = 0
+Answer: C
+
+Q23. Algorithm correctness is verified by:
+A. Testing only
+B. Dry runs
+C. Formal reasoning and proof
+D. Debugging
+Answer: C
+
+Q24. Which scenario mandates stack usage over recursion?
+A. Function calls
+B. Expression evaluation
+C. Memory optimization
+D. Graph traversal
+Answer: B
+
+Q25. Time complexity of nested loops where outer runs n times and inner runs n times is:
+A. O(n)
+B. O(log n)
+C. O(n²)
+D. O(2n)
+Answer: C
+
+Q26. Which is NOT a valid selection criterion for solution design?
+A. Scalability
+B. Maintainability
+C. Syntax familiarity
+D. Performance
+Answer: C
+
+Q27. A queue supports insertion and deletion at:
+A. Same end
+B. Random ends
+C. Opposite ends
+D. Middle only
+Answer: C
+
+Q28. Stack underflow occurs when:
+A. Stack is empty and POP is attempted
+B. Stack is full
+C. Memory is exhausted
+D. Top exceeds size
+Answer: A
+
+Q29. Which algorithm construct enables decision-making?
+A. Sequence
+B. Selection
+C. Iteration
+D. Recursion
+Answer: B
+
+Q30. An algorithm with O(1) complexity implies:
+A. Constant execution for all input sizes
+B. Zero execution time
+C. No memory usage
+D. One instruction only
+Answer: A
+
+Q31. Which problem is naturally modeled using a stack?
+A. CPU scheduling
+B. Call stack management
+C. BFS traversal
+D. Cache mapping
+Answer: B
+
+Q32. Which factor is ignored in asymptotic analysis?
+A. Input size
+B. Growth rate
+C. Constant multipliers
+D. Algorithm structure
+Answer: C
+
+Q33. A problem decomposition strategy breaks a problem into:
+A. Independent modules
+B. Random steps
+C. Hardware-specific tasks
+D. Recursive calls only
+Answer: A
+
+Q34. Worst-case time complexity of linear search occurs when:
+A. Element is at first position
+B. Element is absent
+C. Element is in middle
+D. Input is sorted
+Answer: B
+
+Q35. Which data structure best supports undo operations?
+A. Queue
+B. Stack
+C. Tree
+D. Graph
+Answer: B
+
+Q36. Circular queue implementation is preferred when:
+A. Input size is unknown
+B. Memory must be reused efficiently
+C. Data must be sorted
+D. Random access is required
+Answer: B
+
+Q37. Algorithm efficiency is a function of:
+A. Compiler speed
+B. Programming language
+C. Input size and growth rate
+D. Developer experience
+Answer: C
+
+Q38. In problem solving, constraints primarily:
+A. Reduce solution options
+B. Increase execution time
+C. Improve readability
+D. Eliminate abstraction
+Answer: A
+
+Q39. Which operation is costliest in arrays?
+A. Access by index
+B. Update by index
+C. Insertion at middle
+D. Traversal
+Answer: C
+
+Q40. FIFO behavior is critical in:
+A. Expression parsing
+B. Function calls
+C. Scheduling systems
+D. Backtracking
+Answer: C
+
+Q41. A solution that works only for sample input is considered:
+A. Optimal
+B. Complete
+C. Partial
+D. Scalable
+Answer: C
+
+Q42. The primary objective of computational thinking is to:
+A. Learn programming syntax
+B. Enable systematic problem solving
+C. Improve hardware performance
+D. Reduce code length
+Answer: B
+
+Q43. Stack implementation using arrays is limited by:
+A. Access speed
+B. Fixed size
+C. Operation cost
+D. Order of insertion
+Answer: B
+
+Q44. Which metric best compares algorithms independent of hardware?
+A. Execution time
+B. Clock cycles
+C. Big-O complexity
+D. Memory address
+Answer: C
+
+Q45. Selecting a sub-optimal algorithm primarily impacts:
+A. Correctness
+B. Maintainability
+C. Performance at scale
+D. Syntax clarity
+Answer: C
+
+------------------------------------------------------------------------------------------------
+
+SECTION A — EASY LEVEL (10 MCQs)
+
+(Concept enablement, foundation alignment)
+
+Q1. A linked list is preferred over an array when:
+A. Random access is required
+B. Size is fixed
+C. Frequent insertion and deletion are needed
+D. Data must be contiguous
+Answer: C
+
+Q2. Each node in a singly linked list contains:
+A. Data only
+B. Data and two pointers
+C. Data and one pointer
+D. Pointer only
+Answer: C
+
+Q3. In a doubly linked list, traversal is possible:
+A. Only forward
+B. Only backward
+C. Both forward and backward
+D. Only recursively
+Answer: C
+
+Q4. Circular linked lists differ because:
+A. Nodes are sorted
+B. Last node points to NULL
+C. Last node links back to first
+D. Memory is contiguous
+Answer: C
+
+Q5. Which operation is fastest in a linked list?
+A. Searching
+B. Index access
+C. Insertion at head
+D. Sorting
+Answer: C
+
+Q6. Recursion always requires:
+A. Loop
+B. Stack memory
+C. Global variables
+D. Heap allocation
+Answer: B
+
+Q7. The stopping condition in recursion is called:
+A. Break condition
+B. Exit clause
+C. Base condition
+D. Terminal loop
+Answer: C
+
+Q8. Direct recursion means:
+A. One function calling another
+B. Function calling itself
+C. Loop calling function
+D. Function without base case
+Answer: B
+
+Q9. Stack implementation using linked list removes which limitation?
+A. LIFO discipline
+B. Overflow due to fixed size
+C. Push operation cost
+D. Pop operation cost
+Answer: B
+
+Q10. Which structure naturally supports recursive calls?
+A. Queue
+B. Heap
+C. Stack
+D. Graph
+Answer: C
+
+SECTION B — HARD LEVEL (40 MCQs)
+
+(CCEE-grade, elimination-centric, concept-stress-tested)
+
+Q11. The primary overhead of linked lists compared to arrays is:
+A. Slower insertion
+B. Pointer storage cost
+C. Reduced flexibility
+D. Fixed size
+Answer: B
+
+Q12. Time complexity of searching an element in a singly linked list is:
+A. O(1)
+B. O(log n)
+C. O(n)
+D. O(n²)
+Answer: C
+
+Q13. Which operation is costliest in a singly linked list?
+A. Insert at head
+B. Delete at head
+C. Insert at tail (without tail pointer)
+D. Traverse list
+Answer: C
+
+Q14. In a circular linked list, traversal termination depends on:
+A. NULL pointer
+B. Node count
+C. Head re-encounter
+D. Stack overflow
+Answer: C
+
+Q15. Compared to arrays, linked lists degrade cache performance because:
+A. Memory is dynamic
+B. Nodes are non-contiguous
+C. Indexing is disabled
+D. Size is variable
+Answer: B
+
+Q16. Which linked list variant is optimal for deque implementation?
+A. Singly
+B. Circular singly
+C. Doubly
+D. Linear singly
+Answer: C
+
+Q17. Node-based storage trades off:
+A. Speed for simplicity
+B. Memory for flexibility
+C. Accuracy for performance
+D. Safety for portability
+Answer: B
+
+Q18. Stack implementation using linked list results in overflow only when:
+A. Stack is full
+B. Pointer reaches NULL
+C. System memory is exhausted
+D. Base condition fails
+Answer: C
+
+Q19. Pop operation in a linked-list stack is:
+A. O(n)
+B. O(log n)
+C. O(1)
+D. O(n²)
+Answer: C
+
+Q20. Circular linked lists are preferred in applications involving:
+A. Backtracking
+B. Repetitive scheduling
+C. Sorting
+D. Binary search
+Answer: B
+
+Q21. Recursion replaces which control mechanism internally?
+A. Heap
+B. Queue
+C. Stack
+D. Graph
+Answer: C
+
+Q22. Excessive recursion depth leads to:
+A. Heap fragmentation
+B. Stack overflow
+C. Memory leak
+D. Deadlock
+Answer: B
+
+Q23. Each recursive call consumes:
+A. Heap block
+B. Register set
+C. Stack frame
+D. Cache line
+Answer: C
+
+Q24. Indirect recursion occurs when:
+A. Function has multiple base cases
+B. Function calls itself twice
+C. Functions call each other cyclically
+D. Loop replaces recursion
+Answer: C
+
+Q25. Which scenario makes recursion a poor design choice?
+A. Tree traversal
+B. Divide-and-conquer
+C. Deep recursion without tail optimization
+D. Mathematical computation
+Answer: C
+
+Q26. Recursion without a base condition results in:
+A. Correct output
+B. Logical error
+C. Infinite recursion
+D. Compile-time error
+Answer: C
+
+Q27. Time complexity of recursive Fibonacci (naive) is:
+A. O(n)
+B. O(log n)
+C. O(2ⁿ)
+D. O(n²)
+Answer: C
+
+Q28. Tail recursion optimization aims to:
+A. Increase speed
+B. Reduce stack usage
+C. Improve readability
+D. Avoid recursion
+Answer: B
+
+Q29. Which structure best models recursive tree traversal?
+A. Queue
+B. Heap
+C. Stack
+D. Hash table
+Answer: C
+
+Q30. Linked list deletion requires traversal when deleting:
+A. Head node
+B. Tail node
+C. Known node with previous pointer
+D. Node with address only (singly list)
+Answer: D
+
+Q31. Doubly linked lists reduce deletion cost by:
+A. Removing traversal
+B. Eliminating head pointer
+C. Using contiguous memory
+D. Reducing recursion
+Answer: A
+
+Q32. Which operation is NOT efficient in linked lists?
+A. Insert at head
+B. Delete at head
+C. Random access
+D. Sequential traversal
+Answer: C
+
+Q33. Circular linked list avoids which special-case check?
+A. Empty list
+B. First node
+C. Last node
+D. Middle node
+Answer: C
+
+Q34. Stack implemented via linked list grows:
+A. Until fixed limit
+B. Until array size
+C. Until memory exhaustion
+D. Until recursion depth
+Answer: C
+
+Q35. Which problem is best solved using recursion?
+A. Linear search
+B. Array traversal
+C. Tower of Hanoi
+D. Queue implementation
+Answer: C
+
+Q36. Recursion is essentially:
+A. Loop abstraction
+B. Stack abstraction
+C. Queue abstraction
+D. Heap abstraction
+Answer: B
+
+Q37. Function complexity in recursion depends on:
+A. Number of variables
+B. Depth and branching factor
+C. Return type
+D. Parameter type
+Answer: B
+
+Q38. A recursive solution is equivalent to an iterative one when:
+A. Output matches
+B. Stack simulation is possible
+C. Code is shorter
+D. Memory is unlimited
+Answer: B
+
+Q39. Which linked list variant supports constant-time deletion at both ends?
+A. Singly
+B. Circular singly
+C. Doubly
+D. Linear array
+Answer: C
+
+Q40. Major risk of recursion in production systems is:
+A. Syntax errors
+B. Stack overflow
+C. Poor readability
+D. Code duplication
+Answer: B
+
+Q41. Linked list traversal is inherently:
+A. Parallel
+B. Random
+C. Sequential
+D. Indexed
+Answer: C
+
+Q42. Recursive functions store local variables in:
+A. Heap
+B. Registers
+C. Stack frames
+D. Global memory
+Answer: C
+
+Q43. Which scenario mandates linked list over array?
+A. Binary search
+B. Fixed-size dataset
+C. Unknown input size with frequent updates
+D. Matrix operations
+Answer: C
+
+Q44. Recursion increases which resource consumption most predictably?
+A. CPU cache
+B. Stack memory
+C. Heap memory
+D. Disk I/O
+Answer: B
+
+Q45. Eliminating recursion generally requires:
+A. Queue
+B. Stack
+C. Graph
+D. Hash table
+Answer: B
+------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
