@@ -1,0 +1,2178 @@
+Session 1 – Architecture of Web
+
+50 MCQs | Easy–Medium–Hard Mix | C-DAC CCEE Optimized
+(Options + Correct Answer included)
+
+Easy Level (Concept Anchoring – 15 MCQs)
+
+Q1. Which organization manages domain names globally?
+A. IEEE
+B. ICANN
+C. W3C
+D. ISO
+Answer: B
+
+Q2. Which protocol is used for web communication?
+A. FTP
+B. SMTP
+C. HTTP
+D. POP3
+Answer: C
+
+Q3. HTTP is best described as a:
+A. Stateful protocol
+B. Stateless protocol
+C. Connection-oriented protocol
+D. Secure protocol by default
+Answer: B
+
+Q4. Which port is used by HTTP by default?
+A. 21
+B. 80
+C. 443
+D. 25
+Answer: B
+
+Q5. HTTPS is HTTP over:
+A. FTP
+B. SSL/TLS
+C. UDP
+D. IPX
+Answer: B
+
+Q6. Which component translates domain names into IP addresses?
+A. Web server
+B. Proxy server
+C. DNS server
+D. Application server
+Answer: C
+
+Q7. Which HTTP method is used to request data from a server?
+A. POST
+B. PUT
+C. GET
+D. DELETE
+Answer: C
+
+Q8. Which HTTP status code indicates success?
+A. 301
+B. 404
+C. 500
+D. 200
+Answer: D
+
+Q9. Which browser is NOT a web server?
+A. Apache
+B. IIS
+C. Chrome
+D. Nginx
+Answer: C
+
+Q10. Which protocol secures communication on the web?
+A. FTP
+B. HTTP
+C. HTTPS
+D. SMTP
+Answer: C
+
+Q11. Which of the following is a web server?
+A. Firefox
+B. Apache
+C. Chrome
+D. Safari
+Answer: B
+
+Q12. DNS primarily works on which model?
+A. Client–Server
+B. Peer-to-Peer
+C. Master–Slave
+D. Ring
+Answer: A
+
+Q13. Which HTTP method is idempotent?
+A. POST
+B. GET
+C. CONNECT
+D. PATCH
+Answer: B
+
+Q14. Which HTTP status code indicates “Not Found”?
+A. 401
+B. 403
+C. 404
+D. 500
+Answer: C
+
+Q15. Which layer does HTTP belong to?
+A. Transport
+B. Network
+C. Application
+D. Physical
+Answer: C
+
+Medium Level (CCEE Core Logic – 20 MCQs)
+
+Q16. Which HTTP method is used to send data to the server for processing?
+A. GET
+B. POST
+C. HEAD
+D. TRACE
+Answer: B
+
+Q17. Which HTTP status code represents redirection?
+A. 200
+B. 301
+C. 400
+D. 500
+Answer: B
+
+Q18. Which feature allows HTTP/1.1 to reuse connections?
+A. Multiplexing
+B. Persistent connections
+C. Pipelining
+D. Compression
+Answer: B
+
+Q19. Statelessness in HTTP means:
+A. Server stores client state permanently
+B. Each request is independent
+C. Cookies are mandatory
+D. Sessions are automatic
+Answer: B
+
+Q20. Which technology maintains session state in HTTP?
+A. DNS
+B. Cookies
+C. IP
+D. URL
+Answer: B
+
+Q21. Which HTTP method is used to update an existing resource?
+A. POST
+B. GET
+C. PUT
+D. HEAD
+Answer: C
+
+Q22. Which status code indicates server error?
+A. 201
+B. 301
+C. 404
+D. 500
+Answer: D
+
+Q23. Which protocol ensures data encryption and authentication?
+A. HTTP
+B. FTP
+C. SSL/TLS
+D. TCP
+Answer: C
+
+Q24. What does DNS caching improve?
+A. Security
+B. Speed
+C. Encryption
+D. Availability
+Answer: B
+
+Q25. Which HTTP method removes a resource?
+A. GET
+B. PUT
+C. DELETE
+D. PATCH
+Answer: C
+
+Q26. Which server is commonly used on Windows platforms?
+A. Apache
+B. IIS
+C. Nginx
+D. Tomcat
+Answer: B
+
+Q27. Which HTTP version introduced header compression?
+A. HTTP/1.0
+B. HTTP/1.1
+C. HTTP/2
+D. HTTP/3
+Answer: C
+
+Q28. Which protocol works over TCP?
+A. HTTP
+B. DNS
+C. FTP
+D. All of the above
+Answer: D
+
+Q29. Which HTTP method retrieves only headers?
+A. GET
+B. POST
+C. HEAD
+D. OPTIONS
+Answer: C
+
+Q30. Which status code means “Unauthorized”?
+A. 400
+B. 401
+C. 403
+D. 404
+Answer: B
+
+Q31. Which DNS record maps domain name to IP address?
+A. MX
+B. NS
+C. A
+D. TXT
+Answer: C
+
+Q32. Which protocol uses port 443?
+A. FTP
+B. HTTP
+C. HTTPS
+D. SMTP
+Answer: C
+
+Q33. Which HTTP feature improves performance by reducing latency?
+A. Cookies
+B. Sessions
+C. Multiplexing
+D. Authentication
+Answer: C
+
+Q34. Which component handles client requests in web architecture?
+A. DNS server
+B. Web server
+C. Proxy
+D. Cache
+Answer: B
+
+Q35. Which HTTP response class indicates client error?
+A. 1xx
+B. 2xx
+C. 4xx
+D. 5xx
+Answer: C
+
+Hard Level (CCEE Trap & Differentiator – 15 MCQs)
+
+Q36. Which HTTP/2 feature allows multiple requests over a single connection?
+A. Persistent connection
+B. Pipelining
+C. Multiplexing
+D. Caching
+Answer: C
+
+Q37. Which HTTP method is NOT idempotent?
+A. GET
+B. PUT
+C. DELETE
+D. POST
+Answer: D
+
+Q38. Which DNS server resolves queries recursively?
+A. Root server
+B. Authoritative server
+C. Recursive resolver
+D. TLD server
+Answer: C
+
+Q39. Why are cookies vulnerable compared to sessions?
+A. Stored on server
+B. Stored on client
+C. Encrypted by default
+D. Stateless
+Answer: B
+
+Q40. Which attack exploits stateless HTTP behavior?
+A. SQL Injection
+B. XSS
+C. CSRF
+D. DoS
+Answer: C
+
+Q41. Which HTTP method is safest for caching?
+A. POST
+B. PUT
+C. GET
+D. DELETE
+Answer: C
+
+Q42. Which header enforces HTTPS usage?
+A. Authorization
+B. Cache-Control
+C. HSTS
+D. Content-Type
+Answer: C
+
+Q43. Which DNS record specifies mail server?
+A. A
+B. CNAME
+C. MX
+D. PTR
+Answer: C
+
+Q44. HTTP sessions are typically implemented using:
+A. IP address
+B. Cookies
+C. DNS
+D. Ports
+Answer: B
+
+Q45. Which HTTP method checks server capabilities?
+A. OPTIONS
+B. TRACE
+C. HEAD
+D. CONNECT
+Answer: A
+
+Q46. Which component terminates SSL in enterprise setups?
+A. Browser
+B. Database
+C. Load balancer
+D. DNS server
+Answer: C
+
+Q47. Which HTTP status code indicates “Service Unavailable”?
+A. 500
+B. 502
+C. 503
+D. 504
+Answer: C
+
+Q48. Which protocol resolves domain hierarchy from right to left?
+A. HTTP
+B. FTP
+C. DNS
+D. SMTP
+Answer: C
+
+Q49. Which HTTP method establishes a tunnel?
+A. TRACE
+B. CONNECT
+C. OPTIONS
+D. PATCH
+Answer: B
+
+Q50. Which design constraint of HTTP improves scalability?
+A. Security
+B. Statelessness
+C. Encryption
+D. Compression
+Answer: B
+------------------------------------------------------------------------------------------------
+
+Session 2 – HTML & HTML5
+
+50 MCQs | Exam-First | C-DAC CCEE Optimized
+(High-yield concepts only · Options + Correct Answer)
+
+Easy Level (Foundation Alignment – 15 MCQs)
+
+Q1. HTML stands for:
+A. Hyper Text Markup Language
+B. High Transfer Machine Language
+C. Hyperlink and Text Markup Language
+D. Home Tool Markup Language
+Answer: A
+
+Q2. Which tag defines the largest heading?
+A. <heading>
+B. <h6>
+C. <h1>
+D. <head>
+Answer: C
+
+Q3. Which tag inserts an image in HTML?
+A. <image>
+B. <img>
+C. <src>
+D. <picture>
+Answer: B
+
+Q4. Which attribute specifies a link destination?
+A. src
+B. ref
+C. link
+D. href
+Answer: D
+
+Q5. Which HTML element creates a numbered list?
+A. <ul>
+B. <ol>
+C. <li>
+D. <dl>
+Answer: B
+
+Q6. Which tag defines a table row?
+A. <th>
+B. <td>
+C. <tr>
+D. <table>
+Answer: C
+
+Q7. Which HTML5 tag is used for navigation links?
+A. <header>
+B. <section>
+C. <nav>
+D. <aside>
+Answer: C
+
+Q8. Which tag embeds another HTML page inside a page?
+A. <frame>
+B. <iframe>
+C. <embed>
+D. <object>
+Answer: B
+
+Q9. Which attribute provides alternate text for images?
+A. title
+B. alt
+C. desc
+D. aria
+Answer: B
+
+Q10. Which tag is mandatory in every HTML document?
+A. <title>
+B. <body>
+C. <html>
+D. <head>
+Answer: C
+
+Q11. Which HTML version introduced semantic tags?
+A. HTML 3.2
+B. HTML 4.01
+C. XHTML
+D. HTML5
+Answer: D
+
+Q12. Which element represents independent content?
+A. <div>
+B. <section>
+C. <article>
+D. <span>
+Answer: C
+
+Q13. Which tag plays audio files?
+A. <sound>
+B. <media>
+C. <audio>
+D. <music>
+Answer: C
+
+Q14. Which tag plays video content?
+A. <movie>
+B. <media>
+C. <video>
+D. <mp4>
+Answer: C
+
+Q15. Which attribute makes a form input mandatory?
+A. required
+B. validate
+C. compulsory
+D. checked
+Answer: A
+
+Medium Level (CCEE Core Coverage – 20 MCQs)
+
+Q16. Which HTML tag groups form elements?
+A. <form>
+B. <fieldset>
+C. <group>
+D. <legend>
+Answer: B
+
+Q17. Which input type hides user input?
+A. text
+B. hidden
+C. password
+D. secure
+Answer: C
+
+Q18. Which attribute connects <label> with input?
+A. id
+B. name
+C. for
+D. ref
+Answer: C
+
+Q19. Which HTML5 feature enables location access?
+A. Canvas
+B. Web Storage
+C. Geolocation
+D. Web Workers
+Answer: C
+
+Q20. Which tag defines self-contained content like blogs?
+A. <section>
+B. <article>
+C. <main>
+D. <aside>
+Answer: B
+
+Q21. Which attribute submits form data invisibly?
+A. hidden
+B. readonly
+C. disabled
+D. secure
+Answer: A
+
+Q22. Which HTML element defines metadata?
+A. <meta>
+B. <data>
+C. <info>
+D. <header>
+Answer: A
+
+Q23. Which attribute improves accessibility?
+A. alt
+B. title
+C. class
+D. style
+Answer: A
+
+Q24. Which tag draws graphics using JavaScript?
+A. <svg>
+B. <canvas>
+C. <graphics>
+D. <draw>
+Answer: B
+
+Q25. Which HTML element represents sidebar content?
+A. <aside>
+B. <nav>
+C. <footer>
+D. <header>
+Answer: A
+
+Q26. Which input type accepts email format?
+A. mail
+B. text
+C. email
+D. address
+Answer: C
+
+Q27. Which attribute disables an input field?
+A. inactive
+B. readonly
+C. disabled
+D. stop
+Answer: C
+
+Q28. Which tag represents the main content of page?
+A. <body>
+B. <section>
+C. <main>
+D. <article>
+Answer: C
+
+Q29. Which HTML validation ensures standard compliance?
+A. Browser validation
+B. W3C Validator
+C. XML Validator
+D. CSS Validator
+Answer: B
+
+Q30. Which element defines footer for a section?
+A. <footer>
+B. <bottom>
+C. <aside>
+D. <section>
+Answer: A
+
+Q31. Which attribute auto-focuses input on page load?
+A. focus
+B. active
+C. autofocus
+D. load
+Answer: C
+
+Q32. Which tag defines dropdown list?
+A. <input>
+B. <select>
+C. <option>
+D. <list>
+Answer: B
+
+Q33. Which attribute sends form data key?
+A. id
+B. name
+C. value
+D. type
+Answer: B
+
+Q34. Which HTML element represents time/date?
+A. <date>
+B. <time>
+C. <clock>
+D. <datetime>
+Answer: B
+
+Q35. Which tag groups inline elements?
+A. <div>
+B. <section>
+C. <span>
+D. <p>
+Answer: C
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Which HTML5 element replaces multiple <div> layouts?
+A. <article>
+B. Semantic elements
+C. <span>
+D. Frames
+Answer: B
+
+Q37. Which attribute prevents form submission?
+A. readonly
+B. disabled
+C. hidden
+D. required
+Answer: B
+
+Q38. HTML DOM represents document as:
+A. Linear list
+B. Table
+C. Tree structure
+D. Stack
+Answer: C
+
+Q39. Which tag improves SEO structure?
+A. <div>
+B. <span>
+C. <section>
+D. Semantic tags
+Answer: D
+
+Q40. Which HTML feature allows offline access?
+A. Cookies
+B. Web Storage
+C. Cache only
+D. Frames
+Answer: B
+
+Q41. Which tag is deprecated in HTML5?
+A. <b>
+B. <i>
+C. <font>
+D. <strong>
+Answer: C
+
+Q42. Which attribute validates input format?
+A. pattern
+B. regex
+C. check
+D. verify
+Answer: A
+
+Q43. Which HTML API supports drag-and-drop?
+A. Canvas API
+B. Media API
+C. Drag and Drop API
+D. Storage API
+Answer: C
+
+Q44. Which tag defines machine-readable data?
+A. <data>
+B. <meta>
+C. <info>
+D. <details>
+Answer: A
+
+Q45. Which attribute specifies MIME type?
+A. type
+B. enctype
+C. accept
+D. method
+Answer: A
+
+Q46. Which tag pairs with <details>?
+A. <info>
+B. <summary>
+C. <caption>
+D. <legend>
+Answer: B
+
+Q47. HTML forms send data using:
+A. HTTP only
+B. FTP
+C. HTTP methods
+D. TCP sockets
+Answer: C
+
+Q48. Which tag embeds external resources?
+A. <include>
+B. <object>
+C. <import>
+D. <use>
+Answer: B
+
+Q49. Which attribute enhances screen reader navigation?
+A. aria-label
+B. title
+C. alt
+D. role
+Answer: A
+
+Q50. DOM manipulation enables:
+A. Static pages
+B. Server rendering
+C. Dynamic content updates
+D. SEO indexing
+Answer: C
+------------------------------------------------------------------------------------------------
+
+Session 3 – Cascading Style Sheets (CSS)
+
+50 MCQs | CCEE-Probable | Easy–Medium–Hard Optimized
+(Each question includes options and a single correct answer)
+
+Easy Level (Baseline Scoring – 15 MCQs)
+
+Q1. CSS stands for:
+A. Computer Style Sheets
+B. Cascading Style Sheets
+C. Creative Style System
+D. Colorful Style Sheets
+Answer: B
+
+Q2. Which CSS property changes text color?
+A. font-color
+B. text-color
+C. color
+D. foreground
+Answer: C
+
+Q3. Which CSS property controls font size?
+A. font-style
+B. font-weight
+C. font-size
+D. text-size
+Answer: C
+
+Q4. Which selector targets an element by id?
+A. .
+B. #
+C. *
+D. %
+Answer: B
+
+Q5. Which selector targets elements by class?
+A. #
+B. @
+C. .
+D. *
+Answer: C
+
+Q6. Which CSS type is written directly inside an HTML tag?
+A. External
+B. Internal
+C. Inline
+D. Embedded
+Answer: C
+
+Q7. Which HTML tag is used for internal CSS?
+A. <css>
+B. <script>
+C. <style>
+D. <link>
+Answer: C
+
+Q8. Which property makes text bold?
+A. font-style
+B. font-weight
+C. text-decoration
+D. text-transform
+Answer: B
+
+Q9. Which property underlines text?
+A. font-style
+B. text-transform
+C. text-decoration
+D. letter-spacing
+Answer: C
+
+Q10. Which CSS property sets background color?
+A. bg-color
+B. background
+C. background-color
+D. color
+Answer: C
+
+Q11. Which unit is relative in CSS?
+A. px
+B. cm
+C. in
+D. em
+Answer: D
+
+Q12. Which CSS property aligns text horizontally?
+A. vertical-align
+B. text-align
+C. float
+D. position
+Answer: B
+
+Q13. Which selector selects all elements?
+A. #
+B. .
+C. *
+D. all
+Answer: C
+
+Q14. Which CSS property controls italics?
+A. font-weight
+B. font-style
+C. text-decoration
+D. transform
+Answer: B
+
+Q15. Which CSS property changes font family?
+A. font-type
+B. font-family
+C. text-family
+D. family
+Answer: B
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which CSS model defines spacing and layout?
+A. Grid model
+B. DOM model
+C. Box model
+D. Layout model
+Answer: C
+
+Q17. Which box model component is outermost?
+A. Padding
+B. Border
+C. Content
+D. Margin
+Answer: D
+
+Q18. Which property adds space inside the border?
+A. margin
+B. padding
+C. spacing
+D. border-space
+Answer: B
+
+Q19. Which CSS type has the highest priority?
+A. External
+B. Internal
+C. Inline
+D. Browser default
+Answer: C
+
+Q20. Which property adds space outside the border?
+A. padding
+B. margin
+C. spacing
+D. outline
+Answer: B
+
+Q21. How is external CSS linked to HTML?
+A. <css src="">
+B. <style href="">
+C. <link rel="stylesheet">
+D. <script src="">
+Answer: C
+
+Q22. Which selector targets all <p> tags?
+A. #p
+B. .p
+C. p
+D. *p
+Answer: C
+
+Q23. Which property controls element visibility?
+A. display
+B. position
+C. float
+D. overflow
+Answer: A
+
+Q24. Which value hides an element but keeps space?
+A. none
+B. hidden
+C. collapse
+D. invisible
+Answer: B
+
+Q25. Which property floats elements left or right?
+A. align
+B. position
+C. float
+D. clear
+Answer: C
+
+Q26. Which property clears floated elements?
+A. float
+B. clear
+C. overflow
+D. display
+Answer: B
+
+Q27. Which CSS property sets border thickness?
+A. border-width
+B. border-size
+C. border-style
+D. border-space
+Answer: A
+
+Q28. Which selector has higher specificity?
+A. Element
+B. Class
+C. ID
+D. Universal
+Answer: C
+
+Q29. Which property controls element positioning type?
+A. display
+B. float
+C. position
+D. align
+Answer: C
+
+Q30. Which value removes default margin/padding?
+A. none
+B. 0
+C. auto
+D. inherit
+Answer: B
+
+Q31. Which property sets element width?
+A. size
+B. width
+C. max-width
+D. dimension
+Answer: B
+
+Q32. Which property controls element height?
+A. height
+B. size
+C. dimension
+D. max-height
+Answer: A
+
+Q33. Which CSS rule groups selectors?
+A. Using commas
+B. Using plus
+C. Using dot
+D. Using colon
+Answer: A
+
+Q34. Which property changes mouse cursor?
+A. pointer
+B. cursor
+C. mouse
+D. hand
+Answer: B
+
+Q35. Which property applies shadow to text?
+A. box-shadow
+B. text-shadow
+C. font-shadow
+D. shadow
+Answer: B
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Which specificity order is correct (lowest → highest)?
+A. ID → Class → Element
+B. Element → Class → ID
+C. Class → ID → Element
+D. Universal → ID → Class
+Answer: B
+
+Q37. Which CSS property removes element from layout flow?
+A. visibility:hidden
+B. opacity:0
+C. display:none
+D. overflow:hidden
+Answer: C
+
+Q38. Which selector targets child elements only?
+A. Descendant selector
+B. Child selector (>)
+C. Adjacent selector
+D. General sibling
+Answer: B
+
+Q39. Which CSS value positions relative to browser window?
+A. absolute
+B. relative
+C. static
+D. fixed
+Answer: D
+
+Q40. Which property stacks overlapping elements?
+A. float
+B. index
+C. z-index
+D. overlay
+Answer: C
+
+Q41. Which box model calculation is default?
+A. content-box
+B. border-box
+C. padding-box
+D. margin-box
+Answer: A
+
+Q42. Which property includes padding and border in width?
+A. box-model
+B. box-sizing
+C. layout
+D. sizing
+Answer: B
+
+Q43. Which selector matches first child?
+A. :first
+B. :first-child
+C. :child
+D. :nth
+Answer: B
+
+Q44. Which pseudo-class targets user interaction?
+A. :hover
+B. ::before
+C. ::after
+D. :content
+Answer: A
+
+Q45. Which property controls overflow content?
+A. float
+B. clear
+C. overflow
+D. display
+Answer: C
+
+Q46. Which CSS rule inherits value from parent?
+A. auto
+B. inherit
+C. default
+D. initial
+Answer: B
+
+Q47. Which CSS feature reduces repetition?
+A. Inline CSS
+B. External CSS
+C. Internal CSS
+D. Embedded CSS
+Answer: B
+
+Q48. Which selector targets attribute presence?
+A. [attr]
+B. .attr
+C. #attr
+D. @attr
+Answer: A
+
+Q49. Which CSS property controls word spacing?
+A. letter-spacing
+B. line-height
+C. word-spacing
+D. text-indent
+Answer: C
+
+Q50. Which CSS mechanism resolves conflicts?
+A. Inheritance only
+B. Specificity and cascade
+C. Order of tags
+D. Browser rules
+Answer: B
+-----------------------------------------------------------------------------------------------
+
+Session 4 – Responsive Web Design & Bootstrap
+
+50 MCQs | High-Yield | Easy–Medium–Hard Mix
+(Options + Correct Answer)
+
+Easy Level (Quick-Win Coverage – 15 MCQs)
+
+Q1. Responsive Web Design primarily focuses on:
+A. Server performance
+B. Database optimization
+C. Multiple device support
+D. Code compression
+Answer: C
+
+Q2. Which CSS feature enables responsive layouts?
+A. Media Queries
+B. Inline styles
+C. Pseudo-classes
+D. Frames
+Answer: A
+
+Q3. Bootstrap is a:
+A. Programming language
+B. JavaScript framework only
+C. Front-end framework
+D. Database tool
+Answer: C
+
+Q4. Bootstrap was originally developed by:
+A. Google
+B. Facebook
+C. Twitter
+D. Microsoft
+Answer: C
+
+Q5. Which Bootstrap class creates a row?
+A. .grid
+B. .container
+C. .row
+D. .column
+Answer: C
+
+Q6. Which class is used for responsive fixed-width container?
+A. .container-fluid
+B. .wrapper
+C. .container
+D. .box
+Answer: C
+
+Q7. Which device size is targeted by .col-sm-*?
+A. Extra small
+B. Small
+C. Medium
+D. Large
+Answer: B
+
+Q8. Bootstrap grid system is divided into how many columns?
+A. 10
+B. 11
+C. 12
+D. 16
+Answer: C
+
+Q9. Which class makes an image responsive?
+A. .img-fluid
+B. .img-responsive
+C. .img-fit
+D. .image-auto
+Answer: A
+
+Q10. Which Bootstrap component is used for navigation?
+A. Jumbotron
+B. Navbar
+C. Card
+D. Badge
+Answer: B
+
+Q11. Which component displays alerts?
+A. Panels
+B. Alerts
+C. Wells
+D. Toasts
+Answer: B
+
+Q12. Which Bootstrap utility aligns text center?
+A. .align-center
+B. .text-middle
+C. .text-center
+D. .center-text
+Answer: C
+
+Q13. Which component groups buttons?
+A. Button set
+B. Button group
+C. Button list
+D. Button panel
+Answer: B
+
+Q14. Which Bootstrap component shows progress?
+A. Loader
+B. Progress bar
+C. Spinner
+D. Indicator
+Answer: B
+
+Q15. Which class hides content on all devices?
+A. .d-none
+B. .hide
+C. .invisible
+D. .hidden-all
+Answer: A
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which Bootstrap class creates full-width container?
+A. .container
+B. .container-fixed
+C. .container-fluid
+D. .container-lg
+Answer: C
+
+Q17. Which breakpoint targets large screens?
+A. xs
+B. sm
+C. md
+D. lg
+Answer: D
+
+Q18. Which class creates a dropdown menu?
+A. .menu
+B. .list-group
+C. .dropdown
+D. .select
+Answer: C
+
+Q19. Which component replaces panels in Bootstrap 4+?
+A. Cards
+B. Wells
+C. Jumbotrons
+D. Lists
+Answer: A
+
+Q20. Which class styles forms automatically?
+A. .form-style
+B. .form-control
+C. .input-group
+D. .form-layout
+Answer: B
+
+Q21. Which grid class stacks columns vertically on small screens?
+A. .col-lg-*
+B. .col-md-*
+C. .col-sm-*
+D. .col-*
+Answer: D
+
+Q22. Which utility controls element display?
+A. .float-*
+B. .display-*
+C. .d-*
+D. .show-*
+Answer: C
+
+Q23. Which class creates responsive tables?
+A. .table-responsive
+B. .table-fluid
+C. .table-scroll
+D. .table-wrap
+Answer: A
+
+Q24. Which Bootstrap component collapses content?
+A. Collapse
+B. Modal
+C. Dropdown
+D. Toast
+Answer: A
+
+Q25. Which class highlights table rows?
+A. .table-active
+B. .table-primary
+C. .table-hover
+D. .table-focus
+Answer: C
+
+Q26. Which Bootstrap utility manages spacing?
+A. .space-*
+B. .margin-*
+C. .m-* / .p-*
+D. .gap-*
+Answer: C
+
+Q27. Which component creates modal dialogs?
+A. Alert
+B. Popup
+C. Modal
+D. Toast
+Answer: C
+
+Q28. Which class aligns items vertically in flex?
+A. .align-items-*
+B. .justify-content-*
+C. .flex-align-*
+D. .vertical-*
+Answer: A
+
+Q29. Which grid feature allows reordering columns?
+A. Offset
+B. Push/Pull
+C. Order utilities
+D. Float
+Answer: C
+
+Q30. Which component displays breadcrumbs?
+A. Pagination
+B. Breadcrumb
+C. Navbar
+D. List-group
+Answer: B
+
+Q31. Which class styles buttons?
+A. .btn
+B. .button
+C. .btn-group
+D. .button-style
+Answer: A
+
+Q32. Which color class indicates danger?
+A. .btn-warning
+B. .btn-danger
+C. .btn-error
+D. .btn-alert
+Answer: B
+
+Q33. Which component shows loading indicator?
+A. Progress bar
+B. Spinner
+C. Loader
+D. Alert
+Answer: B
+
+Q34. Which utility aligns content horizontally?
+A. .align-items-*
+B. .justify-content-*
+C. .text-align-*
+D. .flex-center-*
+Answer: B
+
+Q35. Which class enables responsive embed?
+A. .embed-responsive
+B. .media-responsive
+C. .video-fluid
+D. .iframe-auto
+Answer: A
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Mobile-first design in Bootstrap means:
+A. Desktop styles first
+B. Tablet styles first
+C. Small screen styles first
+D. All screens same
+Answer: C
+
+Q37. Which breakpoint has no infix in Bootstrap?
+A. sm
+B. md
+C. lg
+D. xs
+Answer: D
+
+Q38. Which utility hides content only on large screens?
+A. .d-none
+B. .d-lg-none
+C. .hidden-lg
+D. .hide-lg
+Answer: B
+
+Q39. Which Bootstrap feature is built on Flexbox?
+A. Grid system
+B. Typography
+C. Alerts
+D. Badges
+Answer: A
+
+Q40. Which class offsets columns?
+A. .col-offset-*
+B. .offset-*
+C. .margin-left-*
+D. .push-*
+Answer: B
+
+Q41. Which component uses JavaScript dependency?
+A. Grid
+B. Typography
+C. Modal
+D. Utilities
+Answer: C
+
+Q42. Which Bootstrap file includes layout and components?
+A. bootstrap.js
+B. bootstrap.css
+C. jquery.js
+D. popper.js
+Answer: B
+
+Q43. Which utility ensures equal-height columns?
+A. Float
+B. Table layout
+C. Flexbox
+D. Grid gap
+Answer: C
+
+Q44. Which Bootstrap class rounds image corners?
+A. .img-round
+B. .rounded
+C. .rounded-circle
+D. .img-circle
+Answer: B
+
+Q45. Which component groups list items with actions?
+A. Cards
+B. Panels
+C. List-group
+D. Navbar
+Answer: C
+
+Q46. Which class fixes navbar to top?
+A. .navbar-fixed
+B. .fixed-top
+C. .navbar-top
+D. .sticky-top
+Answer: B
+
+Q47. Which utility controls visibility without removing layout?
+A. .d-none
+B. .invisible
+C. .hidden
+D. .collapse
+Answer: B
+
+Q48. Which feature improves cross-browser consistency?
+A. Reset CSS
+B. Bootstrap Reboot
+C. Normalize HTML
+D. Vendor prefixes
+Answer: B
+
+Q49. Which Bootstrap class makes text uppercase?
+A. .text-upper
+B. .text-uppercase
+C. .text-capital
+D. .text-transform
+Answer: B
+
+Q50. Responsive design primarily reduces:
+A. Server load
+B. Network latency
+C. Device-specific code duplication
+D. Database calls
+Answer: C
+------------------------------------------------------------------------------------------------
+
+Session 5 – JavaScript Basics
+
+(Variables, Operators, Control Structures, Strings, Numbers, Arrays)
+50 MCQs | Exam-First | Easy–Medium–Hard Mix
+(Each item includes options and the correct answer)
+
+Easy Level (Fast-Track Marks – 15 MCQs)
+
+Q1. JavaScript is a:
+A. Compiled language
+B. Markup language
+C. Scripting language
+D. Query language
+Answer: C
+
+Q2. Which keyword declares a variable with block scope?
+A. var
+B. let
+C. static
+D. define
+Answer: B
+
+Q3. Which keyword declares a constant?
+A. final
+B. constant
+C. let
+D. const
+Answer: D
+
+Q4. Which symbol is used for single-line comments?
+A. /* */
+B. <!-- -->
+C. //
+D. ##
+Answer: C
+
+Q5. Which operator is used for assignment?
+A. ==
+B. ===
+C. =
+D. =>
+Answer: C
+
+Q6. Which data type represents true or false?
+A. Number
+B. Boolean
+C. String
+D. Object
+Answer: B
+
+Q7. Which function outputs data to browser console?
+A. print()
+B. log()
+C. console.log()
+D. echo()
+Answer: C
+
+Q8. Which operator checks both value and type?
+A. ==
+B. =
+C. !=
+D. ===
+Answer: D
+
+Q9. Which loop executes at least once?
+A. for
+B. while
+C. do…while
+D. foreach
+Answer: C
+
+Q10. Which keyword is used for conditional branching?
+A. switch
+B. if
+C. for
+D. break
+Answer: B
+
+Q11. Which method finds string length?
+A. size()
+B. count()
+C. length
+D. getLength()
+Answer: C
+
+Q12. Which array index is first element?
+A. 0
+B. 1
+C. -1
+D. Any
+Answer: A
+
+Q13. Which method adds element at end of array?
+A. pop()
+B. push()
+C. shift()
+D. unshift()
+Answer: B
+
+Q14. Which keyword exits a loop?
+A. stop
+B. end
+C. break
+D. return
+Answer: C
+
+Q15. Which statement skips current loop iteration?
+A. skip
+B. continue
+C. break
+D. pass
+Answer: B
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which JavaScript type is dynamically assigned?
+A. int
+B. float
+C. var
+D. All variables
+Answer: D
+
+Q17. What is the default value of an uninitialized variable?
+A. null
+B. 0
+C. undefined
+D. NaN
+Answer: C
+
+Q18. Which operator concatenates strings?
+A. *
+B. &
+C. +
+D. .
+Answer: C
+
+Q19. Which function converts string to integer?
+A. parseInt()
+B. toInt()
+C. Number()
+D. Both A and C
+Answer: D
+
+Q20. Which value is falsy?
+A. "0"
+B. []
+C. 0
+D. {}
+Answer: C
+
+Q21. Which loop is best when iteration count is known?
+A. while
+B. do…while
+C. for
+D. foreach
+Answer: C
+
+Q22. Which method removes last array element?
+A. shift()
+B. pop()
+C. splice()
+D. slice()
+Answer: B
+
+Q23. Which array method returns new array?
+A. push()
+B. pop()
+C. slice()
+D. sort()
+Answer: C
+
+Q24. Which operator checks inequality with type?
+A. !=
+B. !==
+C. <>
+D. =
+Answer: B
+
+Q25. Which keyword defines a block of code repeatedly executed?
+A. if
+B. loop
+C. for
+D. repeat
+Answer: C
+
+Q26. Which function rounds down a number?
+A. Math.round()
+B. Math.ceil()
+C. Math.floor()
+D. Math.trunc()
+Answer: C
+
+Q27. Which string method converts to uppercase?
+A. upper()
+B. toUpper()
+C. toUpperCase()
+D. capitalize()
+Answer: C
+
+Q28. Which array method sorts elements?
+A. order()
+B. arrange()
+C. sort()
+D. compare()
+Answer: C
+
+Q29. Which operator performs logical AND?
+A. &
+B. &&
+C. |
+D. ||
+Answer: B
+
+Q30. Which control statement selects one among many?
+A. if
+B. switch
+C. for
+D. break
+Answer: B
+
+Q31. Which function checks for NaN?
+A. isNaN()
+B. Number.isNaN()
+C. Both A and B
+D. checkNaN()
+Answer: C
+
+Q32. Which method joins array into string?
+A. join()
+B. concat()
+C. merge()
+D. combine()
+Answer: A
+
+Q33. Which statement ends function execution?
+A. stop
+B. end
+C. break
+D. return
+Answer: D
+
+Q34. Which operator is ternary?
+A. ??
+B. ?:
+C. =>
+D. ::
+Answer: B
+
+Q35. Which loop iterates over array indices?
+A. for…of
+B. for…in
+C. while
+D. do…while
+Answer: B
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. var differs from let because var is:
+A. Block-scoped
+B. Function-scoped
+C. Immutable
+D. Constant
+Answer: B
+
+Q37. What is the result of "5" + 3?
+A. 8
+B. "8"
+C. "53"
+D. Error
+Answer: C
+
+Q38. Which comparison returns true?
+A. 0 == false
+B. 0 === false
+C. null === undefined
+D. "5" === 5
+Answer: A
+
+Q39. Which value is NOT falsy?
+A. 0
+B. ""
+C. null
+D. []
+Answer: D
+
+Q40. Which loop risks infinite execution if condition never fails?
+A. for
+B. while
+C. do…while
+D. All
+Answer: D
+
+Q41. What does typeof null return?
+A. null
+B. undefined
+C. object
+D. number
+Answer: C
+
+Q42. Which method mutates original array?
+A. slice()
+B. map()
+C. filter()
+D. sort()
+Answer: D
+
+Q43. Which operator short-circuits evaluation?
+A. |
+B. &
+C. &&
+D. =
+Answer: C
+
+Q44. Which statement executes based on condition expression?
+A. if
+B. for
+C. while
+D. return
+Answer: A
+
+Q45. Which function converts number to string?
+A. toString()
+B. parseInt()
+C. stringify()
+D. Number()
+Answer: A
+
+Q46. Which array method removes first element?
+A. pop()
+B. shift()
+C. unshift()
+D. splice()
+Answer: B
+
+Q47. Which numeric value represents “Not a Number”?
+A. undefined
+B. null
+C. NaN
+D. Infinity
+Answer: C
+
+Q48. Which operator provides default value?
+A. ||
+B. &&
+C. ??
+D. ?:
+Answer: C
+
+Q49. Which statement defines block scope?
+A. var
+B. let
+C. const
+D. Both B and C
+Answer: D
+
+Q50. JavaScript executes code primarily in:
+A. Compile time
+B. Link time
+C. Runtime
+D. Load time
+Answer: C
+------------------------------------------------------------------------------------------------
+
+Sessions 6 & 7 – JavaScript Advanced (Objects, Functions, OOP)
+
+50 MCQs | CCEE-Optimized | Easy–Medium–Hard Mix
+(Options + Correct Answer)
+
+Easy Level (Baseline Conversion – 15 MCQs)
+
+Q1. In JavaScript, objects are collections of:
+A. Methods only
+B. Properties only
+C. Properties and methods
+D. Variables only
+Answer: C
+
+Q2. Which syntax creates an object literal?
+A. new Object()
+B. {}
+C. Object.create()
+D. All of the above
+Answer: B
+
+Q3. Which keyword is used to create an object instance via constructor?
+A. create
+B. object
+C. this
+D. new
+Answer: D
+
+Q4. Functions in JavaScript are:
+A. Data types
+B. Objects
+C. Keywords
+D. Operators
+Answer: B
+
+Q5. Which keyword refers to current object?
+A. self
+B. that
+C. this
+D. object
+Answer: C
+
+Q6. Which function syntax is anonymous?
+A. Named function
+B. Function declaration
+C. Function expression
+D. Constructor function
+Answer: C
+
+Q7. Which method converts object to JSON string?
+A. JSON.parse()
+B. JSON.stringify()
+C. toString()
+D. convert()
+Answer: B
+
+Q8. Which keyword defines a constructor function?
+A. class
+B. function
+C. constructor
+D. new
+Answer: B
+
+Q9. Which operator accesses object properties?
+A. :
+B. .
+C. =>
+D. #
+Answer: B
+
+Q10. Which object holds global scope in browsers?
+A. window
+B. document
+C. global
+D. screen
+Answer: A
+
+Q11. Which function parameter is optional by default?
+A. Required
+B. Positional
+C. All parameters
+D. Named
+Answer: C
+
+Q12. Which function returns value to caller?
+A. break
+B. stop
+C. yield
+D. return
+Answer: D
+
+Q13. Which keyword creates private scope?
+A. var
+B. let
+C. const
+D. function
+Answer: D
+
+Q14. Which object method lists keys?
+A. Object.keys()
+B. Object.values()
+C. Object.entries()
+D. Object.get()
+Answer: A
+
+Q15. Which syntax defines arrow function?
+A. function =>
+B. =>
+C. ->
+D. ::
+Answer: B
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which feature allows function to remember outer variables?
+A. Callback
+B. Closure
+C. Hoisting
+D. Scope chain
+Answer: B
+
+Q17. Which object property refers to prototype?
+A. proto
+B. prototype
+C. constructor
+D. parent
+Answer: A
+
+Q18. Which method binds this permanently?
+A. call()
+B. apply()
+C. bind()
+D. attach()
+Answer: C
+
+Q19. Which method invokes function with array arguments?
+A. call()
+B. apply()
+C. bind()
+D. exec()
+Answer: B
+
+Q20. Which OOP concept hides implementation?
+A. Inheritance
+B. Polymorphism
+C. Encapsulation
+D. Abstraction
+Answer: C
+
+Q21. Which keyword prevents property modification?
+A. freeze
+B. seal
+C. const
+D. Object.freeze()
+Answer: D
+
+Q22. Which statement creates prototype-based inheritance?
+A. class extends
+B. Object.create()
+C. new Object()
+D. inherit()
+Answer: B
+
+Q23. Which function executes later?
+A. Immediate function
+B. Callback function
+C. Constructor function
+D. Generator
+Answer: B
+
+Q24. Which object method prevents adding new properties?
+A. Object.freeze()
+B. Object.seal()
+C. Object.lock()
+D. Object.block()
+Answer: B
+
+Q25. Which function has no name?
+A. Constructor
+B. Arrow function
+C. Anonymous function
+D. Generator
+Answer: C
+
+Q26. Which property points to function that created object?
+A. proto
+B. parent
+C. constructor
+D. prototype
+Answer: C
+
+Q27. Which OOP feature allows same method name?
+A. Inheritance
+B. Abstraction
+C. Polymorphism
+D. Encapsulation
+Answer: C
+
+Q28. Which object method merges properties?
+A. Object.assign()
+B. Object.copy()
+C. Object.merge()
+D. Object.join()
+Answer: A
+
+Q29. Which function executes immediately after definition?
+A. Callback
+B. IIFE
+C. Arrow
+D. Generator
+Answer: B
+
+Q30. Which object method lists key-value pairs?
+A. Object.keys()
+B. Object.values()
+C. Object.entries()
+D. Object.pairs()
+Answer: C
+
+Q31. Which keyword creates class-based syntax?
+A. prototype
+B. object
+C. class
+D. function
+Answer: C
+
+Q32. Which inheritance model does JavaScript use?
+A. Classical
+B. Multiple
+C. Prototype-based
+D. Hybrid
+Answer: C
+
+Q33. Which arrow function characteristic is true?
+A. Has its own this
+B. Binds this lexically
+C. Can be constructor
+D. Uses arguments object
+Answer: B
+
+Q34. Which method changes function context temporarily?
+A. bind()
+B. call()
+C. lock()
+D. map()
+Answer: B
+
+Q35. Which object method clones shallow copy?
+A. Object.clone()
+B. Object.assign()
+C. JSON.parse()
+D. Object.freeze()
+Answer: B
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Closures are created when:
+A. Function executes
+B. Function is declared
+C. Inner function accesses outer variables
+D. Global scope ends
+Answer: C
+
+Q37. Which statement about prototypes is true?
+A. Copied per object
+B. Shared among instances
+C. Stored in constructor only
+D. Immutable
+Answer: B
+
+Q38. Which call fails to change this?
+A. call()
+B. apply()
+C. bind()
+D. Arrow function
+Answer: D
+
+Q39. Which OOP principle does JS lack natively?
+A. Inheritance
+B. Encapsulation
+C. Polymorphism
+D. Access modifiers
+Answer: D
+
+Q40. Which object method makes object fully immutable?
+A. seal
+B. freeze
+C. lock
+D. protect
+Answer: B
+
+Q41. Which property lookup happens first?
+A. Prototype
+B. Parent
+C. Own property
+D. Global object
+Answer: C
+
+Q42. Which feature enables memory efficiency?
+A. Closures
+B. Prototypes
+C. Deep copy
+D. Recursion
+Answer: B
+
+Q43. Which function scope can cause memory leak?
+A. Block
+B. Closure
+C. Global
+D. Local
+Answer: B
+
+Q44. Which statement about arrow functions is false?
+A. No prototype
+B. Cannot be constructor
+C. Has own this
+D. Short syntax
+Answer: C
+
+Q45. Which inheritance uses extends keyword?
+A. Prototype
+B. Functional
+C. Class-based syntax
+D. Mixins
+Answer: C
+
+Q46. Which method chains prototype manually?
+A. Object.setPrototypeOf()
+B. Object.create()
+C. new Object()
+D. Object.assign()
+Answer: A
+
+Q47. Which call creates new execution context?
+A. bind()
+B. call()
+C. apply()
+D. Function invocation
+Answer: D
+
+Q48. Which pattern hides data using closure?
+A. Observer
+B. Factory
+C. Module
+D. Singleton
+Answer: C
+
+Q49. Which keyword simulates private fields (pre-ES2020)?
+A. this
+B. let
+C. var
+D. closure
+Answer: D
+
+Q50. Which JS feature most closely matches abstraction?
+A. Interfaces
+B. Abstract classes
+C. Closures and modules
+D. Packages
+Answer: C
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
