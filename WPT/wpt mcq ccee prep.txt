@@ -2171,8 +2171,730 @@ D. Packages
 Answer: C
 ------------------------------------------------------------------------------------------------
 
+Sessions 8 & 9 – DOM, Forms, Validation, RegEx & Debugging
 
+50 MCQs | CCEE-Optimized | Easy–Medium–Hard Mix
+(Options + Correct Answer)
+
+Easy Level (Baseline ROI – 15 MCQs)
+
+Q1. DOM stands for:
+A. Data Object Model
+B. Document Object Model
+C. Digital Object Method
+D. Document Oriented Model
+Answer: B
+
+Q2. The DOM represents an HTML document as a:
+A. Queue
+B. Stack
+C. Tree
+D. Graph
+Answer: C
+
+Q3. Which method selects an element by ID?
+A. getElementsByName()
+B. getElementsByClassName()
+C. getElementById()
+D. querySelectorAll()
+Answer: C
+
+Q4. Which method selects multiple elements using CSS selector?
+A. querySelector()
+B. getElementById()
+C. getElementsByTagName()
+D. querySelectorAll()
+Answer: D
+
+Q5. Which property changes HTML content?
+A. value
+B. innerHTML
+C. textContent
+D. content
+Answer: B
+
+Q6. Which event fires when a button is clicked?
+A. hover
+B. submit
+C. click
+D. press
+Answer: C
+
+Q7. Which event occurs when page finishes loading?
+A. ready
+B. load
+C. DOMReady
+D. complete
+Answer: B
+
+Q8. Which attribute is used to validate form fields?
+A. required
+B. checked
+C. validate
+D. confirm
+Answer: A
+
+Q9. Which form element collects multi-line text?
+A. input
+B. textarea
+C. select
+D. option
+Answer: B
+
+Q10. Which keyword handles runtime errors?
+A. throw
+B. catch
+C. try
+D. finally
+Answer: C
+
+Q11. Which block executes whether error occurs or not?
+A. try
+B. catch
+C. finally
+D. throw
+Answer: C
+
+Q12. Which tool inspects HTML structure in browser?
+A. Console
+B. Network
+C. Elements
+D. Sources
+Answer: C
+
+Q13. Which symbol denotes RegEx literal?
+A. //
+B. <>
+C. ##
+D. **
+Answer: A
+
+Q14. Which method tests a RegEx match?
+A. match()
+B. search()
+C. test()
+D. exec()
+Answer: C
+
+Q15. Which console method logs errors?
+A. console.log()
+B. console.warn()
+C. console.error()
+D. console.debug()
+Answer: C
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which DOM method creates a new element?
+A. createNode()
+B. createElement()
+C. appendNode()
+D. insertElement()
+Answer: B
+
+Q17. Which method inserts a node as last child?
+A. insertBefore()
+B. appendChild()
+C. replaceChild()
+D. removeChild()
+Answer: B
+
+Q18. Which property reads only text without HTML?
+A. innerHTML
+B. innerText
+C. textContent
+D. value
+Answer: C
+
+Q19. Which event is triggered on form submission?
+A. click
+B. submit
+C. load
+D. change
+Answer: B
+
+Q20. Which event fires when input value changes?
+A. keypress
+B. focus
+C. blur
+D. change
+Answer: D
+
+Q21. Which method prevents default form submission?
+A. stop()
+B. preventDefault()
+C. cancel()
+D. block()
+Answer: B
+
+Q22. Which attribute validates pattern using RegEx?
+A. match
+B. validate
+C. pattern
+D. regex
+Answer: C
+
+Q23. Which RegEx symbol means “one or more”?
+A. *
+B. ?
+C. +
+D. |
+Answer: C
+
+Q24. Which RegEx symbol matches beginning of string?
+A. $
+B. ^
+C. .
+D. *
+Answer: B
+
+Q25. Which RegEx symbol matches end of string?
+A. ^
+B. $
+C. +
+D. ?
+Answer: B
+
+Q26. Which statement throws custom error?
+A. error
+B. catch
+C. throw
+D. finally
+Answer: C
+
+Q27. Which DevTool tab monitors HTTP calls?
+A. Console
+B. Sources
+C. Network
+D. Elements
+Answer: C
+
+Q28. Which tool steps through JS execution?
+A. Console
+B. Debugger
+C. Elements
+D. Performance
+Answer: B
+
+Q29. Which error occurs when variable is undefined?
+A. SyntaxError
+B. TypeError
+C. ReferenceError
+D. RangeError
+Answer: C
+
+Q30. Which DOM method removes an element?
+A. deleteChild()
+B. remove()
+C. removeChild()
+D. erase()
+Answer: C
+
+Q31. Which event fires when input loses focus?
+A. focus
+B. blur
+C. change
+D. reset
+Answer: B
+
+Q32. Which RegEx flag ignores case?
+A. g
+B. m
+C. i
+D. s
+Answer: C
+
+Q33. Which RegEx flag finds all matches?
+A. g
+B. i
+C. m
+D. x
+Answer: A
+
+Q34. Which DOM collection is live?
+A. querySelectorAll()
+B. NodeList (static)
+C. HTMLCollection
+D. Array
+Answer: C
+
+Q35. Which method converts NodeList to array?
+A. Array.from()
+B. toArray()
+C. slice()
+D. map()
+Answer: A
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Which DOM traversal moves from child to parent?
+A. firstChild
+B. parentNode
+C. nextSibling
+D. children
+Answer: B
+
+Q37. Which validation happens before server call?
+A. Server-side
+B. Database-side
+C. Client-side
+D. Network-side
+Answer: C
+
+Q38. Which RegEx quantifier matches zero or more?
+A. +
+B. ?
+C. *
+D. {1,}
+Answer: C
+
+Q39. Which error occurs due to wrong syntax?
+A. TypeError
+B. ReferenceError
+C. SyntaxError
+D. EvalError
+Answer: C
+
+Q40. Which DOM method replaces a node?
+A. replaceChild()
+B. swapNode()
+C. updateChild()
+D. insertBefore()
+Answer: A
+
+Q41. Which form attribute disables native validation?
+A. novalidate
+B. disable
+C. bypass
+D. skip
+Answer: A
+
+Q42. Which RegEx symbol represents OR?
+A. &
+B. ||
+C. |
+D. /
+Answer: C
+
+Q43. Which DevTool tab analyzes runtime performance?
+A. Console
+B. Network
+C. Performance
+D. Memory
+Answer: C
+
+Q44. Which DOM property avoids XSS risk?
+A. innerHTML
+B. outerHTML
+C. textContent
+D. insertHTML
+Answer: C
+
+Q45. Which event bubbling moves:
+A. Top to bottom
+B. Bottom to top
+C. Left to right
+D. Right to left
+Answer: B
+
+Q46. Which event capturing moves:
+A. Bottom to top
+B. Target only
+C. Top to bottom
+D. Random
+Answer: C
+
+Q47. Which RegEx method returns matched array?
+A. test()
+B. exec()
+C. search()
+D. replace()
+Answer: B
+
+Q48. Which debugger keyword pauses execution?
+A. pause
+B. stop
+C. debugger
+D. break
+Answer: C
+
+Q49. Which DOM API improves performance for bulk updates?
+A. DocumentFragment
+B. NodeList
+C. HTMLCollection
+D. Shadow DOM
+Answer: A
+
+Q50. Client-side validation primarily improves:
+A. Database integrity
+B. User experience and latency
+C. Server security
+D. Encryption
+Answer: B
 ------------------------------------------------------------------------------------------------
+
+Session 10 – JSON & jQuery
+
+50 MCQs | CCEE-Optimized | Easy–Medium–Hard Mix
+(Options + Correct Answer)
+
+Easy Level (Quick Conversion – 15 MCQs)
+
+Q1. JSON stands for:
+A. Java Source Object Notation
+B. JavaScript Object Notation
+C. Java Serialized Object Network
+D. Java Syntax Object Network
+Answer: B
+
+Q2. JSON data is represented as:
+A. XML only
+B. Text-based format
+C. Binary format
+D. Compiled objects
+Answer: B
+
+Q3. Which symbol denotes a JSON object?
+A. []
+B. ()
+C. {}
+D. <>
+Answer: C
+
+Q4. Which symbol denotes a JSON array?
+A. {}
+B. []
+C. ()
+D. <>
+Answer: B
+
+Q5. Which method converts JSON string to object?
+A. JSON.stringify()
+B. JSON.parse()
+C. JSON.object()
+D. JSON.convert()
+Answer: B
+
+Q6. Which method converts object to JSON string?
+A. JSON.parse()
+B. JSON.encode()
+C. JSON.stringify()
+D. JSON.toString()
+Answer: C
+
+Q7. jQuery is a:
+A. Programming language
+B. Server-side framework
+C. JavaScript library
+D. Database engine
+Answer: C
+
+Q8. Which symbol is used to access jQuery?
+A. #
+B. $
+C. @
+D. &
+Answer: B
+
+Q9. Which selector selects element by ID?
+A. .
+B. *
+C. #
+D. @
+Answer: C
+
+Q10. Which selector selects element by class?
+A. #
+B. .
+C. *
+D. :
+Answer: B
+
+Q11. Which jQuery method runs after DOM loads?
+A. ready()
+B. load()
+C. init()
+D. start()
+Answer: A
+
+Q12. Which method hides an element?
+A. hide()
+B. invisible()
+C. display(false)
+D. none()
+Answer: A
+
+Q13. Which method shows hidden elements?
+A. open()
+B. visible()
+C. show()
+D. display()
+Answer: C
+
+Q14. Which event triggers on mouse click?
+A. hover
+B. dblclick
+C. click
+D. press
+Answer: C
+
+Q15. Which method changes text content?
+A. html()
+B. text()
+C. val()
+D. attr()
+Answer: B
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which JSON value type is NOT valid?
+A. String
+B. Number
+C. Function
+D. Boolean
+Answer: C
+
+Q17. JSON keys must be enclosed in:
+A. Single quotes
+B. Double quotes
+C. Backticks
+D. No quotes
+Answer: B
+
+Q18. Which jQuery selector selects all <p> elements?
+A. #p
+B. .p
+C. p
+D. *p
+Answer: C
+
+Q19. Which method sets or gets HTML content?
+A. text()
+B. html()
+C. val()
+D. attr()
+Answer: B
+
+Q20. Which method sets or gets input value?
+A. text()
+B. html()
+C. val()
+D. data()
+Answer: C
+
+Q21. Which jQuery event fires on double click?
+A. click()
+B. dblclick()
+C. hover()
+D. focus()
+Answer: B
+
+Q22. Which method attaches event handler?
+A. attach()
+B. bind()
+C. on()
+D. hook()
+Answer: C
+
+Q23. Which jQuery method iterates over elements?
+A. each()
+B. map()
+C. loop()
+D. forEach()
+Answer: A
+
+Q24. Which method adds element at end?
+A. prepend()
+B. append()
+C. after()
+D. before()
+Answer: B
+
+Q25. Which method removes element from DOM?
+A. delete()
+B. detach()
+C. remove()
+D. erase()
+Answer: C
+
+Q26. Which jQuery method finds descendants?
+A. parent()
+B. parents()
+C. children()
+D. find()
+Answer: D
+
+Q27. Which method gets parent element?
+A. parent()
+B. parents()
+C. closest()
+D. all
+Answer: A
+
+Q28. Which animation method toggles visibility?
+A. fadeIn()
+B. fadeOut()
+C. fadeToggle()
+D. slideUp()
+Answer: C
+
+Q29. Which method stores custom data?
+A. attr()
+B. prop()
+C. data()
+D. info()
+Answer: C
+
+Q30. Which method clones elements?
+A. copy()
+B. duplicate()
+C. clone()
+D. mirror()
+Answer: C
+
+Q31. Which jQuery utility handles AJAX?
+A. $.http()
+B. $.request()
+C. $.ajax()
+D. $.fetch()
+Answer: C
+
+Q32. Which JSON structure stores key-value pairs?
+A. Array
+B. Object
+C. String
+D. Number
+Answer: B
+
+Q33. Which method filters matched elements?
+A. filter()
+B. find()
+C. slice()
+D. not()
+Answer: A
+
+Q34. Which method excludes matched elements?
+A. except()
+B. not()
+C. remove()
+D. filterOut()
+Answer: B
+
+Q35. Which jQuery method chains calls?
+A. then()
+B. pipe()
+C. return this
+D. All jQuery methods
+Answer: D
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Which JSON limitation is true?
+A. Supports comments
+B. Supports functions
+C. Supports dates natively
+D. Supports strings only
+Answer: D
+
+Q37. Which jQuery selector improves performance most?
+A. Universal selector
+B. Class selector
+C. ID selector
+D. Attribute selector
+Answer: C
+
+Q38. Which jQuery method removes events but keeps data?
+A. remove()
+B. detach()
+C. empty()
+D. off()
+Answer: B
+
+Q39. Which jQuery method removes only child nodes?
+A. remove()
+B. empty()
+C. detach()
+D. clear()
+Answer: B
+
+Q40. Which JSON parsing error occurs on trailing comma?
+A. TypeError
+B. ReferenceError
+C. SyntaxError
+D. RangeError
+Answer: C
+
+Q41. Which method binds events to future elements?
+A. bind()
+B. on() with delegation
+C. click()
+D. ready()
+Answer: B
+
+Q42. Which jQuery traversal finds nearest ancestor?
+A. parent()
+B. parents()
+C. closest()
+D. find()
+Answer: C
+
+Q43. Which animation affects height?
+A. fadeIn()
+B. fadeOut()
+C. slideDown()
+D. toggle()
+Answer: C
+
+Q44. Which JSON method creates deep copy?
+A. Object.assign()
+B. Spread operator
+C. JSON.parse(JSON.stringify())
+D. copy()
+Answer: C
+
+Q45. Which jQuery method unbinds events?
+A. off()
+B. stop()
+C. detach()
+D. unbindAll()
+Answer: A
+
+Q46. Which selector selects first matched element?
+A. :first
+B. :eq(0)
+C. first()
+D. All of the above
+Answer: D
+
+Q47. Which jQuery method stops animation queue?
+A. stop()
+B. clearQueue()
+C. halt()
+D. break()
+Answer: A
+
+Q48. Which JSON data type maps best to JS object?
+A. Array
+B. Object
+C. String
+D. Boolean
+Answer: B
+
+Q49. Which jQuery feature reduces DOM access cost?
+A. Event delegation
+B. Chaining
+C. Caching selectors
+D. Animation
+Answer: C
+
+Q50. JSON is preferred over XML primarily due to:
+A. Security
+B. Smaller size and faster parsing
+C. Schema support
+D. Styling
+Answer: B
 -----------------------------------------------------------------------------------------------
+
+
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
