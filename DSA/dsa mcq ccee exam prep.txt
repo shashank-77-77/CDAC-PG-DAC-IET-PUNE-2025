@@ -648,6 +648,330 @@ C. Graph
 D. Hash table
 Answer: B
 ------------------------------------------------------------------------------------------------
+CLUSTER 3 – MCQ BANK
+(Sessions 7, 8 & 9: Trees & Applications)
+SECTION A — EASY LEVEL (10 MCQs)
+
+(Concept activation, terminology alignment)
+
+Q1. A tree is a data structure that:
+A. Contains cycles
+B. Has hierarchical relationships
+C. Stores elements sequentially
+D. Uses FIFO order
+Answer: B
+
+Q2. The topmost node in a tree is called:
+A. Leaf
+B. Parent
+C. Root
+D. Sibling
+Answer: C
+
+Q3. A node with no children is called:
+A. Root
+B. Internal node
+C. Leaf node
+D. Parent
+Answer: C
+
+Q4. In a binary tree, each node has at most:
+A. One child
+B. Two children
+C. Three children
+D. Unlimited children
+Answer: B
+
+Q5. Inorder traversal follows which order?
+A. Root–Left–Right
+B. Left–Root–Right
+C. Left–Right–Root
+D. Root–Right–Left
+Answer: B
+
+Q6. A Binary Search Tree (BST) maintains:
+A. Random ordering
+B. Heap property
+C. Sorted property
+D. Graph connectivity
+Answer: C
+
+Q7. Breadth First Traversal uses:
+A. Stack
+B. Queue
+C. Recursion
+D. Priority queue
+Answer: B
+
+Q8. Height of a single-node tree is:
+A. 0
+B. 1
+C. −1
+D. Undefined
+Answer: A
+
+Q9. AVL trees are examples of:
+A. Unbalanced trees
+B. Self-balancing trees
+C. Complete trees
+D. Heap trees
+Answer: B
+
+Q10. Which traversal gives sorted output in a BST?
+A. Preorder
+B. Postorder
+C. Inorder
+D. Level order
+Answer: C
+
+SECTION B — HARD LEVEL (40 MCQs)
+
+(CCEE-grade, elimination-driven, structurally precise)
+
+Q11. The maximum number of nodes at level l in a binary tree is:
+A. l²
+B. 2ˡ
+C. l
+D. 2ˡ⁻¹
+Answer: B
+
+Q12. Height of a skewed binary tree with n nodes is:
+A. log n
+B. √n
+C. n
+D. n/2
+Answer: C
+
+Q13. Worst-case time complexity of searching in a BST is:
+A. O(log n)
+B. O(n)
+C. O(1)
+D. O(n log n)
+Answer: B
+
+Q14. A complete binary tree is best stored using:
+A. Linked list
+B. Hash table
+C. Array
+D. Stack
+Answer: C
+
+Q15. Which traversal visits root before subtrees?
+A. Inorder
+B. Preorder
+C. Postorder
+D. Level order
+Answer: B
+
+Q16. BFS traversal is preferred when:
+A. Depth is critical
+B. Memory is limited
+C. Shortest path in unweighted tree is needed
+D. Stack usage must be minimized
+Answer: C
+
+Q17. Deleting a node with two children in a BST requires:
+A. Removing subtree
+B. Replacing with inorder predecessor or successor
+C. Simple pointer deletion
+D. Tree reconstruction
+Answer: B
+
+Q18. A binary tree is said to be balanced when:
+A. All leaves are at same level
+B. Height difference of subtrees is bounded
+C. Node values are sorted
+D. Tree is complete
+Answer: B
+
+Q19. The balance factor in AVL trees is defined as:
+A. Height(left) − Height(right)
+B. Height(right) − Height(left)
+C. Number of nodes difference
+D. Depth difference
+Answer: A
+
+Q20. Which operation maintains AVL tree balance?
+A. Heapify
+B. Rehashing
+C. Rotations
+D. Traversals
+Answer: C
+
+Q21. Single rotation in AVL tree occurs when:
+A. Balance factor is ±1
+B. Balance factor exceeds ±1
+C. Tree is complete
+D. Node is leaf
+Answer: B
+
+Q22. Which rotation fixes Left-Left imbalance?
+A. Left rotation
+B. Right rotation
+C. Double rotation
+D. Level rotation
+Answer: B
+
+Q23. Time complexity of inorder traversal is:
+A. O(log n)
+B. O(n)
+C. O(n log n)
+D. O(1)
+Answer: B
+
+Q24. DFS traversal can be implemented using:
+A. Queue only
+B. Stack or recursion
+C. Hash table
+D. Array only
+Answer: B
+
+Q25. Binary tree with all levels completely filled except possibly last is:
+A. Full binary tree
+B. Perfect binary tree
+C. Complete binary tree
+D. Skewed tree
+Answer: C
+
+Q26. Maximum height of a complete binary tree with n nodes is:
+A. n
+B. log n
+C. √n
+D. n log n
+Answer: B
+
+Q27. A tree with N nodes has how many edges?
+A. N
+B. N − 1
+C. N + 1
+D. 2N
+Answer: B
+
+Q28. Which traversal is useful for copying a tree?
+A. Inorder
+B. Preorder
+C. Postorder
+D. Level order
+Answer: B
+
+Q29. Postorder traversal is commonly used for:
+A. Sorting
+B. Expression evaluation
+C. Tree construction
+D. Searching
+Answer: B
+
+Q30. A degenerate tree is structurally similar to:
+A. Graph
+B. Heap
+C. Linked list
+D. Array
+Answer: C
+
+Q31. Worst-case insertion complexity in AVL tree is:
+A. O(1)
+B. O(log n)
+C. O(n)
+D. O(n log n)
+Answer: B
+
+Q32. Level order traversal visits nodes:
+A. Depth-wise
+B. Height-wise
+C. Breadth-wise
+D. Recursively
+Answer: C
+
+Q33. Which tree guarantees logarithmic height?
+A. BST
+B. Skewed tree
+C. AVL tree
+D. Binary tree
+Answer: C
+
+Q34. Which scenario degrades BST performance?
+A. Random insertions
+B. Balanced insertions
+C. Sorted input insertion
+D. Random deletions
+Answer: C
+
+Q35. Which traversal processes children before parent?
+A. Preorder
+B. Inorder
+C. Postorder
+D. Level order
+Answer: C
+
+Q36. Tree traversal without recursion requires:
+A. Queue
+B. Hash table
+C. Stack
+D. Heap
+Answer: C
+
+Q37. The primary advantage of AVL over BST is:
+A. Simpler implementation
+B. Reduced memory usage
+C. Guaranteed logarithmic performance
+D. Faster traversal
+Answer: C
+
+Q38. Searching in a balanced BST takes:
+A. O(n)
+B. O(log n)
+C. O(1)
+D. O(n²)
+Answer: B
+
+Q39. A full binary tree has:
+A. All leaves at same level
+B. Each node with either 0 or 2 children
+C. Maximum number of nodes
+D. Sorted structure
+Answer: B
+
+Q40. Which traversal is easiest to implement recursively?
+A. Level order
+B. Inorder
+C. BFS
+D. Heap traversal
+Answer: B
+
+Q41. Height balancing improves which metric directly?
+A. Memory usage
+B. Cache locality
+C. Search efficiency
+D. Code readability
+Answer: C
+
+Q42. Array representation of trees fails efficiently when:
+A. Tree is complete
+B. Tree is skewed
+C. Tree is balanced
+D. Tree is small
+Answer: B
+
+Q43. Internal nodes in a tree are nodes that:
+A. Are leaves
+B. Have at least one child
+C. Have no children
+D. Are roots only
+Answer: B
+
+Q44. Which operation is most expensive in trees?
+A. Traversal
+B. Balanced insertion
+C. Searching in balanced tree
+D. Leaf insertion
+Answer: B
+
+Q45. Tree traversal always visits:
+A. Root last
+B. Root first
+C. Each node exactly once
+D. Leaves only
+Answer: C
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
 
