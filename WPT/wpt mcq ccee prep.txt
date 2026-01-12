@@ -5425,8 +5425,1877 @@ C. Declarative
 D. Imperative
 Answer: C
 ------------------------------------------------------------------------------------------------
+Sessions 20, 21 & 22 – React State, Lifecycle & Events
+
+50 MCQs | CCEE-Optimized | Easy–Medium–Hard Mix
+
+Easy Level (Fast-Conversion – 15 MCQs)
+
+Q1. State in React is used to store:
+A. Static data
+B. Temporary component data
+C. Global variables
+D. Server responses only
+Answer: B
+
+Q2. Which component type can have state?
+A. Functional only
+B. Class only
+C. Both functional and class
+D. Stateless only
+Answer: C
+
+Q3. Which hook manages state in functional components?
+A. useEffect
+B. useState
+C. useContext
+D. useReducer
+Answer: B
+
+Q4. Which lifecycle method runs once after render?
+A. componentWillMount
+B. componentDidMount
+C. componentWillUpdate
+D. componentDidUpdate
+Answer: B
+
+Q5. Which method updates state in class components?
+A. this.state()
+B. this.updateState()
+C. this.setState()
+D. this.changeState()
+Answer: C
+
+Q6. Which event handles button click in React?
+A. onclick
+B. onClick
+C. click
+D. onpress
+Answer: B
+
+Q7. Which syntax binds event handler in JSX?
+A. onClick={handler()}
+B. onClick=handler
+C. onClick={handler}
+D. onClick="handler()"
+Answer: C
+
+Q8. Which hook replaces lifecycle methods?
+A. useState
+B. useEffect
+C. useMemo
+D. useRef
+Answer: B
+
+Q9. Which lifecycle phase updates UI?
+A. Mounting
+B. Updating
+C. Unmounting
+D. Rendering
+Answer: B
+
+Q10. Which hook runs after render by default?
+A. useState
+B. useEffect
+C. useContext
+D. useCallback
+Answer: B
+
+Q11. Which event fires on input change?
+A. onChange
+B. onInput
+C. onUpdate
+D. onEdit
+Answer: A
+
+Q12. Which hook cleans up side effects?
+A. useState
+B. useEffect return
+C. useReducer
+D. useRef
+Answer: B
+
+Q13. Which conditional operator is commonly used in JSX?
+A. if
+B. switch
+C. Ternary
+D. for
+Answer: C
+
+Q14. Which keyword unmounts component?
+A. destroy
+B. remove
+C. cleanup
+D. Automatic by React
+Answer: D
+
+Q15. Which hook accesses previous state?
+A. useState callback
+B. useEffect
+C. useMemo
+D. useRef
+Answer: A
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which lifecycle method is invoked before re-render?
+A. componentDidMount
+B. shouldComponentUpdate
+C. componentWillUnmount
+D. render
+Answer: B
+
+Q17. Which hook dependency array controls execution?
+A. useState
+B. useEffect
+C. useReducer
+D. useContext
+Answer: B
+
+Q18. Which lifecycle method cleans resources?
+A. componentDidUpdate
+B. componentWillUnmount
+C. componentWillMount
+D. render
+Answer: B
+
+Q19. Which React event is synthetic?
+A. Browser event
+B. Native event
+C. SyntheticEvent
+D. Custom event
+Answer: C
+
+Q20. Which hook replaces componentDidMount & update?
+A. useState
+B. useEffect
+C. useMemo
+D. useCallback
+Answer: B
+
+Q21. Which state update is recommended?
+A. Direct mutation
+B. this.state =
+C. this.setState()
+D. this.change()
+Answer: C
+
+Q22. Which hook memoizes functions?
+A. useMemo
+B. useCallback
+C. useRef
+D. useContext
+Answer: B
+
+Q23. Which hook memoizes values?
+A. useCallback
+B. useRef
+C. useMemo
+D. useState
+Answer: C
+
+Q24. Which lifecycle method determines re-render?
+A. render
+B. shouldComponentUpdate
+C. componentDidUpdate
+D. componentWillUnmount
+Answer: B
+
+Q25. Which hook avoids unnecessary re-renders?
+A. useState
+B. useEffect
+C. useMemo
+D. useReducer
+Answer: C
+
+Q26. Which event handling uses camelCase?
+A. HTML events
+B. React events
+C. DOM events
+D. Browser events
+Answer: B
+
+Q27. Which pattern passes state upward?
+A. Props drilling
+B. Lifting state up
+C. Context
+D. Redux
+Answer: B
+
+Q28. Which lifecycle method is deprecated?
+A. componentDidMount
+B. componentWillMount
+C. render
+D. componentDidUpdate
+Answer: B
+
+Q29. Which hook replaces shouldComponentUpdate?
+A. useMemo
+B. useCallback
+C. React.memo
+D. useEffect
+Answer: C
+
+Q30. Which event prevents default browser action?
+A. stop()
+B. prevent()
+C. event.preventDefault()
+D. event.block()
+Answer: C
+
+Q31. Which hook stores mutable value without re-render?
+A. useState
+B. useEffect
+C. useRef
+D. useMemo
+Answer: C
+
+Q32. Which lifecycle method runs after update?
+A. componentWillUpdate
+B. componentDidUpdate
+C. shouldComponentUpdate
+D. render
+Answer: B
+
+Q33. Which hook manages complex state logic?
+A. useState
+B. useEffect
+C. useReducer
+D. useMemo
+Answer: C
+
+Q34. Which conditional rendering uses logical AND?
+A. if
+B. &&
+C. ?:
+D. switch
+Answer: B
+
+Q35. Which hook runs cleanup on unmount?
+A. useEffect
+B. useState
+C. useReducer
+D. useCallback
+Answer: A
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Which state update is asynchronous?
+A. Direct assignment
+B. setState
+C. Variable reassignment
+D. useRef
+Answer: B
+
+Q37. Which hook dependency mistake causes infinite loop?
+A. Empty array
+B. Missing dependency
+C. Stable dependency
+D. useRef
+Answer: B
+
+Q38. Which lifecycle method blocks rendering?
+A. render
+B. componentDidMount
+C. shouldComponentUpdate
+D. componentWillUnmount
+Answer: C
+
+Q39. Which hook is equivalent to componentDidMount only?
+A. useEffect(() => {}, [])
+B. useEffect(() => {})
+C. useMemo(() => {})
+D. useCallback(() => {})
+Answer: A
+
+Q40. Which pattern causes unnecessary renders?
+A. Memoization
+B. Inline functions
+C. Lifting state up
+D. Context
+Answer: B
+
+Q41. Which event object is pooled?
+A. NativeEvent
+B. DOMEvent
+C. SyntheticEvent
+D. BrowserEvent
+Answer: C
+
+Q42. Which hook runs synchronously after DOM mutation?
+A. useEffect
+B. useLayoutEffect
+C. useState
+D. useCallback
+Answer: B
+
+Q43. Which lifecycle method is unsafe?
+A. componentWillReceiveProps
+B. componentDidUpdate
+C. componentDidMount
+D. render
+Answer: A
+
+Q44. Which React feature batches updates?
+A. Hooks
+B. Virtual DOM
+C. State batching
+D. JSX
+Answer: C
+
+Q45. Which hook avoids stale closures?
+A. useEffect
+B. useRef
+C. useCallback
+D. useState
+Answer: B
+
+Q46. Which conditional rendering is fastest?
+A. if-else
+B. switch
+C. Ternary
+D. && operator
+Answer: D
+
+Q47. Which hook runs before browser paint?
+A. useEffect
+B. useLayoutEffect
+C. useMemo
+D. useCallback
+Answer: B
+
+Q48. Which update triggers reconciliation?
+A. Console.log
+B. setState / state change
+C. Ref update
+D. Variable change
+Answer: B
+
+Q49. Which React pattern improves scalability?
+A. Monolithic state
+B. Lifting state up
+C. Component composition
+D. Global variables
+Answer: C
+
+Q50. React state updates should be treated as:
+A. Mutable
+B. Synchronous
+C. Immutable
+D. Global
+Answer: C
 ------------------------------------------------------------------------------------------------
+Sessions 23 & 24 – React Lists, Forms, Refs & Lifting State
+
+50 MCQs | CCEE-Optimized | Easy–Medium–Hard Mix
+
+Easy Level (Low-Effort, High-Return – 15 MCQs)
+
+Q1. Lists in React are typically rendered using:
+A. while loop
+B. for loop
+C. map()
+D. reduce()
+Answer: C
+
+Q2. Which prop uniquely identifies list items?
+A. id
+B. index
+C. key
+D. value
+Answer: C
+
+Q3. Keys in React help with:
+A. Styling
+B. Performance optimization
+C. State storage
+D. Routing
+Answer: B
+
+Q4. Forms in React usually use:
+A. Uncontrolled components
+B. Controlled components
+C. Static HTML
+D. Server-side rendering
+Answer: B
+
+Q5. Which attribute stores input value in controlled forms?
+A. ref
+B. defaultValue
+C. value
+D. name
+Answer: C
+
+Q6. Which event handles form submission?
+A. onClick
+B. onChange
+C. onSubmit
+D. onSend
+Answer: C
+
+Q7. Which hook is commonly used for refs?
+A. useState
+B. useEffect
+C. useRef
+D. useMemo
+Answer: C
+
+Q8. Refs are primarily used to:
+A. Store state
+B. Force re-render
+C. Access DOM elements
+D. Pass props
+Answer: C
+
+Q9. Which input type allows selecting multiple options?
+A. text
+B. radio
+C. checkbox
+D. submit
+Answer: C
+
+Q10. Which pattern shares state between siblings?
+A. Props drilling
+B. Context
+C. Lifting state up
+D. Redux
+Answer: C
+
+Q11. Which attribute prevents default form reload?
+A. stop
+B. prevent
+C. event.preventDefault()
+D. cancel()
+Answer: C
+
+Q12. Which hook stores mutable value without re-render?
+A. useState
+B. useEffect
+C. useRef
+D. useReducer
+Answer: C
+
+Q13. Which JSX attribute binds input change?
+A. onInput
+B. onChange
+C. onUpdate
+D. onEdit
+Answer: B
+
+Q14. Which list rendering key should be avoided?
+A. UUID
+B. Stable ID
+C. Array index
+D. Database ID
+Answer: C
+
+Q15. Controlled components sync data with:
+A. DOM
+B. State
+C. Props only
+D. Server
+Answer: B
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which method converts form input to state?
+A. ref binding
+B. onChange handler
+C. onSubmit handler
+D. useEffect
+Answer: B
+
+Q17. Which hook is preferred for form state?
+A. useEffect
+B. useState
+C. useRef
+D. useMemo
+Answer: B
+
+Q18. Which key property must be:
+A. Random
+B. Unique among siblings
+C. Globally unique
+D. Numeric
+Answer: B
+
+Q19. Which component owns lifted state?
+A. Child
+B. Sibling
+C. Common parent
+D. Root only
+Answer: C
+
+Q20. Which hook handles focus on input?
+A. useState
+B. useEffect
+C. useRef
+D. useCallback
+Answer: C
+
+Q21. Which form type stores value in DOM?
+A. Controlled
+B. Uncontrolled
+C. Hybrid
+D. Static
+Answer: B
+
+Q22. Which prop passes callback to child?
+A. onChange
+B. handler
+C. function reference
+D. All of the above
+Answer: D
+
+Q23. Which pattern avoids prop drilling?
+A. Lifting state up
+B. Refs
+C. Context API
+D. Controlled forms
+Answer: C
+
+Q24. Which hook reads previous render value?
+A. useState
+B. useEffect
+C. useRef
+D. useReducer
+Answer: C
+
+Q25. Which JSX attribute handles select dropdown?
+A. selected
+B. checked
+C. value
+D. option
+Answer: C
+
+Q26. Which approach is best for dynamic forms?
+A. Uncontrolled
+B. Controlled
+C. Static HTML
+D. Server-only
+Answer: B
+
+Q27. Which ref type is legacy?
+A. useRef
+B. createRef
+C. callback refs
+D. string refs
+Answer: D
+
+Q28. Which hook optimizes re-rendering of list items?
+A. useEffect
+B. useMemo
+C. useState
+D. useRef
+Answer: B
+
+Q29. Which pattern ensures single source of truth?
+A. Multiple states
+B. DOM values
+C. Lifted state
+D. Inline variables
+Answer: C
+
+Q30. Which event triggers validation logic?
+A. onSubmit
+B. onBlur
+C. onChange
+D. All of the above
+Answer: D
+
+Q31. Which input type binds boolean state?
+A. text
+B. number
+C. checkbox
+D. password
+Answer: C
+
+Q32. Which hook replaces componentWillReceiveProps?
+A. useEffect
+B. useState
+C. useRef
+D. useMemo
+Answer: A
+
+Q33. Which ref persists across renders?
+A. Local variable
+B. useRef
+C. State
+D. Props
+Answer: B
+
+Q34. Which key strategy improves reconciliation?
+A. Index-based
+B. Random key
+C. Stable unique key
+D. No key
+Answer: C
+
+Q35. Which React feature supports form reuse?
+A. Composition
+B. Inheritance
+C. Templates
+D. Controllers
+Answer: A
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Which misuse causes list re-render bugs?
+A. Stable keys
+B. Index as key
+C. Unique IDs
+D. Memoization
+Answer: B
+
+Q37. Which hook should not be used for form state?
+A. useState
+B. useReducer
+C. useRef
+D. useEffect
+Answer: C
+
+Q38. Which pattern causes excessive re-renders?
+A. Memoized lists
+B. Inline arrow handlers
+C. Lifted state
+D. Controlled inputs
+Answer: B
+
+Q39. Which approach scales best for complex forms?
+A. Single useState
+B. Multiple refs
+C. useReducer
+D. Uncontrolled forms
+Answer: C
+
+Q40. Which scenario justifies uncontrolled components?
+A. Validation-heavy forms
+B. Simple file input
+C. Dynamic lists
+D. Shared state
+Answer: B
+
+Q41. Which ref update does NOT trigger render?
+A. useRef.current
+B. setState
+C. props change
+D. context change
+Answer: A
+
+Q42. Which hook avoids unnecessary child renders?
+A. useCallback
+B. useEffect
+C. useRef
+D. useState
+Answer: A
+
+Q43. Which form issue breaks single source of truth?
+A. Controlled input
+B. Lifted state
+C. Mixing controlled & uncontrolled
+D. Validation
+Answer: C
+
+Q44. Which key mistake impacts diffing algorithm?
+A. Missing key
+B. Stable key
+C. Primitive key
+D. String key
+Answer: A
+
+Q45. Which pattern centralizes shared logic?
+A. Props drilling
+B. Lifting state up
+C. Inline handlers
+D. Local refs
+Answer: B
+
+Q46. Which hook best tracks previous props?
+A. useState
+B. useEffect
+C. useRef
+D. useMemo
+Answer: C
+
+Q47. Which form optimization improves UX?
+A. Full page reload
+B. Controlled validation
+C. Server-only validation
+D. Blocking submit
+Answer: B
+
+Q48. Which list rendering is most efficient?
+A. map without keys
+B. map with index keys
+C. map with stable keys
+D. for loop
+Answer: C
+
+Q49. Which ref pattern is future-proof?
+A. String refs
+B. Callback refs only
+C. useRef
+D. DOM queries
+Answer: C
+
+Q50. Lifting state up primarily improves:
+A. Styling
+B. Performance only
+C. Data consistency
+D. Animation
+Answer: C
 ------------------------------------------------------------------------------------------------
+Session 25 – Error Boundaries, Composition vs Inheritance, Thinking in React
+
+50 MCQs | CCEE-Optimized | Easy–Medium–Hard Mix
+
+Easy Level (Rapid Conversion – 15 MCQs)
+
+Q1. Error boundaries are used to:
+A. Prevent syntax errors
+B. Catch runtime errors in components
+C. Handle network errors
+D. Optimize rendering
+Answer: B
+
+Q2. Error boundaries work in which components?
+A. Functional only
+B. Class only
+C. Both class and functional
+D. Hooks only
+Answer: B
+
+Q3. Which lifecycle method catches errors?
+A. componentDidMount
+B. componentDidUpdate
+C. componentDidCatch
+D. shouldComponentUpdate
+Answer: C
+
+Q4. Which static method derives error state?
+A. getDerivedStateFromProps
+B. getDerivedStateFromError
+C. componentWillCatch
+D. setErrorState
+Answer: B
+
+Q5. Error boundaries catch errors in:
+A. Event handlers
+B. Asynchronous code
+C. Render phase
+D. setTimeout callbacks
+Answer: C
+
+Q6. Composition in React means:
+A. Extending classes
+B. Nesting components
+C. Using inheritance
+D. Using mixins
+Answer: B
+
+Q7. React recommends which pattern?
+A. Inheritance
+B. Composition
+C. Mixins
+D. Multiple inheritance
+Answer: B
+
+Q8. Which prop enables component containment?
+A. props.data
+B. props.render
+C. props.children
+D. props.content
+Answer: C
+
+Q9. Error boundaries catch errors in:
+A. Child components
+B. Parent components
+C. Themselves only
+D. Server-side code
+Answer: A
+
+Q10. “Thinking in React” emphasizes:
+A. Writing JSX first
+B. Component-driven design
+C. CSS-first approach
+D. Server-side rendering
+Answer: B
+
+Q11. Which step comes first in Thinking in React?
+A. Identify state
+B. Build static UI
+C. Add interactivity
+D. Lift state up
+Answer: B
+
+Q12. Which step identifies minimal state?
+A. Build UI
+B. Add props
+C. Identify state
+D. Write hooks
+Answer: C
+
+Q13. Which step enables data flow?
+A. Add lifecycle
+B. Identify components
+C. Lift state up
+D. Add CSS
+Answer: C
+
+Q14. Which React feature improves fault tolerance?
+A. Hooks
+B. Error boundaries
+C. Context
+D. Refs
+Answer: B
+
+Q15. Error boundaries display:
+A. Browser error page
+B. Fallback UI
+C. Console error only
+D. Blank screen
+Answer: B
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Error boundaries do NOT catch errors in:
+A. Rendering
+B. Lifecycle methods
+C. Constructors
+D. Event handlers
+Answer: D
+
+Q17. Which lifecycle phase handles errors?
+A. Mounting
+B. Updating
+C. Error handling
+D. Unmounting
+Answer: C
+
+Q18. Which method logs error info?
+A. componentDidCatch
+B. getDerivedStateFromError
+C. render
+D. shouldComponentUpdate
+Answer: A
+
+Q19. Which method updates state after error?
+A. componentDidCatch
+B. getDerivedStateFromError
+C. setState
+D. render
+Answer: B
+
+Q20. Which approach replaces inheritance reuse?
+A. Mixins
+B. Composition
+C. Abstract classes
+D. Interfaces
+Answer: B
+
+Q21. Which composition pattern passes UI as prop?
+A. Containment
+B. Specialization
+C. Render props
+D. Inheritance
+Answer: C
+
+Q22. Which pattern customizes child behavior?
+A. Containment
+B. Specialization
+C. Inheritance
+D. Mixins
+Answer: B
+
+Q23. Which React pattern shares logic?
+A. Inheritance
+B. Composition
+C. Mixins
+D. Globals
+Answer: B
+
+Q24. Error boundaries must be placed:
+A. At root only
+B. Around risky components
+C. Inside hooks
+D. In reducers
+Answer: B
+
+Q25. Which React version introduced error boundaries?
+A. 15
+B. 16
+C. 16.8
+D. 17
+Answer: B
+
+Q26. Which step defines component hierarchy?
+A. Build UI
+B. Identify components
+C. Lift state
+D. Add logic
+Answer: B
+
+Q27. Which step enforces one-way data flow?
+A. Build UI
+B. Identify state
+C. Lift state up
+D. Add events
+Answer: C
+
+Q28. Which pattern avoids tight coupling?
+A. Inheritance
+B. Composition
+C. Global state
+D. Static classes
+Answer: B
+
+Q29. Which fallback UI is best practice?
+A. Blank screen
+B. Console log
+C. User-friendly message
+D. App crash
+Answer: C
+
+Q30. Which error boundary placement is optimal?
+A. One global boundary
+B. Many small boundaries
+C. No boundaries
+D. Root only
+Answer: B
+
+Q31. Which pattern encourages reuse without hierarchy?
+A. Inheritance
+B. Composition
+C. Polymorphism
+D. Encapsulation
+Answer: B
+
+Q32. Which React principle guides Thinking in React?
+A. Two-way binding
+B. Single source of truth
+C. Global state
+D. MVC
+Answer: B
+
+Q33. Which step minimizes state duplication?
+A. Identify components
+B. Identify minimal state
+C. Add hooks
+D. Write CSS
+Answer: B
+
+Q34. Which composition technique passes functions as children?
+A. Containment
+B. Specialization
+C. Render props
+D. Inheritance
+Answer: C
+
+Q35. Which scenario justifies inheritance?
+A. UI reuse
+B. Logic reuse
+C. Rare edge cases
+D. Forms
+Answer: C
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Which error bypasses error boundaries?
+A. Render error
+B. Lifecycle error
+C. Event handler error
+D. Constructor error
+Answer: C
+
+Q37. Which method is static by design?
+A. componentDidCatch
+B. getDerivedStateFromError
+C. render
+D. shouldComponentUpdate
+Answer: B
+
+Q38. Which pattern scales best for UI reuse?
+A. Deep inheritance
+B. Composition
+C. Mixins
+D. Globals
+Answer: B
+
+Q39. Which design step prevents over-engineering?
+A. Build UI
+B. Identify minimal state
+C. Lift state
+D. Add CSS
+Answer: B
+
+Q40. Which placement reduces blast radius of errors?
+A. Root boundary only
+B. Component-level boundaries
+C. No boundary
+D. Global try-catch
+Answer: B
+
+Q41. Which React philosophy underpins Thinking in React?
+A. Imperative updates
+B. Declarative UI
+C. MVC
+D. Two-way binding
+Answer: B
+
+Q42. Which reuse mechanism React discourages?
+A. Composition
+B. Render props
+C. Inheritance
+D. Hooks
+Answer: C
+
+Q43. Which error boundary strategy improves UX most?
+A. App-wide crash
+B. Silent failure
+C. Contextual fallback UI
+D. Console-only logging
+Answer: C
+
+Q44. Which step defines data ownership?
+A. Identify components
+B. Identify minimal state
+C. Lift state up
+D. Add events
+Answer: C
+
+Q45. Which pattern supports multiple UI variants?
+A. Inheritance
+B. Specialization via composition
+C. Globals
+D. Mixins
+Answer: B
+
+Q46. Which React mechanism isolates failure domains?
+A. Hooks
+B. Error boundaries
+C. Context
+D. Refs
+Answer: B
+
+Q47. Which approach simplifies testing?
+A. Deep inheritance
+B. Composition
+C. Globals
+D. DOM queries
+Answer: B
+
+Q48. Which error boundary limitation is critical?
+A. Cannot catch render errors
+B. Cannot catch async errors
+C. Cannot render fallback UI
+D. Cannot log errors
+Answer: B
+
+Q49. Which Thinking in React outcome is primary?
+A. Faster coding
+B. Predictable data flow
+C. Smaller bundle
+D. Better CSS
+Answer: B
+
+Q50. Error boundaries primarily improve:
+A. Performance
+B. Security
+C. Reliability
+D. Styling
+Answer: C
 ------------------------------------------------------------------------------------------------
+
+Sessions 26, 27 & 28 – React-Redux
+
+(Redux Fundamentals, Actions, Reducers, Store, React Integration)
+50 MCQs | CCEE-Optimized | Easy–Medium–Hard Mix
+
+Easy Level (Quick Alignment – 15 MCQs)
+
+Q1. Redux is primarily used for:
+A. Styling UI
+B. Managing application state
+C. Routing
+D. API calls only
+Answer: B
+
+Q2. Redux follows which data flow?
+A. Two-way
+B. Circular
+C. Unidirectional
+D. Random
+Answer: C
+
+Q3. Which Redux component stores state?
+A. Reducer
+B. Action
+C. Store
+D. Middleware
+Answer: C
+
+Q4. Actions in Redux are:
+A. Functions
+B. Objects
+C. Classes
+D. Components
+Answer: B
+
+Q5. Which property must an action have?
+A. payload
+B. data
+C. type
+D. state
+Answer: C
+
+Q6. Reducers are:
+A. Asynchronous
+B. Pure functions
+C. Components
+D. Middleware
+Answer: B
+
+Q7. Which method creates a Redux store?
+A. newStore()
+B. configureStore()
+C. createStore()
+D. initStore()
+Answer: C
+
+Q8. Which library connects React and Redux?
+A. redux-dom
+B. react-redux
+C. redux-react
+D. react-store
+Answer: B
+
+Q9. Which hook reads state from store?
+A. useDispatch
+B. useStore
+C. useSelector
+D. useReducer
+Answer: C
+
+Q10. Which hook dispatches actions?
+A. useAction
+B. useDispatch
+C. useReducer
+D. useStore
+Answer: B
+
+Q11. Redux state should be treated as:
+A. Mutable
+B. Immutable
+C. Global variable
+D. Temporary
+Answer: B
+
+Q12. Which method sends action to reducer?
+A. reduce()
+B. send()
+C. dispatch()
+D. emit()
+Answer: C
+
+Q13. Which component provides store to app?
+A. Provider
+B. Container
+C. StoreProvider
+D. Wrapper
+Answer: A
+
+Q14. Redux is most useful for:
+A. Small static apps
+B. Large state-heavy apps
+C. Simple forms only
+D. Styling
+Answer: B
+
+Q15. Redux state lives in:
+A. Components
+B. Browser DOM
+C. Central store
+D. Server
+Answer: C
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which function combines multiple reducers?
+A. mergeReducers
+B. joinReducers
+C. combineReducers
+D. mapReducers
+Answer: C
+
+Q17. Reducers must NOT:
+A. Return state
+B. Handle actions
+C. Mutate state
+D. Use switch
+Answer: C
+
+Q18. Which Redux principle enforces predictability?
+A. Single store
+B. Immutable state
+C. Pure reducers
+D. All of the above
+Answer: D
+
+Q19. Which hook replaces connect()?
+A. useStore
+B. useRedux
+C. useSelector & useDispatch
+D. useContext
+Answer: C
+
+Q20. Which middleware handles async logic?
+A. redux-logger
+B. redux-promise
+C. redux-thunk
+D. redux-devtools
+Answer: C
+
+Q21. Which Redux element describes “what happened”?
+A. Reducer
+B. Store
+C. Action
+D. Selector
+Answer: C
+
+Q22. Which Redux element describes “how state changes”?
+A. Action
+B. Reducer
+C. Store
+D. Provider
+Answer: B
+
+Q23. Which method subscribes to store updates?
+A. store.listen()
+B. store.watch()
+C. store.subscribe()
+D. store.observe()
+Answer: C
+
+Q24. Which tool debugs Redux visually?
+A. Redux Logger
+B. Redux DevTools
+C. React Profiler
+D. Chrome Console
+Answer: B
+
+Q25. Which pattern avoids prop drilling?
+A. Lifting state
+B. Context API
+C. Redux store
+D. Inline handlers
+Answer: C
+
+Q26. Which Redux rule enforces single source of truth?
+A. One reducer
+B. One store
+C. One component
+D. One action
+Answer: B
+
+Q27. Which hook causes component re-render on state change?
+A. useDispatch
+B. useReducer
+C. useSelector
+D. useStore
+Answer: C
+
+Q28. Which middleware logs actions and state?
+A. redux-thunk
+B. redux-promise
+C. redux-logger
+D. redux-saga
+Answer: C
+
+Q29. Which Redux feature improves testability?
+A. Side effects
+B. Pure reducers
+C. Global state
+D. DOM access
+Answer: B
+
+Q30. Which Redux API exposes current state?
+A. store.state
+B. store.get()
+C. store.getState()
+D. store.read()
+Answer: C
+
+Q31. Which async approach is simplest?
+A. redux-saga
+B. redux-observable
+C. redux-thunk
+D. generators
+Answer: C
+
+Q32. Which Redux element should never contain logic?
+A. Reducer
+B. Action
+C. Store
+D. Selector
+Answer: B
+
+Q33. Which selector optimization improves performance?
+A. Inline selectors
+B. Memoized selectors
+C. Global selectors
+D. Anonymous functions
+Answer: B
+
+Q34. Which hook replaces mapStateToProps?
+A. useDispatch
+B. useStore
+C. useSelector
+D. useContext
+Answer: C
+
+Q35. Redux integrates with React via:
+A. Hooks only
+B. HOCs only
+C. react-redux bindings
+D. Context only
+Answer: C
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Which Redux principle forbids multiple stores?
+A. Immutability
+B. Single source of truth
+C. Pure functions
+D. Middleware
+Answer: B
+
+Q37. Which action structure is recommended?
+A. Any object
+B. Flux Standard Action
+C. Function action
+D. Class-based action
+Answer: B
+
+Q38. Which misuse breaks Redux predictability?
+A. Pure reducers
+B. Immutable updates
+C. Side effects in reducers
+D. Central store
+Answer: C
+
+Q39. Which middleware enables delayed dispatch?
+A. redux-logger
+B. redux-thunk
+C. redux-devtools
+D. redux-persist
+Answer: B
+
+Q40. Which Redux feature minimizes re-renders?
+A. Multiple stores
+B. Selector memoization
+C. Global state
+D. Inline reducers
+Answer: B
+
+Q41. Which hook combination is most idiomatic today?
+A. connect() + mapDispatch
+B. useReducer only
+C. useSelector + useDispatch
+D. Context only
+Answer: C
+
+Q42. Which async middleware is generator-based?
+A. redux-thunk
+B. redux-promise
+C. redux-saga
+D. redux-logger
+Answer: C
+
+Q43. Which Redux anti-pattern hurts scalability?
+A. Normalized state
+B. Flat reducers
+C. Deep nested state
+D. Modular reducers
+Answer: C
+
+Q44. Which state update causes silent bugs?
+A. Immutable spread
+B. Object.assign
+C. Direct mutation
+D. Reducer return
+Answer: C
+
+Q45. Which tool time-travels state?
+A. Logger
+B. Saga
+C. DevTools
+D. Thunk
+Answer: C
+
+Q46. Which Redux principle simplifies debugging?
+A. Central store
+B. Pure reducers
+C. Action logging
+D. All of the above
+Answer: D
+
+Q47. Which scenario justifies Redux?
+A. Local component state
+B. Deep shared global state
+C. Simple static UI
+D. CSS handling
+Answer: B
+
+Q48. Which hook misuse causes extra renders?
+A. useDispatch
+B. useSelector without memoization
+C. Provider
+D. combineReducers
+Answer: B
+
+Q49. Which pattern complements Redux for side effects?
+A. Hooks
+B. Middleware
+C. Reducers
+D. Selectors
+Answer: B
+
+Q50. React-Redux architecture primarily improves:
+A. Styling
+B. Predictability and scalability
+C. Animation
+D. Bundle size
+Answer: B
 ------------------------------------------------------------------------------------------------
+PG-DAC – CCEE MOCK EXAM PAPER
+
+Web Programming Technologies
+Total Questions: 100 | Each Question: 1 Mark
+All questions are compulsory
+
+SECTION A – Web Architecture, HTML, CSS (20 MCQs)
+
+Q1. Which protocol is stateless by design?
+A. FTP
+B. HTTP
+C. SMTP
+D. TCP
+Ans: B
+
+Q2. Which HTTP status code indicates “Not Found”?
+A. 200
+B. 301
+C. 403
+D. 404
+Ans: D
+
+Q3. DNS is primarily used for:
+A. Encrypting data
+B. Translating domain names to IP addresses
+C. Managing sessions
+D. Load balancing
+Ans: B
+
+Q4. Which HTML tag is semantic?
+A. <div>
+B. <span>
+C. <section>
+D. <b>
+Ans: C
+
+Q5. Which HTML5 feature supports offline storage?
+A. Cookies
+B. LocalStorage
+C. Sessions
+D. Cache-Control
+Ans: B
+
+Q6. Which attribute improves accessibility?
+A. style
+B. class
+C. aria-label
+D. id
+Ans: C
+
+Q7. Which CSS property controls box size calculation?
+A. display
+B. position
+C. box-sizing
+D. overflow
+Ans: C
+
+Q8. Inline CSS has:
+A. Lowest priority
+B. Medium priority
+C. Highest priority
+D. No priority
+Ans: C
+
+Q9. Which CSS unit is relative to viewport?
+A. em
+B. rem
+C. %
+D. vw
+Ans: D
+
+Q10. Bootstrap grid system is based on:
+A. 10 columns
+B. 12 columns
+C. 16 columns
+D. 24 columns
+Ans: B
+
+Q11. Which tag embeds video in HTML5?
+A. <media>
+B. <movie>
+C. <video>
+D. <embed>
+Ans: C
+
+Q12. Which input type validates email?
+A. text
+B. mail
+C. email
+D. validate
+Ans: C
+
+Q13. Which CSS property hides overflow content?
+A. hidden
+B. display
+C. overflow
+D. visibility
+Ans: C
+
+Q14. Which HTML element groups form controls?
+A. <group>
+B. <fieldset>
+C. <legend>
+D. <section>
+Ans: B
+
+Q15. Which tag is deprecated in HTML5?
+A. <center>
+B. <header>
+C. <footer>
+D. <nav>
+Ans: A
+
+Q16. Which protocol secures HTTP?
+A. SSL
+B. FTP
+C. HTTPS
+D. TLS
+Ans: C
+
+Q17. Which CSS selector targets class?
+A. #
+B. .
+C. *
+D. @
+Ans: B
+
+Q18. Which HTML element supports canvas drawing?
+A. <svg>
+B. <draw>
+C. <canvas>
+D. <graphics>
+Ans: C
+
+Q19. Which browser tool inspects DOM?
+A. Network
+B. Console
+C. Elements
+D. Sources
+Ans: C
+
+Q20. Which HTTP method is idempotent?
+A. POST
+B. PATCH
+C. PUT
+D. CONNECT
+Ans: C
+
+SECTION B – JavaScript, DOM, jQuery, JSON, AJAX (40 MCQs)
+
+Q21. JavaScript is:
+A. Compiled
+B. Interpreted
+C. Assembly
+D. Markup
+Ans: B
+
+Q22. Which keyword defines block scope?
+A. var
+B. let
+C. static
+D. define
+Ans: B
+
+Q23. typeof null returns:
+A. null
+B. undefined
+C. object
+D. number
+Ans: C
+
+Q24. Which loop executes at least once?
+A. for
+B. while
+C. do-while
+D. foreach
+Ans: C
+
+Q25. Which operator checks value and type?
+A. ==
+B. =
+C. ===
+D. !=
+Ans: C
+
+Q26. DOM represents document as:
+A. Stack
+B. Queue
+C. Tree
+D. Graph
+Ans: C
+
+Q27. Which method selects element by ID?
+A. querySelector()
+B. getElementsByClassName()
+C. getElementById()
+D. getElementsByTag()
+Ans: C
+
+Q28. Which event fires on form submission?
+A. click
+B. submit
+C. change
+D. load
+Ans: B
+
+Q29. Which RegEx symbol means “zero or more”?
+A. +
+B. ?
+C. *
+D. |
+Ans: C
+
+Q30. JSON keys must be:
+A. Unquoted
+B. Single-quoted
+C. Double-quoted
+D. Numeric
+Ans: C
+
+Q31. Which method converts object to JSON string?
+A. JSON.parse()
+B. JSON.stringify()
+C. toJSON()
+D. convert()
+Ans: B
+
+Q32. jQuery symbol is:
+A. @
+B. &
+C. $
+D. #
+Ans: C
+
+Q33. Which jQuery method binds events?
+A. bind()
+B. attach()
+C. on()
+D. hook()
+Ans: C
+
+Q34. Which jQuery method removes elements?
+A. empty()
+B. remove()
+C. detach()
+D. clear()
+Ans: B
+
+Q35. AJAX enables:
+A. Full page reload
+B. Partial page update
+C. Server compilation
+D. Encryption
+Ans: B
+
+Q36. XMLHttpRequest readyState 4 means:
+A. Opened
+B. Headers received
+C. Loading
+D. Done
+Ans: D
+
+Q37. Which status code means success?
+A. 302
+B. 404
+C. 500
+D. 200
+Ans: D
+
+Q38. Axios returns:
+A. Callback
+B. Event
+C. Promise
+D. Thread
+Ans: C
+
+Q39. Which keyword pauses async execution?
+A. wait
+B. then
+C. await
+D. stop
+Ans: C
+
+Q40. Which header enables CORS?
+A. Allow-Origin
+B. Access-Control-Allow-Origin
+C. Origin-Allow
+D. Cross-Origin
+Ans: B
+
+SECTION C – Node.js, Express, React, Redux (40 MCQs)
+
+Q41. Node.js runs on:
+A. JVM
+B. Browser
+C. V8 Engine
+D. CLR
+Ans: C
+
+Q42. Node.js is:
+A. Multi-threaded blocking
+B. Single-threaded non-blocking
+C. Multi-process blocking
+D. Threadless
+Ans: B
+
+Q43. Which module handles files?
+A. os
+B. path
+C. fs
+D. net
+Ans: C
+
+Q44. Which call blocks event loop?
+A. readFile()
+B. readFileSync()
+C. setTimeout()
+D. Promise.then()
+Ans: B
+
+Q45. Which command initializes npm?
+A. npm start
+B. npm install
+C. npm init
+D. npm build
+Ans: C
+
+Q46. Express is a:
+A. Database
+B. Framework
+C. Language
+D. Compiler
+Ans: B
+
+Q47. Middleware executes in:
+A. Reverse order
+B. Random order
+C. Declaration order
+D. Priority order
+Ans: C
+
+Q48. Which object sends response in Express?
+A. app
+B. req
+C. res
+D. router
+Ans: C
+
+Q49. React follows which paradigm?
+A. Imperative
+B. Declarative
+C. Procedural
+D. Functional only
+Ans: B
+
+Q50. JSX is converted to:
+A. HTML
+B. XML
+C. React.createElement
+D. DOM
+Ans: C
+
+Q51. Props are:
+A. Mutable
+B. Immutable
+C. Global
+D. Static
+Ans: B
+
+Q52. State is updated using:
+A. Direct assignment
+B. setState / useState
+C. Props
+D. DOM
+Ans: B
+
+Q53. Which hook manages state?
+A. useEffect
+B. useRef
+C. useState
+D. useMemo
+Ans: C
+
+Q54. Which hook handles side effects?
+A. useState
+B. useEffect
+C. useReducer
+D. useRef
+Ans: B
+
+Q55. Keys in React lists improve:
+A. Styling
+B. Debugging
+C. Reconciliation
+D. Routing
+Ans: C
+
+Q56. Error boundaries catch errors in:
+A. Event handlers
+B. Async code
+C. Render phase
+D. setTimeout
+Ans: C
+
+Q57. Redux follows:
+A. Two-way data flow
+B. Unidirectional data flow
+C. Circular flow
+D. Random flow
+Ans: B
+
+Q58. Redux reducer must be:
+A. Async
+B. Pure
+C. Class
+D. Stateful
+Ans: B
+
+Q59. Which Redux hook reads state?
+A. useDispatch
+B. useStore
+C. useSelector
+D. useReducer
+Ans: C
+
+Q60. Which Redux component provides store?
+A. Container
+B. Provider
+C. Wrapper
+D. Context
+Ans: B
 ------------------------------------------------------------------------------------------------
