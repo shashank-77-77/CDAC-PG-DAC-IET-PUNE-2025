@@ -973,9 +973,1713 @@ C. Each node exactly once
 D. Leaves only
 Answer: C
 ----------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------
+CLUSTER 4 – MCQ BANK
+(Sessions 10, 11 & 12: Searching & Sorting Algorithms)
+SECTION A — EASY LEVEL (10 MCQs)
 
+(Baseline clarity, scoring insurance)
+
+Q1. Linear search is also known as:
+A. Binary search
+B. Sequential search
+C. Indexed search
+D. Hash search
+Answer: B
+
+Q2. Binary search works only when the data is:
+A. Random
+B. Unique
+C. Sorted
+D. Indexed
+Answer: C
+
+Q3. Best-case time complexity of linear search is:
+A. O(n)
+B. O(log n)
+C. O(1)
+D. O(n²)
+Answer: C
+
+Q4. Which sorting algorithm repeatedly selects the smallest element?
+A. Bubble sort
+B. Selection sort
+C. Insertion sort
+D. Quick sort
+Answer: B
+
+Q5. Bubble sort works by:
+A. Dividing array
+B. Selecting pivots
+C. Swapping adjacent elements
+D. Using heap
+Answer: C
+
+Q6. Which sorting algorithm is based on divide and conquer?
+A. Insertion sort
+B. Selection sort
+C. Merge sort
+D. Bubble sort
+Answer: C
+
+Q7. Heap sort uses which data structure?
+A. Stack
+B. Queue
+C. Heap
+D. Tree only
+Answer: C
+
+Q8. A stable sorting algorithm preserves:
+A. Time complexity
+B. Memory usage
+C. Relative order of equal elements
+D. Pivot position
+Answer: C
+
+Q9. Worst-case time complexity of binary search is:
+A. O(1)
+B. O(n)
+C. O(log n)
+D. O(n log n)
+Answer: C
+
+Q10. Which sorting algorithm is best for nearly sorted data?
+A. Quick sort
+B. Heap sort
+C. Insertion sort
+D. Selection sort
+Answer: C
+
+SECTION B — HARD LEVEL (40 MCQs)
+
+(CCEE-grade, trap-aware, elimination-focused)
+
+Q11. Linear search outperforms binary search when:
+A. Dataset is large
+B. Dataset is sorted
+C. Dataset is small and unsorted
+D. Random access is costly
+Answer: C
+
+Q12. Binary search cannot be applied efficiently on:
+A. Arrays
+B. Linked lists
+C. Sorted arrays
+D. Static datasets
+Answer: B
+
+Q13. Average-case time complexity of linear search is:
+A. O(1)
+B. O(log n)
+C. O(n)
+D. O(n²)
+Answer: C
+
+Q14. Worst-case time complexity of selection sort is:
+A. O(n log n)
+B. O(n)
+C. O(n²)
+D. O(log n)
+Answer: C
+
+Q15. Selection sort is generally considered inefficient because it:
+A. Uses recursion
+B. Performs unnecessary comparisons
+C. Requires extra memory
+D. Is unstable always
+Answer: B
+
+Q16. Insertion sort worst-case occurs when the array is:
+A. Sorted
+B. Nearly sorted
+C. Reverse sorted
+D. Random
+Answer: C
+
+Q17. Time complexity of insertion sort in best case is:
+A. O(n²)
+B. O(log n)
+C. O(n)
+D. O(1)
+Answer: C
+
+Q18. Bubble sort can be optimized by:
+A. Reducing swaps
+B. Using recursion
+C. Adding a flag to detect no swaps
+D. Using binary search
+Answer: C
+
+Q19. Worst-case time complexity of bubble sort is:
+A. O(n log n)
+B. O(n)
+C. O(n²)
+D. O(log n)
+Answer: C
+
+Q20. Merge sort’s key disadvantage is:
+A. Poor average-case performance
+B. Instability
+C. Extra space requirement
+D. Recursive complexity
+Answer: C
+
+Q21. Merge sort guarantees O(n log n) because:
+A. It avoids recursion
+B. It always splits evenly
+C. Merge step is linear
+D. It uses heaps
+Answer: C
+
+Q22. Quick sort’s performance degrades when:
+A. Pivot is well chosen
+B. Input is random
+C. Input is already sorted and pivot is first/last
+D. Data size is small
+Answer: C
+
+Q23. Worst-case time complexity of quick sort is:
+A. O(n)
+B. O(n log n)
+C. O(log n)
+D. O(n²)
+Answer: D
+
+Q24. Average-case complexity of quick sort is:
+A. O(n)
+B. O(log n)
+C. O(n log n)
+D. O(n²)
+Answer: C
+
+Q25. Which sorting algorithm is NOT stable by default?
+A. Merge sort
+B. Insertion sort
+C. Bubble sort
+D. Quick sort
+Answer: D
+
+Q26. Heap sort always guarantees:
+A. Stability
+B. O(n log n) time
+C. In-place merge
+D. Recursive simplicity
+Answer: B
+
+Q27. Heap sort is generally slower in practice than quick sort because:
+A. It uses recursion
+B. Poor cache locality
+C. Extra memory
+D. Instability
+Answer: B
+
+Q28. Binary search reduces search space by:
+A. One element
+B. Two elements
+C. Half each iteration
+D. Logarithmic reduction
+Answer: C
+
+Q29. Binary search best-case occurs when:
+A. Element is absent
+B. Element is at middle
+C. Array is unsorted
+D. Array size is large
+Answer: B
+
+Q30. Sorting before searching is justified when:
+A. Only one search is needed
+B. Multiple searches are expected
+C. Data changes frequently
+D. Dataset is very small
+Answer: B
+
+Q31. Which algorithm performs minimum swaps?
+A. Bubble sort
+B. Insertion sort
+C. Selection sort
+D. Merge sort
+Answer: C
+
+Q32. Adaptive sorting algorithms perform better when:
+A. Input size increases
+B. Data is reverse sorted
+C. Data is partially sorted
+D. Data is random
+Answer: C
+
+Q33. In-place sorting means:
+A. No comparisons
+B. Sorting without extra memory
+C. Recursive sorting
+D. Stable sorting
+Answer: B
+
+Q34. Which sorting algorithm is both stable and in-place?
+A. Merge sort
+B. Quick sort
+C. Heap sort
+D. Insertion sort
+Answer: D
+
+Q35. Worst-case time complexity of heap construction is:
+A. O(n log n)
+B. O(n)
+C. O(log n)
+D. O(n²)
+Answer: B
+
+Q36. Which search algorithm has same best and worst-case complexity?
+A. Linear search
+B. Binary search
+C. Hashing
+D. Jump search
+Answer: A
+
+Q37. Merge sort is preferred over quick sort when:
+A. Memory is constrained
+B. Stability is required
+C. Input is random
+D. In-place sorting is needed
+Answer: B
+
+Q38. Comparison-based sorting has a lower bound of:
+A. O(n)
+B. O(log n)
+C. O(n log n)
+D. O(n²)
+Answer: C
+
+Q39. Which algorithm is most suitable for external sorting?
+A. Quick sort
+B. Heap sort
+C. Merge sort
+D. Insertion sort
+Answer: C
+
+Q40. Quick sort is considered cache-friendly because:
+A. Sequential access
+B. In-place partitioning
+C. No recursion
+D. Fixed pivot
+Answer: B
+
+Q41. Sorting stability is critical when:
+A. Keys are unique
+B. Data size is small
+C. Records have multiple keys
+D. Data is numeric
+Answer: C
+
+Q42. Binary search time complexity is logarithmic because:
+A. It uses recursion
+B. It skips elements
+C. Problem size halves each step
+D. It is sorted
+Answer: C
+
+Q43. Which algorithm degrades most with already sorted data?
+A. Merge sort
+B. Insertion sort
+C. Quick sort (poor pivot)
+D. Heap sort
+Answer: C
+
+Q44. If stability is irrelevant and memory is tight, best choice is:
+A. Merge sort
+B. Heap sort
+C. Bubble sort
+D. Insertion sort
+Answer: B
+
+Q45. Choosing a sorting algorithm is primarily driven by:
+A. Language syntax
+B. Programmer comfort
+C. Data characteristics and constraints
+D. Code length
+Answer: C
+----------------------------------------------------------------------------------------------
+CLUSTER 5 – MCQ BANK
+(Sessions 13–16: Hashing & Graphs)
+SECTION A — EASY LEVEL (10 MCQs)
+
+(Concept anchoring, low-risk scoring)
+
+Q1. Hashing is primarily used to:
+A. Sort data
+B. Reduce search time
+C. Compress files
+D. Traverse graphs
+Answer: B
+
+Q2. A hash table stores data using:
+A. Sequential indexing
+B. Tree hierarchy
+C. Key–value mapping
+D. Stack discipline
+Answer: C
+
+Q3. Collision in hashing occurs when:
+A. Table is full
+B. Two keys map to same index
+C. Hash function fails
+D. Data is sorted
+Answer: B
+
+Q4. Linear probing is a method of:
+A. Searching
+B. Sorting
+C. Collision resolution
+D. Traversal
+Answer: C
+
+Q5. Graphs consist of:
+A. Nodes only
+B. Edges only
+C. Vertices and edges
+D. Trees and arrays
+Answer: C
+
+Q6. BFS traversal uses which data structure?
+A. Stack
+B. Queue
+C. Heap
+D. Hash table
+Answer: B
+
+Q7. DFS traversal uses which structure internally?
+A. Queue
+B. Stack
+C. Heap
+D. Array
+Answer: B
+
+Q8. A weighted graph has:
+A. Direction only
+B. Loops only
+C. Weights on edges
+D. Cycles only
+Answer: C
+
+Q9. Dijkstra’s algorithm is used for:
+A. Minimum spanning tree
+B. Topological sort
+C. Shortest path
+D. Graph coloring
+Answer: C
+
+Q10. Adjacency matrix representation consumes:
+A. O(V + E) space
+B. O(E²) space
+C. O(V²) space
+D. O(log V) space
+Answer: C
+
+SECTION B — HARD LEVEL (40 MCQs)
+
+(CCEE-grade, abstraction-stress-tested)
+
+Q11. Average-case time complexity of search in a hash table is:
+A. O(n)
+B. O(log n)
+C. O(1)
+D. O(n log n)
+Answer: C
+
+Q12. Worst-case complexity of hashing degrades to O(n) when:
+A. Hash function is perfect
+B. Load factor is low
+C. Excessive collisions occur
+D. Table size is prime
+Answer: C
+
+Q13. Load factor in hashing is defined as:
+A. Table size / number of keys
+B. Number of keys / table size
+C. Collision count
+D. Hash range
+Answer: B
+
+Q14. Chaining resolves collisions by:
+A. Probing next slot
+B. Rehashing keys
+C. Linked list at each index
+D. Using AVL trees
+Answer: C
+
+Q15. Linear probing suffers from:
+A. Secondary clustering
+B. Primary clustering
+C. No clustering
+D. Memory overflow
+Answer: B
+
+Q16. Quadratic probing reduces:
+A. Collisions
+B. Load factor
+C. Primary clustering
+D. Hash computation
+Answer: C
+
+Q17. Double hashing reduces:
+A. Memory usage
+B. Secondary clustering
+C. Table size
+D. Key range
+Answer: B
+
+Q18. Hashing performs poorly when:
+A. Keys are random
+B. Load factor approaches 1
+C. Table size is prime
+D. Keys are numeric
+Answer: B
+
+Q19. Fibonacci optimization using hashing exploits:
+A. Greedy choice
+B. Memoization
+C. Backtracking
+D. Sorting
+Answer: B
+
+Q20. A graph with edges having direction is called:
+A. Weighted graph
+B. Cyclic graph
+C. Directed graph
+D. Connected graph
+Answer: C
+
+Q21. Maximum number of edges in a simple undirected graph with V vertices is:
+A. V²
+B. V(V − 1)
+C. V(V − 1)/2
+D. V − 1
+Answer: C
+
+Q22. A graph with no cycles is called:
+A. Directed graph
+B. Complete graph
+C. Acyclic graph
+D. Dense graph
+Answer: C
+
+Q23. Adjacency list is preferred over matrix when:
+A. Graph is dense
+B. Graph is small
+C. Graph is sparse
+D. Graph is complete
+Answer: C
+
+Q24. Space complexity of adjacency list is:
+A. O(V²)
+B. O(E²)
+C. O(V + E)
+D. O(log V)
+Answer: C
+
+Q25. BFS traversal is ideal for finding:
+A. Cycles
+B. Connected components
+C. Shortest path in unweighted graph
+D. Topological order
+Answer: C
+
+Q26. DFS traversal is particularly useful for:
+A. Shortest path
+B. Cycle detection
+C. Minimum spanning tree
+D. Level order traversal
+Answer: B
+
+Q27. Dijkstra’s algorithm fails when graph contains:
+A. Cycles
+B. Directed edges
+C. Negative edge weights
+D. Multiple paths
+Answer: C
+
+Q28. Floyd–Warshall algorithm computes:
+A. Single-source shortest path
+B. All-pairs shortest path
+C. Minimum spanning tree
+D. Connected components
+Answer: B
+
+Q29. Time complexity of Floyd–Warshall is:
+A. O(V²)
+B. O(E log V)
+C. O(V³)
+D. O(V + E)
+Answer: C
+
+Q30. Minimum spanning tree contains:
+A. All vertices and all edges
+B. All vertices and minimum edges
+C. Minimum vertices
+D. Cycles
+Answer: B
+
+Q31. Prim’s algorithm is best suited for:
+A. Sparse graphs
+B. Dense graphs
+C. Directed graphs
+D. Unweighted graphs
+Answer: B
+
+Q32. Kruskal’s algorithm is based on:
+A. BFS
+B. DFS
+C. Greedy strategy
+D. Dynamic programming
+Answer: C
+
+Q33. Kruskal’s algorithm requires which pre-processing step?
+A. Vertex sorting
+B. Edge sorting
+C. Graph coloring
+D. Cycle detection only
+Answer: B
+
+Q34. Union–Find data structure is used in:
+A. Prim’s algorithm
+B. Dijkstra’s algorithm
+C. Kruskal’s algorithm
+D. Floyd–Warshall
+Answer: C
+
+Q35. A spanning tree of a graph with V vertices has:
+A. V edges
+B. V − 1 edges
+C. V + 1 edges
+D. Depends on graph
+Answer: B
+
+Q36. Graph traversal complexity using adjacency list is:
+A. O(V²)
+B. O(E²)
+C. O(V + E)
+D. O(log V)
+Answer: C
+
+Q37. Which algorithm is greedy but not guaranteed optimal in all cases?
+A. Dijkstra
+B. Prim
+C. Kruskal
+D. Greedy knapsack
+Answer: D
+
+Q38. Hash table deletion is complex in open addressing because:
+A. Keys are lost
+B. Table resizes
+C. Probing sequence must be preserved
+D. Load factor decreases
+Answer: C
+
+Q39. Which structure models real-world routing problems best?
+A. Tree
+B. Stack
+C. Graph
+D. Array
+Answer: C
+
+Q40. Dense graphs are best represented using:
+A. Adjacency list
+B. Edge list
+C. Adjacency matrix
+D. Hash table
+Answer: C
+
+Q41. Graph with every pair of vertices connected is called:
+A. Sparse graph
+B. Cyclic graph
+C. Complete graph
+D. Bipartite graph
+Answer: C
+
+Q42. Hash function quality directly impacts:
+A. Memory allocation
+B. Collision frequency
+C. Sorting order
+D. Traversal order
+Answer: B
+
+Q43. Graph traversal always visits:
+A. Root first
+B. Vertices randomly
+C. Each reachable vertex once
+D. Only leaf nodes
+Answer: C
+
+Q44. Which graph algorithm uses dynamic programming?
+A. Dijkstra
+B. Prim
+C. Kruskal
+D. Floyd–Warshall
+Answer: D
+
+Q45. Hash tables outperform binary search trees when:
+A. Data is sorted
+B. Order matters
+C. Fast lookup is priority
+D. Range queries are needed
+Answer: C
+----------------------------------------------------------------------------------------------
+CLUSTER 6 – MCQ BANK
+(Sessions 17 & 18: Algorithm Design Techniques)
+SECTION A — EASY LEVEL (10 MCQs)
+
+(Concept normalization, framework clarity)
+
+Q1. An algorithm is considered efficient primarily based on:
+A. Code length
+B. Execution time and space
+C. Programming language
+D. Developer experience
+Answer: B
+
+Q2. Divide and Conquer strategy works by:
+A. Solving subproblems independently
+B. Solving problems randomly
+C. Avoiding recursion
+D. Using greedy choice
+Answer: A
+
+Q3. Greedy algorithms make decisions based on:
+A. Global optimum
+B. Random selection
+C. Local optimum
+D. Exhaustive search
+Answer: C
+
+Q4. Dynamic programming is applicable when problems have:
+A. Independent subproblems
+B. Overlapping subproblems
+C. No recursion
+D. Constant input size
+Answer: B
+
+Q5. Worst-case complexity describes:
+A. Expected performance
+B. Best possible scenario
+C. Maximum time for given input size
+D. Average execution time
+Answer: C
+
+Q6. Space complexity refers to:
+A. CPU usage
+B. Disk I/O
+C. Memory usage
+D. Cache hits
+Answer: C
+
+Q7. Brute-force algorithms generally:
+A. Are optimal
+B. Avoid recursion
+C. Try all possibilities
+D. Use greedy choice
+Answer: C
+
+Q8. Backtracking algorithms improve brute-force by:
+A. Memoization
+B. Early pruning
+C. Sorting data
+D. Parallel execution
+Answer: B
+
+Q9. Branch and Bound is primarily used for:
+A. Sorting
+B. Optimization problems
+C. Searching arrays
+D. Hashing
+Answer: B
+
+Q10. Asymptotic analysis ignores:
+A. Input size
+B. Growth rate
+C. Constant factors
+D. Algorithm structure
+Answer: C
+
+SECTION B — HARD LEVEL (40 MCQs)
+
+(CCEE-grade, reasoning-centric, paradigm-sensitive)
+
+Q11. Divide and Conquer algorithms typically have complexity:
+A. O(n²)
+B. O(n log n)
+C. O(log n)
+D. O(1)
+Answer: B
+
+Q12. Which problem is best suited for greedy strategy?
+A. Matrix Chain Multiplication
+B. Longest Common Subsequence
+C. Activity Selection
+D. 0/1 Knapsack
+Answer: C
+
+Q13. Greedy algorithms fail when:
+A. Local optimum ≠ global optimum
+B. Input size is small
+C. Data is sorted
+D. Constraints are simple
+Answer: A
+
+Q14. Dynamic programming differs from divide and conquer because it:
+A. Uses recursion
+B. Avoids recursion
+C. Stores intermediate results
+D. Uses greedy choice
+Answer: C
+
+Q15. Memoization is a technique used in:
+A. Greedy algorithms
+B. Dynamic programming
+C. Divide and conquer
+D. Brute force
+Answer: B
+
+Q16. Tabulation approach in DP is:
+A. Top-down
+B. Bottom-up
+C. Recursive
+D. Random
+Answer: B
+
+Q17. Which problem demonstrates optimal substructure?
+A. Sorting
+B. Fibonacci sequence
+C. Linear search
+D. Hashing
+Answer: B
+
+Q18. Time complexity of naive recursive Fibonacci is:
+A. O(n)
+B. O(log n)
+C. O(2ⁿ)
+D. O(n²)
+Answer: C
+
+Q19. Dynamic programming optimizes Fibonacci by reducing:
+A. Space usage
+B. Recursion depth
+C. Re-computation
+D. Input size
+Answer: C
+
+Q20. Backtracking is most effective when:
+A. Search space is small
+B. Constraints are tight
+C. Problem is linear
+D. Solution is unique
+Answer: B
+
+Q21. N-Queens problem is a classic example of:
+A. Greedy algorithm
+B. Dynamic programming
+C. Backtracking
+D. Divide and conquer
+Answer: C
+
+Q22. Branch and Bound improves backtracking by:
+A. Eliminating recursion
+B. Using heuristics to prune
+C. Sorting choices
+D. Using DP tables
+Answer: B
+
+Q23. Which metric determines feasibility of an algorithm in real systems?
+A. Syntax simplicity
+B. Worst-case complexity
+C. Code elegance
+D. Compiler optimization
+Answer: B
+
+Q24. Average-case complexity is useful when:
+A. Worst case never occurs
+B. Inputs follow known distribution
+C. Input size is fixed
+D. Memory is unlimited
+Answer: B
+
+Q25. Best-case complexity alone is misleading because:
+A. It ignores memory
+B. It ignores rare worst cases
+C. It ignores recursion
+D. It ignores constants
+Answer: B
+
+Q26. Which algorithm design technique always guarantees optimal solution?
+A. Greedy
+B. Dynamic programming
+C. Heuristic search
+D. Stochastic algorithms
+Answer: B
+
+Q27. Stochastic algorithms rely on:
+A. Deterministic steps
+B. Exhaustive search
+C. Randomness
+D. Precomputation
+Answer: C
+
+Q28. Monte Carlo algorithms may produce:
+A. Correct output always
+B. Approximate output
+C. No output
+D. Deterministic output
+Answer: B
+
+Q29. Las Vegas algorithms differ from Monte Carlo by:
+A. Execution time variability
+B. Guaranteed correctness
+C. Use of recursion
+D. No randomness
+Answer: B
+
+Q30. Which class of algorithms explores all possibilities but prunes infeasible ones?
+A. Greedy
+B. Divide and conquer
+C. Backtracking
+D. Dynamic programming
+Answer: C
+
+Q31. Branch and Bound is particularly effective for:
+A. Sorting problems
+B. Optimization with constraints
+C. Tree traversal
+D. Searching arrays
+Answer: B
+
+Q32. Which problem is NOT suited for dynamic programming?
+A. Longest Common Subsequence
+B. Matrix Chain Multiplication
+C. Binary Search
+D. Coin Change
+Answer: C
+
+Q33. Space–time trade-off means:
+A. Reducing both space and time
+B. Increasing both space and time
+C. Using more memory to reduce time
+D. Using less memory to reduce time
+Answer: C
+
+Q34. Which analysis is hardware independent?
+A. Empirical analysis
+B. Experimental analysis
+C. Asymptotic analysis
+D. Benchmarking
+Answer: C
+
+Q35. Algorithm scalability refers to:
+A. Syntax flexibility
+B. Performance as input grows
+C. Portability
+D. Readability
+Answer: B
+
+Q36. Which paradigm is best for problems with overlapping subproblems?
+A. Greedy
+B. Divide and conquer
+C. Dynamic programming
+D. Brute force
+Answer: C
+
+Q37. Greedy algorithms are preferred when:
+A. Optimality is mandatory
+B. Approximation is acceptable
+C. Constraints are complex
+D. Overlapping subproblems exist
+Answer: B
+
+Q38. Brute-force algorithms are mainly used when:
+A. Problem size is large
+B. Constraints are tight
+C. Simplicity outweighs performance
+D. Optimality is critical
+Answer: C
+
+Q39. Algorithm design technique selection depends primarily on:
+A. Programming language
+B. Input constraints and problem nature
+C. Developer preference
+D. Available libraries
+Answer: B
+
+Q40. Which algorithm class explicitly trades accuracy for speed?
+A. Dynamic programming
+B. Greedy
+C. Stochastic
+D. Divide and conquer
+Answer: C
+
+Q41. Time complexity expresses growth relative to:
+A. Hardware speed
+B. Input size
+C. Code size
+D. Compiler version
+Answer: B
+
+Q42. A polynomial-time algorithm is generally considered:
+A. Inefficient
+B. Infeasible
+C. Efficient
+D. Optimal
+Answer: C
+
+Q43. Which paradigm systematically breaks problems into overlapping subproblems?
+A. Greedy
+B. Divide and conquer
+C. Dynamic programming
+D. Backtracking
+Answer: C
+
+Q44. Worst-case analysis is critical in:
+A. Gaming applications
+B. Safety-critical systems
+C. Small scripts
+D. Prototyping
+Answer: B
+
+Q45. The ultimate goal of algorithm design is to:
+A. Minimize code
+B. Maximize abstraction
+C. Solve problems efficiently under constraints
+D. Avoid recursion
+Answer: C
 ------------------------------------------------------------------------------------------------
+
+
+CCEE PG-DAC – DSA
+PREVIOUS-YEAR-PATTERN MOCK PAPER
+
+Total Questions: 50
+All Questions: MCQ (Single correct)
+Difficulty Mix: ~35% Easy | ~45% Moderate | ~20% Hard
+
+SECTION A – Problem Solving & Complexity
+
+Q1. A problem is said to be well-defined if:
+A. It has one solution
+B. Inputs and outputs are clearly specified
+C. It uses data structures
+D. It is solvable in polynomial time
+Answer: B
+
+Q2. Asymptotic analysis focuses on:
+A. Exact execution time
+B. Compiler optimizations
+C. Growth rate with respect to input size
+D. Hardware configuration
+Answer: C
+
+Q3. Worst-case complexity is critical because it:
+A. Occurs most frequently
+B. Guarantees minimum execution
+C. Provides upper bound assurance
+D. Optimizes average performance
+Answer: C
+
+Q4. If f(n) = 3n² + 5n + 7, then f(n) ∈:
+A. O(n)
+B. O(n log n)
+C. O(n²)
+D. O(2ⁿ)
+Answer: C
+
+Q5. Doubling input size in an O(n log n) algorithm approximately:
+A. Doubles time
+B. Quadruples time
+C. Increases by slightly more than 2×
+D. Increases by n
+Answer: C
+
+SECTION B – Linear Data Structures
+
+Q6. Stack follows which discipline?
+A. FIFO
+B. LIFO
+C. Priority
+D. Random
+Answer: B
+
+Q7. Stack overflow occurs when:
+A. Stack is empty
+B. POP on empty stack
+C. PUSH on full stack
+D. Memory is fragmented
+Answer: C
+
+Q8. Queue insertion happens at:
+A. Front
+B. Middle
+C. Rear
+D. Random
+Answer: C
+
+Q9. Circular queue primarily improves:
+A. Search speed
+B. Space utilization
+C. Traversal order
+D. Sorting efficiency
+Answer: B
+
+Q10. Which data structure best models function calls?
+A. Queue
+B. Heap
+C. Stack
+D. Graph
+Answer: C
+
+SECTION C – Linked Lists & Recursion
+
+Q11. Advantage of linked list over array is:
+A. Random access
+B. Cache efficiency
+C. Dynamic size
+D. Binary search
+Answer: C
+
+Q12. Each node in doubly linked list has:
+A. One pointer
+B. Two pointers
+C. Three pointers
+D. No pointers
+Answer: B
+
+Q13. Circular linked list traversal ends when:
+A. NULL is reached
+B. Head is revisited
+C. Tail is found
+D. Count becomes zero
+Answer: B
+
+Q14. Recursion requires which implicit structure?
+A. Queue
+B. Heap
+C. Stack
+D. Graph
+Answer: C
+
+Q15. Missing base condition in recursion leads to:
+A. Compilation error
+B. Logical error
+C. Infinite recursion
+D. Incorrect output only
+Answer: C
+
+SECTION D – Trees
+
+Q16. A tree with N nodes has how many edges?
+A. N
+B. N − 1
+C. N + 1
+D. Depends on structure
+Answer: B
+
+Q17. Inorder traversal of BST gives:
+A. Random order
+B. Reverse order
+C. Sorted order
+D. Level order
+Answer: C
+
+Q18. Worst-case height of BST with sorted insertion is:
+A. log n
+B. √n
+C. n
+D. n/2
+Answer: C
+
+Q19. AVL trees maintain balance using:
+A. Rehashing
+B. Heapification
+C. Rotations
+D. Traversals
+Answer: C
+
+Q20. BFS traversal internally uses:
+A. Stack
+B. Queue
+C. Heap
+D. Recursion
+Answer: B
+
+SECTION E – Searching & Sorting
+
+Q21. Binary search prerequisite is:
+A. Unique elements
+B. Sorted data
+C. Fixed size
+D. Linked list
+Answer: B
+
+Q22. Worst-case complexity of linear search is:
+A. O(1)
+B. O(log n)
+C. O(n)
+D. O(n log n)
+Answer: C
+
+Q23. Worst-case complexity of Quick Sort is:
+A. O(n log n)
+B. O(log n)
+C. O(n²)
+D. O(n)
+Answer: C
+
+Q24. Merge sort’s major drawback is:
+A. Instability
+B. Extra space
+C. Poor average case
+D. Recursion
+Answer: B
+
+Q25. Stable sorting is critical when:
+A. Keys are unique
+B. Data is numeric
+C. Records have multiple keys
+D. Input size is small
+Answer: C
+
+SECTION F – Hashing
+
+Q26. Average-case search time in hashing is:
+A. O(n)
+B. O(log n)
+C. O(1)
+D. O(n log n)
+Answer: C
+
+Q27. Collision occurs when:
+A. Hash table is full
+B. Two keys map to same index
+C. Hash function fails
+D. Load factor is zero
+Answer: B
+
+Q28. Linear probing suffers from:
+A. Secondary clustering
+B. No clustering
+C. Primary clustering
+D. Infinite loops
+Answer: C
+
+Q29. Chaining resolves collisions using:
+A. Arrays
+B. Trees
+C. Linked lists
+D. Stacks
+Answer: C
+
+Q30. High load factor implies:
+A. Better performance
+B. More collisions
+C. Less memory usage
+D. Faster insertion
+Answer: B
+
+SECTION G – Graphs
+
+Q31. Graph is composed of:
+A. Nodes only
+B. Edges only
+C. Vertices and edges
+D. Trees and arrays
+Answer: C
+
+Q32. BFS is best for:
+A. Cycle detection
+B. Shortest path in unweighted graph
+C. Topological sort
+D. MST
+Answer: B
+
+Q33. DFS is useful for:
+A. Shortest path
+B. Cycle detection
+C. Level traversal
+D. MST only
+Answer: B
+
+Q34. Dijkstra’s algorithm fails with:
+A. Directed graphs
+B. Cycles
+C. Negative edge weights
+D. Dense graphs
+Answer: C
+
+Q35. Adjacency matrix space complexity is:
+A. O(V + E)
+B. O(V²)
+C. O(E²)
+D. O(log V)
+Answer: B
+
+SECTION H – Algorithm Design Techniques
+
+Q36. Greedy algorithms choose:
+A. Global optimum
+B. Random option
+C. Local optimum
+D. Exhaustive solution
+Answer: C
+
+Q37. Dynamic programming applies when problems have:
+A. Independent subproblems
+B. Overlapping subproblems
+C. No recursion
+D. Constant input
+Answer: B
+
+Q38. N-Queens problem uses:
+A. Greedy
+B. Divide and conquer
+C. Backtracking
+D. DP
+Answer: C
+
+Q39. Branch and Bound improves by:
+A. Sorting choices
+B. Pruning non-optimal states
+C. Eliminating recursion
+D. Using DP tables
+Answer: B
+
+Q40. Polynomial-time algorithms are generally considered:
+A. Infeasible
+B. Efficient
+C. Optimal
+D. Trivial
+Answer: B
+
+SECTION I – Mixed Reasoning (High Discriminator)
+
+Q41. Best paradigm for matrix chain multiplication is:
+A. Greedy
+B. Backtracking
+C. Dynamic programming
+D. Divide and conquer only
+Answer: C
+
+Q42. Heap sort is slower in practice mainly due to:
+A. Recursion
+B. Instability
+C. Poor cache locality
+D. Extra memory
+Answer: C
+
+Q43. Hash tables outperform BSTs when:
+A. Order matters
+B. Range queries needed
+C. Fast lookup is priority
+D. Data is sorted
+Answer: C
+
+Q44. Worst-case analysis is mandatory in:
+A. Gaming
+B. UI design
+C. Safety-critical systems
+D. Prototyping
+Answer: C
+
+Q45. Which algorithm explicitly trades accuracy for speed?
+A. Dynamic programming
+B. Greedy
+C. Stochastic
+D. Divide and conquer
+Answer: C
+
+Q46. DFS without recursion requires:
+A. Queue
+B. Stack
+C. Heap
+D. Hash table
+Answer: B
+
+Q47. A complete binary tree is best stored using:
+A. Linked list
+B. Array
+C. Stack
+D. Graph
+Answer: B
+
+Q48. Best sorting algorithm for nearly sorted data is:
+A. Quick sort
+B. Heap sort
+C. Insertion sort
+D. Selection sort
+Answer: C
+
+Q49. Space-time trade-off implies:
+A. Reduce both
+B. Increase both
+C. Use more memory to save time
+D. Use less memory to save time
+Answer: C
+
+Q50. Core objective of algorithm design is to:
+A. Minimize code
+B. Maximize abstraction
+C. Solve problems efficiently under constraints
+D. Avoid recursion
+Answer: C
 ------------------------------------------------------------------------------------------------
+
+CCEE PG-DAC – FULL-LENGTH MOCK PAPER 1
+
+(DSA – Previous-Year Pattern Aligned)
+
+Questions 1–50
+
+Q1. A problem is said to be computationally solvable if it:
+A. Can be coded in C
+B. Has a finite sequence of well-defined steps
+C. Uses recursion
+D. Has only one solution
+Ans: B
+
+Q2. Which notation expresses upper bound growth?
+A. Θ
+B. Ω
+C. O
+D. Σ
+Ans: C
+
+Q3. If f(n)=5n³+2n+10, its complexity is:
+A. O(n)
+B. O(n²)
+C. O(n³)
+D. O(2ⁿ)
+Ans: C
+
+Q4. Stack discipline is best described as:
+A. FIFO
+B. LIFO
+C. Priority-based
+D. Random
+Ans: B
+
+Q5. Stack overflow occurs when:
+A. POP on empty stack
+B. PUSH on full stack
+C. Stack pointer is NULL
+D. Memory leaks
+Ans: B
+
+Q6. Circular queue improves:
+A. Searching
+B. Space utilization
+C. Sorting
+D. Traversal speed
+Ans: B
+
+Q7. Time complexity of PUSH in stack (array) is:
+A. O(n)
+B. O(log n)
+C. O(1)
+D. O(n²)
+Ans: C
+
+Q8. Linked lists outperform arrays when:
+A. Random access is needed
+B. Frequent insertions occur
+C. Cache locality matters
+D. Binary search is required
+Ans: B
+
+Q9. In a singly linked list, deletion requires traversal when deleting:
+A. Head node
+B. Tail node
+C. Known node with prev pointer
+D. Node with address only
+Ans: D
+
+Q10. Recursion internally uses:
+A. Heap
+B. Queue
+C. Stack
+D. Graph
+Ans: C
+
+Q11. Missing base condition leads to:
+A. Compile error
+B. Infinite recursion
+C. Logical optimization
+D. Early termination
+Ans: B
+
+Q12. A tree with N nodes has edges equal to:
+A. N
+B. N−1
+C. N+1
+D. Depends on tree
+Ans: B
+
+Q13. Inorder traversal of BST produces:
+A. Random output
+B. Reverse sorted
+C. Sorted order
+D. Level order
+Ans: C
+
+Q14. Worst-case height of skewed BST with n nodes is:
+A. log n
+B. √n
+C. n
+D. n/2
+Ans: C
+
+Q15. AVL trees maintain balance using:
+A. Heapify
+B. Rehashing
+C. Rotations
+D. Traversals
+Ans: C
+
+Q16. BFS traversal uses:
+A. Stack
+B. Queue
+C. Heap
+D. Recursion
+Ans: B
+
+Q17. Binary search requires data to be:
+A. Unique
+B. Indexed
+C. Sorted
+D. Static
+Ans: C
+
+Q18. Worst-case complexity of linear search is:
+A. O(1)
+B. O(log n)
+C. O(n)
+D. O(n log n)
+Ans: C
+
+Q19. Worst-case complexity of Quick Sort is:
+A. O(n)
+B. O(n log n)
+C. O(n²)
+D. O(log n)
+Ans: C
+
+Q20. Merge sort disadvantage is:
+A. Instability
+B. Extra space
+C. Poor worst case
+D. No recursion
+Ans: B
+
+Q21. Stable sorting is important when:
+A. Keys are unique
+B. Data is numeric
+C. Records have multiple keys
+D. Input size is small
+Ans: C
+
+Q22. Average-case search in hash table is:
+A. O(n)
+B. O(log n)
+C. O(1)
+D. O(n log n)
+Ans: C
+
+Q23. Collision occurs when:
+A. Table is full
+B. Keys map to same index
+C. Hash fails
+D. Load factor is zero
+Ans: B
+
+Q24. Linear probing suffers from:
+A. Secondary clustering
+B. No clustering
+C. Primary clustering
+D. Rehashing
+Ans: C
+
+Q25. Chaining uses:
+A. Arrays
+B. Trees
+C. Linked lists
+D. Stacks
+Ans: C
+
+Q26. Graph is composed of:
+A. Nodes only
+B. Edges only
+C. Vertices and edges
+D. Trees
+Ans: C
+
+Q27. BFS finds shortest path in:
+A. Weighted graph
+B. Directed graph
+C. Unweighted graph
+D. Cyclic graph
+Ans: C
+
+Q28. DFS is useful for:
+A. Shortest path
+B. Cycle detection
+C. MST
+D. Sorting
+Ans: B
+
+Q29. Dijkstra fails with:
+A. Cycles
+B. Dense graphs
+C. Negative edges
+D. Directed graphs
+Ans: C
+
+Q30. Floyd–Warshall computes:
+A. Single-source shortest path
+B. All-pairs shortest path
+C. MST
+D. Topological sort
+Ans: B
+
+Q31. Greedy algorithms choose:
+A. Global optimum
+B. Random choice
+C. Local optimum
+D. Exhaustive solution
+Ans: C
+
+Q32. Dynamic programming is effective when problems have:
+A. Independent subproblems
+B. Overlapping subproblems
+C. No recursion
+D. Constant input
+Ans: B
+
+Q33. N-Queens problem uses:
+A. Greedy
+B. Divide and conquer
+C. Backtracking
+D. DP
+Ans: C
+
+Q34. Branch and Bound improves by:
+A. Sorting data
+B. Pruning non-optimal states
+C. Eliminating recursion
+D. Hashing
+Ans: B
+
+Q35. Polynomial-time algorithms are considered:
+A. Infeasible
+B. Efficient
+C. Trivial
+D. Optimal
+Ans: B
+
+Q36. Worst-case analysis is crucial in:
+A. Games
+B. UI design
+C. Safety-critical systems
+D. Prototyping
+Ans: C
+
+Q37. Space-time trade-off implies:
+A. Reduce both
+B. Increase both
+C. Use more memory to save time
+D. Use less memory to save time
+Ans: C
+
+Q38. Heap sort is slower in practice due to:
+A. Recursion
+B. Instability
+C. Cache inefficiency
+D. Extra space
+Ans: C
+
+Q39. Complete binary tree is best stored using:
+A. Linked list
+B. Array
+C. Stack
+D. Graph
+Ans: B
+
+Q40. Insertion sort is best when data is:
+A. Reverse sorted
+B. Random
+C. Nearly sorted
+D. Large
+Ans: C
+
+Q41. Hash tables outperform BSTs when:
+A. Order matters
+B. Range queries needed
+C. Fast lookup is required
+D. Data is sorted
+Ans: C
+
+Q42. DFS without recursion requires:
+A. Queue
+B. Stack
+C. Heap
+D. Hash table
+Ans: B
+
+Q43. Time complexity measures growth relative to:
+A. Hardware speed
+B. Input size
+C. Compiler version
+D. Code length
+Ans: B
+
+Q44. A degenerate tree resembles:
+A. Graph
+B. Heap
+C. Linked list
+D. Array
+Ans: C
+
+Q45. Binary search best case occurs when:
+A. Element absent
+B. Element in middle
+C. Array is small
+D. Data is unsorted
+Ans: B
+
+Q46. Load factor close to 1 implies:
+A. Fewer collisions
+B. Better performance
+C. More collisions
+D. Faster insertion
+Ans: C
+
+Q47. Adjacency list space complexity is:
+A. O(V²)
+B. O(E²)
+C. O(V+E)
+D. O(log V)
+Ans: C
+
+Q48. MST of a graph with V vertices has edges:
+A. V
+B. V−1
+C. V+1
+D. Depends on graph
+Ans: B
+
+Q49. Dynamic programming primarily reduces:
+A. Space
+B. Recursion
+C. Re-computation
+D. Input size
+Ans: C
+
+Q50. Core objective of algorithm design is to:
+A. Minimize code
+B. Maximize abstraction
+C. Solve efficiently under constraints
+D. Avoid recursion
+Ans: C
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
