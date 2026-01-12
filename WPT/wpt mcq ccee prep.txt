@@ -3979,10 +3979,1454 @@ C. Graphics rendering
 D. Scientific computing
 Answer: B
 ------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------
+Session 16 – Node.js Modules & npm
 
-------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------
+(Modules, exports/require, npm, package.json)
+50 MCQs | CCEE-Optimized | Easy–Medium–Hard Mix
+(Options + Correct Answer)
 
+Easy Level (Fast Conversion – 15 MCQs)
+
+Q1. A Node.js module is:
+A. A process
+B. A reusable block of code
+C. A thread
+D. A server
+Answer: B
+
+Q2. Node.js uses which module system by default?
+A. ES Modules
+B. AMD
+C. CommonJS
+D. UMD
+Answer: C
+
+Q3. Which keyword imports a module?
+A. import
+B. include
+C. require
+D. load
+Answer: C
+
+Q4. Which object exports module content?
+A. exports
+B. module.exports
+C. expose
+D. publish
+Answer: B
+
+Q5. Which file stores project metadata?
+A. node.json
+B. package.json
+C. project.json
+D. config.json
+Answer: B
+
+Q6. Which command initializes npm project?
+A. npm start
+B. npm init
+C. npm install
+D. npm build
+Answer: B
+
+Q7. Which command installs a package locally?
+A. npm get
+B. npm install
+C. npm fetch
+D. npm load
+Answer: B
+
+Q8. Which directory stores installed packages?
+A. lib
+B. modules
+C. node_modules
+D. packages
+Answer: C
+
+Q9. Which command installs package globally?
+A. npm install
+B. npm install -g
+C. npm global
+D. npm add -g
+Answer: B
+
+Q10. Which field defines entry file?
+A. start
+B. index
+C. main
+D. script
+Answer: C
+
+Q11. Which file locks dependency versions?
+A. package.json
+B. node.json
+C. package-lock.json
+D. lock.json
+Answer: C
+
+Q12. Which command removes a package?
+A. npm delete
+B. npm uninstall
+C. npm remove-all
+D. npm clean
+Answer: B
+
+Q13. Which scope applies to local modules?
+A. System-wide
+B. Project-only
+C. Global
+D. OS-level
+Answer: B
+
+Q14. Which keyword exports multiple members?
+A. export
+B. this
+C. module.exports
+D. expose
+Answer: C
+
+Q15. npm stands for:
+A. Node Package Manager
+B. New Package Manager
+C. Network Package Manager
+D. Node Process Manager
+Answer: A
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which module type is loaded fastest?
+A. Local
+B. External
+C. Built-in
+D. Dynamic
+Answer: C
+
+Q17. Which built-in module handles file paths?
+A. fs
+B. os
+C. path
+D. url
+Answer: C
+
+Q18. Which built-in module handles events?
+A. stream
+B. events
+C. util
+D. buffer
+Answer: B
+
+Q19. Which command updates dependencies?
+A. npm refresh
+B. npm update
+C. npm upgrade
+D. npm sync
+Answer: B
+
+Q20. Which field lists dependencies?
+A. devDependencies
+B. scripts
+C. dependencies
+D. config
+Answer: C
+
+Q21. Which field lists dev-only packages?
+A. dependencies
+B. peerDependencies
+C. optionalDependencies
+D. devDependencies
+Answer: D
+
+Q22. Which keyword exports a single function?
+A. exports.fn
+B. module.exports
+C. export default
+D. this.fn
+Answer: B
+
+Q23. Which npm command lists installed packages?
+A. npm show
+B. npm list
+C. npm view
+D. npm info
+Answer: B
+
+Q24. Which file should be ignored in Git?
+A. package.json
+B. README.md
+C. node_modules
+D. package-lock.json
+Answer: C
+
+Q25. Which npm script runs with npm start?
+A. build
+B. test
+C. start
+D. run
+Answer: C
+
+Q26. Which module resolves relative paths?
+A. fs
+B. path
+C. os
+D. util
+Answer: B
+
+Q27. Which npm flag installs dev dependency?
+A. --save
+B. --dev
+C. --save-dev
+D. --only-dev
+Answer: C
+
+Q28. Which keyword creates module-level scope?
+A. global
+B. this
+C. module
+D. file
+Answer: C
+
+Q29. Which file ensures reproducible builds?
+A. package.json
+B. package-lock.json
+C. node.json
+D. npmrc
+Answer: B
+
+Q30. Which command executes custom script?
+A. npm exec
+B. npm script
+C. npm run
+D. npm start
+Answer: C
+
+Q31. Which dependency is required by host project?
+A. peerDependency
+B. devDependency
+C. optionalDependency
+D. dependency
+Answer: A
+
+Q32. Which npm command shows package info?
+A. npm list
+B. npm info
+C. npm view
+D. Both B and C
+Answer: D
+
+Q33. Which module wraps each file?
+A. global
+B. function wrapper
+C. IIFE
+D. module scope
+Answer: B
+
+Q34. Which keyword exposes module interface?
+A. exports
+B. module.exports
+C. both A and B
+D. expose
+Answer: C
+
+Q35. Which npm command clears cache?
+A. npm clean
+B. npm cache clean
+C. npm flush
+D. npm reset
+Answer: B
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Which statement about CommonJS is true?
+A. Static imports
+B. Async by default
+C. Dynamic require
+D. Browser-only
+Answer: C
+
+Q37. Which module is loaded once and cached?
+A. Local
+B. External
+C. All required modules
+D. Global
+Answer: C
+
+Q38. Which export overwrites previous exports?
+A. exports.fn =
+B. module.exports =
+C. this.fn =
+D. export default
+Answer: B
+
+Q39. Which npm field enforces engine version?
+A. runtime
+B. engines
+C. node
+D. version
+Answer: B
+
+Q40. Which file defines binary commands?
+A. scripts
+B. bin
+C. main
+D. exec
+Answer: B
+
+Q41. Which npm install avoids dev dependencies?
+A. npm install --prod
+B. npm install --no-dev
+C. npm install --only-dev
+D. npm install --clean
+Answer: A
+
+Q42. Which command audits vulnerabilities?
+A. npm check
+B. npm scan
+C. npm audit
+D. npm secure
+Answer: C
+
+Q43. Which scenario breaks module caching?
+A. Same path require
+B. Different relative paths
+C. Built-in modules
+D. Single import
+Answer: B
+
+Q44. Which npm file should NOT be manually edited?
+A. package.json
+B. package-lock.json
+C. README.md
+D. .npmrc
+Answer: B
+
+Q45. Which npm feature enforces semantic versioning?
+A. caret (^)
+B. tilde (~)
+C. exact version
+D. All of the above
+Answer: D
+
+Q46. Which dependency resolves version conflicts?
+A. peerDependency
+B. dependency tree
+C. lockfile
+D. npm registry
+Answer: C
+
+Q47. Which module pattern avoids global pollution?
+A. Global variables
+B. Module scope
+C. Window object
+D. Prototype
+Answer: B
+
+Q48. Which require path loads built-in module?
+A. ./fs
+B. ../fs
+C. fs
+D. /fs
+Answer: C
+
+Q49. Which npm command links local package?
+A. npm attach
+B. npm bind
+C. npm link
+D. npm alias
+Answer: C
+
+Q50. Node.js module resolution order begins with:
+A. node_modules
+B. Core modules
+C. Local files
+D. Global modules
+Answer: B
+------------------------------------------------------------------------------------------------
+Session 17 – Node.js Modules: fs & http
+
+(File I/O, Sync vs Async, HTTP Server, GET/POST)
+50 MCQs | CCEE-Optimized | Easy–Medium–Hard Mix
+(Options + Correct Answer)
+
+Easy Level (Quick-Win Coverage – 15 MCQs)
+
+Q1. The fs module is used for:
+A. Networking
+B. File system operations
+C. Event handling
+D. Process control
+Answer: B
+
+Q2. Which method reads a file asynchronously?
+A. readFileSync()
+B. read()
+C. readFile()
+D. openSync()
+Answer: C
+
+Q3. Which method reads a file synchronously?
+A. readFile()
+B. read()
+C. readFileSync()
+D. open()
+Answer: C
+
+Q4. Which module is used to create an HTTP server?
+A. net
+B. http
+C. https
+D. url
+Answer: B
+
+Q5. Which method creates a server in Node.js?
+A. http.newServer()
+B. http.create()
+C. http.createServer()
+D. server.create()
+Answer: C
+
+Q6. Which HTTP method retrieves data?
+A. POST
+B. PUT
+C. GET
+D. DELETE
+Answer: C
+
+Q7. Which HTTP method sends data to server?
+A. GET
+B. POST
+C. HEAD
+D. OPTIONS
+Answer: B
+
+Q8. Which method writes data to a file asynchronously?
+A. writeFileSync()
+B. write()
+C. writeFile()
+D. appendSync()
+Answer: C
+
+Q9. Which method appends data to file?
+A. appendFile()
+B. writeFile()
+C. readFile()
+D. open()
+Answer: A
+
+Q10. Which object represents request in HTTP server?
+A. response
+B. server
+C. req
+D. res
+Answer: C
+
+Q11. Which object sends response to client?
+A. request
+B. server
+C. req
+D. res
+Answer: D
+
+Q12. Which header defines content type?
+A. Host
+B. Accept
+C. Content-Type
+D. Cache-Control
+Answer: C
+
+Q13. Which function ends HTTP response?
+A. res.stop()
+B. res.send()
+C. res.end()
+D. res.finish()
+Answer: C
+
+Q14. Which fs method deletes a file?
+A. delete()
+B. unlink()
+C. remove()
+D. erase()
+Answer: B
+
+Q15. Which method checks file existence (deprecated)?
+A. exists()
+B. access()
+C. stat()
+D. open()
+Answer: A
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which fs method creates a directory?
+A. mkdir()
+B. createDir()
+C. makeDir()
+D. newDir()
+Answer: A
+
+Q17. Which fs method reads directory contents?
+A. readDir()
+B. readdir()
+C. listDir()
+D. scanDir()
+Answer: B
+
+Q18. Which fs method provides file metadata?
+A. info()
+B. details()
+C. stat()
+D. meta()
+Answer: C
+
+Q19. Which fs call blocks event loop?
+A. readFile()
+B. writeFile()
+C. readFileSync()
+D. appendFile()
+Answer: C
+
+Q20. Which status code indicates successful response?
+A. 301
+B. 404
+C. 500
+D. 200
+Answer: D
+
+Q21. Which HTTP status code indicates client error?
+A. 2xx
+B. 3xx
+C. 4xx
+D. 5xx
+Answer: C
+
+Q22. Which method sets response headers?
+A. res.header()
+B. res.setHeader()
+C. res.addHeader()
+D. res.append()
+Answer: B
+
+Q23. Which fs method changes file permissions?
+A. chmod()
+B. change()
+C. access()
+D. perm()
+Answer: A
+
+Q24. Which encoding is commonly used for text files?
+A. ASCII
+B. UTF-8
+C. UTF-16
+D. Binary
+Answer: B
+
+Q25. Which HTTP method is idempotent?
+A. POST
+B. PATCH
+C. GET
+D. CONNECT
+Answer: C
+
+Q26. Which fs method renames a file?
+A. rename()
+B. move()
+C. change()
+D. renameFile()
+Answer: A
+
+Q27. Which Node.js server listens on port?
+A. http.create()
+B. server.open()
+C. server.listen()
+D. server.run()
+Answer: C
+
+Q28. Which HTTP method retrieves headers only?
+A. GET
+B. POST
+C. HEAD
+D. OPTIONS
+Answer: C
+
+Q29. Which fs method checks file accessibility?
+A. exists()
+B. stat()
+C. access()
+D. chmod()
+Answer: C
+
+Q30. Which status code indicates “Not Found”?
+A. 401
+B. 403
+C. 404
+D. 500
+Answer: C
+
+Q31. Which Node.js module handles streaming data?
+A. fs
+B. stream
+C. buffer
+D. events
+Answer: B
+
+Q32. Which response header controls caching?
+A. Accept
+B. Content-Type
+C. Cache-Control
+D. User-Agent
+Answer: C
+
+Q33. Which HTTP method updates a resource completely?
+A. POST
+B. PATCH
+C. PUT
+D. DELETE
+Answer: C
+
+Q34. Which fs call appends data synchronously?
+A. appendFile()
+B. writeFile()
+C. appendFileSync()
+D. writeSync()
+Answer: C
+
+Q35. Which server property holds request URL?
+A. req.host
+B. req.url
+C. req.path
+D. req.route
+Answer: B
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Which fs operation is non-blocking?
+A. readFileSync()
+B. writeFileSync()
+C. readFile()
+D. statSync()
+Answer: C
+
+Q37. Which Node.js server handles concurrency?
+A. Thread pool
+B. Worker threads
+C. Event loop
+D. Forked process
+Answer: C
+
+Q38. Which HTTP status code means “Created”?
+A. 200
+B. 201
+C. 202
+D. 204
+Answer: B
+
+Q39. Which fs method returns a promise variant?
+A. fs.readFile()
+B. fs.promises.readFile()
+C. fs.sync.read()
+D. fs.async.read()
+Answer: B
+
+Q40. Which operation can block Node.js scalability?
+A. Async I/O
+B. Event loop
+C. Synchronous file access
+D. Callbacks
+Answer: C
+
+Q41. Which HTTP header defines response size?
+A. Content-Type
+B. Content-Length
+C. Accept-Length
+D. Data-Length
+Answer: B
+
+Q42. Which fs API is preferred in modern Node.js?
+A. Callback-based
+B. Promise-based
+C. Sync
+D. Deprecated
+Answer: B
+
+Q43. Which HTTP method is unsafe?
+A. GET
+B. HEAD
+C. POST
+D. OPTIONS
+Answer: C
+
+Q44. Which server method handles POST body?
+A. req.query
+B. req.body
+C. req.on('data')
+D. req.form
+Answer: C
+
+Q45. Which fs operation scales best for large files?
+A. readFile()
+B. readFileSync()
+C. Streams
+D. Buffers
+Answer: C
+
+Q46. Which status code indicates internal server error?
+A. 404
+B. 403
+C. 500
+D. 503
+Answer: C
+
+Q47. Which Node.js feature improves file upload handling?
+A. Sync I/O
+B. Streams
+C. Threads
+D. Buffers only
+Answer: B
+
+Q48. Which HTTP method checks server capability?
+A. OPTIONS
+B. TRACE
+C. CONNECT
+D. HEAD
+Answer: A
+
+Q49. Which fs call throws error if file missing?
+A. exists()
+B. stat()
+C. access()
+D. open()
+Answer: B
+
+Q50. Node.js HTTP server is best suited for:
+A. CPU-heavy computation
+B. Blocking I/O workloads
+C. High-concurrency I/O apps
+D. Desktop applications
+Answer: C
+------------------------------------------------------------------------------------------------
+Session 18 – Introduction to Express.js
+
+(Express Basics, Routes, Middleware, Templates)
+50 MCQs | CCEE-Optimized | Easy–Medium–Hard Mix
+
+Easy Level (Quick Marks – 15 MCQs)
+
+Q1. Express.js is a:
+A. Database
+B. Web application framework
+C. Programming language
+D. Frontend library
+Answer: B
+
+Q2. Express.js is built on top of:
+A. React
+B. Node.js
+C. MongoDB
+D. Angular
+Answer: B
+
+Q3. Which command installs Express locally?
+A. npm add express
+B. npm get express
+C. npm install express
+D. npm load express
+Answer: C
+
+Q4. Which method creates an Express application?
+A. express.new()
+B. express()
+C. createExpress()
+D. new express()
+Answer: B
+
+Q5. Which object handles incoming requests?
+A. app
+B. req
+C. res
+D. router
+Answer: B
+
+Q6. Which object sends response to client?
+A. app
+B. router
+C. req
+D. res
+Answer: D
+
+Q7. Which Express method defines GET route?
+A. app.use()
+B. app.route()
+C. app.get()
+D. app.fetch()
+Answer: C
+
+Q8. Which method starts Express server?
+A. app.run()
+B. app.listen()
+C. app.start()
+D. app.open()
+Answer: B
+
+Q9. Which middleware parses JSON body?
+A. express.urlencoded()
+B. bodyParser.json()
+C. express.json()
+D. jsonParser()
+Answer: C
+
+Q10. Which HTTP method submits data?
+A. GET
+B. POST
+C. HEAD
+D. OPTIONS
+Answer: B
+
+Q11. Which Express object stores app-level settings?
+A. req
+B. res
+C. app
+D. router
+Answer: C
+
+Q12. Which template engine uses <% %> syntax?
+A. Pug
+B. Handlebars
+C. EJS
+D. Mustache
+Answer: C
+
+Q13. Which directory serves static files?
+A. views
+B. public
+C. static
+D. assets
+Answer: B
+
+Q14. Which middleware logs requests?
+A. body-parser
+B. morgan
+C. multer
+D. cookie-parser
+Answer: B
+
+Q15. Which function passes control to next middleware?
+A. forward()
+B. pass()
+C. next()
+D. move()
+Answer: C
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which Express method handles all HTTP methods?
+A. app.all()
+B. app.use()
+C. app.route()
+D. app.any()
+Answer: A
+
+Q17. Which middleware serves static files?
+A. express.static()
+B. serveFiles()
+C. app.static()
+D. fileServer()
+Answer: A
+
+Q18. Which method sets HTTP status code?
+A. res.code()
+B. res.status()
+C. res.sendStatus()
+D. Both B and C
+Answer: D
+
+Q19. Which middleware parses URL-encoded data?
+A. express.json()
+B. express.urlencoded()
+C. bodyParser.raw()
+D. queryParser()
+Answer: B
+
+Q20. Which Express object handles grouped routes?
+A. app
+B. router
+C. req
+D. res
+Answer: B
+
+Q21. Which function renders a template?
+A. res.send()
+B. res.render()
+C. res.view()
+D. app.render()
+Answer: B
+
+Q22. Which Express method mounts middleware?
+A. app.mount()
+B. app.use()
+C. app.attach()
+D. app.add()
+Answer: B
+
+Q23. Which middleware handles file uploads?
+A. morgan
+B. multer
+C. body-parser
+D. cors
+Answer: B
+
+Q24. Which middleware handles cookies?
+A. cookie-parser
+B. body-parser
+C. session-parser
+D. json-parser
+Answer: A
+
+Q25. Which Express feature enables modular routing?
+A. app.use()
+B. express.Router()
+C. route chaining
+D. app.all()
+Answer: B
+
+Q26. Which HTTP response code means “OK”?
+A. 201
+B. 202
+C. 200
+D. 204
+Answer: C
+
+Q27. Which Express method chains routes?
+A. app.chain()
+B. app.route()
+C. app.all()
+D. router.chain()
+Answer: B
+
+Q28. Which property reads route parameters?
+A. req.query
+B. req.body
+C. req.params
+D. req.route
+Answer: C
+
+Q29. Which middleware handles CORS?
+A. cors
+B. helmet
+C. morgan
+D. multer
+Answer: A
+
+Q30. Which Express method sends JSON response?
+A. res.json()
+B. res.send()
+C. res.data()
+D. res.body()
+Answer: A
+
+Q31. Which middleware improves security headers?
+A. cors
+B. helmet
+C. morgan
+D. body-parser
+Answer: B
+
+Q32. Which Express object is an EventEmitter?
+A. req
+B. res
+C. app
+D. router
+Answer: C
+
+Q33. Which order does middleware execute?
+A. Random
+B. Reverse
+C. Declaration order
+D. Priority-based
+Answer: C
+
+Q34. Which Express function handles errors?
+A. app.error()
+B. error middleware (4 params)
+C. app.catch()
+D. res.error()
+Answer: B
+
+Q35. Which template engine uses indentation syntax?
+A. EJS
+B. Handlebars
+C. Mustache
+D. Pug
+Answer: D
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Which middleware signature identifies error handler?
+A. (req, res)
+B. (req, res, next)
+C. (err, req, res, next)
+D. (error, req, res)
+Answer: C
+
+Q37. Which Express feature enables RESTful routing?
+A. Router
+B. Middleware
+C. app.route()
+D. Static serving
+Answer: C
+
+Q38. Which call stops middleware chain?
+A. next()
+B. res.send()
+C. next(err)
+D. Both B and C
+Answer: D
+
+Q39. Which Express middleware order is optimal?
+A. Error first
+B. Routes first
+C. Static → body → routes → error
+D. Random
+Answer: C
+
+Q40. Which HTTP method is unsafe?
+A. GET
+B. HEAD
+C. POST
+D. OPTIONS
+Answer: C
+
+Q41. Which Express method supports regex routes?
+A. app.get()
+B. app.route()
+C. app.use()
+D. All of the above
+Answer: D
+
+Q42. Which middleware parses multipart/form-data?
+A. body-parser
+B. multer
+C. cors
+D. helmet
+Answer: B
+
+Q43. Which Express feature isolates route logic?
+A. app
+B. middleware
+C. Router
+D. view engine
+Answer: C
+
+Q44. Which Express object persists across requests?
+A. req
+B. res
+C. app
+D. response body
+Answer: C
+
+Q45. Which template rendering happens on server?
+A. React
+B. Angular
+C. Express view engines
+D. jQuery
+Answer: C
+
+Q46. Which Express API sets view engine?
+A. app.engine()
+B. app.set('view engine')
+C. res.render()
+D. app.use('view')
+Answer: B
+
+Q47. Which middleware executes last?
+A. Logger
+B. Router
+C. Error handler
+D. Static
+Answer: C
+
+Q48. Which Express feature improves maintainability?
+A. Single file app
+B. Modular routing
+C. Inline handlers
+D. Global variables
+Answer: B
+
+Q49. Which Express call handles 404 errors?
+A. app.get('*')
+B. res.notFound()
+C. next() without route
+D. Error middleware only
+Answer: A
+
+Q50. Express is best suited for:
+A. CPU-intensive computing
+B. Real-time, I/O-heavy apps
+C. Desktop UI
+D. Mobile OS development
+Answer: B
+------------------------------------------------------------------------------------------------
+Session 19 – Introduction to React
+
+(React Elements, Components, JSX, Props, Rendering)
+50 MCQs | CCEE-Optimized | Easy–Medium–Hard Mix
+
+Easy Level (Fast Marks – 15 MCQs)
+
+Q1. React is primarily used for:
+A. Database management
+B. UI development
+C. Server configuration
+D. OS development
+Answer: B
+
+Q2. React was developed by:
+A. Google
+B. Microsoft
+C. Facebook
+D. Amazon
+Answer: C
+
+Q3. React applications are built using:
+A. Templates
+B. Components
+C. Controllers
+D. Services
+Answer: B
+
+Q4. JSX stands for:
+A. JavaScript XML
+B. Java Syntax Extension
+C. JSON XML
+D. JavaScript XHTML
+Answer: A
+
+Q5. Which function renders React content to DOM?
+A. render()
+B. ReactDOM.render()
+C. React.render()
+D. mount()
+Answer: B
+
+Q6. Which file typically boots a React app?
+A. App.js
+B. index.js
+C. main.js
+D. start.js
+Answer: B
+
+Q7. React elements are:
+A. Mutable
+B. Immutable
+C. Dynamic
+D. Stateful
+Answer: B
+
+Q8. Which syntax embeds JavaScript in JSX?
+A. ()
+B. []
+C. {}
+D. <>
+Answer: C
+
+Q9. Which component type is a simple function?
+A. Class component
+B. Functional component
+C. Pure component
+D. Abstract component
+Answer: B
+
+Q10. Which property passes data to components?
+A. state
+B. props
+C. context
+D. params
+Answer: B
+
+Q11. Props are:
+A. Mutable
+B. Read-only
+C. Global
+D. Optional
+Answer: B
+
+Q12. Which file defines UI logic?
+A. HTML
+B. CSS
+C. JavaScript
+D. JSON
+Answer: C
+
+Q13. Which React feature improves performance?
+A. Two-way binding
+B. Virtual DOM
+C. Shadow DOM
+D. Server rendering
+Answer: B
+
+Q14. Which tag wraps JSX return?
+A. <body>
+B. <div>
+C. Single parent element
+D. <html>
+Answer: C
+
+Q15. Which symbol imports a component?
+A. include
+B. require
+C. import
+D. fetch
+Answer: C
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which React API creates elements?
+A. createComponent()
+B. React.createElement()
+C. createJSX()
+D. ReactDOM.create()
+Answer: B
+
+Q17. Which component type can use hooks?
+A. Class
+B. Functional
+C. Abstract
+D. Pure
+Answer: B
+
+Q18. Which prop renders nested content?
+A. props.data
+B. props.value
+C. props.children
+D. props.inner
+Answer: C
+
+Q19. Which JSX rule is mandatory?
+A. Self-closing tags
+B. CamelCase attributes
+C. One root element
+D. Inline styles only
+Answer: C
+
+Q20. Which attribute replaces class in JSX?
+A. classname
+B. className
+C. cssClass
+D. styleClass
+Answer: B
+
+Q21. Which attribute replaces for in JSX?
+A. htmlFor
+B. forId
+C. labelFor
+D. idFor
+Answer: A
+
+Q22. Which React feature allows component reuse?
+A. Inheritance
+B. Composition
+C. Templates
+D. Controllers
+Answer: B
+
+Q23. Which method mounts component to DOM?
+A. componentDidMount()
+B. render()
+C. ReactDOM.render()
+D. mount()
+Answer: C
+
+Q24. Which file typically holds root component?
+A. index.js
+B. App.js
+C. main.js
+D. root.js
+Answer: B
+
+Q25. Which syntax conditionally renders JSX?
+A. if-else only
+B. switch
+C. Ternary operator
+D. for loop
+Answer: C
+
+Q26. Which attribute passes function as prop?
+A. onClick
+B. callback
+C. handler
+D. event
+Answer: A
+
+Q27. Which React concept avoids direct DOM access?
+A. Virtual DOM
+B. Shadow DOM
+C. JSX
+D. Hooks
+Answer: A
+
+Q28. Which syntax is invalid in JSX?
+A. {expression}
+B. if statement
+C. Ternary operator
+D. Logical &&
+Answer: B
+
+Q29. Which feature allows breaking UI into parts?
+A. Hooks
+B. Components
+C. Reducers
+D. Middleware
+Answer: B
+
+Q30. Which React API handles DOM updates efficiently?
+A. Browser DOM
+B. Virtual DOM diffing
+C. Shadow tree
+D. Manual rendering
+Answer: B
+
+Q31. Which import brings React into scope?
+A. import JSX from 'react'
+B. import React from 'react'
+C. require JSX
+D. import ReactDOM
+Answer: B
+
+Q32. Which prop type validates props?
+A. validate
+B. PropTypes
+C. Types
+D. PropsCheck
+Answer: B
+
+Q33. Which React version introduced hooks?
+A. 15
+B. 16.8
+C. 17
+D. 18
+Answer: B
+
+Q34. Which syntax fragments JSX without extra DOM?
+A. <div>
+B. <span>
+C. <React.Fragment>
+D. Both C and <> </>
+Answer: D
+
+Q35. Which React concept is immutable?
+A. state
+B. props
+C. ref
+D. context
+Answer: B
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Which operation triggers re-render?
+A. Changing props
+B. Changing local variables
+C. Modifying DOM directly
+D. Console logging
+Answer: A
+
+Q37. Which statement about JSX is true?
+A. It is HTML
+B. It is compiled to React.createElement
+C. It runs in browser directly
+D. It replaces JavaScript
+Answer: B
+
+Q38. Which pattern React discourages?
+A. Composition
+B. State lifting
+C. Direct DOM manipulation
+D. Props drilling
+Answer: C
+
+Q39. Which prop is reserved keyword?
+A. key
+B. value
+C. id
+D. name
+Answer: A
+
+Q40. Which React feature minimizes DOM writes?
+A. Hooks
+B. Virtual DOM
+C. JSX
+D. Props
+Answer: B
+
+Q41. Which attribute improves list rendering?
+A. index
+B. id
+C. key
+D. name
+Answer: C
+
+Q42. Which component type is preferred now?
+A. Class
+B. Functional
+C. Abstract
+D. Pure
+Answer: B
+
+Q43. Which JSX attribute accepts object for styles?
+A. style
+B. className
+C. css
+D. design
+Answer: A
+
+Q44. Which React rule avoids side effects?
+A. Hooks rule
+B. Pure render
+C. Functional components
+D. StrictMode
+Answer: B
+
+Q45. Which React API enforces extra checks in dev?
+A. React.StrictMode
+B. React.DebugMode
+C. React.SafeMode
+D. React.Check
+Answer: A
+
+Q46. Which operation is expensive in React?
+A. Virtual DOM diff
+B. Direct DOM manipulation
+C. JSX parsing
+D. Props passing
+Answer: B
+
+Q47. Which concept passes data top-down?
+A. State
+B. Props
+C. Context
+D. Ref
+Answer: B
+
+Q48. Which React principle improves testability?
+A. Single-direction data flow
+B. Two-way binding
+C. Global state
+D. DOM mutation
+Answer: A
+
+Q49. Which syntax returns JSX from function?
+A. render()
+B. return()
+C. JSX only
+D. export
+Answer: B
+
+Q50. React best aligns with which paradigm?
+A. Procedural
+B. Object-oriented
+C. Declarative
+D. Imperative
+Answer: C
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
