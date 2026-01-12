@@ -2895,6 +2895,1094 @@ D. Styling
 Answer: B
 -----------------------------------------------------------------------------------------------
 
+Sessions 11 & 12 – AJAX & Axios HTTP Client
+
+50 MCQs | High-Yield | Easy–Medium–Hard Mix
+(Options + Correct Answer)
+
+Easy Level (Baseline Throughput – 15 MCQs)
+
+Q1. AJAX stands for:
+A. Asynchronous Java and XML
+B. Asynchronous JavaScript and XML
+C. Advanced JavaScript and XML
+D. Automated JavaScript and XML
+Answer: B
+
+Q2. AJAX allows web pages to:
+A. Reload fully every time
+B. Communicate asynchronously with server
+C. Replace JavaScript
+D. Block user input
+Answer: B
+
+Q3. Which object is used for AJAX requests in JavaScript?
+A. fetch
+B. XMLHttpRequest
+C. HttpRequest
+D. AjaxObject
+Answer: B
+
+Q4. Which property checks request state?
+A. status
+B. response
+C. readyState
+D. onload
+Answer: C
+
+Q5. Which readyState means request completed?
+A. 2
+B. 3
+C. 4
+D. 5
+Answer: C
+
+Q6. Which status code indicates success?
+A. 301
+B. 400
+C. 404
+D. 200
+Answer: D
+
+Q7. Which format is most commonly used with AJAX today?
+A. XML
+B. HTML
+C. JSON
+D. CSV
+Answer: C
+
+Q8. Axios is a:
+A. Browser API
+B. JavaScript framework
+C. Promise-based HTTP client
+D. Database driver
+Answer: C
+
+Q9. Which HTTP method retrieves data?
+A. POST
+B. PUT
+C. GET
+D. DELETE
+Answer: C
+
+Q10. Which keyword handles fulfilled promises?
+A. catch
+B. then
+C. await
+D. resolve
+Answer: B
+
+Q11. Which keyword pauses async function execution?
+A. stop
+B. hold
+C. await
+D. wait
+Answer: C
+
+Q12. Which Axios method sends GET request?
+A. axios.send()
+B. axios.fetch()
+C. axios.get()
+D. axios.requestGet()
+Answer: C
+
+Q13. Which Axios method sends POST request?
+A. axios.post()
+B. axios.send()
+C. axios.push()
+D. axios.submit()
+Answer: A
+
+Q14. Which block handles promise rejection?
+A. then
+B. resolve
+C. reject
+D. catch
+Answer: D
+
+Q15. Which header specifies data format?
+A. Accept
+B. Authorization
+C. Cache-Control
+D. Host
+Answer: A
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which readyState means response is being received?
+A. 1
+B. 2
+C. 3
+D. 4
+Answer: C
+
+Q17. Which method initializes AJAX request?
+A. send()
+B. open()
+C. setRequestHeader()
+D. onreadystatechange
+Answer: B
+
+Q18. Which method sends the request to server?
+A. open()
+B. send()
+C. readyState()
+D. connect()
+Answer: B
+
+Q19. Which property contains server response text?
+A. response
+B. responseText
+C. responseXML
+D. statusText
+Answer: B
+
+Q20. Which property contains XML response?
+A. response
+B. responseText
+C. responseXML
+D. xmlText
+Answer: C
+
+Q21. Which status code indicates resource created?
+A. 200
+B. 201
+C. 204
+D. 301
+Answer: B
+
+Q22. Which HTTP method is idempotent?
+A. POST
+B. PATCH
+C. GET
+D. CONNECT
+Answer: C
+
+Q23. Which feature allows non-blocking behavior?
+A. Threads
+B. Callbacks
+C. Asynchronous execution
+D. Synchronization
+Answer: C
+
+Q24. Which Axios feature intercepts requests/responses?
+A. Middleware
+B. Interceptors
+C. Filters
+D. Hooks
+Answer: B
+
+Q25. Which Axios config sets base URL?
+A. rootURL
+B. baseURL
+C. apiURL
+D. host
+Answer: B
+
+Q26. Which promise state indicates failure?
+A. fulfilled
+B. pending
+C. rejected
+D. resolved
+Answer: C
+
+Q27. Which AJAX technique avoids page reload?
+A. Synchronous calls
+B. DOM reload
+C. Partial page update
+D. Server rendering
+Answer: C
+
+Q28. Which HTTP status code means “No Content”?
+A. 200
+B. 201
+C. 204
+D. 404
+Answer: C
+
+Q29. Which Axios method sends custom config?
+A. axios.send()
+B. axios.create()
+C. axios.custom()
+D. axios.call()
+Answer: B
+
+Q30. Which async pattern improves readability?
+A. Callbacks
+B. Event handlers
+C. async/await
+D. Promises only
+Answer: C
+
+Q31. Which header sends auth token?
+A. Accept
+B. Content-Type
+C. Authorization
+D. Origin
+Answer: C
+
+Q32. Which method cancels Axios request?
+A. abort()
+B. cancelToken
+C. stop()
+D. break()
+Answer: B
+
+Q33. Which response code indicates client error?
+A. 2xx
+B. 3xx
+C. 4xx
+D. 5xx
+Answer: C
+
+Q34. Which AJAX approach is deprecated?
+A. XMLHttpRequest
+B. fetch API
+C. jQuery AJAX
+D. Synchronous XHR
+Answer: D
+
+Q35. Which Axios response property holds data?
+A. body
+B. payload
+C. response
+D. data
+Answer: D
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Which AJAX call blocks UI thread?
+A. Async XHR
+B. Promise-based call
+C. Synchronous XHR
+D. Axios request
+Answer: C
+
+Q37. Which HTTP method is NOT safe?
+A. GET
+B. HEAD
+C. POST
+D. OPTIONS
+Answer: C
+
+Q38. Which Axios feature retries requests?
+A. Interceptors
+B. Middleware
+C. Plugins
+D. Adapter logic
+Answer: D
+
+Q39. Which promise chain handles errors globally?
+A. Multiple then()
+B. finally()
+C. catch() at end
+D. resolve()
+Answer: C
+
+Q40. Which HTTP status code indicates timeout?
+A. 500
+B. 502
+C. 503
+D. 504
+Answer: D
+
+Q41. Which async construct returns implicit promise?
+A. function
+B. generator
+C. async function
+D. callback
+Answer: C
+
+Q42. Which header prevents cached AJAX response?
+A. Cache-Control: no-cache
+B. Accept-Encoding
+C. Connection
+D. Keep-Alive
+Answer: A
+
+Q43. Which technique batches multiple requests?
+A. Polling
+B. Long polling
+C. HTTP/2 multiplexing
+D. Synchronous calls
+Answer: C
+
+Q44. Which error occurs on CORS violation?
+A. SyntaxError
+B. TypeError
+C. NetworkError
+D. RangeError
+Answer: C
+
+Q45. Which Axios method normalizes errors?
+A. then()
+B. catch()
+C. finally()
+D. reject()
+Answer: B
+
+Q46. Which feature improves fault tolerance?
+A. Retry logic
+B. Caching
+C. Compression
+D. Encryption
+Answer: A
+
+Q47. Which promise method always executes?
+A. then()
+B. catch()
+C. finally()
+D. resolve()
+Answer: C
+
+Q48. Which HTTP header enables CORS?
+A. Allow-Origin
+B. Access-Control-Allow-Origin
+C. Origin-Allow
+D. CORS-Allow
+Answer: B
+
+Q49. Which pattern causes callback hell?
+A. Flat promises
+B. Nested callbacks
+C. async/await
+D. Event delegation
+Answer: B
+
+Q50. AJAX improves performance mainly by:
+A. Reducing server load
+B. Avoiding full page reloads
+C. Encrypting traffic
+D. Caching HTML
+Answer: B
+------------------------------------------------------------------------------------------------
+Session 13 – Introduction to Node.js (Basics, ES6, REPL)
+
+50 MCQs | CCEE-Optimized | Easy–Medium–Hard Mix
+(Options + Correct Answer)
+
+Easy Level (Quick Marks – 15 MCQs)
+
+Q1. Node.js is:
+A. A programming language
+B. A JavaScript runtime
+C. A web browser
+D. A database
+Answer: B
+
+Q2. Node.js is built on which JavaScript engine?
+A. SpiderMonkey
+B. Chakra
+C. Nashorn
+D. V8
+Answer: D
+
+Q3. Node.js executes JavaScript on the:
+A. Client side only
+B. Server side
+C. Database layer
+D. Network layer
+Answer: B
+
+Q4. Which command starts Node REPL?
+A. nodejs
+B. npm
+C. node
+D. start
+Answer: C
+
+Q5. REPL stands for:
+A. Read Execute Print Loop
+B. Run Execute Process Loop
+C. Read Eval Print Loop
+D. Read Edit Print Loop
+Answer: C
+
+Q6. Which keyword imports a module in Node.js?
+A. include
+B. import
+C. require
+D. load
+Answer: C
+
+Q7. Which keyword exports a module?
+A. export
+B. module.exports
+C. expose
+D. publish
+Answer: B
+
+Q8. Which feature allows Node.js to handle many connections?
+A. Multi-threading
+B. Event-driven architecture
+C. Blocking I/O
+D. Synchronous execution
+Answer: B
+
+Q9. Which ES6 keyword declares block-scoped variable?
+A. var
+B. let
+C. static
+D. define
+Answer: B
+
+Q10. Which ES6 keyword defines constant?
+A. final
+B. let
+C. const
+D. static
+Answer: C
+
+Q11. Which ES6 feature shortens function syntax?
+A. Generator
+B. Arrow function
+C. Callback
+D. Closure
+Answer: B
+
+Q12. Which command prints output in Node.js?
+A. print()
+B. echo()
+C. console.log()
+D. output()
+Answer: C
+
+Q13. Node.js primarily uses which module system?
+A. AMD
+B. UMD
+C. CommonJS
+D. ES Modules only
+Answer: C
+
+Q14. Which global object is NOT available in Node.js?
+A. global
+B. process
+C. window
+D. __dirname
+Answer: C
+
+Q15. Node.js applications run in:
+A. Browser sandbox
+B. JVM
+C. Single process
+D. Database engine
+Answer: C
+
+Medium Level (CCEE Core Concepts – 20 MCQs)
+
+Q16. Node.js is best described as:
+A. Multi-threaded blocking
+B. Single-threaded non-blocking
+C. Multi-process blocking
+D. Threadless
+Answer: B
+
+Q17. Which module provides system information?
+A. os
+B. sys
+C. fs
+D. path
+Answer: A
+
+Q18. Which object provides process info?
+A. system
+B. runtime
+C. process
+D. global
+Answer: C
+
+Q19. Which ES6 feature combines arrays/objects?
+A. Rest operator
+B. Spread operator
+C. Destructuring
+D. Template literals
+Answer: B
+
+Q20. Which ES6 feature extracts values from objects?
+A. Spread
+B. Arrow
+C. Destructuring
+D. Iterator
+Answer: C
+
+Q21. Which ES6 feature supports multi-line strings?
+A. Normal strings
+B. Template literals
+C. JSON strings
+D. Escaped strings
+Answer: B
+
+Q22. Which Node.js object handles events?
+A. EventLoop
+B. EventEmitter
+C. Dispatcher
+D. Handler
+Answer: B
+
+Q23. Which API schedules asynchronous callbacks?
+A. setImmediate()
+B. setTimeout()
+C. setInterval()
+D. All of the above
+Answer: D
+
+Q24. Which keyword pauses execution in async function?
+A. stop
+B. hold
+C. await
+D. wait
+Answer: C
+
+Q25. Which statement imports built-in modules?
+A. include fs
+B. require('fs')
+C. import fs
+D. load fs
+Answer: B
+
+Q26. Which ES6 feature supports default parameters?
+A. Arrow functions
+B. Destructuring
+C. Function parameters
+D. Rest operator
+Answer: C
+
+Q27. Which object exposes environment variables?
+A. process.env
+B. global.env
+C. system.env
+D. node.env
+Answer: A
+
+Q28. Which Node.js feature avoids blocking I/O?
+A. Callbacks
+B. Threads
+C. Locks
+D. Synchronization
+Answer: A
+
+Q29. Which command executes a Node script?
+A. npm run
+B. node file.js
+C. execute file.js
+D. start node
+Answer: B
+
+Q30. Which ES6 keyword defines a class?
+A. prototype
+B. function
+C. class
+D. object
+Answer: C
+
+Q31. Which global variable stores file path?
+A. __file
+B. __filename
+C. __path
+D. __location
+Answer: B
+
+Q32. Which global variable stores directory path?
+A. __folder
+B. __dirname
+C. __dir
+D. __directory
+Answer: B
+
+Q33. Which Node.js object handles standard input?
+A. process.stdin
+B. console.in
+C. system.in
+D. input
+Answer: A
+
+Q34. Which module resolves file paths?
+A. os
+B. fs
+C. path
+D. url
+Answer: C
+
+Q35. Which ES6 feature replaces string concatenation?
+A. Spread
+B. Destructuring
+C. Template literals
+D. Arrow functions
+Answer: C
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Node.js achieves concurrency using:
+A. Threads
+B. Processes
+C. Event loop
+D. Forking
+Answer: C
+
+Q37. Which operation blocks event loop?
+A. setTimeout()
+B. File read sync
+C. HTTP request
+D. Promise resolution
+Answer: B
+
+Q38. Which ES6 feature enables variable arguments?
+A. Spread operator
+B. Rest parameter
+C. Destructuring
+D. Iterator
+Answer: B
+
+Q39. Which global object is Node-specific?
+A. document
+B. window
+C. process
+D. navigator
+Answer: C
+
+Q40. Which statement about Node.js is true?
+A. Ideal for CPU-intensive tasks
+B. Ideal for I/O-intensive tasks
+C. Replaces databases
+D. Runs only in browsers
+Answer: B
+
+Q41. Which API executes callback after I/O events?
+A. Call stack
+B. Heap
+C. Event loop
+D. Thread pool
+Answer: C
+
+Q42. Which ES6 feature provides immutable bindings?
+A. let
+B. var
+C. const
+D. static
+Answer: C
+
+Q43. Which module loads faster?
+A. User-defined
+B. Built-in
+C. External
+D. Dynamic
+Answer: B
+
+Q44. Which keyword creates promise implicitly?
+A. await
+B. async
+C. then
+D. resolve
+Answer: B
+
+Q45. Which Node.js object emits ‘exit’ event?
+A. global
+B. module
+C. process
+D. console
+Answer: C
+
+Q46. Which ES6 feature avoids + operator for strings?
+A. Spread
+B. Template literals
+C. Arrow functions
+D. Rest
+Answer: B
+
+Q47. Which Node.js feature improves scalability?
+A. Statelessness
+B. Event-driven I/O
+C. Blocking calls
+D. Thread locking
+Answer: B
+
+Q48. Which environment variable sets production mode?
+A. NODE_ENV
+B. NODE_MODE
+C. ENV_NODE
+D. PROD_ENV
+Answer: A
+
+Q49. Which ES6 syntax destructures arrays?
+A. {}
+B. ()
+C. []
+D. <>
+Answer: C
+
+Q50. Node.js is unsuitable for:
+A. REST APIs
+B. Real-time apps
+C. CPU-heavy computation
+D. I/O streaming
+Answer: C
+------------------------------------------------------------------------------------------------
+Sessions 14 & 15 – Node.js Asynchronous Programming
+
+(Callbacks, Promises, Async/Await, Event Loop, Timers)
+50 MCQs | CCEE-Optimized | Easy–Medium–Hard Mix
+(Options + Correct Answer)
+
+Easy Level (Baseline Scoring – 15 MCQs)
+
+Q1. Asynchronous programming primarily helps to:
+A. Increase CPU speed
+B. Avoid blocking execution
+C. Reduce memory usage
+D. Compile faster
+Answer: B
+
+Q2. Which pattern executes a function after another completes?
+A. Loop
+B. Callback
+C. Constructor
+D. Iterator
+Answer: B
+
+Q3. Which function schedules code after delay?
+A. setInterval()
+B. setImmediate()
+C. setTimeout()
+D. nextTick()
+Answer: C
+
+Q4. Which keyword defines an asynchronous function?
+A. await
+B. promise
+C. async
+D. then
+Answer: C
+
+Q5. Which keyword waits for promise resolution?
+A. then
+B. wait
+C. pause
+D. await
+Answer: D
+
+Q6. Promises have how many states?
+A. 2
+B. 3
+C. 4
+D. 5
+Answer: B
+
+Q7. Initial state of a promise is:
+A. fulfilled
+B. rejected
+C. pending
+D. resolved
+Answer: C
+
+Q8. Which block handles promise failure?
+A. then()
+B. resolve()
+C. catch()
+D. finally()
+Answer: C
+
+Q9. Which function repeats execution at intervals?
+A. setTimeout()
+B. setImmediate()
+C. setInterval()
+D. process.nextTick()
+Answer: C
+
+Q10. Which mechanism coordinates async callbacks?
+A. Thread pool
+B. Call stack
+C. Event loop
+D. Heap
+Answer: C
+
+Q11. Which API executes callback immediately after current operation?
+A. setTimeout()
+B. setImmediate()
+C. process.nextTick()
+D. setInterval()
+Answer: C
+
+Q12. Which promise method always executes?
+A. then()
+B. catch()
+C. finally()
+D. resolve()
+Answer: C
+
+Q13. Which async pattern improves readability?
+A. Nested callbacks
+B. Event handlers
+C. async/await
+D. Timers
+Answer: C
+
+Q14. Callback hell is caused by:
+A. Flat functions
+B. Nested callbacks
+C. Promises
+D. Async/await
+Answer: B
+
+Q15. Which async style is oldest in Node.js?
+A. async/await
+B. Promises
+C. Callbacks
+D. Observables
+Answer: C
+
+Medium Level (CCEE Core Mechanics – 20 MCQs)
+
+Q16. Which API schedules callback after I/O events?
+A. Heap
+B. Event loop
+C. Call stack
+D. Thread
+Answer: B
+
+Q17. Which function executes before timers phase?
+A. setTimeout()
+B. setInterval()
+C. setImmediate()
+D. process.nextTick()
+Answer: D
+
+Q18. Which promise method chains operations?
+A. resolve()
+B. then()
+C. catch()
+D. finally()
+Answer: B
+
+Q19. Which promise state indicates success?
+A. pending
+B. rejected
+C. fulfilled
+D. resolved
+Answer: C
+
+Q20. Which async pattern converts callbacks to promises?
+A. util.promisify()
+B. Promise.resolve()
+C. async()
+D. await()
+Answer: A
+
+Q21. Which timer executes after I/O callbacks?
+A. setTimeout()
+B. setImmediate()
+C. setInterval()
+D. nextTick()
+Answer: B
+
+Q22. Which API runs callback before event loop continues?
+A. setImmediate()
+B. setTimeout()
+C. process.nextTick()
+D. setInterval()
+Answer: C
+
+Q23. Which block catches errors in async/await?
+A. then/catch
+B. try/catch
+C. finally
+D. resolve/reject
+Answer: B
+
+Q24. Which method executes promises in parallel?
+A. Promise.resolve()
+B. Promise.reject()
+C. Promise.all()
+D. Promise.then()
+Answer: C
+
+Q25. Which promise method resolves fastest successful promise?
+A. Promise.all()
+B. Promise.any()
+C. Promise.race()
+D. Promise.finally()
+Answer: C
+
+Q26. Which async construct returns implicit promise?
+A. Normal function
+B. Generator
+C. async function
+D. Callback
+Answer: C
+
+Q27. Which Node.js module supports promisification?
+A. events
+B. util
+C. fs
+D. path
+Answer: B
+
+Q28. Which error propagates to promise catch?
+A. SyntaxError
+B. Thrown error inside promise
+C. Compile error
+D. Runtime crash
+Answer: B
+
+Q29. Which API is used for repeating timers?
+A. setTimeout()
+B. setImmediate()
+C. setInterval()
+D. clearTimeout()
+Answer: C
+
+Q30. Which function cancels timeout?
+A. stopTimeout()
+B. clearTimeout()
+C. cancelTimeout()
+D. endTimeout()
+Answer: B
+
+Q31. Which function cancels interval?
+A. clearInterval()
+B. stopInterval()
+C. endInterval()
+D. removeInterval()
+Answer: A
+
+Q32. Which promise method handles cleanup logic?
+A. then()
+B. catch()
+C. finally()
+D. resolve()
+Answer: C
+
+Q33. Which event loop phase handles timers?
+A. Poll
+B. Check
+C. Timers
+D. Close callbacks
+Answer: C
+
+Q34. Which phase executes setImmediate callbacks?
+A. Poll
+B. Check
+C. Timers
+D. Idle
+Answer: B
+
+Q35. Which async issue leads to memory leaks?
+A. Promises
+B. Closures with timers
+C. async/await
+D. Event loop
+Answer: B
+
+Hard Level (CCEE Differentiators – 15 MCQs)
+
+Q36. Which executes first in Node.js?
+A. setTimeout(0)
+B. setImmediate()
+C. process.nextTick()
+D. Promise.then()
+Answer: C
+
+Q37. Which promise method waits for all promises?
+A. any()
+B. race()
+C. all()
+D. finally()
+Answer: C
+
+Q38. Which async issue blocks event loop?
+A. Non-blocking I/O
+B. Synchronous CPU-heavy code
+C. Promises
+D. Timers
+Answer: B
+
+Q39. Which callback executes in microtask queue?
+A. setTimeout()
+B. setImmediate()
+C. Promise.then()
+D. setInterval()
+Answer: C
+
+Q40. Which queue has higher priority?
+A. Timer queue
+B. I/O queue
+C. Microtask queue
+D. Check queue
+Answer: C
+
+Q41. Which promise method settles regardless of outcome?
+A. then()
+B. catch()
+C. finally()
+D. resolve()
+Answer: C
+
+Q42. Which API starves event loop if misused?
+A. setTimeout()
+B. setImmediate()
+C. process.nextTick()
+D. Promise.all()
+Answer: C
+
+Q43. Which async pattern avoids callback hell?
+A. Nested callbacks
+B. Promises
+C. async/await
+D. Both B and C
+Answer: D
+
+Q44. Which function schedules callback in check phase?
+A. setTimeout()
+B. setInterval()
+C. setImmediate()
+D. nextTick()
+Answer: C
+
+Q45. Which promise combinator ignores rejections?
+A. Promise.all()
+B. Promise.any()
+C. Promise.race()
+D. Promise.reject()
+Answer: B
+
+Q46. Which async bug is hardest to debug?
+A. Syntax error
+B. Logical race condition
+C. Typo
+D. Missing semicolon
+Answer: B
+
+Q47. Which event loop phase handles socket close?
+A. Timers
+B. Poll
+C. Check
+D. Close callbacks
+Answer: D
+
+Q48. Which async style gives linear code flow?
+A. Callbacks
+B. Promises
+C. async/await
+D. Timers
+Answer: C
+
+Q49. Which API converts callback errors to rejected promise?
+A. Promise.reject()
+B. util.promisify()
+C. async()
+D. await()
+Answer: B
+
+Q50. Node.js async model is best suited for:
+A. CPU-intensive tasks
+B. I/O-bound applications
+C. Graphics rendering
+D. Scientific computing
+Answer: B
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
