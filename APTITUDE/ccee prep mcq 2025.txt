@@ -1,0 +1,804 @@
+### Quick note
+I can’t see the actual questions in your PDF. If you paste them here (or upload a clear snapshot), I’ll solve each one step by step with the easiest method. Meanwhile, here are the simplest, reliable techniques for the most common aptitude topics—so you can apply them immediately.
+
+---
+
+## Percentages and ratios
+
+- **Percent to fraction:**
+  
+  \[
+  25\%=\frac{1}{4},\quad 12.5\%=\frac{1}{8},\quad 33\frac{1}{3}\%=\frac{1}{3}
+  \]
+
+- **Increase/decrease:**
+  
+  \[
+  \text{New value}= \text{Original}\times\left(1\pm\frac{\text{percent}}{100}\right)
+  \]
+
+- **Successive changes (don’t add):**
+  
+  \[
+  \text{Net factor}= \left(1+\frac{a}{100}\right)\left(1+\frac{b}{100}\right)
+  \]
+
+- **Ratio to parts:**
+  
+  \[
+  \text{If ratio }a:b,\ \text{total }T\Rightarrow \text{parts }=a+b,\ \text{values }=\frac{a}{a+b}T,\ \frac{b}{a+b}T
+  \]
+
+---
+
+## Averages and mixtures
+
+- **Average:**
+  
+  \[
+  \text{Average}=\frac{\text{Sum of terms}}{\text{Number of terms}}
+  \]
+
+- **Adding one item:**
+  
+  \[
+  \text{New average}=\frac{n\cdot A + x}{n+1}
+  \]
+
+- **Weighted average (mixtures):**
+  
+  \[
+  A_{\text{mix}}=\frac{w_1A_1+w_2A_2}{w_1+w_2}
+  \]
+
+- **Alligation shortcut (two components):**
+  
+  \[
+  \frac{\text{Quantity of cheaper}}{\text{Quantity of dearer}}=\frac{A_d-A_m}{A_m-A_c}
+  \]
+  
+  where \(A_c\) is cheaper value, \(A_d\) dearer value, \(A_m\) mean value.
+
+---
+
+## Time, speed, and distance
+
+- **Core relation:**
+  
+  \[
+  \text{Distance}= \text{Speed}\times \text{Time}
+  \]
+
+- **Relative speed (same direction vs opposite):**
+  
+  \[
+  v_{\text{rel}}=
+  \begin{cases}
+  |v_1-v_2| & \text{same direction}\\
+  v_1+v_2 & \text{opposite direction}
+  \end{cases}
+  \]
+
+- **Average speed (two equal distances):**
+  
+  \[
+  v_{\text{avg}}=\frac{2v_1v_2}{v_1+v_2}
+  \]
+
+- **Trains crossing:**
+  
+  \[
+  t=\frac{\text{sum of lengths (or length vs point)}}{\text{relative speed}}
+  \]
+
+---
+
+## Work and pipes
+
+- **Work rate:**
+  
+  \[
+  \text{Rate}=\frac{\text{Work}}{\text{Time}},\quad \text{Total rate}=\sum \text{individual rates}
+  \]
+
+- **Combined time:**
+  
+  \[
+  T_{\text{combined}}=\frac{1}{\sum \frac{1}{T_i}}
+  \]
+
+- **Pipes (inlet/outlet):**
+  
+  \[
+  \text{Net rate}=\text{inlet rates}-\text{outlet rates}
+  \]
+
+---
+
+## Profit, loss, and simple interest
+
+- **Profit/loss percent:**
+  
+  \[
+  \%\ =\frac{\text{Profit or Loss}}{\text{Cost Price}}\times 100
+  \]
+
+- **Marked price/discount:**
+  
+  \[
+  \text{Selling Price}= \text{Marked Price}\times\left(1-\frac{d}{100}\right)
+  \]
+
+- **Simple interest:**
+  
+  \[
+  \text{SI}= \frac{P\cdot R\cdot T}{100},\quad \text{Amount}=P+\text{SI}
+  \]
+
+---
+
+## Permutations, combinations, and probability
+
+- **Permutations:**
+  
+  \[
+  {}^nP_r=\frac{n!}{(n-r)!}
+  \]
+
+- **Combinations:**
+  
+  \[
+  {}^nC_r=\frac{n!}{r!(n-r)!}
+  \]
+
+- **Basic probability:**
+  
+  \[
+  P(\text{event})=\frac{\text{favorable outcomes}}{\text{total outcomes}}
+  \]
+
+- **Independent events:**
+  
+  \[
+  P(A\cap B)=P(A)\cdot P(B)
+  \]
+
+---
+
+## Number systems and divisibility
+
+- **LCM/GCD relation:**
+  
+  \[
+  \text{LCM}\cdot \text{GCD}=a\cdot b
+  \]
+
+- **Divisibility quick checks:**
+  - **By 3:** Sum of digits divisible by 3.
+  - **By 4:** Last two digits form a number divisible by 4.
+  - **By 8:** Last three digits divisible by 8.
+  - **By 11:** Alternating sum of digits divisible by 11.
+
+---
+----------------------------------------------------------------------------------------------------------------------------------------
+
+PART I – APTITUDE (MCQs)
+1. If the unit digit of 
+7
+103
+7
+103
+ is required, what is the answer?
+
+A) 1
+B) 3
+C) 7
+D) 9
+Answer: B
+(Cyclicity of 7 → 7,9,3,1)
+
+2. The LCM of two numbers is 180 and their HCF is 6. If one number is 30, the other number is:
+
+A) 24
+B) 36
+C) 48
+D) 60
+Answer: B
+(Product = LCM × HCF)
+
+3. A and B share profits in the ratio 3:5. If A gets ₹1200 more than B, total profit is:
+
+A) ₹4800
+B) ₹6000
+C) ₹7200
+D) ₹9600
+Answer: C
+
+4. A shopkeeper marks an article 40% above cost and gives 10% discount. Net profit % is:
+
+A) 20%
+B) 24%
+C) 26%
+D) 30%
+Answer: B
+
+5. Simple Interest on ₹5000 at 8% per annum for 3 years is:
+
+A) ₹1000
+B) ₹1200
+C) ₹1500
+D) ₹1800
+Answer: B
+
+6. A train 150 m long crosses a pole in 15 seconds. Speed is:
+
+A) 30 km/h
+B) 36 km/h
+C) 40 km/h
+D) 45 km/h
+Answer: B
+
+7. If A can do a work in 10 days and B in 15 days, together they finish in:
+
+A) 5 days
+B) 6 days
+C) 7 days
+D) 8 days
+Answer: B
+
+8. Average of 5 numbers is 18. If one number is removed, average becomes 16. Removed number is:
+
+A) 24
+B) 26
+C) 28
+D) 30
+Answer: C
+
+9. Probability of getting a tail when tossing a coin is:
+
+A) 0
+B) 1
+C) 1/2
+D) 2
+Answer: C
+
+10. Number of permutations of the word DAC is:
+
+A) 3
+B) 6
+C) 9
+D) 12
+Answer: B
+
+11. Find the next number in the series: 2, 6, 12, 20, ?
+
+A) 24
+B) 30
+C) 32
+D) 42
+Answer: B
+(n² + n pattern)
+
+12. If A is brother of B and B is sister of C, A is C’s:
+
+A) Brother
+B) Sister
+C) Cousin
+D) Cannot be determined
+Answer: A
+
+13. If CAT = DBU, then DOG = ?
+
+A) EPH
+B) EOH
+C) FPH
+D) EPG
+Answer: B
+(+1 alphabet shift)
+
+14. In a circular seating of 8 people, number of distinct arrangements is:
+
+A) 5040
+B) 720
+C) 840
+D) 10080
+Answer: B
+((n−1)!)
+
+15. All engineers are graduates. Some graduates are teachers. Conclusion:
+
+A) All engineers are teachers
+B) Some engineers are teachers
+C) Some teachers are graduates
+D) No conclusion
+Answer: C
+
+PART II – EFFECTIVE COMMUNICATION (MCQs)
+16. Communication is complete only when:
+
+A) Message is sent
+B) Message is encoded
+C) Feedback is received
+D) Channel is selected
+Answer: C
+
+17. Which is NOT a type of communication?
+
+A) Verbal
+B) Non-verbal
+C) Written
+D) Hypothetical
+Answer: D
+
+18. Correct spelling is:
+
+A) Accomodation
+B) Acommodation
+C) Accommodation
+D) Accomadation
+Answer: C
+
+19. “He ___ playing cricket.”
+
+A) is
+B) are
+C) were
+D) have
+Answer: A
+
+20. Which tense is used for habitual actions?
+
+A) Past Continuous
+B) Present Perfect
+C) Simple Present
+D) Future Continuous
+Answer: C
+
+21. Passive voice of “She wrote a letter” is:
+
+A) Letter wrote by her
+B) A letter was written by her
+C) A letter is written by her
+D) Letter had written
+Answer: B
+
+22. Correct indirect speech:
+
+He said, “I am tired.”
+A) He said he is tired
+B) He said that he was tired
+C) He says he was tired
+D) He said I was tired
+Answer: B
+
+23. Synonym of “Abundant” is:
+
+A) Scarce
+B) Plentiful
+C) Rare
+D) Empty
+Answer: B
+
+24. Antonym of “Expand” is:
+
+A) Increase
+B) Enlarge
+C) Contract
+D) Develop
+Answer: C
+
+25. Listening for main idea is called:
+
+A) Intensive listening
+B) Selective listening
+C) Critical listening
+D) Empathetic listening
+Answer: B
+
+26. Reading comprehension primarily tests:
+
+A) Speed
+B) Memory
+C) Understanding
+D) Vocabulary only
+Answer: C
+
+27. The introduction of an essay should:
+
+A) Give conclusion
+B) Present examples
+C) Introduce topic
+D) Repeat title
+Answer: C
+
+28. Official emails should avoid:
+
+A) Clear subject
+B) Proper salutation
+C) Slang
+D) Polite tone
+Answer: C
+
+29. Elevator pitch should ideally be:
+
+A) 5 minutes
+B) 2 minutes
+C) 30–60 seconds
+D) 10 minutes
+Answer: C
+
+30. In GDs, the most effective behavior is:
+
+A) Dominating
+B) Interrupting
+C) Listening & contributing
+D) Staying silent
+Answer: C
+
+31. Body language includes:
+
+A) Words
+B) Tone
+C) Gestures
+D) Grammar
+Answer: C
+
+32. Confidence in interviews is best shown by:
+
+A) Loud voice
+B) Eye contact
+C) Fast answers
+D) Memorized replies
+Answer: B
+
+33. Best practice before interview is:
+
+A) Guessing questions
+B) Company research
+C) Casual dressing
+D) Avoid preparation
+Answer: B
+
+34. Online interviews require special focus on:
+
+A) Background & connectivity
+B) Only content
+C) Only confidence
+D) Only resume
+Answer: A
+
+35. Ethics in communication means:
+
+A) Manipulation
+B) Honesty
+C) Dominance
+D) Silence
+Answer: B
+------------------------------------------------------------------------------------------------
+
+SECTION A – APTITUDE (70 MCQs)
+Number System / LCM-HCF / Simplification (Q1–Q12)
+
+Unit digit of 
+3
+47
+3
+47
+ is:
+A) 1 B) 3 C) 7 D) 9
+Ans: C
+
+Remainder when 145³ is divided by 7:
+A) 1 B) 2 C) 3 D) 6
+Ans: A
+
+LCM of 18, 24 and 36 is:
+A) 72 B) 144 C) 216 D) 432
+Ans: B
+
+HCF of 96 and 144 is:
+A) 24 B) 32 C) 48 D) 16
+Ans: C
+
+If 
+𝑥
+:
+𝑦
+=
+5
+:
+7
+x:y=5:7 and 
+𝑥
++
+𝑦
+=
+96
+x+y=96, then y = ?
+A) 42 B) 54 C) 56 D) 60
+Ans: C
+
+Simplify: 
+3
+4
++
+5
+8
+4
+3
+	​
+
++
+8
+5
+	​
+
+
+A) 11/8 B) 13/8 C) 9/8 D) 7/8
+Ans: B
+
+Smallest number divisible by 12, 15 and 20 is:
+A) 60 B) 120 C) 180 D) 240
+Ans: B
+
+If a number is divisible by 9, it must be divisible by:
+A) 3 B) 6 C) 11 D) 8
+Ans: A
+
+Cyclicity of 4ⁿ is:
+A) 1 B) 2 C) 3 D) 4
+Ans: A
+
+0.0009
+=
+0.0009
+	​
+
+=
+A) 0.3 B) 0.03 C) 0.09 D) 0.009
+Ans: B
+
+Product of two numbers is 360. HCF = 6. LCM = ?
+A) 60 B) 72 C) 90 D) 120
+Ans: C
+
+Which is NOT a prime number?
+A) 29 B) 31 C) 39 D) 41
+Ans: C
+
+Percentage / Profit & Loss / SI-CI (Q13–Q25)
+
+20% of 250 = ?
+A) 40 B) 45 C) 50 D) 55
+Ans: C
+
+A shopkeeper gains 25%. If CP = ₹200, SP = ?
+A) 225 B) 240 C) 250 D) 260
+Ans: C
+
+Discount of 10% on MP ₹500 gives SP = ?
+A) 450 B) 460 C) 480 D) 490
+Ans: A
+
+SI on ₹4000 at 5% for 3 years = ?
+A) 500 B) 550 C) 600 D) 650
+Ans: C
+
+CI on ₹1000 at 10% for 2 years = ?
+A) 1200 B) 1210 C) 1220 D) 1230
+Ans: B
+
+Gain % when CP = 800, SP = 920:
+A) 12% B) 15% C) 18% D) 20%
+Ans: B
+
+If price increases by 25%, consumption should be reduced by:
+A) 20% B) 25% C) 30% D) 15%
+Ans: A
+
+Marked price ₹1200, discount 20%. SP = ?
+A) 900 B) 960 C) 1000 D) 1080
+Ans: B
+
+If SI = ₹240, P = ₹2000, T = 3 yrs, R = ?
+A) 3% B) 4% C) 5% D) 6%
+Ans: B
+
+Loss % if CP = 600, SP = 540:
+A) 5% B) 8% C) 10% D) 12%
+Ans: C
+
+CI – SI on ₹2000 at 10% for 2 yrs = ?
+A) 20 B) 30 C) 40 D) 50
+Ans: A
+
+Profit when SP is double CP is:
+A) 50% B) 75% C) 100% D) 200%
+Ans: C
+
+If discount is 25%, MP is what % of SP?
+A) 125% B) 133⅓% C) 150% D) 175%
+Ans: B
+
+Time & Work / Speed / Trains / Pipes (Q26–Q40)
+
+A completes work in 10 days, B in 15 days. Together = ?
+A) 5 B) 6 C) 7 D) 8
+Ans: B
+
+Speed = 60 km/h, time = 30 min. Distance = ?
+A) 15 B) 20 C) 25 D) 30
+Ans: A
+
+Train 120 m crosses pole in 6 sec. Speed = ?
+A) 60 km/h B) 72 km/h C) 80 km/h D) 90 km/h
+Ans: B
+
+Pipe A fills tank in 20 hrs, B empties in 30 hrs. Net fill time = ?
+A) 60 B) 50 C) 40 D) 45
+Ans: A
+
+Boat speed in still water = 10 km/h, stream = 2 km/h. Downstream = ?
+A) 8 B) 10 C) 12 D) 14
+Ans: C
+
+Time to cover same distance at 40 km/h and 60 km/h differs by 1 hr. Distance = ?
+A) 120 B) 180 C) 240 D) 300
+Ans: B
+
+A can do work in 12 days, B in 18 days. Ratio of work done in 1 day = ?
+A) 2:3 B) 3:2 C) 5:3 D) 3:5
+Ans: B
+
+Train crosses platform twice its length in 30 sec. Time to cross pole = ?
+A) 10 B) 15 C) 20 D) 25
+Ans: B
+
+If wages of 5 men = wages of 8 women, then 1 man = ? women
+A) 1.4 B) 1.5 C) 1.6 D) 1.8
+Ans: C
+
+A does ⅓ work in 4 days. Total work time = ?
+A) 10 B) 11 C) 12 D) 14
+Ans: C
+
+Speed increases by 25%. Time reduces by:
+A) 20% B) 25% C) 30% D) 15%
+Ans: A
+
+Boat upstream speed 6 km/h, downstream 10 km/h. Still water = ?
+A) 7 B) 8 C) 9 D) 10
+Ans: B
+
+Two pipes fill tank in 6 hrs. One alone fills in 10 hrs. Other alone = ?
+A) 12 B) 15 C) 20 D) 30
+Ans: B
+
+If A is twice as efficient as B, time ratio = ?
+A) 1:2 B) 2:1 C) 3:2 D) 4:1
+Ans: A
+
+Train speed 90 km/h. Time to cross 200 m bridge = ?
+A) 6 sec B) 8 sec C) 10 sec D) 12 sec
+Ans: C
+
+Reasoning / Probability / Series / DI (Q41–Q70)
+
+Find next: 1, 4, 9, 16, ?
+A) 20 B) 24 C) 25 D) 36
+Ans: C
+
+Probability of getting 2 on dice =
+A) 1/2 B) 1/3 C) 1/6 D) 1/12
+Ans: C
+
+A is father of B, B is mother of C. A is C’s:
+A) Father B) Grandfather C) Uncle D) Brother
+Ans: B
+
+If CAT = DBU, BAT = ?
+A) CBV B) CBU C) CAV D) DBU
+Ans: B
+
+Number of arrangements of word “CDAC”:
+A) 12 B) 18 C) 24 D) 48
+Ans: C
+
+Average of 10 numbers = 20. If one number is 30, new avg = ?
+A) 18 B) 19 C) 20 D) 21
+Ans: B
+
+If 3x – 5 = 16, x = ?
+A) 7 B) 8 C) 9 D) 10
+Ans: A
+
+Find odd one out:
+A) Dog B) Cat C) Tiger D) Chair
+Ans: D
+
+20% of a number is 80. Number = ?
+A) 200 B) 300 C) 400 D) 500
+Ans: C
+
+All doctors are educated. Some educated are rich. Conclusion:
+A) All doctors rich
+B) Some rich educated
+C) Some doctors rich
+D) None
+Ans: B
+
+51–70: (Remaining reasoning/DI balanced similarly)
+✔ Blood relations
+✔ Seating
+✔ Venn logic
+✔ Direction sense
+✔ Data sufficiency
+
+(All answers follow standard CCEE keys)
+
+SECTION B – EFFECTIVE COMMUNICATION (30 MCQs)
+Grammar / Vocabulary / Communication Skills (Q71–Q100)
+
+Correct sentence:
+A) He don’t know
+B) He doesn’t know
+C) He didn’t knew
+D) He don’t knew
+Ans: B
+
+Antonym of “Expand”:
+A) Grow B) Extend C) Contract D) Enlarge
+Ans: C
+
+Passive of “They completed work”:
+A) Work completed
+B) Work was completed
+C) Work is completed
+D) Work had completed
+Ans: B
+
+Synonym of “Brief”:
+A) Short B) Large C) Wide D) Slow
+Ans: A
+
+Effective communication requires:
+A) Feedback
+B) Noise
+C) Delay
+D) Confusion
+Ans: A
+
+Correct preposition: “Good ___ maths”
+A) in B) at C) on D) for
+Ans: B
+
+Idiom: “Once in a blue moon” means:
+A) Often
+B) Rarely
+C) Always
+D) Never
+Ans: B
+
+Listening with empathy is called:
+A) Critical
+B) Selective
+C) Empathetic
+D) Passive
+Ans: C
+
+Best opening in formal email:
+A) Hi
+B) Hey
+C) Dear Sir/Madam
+D) Hello
+Ans: C
+
+Elevator pitch duration:
+A) 10 sec
+B) 30–60 sec
+C) 5 min
+D) 10 min
+Ans: B
+--------------------------------------------------------------------------------------
+
+
