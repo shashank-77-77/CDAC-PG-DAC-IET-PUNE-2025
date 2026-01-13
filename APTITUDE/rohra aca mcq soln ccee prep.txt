@@ -1,0 +1,626 @@
+📘 ROHRA’S ACADEMY
+CCEE-LEVEL MOCK TEST (40 MCQs)
+
+Total Questions: 40
+Marks: 40
+Duration: 60 Minutes
+Negative Marking: None
+
+Q1.
+
+If 
+𝑎
++
+𝑏
+=
+10
+a+b=10, 
+𝑎
+𝑏
+=
+25
+ab=25, find the value of 
+𝑎
+3
++
+𝑏
+3
+a
+3
++b
+3
+.
+
+200
+
+150
+
+250
+
+300
+
+✅ Answer: 1) 200
+
+Q2.
+
+The sum of 4 consecutive two-digit odd numbers when divided by 10 becomes a perfect square. Which of the following can be one of the four numbers?
+
+21
+
+25
+
+41
+
+67
+
+✅ Answer: 3) 41
+
+Q3.
+
+When 2256 is divided by 17, the remainder is:
+
+1
+
+16
+
+14
+
+None of these
+
+✅ Answer: 3) 14
+
+Q4.
+
+6 technicians can build a server in 10 hours. They start at 11:00 AM. One technician is added every hour starting at 5:00 PM. At what time will the work be completed?
+
+6:40 PM
+
+8:00 PM
+
+8:20 PM
+
+9:00 PM
+
+✅ Answer: 3) 8:20 PM
+
+Q5.
+
+Two pipes fill a tank in 8 and 12 hours. A third pipe empties it in 6 hours. They start at 1 PM, 2 PM and 3 PM respectively. At what time will the tank be filled?
+
+6 AM
+
+7 AM
+
+8 AM
+
+9 AM
+
+✅ Answer: 3) 8 AM
+
+Q6.
+
+Set 
+𝑇
+𝑛
+=
+{
+𝑛
+,
+𝑛
++
+1
+,
+𝑛
++
+2
+,
+𝑛
++
+3
+,
+𝑛
++
+4
+}
+T
+n
+	​
+
+={n,n+1,n+2,n+3,n+4} for 
+𝑛
+=
+1
+n=1 to 96. How many sets contain 6 or a multiple of 6?
+
+78
+
+79
+
+80
+
+81
+
+✅ Answer: 4) 81
+
+Q7.
+
+Which of the following statements is necessarily true?
+
+(a) I is 1 mile north of L
+(b) D is 2 miles west of B
+(c) E and B intersect
+(d) M is 1.5 miles north of L
+
+✅ Answer: (d) M is 1.5 miles north of L
+
+Q8.
+
+If E is midway between B and C, which statement is false?
+
+(a) D is less than 1 mile from B
+(b) C is less than 1.5 miles from D
+(c) Distance EB + EC = 0.5 mile
+(d) D is 2 miles west of A
+
+✅ Answer: (c) Distance EB + EC = 0.5 mile
+
+Q9.
+
+How many even numbers are located at even positions from left to right?
+
+Sequence:
+2 z 5 ? 9 t r 2 × m + 3 b 7 − s
+
+(a) Two
+(b) Three
+(c) One
+(d) None
+
+✅ Answer: (c) One
+
+Q10.
+
+How many letters are immediately preceded and followed by numbers?
+
+(a) One
+(b) Two
+(c) Three
+(d) None
+
+✅ Answer: (b) Two
+
+Q11.
+
+Fresh grapes contain 90% water. Dried grapes contain 20% water. How many kg of dried grapes are obtained from 20 kg of fresh grapes?
+
+2 kg
+
+1.6 kg
+
+2.5 kg
+
+2.4 kg
+
+✅ Answer: 3) 2.5 kg
+
+Q12.
+
+Length, breadth and height of a room are in ratio 3:2:1. If length & breadth are halved and height doubled, total area of four walls will:
+
+Remain same
+
+Decrease by 13.64%
+
+Increase by 15%
+
+Decrease by 18.75%
+
+✅ Answer: 4) Decrease by 18.75%
+
+Q13.
+
+A number when divided by 3, 4, 5 leaves remainders 1, 3, 4 respectively. Remainder when divided by 60?
+
+29
+
+59
+
+19
+
+9
+
+✅ Answer: 2) 59
+
+Q14.
+
+Identify valid argument:
+
+A. MBAs are in great demand
+B. Ram and Sita are in great demand
+C. Ram is in great demand
+D. Sita is in great demand
+E. Ram and Sita are MBAs
+
+ABE
+
+ECD
+
+AEB
+
+EBA
+
+✅ Answer: 4) EBA
+
+Q15.
+
+Identify valid argument:
+
+A. Modern industry is technology driven
+B. BTI is a modern industry
+C. BTI is technology driven
+D. BTI may be technology driven
+E. Technology-driven industry is modern
+
+ABC
+
+ABD
+
+BCA
+
+EBC
+
+✅ Answer: 1) ABC
+
+Q16.
+
+In a party of 40 people, total handshakes = ?
+
+760
+
+780
+
+820
+
+1560
+
+✅ Answer: 2) 780
+
+Q17.
+
+Difference between CI and SI for 2 years at 30% is ₹72. Find principal.
+
+500
+
+600
+
+700
+
+800
+
+✅ Answer: 4) 800
+
+Q18.
+
+Two cards drawn. Probability one spade and one heart:
+
+7/202
+
+13/51
+
+5/404
+
+13/102
+
+✅ Answer: 4) 13/102
+
+Q19.
+
+Arrangements of word OPTICAL such that vowels always come together:
+
+120
+
+720
+
+4320
+
+2160
+
+✅ Answer: 2) 720
+
+Q20.
+
+Ways a bowler can take 4 wickets in 6 balls:
+
+15
+
+4
+
+20
+
+360
+
+✅ Answer: 1) 15
+
+Q21.
+
+In which position is A sitting?
+
+Between B and D
+
+Between B and C
+
+Between E and D
+
+Between C and E
+
+✅ Answer: 3) Between E and D
+
+Q22.
+
+Who sits to the right of Rohit?
+
+Rahul
+
+Virat
+
+Ravindra
+
+Jasprit
+
+✅ Answer: 2) Virat
+
+Q23.
+
+Which shows C is granddaughter of E?
+
+C % B $ F $ E
+
+B $ F $ E % C
+
+C @ B % F % E
+
+E % B $ F $ C
+
+✅ Answer: 1) C % B $ F $ E
+
+Q24.
+
+If Harmanpreet’s shadow is to the left of Smriti, Smriti faces:
+
+East
+
+West
+
+North
+
+South
+
+✅ Answer: 4) South
+
+Q25.
+
+Two trains start at 7 AM and 8 AM from opposite ends. When do they meet?
+
+9 AM
+
+10 AM
+
+10:30 AM
+
+11 AM
+
+✅ Answer: 3) 10:30 AM
+
+Q26.
+
+Speed of train overtaking walkers = ?
+
+66 km/h
+
+75 km/h
+
+78 km/h
+
+81 km/h
+
+✅ Answer: 1) 66 km/h
+
+Q27.
+
+When was the watch correct?
+
+Tuesday 2 PM
+
+Wednesday 2 PM
+
+Thursday 3 PM
+
+Friday 1 PM
+
+✅ Answer: 2) Wednesday 2 PM
+
+Q28.
+
+Angle at 4:20 = ?
+
+0°
+
+10°
+
+5°
+
+20°
+
+✅ Answer: 2) 10°
+
+Q29.
+
+Rate of stream = ?
+
+1 km/h
+
+1.5 km/h
+
+2 km/h
+
+2.5 km/h
+
+✅ Answer: 3) 2 km/h
+
+Q30.
+
+Speed in still water = ?
+
+2
+
+3
+
+4
+
+5
+
+✅ Answer: 2) 3 km/h
+
+Q31.
+
+Average marks of all students = ?
+
+53.33
+
+54.68
+
+55
+
+None
+
+✅ Answer: 2) 54.68
+
+Q32.
+
+Speed of sound = ?
+
+300 m/s
+
+310 m/s
+
+320 m/s
+
+330 m/s
+
+✅ Answer: 3) 320 m/s
+
+Q33.
+
+Ratio of speeds (Scooter : Milkman):
+
+2:1
+
+5:2
+
+4:1
+
+5:1
+
+✅ Answer: 1) 2:1
+
+Q34.
+
+Ratio of candle lengths after 3 hours:
+
+1:2
+
+3:1
+
+2:1
+
+1:3
+
+✅ Answer: 1) 1:2
+
+Q35.
+
+Upstream distance = ?
+
+320 km
+
+240 km
+
+210 km
+
+270 km
+
+✅ Answer: 2) 240 km
+
+Q36.
+
+Day on Dec 9, 1971:
+
+Thursday
+
+Wednesday
+
+Saturday
+
+Sunday
+
+✅ Answer: 1) Thursday
+
+Q37.
+
+Ratio of sides = ?
+
+3/4
+
+2/3
+
+1/4
+
+1/2
+
+✅ Answer: 4) 1/2
+
+Q38.
+
+Value of 
+𝑏
+−
+𝑎
+b−a = ?
+
+1
+
+2
+
+3
+
+None
+
+✅ Answer: 2) 2
+
+Q39.
+
+Data Sufficiency – Meeting schedule:
+
+Statement 1 alone
+
+Statement 2 alone
+
+Both together
+
+Not sufficient
+
+✅ Answer: 3) Both together
+
+Q40.
+
+Data Sufficiency – Salary:
+
+Statement 1 alone
+
+Statement 2 alone
+
+Both together
+
+Not sufficient
+
+✅ Answer: 3) Both together
