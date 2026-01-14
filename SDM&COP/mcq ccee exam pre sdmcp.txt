@@ -3262,9 +3262,1807 @@ C) Minimal documentation
 D) Hardware optimization
 Ans: B
 ------------------------------------------------------------------------------------------------------------------------
+AGILE DEVELOPMENT & JIRA – SESSIONS 6, 7 & 8
+
+Coverage: Agile principles, Agile components, benefits, Scrum, Extreme Programming (XP), Agile tools, Jira basics, sprints & case-study mindset
+Volume: 50 MCQs
+Difficulty Mix: Easy (20) · Medium (15) · Hard (15)
+
+EASY LEVEL (1–20)
+
+Agile development primarily emphasizes
+A) Detailed upfront planning
+B) Customer collaboration and adaptability
+C) Rigid processes
+D) Extensive documentation
+Ans: B
+
+Agile manifesto values
+A) Processes over people
+B) Working software over documentation
+C) Contracts over collaboration
+D) Plans over change
+Ans: B
+
+Agile development is best suited when
+A) Requirements are fixed
+B) Requirements change frequently
+C) No customer involvement
+D) Project is very small
+Ans: B
+
+Scrum is a
+A) Programming language
+B) Agile framework
+C) Testing tool
+D) Design pattern
+Ans: B
+
+Scrum team typically consists of
+A) Manager and developers
+B) Product Owner, Scrum Master, Developers
+C) Tester only
+D) Architect only
+Ans: B
+
+Sprint in Scrum is
+A) A long-term phase
+B) A fixed time-boxed iteration
+C) A testing activity
+D) A release
+Ans: B
+
+Typical sprint duration is
+A) 1 day
+B) 1–4 weeks
+C) 6 months
+D) 1 year
+Ans: B
+
+Product Backlog contains
+A) Completed features
+B) Prioritized list of requirements
+C) Bugs only
+D) Test cases
+Ans: B
+
+Sprint Backlog contains
+A) All project requirements
+B) Items selected for the sprint
+C) Only defects
+D) Documentation
+Ans: B
+
+Daily Scrum is
+A) Status report meeting
+B) Sprint planning meeting
+C) 15-minute daily stand-up
+D) Retrospective
+Ans: C
+
+Scrum Master’s primary role is to
+A) Assign tasks
+B) Remove impediments
+C) Write code
+D) Approve budget
+Ans: B
+
+Product Owner is responsible for
+A) Coding
+B) Maximizing product value
+C) Testing
+D) Deployment
+Ans: B
+
+Increment in Scrum refers to
+A) Documentation
+B) Working software
+C) Test report
+D) Design model
+Ans: B
+
+Agile encourages
+A) Big-bang delivery
+B) Incremental delivery
+C) Single release
+D) No testing
+Ans: B
+
+Extreme Programming (XP) focuses on
+A) Documentation
+B) Code quality and customer feedback
+C) Long iterations
+D) Heavy planning
+Ans: B
+
+Pair programming is a practice of
+A) Two testers working together
+B) Two developers coding together
+C) Developer and manager pairing
+D) Automated testing
+Ans: B
+
+Jira is primarily used for
+A) Coding
+B) Agile project management
+C) Compilation
+D) Deployment
+Ans: B
+
+Jira issue types include
+A) Bug, Task, Story
+B) Class, Object, Method
+C) Module, Package
+D) Commit, Branch
+Ans: A
+
+Sprint review focuses on
+A) Process improvement
+B) Inspecting increment with stakeholders
+C) Planning next sprint
+D) Daily status
+Ans: B
+
+Sprint retrospective focuses on
+A) Product features
+B) Process improvement
+C) Coding standards
+D) Release planning
+Ans: B
+
+MEDIUM LEVEL (21–35)
+
+Agile principle promotes
+A) Late delivery
+B) Early and continuous delivery
+C) No customer involvement
+D) Fixed scope
+Ans: B
+
+Scrum artifacts provide
+A) Transparency
+B) Compilation
+C) Testing automation
+D) Security
+Ans: A
+
+Definition of Done ensures
+A) Feature prioritization
+B) Increment quality standard
+C) Sprint duration
+D) Team size
+Ans: B
+
+Burndown chart shows
+A) Team velocity
+B) Remaining work over time
+C) Total cost
+D) Bug count only
+Ans: B
+
+Velocity in Scrum measures
+A) Coding speed per hour
+B) Work completed per sprint
+C) Lines of code
+D) CPU usage
+Ans: B
+
+XP practice of Test-Driven Development means
+A) Write tests after code
+B) Write code without tests
+C) Write tests before code
+D) Skip testing
+Ans: C
+
+Refactoring aims to
+A) Add new features
+B) Improve code structure without changing behavior
+C) Fix bugs only
+D) Increase complexity
+Ans: B
+
+User stories are written from
+A) Developer perspective
+B) Manager perspective
+C) End-user perspective
+D) Tester perspective
+Ans: C
+
+Typical user story format is
+A) If–Else
+B) Given–When–Then
+C) As a user, I want, so that
+D) For loop
+Ans: C
+
+Agile estimation often uses
+A) Exact hours
+B) Story points
+C) Days only
+D) Lines of code
+Ans: B
+
+Kanban differs from Scrum by
+A) Fixed iterations
+B) Continuous flow
+C) Defined roles
+D) Sprint planning
+Ans: B
+
+Jira workflow represents
+A) Compilation steps
+B) Issue lifecycle states
+C) Memory states
+D) OS scheduling
+Ans: B
+
+Backlog grooming is also called
+A) Sprint review
+B) Backlog refinement
+C) Retrospective
+D) Daily scrum
+Ans: B
+
+Agile reduces risk by
+A) Delaying feedback
+B) Frequent inspection and adaptation
+C) Heavy documentation
+D) Freezing requirements
+Ans: B
+
+Scrum discourages
+A) Self-organizing teams
+B) Command-and-control management
+C) Collaboration
+D) Transparency
+Ans: B
+
+HARD LEVEL (36–50)
+
+Agile manifesto has
+A) 4 values and 12 principles
+B) 12 values and 4 principles
+C) 10 values
+D) 5 principles
+Ans: A
+
+Scrum Master is best described as
+A) Project manager
+B) Servant leader
+C) Technical architect
+D) QA lead
+Ans: B
+
+Scope change during sprint is
+A) Encouraged
+B) Allowed freely
+C) Discouraged
+D) Mandatory
+Ans: C
+
+Time-boxing in Scrum helps in
+A) Increasing scope
+B) Predictability and focus
+C) Delaying delivery
+D) Reducing transparency
+Ans: B
+
+XP values include
+A) Processes
+B) Courage
+C) Heavy documentation
+D) Contracts
+Ans: B
+
+Collective code ownership means
+A) Only lead modifies code
+B) Anyone can modify any code
+C) Code is locked
+D) No reviews
+Ans: B
+
+Continuous integration aims to
+A) Delay integration
+B) Integrate code frequently
+C) Avoid builds
+D) Reduce testing
+Ans: B
+
+Agile scaling frameworks include
+A) SAFe
+B) LeSS
+C) Nexus
+D) All of the above
+Ans: D
+
+Jira epics are used to
+A) Track bugs
+B) Group related stories
+C) Run sprints
+D) Deploy code
+Ans: B
+
+Story point estimation is
+A) Absolute
+B) Relative
+C) Time-based
+D) Cost-based
+Ans: B
+
+Sprint goal provides
+A) Task list
+B) Overall objective for sprint
+C) Budget estimate
+D) Release date
+Ans: B
+
+Agile anti-pattern includes
+A) Frequent feedback
+B) Mini-waterfall
+C) Self-organizing teams
+D) Incremental delivery
+Ans: B
+
+Jira board visualizes
+A) CPU scheduling
+B) Work in progress
+C) Memory allocation
+D) Network flow
+Ans: B
+
+Agile success metric focuses on
+A) Lines of code
+B) Customer value delivered
+C) Documentation size
+D) CPU usage
+Ans: B
+
+Strategic advantage of Agile is
+A) Perfect prediction
+B) Faster adaptation to change
+C) No planning
+D) No documentation
+Ans: B
 ------------------------------------------------------------------------------------------------------------------------
+DEVOPS, DOCKER & KUBERNETES – SESSIONS 9, 10 & 11
+
+Coverage: DevOps concepts, DevOps lifecycle, containerization, Docker, Dockerfile, images & containers, Docker Swarm (intro), Kubernetes fundamentals, cluster, services, deployment
+Volume: 50 MCQs
+Difficulty Mix: Easy (20) · Medium (15) · Hard (15)
+
+EASY LEVEL (1–20)
+
+DevOps is a combination of
+A) Development and Testing
+B) Development and Operations
+C) Design and Operations
+D) Deployment and Security
+Ans: B
+
+Primary goal of DevOps is to
+A) Increase documentation
+B) Reduce development speed
+C) Improve collaboration and faster delivery
+D) Replace developers
+Ans: C
+
+DevOps emphasizes
+A) Silos
+B) Automation and collaboration
+C) Manual deployment
+D) Waterfall process
+Ans: B
+
+Which is NOT a DevOps phase?
+A) Plan
+B) Develop
+C) Compile
+D) Monitor
+Ans: C
+
+Continuous Integration means
+A) Integrating at project end
+B) Integrating code frequently
+C) Manual builds
+D) No testing
+Ans: B
+
+Continuous Delivery ensures
+A) Code is always deployable
+B) Code is always deployed
+C) No testing required
+D) No automation
+Ans: A
+
+Containerization helps by
+A) Virtualizing hardware
+B) Packaging app with dependencies
+C) Increasing OS size
+D) Replacing kernel
+Ans: B
+
+Docker is a
+A) Hypervisor
+B) Container platform
+C) Programming language
+D) Database
+Ans: B
+
+Docker containers are
+A) Heavyweight
+B) Hardware virtualized
+C) Lightweight and OS-level virtualized
+D) BIOS-based
+Ans: C
+
+Docker images are
+A) Running instances
+B) Templates for containers
+C) Logs
+D) Config files only
+Ans: B
+
+Docker container is created from
+A) Volume
+B) Image
+C) Network
+D) Kernel
+Ans: B
+
+Dockerfile is used to
+A) Run container
+B) Define image build steps
+C) Monitor containers
+D) Push image
+Ans: B
+
+Which command builds a Docker image?
+A) docker run
+B) docker build
+C) docker pull
+D) docker push
+Ans: B
+
+Which command lists running containers?
+A) docker images
+B) docker ps
+C) docker run
+D) docker exec
+Ans: B
+
+Which command starts a container?
+A) docker start
+B) docker build
+C) docker commit
+D) docker tag
+Ans: A
+
+Kubernetes is a
+A) Container runtime
+B) Container orchestration platform
+C) Version control tool
+D) CI tool
+Ans: B
+
+Kubernetes cluster consists of
+A) Only master
+B) Only worker
+C) Master and worker nodes
+D) Containers only
+Ans: C
+
+Pod is
+A) Single container always
+B) Smallest deployable unit in Kubernetes
+C) Node
+D) Service
+Ans: B
+
+Kubernetes uses YAML for
+A) Logging
+B) Configuration and deployment
+C) Compilation
+D) Monitoring
+Ans: B
+
+Service in Kubernetes provides
+A) Storage
+B) Networking abstraction
+C) Scheduling
+D) Logging
+Ans: B
+
+MEDIUM LEVEL (21–35)
+
+DevOps reduces
+A) Feedback loops
+B) Time to market
+C) Automation
+D) Collaboration
+Ans: B
+
+Infrastructure as Code (IaC) means
+A) Manual server setup
+B) Managing infra via scripts/configs
+C) Writing OS code
+D) Hardware coding
+Ans: B
+
+Docker uses which OS feature?
+A) BIOS
+B) Kernel namespaces and cgroups
+C) JVM
+D) Hypervisor
+Ans: B
+
+Container vs VM main difference is
+A) Containers include full OS
+B) Containers share host OS kernel
+C) VMs are faster
+D) Containers need BIOS
+Ans: B
+
+ENTRYPOINT in Dockerfile defines
+A) Base image
+B) Default executable
+C) Port mapping
+D) Volume
+Ans: B
+
+CMD in Dockerfile is
+A) Mandatory
+B) Used to override ENTRYPOINT arguments
+C) Builds image
+D) Deletes container
+Ans: B
+
+Docker volume is used for
+A) Logging only
+B) Persistent data storage
+C) Networking
+D) Image build
+Ans: B
+
+docker exec is used to
+A) Build image
+B) Run command inside running container
+C) Stop container
+D) Delete image
+Ans: B
+
+Kubernetes scheduler decides
+A) Which image to use
+B) Which node runs the pod
+C) Which service to expose
+D) Which volume to attach
+Ans: B
+
+ReplicaSet ensures
+A) One pod only
+B) Desired number of pod replicas
+C) Storage replication
+D) Network replication
+Ans: B
+
+Deployment in Kubernetes manages
+A) Networking only
+B) Pod lifecycle and updates
+C) Disk allocation
+D) Logging
+Ans: B
+
+Rolling update allows
+A) Downtime deployment
+B) Gradual update without downtime
+C) Manual restart
+D) Cluster shutdown
+Ans: B
+
+Kubernetes control plane includes
+A) kubelet
+B) kube-proxy
+C) API server
+D) Container runtime
+Ans: C
+
+YAML stands for
+A) Yet Another Markup Language
+B) Your Application Markup Language
+C) Yet Another Modeling Language
+D) Yielded App Markup Layer
+Ans: A
+
+DevOps metrics often include
+A) Lines of code
+B) Deployment frequency
+C) Disk usage
+D) CPU speed
+Ans: B
+
+HARD LEVEL (36–50)
+
+Docker containers are isolated using
+A) Threads
+B) Processes only
+C) Namespaces
+D) Virtual BIOS
+Ans: C
+
+Kubernetes follows
+A) Imperative model only
+B) Declarative configuration model
+C) Manual configuration
+D) Script-only model
+Ans: B
+
+Desired state in Kubernetes means
+A) Current running state
+B) Target configuration declared by user
+C) Error state
+D) Debug mode
+Ans: B
+
+Self-healing in Kubernetes includes
+A) Auto-scaling only
+B) Restarting failed pods
+C) Code compilation
+D) Disk cleanup
+Ans: B
+
+Horizontal Pod Autoscaler scales based on
+A) Disk size
+B) CPU/memory metrics
+C) Node count
+D) Image size
+Ans: B
+
+Docker Swarm is
+A) Database
+B) Docker’s native orchestration tool
+C) CI server
+D) Logging system
+Ans: B
+
+Kubernetes replaces Swarm primarily due to
+A) Simplicity
+B) Rich ecosystem and scalability
+C) Licensing
+D) UI only
+Ans: B
+
+Kubernetes Service types include
+A) ClusterIP, NodePort, LoadBalancer
+B) Public, Private
+C) TCP, UDP
+D) HTTP only
+Ans: A
+
+kubelet runs on
+A) Master node only
+B) Worker nodes
+C) Client machine
+D) API server
+Ans: B
+
+Container orchestration solves
+A) Single container execution
+B) Scaling, healing, networking at scale
+C) Compilation
+D) Version control
+Ans: B
+
+DevOps toolchain typically includes
+A) Git, Jenkins, Docker, Kubernetes
+B) Word, Excel
+C) OS only
+D) Browser only
+Ans: A
+
+Blue–Green deployment aims to
+A) Reduce memory
+B) Enable zero-downtime releases
+C) Improve UI
+D) Increase disk usage
+Ans: B
+
+Canary deployment means
+A) Full rollout
+B) Gradual rollout to subset of users
+C) Rollback only
+D) No testing
+Ans: B
+
+Kubernetes dashboard is used for
+A) Coding
+B) Visual cluster management
+C) Image building
+D) Testing
+Ans: B
+
+Strategic value of DevOps is
+A) Tool usage
+B) Faster, reliable software delivery pipeline
+C) Hardware optimization
+D) Documentation reduction
+Ans: B
 ------------------------------------------------------------------------------------------------------------------------
+TESTING, SELENIUM & JENKINS – SESSIONS 12, 13, 14, 15 & 16
+
+Coverage: Software testing fundamentals, STLC, V-Model, testing types, Selenium WebDriver, automation basics, Jenkins CI/CD, pipeline integration
+Volume: 50 MCQs
+Difficulty Mix: Easy (20) · Medium (15) · Hard (15)
+
+EASY LEVEL (1–20)
+
+Software testing is the process of
+A) Writing code
+B) Finding and fixing defects
+C) Executing software to find defects
+D) Deploying software
+Ans: C
+
+Primary objective of testing is to
+A) Prove software is bug-free
+B) Improve quality by detecting defects
+C) Reduce coding effort
+D) Replace development
+Ans: B
+
+Verification focuses on
+A) Executing code
+B) Checking documents and design
+C) Finding runtime errors
+D) User acceptance
+Ans: B
+
+Validation focuses on
+A) “Are we building the product right?”
+B) “Are we building the right product?”
+C) Coding standards
+D) Performance tuning
+Ans: B
+
+QA differs from QC because QA is
+A) Product-oriented
+B) Process-oriented
+C) Execution-oriented
+D) Tool-oriented
+Ans: B
+
+STLC stands for
+A) Software Test Life Cycle
+B) System Test Logic Cycle
+C) Software Tool Lifecycle
+D) Source Test Level Code
+Ans: A
+
+Which is NOT a phase of STLC?
+A) Test planning
+B) Test design
+C) Test execution
+D) Coding
+Ans: D
+
+V-Model emphasizes
+A) Coding first
+B) Testing after coding only
+C) Parallel testing and development
+D) No testing
+Ans: C
+
+Manual testing means
+A) Using scripts
+B) Using tools
+C) Testing without automation tools
+D) No testing
+Ans: C
+
+Automation testing is useful for
+A) One-time tests
+B) Regression testing
+C) Exploratory testing
+D) Ad-hoc testing
+Ans: B
+
+White-box testing focuses on
+A) Internal code structure
+B) User interface
+C) Requirements only
+D) Performance
+Ans: A
+
+Black-box testing focuses on
+A) Code logic
+B) Internal structure
+C) Functional behavior
+D) Loop conditions
+Ans: C
+
+Grey-box testing combines
+A) Unit and system testing
+B) White-box and black-box testing
+C) Manual and automation
+D) Functional and non-functional
+Ans: B
+
+Functional testing verifies
+A) Performance
+B) Security
+C) Business requirements
+D) Load
+Ans: C
+
+Non-functional testing includes
+A) Unit testing
+B) Integration testing
+C) Performance testing
+D) Smoke testing
+Ans: C
+
+Selenium is used for
+A) API testing
+B) Database testing
+C) Web application automation
+D) Mobile OS testing
+Ans: C
+
+Selenium WebDriver interacts with
+A) Database
+B) Browser directly
+C) OS kernel
+D) Server only
+Ans: B
+
+Selenium supports
+A) Only Chrome
+B) Only Firefox
+C) Multiple browsers
+D) No browsers
+Ans: C
+
+Jenkins is a
+A) Testing tool
+B) Version control system
+C) CI/CD automation server
+D) Container runtime
+Ans: C
+
+CI stands for
+A) Continuous Improvement
+B) Continuous Integration
+C) Code Inspection
+D) Central Integration
+Ans: B
+
+MEDIUM LEVEL (21–35)
+
+Test cases are derived from
+A) Code only
+B) Requirements
+C) Deployment scripts
+D) Build logs
+Ans: B
+
+Test plan defines
+A) How to code
+B) Testing scope, strategy, schedule
+C) UI layout
+D) Deployment steps
+Ans: B
+
+Smoke testing checks
+A) Detailed functionality
+B) Performance limits
+C) Basic build stability
+D) Security flaws
+Ans: C
+
+Regression testing ensures
+A) New features work
+B) Old features still work
+C) Performance improves
+D) Security is tight
+Ans: B
+
+Unit testing is usually done by
+A) End users
+B) Testers only
+C) Developers
+D) Managers
+Ans: C
+
+Integration testing focuses on
+A) Individual units
+B) Module interactions
+C) User acceptance
+D) Load handling
+Ans: B
+
+System testing validates
+A) Individual modules
+B) Complete integrated system
+C) Code structure
+D) Algorithms
+Ans: B
+
+Acceptance testing is performed by
+A) Developers
+B) Testers
+C) Customers or users
+D) Build engineers
+Ans: C
+
+Selenium locators include
+A) ID, Name, XPath
+B) Table, Row
+C) CPU, RAM
+D) Commit, Branch
+Ans: A
+
+XPath is used to
+A) Style web pages
+B) Locate elements in DOM
+C) Execute scripts
+D) Compile code
+Ans: B
+
+Selenium test suite is a
+A) Single test
+B) Collection of test cases
+C) Build tool
+D) Browser
+Ans: B
+
+Jenkins job defines
+A) Source code
+B) Automation tasks
+C) Database schema
+D) UI elements
+Ans: B
+
+Jenkins pipeline represents
+A) Manual workflow
+B) Automated CI/CD workflow
+C) Testing framework
+D) Database pipeline
+Ans: B
+
+Jenkins integrates well with
+A) Git
+B) Docker
+C) Selenium
+D) All of the above
+Ans: D
+
+Maven is commonly used in Jenkins for
+A) UI testing
+B) Dependency management and build
+C) Version control
+D) Container orchestration
+Ans: B
+
+HARD LEVEL (36–50)
+
+Verification answers
+A) User satisfaction
+B) Business value
+C) Conformance to specification
+D) Runtime behavior
+Ans: C
+
+V-Model advantage is
+A) Late testing
+B) Early defect detection
+C) No documentation
+D) No validation
+Ans: B
+
+Automation testing is NOT suitable for
+A) Regression tests
+B) Load tests
+C) Frequently changing UI
+D) Repetitive tests
+Ans: C
+
+Selenium WebDriver differs from Selenium RC because
+A) RC is faster
+B) WebDriver communicates directly with browser
+C) RC needs no server
+D) WebDriver is deprecated
+Ans: B
+
+Implicit wait in Selenium
+A) Waits for entire test
+B) Applies globally for element search
+C) Waits for page load only
+D) Is thread-specific
+Ans: B
+
+Explicit wait waits for
+A) Fixed time
+B) Specific condition
+C) Page load
+D) Browser start
+Ans: B
+
+Jenkins master-agent architecture helps in
+A) UI testing
+B) Distributed builds
+C) Code compilation only
+D) Version control
+Ans: B
+
+Pipeline as Code is defined using
+A) XML only
+B) YAML only
+C) Jenkinsfile
+D) Dockerfile
+Ans: C
+
+CI/CD pipeline failure should ideally
+A) Be ignored
+B) Stop further stages
+C) Continue deployment
+D) Skip testing
+Ans: B
+
+Selenium + Jenkins integration enables
+A) Manual testing
+B) Continuous testing
+C) UI design
+D) Memory optimization
+Ans: B
+
+Non-functional testing is critical for
+A) User satisfaction
+B) Code readability
+C) Compilation
+D) Versioning
+Ans: A
+
+Automation ROI is highest when
+A) Tests run once
+B) Application is stable
+C) UI changes daily
+D) Requirements unclear
+Ans: B
+
+Jenkins trigger can be based on
+A) Code commit
+B) Schedule
+C) Manual action
+D) All of the above
+Ans: D
+
+CI without automated testing leads to
+A) Faster delivery always
+B) Lower confidence builds
+C) Better quality
+D) No risk
+Ans: B
+
+Strategic value of testing + CI/CD is
+A) More tools
+B) Faster feedback and reliable releases
+C) Reduced documentation
+D) Less collaboration
+Ans: B
 ------------------------------------------------------------------------------------------------------------------------
+PG-DAC CCEE – FULL MOCK PAPER (SET-A)
+
+Total Questions: 100
+Format: Single correct option
+Coverage: Entire syllabus (OS → Linux → Shell → Processes → Memory → VM → Deadlock → Git → SE → Agile → DevOps → Testing)
+
+OPERATING SYSTEMS (Q1–Q20)
+
+An Operating System primarily acts as
+A) Compiler
+B) Application software
+C) Interface between user and hardware
+D) Hardware device
+Ans: C
+
+Kernel operates in
+A) User mode
+B) Kernel mode
+C) Application mode
+D) Virtual mode
+Ans: B
+
+Which is NOT an OS function?
+A) Process management
+B) Memory management
+C) File management
+D) Program compilation
+Ans: D
+
+Context switching involves saving
+A) Disk contents
+B) CPU registers and PCB
+C) Cache memory
+D) File tables only
+Ans: B
+
+System calls are used to
+A) Access hardware directly
+B) Invoke kernel services
+C) Compile programs
+D) Start OS
+Ans: B
+
+Hardware dependency of OS is due to
+A) User interface
+B) Instruction set architecture
+C) File system
+D) Shell commands
+Ans: B
+
+RTOS is designed for
+A) High throughput
+B) Deterministic response time
+C) Large storage
+D) Batch processing
+Ans: B
+
+User programs execute in
+A) Kernel mode
+B) Privileged mode
+C) User mode
+D) Supervisor mode
+Ans: C
+
+Interrupts are handled by
+A) Compiler
+B) Shell
+C) Kernel
+D) Loader
+Ans: C
+
+Booting refers to
+A) Installing OS
+B) Loading OS into memory
+C) Compiling kernel
+D) Restarting system
+Ans: B
+
+Which OS supports time sharing?
+A) Batch OS
+B) Embedded OS
+C) Time-sharing OS
+D) RTOS
+Ans: C
+
+Kernel space is
+A) Accessible to all users
+B) Protected memory area
+C) Same as user space
+D) Used for applications
+Ans: B
+
+Which instruction invokes system call?
+A) Jump
+B) Trap
+C) Load
+D) Store
+Ans: B
+
+Mode bit is used to
+A) Identify process
+B) Distinguish user/kernel mode
+C) Increase speed
+D) Manage memory
+Ans: B
+
+Which OS manages hardware resources?
+A) Application software
+B) Firmware
+C) Operating System
+D) Utility software
+Ans: C
+
+Which is a server OS?
+A) Android
+B) Windows Server
+C) DOS
+D) RTLinux
+Ans: B
+
+Kernel panic indicates
+A) Normal shutdown
+B) Hardware failure only
+C) Critical OS failure
+D) User error
+Ans: C
+
+OS protection prevents
+A) Scheduling
+B) Illegal memory access
+C) Multitasking
+D) Context switch
+Ans: B
+
+Multi-user OS allows
+A) One user at a time
+B) Multiple users simultaneously
+C) Only admin access
+D) No sharing
+Ans: B
+
+OS abstraction simplifies
+A) Hardware design
+B) Application development
+C) CPU speed
+D) Disk size
+Ans: B
+
+LINUX & SHELL (Q21–Q40)
+
+Root directory in Linux is
+A) /root
+B) /home
+C) /
+D) /bin
+Ans: C
+
+Command to list files is
+A) dir
+B) show
+C) ls
+D) list
+Ans: C
+
+pwd shows
+A) User name
+B) Current directory
+C) Root path
+D) Home directory
+Ans: B
+
+chmod 755 means
+A) rwx r-x r-x
+B) rw- rw- rw-
+C) r-- r-- r--
+D) rwx rwx rwx
+Ans: A
+
+Pipe operator | is used to
+A) Redirect output
+B) Chain commands
+C) Run background process
+D) Compile files
+Ans: B
+
+$? returns
+A) PID
+B) Exit status
+C) Argument count
+D) Shell name
+Ans: B
+
+Which wildcard matches one character?
+A) *
+B) ?
+C) []
+D) {}
+Ans: B
+
+Shell script comment symbol is
+A) //
+B) /* */
+C) #
+D) --
+Ans: C
+
+read command is used to
+A) Print output
+B) Read user input
+C) Read file
+D) Execute script
+Ans: B
+
+$# gives
+A) Script name
+B) Number of arguments
+C) Exit code
+D) Process ID
+Ans: B
+
+grep is used for
+A) File deletion
+B) Pattern matching
+C) File copy
+D) Sorting
+Ans: B
+
+Which loop executes zero or more times?
+A) for
+B) while
+C) until
+D) None
+Ans: B
+
+case statement is used for
+A) Loops
+B) Multi-way selection
+C) Arithmetic
+D) File test
+Ans: B
+
+test -f file checks
+A) Directory
+B) Regular file
+C) Executable
+D) Link
+Ans: B
+
+Arithmetic expansion uses
+A) [[ ]]
+B) (( ))
+C) { }
+D) < >
+Ans: B
+
+Regex ^abc matches
+A) Ends with abc
+B) Starts with abc
+C) Contains abc
+D) Only abc
+Ans: B
+
+Regex xyz$ matches
+A) Starts with xyz
+B) Ends with xyz
+C) Any xyz
+D) None
+Ans: B
+
+$0 represents
+A) First argument
+B) Script name
+C) PID
+D) Exit status
+Ans: B
+
+set -x is used for
+A) Performance
+B) Debugging
+C) Compilation
+D) Scheduling
+Ans: B
+
+Best practice in shell scripting is
+A) Avoid quotes
+B) Quote variables
+C) Use globals
+D) Ignore errors
+Ans: B
+
+PROCESSES, MEMORY, VM (Q41–Q65)
+
+A process is
+A) Program on disk
+B) Program in execution
+C) Thread
+D) CPU
+Ans: B
+
+fork() returns
+A) Same value to both
+B) 0 to child, PID to parent
+C) PID to child only
+D) −1 always
+Ans: B
+
+Zombie process consumes
+A) CPU
+B) Full memory
+C) PCB entry only
+D) Disk
+Ans: C
+
+SJF minimizes
+A) Turnaround time
+B) Waiting time
+C) Response time
+D) Throughput
+Ans: B
+
+Round Robin uses
+A) Priority
+B) Time quantum
+C) Burst time
+D) Aging
+Ans: B
+
+Paging avoids
+A) Internal fragmentation
+B) External fragmentation
+C) Thrashing
+D) Deadlock
+Ans: B
+
+Internal fragmentation occurs due to
+A) Paging
+B) Fixed partitions
+C) Segmentation
+D) Swapping
+Ans: B
+
+Page fault occurs when
+A) Page in cache
+B) Page in memory
+C) Page not in memory
+D) Disk full
+Ans: C
+
+FIFO page replacement may show
+A) Thrashing
+B) Belady’s anomaly
+C) Stack property
+D) Optimality
+Ans: B
+
+LRU replaces page
+A) Used least recently
+B) Used most recently
+C) Oldest
+D) Random
+Ans: A
+
+Optimal algorithm replaces page
+A) Used in past
+B) Used least
+C) Used farthest in future
+D) Random
+Ans: C
+
+Thrashing means
+A) High CPU usage
+B) Excessive paging
+C) Deadlock
+D) Starvation
+Ans: B
+
+TLB improves
+A) Disk speed
+B) Address translation
+C) Scheduling
+D) Fragmentation
+Ans: B
+
+Dirty bit indicates
+A) Modified page
+B) Free page
+C) Shared page
+D) Locked page
+Ans: A
+
+Working set helps prevent
+A) Deadlock
+B) Thrashing
+C) Starvation
+D) Fragmentation
+Ans: B
+
+Segmentation is based on
+A) Fixed size blocks
+B) Logical units
+C) Physical frames
+D) Cache lines
+Ans: B
+
+MMU generates
+A) Logical address
+B) Physical address
+C) Virtual address
+D) Disk address
+Ans: B
+
+Compaction reduces
+A) Internal fragmentation
+B) External fragmentation
+C) Paging
+D) Thrashing
+Ans: B
+
+Shared pages reduce
+A) CPU usage
+B) Memory usage
+C) Disk usage
+D) I/O
+Ans: B
+
+Reentrant code must avoid
+A) Local variables
+B) Global variables
+C) Parameters
+D) Registers
+Ans: B
+
+Preemptive scheduling requires
+A) Polling
+B) Timer interrupt
+C) I/O only
+D) User request
+Ans: B
+
+Response time measures
+A) Completion time
+B) First CPU allocation
+C) Waiting time
+D) Burst time
+Ans: B
+
+Aging prevents
+A) Deadlock
+B) Starvation
+C) Thrashing
+D) Paging
+Ans: B
+
+Dispatcher performs
+A) Scheduling
+B) Context switch
+C) Swapping
+D) Paging
+Ans: B
+
+Throughput is
+A) CPU utilization
+B) Processes completed per time unit
+C) Waiting time
+D) Response time
+Ans: B
+
+DEADLOCK & GIT (Q66–Q80)
+
+Deadlock requires how many conditions?
+A) 2
+B) 3
+C) 4
+D) 5
+Ans: C
+
+Banker’s Algorithm is for
+A) Prevention
+B) Avoidance
+C) Detection
+D) Recovery
+Ans: B
+
+Semaphore operations are
+A) lock/unlock
+B) wait/signal
+C) start/stop
+D) fork/exec
+Ans: B
+
+Mutex allows
+A) Multiple access
+B) Single owner
+C) No blocking
+D) Read only
+Ans: B
+
+Starvation differs from deadlock because starvation
+A) Is permanent
+B) May be resolved by scheduling
+C) Has circular wait
+D) Needs recovery
+Ans: B
+
+Git is
+A) Centralized VCS
+B) Distributed VCS
+C) Build tool
+D) CI server
+Ans: B
+
+git init does
+A) Clone repo
+B) Create empty repo
+C) Commit code
+D) Push changes
+Ans: B
+
+git add moves files to
+A) Repository
+B) Staging area
+C) Remote
+D) Branch
+Ans: B
+
+git commit creates
+A) Backup
+B) Snapshot
+C) Patch
+D) Diff
+Ans: B
+
+HEAD points to
+A) First commit
+B) Last commit of current branch
+C) Remote repo
+D) Staging area
+Ans: B
+
+Merge conflict occurs when
+A) Files identical
+B) Same file edited in parallel
+C) Repo empty
+D) Commit missing
+Ans: B
+
+git pull equals
+A) clone + push
+B) fetch + merge
+C) add + commit
+D) branch + checkout
+Ans: B
+
+Branching enables
+A) Code deletion
+B) Parallel development
+C) Compilation
+D) Deployment
+Ans: B
+
+git stash is used to
+A) Delete changes
+B) Save uncommitted work temporarily
+C) Merge branches
+D) Push code
+Ans: B
+
+.git directory stores
+A) Source code
+B) Git metadata
+C) Binaries
+D) Logs only
+Ans: B
+
+SE, AGILE, DEVOPS, TESTING (Q81–Q100)
+
+SDLC phase NOT included is
+A) Design
+B) Testing
+C) Compilation
+D) Maintenance
+Ans: C
+
+High cohesion and low coupling indicate
+A) Poor design
+B) Good design
+C) Tight dependency
+D) Complexity
+Ans: B
+
+Use case diagram shows
+A) Class structure
+B) User interactions
+C) Sequence flow
+D) Deployment
+Ans: B
+
+Agile emphasizes
+A) Fixed plans
+B) Customer collaboration
+C) Heavy documentation
+D) Waterfall flow
+Ans: B
+
+Scrum sprint duration is
+A) 1 day
+B) 1–4 weeks
+C) 6 months
+D) 1 year
+Ans: B
+
+Product Owner maximizes
+A) Code quality
+B) Product value
+C) Velocity
+D) Testing
+Ans: B
+
+Docker container is
+A) Full OS
+B) Lightweight process
+C) BIOS based
+D) VM
+Ans: B
+
+Dockerfile defines
+A) Runtime logs
+B) Image build steps
+C) Network rules
+D) Volumes only
+Ans: B
+
+Kubernetes pod is
+A) Node
+B) Image
+C) Smallest deployable unit
+D) Service
+Ans: C
+
+CI stands for
+A) Code Inspection
+B) Continuous Integration
+C) Continuous Improvement
+D) Central Integration
+Ans: B
+
+Jenkins is used for
+A) Version control
+B) CI/CD automation
+C) Container runtime
+D) Testing only
+Ans: B
+
+STLC stands for
+A) Software Tool Life Cycle
+B) Software Test Life Cycle
+C) System Test Logic Cycle
+D) Source Test Level Code
+Ans: B
+
+Verification answers
+A) Are we building right product?
+B) Are we building product right?
+C) Is software fast?
+D) Is UI correct?
+Ans: B
+
+Validation answers
+A) Conformance to spec
+B) Customer needs
+C) Code quality
+D) Design correctness
+Ans: B
+
+Black-box testing focuses on
+A) Code logic
+B) Internal structure
+C) Functional behavior
+D) Loops
+Ans: C
+
+Regression testing ensures
+A) New features work
+B) Old features still work
+C) Performance improves
+D) Security tightens
+Ans: B
+
+Selenium is used for
+A) API testing
+B) Web automation
+C) DB testing
+D) OS testing
+Ans: B
+
+Jenkins pipeline defines
+A) Manual flow
+B) Automated CI/CD workflow
+C) UML diagram
+D) Test case
+Ans: B
+
+Automation testing is best for
+A) One-time tests
+B) Regression tests
+C) Exploratory tests
+D) UI redesign
+Ans: B
+
+Strategic goal of CI/CD is
+A) More tools
+B) Faster, reliable releases
+C) Less testing
+D) No documentation
+Ans: B
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
