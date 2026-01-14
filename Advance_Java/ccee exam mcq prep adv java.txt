@@ -1,0 +1,308 @@
+Sessions 1 & 2 – JDBC & Transaction Management
+
+40 MCQs | Easy (14) • Medium (14) • Hard (12)
+
+Easy
+
+JDBC stands for
+A) Java Data Binding
+B) Java Database Connectivity
+C) Java Distributed Connector
+D) Java DB Core
+Ans: B
+
+Which package contains core JDBC classes?
+A) java.io
+B) java.sql
+C) javax.net
+D) java.util
+Ans: B
+
+Which interface represents a DB connection?
+A) Driver
+B) Statement
+C) Connection
+D) ResultSet
+Ans: C
+
+Which JDBC object executes SQL queries?
+A) Driver
+B) Statement
+C) ResultSet
+D) DatabaseMetaData
+Ans: B
+
+PreparedStatement is preferred because it
+A) Is slower
+B) Prevents SQL Injection
+C) Needs no SQL
+D) Is deprecated
+Ans: B
+
+Which method executes SELECT queries?
+A) executeUpdate()
+B) executeQuery()
+C) execute()
+D) run()
+Ans: B
+
+ResultSet is used to
+A) Store SQL
+B) Navigate query results
+C) Create tables
+D) Manage drivers
+Ans: B
+
+Which driver type is pure Java?
+A) Type 1
+B) Type 2
+C) Type 3
+D) Type 4
+Ans: D
+
+Which class loads JDBC driver?
+A) DriverManager
+B) ClassLoader
+C) Connection
+D) ResultSet
+Ans: A
+
+Default auto-commit mode is
+A) false
+B) manual
+C) true
+D) disabled
+Ans: C
+
+Which method commits a transaction?
+A) save()
+B) commit()
+C) flush()
+D) close()
+Ans: B
+
+Rollback is used to
+A) Save changes
+B) Undo transaction
+C) Close connection
+D) Lock DB
+Ans: B
+
+DAO stands for
+A) Data Access Object
+B) Direct API Object
+C) Data Application Object
+D) Domain Access Operator
+Ans: A
+
+Which layer uses DAO?
+A) UI
+B) Database
+C) Business
+D) Network
+Ans: C
+
+Medium
+
+Which method disables auto-commit?
+A) setAutoCommit(false)
+B) disableCommit()
+C) stopCommit()
+D) begin()
+Ans: A
+
+Which interface retrieves DB metadata?
+A) ResultSet
+B) DatabaseMetaData
+C) Statement
+D) Driver
+Ans: B
+
+CallableStatement is used for
+A) Simple queries
+B) Stored procedures
+C) Batch inserts
+D) Joins only
+Ans: B
+
+SQL Injection primarily exploits
+A) DB locks
+B) User input
+C) Network latency
+D) JVM memory
+Ans: B
+
+Which method is used for INSERT/UPDATE?
+A) executeQuery()
+B) executeUpdate()
+C) executeFetch()
+D) run()
+Ans: B
+
+DAO pattern improves
+A) UI design
+B) DB portability
+C) Network speed
+D) JVM tuning
+Ans: B
+
+Which JDBC object is NOT thread-safe?
+A) Connection
+B) Statement
+C) ResultSet
+D) All
+Ans: D
+
+Which closes DB resources safely?
+A) finally block
+B) if block
+C) try block
+D) catch block
+Ans: A
+
+Which exception class handles SQL errors?
+A) IOException
+B) SQLException
+C) ClassNotFoundException
+D) RuntimeException
+Ans: B
+
+Batch processing improves
+A) Security
+B) Performance
+C) Readability
+D) Memory leaks
+Ans: B
+
+Which interface supports batch execution?
+A) ResultSet
+B) Statement
+C) Driver
+D) Connection
+Ans: B
+
+Which method adds batch SQL?
+A) addBatch()
+B) push()
+C) append()
+D) queue()
+Ans: A
+
+Which transaction property ensures atomicity?
+A) Isolation
+B) Durability
+C) Consistency
+D) Atomicity
+Ans: D
+
+Which isolation level avoids dirty reads?
+A) READ_UNCOMMITTED
+B) READ_COMMITTED
+C) REPEATABLE_READ
+D) SERIALIZABLE
+Ans: B
+
+Hard
+
+Which isolation level prevents phantom reads?
+A) READ_COMMITTED
+B) READ_UNCOMMITTED
+C) SERIALIZABLE
+D) REPEATABLE_READ
+Ans: C
+
+SQL Injection is best prevented using
+A) String concatenation
+B) Stored procedures only
+C) PreparedStatement
+D) Plain Statement
+Ans: C
+
+Which JDBC driver needs native libraries?
+A) Type 4
+B) Type 3
+C) Type 2
+D) Type 1
+Ans: C
+
+Which pattern abstracts persistence logic?
+A) MVC
+B) DAO
+C) Singleton
+D) Factory
+Ans: B
+
+Which method retrieves generated keys?
+A) getKeys()
+B) getGeneratedKeys()
+C) fetchKeys()
+D) readKeys()
+Ans: B
+
+Connection pooling primarily improves
+A) Security
+B) Memory
+C) Performance
+D) Portability
+Ans: C
+
+Which interface supports scrollable ResultSet?
+A) Statement
+B) PreparedStatement
+C) ResultSet
+D) CallableStatement
+Ans: C
+
+Which ResultSet type is default?
+A) TYPE_SCROLL_INSENSITIVE
+B) TYPE_SCROLL_SENSITIVE
+C) TYPE_FORWARD_ONLY
+D) TYPE_DYNAMIC
+Ans: C
+
+Which closes resources automatically (Java 7+)?
+A) finalize
+B) try-with-resources
+C) garbage collector
+D) shutdown hook
+Ans: B
+
+Which causes deadlock most often?
+A) Read locks
+B) Improper transaction ordering
+C) Indexes
+D) Auto-commit
+Ans: B
+
+Which ACID property ensures data survives crash?
+A) Atomicity
+B) Consistency
+C) Isolation
+D) Durability
+Ans: D
+
+Best practice for JDBC in web apps is
+A) One connection per query
+B) Global static connection
+C) Connection pool
+D) Manual driver loading every time
+Ans: C
+
+------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
