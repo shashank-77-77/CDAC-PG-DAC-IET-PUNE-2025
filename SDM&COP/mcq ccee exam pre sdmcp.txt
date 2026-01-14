@@ -1087,9 +1087,1091 @@ C) Avoiding pipes
 D) Using GUI tools
 Ans: B
 ------------------------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------------------
+SESSIONS 4 & 5 – PROCESSES & CPU SCHEDULING
 
+Coverage: Process concepts, process vs thread, lifecycle, schedulers, scheduling algorithms, fork/exec/wait, orphan & zombie
+Volume: 50 MCQs
+Difficulty Mix: Easy (20) · Medium (15) · Hard (15)
+
+EASY LEVEL (1–20)
+
+A process is defined as
+A) Program stored on disk
+B) Program in execution
+C) CPU register set
+D) Thread group
+Ans: B
+
+A thread is
+A) Independent program
+B) Lightweight process
+C) Hardware component
+D) Kernel only entity
+Ans: B
+
+Which is NOT a process state?
+A) New
+B) Ready
+C) Waiting
+D) Compiled
+Ans: D
+
+Which OS component manages processes?
+A) Memory manager
+B) File system
+C) Process scheduler
+D) Device driver
+Ans: C
+
+Process Control Block (PCB) stores
+A) File contents
+B) CPU registers and process info
+C) Only process ID
+D) Memory blocks only
+Ans: B
+
+Which scheduler selects a process for execution?
+A) Long-term
+B) Medium-term
+C) Short-term
+D) Disk scheduler
+Ans: C
+
+FCFS scheduling is
+A) Preemptive
+B) Non-preemptive
+C) Priority-based
+D) Time-sliced
+Ans: B
+
+In FCFS, average waiting time is
+A) Always minimum
+B) Always maximum
+C) Depends on arrival order
+D) Zero
+Ans: C
+
+Which scheduling algorithm may cause starvation?
+A) FCFS
+B) Round Robin
+C) Priority scheduling
+D) FIFO paging
+Ans: C
+
+Time quantum is used in
+A) FCFS
+B) SJF
+C) Round Robin
+D) Priority
+Ans: C
+
+Context switching occurs when
+A) File is opened
+B) Process changes state
+C) Disk is accessed
+D) User logs in
+Ans: B
+
+Which system call creates a new process?
+A) exec
+B) wait
+C) fork
+D) exit
+Ans: C
+
+fork() returns
+A) Same value always
+B) PID of parent to child
+C) 0 to child, PID to parent
+D) PID to both
+Ans: C
+
+exec() is used to
+A) Create new process
+B) Replace process image
+C) Terminate process
+D) Suspend process
+Ans: B
+
+wait() system call
+A) Creates zombie
+B) Makes parent wait
+C) Kills child
+D) Stops kernel
+Ans: B
+
+A zombie process is
+A) Running process
+B) Process waiting for CPU
+C) Terminated but not reaped
+D) Suspended process
+Ans: C
+
+Orphan process is adopted by
+A) Kernel thread
+B) init/systemd
+C) Parent shell
+D) Scheduler
+Ans: B
+
+Preemptive scheduling allows
+A) Process to run till completion
+B) OS to interrupt running process
+C) No context switching
+D) FIFO execution
+Ans: B
+
+Turnaround time =
+A) Completion − Arrival
+B) Waiting − Burst
+C) Burst − Arrival
+D) Response − Arrival
+Ans: A
+
+Waiting time =
+A) Turnaround − Burst
+B) Burst − Arrival
+C) Completion − Arrival
+D) Response − Burst
+Ans: A
+
+MEDIUM LEVEL (21–35)
+
+SJF scheduling minimizes
+A) Turnaround time
+B) Waiting time
+C) Response time
+D) Throughput
+Ans: B
+
+SJF may suffer from
+A) Deadlock
+B) Starvation
+C) Thrashing
+D) Livelock
+Ans: B
+
+Preemptive SJF is also known as
+A) FCFS
+B) Round Robin
+C) Shortest Remaining Time First
+D) Priority
+Ans: C
+
+Priority scheduling can be
+A) Only non-preemptive
+B) Only preemptive
+C) Both
+D) Neither
+Ans: C
+
+Aging technique is used to
+A) Increase burst time
+B) Reduce starvation
+C) Increase priority bias
+D) Stop preemption
+Ans: B
+
+Which scheduler controls degree of multiprogramming?
+A) Short-term
+B) Medium-term
+C) Long-term
+D) CPU scheduler
+Ans: C
+
+Medium-term scheduler mainly performs
+A) Dispatching
+B) Swapping
+C) Scheduling
+D) Context save
+Ans: B
+
+Response time is
+A) Completion − Arrival
+B) First CPU allocation − Arrival
+C) Waiting − Burst
+D) Turnaround − Burst
+Ans: B
+
+Round Robin is best suited for
+A) Batch systems
+B) Real-time systems
+C) Time-sharing systems
+D) Embedded systems
+Ans: C
+
+Very small time quantum causes
+A) Low context switch
+B) High throughput
+C) High context switch overhead
+D) Starvation
+Ans: C
+
+Very large time quantum in RR behaves like
+A) Priority
+B) SJF
+C) FCFS
+D) Multilevel queue
+Ans: C
+
+Multilevel queue scheduling
+A) Allows process movement between queues
+B) Has fixed queues
+C) Is always preemptive
+D) Eliminates starvation
+Ans: B
+
+Multilevel feedback queue scheduling
+A) Has fixed priorities
+B) Does not allow movement
+C) Allows dynamic priority change
+D) Is non-preemptive
+Ans: C
+
+Dispatcher is responsible for
+A) Selecting process
+B) Executing process
+C) Context switch and control transfer
+D) Swapping
+Ans: C
+
+Belady’s anomaly is associated with
+A) Scheduling
+B) Deadlock
+C) Paging
+D) Segmentation
+Ans: C
+
+HARD LEVEL (36–50)
+
+Which metric best reflects user-perceived performance?
+A) Throughput
+B) CPU utilization
+C) Response time
+D) Turnaround time
+Ans: C
+
+In priority scheduling, lower number usually indicates
+A) Lower priority
+B) Higher priority
+C) Equal priority
+D) Undefined
+Ans: B
+
+If arrival times are equal, FCFS behaves like
+A) SJF
+B) RR
+C) Priority
+D) Random
+Ans: D
+
+Context switch overhead increases when
+A) Burst time increases
+B) Time quantum decreases
+C) Priority increases
+D) Arrival rate decreases
+Ans: B
+
+Which data structure stores scheduling info?
+A) Page table
+B) PCB
+C) Inode
+D) TLB
+Ans: B
+
+fork() without exec results in
+A) Two identical processes
+B) New thread
+C) Zombie process
+D) Orphan process
+Ans: A
+
+Zombie process consumes
+A) CPU
+B) Memory heavily
+C) PCB entry only
+D) Disk space
+Ans: C
+
+Orphan process problem is solved by
+A) wait()
+B) kill()
+C) init/systemd
+D) scheduler
+Ans: C
+
+Preemption requires
+A) Timer interrupt
+B) I/O interrupt only
+C) Software interrupt only
+D) Polling
+Ans: A
+
+Which scheduling favors I/O-bound processes?
+A) FCFS
+B) RR
+C) SJF
+D) Priority
+Ans: B
+
+Throughput is defined as
+A) CPU busy time
+B) Processes completed per unit time
+C) Waiting time
+D) Response delay
+Ans: B
+
+Starvation can be prevented using
+A) Preemption
+B) Aging
+C) FCFS
+D) RR
+Ans: B
+
+Which algorithm is optimal but impractical?
+A) FIFO
+B) LRU
+C) Optimal scheduling (theoretical)
+D) RR
+Ans: C
+
+Parent-child relationship is created using
+A) exec
+B) wait
+C) fork
+D) exit
+Ans: C
+
+Scheduling decisions are made when process
+A) Terminates only
+B) Blocks or exits
+C) Arrives, blocks, exits, or preempted
+D) Starts execution
+Ans: C
 ------------------------------------------------------------------------------------------------------------------------
+SESSIONS 6 & 7 – MEMORY MANAGEMENT
+
+Coverage: Memory hierarchy, allocation strategies, fragmentation, compaction, segmentation, paging, TLB, dirty bit, shared pages, reentrant code, throttling, I/O management
+Volume: 50 MCQs
+Difficulty Mix: Easy (20) · Medium (15) · Hard (15)
+
+EASY LEVEL (1–20)
+
+Memory management is required to
+A) Increase CPU speed
+B) Optimize memory usage
+C) Reduce disk size
+D) Eliminate processes
+Ans: B
+
+Which memory is fastest?
+A) Secondary memory
+B) Main memory
+C) Cache memory
+D) Virtual memory
+Ans: C
+
+Main memory is also called
+A) ROM
+B) Cache
+C) RAM
+D) Secondary storage
+Ans: C
+
+Which memory is volatile?
+A) ROM
+B) Hard disk
+C) RAM
+D) SSD
+Ans: C
+
+Memory hierarchy is designed to
+A) Reduce cost
+B) Improve performance
+C) Increase storage
+D) Simplify OS
+Ans: B
+
+Continuous memory allocation allocates
+A) Fixed blocks only
+B) Contiguous memory
+C) Non-contiguous memory
+D) Virtual memory
+Ans: B
+
+Internal fragmentation occurs due to
+A) Variable partitions
+B) Fixed partitions
+C) Paging
+D) Segmentation
+Ans: B
+
+External fragmentation occurs due to
+A) Fixed partitions
+B) Paging
+C) Variable partitions
+D) Cache
+Ans: C
+
+Which allocation strategy allocates the first suitable block?
+A) Best Fit
+B) Worst Fit
+C) First Fit
+D) Next Fit
+Ans: C
+
+Best Fit strategy chooses
+A) Largest hole
+B) Smallest sufficient hole
+C) First hole
+D) Random hole
+Ans: B
+
+Worst Fit strategy chooses
+A) Smallest hole
+B) Exact hole
+C) Largest hole
+D) First hole
+Ans: C
+
+Compaction is used to reduce
+A) Internal fragmentation
+B) External fragmentation
+C) Paging
+D) Thrashing
+Ans: B
+
+Paging divides memory into
+A) Segments
+B) Pages and frames
+C) Blocks
+D) Clusters
+Ans: B
+
+Paging avoids
+A) Internal fragmentation
+B) External fragmentation
+C) Context switching
+D) Thrashing
+Ans: B
+
+Page table is used to
+A) Store file data
+B) Map pages to frames
+C) Schedule processes
+D) Handle interrupts
+Ans: B
+
+Segmentation divides memory based on
+A) Fixed size
+B) Logical units
+C) Physical units
+D) Cache lines
+Ans: B
+
+Segmentation table contains
+A) Frame number only
+B) Base and limit
+C) Offset only
+D) Page size
+Ans: B
+
+Paging suffers from
+A) External fragmentation
+B) Internal fragmentation
+C) Deadlock
+D) Starvation
+Ans: B
+
+Dirty bit indicates
+A) Modified page
+B) Free page
+C) Locked page
+D) Shared page
+Ans: A
+
+Reentrant code is
+A) Self-modifying code
+B) Non-interruptible code
+C) Shareable, non-self-modifying code
+D) Kernel-only code
+Ans: C
+
+MEDIUM LEVEL (21–35)
+
+Page size is typically
+A) Variable
+B) Fixed
+C) Dynamic
+D) User-defined
+Ans: B
+
+Logical address is generated by
+A) Memory
+B) Disk
+C) CPU
+D) Cache
+Ans: C
+
+Physical address is generated by
+A) CPU
+B) MMU
+C) Cache
+D) Disk
+Ans: B
+
+MMU stands for
+A) Memory Mapping Unit
+B) Main Memory Unit
+C) Memory Management Unit
+D) Machine Memory Unit
+Ans: C
+
+TLB improves performance by
+A) Increasing page size
+B) Reducing page faults
+C) Caching page table entries
+D) Eliminating paging
+Ans: C
+
+TLB is implemented using
+A) RAM
+B) Cache
+C) Associative memory
+D) Disk
+Ans: C
+
+Segmentation supports
+A) Logical view of memory
+B) Physical view only
+C) Fixed partitions
+D) Paging only
+Ans: A
+
+Paging hardware requires
+A) Base register
+B) Limit register
+C) Page table
+D) Segment table
+Ans: C
+
+Shared pages are useful for
+A) Reducing CPU usage
+B) Reducing memory usage
+C) Faster I/O
+D) Process scheduling
+Ans: B
+
+Throttling refers to
+A) Increasing memory
+B) Limiting process execution
+C) Increasing page size
+D) Reducing disk I/O
+Ans: B
+
+Which scheme eliminates external fragmentation completely?
+A) Segmentation
+B) Paging
+C) Variable partitioning
+D) Compaction
+Ans: B
+
+Internal fragmentation is typically less in
+A) Large page size
+B) Small page size
+C) Segmentation
+D) Fixed partitions
+Ans: B
+
+I/O management deals with
+A) CPU registers
+B) Device communication
+C) Memory paging
+D) Process scheduling
+Ans: B
+
+Buffering improves
+A) CPU speed
+B) Memory size
+C) I/O performance
+D) Disk capacity
+Ans: C
+
+Caching is mainly used to
+A) Reduce access time
+B) Increase storage
+C) Eliminate paging
+D) Avoid fragmentation
+Ans: A
+
+HARD LEVEL (36–50)
+
+Paging requires power-of-two page size because
+A) Disk constraint
+B) Simplifies address translation
+C) Reduces fragmentation
+D) Improves scheduling
+Ans: B
+
+Effective access time increases when
+A) TLB hit ratio increases
+B) Page fault rate increases
+C) Cache size increases
+D) Page size decreases
+Ans: B
+
+Segment table length depends on
+A) Page size
+B) Number of segments
+C) Physical memory
+D) Frame count
+Ans: B
+
+Paging + segmentation combines
+A) Logical and physical view
+B) Speed and security
+C) Flexibility and protection
+D) Cache and disk
+Ans: C
+
+Address translation in paging uses
+A) Base + offset
+B) Segment + offset
+C) Page number + offset
+D) Frame + limit
+Ans: C
+
+Fragmentation that occurs even with paging is
+A) External
+B) Internal
+C) Logical
+D) Virtual
+Ans: B
+
+TLB miss causes
+A) Page fault always
+B) Page table access
+C) Disk access
+D) Process termination
+Ans: B
+
+Dirty bit is checked during
+A) Page hit
+B) Page replacement
+C) Address translation
+D) Segmentation
+Ans: B
+
+Reentrant code must not use
+A) Local variables
+B) Global variables
+C) Registers
+D) Parameters
+Ans: B
+
+Shared libraries rely on
+A) Paging
+B) Segmentation
+C) Shared pages
+D) Throttling
+Ans: C
+
+Worst Fit allocation generally results in
+A) Small holes
+B) Large number of holes
+C) One large hole
+D) No fragmentation
+Ans: B
+
+Best Fit allocation suffers from
+A) Poor utilization
+B) Many small holes
+C) High throughput
+D) Low overhead
+Ans: B
+
+Compaction requires
+A) Paging
+B) Segmentation
+C) Relocation support
+D) Cache
+Ans: C
+
+I/O buffering primarily helps when
+A) CPU and device speeds differ
+B) Memory is small
+C) Page size is large
+D) Disk is slow
+Ans: A
+
+Memory management’s strategic objective is
+A) Maximum CPU usage
+B) Minimum memory
+C) Efficient, safe resource utilization
+D) Eliminate disk usage
+Ans: C
+------------------------------------------------------------------------------------------------------------------------
+SESSION 8 – VIRTUAL MEMORY
+
+Coverage: Virtual memory fundamentals, demand paging, page faults, page replacement algorithms (FIFO, LRU, Optimal), thrashing
+Volume: 50 MCQs
+Difficulty Mix: Easy (20) · Medium (15) · Hard (15)
+
+EASY LEVEL (1–20)
+
+Virtual memory allows execution of programs that are
+A) Smaller than RAM
+B) Equal to RAM
+C) Larger than physical memory
+D) Stored only in cache
+Ans: C
+
+Virtual memory is implemented using
+A) Cache
+B) Main memory
+C) Secondary storage
+D) Registers
+Ans: C
+
+Demand paging loads pages
+A) At program start
+B) When required
+C) Periodically
+D) Sequentially
+Ans: B
+
+A page fault occurs when
+A) Page is in cache
+B) Page is in main memory
+C) Page is not in main memory
+D) Disk fails
+Ans: C
+
+Virtual memory improves
+A) CPU speed
+B) Memory utilization
+C) Disk capacity
+D) I/O bandwidth
+Ans: B
+
+Which storage backs virtual memory?
+A) Cache
+B) Registers
+C) Disk
+D) ROM
+Ans: C
+
+Page fault handling is done by
+A) User program
+B) Compiler
+C) Operating System
+D) Cache controller
+Ans: C
+
+Demand paging reduces
+A) Page faults
+B) Initial I/O overhead
+C) Context switching
+D) CPU utilization
+Ans: B
+
+Virtual address space is
+A) Physical memory
+B) Disk memory
+C) Logical memory view
+D) Cache memory
+Ans: C
+
+A valid bit indicates
+A) Dirty page
+B) Modified page
+C) Page present in memory
+D) Page shared
+Ans: C
+
+Page replacement is required when
+A) Free frame is available
+B) Page fault occurs and memory is full
+C) CPU is idle
+D) Process terminates
+Ans: B
+
+FIFO page replacement replaces
+A) Most recently used page
+B) Least recently used page
+C) Oldest loaded page
+D) Random page
+Ans: C
+
+LRU replaces the page that
+A) Was loaded first
+B) Will not be used
+C) Was least recently used
+D) Is largest
+Ans: C
+
+Optimal page replacement replaces page
+A) Used least in past
+B) Used most in future
+C) Used farthest in future
+D) Randomly
+Ans: C
+
+Optimal algorithm is
+A) Implementable
+B) Practical
+C) Theoretical benchmark
+D) FIFO-based
+Ans: C
+
+Page replacement aims to
+A) Increase page faults
+B) Reduce page faults
+C) Increase disk I/O
+D) Increase fragmentation
+Ans: B
+
+Virtual memory helps in
+A) Multitasking
+B) Multiprogramming
+C) Both A and B
+D) Neither
+Ans: C
+
+Page fault service time includes
+A) Disk access
+B) Context switch
+C) Page table update
+D) All of the above
+Ans: D
+
+Thrashing occurs when
+A) CPU is idle
+B) Processes spend most time paging
+C) Disk is full
+D) Cache overflows
+Ans: B
+
+Virtual memory is transparent to
+A) OS
+B) Compiler
+C) User
+D) Hardware
+Ans: C
+
+MEDIUM LEVEL (21–35)
+
+Effective Access Time (EAT) depends on
+A) CPU speed
+B) Page fault rate
+C) Cache size
+D) Disk type
+Ans: B
+
+Increasing page size generally
+A) Increases page faults
+B) Decreases internal fragmentation
+C) Increases internal fragmentation
+D) Eliminates paging
+Ans: C
+
+Demand paging improves performance when
+A) Page fault rate is high
+B) Locality of reference exists
+C) Disk is slow
+D) Memory is full
+Ans: B
+
+Locality of reference means
+A) Sequential memory access
+B) Repeated access to same memory locations
+C) Random access
+D) Disk access
+Ans: B
+
+Belady’s anomaly is associated with
+A) LRU
+B) Optimal
+C) FIFO
+D) LFU
+Ans: C
+
+Belady’s anomaly means
+A) More frames → fewer faults
+B) More frames → more faults
+C) Fewer frames → fewer faults
+D) No relation
+Ans: B
+
+Stack algorithms include
+A) FIFO
+B) LRU
+C) Random
+D) Clock
+Ans: B
+
+LRU is difficult to implement because
+A) Needs future knowledge
+B) Needs past usage tracking
+C) Requires disk scan
+D) Needs compiler support
+Ans: B
+
+Page replacement decision is taken by
+A) Hardware only
+B) User program
+C) Operating System
+D) MMU only
+Ans: C
+
+Dirty pages must be
+A) Ignored
+B) Replaced first
+C) Written back to disk
+D) Kept in cache
+Ans: C
+
+Clean pages can be
+A) Discarded without write
+B) Written to disk
+C) Locked
+D) Shared
+Ans: A
+
+Working set model helps in
+A) CPU scheduling
+B) Memory allocation
+C) Preventing thrashing
+D) Page size selection
+Ans: C
+
+Increasing degree of multiprogramming may cause
+A) Higher CPU utilization
+B) Thrashing
+C) Deadlock
+D) Starvation
+Ans: B
+
+Page fault frequency should be
+A) Maximized
+B) Minimized
+C) Kept within acceptable limits
+D) Ignored
+Ans: C
+
+Replacement algorithm choice affects
+A) Disk size
+B) Page fault rate
+C) Process priority
+D) Compilation time
+Ans: B
+
+HARD LEVEL (36–50)
+
+FIFO suffers from Belady’s anomaly because
+A) It ignores locality
+B) It tracks usage poorly
+C) It is stack-based
+D) It uses dirty bit
+Ans: A
+
+LRU approximations are used because
+A) LRU is inaccurate
+B) LRU is too slow
+C) Perfect LRU is costly
+D) LRU causes thrashing
+Ans: C
+
+Optimal algorithm requires knowledge of
+A) Past references
+B) Current references
+C) Future references
+D) Disk layout
+Ans: C
+
+Thrashing leads to
+A) High CPU utilization
+B) Low page faults
+C) System slowdown
+D) High throughput
+Ans: C
+
+Thrashing can be controlled by
+A) Increasing CPU speed
+B) Reducing multiprogramming
+C) Increasing disk speed
+D) Increasing page size
+Ans: B
+
+Page fault handling sequence excludes
+A) Trap to OS
+B) Disk read
+C) Page table update
+D) Cache flush always
+Ans: D
+
+Page replacement is triggered when
+A) Page hit occurs
+B) TLB miss occurs
+C) Page fault with no free frame
+D) Process exits
+Ans: C
+
+Working set is
+A) Entire process memory
+B) Pages currently in memory
+C) Pages referenced in recent window
+D) Pages on disk
+Ans: C
+
+Increasing frame allocation usually
+A) Increases page faults
+B) Decreases page faults
+C) Has no effect
+D) Causes anomaly always
+Ans: B
+
+Stack property ensures
+A) No page faults
+B) No Belady’s anomaly
+C) Faster execution
+D) Smaller pages
+Ans: B
+
+LRU is a stack algorithm because
+A) Pages form stack structure
+B) Inclusion property holds
+C) It uses stack memory
+D) Uses push/pop
+Ans: B
+
+Disk access time dominates page fault cost because
+A) Disk is volatile
+B) Disk is mechanical and slow
+C) Disk uses cache
+D) Disk is shared
+Ans: B
+
+Virtual memory abstraction mainly benefits
+A) OS developers
+B) Compiler writers
+C) Application developers
+D) Hardware designers
+Ans: C
+
+Excessive page faults indicate
+A) Optimal memory usage
+B) Poor locality
+C) High CPU speed
+D) Efficient scheduling
+Ans: B
+
+Strategic goal of virtual memory is
+A) Eliminate paging
+B) Maximize disk usage
+C) Provide illusion of large memory efficiently
+D) Replace RAM
+Ans: C
 ------------------------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------------------------------
