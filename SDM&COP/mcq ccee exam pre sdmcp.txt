@@ -361,8 +361,731 @@ D) File naming
 Ans: B
 
 ------------------------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------------------
 
+SESSION 2 – INTRODUCTION TO LINUX & SHELL PROGRAMMING
+
+Coverage: Linux basics + File system + Commands + Permissions + Environment variables + Shell fundamentals
+Volume: 50 MCQs
+Difficulty Mix: Easy (20) · Medium (15) · Hard (15)
+
+EASY LEVEL (1–20)
+
+Linux is classified as
+A) Application software
+B) System software
+C) Utility software
+D) Firmware
+Ans: B
+
+The root directory in Linux is represented by
+A) /root
+B) /home
+C) /
+D) /usr
+Ans: C
+
+Which command lists files and directories?
+A) dir
+B) show
+C) ls
+D) list
+Ans: C
+
+The command to display current working directory is
+A) pwd
+B) cwd
+C) dir
+D) where
+Ans: A
+
+Which command is used to create a directory?
+A) touch
+B) mkdir
+C) rmdir
+D) create
+Ans: B
+
+Which command removes an empty directory?
+A) rm
+B) del
+C) rmdir
+D) erase
+Ans: C
+
+A file starting with . in Linux is
+A) System file
+B) Binary file
+C) Hidden file
+D) Temporary file
+Ans: C
+
+Which command is used to copy files?
+A) mv
+B) cp
+C) copy
+D) clone
+Ans: B
+
+The command to move or rename files is
+A) mv
+B) cp
+C) rn
+D) move
+Ans: A
+
+Which command displays file contents?
+A) show
+B) cat
+C) view
+D) read
+Ans: B
+
+Standard output is represented by
+A) 0
+B) 1
+C) 2
+D) 3
+Ans: B
+
+Which operator is used for output redirection?
+A) <
+B) |
+C) >
+D) &
+Ans: C
+
+Which command displays currently logged-in user?
+A) whoami
+B) user
+C) login
+D) id
+Ans: A
+
+Which directory contains user home directories?
+A) /etc
+B) /var
+C) /home
+D) /bin
+Ans: C
+
+Which shell is most commonly used in Linux?
+A) C shell
+B) Korn shell
+C) Bash
+D) Fish
+Ans: C
+
+Shell acts as
+A) Hardware controller
+B) Command interpreter
+C) Memory manager
+D) Scheduler
+Ans: B
+
+Wildcard * represents
+A) Single character
+B) Multiple characters
+C) Numeric value
+D) Special file
+Ans: B
+
+Which command clears the terminal screen?
+A) cls
+B) clear
+C) clean
+D) reset
+Ans: B
+
+Environment variables are used to
+A) Store file data
+B) Configure shell behavior
+C) Manage memory
+D) Compile programs
+Ans: B
+
+$HOME refers to
+A) Root directory
+B) Current directory
+C) User home directory
+D) Temporary directory
+Ans: C
+
+MEDIUM LEVEL (21–35)
+
+Which permission allows execution of a file?
+A) r
+B) w
+C) x
+D) d
+Ans: C
+
+chmod 644 corresponds to
+A) rw- r-- r--
+B) rwx r-x r-x
+C) r-- r-- r--
+D) rw- rw- rw-
+Ans: A
+
+Which command changes file ownership?
+A) chmod
+B) chgrp
+C) chown
+D) setfacl
+Ans: C
+
+ACL in Linux stands for
+A) Access Control List
+B) Advanced Command Line
+C) Automated Control Logic
+D) Application Control Layer
+Ans: A
+
+Which command is used to connect securely to a remote system?
+A) telnet
+B) ftp
+C) ssh
+D) finger
+Ans: C
+
+Pipe | operator is used to
+A) Redirect output to file
+B) Combine output of one command to input of another
+C) Run background process
+D) Execute multiple commands
+Ans: B
+
+Which variable defines shell prompt format?
+A) PATH
+B) HOME
+C) PS1
+D) USER
+Ans: C
+
+PATH variable is used to
+A) Store file permissions
+B) Locate executable commands
+C) Define user name
+D) Set prompt
+Ans: B
+
+Which symbol refers to all files with .txt extension?
+A) ?.txt
+B) *.txt
+C) %.txt
+D) #.txt
+Ans: B
+
+Shell variables differ from environment variables because they are
+A) Permanent
+B) Global
+C) Local to shell
+D) Read-only
+Ans: C
+
+Which command displays all environment variables?
+A) vars
+B) env
+C) show
+D) list
+Ans: B
+
+Input redirection is done using
+A) >
+B) >>
+C) <
+D) |
+Ans: C
+
+Which command appends output to a file?
+A) >
+B) <
+C) >>
+D) |
+Ans: C
+
+Which metacharacter runs command in background?
+A) #
+B) $
+C) &
+D) !
+Ans: C
+
+Which command shows file permissions?
+A) ls
+B) ls -l
+C) chmod
+D) stat
+Ans: B
+
+HARD LEVEL (36–50)
+
+Permission string -rwxr-x--- allows execution for
+A) Owner only
+B) Group only
+C) Owner and group
+D) Everyone
+Ans: C
+
+Which command sets executable permission for owner only?
+A) chmod 111 file
+B) chmod 700 file
+C) chmod 100 file
+D) chmod 400 file
+Ans: C
+
+$? in shell returns
+A) PID of process
+B) Exit status of last command
+C) User ID
+D) Shell ID
+Ans: B
+
+Which command replaces current shell with another program?
+A) fork
+B) exec
+C) wait
+D) exit
+Ans: B
+
+Which wildcard matches exactly one character?
+A) *
+B) ?
+C) []
+D) {}
+Ans: B
+
+Which command counts lines, words, and characters?
+A) count
+B) wc
+C) stat
+D) size
+Ans: B
+
+2> redirects
+A) Standard output
+B) Standard input
+C) Standard error
+D) All output
+Ans: C
+
+Which variable stores current shell name?
+A) $0
+B) $1
+C) $$
+D) $?
+Ans: A
+
+Which command shows running processes?
+A) jobs
+B) top
+C) ps
+D) kill
+Ans: C
+
+Which command terminates a process by PID?
+A) stop
+B) end
+C) kill
+D) exit
+Ans: C
+
+Which feature allows command substitution?
+A) $( )
+B) { }
+C) [ ]
+D) < >
+Ans: A
+
+Which shell script line is mandatory?
+A) echo
+B) read
+C) shebang
+D) exit
+Ans: C
+
+#!/bin/bash indicates
+A) Comment
+B) Compiler directive
+C) Shell interpreter
+D) Environment variable
+Ans: C
+
+Which command displays disk usage of directories?
+A) df
+B) du
+C) free
+D) mount
+Ans: B
+
+Which Linux principle enables chaining small utilities effectively?
+A) Monolithic design
+B) Modularity via pipes
+C) GUI abstraction
+D) Kernel scheduling
+Ans: B
+
+------------------------------------------------------------------------------------------------------------------------
+SESSION 3 – SHELL PROGRAMMING (CONTROL STRUCTURES, EXPRESSIONS, REGEX)
+
+Coverage: if/else, test, case, loops (for/while/until), arithmetic expressions, regular expressions, practical shell patterns
+Volume: 50 MCQs
+Difficulty Mix: Easy (20) · Medium (15) · Hard (15)
+
+EASY LEVEL (1–20)
+
+A shell script is a file containing
+A) Binary instructions
+B) Shell commands
+C) Kernel code
+D) Compiled objects
+Ans: B
+
+Which command is used to take input from user?
+A) echo
+B) read
+C) scan
+D) input
+Ans: B
+
+Which keyword starts a conditional block in shell?
+A) begin
+B) if
+C) test
+D) case
+Ans: B
+
+Which keyword ends an if block?
+A) endif
+B) fi
+C) end
+D) done
+Ans: B
+
+The test command is used to
+A) Compile script
+B) Compare expressions
+C) Print output
+D) Exit script
+Ans: B
+
+Which operator checks string equality?
+A) -eq
+B) ==
+C) -gt
+D) -ne
+Ans: B
+
+Which loop executes a fixed number of times?
+A) while
+B) until
+C) for
+D) select
+Ans: C
+
+Which loop executes while condition is true?
+A) for
+B) until
+C) while
+D) case
+Ans: C
+
+until loop runs
+A) Forever
+B) Until condition becomes true
+C) While condition is true
+D) Once
+Ans: B
+
+Which keyword ends a loop block?
+A) end
+B) stop
+C) done
+D) fi
+Ans: C
+
+Arithmetic evaluation in shell can be done using
+A) (( ))
+B) [[ ]]
+C) { }
+D) << >>
+Ans: A
+
+Which operator is used for numeric equality?
+A) ==
+B) =
+C) -eq
+D) -ge
+Ans: C
+
+Which command prints output to terminal?
+A) read
+B) echo
+C) print
+D) write
+Ans: B
+
+Which symbol is used for comments in shell script?
+A) //
+B) /* */
+C) #
+D) --
+Ans: C
+
+case statement is used for
+A) Repetition
+B) File testing
+C) Multiple choice selection
+D) Arithmetic
+Ans: C
+
+Which wildcard matches a single character?
+A) *
+B) ?
+C) []
+D) {}
+Ans: B
+
+Regular expressions are mainly used for
+A) File permissions
+B) Pattern matching
+C) Process control
+D) Memory allocation
+Ans: B
+
+Which command commonly uses regex?
+A) ls
+B) grep
+C) cd
+D) pwd
+Ans: B
+
+$1 in shell script represents
+A) Script name
+B) First argument
+C) Process ID
+D) Exit status
+Ans: B
+
+$# returns
+A) Script name
+B) Number of arguments
+C) Last exit status
+D) User ID
+Ans: B
+
+MEDIUM LEVEL (21–35)
+
+if [ $a -gt $b ] checks
+A) String comparison
+B) File test
+C) Numeric comparison
+D) Pattern match
+Ans: C
+
+Which operator checks if file exists?
+A) -e
+B) -f
+C) -d
+D) -x
+Ans: A
+
+-f test operator checks
+A) Directory
+B) Regular file
+C) Executable
+D) Symbolic link
+Ans: B
+
+Which loop is best suited when iterations are unknown?
+A) for
+B) while
+C) select
+D) case
+Ans: B
+
+break statement
+A) Ends script
+B) Skips iteration
+C) Exits loop
+D) Restarts loop
+Ans: C
+
+continue statement
+A) Ends loop
+B) Skips current iteration
+C) Ends script
+D) Stops shell
+Ans: B
+
+Which command evaluates arithmetic expression?
+A) expr
+B) test
+C) let
+D) All of the above
+Ans: D
+
+Which syntax is correct for arithmetic expansion?
+A) $((a+b))
+B) $(a+b)
+C) {a+b}
+D) [a+b]
+Ans: A
+
+In case statement, each pattern ends with
+A) ;;
+B) fi
+C) done
+D) esac
+Ans: A
+
+Which keyword ends a case statement?
+A) endcase
+B) done
+C) esac
+D) fi
+Ans: C
+
+grep -i option performs
+A) Inverted match
+B) Recursive search
+C) Case-insensitive search
+D) Line numbering
+Ans: C
+
+Regex ^abc matches
+A) String ending with abc
+B) String starting with abc
+C) String containing abc anywhere
+D) Only abc
+Ans: B
+
+Regex xyz$ matches
+A) Starting with xyz
+B) Ending with xyz
+C) Exactly xyz
+D) Any xyz
+Ans: B
+
+-le operator means
+A) Less than
+B) Less than or equal
+C) Greater than
+D) Equal
+Ans: B
+
+"$@" expands to
+A) All arguments as one string
+B) All arguments separately
+C) Script name
+D) Argument count
+Ans: B
+
+HARD LEVEL (36–50)
+
+Difference between [ ] and [[ ]] is that [[ ]]
+A) Is slower
+B) Does not allow regex
+C) Supports pattern matching and safer syntax
+D) Is deprecated
+Ans: C
+
+[[ $a =~ regex ]] performs
+A) Numeric comparison
+B) String comparison
+C) Regex match
+D) File test
+Ans: C
+
+$* and $@ differ when
+A) No arguments
+B) Arguments are quoted
+C) Script has one argument
+D) Script name used
+Ans: B
+
+Which command prints line numbers with matches?
+A) grep -v
+B) grep -n
+C) grep -c
+D) grep -l
+Ans: B
+
+Regex . matches
+A) Dot character
+B) Any single character
+C) Space only
+D) Digit only
+Ans: B
+
+Regex .* means
+A) One character
+B) Zero or more characters
+C) Only numbers
+D) End of line
+Ans: B
+
+Which test checks if variable is empty?
+A) -z
+B) -n
+C) -e
+D) -f
+Ans: A
+
+Arithmetic overflow in shell
+A) Causes crash
+B) Is ignored
+C) Wraps around based on integer limits
+D) Terminates script
+Ans: C
+
+set -x is used for
+A) Exit on error
+B) Debugging
+C) Performance tuning
+D) Variable export
+Ans: B
+
+#!/bin/bash is processed by
+A) Kernel loader
+B) Shell interpreter
+C) Compiler
+D) Linker
+Ans: A
+
+Which loop guarantees at least one execution?
+A) for
+B) while
+C) until
+D) None in shell
+Ans: D
+
+expr 5 \* 2 requires escape because
+A) * is wildcard
+B) * is arithmetic
+C) * is regex
+D) * is file operator
+Ans: A
+
+Which command substitutes command output inline?
+A) cmd
+B) $(cmd)
+C) <cmd>
+D) {cmd}
+Ans: B
+
+Best practice to avoid word splitting is
+A) Use echo
+B) Quote variables
+C) Use test
+D) Use expr
+Ans: B
+
+Shell scripting aligns with Unix philosophy by
+A) Writing monolithic scripts
+B) Chaining small commands
+C) Avoiding pipes
+D) Using GUI tools
+Ans: B
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 
