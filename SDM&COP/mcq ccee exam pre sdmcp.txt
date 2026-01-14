@@ -2173,9 +2173,1098 @@ C) Provide illusion of large memory efficiently
 D) Replace RAM
 Ans: C
 ------------------------------------------------------------------------------------------------------------------------
+SESSION 9 – DEADLOCK, SYNCHRONIZATION & CONCURRENCY
+
+Coverage: Deadlock fundamentals, necessary conditions, prevention & avoidance, Banker’s Algorithm (conceptual), semaphores, mutex, producer–consumer problem, deadlock vs starvation
+Volume: 50 MCQs
+Difficulty Mix: Easy (20) · Medium (15) · Hard (15)
+
+EASY LEVEL (1–20)
+
+Deadlock is a situation where
+A) CPU is idle
+B) Processes execute slowly
+C) Processes wait indefinitely for resources
+D) Memory is full
+Ans: C
+
+Deadlock occurs due to
+A) Poor scheduling
+B) Improper resource allocation
+C) Infinite loops
+D) Cache miss
+Ans: B
+
+Which of the following is a necessary condition for deadlock?
+A) Preemption
+B) Mutual exclusion
+C) Paging
+D) Time sharing
+Ans: B
+
+Mutual exclusion means
+A) Resources can be shared
+B) Only one process can use a resource at a time
+C) Processes are mutually cooperative
+D) CPU sharing
+Ans: B
+
+Hold and wait condition means
+A) Process releases all resources before requesting new ones
+B) Process holds resources while waiting for others
+C) Process waits without holding any resource
+D) Resources are preempted
+Ans: B
+
+No preemption implies
+A) Resources can be forcibly taken
+B) Resources cannot be forcibly taken
+C) CPU scheduling
+D) Paging
+Ans: B
+
+Circular wait means
+A) Linear dependency
+B) Single process waiting
+C) Circular chain of processes holding resources
+D) Infinite loop
+Ans: C
+
+How many necessary conditions are required for deadlock?
+A) 2
+B) 3
+C) 4
+D) 5
+Ans: C
+
+Deadlock prevention works by
+A) Detecting deadlock
+B) Breaking at least one necessary condition
+C) Ignoring deadlock
+D) Restarting system
+Ans: B
+
+Deadlock avoidance requires
+A) No resource allocation
+B) Future resource request knowledge
+C) High CPU speed
+D) Paging
+Ans: B
+
+Banker’s Algorithm is used for
+A) Deadlock detection
+B) Deadlock avoidance
+C) Deadlock prevention
+D) Starvation prevention
+Ans: B
+
+Semaphore is a
+A) Hardware register
+B) Integer variable with atomic operations
+C) Compiler directive
+D) CPU instruction
+Ans: B
+
+Mutex is used to
+A) Schedule processes
+B) Control access to shared resources
+C) Manage memory
+D) Handle I/O
+Ans: B
+
+Mutex allows
+A) Multiple processes simultaneously
+B) Only one process at a time
+C) Read-only access
+D) No blocking
+Ans: B
+
+Producer–Consumer problem deals with
+A) CPU scheduling
+B) Memory allocation
+C) Process synchronization
+D) Deadlock detection
+Ans: C
+
+Semaphore operations are
+A) Start and Stop
+B) Lock and Unlock
+C) wait() and signal()
+D) fork() and exec()
+Ans: C
+
+Binary semaphore is similar to
+A) Counting semaphore
+B) Mutex
+C) Monitor
+D) Spinlock
+Ans: B
+
+Deadlock differs from starvation because starvation
+A) Is permanent
+B) Is temporary or indefinite due to scheduling
+C) Always involves circular wait
+D) Requires mutual exclusion
+Ans: B
+
+Deadlock is always
+A) Recoverable
+B) Temporary
+C) Permanent unless handled
+D) Avoidable without cost
+Ans: C
+
+Resource allocation graph is used to
+A) Schedule CPU
+B) Detect deadlock
+C) Allocate memory
+D) Handle paging
+Ans: B
+
+MEDIUM LEVEL (21–35)
+
+Which condition can be eliminated to prevent deadlock?
+A) Mutual exclusion
+B) Hold and wait
+C) CPU scheduling
+D) Context switching
+Ans: B
+
+Deadlock avoidance ensures system stays in
+A) Dead state
+B) Unsafe state
+C) Safe state
+D) Starved state
+Ans: C
+
+Safe state means
+A) No deadlock currently
+B) Deadlock impossible
+C) There exists a safe sequence
+D) CPU utilization is high
+Ans: C
+
+Banker’s Algorithm checks for
+A) Maximum demand
+B) Available resources
+C) Safe sequence
+D) Starvation
+Ans: C
+
+Counting semaphore is used when
+A) Only one resource exists
+B) Multiple identical resources exist
+C) No resource exists
+D) CPU scheduling is needed
+Ans: B
+
+Semaphore value represents
+A) Process count
+B) Resource availability
+C) CPU time
+D) Memory size
+Ans: B
+
+Busy waiting occurs in
+A) Blocking semaphore
+B) Mutex with sleep
+C) Spinlock
+D) Monitor
+Ans: C
+
+Starvation can occur in
+A) FCFS scheduling
+B) Priority scheduling
+C) Round Robin
+D) Paging
+Ans: B
+
+Deadlock detection requires
+A) No runtime overhead
+B) Periodic checking
+C) Prevention conditions
+D) Safe sequence
+Ans: B
+
+Recovery from deadlock may involve
+A) Ignoring processes
+B) Killing processes
+C) Adding more CPUs
+D) Increasing priority
+Ans: B
+
+Preempting resources is difficult when resource is
+A) CPU
+B) Memory
+C) Printer
+D) Disk
+Ans: C
+
+Banker’s Algorithm is applicable when
+A) Resource instances are single
+B) Resource demands change dynamically
+C) Maximum resource needs are known
+D) Paging is used
+Ans: C
+
+Deadlock detection algorithm uses
+A) Page table
+B) Resource allocation graph
+C) Ready queue
+D) TLB
+Ans: B
+
+Which problem demonstrates synchronization issues?
+A) Dining Philosophers
+B) Paging
+C) Thrashing
+D) Scheduling
+Ans: A
+
+Semaphore misuse may cause
+A) Faster execution
+B) Deadlock
+C) Better throughput
+D) Lower overhead
+Ans: B
+
+HARD LEVEL (36–50)
+
+Deadlock cannot occur if
+A) Mutual exclusion exists
+B) Circular wait exists
+C) Hold and wait is prevented
+D) No preemption exists
+Ans: C
+
+Which condition is hardest to eliminate practically?
+A) Hold and wait
+B) Circular wait
+C) Mutual exclusion
+D) No preemption
+Ans: C
+
+Banker’s Algorithm is conservative because
+A) It blocks many safe requests
+B) It allows unsafe states
+C) It ignores future requests
+D) It causes starvation
+Ans: A
+
+Unsafe state means
+A) Deadlock has occurred
+B) Deadlock will definitely occur
+C) Deadlock may occur
+D) System crash
+Ans: C
+
+Semaphore wait operation when value is zero will
+A) Increase value
+B) Continue execution
+C) Block the process
+D) Terminate process
+Ans: C
+
+Signal operation on semaphore
+A) Decrements value
+B) Blocks process
+C) Increments value
+D) Resets value
+Ans: C
+
+Mutex differs from semaphore because mutex
+A) Is counted
+B) Can be unlocked by any process
+C) Is owned by a process
+D) Has no blocking
+Ans: C
+
+Producer–Consumer problem requires
+A) Mutual exclusion only
+B) Synchronization only
+C) Both synchronization and mutual exclusion
+D) Paging
+Ans: C
+
+Starvation is best prevented by
+A) Killing processes
+B) Priority inversion
+C) Aging
+D) Busy waiting
+Ans: C
+
+Priority inversion occurs when
+A) Low priority runs first
+B) High priority waits for low priority
+C) Equal priority tasks run
+D) CPU is idle
+Ans: B
+
+Deadlock vs starvation key difference is
+A) Circular wait
+B) Resource allocation
+C) Permanence
+D) CPU usage
+Ans: C
+
+Resource allocation graph with cycle always indicates deadlock when
+A) Single instance of resource
+B) Multiple instances
+C) Paging enabled
+D) Preemption exists
+Ans: A
+
+Recovery by rollback requires
+A) Checkpointing
+B) Paging
+C) Scheduling
+D) Spooling
+Ans: A
+
+Semaphore-based solutions must ensure
+A) Fairness
+B) Atomicity
+C) Starvation
+D) Priority inversion
+Ans: B
+
+Strategic goal of synchronization primitives is
+A) Maximize deadlock
+B) Eliminate concurrency
+C) Ensure correctness with concurrency
+D) Reduce memory
+Ans: C
 
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 
+GIT – SESSION 1 (VERSION CONTROL & TEAM WORKFLOWS)
+
+Coverage: Team development issues, version control concepts, Git fundamentals, repositories, commits, branches, merge
+Volume: 50 MCQs
+Difficulty Mix: Easy (20) · Medium (15) · Hard (15)
+
+EASY LEVEL (1–20)
+
+Git is a
+A) Programming language
+B) Distributed version control system
+C) Build tool
+D) IDE
+Ans: B
+
+Version control is used to
+A) Compile code
+B) Track changes in source code
+C) Execute programs
+D) Debug applications
+Ans: B
+
+Git was originally developed by
+A) Bill Gates
+B) Linus Torvalds
+C) Dennis Ritchie
+D) Guido van Rossum
+Ans: B
+
+Git repository stores
+A) Only source code
+B) Only binaries
+C) Project history and metadata
+D) Compiled files only
+Ans: C
+
+Which command initializes a new Git repository?
+A) git start
+B) git create
+C) git init
+D) git begin
+Ans: C
+
+.git directory contains
+A) Source files
+B) Git configuration and history
+C) Executables
+D) Logs only
+Ans: B
+
+Which command checks the repository status?
+A) git log
+B) git diff
+C) git status
+D) git show
+Ans: C
+
+Which command stages changes?
+A) git commit
+B) git add
+C) git push
+D) git clone
+Ans: B
+
+Which command records changes permanently?
+A) git add
+B) git status
+C) git commit
+D) git pull
+Ans: C
+
+A commit in Git represents
+A) Final product
+B) Snapshot of project state
+C) Backup file
+D) Branch
+Ans: B
+
+Default branch name traditionally is
+A) dev
+B) trunk
+C) master
+D) release
+Ans: C
+
+Git allows developers to work
+A) Only online
+B) Only offline
+C) Both online and offline
+D) Only on server
+Ans: C
+
+Which command shows commit history?
+A) git status
+B) git log
+C) git diff
+D) git show
+Ans: B
+
+Git is best suited for
+A) Single-user projects
+B) Team-based development
+C) Database management
+D) OS design
+Ans: B
+
+Which command creates a new branch?
+A) git new
+B) git branch
+C) git checkout
+D) git merge
+Ans: B
+
+Branching helps in
+A) Deleting code
+B) Parallel development
+C) Code compilation
+D) Faster execution
+Ans: B
+
+Which command switches branches?
+A) git switch
+B) git move
+C) git jump
+D) git fork
+Ans: A
+
+Merging is used to
+A) Delete branches
+B) Combine branch changes
+C) Rename branches
+D) Clone repository
+Ans: B
+
+Git stores data as
+A) Differences
+B) Snapshots
+C) Lines
+D) Blocks
+Ans: B
+
+Which file is commonly used to ignore files?
+A) ignore.txt
+B) .gitignore
+C) git.conf
+D) exclude.txt
+Ans: B
+
+MEDIUM LEVEL (21–35)
+
+Which area holds files before commit?
+A) Working directory
+B) Repository
+C) Staging area
+D) Remote
+Ans: C
+
+git diff shows
+A) Commit history
+B) Staged files
+C) Differences between versions
+D) Branch list
+Ans: C
+
+Which command removes file from staging?
+A) git reset
+B) git remove
+C) git clean
+D) git undo
+Ans: A
+
+HEAD in Git points to
+A) First commit
+B) Latest commit of current branch
+C) Remote repository
+D) Staging area
+Ans: B
+
+Fast-forward merge occurs when
+A) Conflicts exist
+B) Branch histories diverge
+C) No new commits on target branch
+D) Merge fails
+Ans: C
+
+Merge conflict occurs when
+A) Files are identical
+B) Same file modified in parallel
+C) Branch is empty
+D) Commit message missing
+Ans: B
+
+git clone is used to
+A) Copy files only
+B) Create a local copy of repository
+C) Merge branches
+D) Delete repo
+Ans: B
+
+Which command lists all branches?
+A) git show
+B) git branch
+C) git log
+D) git tag
+Ans: B
+
+Local repository differs from central repository because
+A) No history
+B) Full history is stored locally
+C) No branches
+D) Read-only
+Ans: B
+
+git pull is equivalent to
+A) git fetch + git merge
+B) git add + git commit
+C) git clone + git push
+D) git branch + git checkout
+Ans: A
+
+Which Git object stores file content?
+A) Commit
+B) Tree
+C) Blob
+D) Tag
+Ans: C
+
+Which command deletes a branch?
+A) git delete
+B) git branch -d
+C) git remove
+D) git clean
+Ans: B
+
+Detached HEAD state means
+A) No commits
+B) HEAD not pointing to branch
+C) Repository corrupted
+D) Merge failed
+Ans: B
+
+Version control resolves
+A) Hardware issues
+B) Code conflicts
+C) Memory leaks
+D) Runtime errors
+Ans: B
+
+Git encourages
+A) Linear development
+B) Parallel and iterative development
+C) Waterfall model
+D) Monolithic coding
+Ans: B
+
+HARD LEVEL (36–50)
+
+Git is called distributed because
+A) Multiple servers exist
+B) Each developer has full repository
+C) Code is cloud-based
+D) Files are copied
+Ans: B
+
+Commit hash uniquely identifies
+A) Branch
+B) File
+C) Commit
+D) Repository
+Ans: C
+
+Which Git object links commits in history?
+A) Tree
+B) Blob
+C) Parent pointer
+D) Tag
+Ans: C
+
+Three-tree architecture in Git includes
+A) Working, staging, repository
+B) Client, server, remote
+C) Source, binary, output
+D) User, kernel, shell
+Ans: A
+
+git reset --hard does
+A) Unstage changes
+B) Discard all changes permanently
+C) Delete repository
+D) Reset remote
+Ans: B
+
+git checkout vs git switch difference is
+A) Same command
+B) switch is safer and branch-focused
+C) checkout is deprecated fully
+D) switch deletes branches
+Ans: B
+
+Merge conflict markers include
+A) ###
+B) <<< >>>
+C) <<<< ==== >>>>
+D) ***
+Ans: C
+
+Which strategy minimizes merge conflicts?
+A) Long-lived branches
+B) Frequent integration
+C) Large commits
+D) Manual backups
+Ans: B
+
+Rewriting history should be
+A) Encouraged
+B) Done on shared branches
+C) Avoided on public branches
+D) Mandatory
+Ans: C
+
+git stash is used to
+A) Commit changes
+B) Temporarily save uncommitted changes
+C) Delete changes
+D) Merge branches
+Ans: B
+
+Tag in Git is used to
+A) Mark specific commits
+B) Create branch
+C) Merge code
+D) Track files
+Ans: A
+
+Which workflow is common in teams?
+A) Centralized workflow
+B) Feature-branch workflow
+C) Gitflow
+D) All of the above
+Ans: D
+
+Gitflow introduces branches like
+A) temp, test
+B) master, develop, feature
+C) user, admin
+D) build, run
+Ans: B
+
+The biggest risk of poor version control is
+A) Slow CPU
+B) Code loss and conflicts
+C) Large binaries
+D) High memory usage
+Ans: B
+
+Strategic value of Git in SDLC is
+A) Faster compilation
+B) Controlled collaboration and traceability
+C) UI improvement
+D) Hardware optimization
+Ans: B
+------------------------------------------------------------------------------------------------------------------------
+SOFTWARE ENGINEERING – SESSIONS 2, 3, 4 & 5
+
+Coverage: Software Engineering basics, Software Process & Models, SDLC, Requirements Engineering, Design & Architecture, UML, Coding principles, OOAD
+Volume: 50 MCQs
+Difficulty Mix: Easy (20) · Medium (15) · Hard (15)
+
+EASY LEVEL (1–20)
+
+Software Engineering is primarily concerned with
+A) Writing code only
+B) Systematic development and maintenance of software
+C) Hardware design
+D) Network configuration
+Ans: B
+
+A software process defines
+A) Coding syntax
+B) Steps to develop software
+C) Hardware layout
+D) Testing tools
+Ans: B
+
+SDLC stands for
+A) Software Design Level Control
+B) System Development Life Cycle
+C) Software Development Life Cycle
+D) Source Development Logic Code
+Ans: C
+
+Which is NOT a phase of SDLC?
+A) Requirement analysis
+B) Design
+C) Compilation
+D) Maintenance
+Ans: C
+
+Software product refers to
+A) Hardware manual
+B) Executable + documentation
+C) Source code only
+D) Test cases only
+Ans: B
+
+Requirements Engineering deals with
+A) Coding standards
+B) Gathering and analyzing requirements
+C) UI design
+D) Deployment
+Ans: B
+
+Functional requirements describe
+A) How system performs
+B) What system should do
+C) Hardware used
+D) Project schedule
+Ans: B
+
+Non-functional requirements focus on
+A) Business logic
+B) Performance, security, usability
+C) Algorithms
+D) Code syntax
+Ans: B
+
+Which model follows a linear sequence of phases?
+A) Agile
+B) Spiral
+C) Waterfall
+D) RAD
+Ans: C
+
+Feasibility study checks
+A) Coding difficulty
+B) Project viability
+C) UML diagrams
+D) Testing tools
+Ans: B
+
+Design phase output is
+A) Source code
+B) Design models
+C) Executable
+D) Test report
+Ans: B
+
+UML stands for
+A) Unified Modeling Language
+B) Universal Machine Logic
+C) User Modeling Language
+D) Unified Method Library
+Ans: A
+
+Which UML diagram shows system functionality?
+A) Class diagram
+B) Sequence diagram
+C) Use case diagram
+D) Deployment diagram
+Ans: C
+
+Modularity improves
+A) Code size
+B) Maintainability
+C) Execution speed only
+D) Compilation
+Ans: B
+
+Cohesion refers to
+A) Inter-module dependency
+B) Intra-module relatedness
+C) File size
+D) CPU usage
+Ans: B
+
+Coupling refers to
+A) Module independence
+B) Inter-module dependency
+C) Code length
+D) Testing
+Ans: B
+
+High cohesion and low coupling indicate
+A) Poor design
+B) Good design
+C) Complex system
+D) Slow execution
+Ans: B
+
+Object-Oriented Analysis focuses on
+A) Coding
+B) Identifying objects and relationships
+C) Testing
+D) Deployment
+Ans: B
+
+Object-Oriented Design focuses on
+A) Problem domain
+B) Solution domain
+C) Hardware
+D) Network
+Ans: B
+
+Maintenance phase includes
+A) Requirement gathering
+B) Bug fixing and enhancements
+C) Design modeling
+D) Feasibility study
+Ans: B
+
+MEDIUM LEVEL (21–35)
+
+Spiral model emphasizes
+A) Linear flow
+B) Risk management
+C) Rapid coding
+D) Minimal documentation
+Ans: B
+
+Incremental model delivers software
+A) At once
+B) In small functional increments
+C) Only at end
+D) Without testing
+Ans: B
+
+Requirement analysis modeling uses
+A) Flowcharts only
+B) DFDs and UML
+C) Source code
+D) Test cases
+Ans: B
+
+Which is NOT a design characteristic?
+A) Modularity
+B) Cohesion
+C) Coupling
+D) Compilation
+Ans: D
+
+Layered architecture promotes
+A) Tight coupling
+B) Separation of concerns
+C) Code duplication
+D) Monolithic design
+Ans: B
+
+Class diagram shows
+A) Object interactions over time
+B) Static structure of system
+C) User workflows
+D) Deployment nodes
+Ans: B
+
+Sequence diagram emphasizes
+A) Data storage
+B) Time-ordered interactions
+C) Class hierarchy
+D) Code complexity
+Ans: B
+
+Use case represents
+A) Internal logic
+B) User interaction with system
+C) Database schema
+D) Network topology
+Ans: B
+
+Coding conventions help in
+A) Faster CPU
+B) Readability and maintainability
+C) Memory allocation
+D) Testing automation
+Ans: B
+
+Reusability is enhanced by
+A) Tight coupling
+B) High cohesion
+C) Poor documentation
+D) Hard-coded values
+Ans: B
+
+Functional-oriented design focuses on
+A) Data and functions
+B) Objects and classes
+C) Services
+D) Threads
+Ans: A
+
+Object-Oriented design uses principles like
+A) Inheritance
+B) Encapsulation
+C) Polymorphism
+D) All of the above
+Ans: D
+
+Architectural design defines
+A) Code syntax
+B) System structure and components
+C) Test cases
+D) UI color scheme
+Ans: B
+
+Design patterns provide
+A) Code templates
+B) Reusable design solutions
+C) Compiler optimization
+D) OS services
+Ans: B
+
+Poor requirements lead to
+A) Faster delivery
+B) Cost overruns and rework
+C) Better quality
+D) Less testing
+Ans: B
+
+HARD LEVEL (36–50)
+
+Waterfall model limitation is
+A) Too flexible
+B) Difficult to accommodate changes
+C) No documentation
+D) No testing
+Ans: B
+
+Agile contrasts traditional models by emphasizing
+A) Heavy documentation
+B) Customer collaboration
+C) Fixed requirements
+D) Rigid plans
+Ans: B
+
+Requirements creep refers to
+A) Reducing requirements
+B) Uncontrolled requirement changes
+C) Better documentation
+D) Faster delivery
+Ans: B
+
+Traceability ensures
+A) Code execution
+B) Linking requirements to design and tests
+C) Faster compilation
+D) UI consistency
+Ans: B
+
+High coupling leads to
+A) Easier maintenance
+B) Ripple effects of change
+C) Better reuse
+D) Faster execution
+Ans: B
+
+Low cohesion modules are
+A) Focused
+B) Hard to maintain
+C) Easy to test
+D) Reusable
+Ans: B
+
+Architectural decisions have
+A) Minor impact
+B) Long-term impact on system
+C) Only UI impact
+D) Only coding impact
+Ans: B
+
+UML is
+A) A programming language
+B) A modeling standard
+C) A compiler
+D) A framework
+Ans: B
+
+Object identity means
+A) Same values
+B) Unique existence independent of state
+C) Same class
+D) Same behavior
+Ans: B
+
+Encapsulation provides
+A) Data exposure
+B) Data hiding
+C) Performance boost
+D) Disk access
+Ans: B
+
+Inheritance promotes
+A) Code duplication
+B) Code reuse
+C) Tighter coupling
+D) Poor design
+Ans: B
+
+Polymorphism enables
+A) Single behavior
+B) Multiple forms of behavior
+C) Static binding only
+D) Memory sharing
+Ans: B
+
+Design-phase errors are
+A) Cheap to fix
+B) Expensive to fix later
+C) Ignorable
+D) Only cosmetic
+Ans: B
+
+Software quality attributes include
+A) Performance, reliability, usability
+B) CPU speed
+C) Disk size
+D) Network latency only
+Ans: A
+
+Strategic goal of Software Engineering is
+A) Fast coding
+B) Predictable, high-quality software delivery
+C) Minimal documentation
+D) Hardware optimization
+Ans: B
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
