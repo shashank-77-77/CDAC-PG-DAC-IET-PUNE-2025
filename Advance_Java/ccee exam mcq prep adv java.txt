@@ -2903,12 +2903,1845 @@ C) Ignore status codes
 D) Stateful services
 Ans: A
 -----------------------------------------------------------------------------------------------------
+Sessions 26 & 27 – Spring Testing & Spring Security
+
+40 MCQs | Easy (14) • Medium (14) • Hard (12)
+(Security anchor: Spring Security)
+
+Easy
+
+Testing in Spring primarily ensures
+A) Faster UI
+B) Code correctness
+C) Better JVM performance
+D) UI styling
+Ans: B
+
+Unit testing focuses on
+A) Entire system
+B) Single component
+C) Database only
+D) Network layer
+Ans: B
+
+Which framework is commonly used for testing in Spring?
+A) Selenium
+B) JUnit
+C) Ant
+D) Maven
+Ans: B
+
+Which annotation boots Spring test context?
+A) @RunWith
+B) @SpringBootTest
+C) @TestConfig
+D) @EnableTest
+Ans: B
+
+Which annotation marks a test method?
+A) @TestCase
+B) @Check
+C) @Test
+D) @Assert
+Ans: C
+
+Which testing isolates MVC controllers?
+A) Integration testing
+B) Unit testing
+C) UI testing
+D) Load testing
+Ans: B
+
+Which tool tests MVC controllers without server?
+A) Postman
+B) MockMvc
+C) RestTemplate
+D) Tomcat
+Ans: B
+
+Integration testing validates
+A) Single method
+B) Component interaction
+C) UI layout
+D) JVM tuning
+Ans: B
+
+Spring Security primarily provides
+A) Logging
+B) Caching
+C) Authentication & Authorization
+D) ORM
+Ans: C
+
+Authentication means
+A) Granting permissions
+B) Identifying user
+C) Encrypting data
+D) Logging activity
+Ans: B
+
+Authorization means
+A) Identifying user
+B) Verifying password
+C) Granting access rights
+D) Encrypting traffic
+Ans: C
+
+Which protocol secures HTTP communication?
+A) FTP
+B) SMTP
+C) HTTPS
+D) TCP
+Ans: C
+
+Which annotation enables security in Boot?
+A) @EnableSecure
+B) @EnableWebSecurity
+C) @SecureApp
+D) @SpringSecure
+Ans: B
+
+JWT stands for
+A) Java Web Token
+B) JSON Web Token
+C) Java Wide Token
+D) JSON Wide Transfer
+Ans: B
+
+Medium
+
+Which annotation loads partial Spring context?
+A) @SpringBootTest
+B) @WebMvcTest
+C) @ContextTest
+D) @TestSlice
+Ans: B
+
+Which annotation mocks dependencies in tests?
+A) @FakeBean
+B) @MockBean
+C) @Stub
+D) @InjectMock
+Ans: B
+
+Which layer is tested in controller unit tests?
+A) DAO
+B) Service
+C) Controller
+D) Repository
+Ans: C
+
+Which testing uses in-memory DB often?
+A) Unit
+B) Integration
+C) UI
+D) Smoke
+Ans: B
+
+Which annotation secures method-level access?
+A) @Secure
+B) @PreAuthorize
+C) @Authorize
+D) @CheckRole
+Ans: B
+
+Which role prefix is default in Spring Security?
+A) USER_
+B) AUTH_
+C) ROLE_
+D) SEC_
+Ans: C
+
+Which authentication is simplest to configure?
+A) JWT
+B) OAuth
+C) Basic Authentication
+D) LDAP
+Ans: C
+
+Which object holds authenticated user info?
+A) HttpSession
+B) SecurityContext
+C) Model
+D) DispatcherServlet
+Ans: B
+
+Which annotation allows unauthenticated access?
+A) @PermitAll
+B) @AllowAnonymous
+C) @Public
+D) @Open
+Ans: A
+
+Which filter processes authentication?
+A) DispatcherServlet
+B) SecurityFilterChain
+C) ViewResolver
+D) HandlerMapping
+Ans: B
+
+JWT is typically stored on client side in
+A) Database
+B) HttpSession
+C) Authorization header
+D) Server cache
+Ans: C
+
+Which testing validates REST APIs end-to-end?
+A) Unit
+B) Mock
+C) Integration
+D) Static
+Ans: C
+
+Which HTTP status indicates unauthorized?
+A) 200
+B) 401
+C) 403
+D) 500
+Ans: B
+
+Which HTTP status indicates forbidden?
+A) 401
+B) 402
+C) 403
+D) 404
+Ans: C
+
+Hard
+
+Which testing avoids loading full context?
+A) @SpringBootTest
+B) @WebMvcTest
+C) @ContextConfiguration
+D) @IntegrationTest
+Ans: B
+
+Which annotation enables method security?
+A) @EnableSecurity
+B) @EnableMethodSecurity
+C) @EnableAuth
+D) @EnableRoles
+Ans: B
+
+Which JWT part contains user claims?
+A) Header
+B) Signature
+C) Payload
+D) Footer
+Ans: C
+
+Which algorithm signs JWT?
+A) RSA / HMAC
+B) AES only
+C) DES
+D) SHA only
+Ans: A
+
+Which testing best detects configuration issues?
+A) Unit
+B) Integration
+C) Mock
+D) Static
+Ans: B
+
+Which is stateless authentication?
+A) Session-based login
+B) Cookie login
+C) JWT-based login
+D) HttpSession
+Ans: C
+
+Which Spring Security feature prevents CSRF?
+A) CORS
+B) CSRF token
+C) JWT
+D) HTTPS
+Ans: B
+
+Which is disabled by default for REST APIs?
+A) Authentication
+B) Authorization
+C) CSRF
+D) HTTPS
+Ans: C
+
+Which test verifies authorization rules?
+A) Unit test
+B) Security integration test
+C) UI test
+D) Performance test
+Ans: B
+
+Which component hashes passwords?
+A) TokenProvider
+B) PasswordEncoder
+C) UserDetails
+D) SecurityContext
+Ans: B
+
+Which improves security testability?
+A) Hardcoded users
+B) Mock users with roles
+C) Disable security
+D) Static tokens
+Ans: B
+
+Best practice in Spring Security is
+A) Security logic in controllers
+B) Centralized security configuration
+C) Hardcoded credentials
+D) Disable filters
+Ans: B
+------------------------------------------------------------------------------------------------------
+Sessions 28 & 29 – Microservices Architecture
+
+40 MCQs | Easy (14) • Medium (14) • Hard (12)
+(Platform context: Spring Boot)
+
+Easy
+
+Microservices architecture focuses on
+A) Monolithic deployment
+B) Large single codebase
+C) Small, independent services
+D) Desktop applications
+Ans: C
+
+Each microservice typically has
+A) Shared database
+B) Independent deployment
+C) Single JVM
+D) One UI
+Ans: B
+
+Microservices communicate mainly using
+A) Shared memory
+B) File system
+C) REST / HTTP
+D) RMI only
+Ans: C
+
+Microservices promote
+A) Tight coupling
+B) Loose coupling
+C) Static linking
+D) Shared state
+Ans: B
+
+Which is a key benefit of microservices?
+A) Simpler deployment always
+B) Independent scalability
+C) Less network calls
+D) Single failure point
+Ans: B
+
+Which technology commonly builds microservices in Java?
+A) Swing
+B) JSP
+C) Spring Boot
+D) Applet
+Ans: C
+
+Each microservice should own its
+A) UI only
+B) Shared schema
+C) Database
+D) JVM heap
+Ans: C
+
+API Gateway acts as
+A) Database
+B) Client-facing entry point
+C) Service registry
+D) Load balancer only
+Ans: B
+
+Service Discovery helps in
+A) UI rendering
+B) Locating service instances
+C) Database migration
+D) Logging
+Ans: B
+
+Which protocol is commonly used between services?
+A) FTP
+B) SMTP
+C) HTTP
+D) SNMP
+Ans: C
+
+Microservices are best suited for
+A) Small scripts
+B) Large enterprise systems
+C) Static websites
+D) Desktop apps
+Ans: B
+
+Which approach avoids single point of failure?
+A) Central monolith
+B) Distributed services
+C) Static linking
+D) Single DB
+Ans: B
+
+Each microservice can be written in
+A) One fixed language
+B) Same framework only
+C) Different technologies
+D) JSP only
+Ans: C
+
+Microservices emphasize
+A) Shared state
+B) Centralized control
+C) Decentralized governance
+D) Tight integration
+Ans: C
+
+Medium
+
+Which pattern routes client requests to services?
+A) DAO
+B) MVC
+C) API Gateway
+D) Singleton
+Ans: C
+
+Which component registers service instances?
+A) Load balancer
+B) Service Registry
+C) API Gateway
+D) Controller
+Ans: B
+
+Which problem arises frequently in microservices?
+A) No scalability
+B) Network latency
+C) No reuse
+D) No security
+Ans: B
+
+Which design helps fault tolerance?
+A) Shared DB
+B) Circuit Breaker
+C) Tight coupling
+D) Synchronous blocking everywhere
+Ans: B
+
+Which deployment enables independent scaling?
+A) Monolithic
+B) Microservices
+C) Desktop
+D) Batch
+Ans: B
+
+Which approach is recommended for inter-service communication?
+A) Hardcoded IPs
+B) Service discovery
+C) Static DNS only
+D) File sharing
+Ans: B
+
+Which data management strategy fits microservices?
+A) Single shared DB
+B) Database per service
+C) Global schema
+D) Stored procedures only
+Ans: B
+
+Which is a common microservices challenge?
+A) Too much coupling
+B) Distributed transactions
+C) No testing
+D) No logging
+Ans: B
+
+Which deployment unit is common?
+A) EAR
+B) WAR only
+C) Container
+D) ZIP
+Ans: C
+
+Which technology helps containerization?
+A) Maven
+B) Docker
+C) JSP
+D) JDBC
+Ans: B
+
+Which supports scaling microservices dynamically?
+A) Static servers
+B) Orchestration
+C) JSP
+D) JDBC
+Ans: B
+
+Which communication style reduces coupling?
+A) Shared memory
+B) Event-driven messaging
+C) Tight REST chains
+D) Global transactions
+Ans: B
+
+Which testing is critical for microservices?
+A) Unit only
+B) Integration & contract testing
+C) UI only
+D) Manual testing
+Ans: B
+
+Which improves resilience?
+A) Single instance
+B) Retry + timeout
+C) Long transactions
+D) Static configuration
+Ans: B
+
+Hard
+
+Which pattern handles cross-cutting concerns at edge?
+A) DAO
+B) API Gateway
+C) Repository
+D) MVC
+Ans: B
+
+Which challenge impacts data consistency?
+A) ACID everywhere
+B) Distributed data ownership
+C) Monolithic DB
+D) Local transactions only
+Ans: B
+
+Which transaction pattern suits microservices?
+A) Two-phase commit
+B) Saga pattern
+C) Global lock
+D) XA only
+Ans: B
+
+Which approach improves scalability most?
+A) Stateful services
+B) Stateless services
+C) Shared session
+D) Global cache only
+Ans: B
+
+Which failure mode is common in distributed systems?
+A) Compile error
+B) Partial failure
+C) Syntax error
+D) JVM crash only
+Ans: B
+
+Which observability feature is critical?
+A) UI logs
+B) Distributed tracing
+C) Local console output
+D) PrintStackTrace
+Ans: B
+
+Which deployment pattern minimizes downtime?
+A) Big bang release
+B) Rolling deployment
+C) Manual restart
+D) Cold start
+Ans: B
+
+Which principle aligns with microservices?
+A) Single Responsibility
+B) God object
+C) Tight cohesion across services
+D) Shared schema
+Ans: A
+
+Which approach manages configuration centrally?
+A) Hardcoded values
+B) Config server
+C) Local XML only
+D) JSP parameters
+Ans: B
+
+Which risk increases with microservices?
+A) Code reuse
+B) Operational complexity
+C) Scalability
+D) Flexibility
+Ans: B
+
+Which practice improves team autonomy?
+A) Centralized governance only
+B) Decentralized ownership
+C) Shared release cycle
+D) Single backlog
+Ans: B
+
+Best practice in microservices design is
+A) Large services
+B) Chatty synchronous calls
+C) Small, autonomous services
+D) Shared database
+Ans: C
+------------------------------------------------------------------------------------------------------
+PG-DAC CCEE – Web-Based Java Programming
+Full Mock Paper – 1 (Integrated)
+
+50 MCQs | Mixed Difficulty | All Answers Included
+
+Q1. JDBC is best categorized as
+
+A) ORM framework
+B) Low-level database API
+C) Web framework
+D) Messaging API
+Ans: B
+
+Q2. Which JDBC object is NOT thread-safe?
+
+A) DriverManager
+B) Connection
+C) ResultSet
+D) All of the above
+Ans: D
+
+Q3. DAO pattern primarily improves
+
+A) UI rendering
+B) Code portability
+C) Database normalization
+D) JVM tuning
+Ans: B
+
+Q4. J2EE applications are typically
+
+A) Monolithic only
+B) Client-side only
+C) Multi-tiered
+D) Script-based
+Ans: C
+
+Q5. WAR files are deployed into
+
+A) JVM
+B) Web Container
+C) Database
+D) Browser
+Ans: B
+
+Q6. Servlet lifecycle is managed by
+
+A) Developer
+B) JVM
+C) Container
+D) Browser
+Ans: C
+
+Q7. Which servlet method is called exactly once?
+
+A) service()
+B) doGet()
+C) init()
+D) destroy()
+Ans: C
+
+Q8. HttpSession data is stored
+
+A) On client
+B) In cookie only
+C) On server
+D) In database by default
+Ans: C
+
+Q9. sendRedirect() results in
+
+A) Same request
+B) Server-side forward
+C) New client request
+D) Thread reuse
+Ans: C
+
+Q10. JSP pages are ultimately converted into
+
+A) HTML
+B) Beans
+C) Servlets
+D) Controllers
+Ans: C
+
+Q11. Which JSP element is deprecated in modern apps?
+
+A) EL
+B) JSTL
+C) Scriptlets
+D) Directives
+Ans: C
+
+Q12. MVC Controller in classic Java web apps is
+
+A) JSP
+B) Servlet
+C) DAO
+D) Entity
+Ans: B
+
+Q13. Hibernate eliminates the need for
+
+A) SQL completely
+B) JDBC boilerplate
+C) Database schema
+D) Transactions
+Ans: B
+
+Q14. Which Hibernate object is NOT thread-safe?
+
+A) SessionFactory
+B) Session
+C) Cache
+D) Dialect
+Ans: B
+
+Q15. HQL operates on
+
+A) Tables
+B) Columns
+C) Objects and properties
+D) Stored procedures
+Ans: C
+
+Q16. LazyInitializationException occurs when
+
+A) Fetch type is EAGER
+B) Session is closed
+C) Transaction commits
+D) Cache is enabled
+Ans: B
+
+Q17. Spring’s core principle is
+
+A) Inheritance
+B) IoC
+C) Multithreading
+D) Static binding
+Ans: B
+
+Q18. Default Spring bean scope is
+
+A) prototype
+B) request
+C) session
+D) singleton
+Ans: D
+
+Q19. Front Controller in Spring MVC is
+
+A) Controller class
+B) Filter
+C) DispatcherServlet
+D) ViewResolver
+Ans: C
+
+Q20. Best DI strategy in Spring is
+
+A) Field injection
+B) Setter injection
+C) Constructor injection
+D) Static injection
+Ans: C
+
+Q21. Spring Boot’s biggest productivity gain comes from
+
+A) No Java
+B) Auto-configuration
+C) No MVC
+D) No database
+Ans: B
+
+Q22. Default embedded server in Spring Boot is
+
+A) Jetty
+B) GlassFish
+C) WebLogic
+D) Tomcat
+Ans: D
+
+Q23. pom.xml is used to manage
+
+A) Runtime memory
+B) Dependencies & build
+C) HTTP routing
+D) Session state
+Ans: B
+
+Q24. Spring Data JPA repositories are
+
+A) Concrete classes
+B) XML beans
+C) Interfaces
+D) Controllers
+Ans: C
+
+Q25. Query derivation in Spring Data is based on
+
+A) SQL files
+B) XML
+C) Method names
+D) Annotations only
+Ans: C
+
+Q26. @Query annotation is used for
+
+A) Validation
+B) Custom JPQL/SQL
+C) Transactions
+D) Mapping
+Ans: B
+
+Q27. Spring AOP is mainly used for
+
+A) Core business logic
+B) UI navigation
+C) Cross-cutting concerns
+D) ORM mapping
+Ans: C
+
+Q28. Spring AOP is implemented using
+
+A) Compile-time weaving
+B) Load-time weaving
+C) Runtime proxies
+D) Bytecode rewriting only
+Ans: C
+
+Q29. Which advice can control method execution?
+
+A) @Before
+B) @After
+C) @AfterReturning
+D) @Around
+Ans: D
+
+Q30. Self-invocation breaks AOP because of
+
+A) JVM limits
+B) No proxy involvement
+C) Annotation scanning
+D) Transaction timeout
+Ans: B
+
+Q31. REST is best described as
+
+A) Protocol
+B) Framework
+C) Architectural style
+D) API specification
+Ans: C
+
+Q32. Which HTTP method is NOT idempotent?
+
+A) GET
+B) PUT
+C) DELETE
+D) POST
+Ans: D
+
+Q33. 201 HTTP status means
+
+A) OK
+B) Accepted
+C) Created
+D) No Content
+Ans: C
+
+Q34. @RestController is equivalent to
+
+A) @Controller only
+B) @Service + @Controller
+C) @Controller + @ResponseBody
+D) @Component
+Ans: C
+
+Q35. RestTemplate is used for
+
+A) ORM
+B) Testing only
+C) Calling REST APIs
+D) MVC routing
+Ans: C
+
+Q36. Unit testing of Spring MVC controllers uses
+
+A) Selenium
+B) MockMvc
+C) Postman
+D) JMeter
+Ans: B
+
+Q37. Authentication means
+
+A) Granting permissions
+B) Identifying user
+C) Encrypting data
+D) Logging
+Ans: B
+
+Q38. Authorization means
+
+A) Identity check
+B) Password validation
+C) Access control
+D) Token generation
+Ans: C
+
+Q39. JWT is best described as
+
+A) Stateful token
+B) Session ID
+C) Stateless authentication token
+D) Encryption algorithm
+Ans: C
+
+Q40. CSRF protection is usually disabled for
+
+A) MVC apps
+B) JSP apps
+C) REST APIs
+D) Monoliths
+Ans: C
+
+Q41. Microservices emphasize
+
+A) Shared database
+B) Central deployment
+C) Independent services
+D) Monolithic releases
+Ans: C
+
+Q42. API Gateway pattern handles
+
+A) Persistence
+B) Client-side routing
+C) Cross-cutting edge concerns
+D) ORM
+Ans: C
+
+Q43. Service Discovery solves
+
+A) Logging
+B) Hardcoded service URLs
+C) Database scaling
+D) UI composition
+Ans: B
+
+Q44. Database per service is recommended to
+
+A) Reduce latency
+B) Increase coupling
+C) Ensure autonomy
+D) Simplify joins
+Ans: C
+
+Q45. Circuit Breaker pattern improves
+
+A) Throughput
+B) Resilience
+C) SQL speed
+D) UI response
+Ans: B
+
+Q46. Saga pattern is used for
+
+A) Authentication
+B) Distributed transactions
+C) UI navigation
+D) Caching
+Ans: B
+
+Q47. Containerization is commonly achieved using
+
+A) Maven
+B) Jenkins
+C) Docker
+D) JSP
+Ans: C
+
+Q48. Stateless services improve
+
+A) Debugging only
+B) Scalability
+C) UI design
+D) Memory leaks
+Ans: B
+
+Q49. Biggest risk in microservices is
+
+A) Flexibility
+B) Scalability
+C) Operational complexity
+D) Loose coupling
+Ans: C
+
+Q50. Best overall enterprise practice is
+
+A) One giant service
+B) Business logic in controllers
+C) Layered + modular design
+D) Shared database everywhere
+Ans: C
+-----------------------------------------------------------------------------------------------------
+PG-DAC CCEE – Web-Based Java Programming
+Mock Paper-2 (Hard-Biased)
+
+50 MCQs | High-Difficulty | Answers Included
+
+Q1. Which JDBC scenario most commonly causes connection leaks?
+
+A) Using PreparedStatement
+B) Missing finally / try-with-resources
+C) Using batch updates
+D) Using connection pool
+Ans: B
+
+Q2. Which transaction isolation level prevents phantom reads?
+
+A) READ_COMMITTED
+B) REPEATABLE_READ
+C) SERIALIZABLE
+D) READ_UNCOMMITTED
+Ans: C
+
+Q3. Which DAO design flaw breaks abstraction?
+
+A) Using interfaces
+B) Returning domain objects
+C) Exposing SQL exceptions directly
+D) Using PreparedStatement
+Ans: C
+
+Q4. In J2EE, which responsibility belongs strictly to the container?
+
+A) Business validation
+B) Transaction demarcation
+C) SQL optimization
+D) UI rendering
+Ans: B
+
+Q5. Which deployment change reloads context without JVM restart?
+
+A) OS reboot
+B) Server restart
+C) Application redeploy
+D) Database restart
+Ans: C
+
+Q6. Which servlet issue causes race conditions?
+
+A) Local variables
+B) Request attributes
+C) Instance variables
+D) HttpServletRequest
+Ans: C
+
+Q7. Why does self-invocation bypass Spring AOP?
+
+A) JVM optimization
+B) Missing annotations
+C) No proxy involvement
+D) Wrong pointcut
+Ans: C
+
+Q8. Which session tracking fails when cookies are disabled?
+
+A) URL rewriting
+B) HttpSession
+C) Cookies
+D) Hidden fields
+Ans: C
+
+Q9. Which RequestDispatcher behavior commits response?
+
+A) include()
+B) forward() after write
+C) forward() only
+D) redirect()
+Ans: B
+
+Q10. Which approach best avoids session replication overhead?
+
+A) Sticky sessions
+B) HttpSession
+C) Stateless services
+D) Cookies
+Ans: C
+
+Q11. JSP translation-time error occurs due to
+
+A) NullPointerException
+B) Syntax error in scriptlet
+C) SQL exception
+D) Runtime EL evaluation
+Ans: B
+
+Q12. Which JSP implicit object is unavailable outside error pages?
+
+A) request
+B) response
+C) exception
+D) application
+Ans: C
+
+Q13. Why are scriptlets deprecated?
+
+A) Performance
+B) Security only
+C) Tight coupling of logic & view
+D) JVM incompatibility
+Ans: C
+
+Q14. Which Hibernate state is NOT synchronized with DB?
+
+A) Persistent
+B) Detached
+C) Managed
+D) Removed
+Ans: B
+
+Q15. LazyInitializationException occurs when
+
+A) Fetch = EAGER
+B) Session closed before access
+C) Transaction committed
+D) Cache enabled
+Ans: B
+
+Q16. Which method avoids NonUniqueObjectException?
+
+A) save()
+B) update()
+C) persist()
+D) merge()
+Ans: D
+
+Q17. Which inheritance strategy gives best normalization?
+
+A) SINGLE_TABLE
+B) TABLE_PER_CLASS
+C) JOINED
+D) FLAT
+Ans: C
+
+Q18. Which Hibernate component teaches DB dialect differences?
+
+A) Driver
+B) Cache
+C) Dialect
+D) Session
+Ans: C
+
+Q19. Why is constructor injection preferred in Spring?
+
+A) Less code
+B) Mandatory dependencies enforced
+C) Faster runtime
+D) XML compatibility
+Ans: B
+
+Q20. Which Spring bean scope is unsafe by default?
+
+A) request
+B) prototype
+C) singleton
+D) session
+Ans: C
+
+Q21. DispatcherServlet primarily implements
+
+A) Factory
+B) Adapter
+C) Front Controller
+D) Proxy
+Ans: C
+
+Q22. Which breaks Spring MVC test isolation?
+
+A) @WebMvcTest
+B) @MockBean
+C) @SpringBootTest
+D) MockMvc
+Ans: C
+
+Q23. Which Spring Boot feature minimizes classpath conflicts?
+
+A) Profiles
+B) Starters
+C) YAML
+D) Actuator
+Ans: B
+
+Q24. Which config loads before application.properties?
+
+A) pom.xml
+B) application.yml
+C) bootstrap.properties
+D) web.xml
+Ans: C
+
+Q25. Which Maven phase publishes artifact locally?
+
+A) package
+B) deploy
+C) install
+D) verify
+Ans: C
+
+Q26. Which Spring Data feature causes N+1 problem if misused?
+
+A) Paging
+B) Lazy relationships
+C) Fetch joins
+D) Native queries
+Ans: B
+
+Q27. Which repository method flushes immediately?
+
+A) save()
+B) saveAll()
+C) saveAndFlush()
+D) persist()
+Ans: C
+
+Q28. Which exception abstracts vendor persistence errors?
+
+A) SQLException
+B) HibernateException
+C) DataAccessException
+D) RuntimeException
+Ans: C
+
+Q29. Which AOP advice must call proceed()?
+
+A) @Before
+B) @After
+C) @AfterReturning
+D) @Around
+Ans: D
+
+Q30. Which method cannot be advised in Spring AOP by default?
+
+A) public
+B) protected
+C) private
+D) interface
+Ans: C
+
+Q31. Which REST constraint improves scalability most?
+
+A) Cacheability
+B) Layered system
+C) Statelessness
+D) Code on demand
+Ans: C
+
+Q32. Which HTTP method is non-idempotent?
+
+A) GET
+B) PUT
+C) DELETE
+D) POST
+Ans: D
+
+Q33. Which REST anti-pattern hurts evolvability?
+
+A) Versioned APIs
+B) Verb-based URLs
+C) Status codes
+D) JSON payloads
+Ans: B
+
+Q34. Which header controls response media type?
+
+A) Accept
+B) Host
+C) Content-Type
+D) Authorization
+Ans: C
+
+Q35. Which Spring test best validates security rules?
+
+A) Unit test
+B) Mock test
+C) Security integration test
+D) UI test
+Ans: C
+
+Q36. Which JWT section contains claims?
+
+A) Header
+B) Payload
+C) Signature
+D) Footer
+Ans: B
+
+Q37. Why is JWT stateless?
+
+A) Stored in DB
+B) Server keeps no session
+C) Uses cookies
+D) Uses encryption only
+Ans: B
+
+Q38. Which microservices problem breaks consistency?
+
+A) Horizontal scaling
+B) Distributed transactions
+C) Loose coupling
+D) Statelessness
+Ans: B
+
+Q39. Which pattern replaces 2-phase commit?
+
+A) Circuit Breaker
+B) Saga
+C) Retry
+D) Bulkhead
+Ans: B
+
+Q40. Which failure is unique to distributed systems?
+
+A) Syntax error
+B) Compile error
+C) Partial failure
+D) Null pointer
+Ans: C
+
+Q41. Which pattern protects system from cascading failures?
+
+A) Retry
+B) Circuit Breaker
+C) Gateway
+D) Discovery
+Ans: B
+
+Q42. Which design improves observability most?
+
+A) Console logs
+B) Distributed tracing
+C) Local metrics
+D) PrintStackTrace
+Ans: B
+
+Q43. Which deployment minimizes downtime?
+
+A) Big-bang
+B) Cold restart
+C) Rolling deployment
+D) Manual redeploy
+Ans: C
+
+Q44. Which choice increases operational complexity?
+
+A) Monolith
+B) Layered app
+C) Microservices
+D) Modular monolith
+Ans: C
+
+Q45. Why database-per-service is recommended?
+
+A) Faster joins
+B) Strong coupling
+C) Service autonomy
+D) Easier reporting
+Ans: C
+
+Q46. Which practice best supports team autonomy?
+
+A) Central release cycle
+B) Shared schema
+C) Decentralized ownership
+D) Single backlog
+Ans: C
+
+Q47. Which microservice communication reduces coupling?
+
+A) Blocking REST chains
+B) Shared memory
+C) Event-driven messaging
+D) Direct DB access
+Ans: C
+
+Q48. Which approach improves cloud readiness?
+
+A) Stateful services
+B) Externalized config
+C) Hardcoded IPs
+D) Session affinity
+Ans: B
+
+Q49. Which testing becomes critical at scale?
+
+A) Unit only
+B) Contract testing
+C) UI testing
+D) Manual testing
+Ans: B
+
+Q50. Ultimate enterprise best practice is
+
+A) More frameworks
+B) Thin controllers, rich services
+C) Shared everything
+D) Business logic in UI
+Ans: B
 
 ------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------
+PG-DAC CCEE – Web-Based Java Programming
+IMPORTANT MCQs (Consolidated – All Sessions)
+
+60 MCQs | High-Yield | Options + Answers
+
+🔹 JDBC & Transactions (IMP)
+
+Which JDBC feature ensures DB independence?
+A) SQL
+B) DriverManager
+C) JDBC API
+D) ResultSet
+Ans: C
+
+Which JDBC object should be closed first?
+A) Connection
+B) ResultSet
+C) Statement
+D) Driver
+Ans: B
+
+Auto-commit false means
+A) DB commits automatically
+B) Each statement is a transaction
+C) Manual commit required
+D) Rollback disabled
+Ans: C
+
+SQL Injection is prevented mainly by
+A) Statement
+B) CallableStatement
+C) PreparedStatement
+D) Batch queries
+Ans: C
+
+DAO pattern separates
+A) UI & DB
+B) DB logic & business logic
+C) Network & DB
+D) MVC layers
+Ans: B
+
+🔹 Servlets & Session Management (IMP)
+
+Servlet instance variables are
+A) Thread-safe
+B) Shared across requests
+C) Local to request
+D) Immutable
+Ans: B
+
+Which servlet method is multi-threaded?
+A) init()
+B) destroy()
+C) service()
+D) constructor
+Ans: C
+
+sendRedirect() uses
+A) Same request
+B) Server-side forwarding
+C) Client-side redirection
+D) Session forwarding
+Ans: C
+
+Which session tracking fails without cookies?
+A) URL rewriting
+B) HttpSession
+C) Cookies
+D) Hidden fields
+Ans: C
+
+Which scope is shared across users?
+A) request
+B) session
+C) application
+D) page
+Ans: C
+
+🔹 JSP, JSTL & MVC (IMP)
+
+JSP lifecycle order is
+A) init → service → destroy
+B) translate → compile → load → init → service
+C) compile → translate → service
+D) service → destroy
+Ans: B
+
+Scriptlets are deprecated because they
+A) Reduce performance
+B) Break MVC separation
+C) Are insecure only
+D) Are slow to compile
+Ans: B
+
+Which JSTL tag iterates collections?
+A) <c:loop>
+B) <c:iterate>
+C) <c:forEach>
+D) <c:map>
+Ans: C
+
+MVC Controller responsibility is
+A) Rendering view
+B) Handling business logic
+C) Request coordination
+D) Database access
+Ans: C
+
+EL expression syntax is
+A) <%= %>
+B) ${ }
+C) #{ }
+D) @{ }
+Ans: B
+
+🔹 Hibernate (IMP)
+
+Which Hibernate object is thread-safe?
+A) Session
+B) Transaction
+C) SessionFactory
+D) Criteria
+Ans: C
+
+Detached object means
+A) Not saved
+B) Not associated with session
+C) Deleted
+D) Cached
+Ans: B
+
+LazyInitializationException occurs when
+A) Fetch = EAGER
+B) Session is closed
+C) Cache enabled
+D) Transaction committed
+Ans: B
+
+Which method avoids NonUniqueObjectException?
+A) save()
+B) update()
+C) persist()
+D) merge()
+Ans: D
+
+HQL operates on
+A) Tables
+B) Columns
+C) Objects & properties
+D) Stored procedures
+Ans: C
+
+🔹 Spring Core & MVC (IMP)
+
+Spring core principle is
+A) Inheritance
+B) IoC
+C) Polymorphism
+D) Reflection
+Ans: B
+
+Default Spring bean scope is
+A) prototype
+B) request
+C) session
+D) singleton
+Ans: D
+
+DispatcherServlet implements
+A) Adapter
+B) Proxy
+C) Front Controller
+D) Singleton
+Ans: C
+
+Best DI strategy is
+A) Field
+B) Setter
+C) Constructor
+D) Static
+Ans: C
+
+Which resolves view names?
+A) HandlerMapping
+B) ViewResolver
+C) Controller
+D) Model
+Ans: B
+
+🔹 Spring Boot & Maven (IMP)
+
+Spring Boot philosophy is
+A) Code-over-config
+B) Convention-over-configuration
+C) XML-first
+D) Manual wiring
+Ans: B
+
+Default embedded server is
+A) Jetty
+B) GlassFish
+C) Tomcat
+D) WebLogic
+Ans: C
+
+Fat JAR is created using
+A) maven-jar-plugin
+B) spring-boot-maven-plugin
+C) assembly plugin
+D) compiler plugin
+Ans: B
+
+Which config loads first?
+A) application.properties
+B) application.yml
+C) bootstrap.properties
+D) pom.xml
+Ans: C
+
+Maven phase installing to local repo is
+A) package
+B) verify
+C) install
+D) deploy
+Ans: C
+
+🔹 Spring Data JPA (IMP)
+
+JpaRepository adds
+A) Basic CRUD only
+B) Paging & flushing
+C) JDBC templates
+D) XML mapping
+Ans: B
+
+Query derivation uses
+A) XML
+B) SQL files
+C) Method names
+D) Annotations only
+Ans: C
+
+Which causes N+1 problem?
+A) Fetch join
+B) EAGER fetch
+C) Lazy relationships
+D) Paging
+Ans: C
+
+saveAndFlush() means
+A) Save later
+B) Save without commit
+C) Immediate DB sync
+D) Cache only
+Ans: C
+
+Repository methods are
+A) Concrete classes
+B) Interfaces
+C) XML beans
+D) Controllers
+Ans: B
+
+🔹 Spring AOP (IMP)
+
+AOP addresses
+A) Core logic
+B) Cross-cutting concerns
+C) UI rendering
+D) ORM
+Ans: B
+
+Which advice controls execution?
+A) @Before
+B) @After
+C) @AfterReturning
+D) @Around
+Ans: D
+
+Self-invocation fails AOP because
+A) JVM issue
+B) No proxy involved
+C) Wrong annotation
+D) Wrong scope
+Ans: B
+
+Private methods cannot be advised because
+A) JVM limitation
+B) Proxy limitation
+C) Annotation issue
+D) Spring bug
+Ans: B
+
+Spring AOP is
+A) Compile-time
+B) Load-time
+C) Runtime proxy-based
+D) Bytecode only
+Ans: C
+
+🔹 REST, Security & Testing (IMP)
+
+REST is
+A) Protocol
+B) Framework
+C) Architecture style
+D) API
+Ans: C
+
+Non-idempotent HTTP method is
+A) GET
+B) PUT
+C) DELETE
+D) POST
+Ans: D
+
+401 vs 403 means
+A) Same
+B) Unauthorized vs Forbidden
+C) Forbidden vs Not Found
+D) Error vs Success
+Ans: B
+
+@RestController =
+A) @Controller
+B) @Controller + @ResponseBody
+C) @Service
+D) @Component
+Ans: B
+
+MockMvc is used for
+A) UI testing
+B) REST client
+C) Controller unit testing
+D) Load testing
+Ans: C
+
+🔹 Microservices (IMP)
+
+Biggest microservices risk is
+A) Scalability
+B) Flexibility
+C) Operational complexity
+D) Loose coupling
+Ans: C
+
+Database per service ensures
+A) Joins
+B) Performance
+C) Autonomy
+D) Consistency
+Ans: C
+
+Saga pattern handles
+A) Authentication
+B) Distributed transactions
+C) Logging
+D) Caching
+Ans: B
+
+Circuit Breaker prevents
+A) SQL injection
+B) Cascading failures
+C) Deadlocks
+D) Memory leaks
+Ans: B
+
+Best microservice characteristic is
+A) Stateful
+B) Chatty
+C) Stateless
+D) Centralized
+Ans: C
+
+🔹 FINAL CCEE FAVORITES (Repeat-Ask)
+
+Thin controller means
+A) No logic
+B) Only UI
+C) Delegates to service
+D) Uses JDBC
+Ans: C
+
+Stateless services improve
+A) Security
+B) Scalability
+C) Logging
+D) UI
+Ans: B
+
+Which breaks REST principle?
+A) Resource nouns
+B) Proper status codes
+C) Verb-based URLs
+D) JSON
+Ans: C
+
+Which improves testability most?
+A) Static methods
+B) Constructor DI
+C) XML config
+D) Globals
+Ans: B
+
+Best enterprise layering is
+A) UI → DB
+B) Controller → DAO
+C) Controller → Service → DAO
+D) JSP → JDBC
+Ans: C
+
+🔹 LAST-DAY TRAPS
+
+SessionFactory is
+A) Lightweight
+B) Thread-safe
+C) Per request
+D) Per transaction
+Ans: B
+
+DispatcherServlet is initialized
+A) Per request
+B) Once per app
+C) Per controller
+D) Per view
+Ans: B
+
+CSRF is disabled for REST because
+A) Unsafe
+B) Stateless
+C) JWT
+D) HTTPS
+Ans: B
+
+@EnableAspectJAutoProxy enables
+A) Compile weaving
+B) Runtime proxies
+C) Bytecode edit
+D) JVM tuning
+Ans: B
+
+Ultimate PG-DAC design principle is
+A) More frameworks
+B) Clean separation of concerns
+C) Faster coding
+D) Less testing
+Ans: B
 ------------------------------------------------------------------------------------------------------
