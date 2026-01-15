@@ -289,8 +289,875 @@ D) Manual driver loading every time
 Ans: C
 
 ------------------------------------------------------------------------------------------------------
+Session 3 – J2EE Overview
+
+40 MCQs | Easy (14) • Medium (14) • Hard (12)
+
+Easy
+
+J2EE stands for
+A) Java 2 Enterprise Edition
+B) Java Enterprise Environment
+C) Java Enterprise Engine
+D) Java Extended Edition
+Ans: A
+
+J2EE is primarily used for building
+A) Desktop applications
+B) Embedded systems
+C) Enterprise web applications
+D) Mobile apps
+Ans: C
+
+Which component executes servlets?
+A) JVM
+B) Web Container
+C) EJB Container
+D) App Server Kernel
+Ans: B
+
+Which file defines a web application?
+A) web.xml
+B) pom.xml
+C) build.xml
+D) manifest.mf
+Ans: A
+
+WAR stands for
+A) Web Archive
+B) Web Application Runtime
+C) Web Access Resource
+D) Wide Area Resource
+Ans: A
+
+Which extension represents a web archive?
+A) .jar
+B) .ear
+C) .war
+D) .zip
+Ans: C
+
+J2EE applications follow which architecture?
+A) Monolithic
+B) Client-Server
+C) Layered / Multi-tier
+D) Peer-to-Peer
+Ans: C
+
+Which tool deploys J2EE applications?
+A) JVM
+B) Application Server
+C) IDE
+D) Compiler
+Ans: B
+
+Which container manages servlets and JSP?
+A) EJB Container
+B) Web Container
+C) Client Container
+D) Resource Container
+Ans: B
+
+Which packaging contains web + EJB modules?
+A) WAR
+B) JAR
+C) EAR
+D) ZIP
+Ans: C
+
+J2EE is now officially known as
+A) Java Pro
+B) Java Web
+C) Jakarta EE
+D) Java Cloud
+Ans: C
+
+Which descriptor configures web components?
+A) ejb-jar.xml
+B) persistence.xml
+C) web.xml
+D) context.xml
+Ans: C
+
+Which layer handles presentation logic?
+A) Business
+B) Persistence
+C) Presentation
+D) Integration
+Ans: C
+
+Which API supports web services in J2EE?
+A) JDBC
+B) JAX-WS / JAX-RS
+C) JPA
+D) RMI only
+Ans: B
+
+Medium
+
+Which container manages EJB lifecycle?
+A) Web Container
+B) Client Container
+C) EJB Container
+D) JVM
+Ans: C
+
+Which is NOT a J2EE component?
+A) Servlet
+B) JSP
+C) Applet
+D) EJB
+Ans: C
+
+Deployment descriptor is used to
+A) Write business logic
+B) Configure application behavior
+C) Compile classes
+D) Run JVM
+Ans: B
+
+Which directory holds compiled servlet classes?
+A) /lib
+B) /classes
+C) /src
+D) /bin
+Ans: B
+
+Which folder stores JAR dependencies?
+A) WEB-INF/classes
+B) WEB-INF/lib
+C) META-INF
+D) ROOT
+Ans: B
+
+Web application lifecycle begins with
+A) Client request
+B) Deployment
+C) Context initialization
+D) Server shutdown
+Ans: C
+
+Which tool automates deployment configuration?
+A) Ant / Maven
+B) JDBC
+C) JVM
+D) Browser
+Ans: A
+
+Which descriptor is optional since annotations?
+A) web.xml
+B) persistence.xml
+C) context.xml
+D) server.xml
+Ans: A
+
+Which component handles HTTP requests?
+A) JSP
+B) Servlet
+C) EJB
+D) JDBC
+Ans: B
+
+Which lifecycle phase loads classes?
+A) Compilation
+B) Initialization
+C) Destruction
+D) Execution
+Ans: B
+
+Which protocol is mandatory for web apps?
+A) FTP
+B) SMTP
+C) HTTP
+D) TCP only
+Ans: C
+
+Web services enable
+A) UI rendering
+B) Database access
+C) Machine-to-machine communication
+D) JVM tuning
+Ans: C
+
+Which standard supports SOAP services?
+A) JDBC
+B) JAX-RS
+C) JAX-WS
+D) JSTL
+Ans: C
+
+Which layer enforces security?
+A) Presentation
+B) Container
+C) Database
+D) Client
+Ans: B
+
+Hard
+
+Which file resides under META-INF?
+A) web.xml
+B) MANIFEST.MF
+C) index.jsp
+D) servlet.class
+Ans: B
+
+Which responsibility belongs to container?
+A) Business rules
+B) Transaction management
+C) UI layout
+D) SQL tuning
+Ans: B
+
+EAR packaging primarily supports
+A) Single module apps
+B) Modular enterprise apps
+C) Desktop deployment
+D) Standalone JVM apps
+Ans: B
+
+Which deployment model supports clustering?
+A) Standalone
+B) Distributed
+C) Single JVM
+D) Localhost
+Ans: B
+
+Which lifecycle event shuts down resources?
+A) contextInitialized
+B) init
+C) destroy
+D) service
+Ans: C
+
+Web application redeployment causes
+A) JVM restart always
+B) Context reload
+C) OS reboot
+D) DB reset
+Ans: B
+
+Which J2EE feature supports loose coupling?
+A) Tight binding
+B) Dependency Injection
+C) Static linking
+D) Hard coding
+Ans: B
+
+Which descriptor defines security roles?
+A) persistence.xml
+B) web.xml
+C) server.xml
+D) context.xml
+Ans: B
+
+Which layer isolates business logic?
+A) Controller
+B) DAO
+C) Service / Business
+D) View
+Ans: C
+
+Which deployment strategy minimizes downtime?
+A) Stop-and-start
+B) Rolling deployment
+C) Cold deployment
+D) Manual restart
+Ans: B
+
+Which feature enables scalability?
+A) Single-threading
+B) Stateless design
+C) Hard sessions
+D) Tight coupling
+Ans: B
+
+J2EE design philosophy emphasizes
+A) Hardware control
+B) Platform dependency
+C) Standardization & portability
+D) OS tuning
+Ans: C
 -----------------------------------------------------------------------------------------------------
+Sessions 4–7 – Servlets & Session Management
+
+40 MCQs | Easy (14) • Medium (14) • Hard (12)
+
+Easy
+
+A Servlet is used to
+A) Access database only
+B) Generate dynamic web content
+C) Design UI pages
+D) Compile Java code
+Ans: B
+
+Which protocol do servlets mainly use?
+A) FTP
+B) SMTP
+C) HTTP
+D) TCP
+Ans: C
+
+Which package contains servlet classes?
+A) java.servlet
+B) javax.servlet
+C) java.web
+D) javax.web
+Ans: B
+
+Which interface defines servlet lifecycle methods?
+A) HttpServlet
+B) Servlet
+C) GenericServlet
+D) Filter
+Ans: B
+
+Servlet lifecycle method called once is
+A) service()
+B) doGet()
+C) init()
+D) destroy()
+Ans: C
+
+Which method handles GET requests?
+A) doPost()
+B) service()
+C) doGet()
+D) init()
+Ans: C
+
+Which class handles HTTP-specific methods?
+A) Servlet
+B) GenericServlet
+C) HttpServlet
+D) Filter
+Ans: C
+
+Which file configures servlet mapping traditionally?
+A) pom.xml
+B) web.xml
+C) build.xml
+D) server.xml
+Ans: B
+
+Which annotation replaces web.xml mapping?
+A) @WebService
+B) @Servlet
+C) @WebServlet
+D) @Controller
+Ans: C
+
+Which object represents client request?
+A) HttpServletResponse
+B) ServletConfig
+C) HttpServletRequest
+D) ServletContext
+Ans: C
+
+Which object sends response to client?
+A) Request
+B) Response
+C) HttpServletResponse
+D) Context
+Ans: C
+
+Which container commonly runs servlets?
+A) GlassFish only
+B) JVM
+C) Browser
+D) Apache Tomcat
+Ans: D
+
+Cookies are stored on
+A) Server
+B) Database
+C) Client browser
+D) JVM heap
+Ans: C
+
+HttpSession is stored on
+A) Client
+B) Server
+C) Proxy
+D) Cookie only
+Ans: B
+
+Medium
+
+Which method handles POST requests?
+A) doGet()
+B) doPost()
+C) service()
+D) init()
+Ans: B
+
+Which lifecycle method releases resources?
+A) init()
+B) service()
+C) destroy()
+D) doGet()
+Ans: C
+
+Which object shares data across servlets?
+A) HttpSession
+B) ServletContext
+C) Cookie
+D) Request
+Ans: B
+
+RequestDispatcher is used for
+A) Redirecting client
+B) Forwarding request internally
+C) Opening DB
+D) Creating session
+Ans: B
+
+Which method transfers control without client knowing?
+A) sendRedirect()
+B) forward()
+C) include()
+D) refresh()
+Ans: B
+
+sendRedirect() results in
+A) Same request
+B) Server-side transfer
+C) New client request
+D) Context reload
+Ans: C
+
+Which session tracking technique is most secure?
+A) URL rewriting
+B) Cookies
+C) Hidden fields
+D) HttpSession
+Ans: D
+
+Which method creates a session?
+A) getSession()
+B) createSession()
+C) newSession()
+D) openSession()
+Ans: A
+
+Which interface handles exceptions globally?
+A) Filter
+B) Listener
+C) ErrorPage
+D) ServletContext
+Ans: C
+
+Which layer should NOT contain JDBC code?
+A) DAO
+B) Servlet
+C) Persistence
+D) Repository
+Ans: B
+
+MVC Controller in servlet-based app is
+A) JSP
+B) Servlet
+C) DAO
+D) POJO
+Ans: B
+
+Which scope is valid only for one request?
+A) Application
+B) Session
+C) Request
+D) Global
+Ans: C
+
+Which method adds attribute to session?
+A) add()
+B) put()
+C) setAttribute()
+D) addValue()
+Ans: C
+
+Which HTTP method is idempotent?
+A) POST
+B) PUT
+C) GET
+D) PATCH
+Ans: C
+
+Hard
+
+Which servlet lifecycle is container-managed?
+A) Object creation only
+B) Full lifecycle
+C) Request handling only
+D) Thread creation
+Ans: B
+
+Which is thread-safe by default?
+A) Servlet instance
+B) HttpServletRequest
+C) ServletContext
+D) Instance variables
+Ans: B
+
+Which causes session fixation vulnerability?
+A) New session per request
+B) Reusing session ID
+C) Cookie deletion
+D) Context reload
+Ans: B
+
+Which object is shared across users?
+A) Request
+B) Session
+C) ServletContext
+D) Cookie
+Ans: C
+
+Which method appends content in same response?
+A) forward()
+B) sendRedirect()
+C) include()
+D) refresh()
+Ans: C
+
+Which approach scales better in clusters?
+A) Cookies
+B) HttpSession
+C) URL rewriting
+D) Server session only
+Ans: A
+
+Which design improves separation of concerns?
+A) Scriptlets
+B) MVC
+C) Monolithic servlet
+D) Inline SQL
+Ans: B
+
+Which exception occurs if response is committed?
+A) IOException
+B) IllegalStateException
+C) ServletException
+D) RuntimeException
+Ans: B
+
+Which filter executes before servlet?
+A) post-processing filter
+B) pre-processing filter
+C) destroy filter
+D) listener
+Ans: B
+
+Which annotation defines URL pattern?
+A) @Path
+B) @WebServlet
+C) @RequestMapping
+D) @Route
+Ans: B
+
+Which approach avoids session replication overhead?
+A) Sticky sessions
+B) Stateless design
+C) URL rewriting
+D) Hidden fields
+Ans: B
+
+Best practice for servlet design is
+A) Heavy logic in doGet()
+B) Business logic in DAO/Service
+C) JDBC in JSP
+D) Global variables
+Ans: B
 ------------------------------------------------------------------------------------------------------
+Sessions 8 & 9 – JSP, JSTL & MVC
+
+40 MCQs | Easy (14) • Medium (14) • Hard (12)
+
+Easy
+
+JSP stands for
+A) Java Servlet Pages
+B) Java Server Pages
+C) Java Script Pages
+D) Java Standard Pages
+Ans: B
+
+Primary goal of JSP is to
+A) Handle database logic
+B) Separate UI from business logic
+C) Replace servlets
+D) Compile Java classes
+Ans: B
+
+JSP is translated into
+A) HTML
+B) Servlet
+C) Java Bean
+D) XML
+Ans: B
+
+Which tag is used for JSP directives?
+A) <%@ %>
+B) <%= %>
+C) <% %>
+D) ${ }
+Ans: A
+
+Which directive imports packages?
+A) page
+B) include
+C) taglib
+D) import
+Ans: A
+
+Which element outputs expression value?
+A) Scriptlet
+B) Declaration
+C) Expression
+D) Directive
+Ans: C
+
+Which implicit object represents request?
+A) response
+B) out
+C) request
+D) application
+Ans: C
+
+Which implicit object writes output?
+A) response
+B) out
+C) session
+D) config
+Ans: B
+
+JSP pages are executed on
+A) Client
+B) Browser
+C) Server
+D) Proxy
+Ans: C
+
+Which tag library simplifies JSP coding?
+A) JDBC
+B) JSTL
+C) EJB
+D) RMI
+Ans: B
+
+JSTL stands for
+A) Java Server Tag Library
+B) Java Standard Tag Library
+C) Java Script Tag Library
+D) Java Servlet Tag Library
+Ans: B
+
+Which architecture separates Model, View, Controller?
+A) DAO
+B) MVC
+C) Layered
+D) Monolithic
+Ans: B
+
+JSP primarily represents which MVC layer?
+A) Model
+B) Controller
+C) View
+D) DAO
+Ans: C
+
+Which scope is default in JSP?
+A) application
+B) session
+C) request
+D) page
+Ans: D
+
+Medium
+
+Which lifecycle phase compiles JSP?
+A) Initialization
+B) Translation
+C) Execution
+D) Destruction
+Ans: B
+
+Which JSP element declares variables/methods?
+A) Scriptlet
+B) Expression
+C) Declaration
+D) Directive
+Ans: C
+
+Which implicit object shares data across app?
+A) pageContext
+B) session
+C) request
+D) application
+Ans: D
+
+Which tag handles conditional logic in JSTL?
+A) <c:forEach>
+B) <c:if>
+C) <c:set>
+D) <c:out>
+Ans: B
+
+Which JSTL tag iterates collections?
+A) <c:loop>
+B) <c:iterate>
+C) <c:forEach>
+D) <c:map>
+Ans: C
+
+Expression Language is written as
+A) <%= %>
+B) <% %>
+C) ${ }
+D) #{ }
+Ans: C
+
+EL improves JSP by
+A) Increasing scriptlets
+B) Removing Java code from UI
+C) Slowing execution
+D) Adding JDBC
+Ans: B
+
+Which implicit object manages attributes?
+A) pageContext
+B) out
+C) config
+D) exception
+Ans: A
+
+Which JSP scope lasts for one request?
+A) page
+B) request
+C) session
+D) application
+Ans: B
+
+Error page mapping is done using
+A) <%@ page errorPage %>
+B) <%@ error %>
+C) <%@ exception %>
+D) <%@ errorPage %>
+Ans: A
+
+Which implicit object is available only on error page?
+A) exception
+B) request
+C) response
+D) out
+Ans: A
+
+Which JSTL tag outputs escaped XML?
+A) <c:print>
+B) <c:out>
+C) <c:write>
+D) <c:display>
+Ans: B
+
+MVC Controller is typically implemented using
+A) JSP
+B) Servlet
+C) JSTL
+D) HTML
+Ans: B
+
+Which avoids mixing Java code in JSP?
+A) Scriptlets
+B) Declarations
+C) EL + JSTL
+D) JDBC
+Ans: C
+
+Hard
+
+JSP implicit objects are created by
+A) Browser
+B) Developer
+C) Container
+D) JVM manually
+Ans: C
+
+Which lifecycle method handles JSP cleanup?
+A) jspInit()
+B) jspService()
+C) jspDestroy()
+D) destroy()
+Ans: C
+
+Which scope is NOT accessible via EL by default?
+A) page
+B) request
+C) session
+D) global
+Ans: D
+
+Which JSTL tag supports URL rewriting?
+A) <c:url>
+B) <c:redirect>
+C) <c:param>
+D) All
+Ans: D
+
+Which EL operator checks emptiness?
+A) null
+B) empty
+C) exists
+D) size
+Ans: B
+
+Which is evaluated faster in JSP?
+A) Scriptlets
+B) EL
+C) Declarations
+D) JDBC
+Ans: B
+
+Which JSP practice is deprecated?
+A) JSTL
+B) EL
+C) Scriptlets
+D) MVC
+Ans: C
+
+Which improves maintainability most?
+A) Inline Java
+B) MVC with JSP View
+C) Monolithic JSP
+D) SQL in JSP
+Ans: B
+
+Which taglib URI identifies JSTL core?
+A) java.sun.com/jstl
+B) java.sun.com/jsp/jstl/core
+C) javax.jstl.core
+D) jsp.jstl.core
+Ans: B
+
+Which error occurs if JSP compilation fails?
+A) RuntimeException
+B) Translation-time error
+C) Logical error
+D) SQL error
+Ans: B
+
+Which design reduces coupling between layers?
+A) Scriptlet-heavy JSP
+B) MVC
+C) Inline SQL
+D) Static HTML
+Ans: B
+
+Best enterprise practice for JSP is
+A) Business logic in JSP
+B) JSP as pure View
+C) JDBC in JSP
+D) Session logic in JSP
+Ans: B
 -----------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
