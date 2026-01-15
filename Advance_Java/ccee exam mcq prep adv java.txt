@@ -1159,8 +1159,877 @@ C) JDBC in JSP
 D) Session logic in JSP
 Ans: B
 -----------------------------------------------------------------------------------------------------
+Sessions 10–13 – Hibernate Framework
+
+40 MCQs | Easy (14) • Medium (14) • Hard (12)
+(Core technology anchor: Hibernate)
+
+Easy
+
+Hibernate is primarily used for
+A) UI rendering
+B) Object–Relational Mapping
+C) Network communication
+D) JVM optimization
+Ans: B
+
+Hibernate maps
+A) Tables to XML only
+B) Objects to database tables
+C) Servlets to JSP
+D) Classes to packages
+Ans: B
+
+Hibernate is an implementation of
+A) JDBC
+B) JPA
+C) JSP
+D) EJB
+Ans: B
+
+Which file configures Hibernate traditionally?
+A) web.xml
+B) hibernate.cfg.xml
+C) pom.xml
+D) build.xml
+Ans: B
+
+Which interface represents a DB session?
+A) Session
+B) Connection
+C) EntityManager
+D) TransactionManager
+Ans: A
+
+Which factory creates Session objects?
+A) SessionCreator
+B) SessionBuilder
+C) SessionFactory
+D) SessionManager
+Ans: C
+
+Which method persists an object?
+A) save()
+B) print()
+C) insert()
+D) push()
+Ans: A
+
+Which annotation marks an entity class?
+A) @Table
+B) @Column
+C) @Entity
+D) @Bean
+Ans: C
+
+Which annotation defines primary key?
+A) @Id
+B) @Key
+C) @Primary
+D) @Index
+Ans: A
+
+Which strategy auto-generates IDs?
+A) @Auto
+B) @GeneratedValue
+C) @SequenceOnly
+D) @IdentityKey
+Ans: B
+
+Which language is used to query Hibernate entities?
+A) SQL
+B) JPQL
+C) HQL
+D) DDL
+Ans: C
+
+Hibernate reduces
+A) JVM size
+B) Boilerplate JDBC code
+C) Network calls
+D) HTML rendering
+Ans: B
+
+Which mapping defines class-to-table?
+A) Entity mapping
+B) Relationship mapping
+C) Component mapping
+D) Collection mapping
+Ans: A
+
+Which transaction API is used in Hibernate?
+A) java.net
+B) java.sql only
+C) org.hibernate.Transaction
+D) javax.io
+Ans: C
+
+Medium
+
+Which state means object is not associated with session?
+A) Persistent
+B) Transient
+C) Managed
+D) Removed
+Ans: B
+
+Which state is synchronized with DB?
+A) Transient
+B) Detached
+C) Persistent
+D) Removed
+Ans: C
+
+Which method updates detached object?
+A) save()
+B) update()
+C) persist()
+D) insert()
+Ans: B
+
+Which method avoids duplicate object exception?
+A) save()
+B) update()
+C) merge()
+D) persist()
+Ans: C
+
+Which annotation maps one-to-many relationship?
+A) @ManyToOne
+B) @OneToMany
+C) @ManyToMany
+D) @OneToOne
+Ans: B
+
+Which mapping stores list/set of values?
+A) Component mapping
+B) Inheritance mapping
+C) Collection mapping
+D) Table-per-class
+Ans: C
+
+Which fetch type loads data immediately?
+A) LAZY
+B) EAGER
+C) DEFERRED
+D) ONDEMAND
+Ans: B
+
+Which fetch type improves performance by default?
+A) EAGER
+B) STATIC
+C) LAZY
+D) GLOBAL
+Ans: C
+
+Which cache stores data per Session?
+A) Second-level cache
+B) Query cache
+C) First-level cache
+D) Distributed cache
+Ans: C
+
+Which cache is optional and shared?
+A) First-level
+B) Second-level
+C) Session cache
+D) Transaction cache
+Ans: B
+
+Which query supports entity-based syntax?
+A) Native SQL
+B) JDBC SQL
+C) HQL
+D) DDL
+Ans: C
+
+Which API builds type-safe queries?
+A) HQL
+B) Native SQL
+C) Criteria API
+D) JDBC
+Ans: C
+
+Named queries are defined using
+A) @Query
+B) @NamedQuery
+C) @SQLQuery
+D) @Find
+Ans: B
+
+Which mapping avoids join tables?
+A) Many-to-Many
+B) One-to-Many (bidirectional)
+C) One-to-One
+D) Component
+Ans: C
+
+Hard
+
+Which inheritance strategy uses single table?
+A) TABLE_PER_CLASS
+B) JOINED
+C) SINGLE_TABLE
+D) UNION
+Ans: C
+
+Which inheritance strategy normalizes schema most?
+A) SINGLE_TABLE
+B) JOINED
+C) TABLE_PER_CLASS
+D) FLAT
+Ans: B
+
+Which causes LazyInitializationException?
+A) Active session
+B) Access outside session
+C) EAGER fetch
+D) Transaction commit
+Ans: B
+
+Which annotation defines join column?
+A) @Join
+B) @JoinColumn
+C) @ForeignKey
+D) @MapKey
+Ans: B
+
+Which mapping embeds value object?
+A) Entity mapping
+B) Component mapping
+C) Collection mapping
+D) Inheritance mapping
+Ans: B
+
+Which improves read-heavy performance?
+A) Disable cache
+B) First-level cache only
+C) Second-level cache
+D) Stateless session
+Ans: C
+
+Which Hibernate session is NOT thread-safe?
+A) SessionFactory
+B) Session
+C) Cache
+D) Dialect
+Ans: B
+
+Which feature enables DB portability?
+A) JDBC URLs
+B) Dialect
+C) DriverManager
+D) SQL scripts
+Ans: B
+
+Which query is database independent?
+A) Native SQL
+B) Stored Procedure
+C) HQL
+D) Trigger
+Ans: C
+
+Which method deletes entity?
+A) remove()
+B) delete()
+C) drop()
+D) erase()
+Ans: B
+
+Which transaction boundary is recommended?
+A) Per application
+B) Per session
+C) Per request
+D) Global static
+Ans: C
+
+Best practice in Hibernate design is
+A) Session per application
+B) Session per request
+C) Global Session
+D) No transaction
+Ans: B
 ------------------------------------------------------------------------------------------------------
+Sessions 14–17 – Spring Framework & Spring MVC
+
+40 MCQs | Easy (14) • Medium (14) • Hard (12)
+(Core stack anchor: Spring Framework)
+
+Easy
+
+Spring framework is primarily used for
+A) UI design
+B) Enterprise application development
+C) JVM tuning
+D) OS management
+Ans: B
+
+Spring is based on which core principle?
+A) Inheritance
+B) Tight coupling
+C) Inversion of Control
+D) Static binding
+Ans: C
+
+IoC means
+A) Object creates container
+B) Container creates and manages objects
+C) JVM controls objects
+D) Database controls objects
+Ans: B
+
+Dependency Injection helps achieve
+A) Tight coupling
+B) Loose coupling
+C) Code duplication
+D) Static design
+Ans: B
+
+Which container manages Spring beans?
+A) JVM
+B) Browser
+C) IoC Container
+D) Database
+Ans: C
+
+Which annotation marks Spring bean?
+A) @Bean
+B) @Entity
+C) @Controller
+D) @WebServlet
+Ans: A
+
+Which annotation marks Controller in Spring MVC?
+A) @Service
+B) @Component
+C) @Controller
+D) @Repository
+Ans: C
+
+Which annotation maps HTTP requests?
+A) @Path
+B) @WebServlet
+C) @RequestMapping
+D) @URL
+Ans: C
+
+Which layer handles business logic?
+A) Controller
+B) Service
+C) View
+D) DAO
+Ans: B
+
+Which object holds model data?
+A) HttpServletRequest
+B) Model
+C) Session
+D) Context
+Ans: B
+
+Which resolves logical view names?
+A) HandlerMapping
+B) ViewResolver
+C) DispatcherServlet
+D) Model
+Ans: B
+
+Which servlet is front controller?
+A) HttpServlet
+B) JSP
+C) DispatcherServlet
+D) Filter
+Ans: C
+
+Spring MVC follows which pattern?
+A) DAO
+B) MVC
+C) Singleton
+D) Factory
+Ans: B
+
+Thymeleaf is used as
+A) ORM
+B) Controller
+C) View technology
+D) Database
+Ans: C
+
+Medium
+
+Which annotation enables component scanning?
+A) @EnableMVC
+B) @ComponentScan
+C) @ScanBeans
+D) @AutoScan
+Ans: B
+
+Which annotation injects dependency automatically?
+A) @InjectBean
+B) @Autowired
+C) @ResourceOnly
+D) @Wire
+Ans: B
+
+Which bean scope is default?
+A) prototype
+B) request
+C) session
+D) singleton
+Ans: D
+
+Which scope creates new bean per request?
+A) singleton
+B) prototype
+C) request
+D) session
+Ans: C
+
+Which annotation marks DAO layer?
+A) @Controller
+B) @Service
+C) @Repository
+D) @Component
+Ans: C
+
+Which annotation validates form input?
+A) @Validate
+B) @Valid
+C) @Check
+D) @Assert
+Ans: B
+
+Which object binds form data?
+A) ModelAndView
+B) Command Object
+C) Session
+D) DispatcherServlet
+Ans: B
+
+Which annotation supports internationalization?
+A) @i18n
+B) MessageSource
+C) LocaleResolver
+D) Both B and C
+Ans: D
+
+Which annotation handles file upload?
+A) @Upload
+B) MultipartFile
+C) @File
+D) @Multipart
+Ans: B
+
+Which module supports MVC?
+A) spring-core
+B) spring-context
+C) spring-webmvc
+D) spring-jdbc
+Ans: C
+
+Which object routes request to controller?
+A) ViewResolver
+B) HandlerMapping
+C) Model
+D) BeanFactory
+Ans: B
+
+Which annotation maps HTTP GET?
+A) @Get
+B) @GET
+C) @GetMapping
+D) @RequestGET
+Ans: C
+
+Which returns both model and view?
+A) Model
+B) View
+C) ModelAndView
+D) Session
+Ans: C
+
+Which feature avoids servlet API dependency?
+A) Tight coupling
+B) POJO-based controllers
+C) Scriptlets
+D) Filters
+Ans: B
+
+Hard
+
+Which pattern is implemented by DispatcherServlet?
+A) Singleton
+B) Factory
+C) Front Controller
+D) Adapter
+Ans: C
+
+Which bean lifecycle method runs first?
+A) destroy()
+B) init()
+C) constructor
+D) afterPropertiesSet()
+Ans: C
+
+Which annotation creates bean explicitly in config?
+A) @Component
+B) @Bean
+C) @Autowired
+D) @Service
+Ans: B
+
+Which DI type is recommended?
+A) Field injection
+B) Setter injection
+C) Constructor injection
+D) Static injection
+Ans: C
+
+Which scope is unsafe in multithreading?
+A) singleton
+B) prototype
+C) request
+D) application
+Ans: A
+
+Which handler executes before controller?
+A) ViewResolver
+B) Interceptor
+C) DAO
+D) JSP
+Ans: B
+
+Which annotation maps path variable?
+A) @RequestParam
+B) @PathVariable
+C) @ModelAttribute
+D) @Param
+Ans: B
+
+Which config style is recommended over XML?
+A) web.xml
+B) annotations + Java config
+C) properties only
+D) scriptlets
+Ans: B
+
+Which improves testability most?
+A) Static methods
+B) Constructor DI
+C) Global beans
+D) XML only config
+Ans: B
+
+Which Spring feature manages cross-cutting concerns?
+A) MVC
+B) ORM
+C) AOP
+D) DAO
+Ans: C
+
+Which module supports validation?
+A) spring-core
+B) spring-web
+C) spring-context
+D) spring-validation
+Ans: D
+
+Best practice in Spring MVC design is
+A) Logic in Controller
+B) Thin controller, rich service
+C) JDBC in controller
+D) JSP as controller
+Ans: B
 ------------------------------------------------------------------------------------------------------
+Sessions 18–20 – Spring Boot & Maven
+
+40 MCQs | Easy (14) • Medium (14) • Hard (12)
+
+Easy
+
+Spring Boot is primarily designed to
+A) Replace Java
+B) Simplify Spring application setup
+C) Replace Hibernate
+D) Eliminate MVC
+Ans: B
+
+Spring Boot follows which philosophy?
+A) Configuration-over-code
+B) Convention-over-configuration
+C) Code-over-architecture
+D) Manual wiring
+Ans: B
+
+Which annotation starts a Spring Boot app?
+A) @EnableSpring
+B) @SpringApp
+C) @SpringBootApplication
+D) @BootStart
+Ans: C
+
+Spring Boot applications run using
+A) External server only
+B) Embedded server
+C) Browser
+D) JVM without server
+Ans: B
+
+Default embedded server in Spring Boot is
+A) GlassFish
+B) WebLogic
+C) JBoss
+D) Tomcat
+Ans: D
+
+Which file manages dependencies in Maven?
+A) build.gradle
+B) pom.xml
+C) settings.xml
+D) web.xml
+Ans: B
+
+Maven stands for
+A) Modular Application Version Engine
+B) Management of Various Environments
+C) Apache Maven
+D) Model and Version Engine
+Ans: C
+
+Which command builds Maven project?
+A) mvn run
+B) mvn compile
+C) mvn install
+D) mvn execute
+Ans: C
+
+Which folder contains compiled classes?
+A) src
+B) target
+C) bin
+D) classes
+Ans: B
+
+Which annotation maps HTTP GET in Boot?
+A) @RequestMapping
+B) @GetMapping
+C) @Get
+D) @GET
+Ans: B
+
+Which template engine is commonly used?
+A) JSP only
+B) Velocity
+C) Thymeleaf
+D) FreeMarker only
+Ans: C
+
+Spring Boot reduces need for
+A) Annotations
+B) XML configuration
+C) Java
+D) Controllers
+Ans: B
+
+Which file contains Boot properties?
+A) web.xml
+B) pom.xml
+C) application.properties
+D) context.xml
+Ans: C
+
+Boot apps are packaged as
+A) WAR only
+B) EAR
+C) Executable JAR
+D) ZIP
+Ans: C
+
+Medium
+
+Which annotation enables auto-configuration?
+A) @EnableConfig
+B) @AutoConfig
+C) @EnableAutoConfiguration
+D) @AutoEnable
+Ans: C
+
+Which dependency starter simplifies setup?
+A) spring-core
+B) spring-context
+C) spring-boot-starter-web
+D) spring-webmvc
+Ans: C
+
+Which profile supports environment-specific config?
+A) build
+B) env
+C) profile
+D) application-{profile}.properties
+Ans: D
+
+Which Maven scope is default?
+A) test
+B) runtime
+C) compile
+D) provided
+Ans: C
+
+Which plugin runs Spring Boot app?
+A) maven-run-plugin
+B) spring-boot-maven-plugin
+C) exec-plugin
+D) boot-run
+Ans: B
+
+Which property changes server port?
+A) server.host
+B) server.url
+C) server.port
+D) server.http
+Ans: C
+
+Which annotation handles REST responses?
+A) @Controller
+B) @Service
+C) @RestController
+D) @Response
+Ans: C
+
+Which annotation returns JSON automatically?
+A) @Json
+B) @ResponseBody
+C) @Produces
+D) @Result
+Ans: B
+
+Which dependency resolves transitive libs?
+A) JVM
+B) IDE
+C) Maven
+D) OS
+Ans: C
+
+Which phase runs tests?
+A) compile
+B) package
+C) test
+D) install
+Ans: C
+
+Which annotation binds form data in Boot MVC?
+A) @Bind
+B) @RequestParam
+C) @ModelAttribute
+D) @Form
+Ans: C
+
+Which starter supports Thymeleaf?
+A) spring-boot-starter-web
+B) spring-boot-starter-jdbc
+C) spring-boot-starter-thymeleaf
+D) spring-boot-starter-view
+Ans: C
+
+Which file overrides default config?
+A) web.xml
+B) bootstrap.properties
+C) application.yml
+D) pom.xml
+Ans: C
+
+Which benefit of Boot improves productivity most?
+A) Less Java
+B) Auto-configuration
+C) No MVC
+D) No build tool
+Ans: B
+
+Hard
+
+Which annotation combines @Configuration, @EnableAutoConfiguration, @ComponentScan?
+A) @SpringBoot
+B) @EnableSpring
+C) @SpringBootApplication
+D) @BootConfig
+Ans: C
+
+Which packaging supports embedded server?
+A) WAR only
+B) EAR
+C) Executable JAR
+D) ZIP
+Ans: C
+
+Which Maven phase installs artifact to local repo?
+A) package
+B) deploy
+C) install
+D) verify
+Ans: C
+
+Which Boot feature reduces classpath issues?
+A) Starters
+B) XML config
+C) Profiles
+D) Beans
+Ans: A
+
+Which annotation disables auto-config?
+A) @DisableAuto
+B) @SpringBootApplication(exclude=…)
+C) @NoAutoConfig
+D) @ExcludeConfig
+Ans: B
+
+Which configuration loads first?
+A) application.properties
+B) application.yml
+C) bootstrap.properties
+D) pom.xml
+Ans: C
+
+Which approach is preferred for config in Boot?
+A) XML
+B) Hardcoding
+C) Externalized configuration
+D) Scriptlets
+Ans: C
+
+Which plugin creates fat JAR?
+A) maven-jar-plugin
+B) spring-boot-maven-plugin
+C) maven-assembly-plugin
+D) shade-plugin only
+Ans: B
+
+Which annotation maps all HTTP methods?
+A) @AllMapping
+B) @AnyMapping
+C) @RequestMapping
+D) @Route
+Ans: C
+
+Which Boot feature improves cloud readiness?
+A) Embedded server
+B) Actuator & external config
+C) MVC
+D) JSP
+Ans: B
+
+Which property file supports hierarchical config?
+A) .properties
+B) .xml
+C) .yml
+D) .txt
+Ans: C
+
+Best practice in Spring Boot is
+A) Heavy XML
+B) Manual dependency management
+C) Starter-based minimal config
+D) Global static beans
+Ans: C
 -----------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
