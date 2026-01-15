@@ -2031,9 +2031,879 @@ C) Starter-based minimal config
 D) Global static beans
 Ans: C
 -----------------------------------------------------------------------------------------------------
+Sessions 21 & 22 – Spring Data JPA
+
+40 MCQs | Easy (14) • Medium (14) • Hard (12)
+(Platform anchor: Spring Framework)
+
+Easy
+
+Spring Data JPA primarily reduces
+A) JVM usage
+B) Boilerplate DAO code
+C) UI complexity
+D) Network latency
+Ans: B
+
+Spring Data JPA is built on top of
+A) JDBC
+B) Hibernate only
+C) JPA specification
+D) Servlets
+Ans: C
+
+Which interface provides basic CRUD operations?
+A) JpaManager
+B) CrudRepository
+C) DataRepository
+D) EntityRepository
+Ans: B
+
+Which repository extends CrudRepository with JPA features?
+A) PagingRepository
+B) JpaRepository
+C) EntityRepository
+D) HibernateRepository
+Ans: B
+
+Which annotation marks a repository interface?
+A) @Service
+B) @Component
+C) @Repository
+D) @Entity
+Ans: C
+
+Which method saves an entity?
+A) insert()
+B) persist()
+C) save()
+D) push()
+Ans: C
+
+Which method retrieves all records?
+A) find()
+B) getAll()
+C) findAll()
+D) selectAll()
+Ans: C
+
+Which method deletes by id?
+A) remove()
+B) deleteById()
+C) drop()
+D) erase()
+Ans: B
+
+Repository interfaces are implemented by
+A) Developer manually
+B) JVM
+C) Spring at runtime
+D) Database
+Ans: C
+
+Which annotation enables JPA repositories?
+A) @EnableJPA
+B) @EnableJpaRepositories
+C) @EnableRepository
+D) @EnableORM
+Ans: B
+
+Spring Data repositories are
+A) Concrete classes
+B) Interfaces
+C) Abstract classes
+D) XML beans
+Ans: B
+
+Which package contains JPA annotations?
+A) java.sql
+B) javax.persistence
+C) org.hibernate
+D) javax.servlet
+Ans: B
+
+Which method checks entity existence?
+A) exists()
+B) existsById()
+C) hasId()
+D) present()
+Ans: B
+
+Spring Data JPA promotes
+A) Tight coupling
+B) Manual SQL
+C) Repository abstraction
+D) Scriptlets
+Ans: C
+
+Medium
+
+Which repository supports pagination?
+A) CrudRepository
+B) PagingAndSortingRepository
+C) SimpleRepository
+D) DataRepository
+Ans: B
+
+Which interface adds JPA-specific methods like flush()?
+A) CrudRepository
+B) PagingRepository
+C) JpaRepository
+D) HibernateTemplate
+Ans: C
+
+Query methods are derived from
+A) XML files
+B) Method names
+C) Database triggers
+D) Stored procedures
+Ans: B
+
+Which method name is valid?
+A) findEmployeeWhereName
+B) getByName
+C) findByName
+D) selectName
+Ans: C
+
+Which keyword combines conditions?
+A) WHERE
+B) AND
+C) PLUS
+D) WITH
+Ans: B
+
+Which annotation defines custom JPQL?
+A) @SQL
+B) @NamedQuery
+C) @Query
+D) @Find
+Ans: C
+
+Which annotation binds method parameter?
+A) @Bind
+B) @Param
+C) @Value
+D) @Column
+Ans: B
+
+Which return type supports pagination?
+A) List
+B) Set
+C) Page
+D) Array
+Ans: C
+
+Which object carries paging info?
+A) Pageable
+B) Sorter
+C) PageRequest
+D) Both A and C
+Ans: D
+
+Which annotation marks primary key?
+A) @Key
+B) @Primary
+C) @Id
+D) @Index
+Ans: C
+
+Which method deletes all records?
+A) removeAll()
+B) deleteAll()
+C) truncate()
+D) clear()
+Ans: B
+
+Which fetch type is default for @ManyToOne?
+A) LAZY
+B) EAGER
+C) DEFERRED
+D) MANUAL
+Ans: B
+
+Which repository method triggers flush automatically?
+A) save()
+B) saveAndFlush()
+C) update()
+D) commit()
+Ans: B
+
+Which annotation maps table name?
+A) @Entity
+B) @Table
+C) @Column
+D) @Schema
+Ans: B
+
+Hard
+
+Which query executes native SQL?
+A) JPQL
+B) Criteria
+C) @Query(nativeQuery=true)
+D) Method query
+Ans: C
+
+Which causes InvalidDataAccessApiUsageException?
+A) Correct transaction
+B) Detached entity misuse
+C) Valid JPQL
+D) Proper mapping
+Ans: B
+
+Which repository is most feature-rich?
+A) CrudRepository
+B) PagingRepository
+C) JpaRepository
+D) EntityRepository
+Ans: C
+
+Which annotation enables auditing?
+A) @Audit
+B) @EnableAuditing
+C) @EnableJpaAuditing
+D) @Track
+Ans: C
+
+Which method avoids N+1 problem?
+A) Lazy loading
+B) Fetch join
+C) Default fetch
+D) Separate queries
+Ans: B
+
+Which return type supports sorting only?
+A) Page
+B) Pageable
+C) Sort
+D) List
+Ans: C
+
+Which repository method is transactional by default?
+A) Custom methods
+B) Read-only queries
+C) CRUD write methods
+D) Finders
+Ans: C
+
+Which annotation defines unique constraint?
+A) @Unique
+B) @Constraint
+C) @Column(unique=true)
+D) @IndexOnly
+Ans: C
+
+Which approach minimizes boilerplate most?
+A) EntityManager directly
+B) JdbcTemplate
+C) Spring Data repositories
+D) Native SQL
+Ans: C
+
+Which exception wraps persistence errors?
+A) SQLException
+B) RuntimeException
+C) DataAccessException
+D) HibernateException
+Ans: C
+
+Which improves testability?
+A) Static EntityManager
+B) Repository abstraction
+C) Native queries everywhere
+D) Hardcoded SQL
+Ans: B
+
+Best practice in Spring Data JPA is
+A) Business logic in repository
+B) Thin repository, rich service layer
+C) Native SQL by default
+D) No transactions
+Ans: B
 ------------------------------------------------------------------------------------------------------
+Session 23 – Spring AOP
+
+40 MCQs | Easy (14) • Medium (14) • Hard (12)
+(Stack anchor: Spring Framework)
+
+Easy
+
+AOP stands for
+A) Application Oriented Programming
+B) Aspect Oriented Programming
+C) Advanced Object Programming
+D) Automated Object Processing
+Ans: B
+
+AOP primarily addresses
+A) UI design
+B) Database access
+C) Cross-cutting concerns
+D) Network protocols
+Ans: C
+
+Logging is an example of
+A) Core concern
+B) Cross-cutting concern
+C) UI concern
+D) Persistence concern
+Ans: B
+
+Which annotation marks an aspect?
+A) @Component
+B) @Aspect
+C) @Advice
+D) @Proxy
+Ans: B
+
+Which annotation executes before method call?
+A) @After
+B) @Around
+C) @Before
+D) @AfterReturning
+Ans: C
+
+Join point represents
+A) Class loading
+B) Method execution point
+C) Bean creation
+D) JVM startup
+Ans: B
+
+Pointcut defines
+A) What to execute
+B) When to execute
+C) Where to execute
+D) How to execute
+Ans: C
+
+Advice is
+A) Business logic
+B) Extra behavior added
+C) Database transaction
+D) UI validation
+Ans: B
+
+Which advice runs after method completion?
+A) @Before
+B) @After
+C) @Around
+D) @Pointcut
+Ans: B
+
+Which advice surrounds method execution?
+A) @Before
+B) @After
+C) @Around
+D) @AfterThrowing
+Ans: C
+
+Which advice executes on exception?
+A) @After
+B) @AfterReturning
+C) @AfterThrowing
+D) @Before
+Ans: C
+
+AOP in Spring is implemented using
+A) Bytecode modification only
+B) Dynamic proxies
+C) JNI
+D) Reflection only
+Ans: B
+
+Which package contains AOP annotations?
+A) org.springframework.aop
+B) org.aspectj.lang.annotation
+C) javax.aop
+D) java.aop
+Ans: B
+
+AOP improves
+A) Code duplication
+B) Tight coupling
+C) Separation of concerns
+D) SQL performance
+Ans: C
+
+Medium
+
+Which advice executes only on success?
+A) @After
+B) @AfterThrowing
+C) @AfterReturning
+D) @Around
+Ans: C
+
+Which object gives method metadata?
+A) JoinPoint
+B) ProceedingJoinPoint
+C) Aspect
+D) Proxy
+Ans: A
+
+Which interface supports proceeding execution?
+A) JoinPoint
+B) ProceedingJoinPoint
+C) Aspect
+D) Pointcut
+Ans: B
+
+Which advice can control method execution?
+A) @Before
+B) @After
+C) @AfterReturning
+D) @Around
+Ans: D
+
+Which expression language is used in pointcuts?
+A) SQL
+B) SpEL
+C) AspectJ
+D) EL
+Ans: C
+
+Which pointcut matches method execution?
+A) call()
+B) execution()
+C) within()
+D) target()
+Ans: B
+
+Which annotation enables AOP support?
+A) @EnableMVC
+B) @EnableAspectJAutoProxy
+C) @EnableProxy
+D) @EnableAdvice
+Ans: B
+
+Which bean type cannot be advised by default?
+A) Public method
+B) Private method
+C) Interface method
+D) Bean method
+Ans: B
+
+Which proxy is used when interface is present?
+A) CGLIB
+B) ByteBuddy
+C) JDK dynamic proxy
+D) ASM
+Ans: C
+
+Which proxy is used without interface?
+A) JDK proxy
+B) CGLIB
+C) JNI
+D) Reflection
+Ans: B
+
+Which layer commonly uses AOP logging?
+A) View
+B) Controller / Service
+C) JSP
+D) DAO only
+Ans: B
+
+Which concern suits AOP best?
+A) Core business rule
+B) Authentication
+C) UI rendering
+D) HTML layout
+Ans: B
+
+Which advice executes regardless of outcome?
+A) @After
+B) @AfterReturning
+C) @Before
+D) @Around
+Ans: A
+
+Which improves maintainability most?
+A) Inline logging
+B) AOP-based logging
+C) Static utilities
+D) Hardcoded checks
+Ans: B
+
+Hard
+
+Which method must be called inside @Around advice?
+A) join()
+B) execute()
+C) proceed()
+D) invoke()
+Ans: C
+
+Which limitation exists in Spring AOP?
+A) Supports only compile-time weaving
+B) Supports only runtime weaving
+C) Supports field interception
+D) Supports constructor interception
+Ans: B
+
+Which AOP type is used by Spring by default?
+A) Compile-time
+B) Load-time
+C) Runtime proxy-based
+D) Bytecode enhancement
+Ans: C
+
+Which pointcut matches all methods in package?
+A) execution(* com..(..))
+B) within(com..)
+C) call(com.*)
+D) target(com)
+Ans: A
+
+Which causes advice not to execute?
+A) Public method
+B) Self-invocation
+C) Proxy call
+D) Interface usage
+Ans: B
+
+Which annotation orders aspects?
+A) @Order
+B) @Priority
+C) @Sequence
+D) @DependsOn
+Ans: A
+
+Which join point data is NOT available?
+A) Method name
+B) Arguments
+C) Return value (in @Before)
+D) Target object
+Ans: C
+
+Which use case is NOT ideal for AOP?
+A) Transaction management
+B) Logging
+C) Business rules
+D) Security
+Ans: C
+
+Which improves performance impact?
+A) Heavy advice logic
+B) Fine-grained pointcuts
+C) Broad pointcuts
+D) Multiple aspects everywhere
+Ans: B
+
+Which exception advice triggers on checked exceptions?
+A) @AfterReturning
+B) @After
+C) @AfterThrowing
+D) @Before
+Ans: C
+
+Which design principle is reinforced by AOP?
+A) DRY
+B) SRP
+C) OCP
+D) All
+Ans: D
+
+Best practice for Spring AOP is
+A) Aspect for every method
+B) Minimal, well-scoped aspects
+C) Business logic in aspects
+D) Disable proxies
+Ans: B
 ------------------------------------------------------------------------------------------------------
+Sessions 24 & 25 – RESTful Web Services with Spring Boot
+
+40 MCQs | Easy (14) • Medium (14) • Hard (12)
+
+Easy
+
+REST stands for
+A) Remote Execution Standard Transfer
+B) Representational State Transfer
+C) Reliable Service Transport
+D) Resource State Transaction
+Ans: B
+
+REST is primarily an
+A) Architecture style
+B) Programming language
+C) Protocol
+D) Framework
+Ans: A
+
+RESTful services commonly use
+A) XML only
+B) JSON only
+C) JSON / XML
+D) Binary streams
+Ans: C
+
+Which HTTP method retrieves data?
+A) POST
+B) PUT
+C) GET
+D) DELETE
+Ans: C
+
+Which HTTP method creates a resource?
+A) GET
+B) POST
+C) DELETE
+D) TRACE
+Ans: B
+
+Which HTTP method updates a resource completely?
+A) PATCH
+B) POST
+C) PUT
+D) GET
+Ans: C
+
+Which HTTP method removes a resource?
+A) DELETE
+B) REMOVE
+C) POST
+D) DROP
+Ans: A
+
+REST services are typically
+A) Stateful
+B) Stateless
+C) Session-based
+D) Connection-oriented
+Ans: B
+
+Which annotation exposes REST controller?
+A) @Controller
+B) @Service
+C) @RestController
+D) @Response
+Ans: C
+
+Which annotation maps REST URLs?
+A) @Path
+B) @RequestMapping
+C) @WebServlet
+D) @URL
+Ans: B
+
+Which tool is commonly used to test REST APIs?
+A) Eclipse
+B) Browser only
+C) Postman
+D) Maven
+Ans: C
+
+REST resources are identified using
+A) IP address
+B) URL / URI
+C) Port number
+D) Session ID
+Ans: B
+
+Which format is lightweight and popular?
+A) XML
+B) JSON
+C) CSV
+D) YAML
+Ans: B
+
+REST encourages
+A) Tight coupling
+B) Platform dependency
+C) Loose coupling
+D) Stateful design
+Ans: C
+
+Medium
+
+Which annotation maps GET requests?
+A) @Get
+B) @GetMapping
+C) @RequestGET
+D) @HTTPGet
+Ans: B
+
+Which annotation maps POST requests?
+A) @Post
+B) @PostMapping
+C) @CreateMapping
+D) @AddMapping
+Ans: B
+
+Which annotation maps DELETE requests?
+A) @Delete
+B) @DeleteMapping
+C) @RemoveMapping
+D) @DropMapping
+Ans: B
+
+Which annotation converts object to JSON automatically?
+A) @Json
+B) @Response
+C) @ResponseBody
+D) @Produces
+Ans: C
+
+Which HTTP status code indicates success?
+A) 404
+B) 500
+C) 200
+D) 403
+Ans: C
+
+Which status code indicates resource created?
+A) 200
+B) 201
+C) 202
+D) 204
+Ans: B
+
+Which status code means “No Content”?
+A) 200
+B) 201
+C) 204
+D) 304
+Ans: C
+
+Which annotation binds request body to object?
+A) @RequestParam
+B) @PathVariable
+C) @RequestBody
+D) @ModelAttribute
+Ans: C
+
+Which annotation binds URL variable?
+A) @RequestParam
+B) @PathVariable
+C) @RequestBody
+D) @Param
+Ans: B
+
+Which REST principle uses HTTP methods semantics?
+A) Uniform Interface
+B) Statelessness
+C) Cacheability
+D) Layered system
+Ans: A
+
+Which client is used to call REST services internally?
+A) HttpServlet
+B) RestTemplate
+C) DispatcherServlet
+D) EntityManager
+Ans: B
+
+Which format does RestTemplate support?
+A) JSON only
+B) XML only
+C) JSON, XML, others
+D) Binary only
+Ans: C
+
+Which HTTP method is idempotent?
+A) POST
+B) GET
+C) PATCH
+D) CONNECT
+Ans: B
+
+REST APIs should return
+A) HTML pages
+B) JSP
+C) Proper HTTP status codes
+D) Only JSON text
+Ans: C
+
+Hard
+
+Which HTTP method is NOT idempotent?
+A) GET
+B) PUT
+C) DELETE
+D) POST
+Ans: D
+
+Which annotation handles global REST exceptions?
+A) @ExceptionHandler
+B) @ControllerAdvice
+C) @ErrorPage
+D) @Catch
+Ans: B
+
+Which status code indicates client error?
+A) 2xx
+B) 3xx
+C) 4xx
+D) 5xx
+Ans: C
+
+Which status code indicates server error?
+A) 3xx
+B) 4xx
+C) 5xx
+D) 1xx
+Ans: C
+
+Which REST constraint improves scalability?
+A) Stateful server
+B) Statelessness
+C) Sessions
+D) Cookies
+Ans: B
+
+Which REST principle allows caching?
+A) Layered system
+B) Cacheable responses
+C) Code on demand
+D) Uniform interface
+Ans: B
+
+Which HTTP header specifies response format?
+A) Accept
+B) Content-Type
+C) Authorization
+D) Cache-Control
+Ans: B
+
+Which HTTP header specifies client-expected format?
+A) Accept
+B) Content-Type
+C) Host
+D) User-Agent
+Ans: A
+
+Which annotation produces JSON explicitly?
+A) @Json
+B) @Produces
+C) @RequestMapping(produces=…)
+D) @Consumes
+Ans: C
+
+Which approach is REST anti-pattern?
+A) Resource-based URLs
+B) Verb-based URLs
+C) Stateless calls
+D) Proper status codes
+Ans: B
+
+Which improves REST API maintainability?
+A) Versioning APIs
+B) Hardcoding clients
+C) Session tracking
+D) HTML responses
+Ans: A
+
+Best practice in REST design is
+A) Use nouns for resources
+B) Use verbs in URLs
+C) Ignore status codes
+D) Stateful services
+Ans: A
 -----------------------------------------------------------------------------------------------------
+
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------
