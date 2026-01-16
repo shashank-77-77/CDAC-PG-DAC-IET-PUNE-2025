@@ -2446,6 +2446,813 @@ D) Eliminate the need for collections
 
 Answer: C
 ---------------------------------------------------------------------------------------
+Session 8: Delegates, Multicast Delegates, Action, Func, Predicate, Anonymous Methods, Lambdas
+Q1.
+
+A delegate in C# is best described as:
+A) A class that stores data
+B) A type-safe reference to a method
+C) A runtime thread
+D) A collection
+
+Answer: B
+
+Q2.
+
+Delegates primarily enable which programming concept?
+A) Encapsulation
+B) Inheritance
+C) Callback mechanisms
+D) Data persistence
+
+Answer: C
+
+Q3.
+
+Which of the following is TRUE about delegates?
+A) They can reference only static methods
+B) They can reference methods with matching signatures
+C) They store method implementations
+D) They cannot be passed as parameters
+
+Answer: B
+
+Q4.
+
+A multicast delegate is one that:
+A) Calls methods in parallel
+B) References multiple methods
+C) Returns multiple values
+D) Executes asynchronously
+
+Answer: B
+
+Q5.
+
+When a multicast delegate is invoked, the methods are executed:
+A) Randomly
+B) In parallel
+C) Sequentially in the order added
+D) In reverse order
+
+Answer: C
+
+Q6.
+
+If a multicast delegate has a return type, the returned value is:
+A) A collection of all return values
+B) The return value of the first method
+C) The return value of the last method executed
+D) Undefined
+
+Answer: C
+
+Q7.
+
+Which operator is used to combine delegates?
+A) =
+B) *
+C) +
+D) &
+
+Answer: C
+
+Q8.
+
+Which operator is used to remove a method from a delegate’s invocation list?
+A) -
+B) /
+C) !
+D) %
+
+Answer: A
+
+Q9.
+
+The Action delegate represents a method that:
+A) Returns a value
+B) Returns void
+C) Takes no parameters only
+D) Is always anonymous
+
+Answer: B
+
+Q10.
+
+The Func delegate differs from Action because Func:
+A) Cannot take parameters
+B) Always returns a value
+C) Is used only for events
+D) Is non-generic
+
+Answer: B
+
+Q11.
+
+The last generic type parameter of Func<T1, T2, TResult> represents:
+A) Input parameter
+B) Constraint
+C) Return type
+D) Delegate name
+
+Answer: C
+
+Q12.
+
+The Predicate<T> delegate always returns:
+A) void
+B) int
+C) bool
+D) object
+
+Answer: C
+
+Q13.
+
+Anonymous methods are methods that:
+A) Must be static
+B) Have no name
+C) Must return void
+D) Cannot access local variables
+
+Answer: B
+
+Q14.
+
+Which of the following is TRUE about anonymous methods?
+A) They cannot be assigned to delegates
+B) They cannot capture local variables
+C) They reduce the need for separate method definitions
+D) They must be public
+
+Answer: C
+
+Q15.
+
+Lambda expressions in C# are primarily used to:
+A) Replace classes
+B) Write inline anonymous functions
+C) Define interfaces
+D) Implement inheritance
+
+Answer: B
+
+Q16.
+
+Which symbol is used to separate parameters and body in a lambda expression?
+A) :
+B) =>
+C) ->
+D) ::
+
+Answer: B
+
+Q17.
+
+Which of the following lambda expressions is syntactically valid?
+A) (x, y) -> x + y
+B) (x, y) => x + y
+C) x, y => return x + y
+D) (x + y) => z
+
+Answer: B
+
+Q18.
+
+Lambda expressions are most commonly used with:
+A) Threads
+B) LINQ queries
+C) Assemblies
+D) AppDomains
+
+Answer: B
+
+Q19.
+
+Which feature allows lambda expressions to access variables from the enclosing scope?
+A) Boxing
+B) Inheritance
+C) Closures
+D) Reflection
+
+Answer: C
+
+Q20.
+
+From a CCEE perspective, delegates are foundational because they underpin:
+A) Garbage Collection
+B) Events and LINQ
+C) Assembly loading
+D) Memory allocation
+
+Answer: B
+---------------------------------------------------------------------------------------
+Session 9: Exception Handling, Custom Exceptions, Events
+Q1.
+
+An exception in C# represents:
+A) A compilation error
+B) A runtime abnormal condition
+C) A syntax violation
+D) A logical warning
+
+Answer: B
+
+Q2.
+
+Which keyword is used to explicitly raise an exception?
+A) catch
+B) finally
+C) throw
+D) throws
+
+Answer: C
+
+Q3.
+
+The try block should contain:
+A) Error handling logic
+B) Cleanup code only
+C) Code that may cause an exception
+D) Event declarations
+
+Answer: C
+
+Q4.
+
+The catch block is used to:
+A) Prevent compilation
+B) Handle runtime exceptions
+C) Allocate memory
+D) Release unmanaged resources
+
+Answer: B
+
+Q5.
+
+Which block is executed regardless of whether an exception occurs?
+A) try
+B) catch
+C) finally
+D) throw
+
+Answer: C
+
+Q6.
+
+Multiple catch blocks are typically used to:
+A) Improve performance
+B) Handle different exception types
+C) Avoid finally block
+D) Replace try block
+
+Answer: B
+
+Q7.
+
+Which catch block should appear first?
+A) General exception
+B) Specific exception
+C) Any exception
+D) finally block
+
+Answer: B
+
+Q8.
+
+What happens if an exception is not handled?
+A) It is ignored
+B) CLR terminates the application
+C) It is logged automatically
+D) It is retried
+
+Answer: B
+
+Q9.
+
+Which of the following is considered a best practice in exception handling?
+A) Catch all exceptions using Exception
+B) Swallow exceptions silently
+C) Catch only what you can handle
+D) Use exceptions for normal control flow
+
+Answer: C
+
+Q10.
+
+Which of the following is NOT recommended?
+A) Logging exceptions
+B) Throwing exceptions from constructors
+C) Using exceptions for expected flow
+D) Cleaning resources in finally
+
+Answer: C
+
+Q11.
+
+A user-defined exception class should inherit from:
+A) Object
+B) Error
+C) Exception
+D) Application
+
+Answer: C
+
+Q12.
+
+Why should custom exception classes be created?
+A) To improve performance
+B) To represent domain-specific error conditions
+C) To replace logging
+D) To avoid using built-in exceptions
+
+Answer: B
+
+Q13.
+
+Which constructor is recommended to be implemented in a custom exception?
+A) Default constructor only
+B) Constructor with message
+C) Constructor with message and inner exception
+D) All of the above
+
+Answer: D
+
+Q14.
+
+An inner exception is used to:
+A) Hide the original error
+B) Improve performance
+C) Preserve original exception details
+D) Terminate the application
+
+Answer: C
+
+Q15.
+
+Events in C# are based on which core language feature?
+A) Interfaces
+B) Delegates
+C) Classes
+D) Tasks
+
+Answer: B
+
+Q16.
+
+An event represents which design pattern?
+A) Singleton
+B) Factory
+C) Observer (Publisher-Subscriber)
+D) Adapter
+
+Answer: C
+
+Q17.
+
+Which keyword is used to declare an event?
+A) delegate
+B) action
+C) event
+D) raise
+
+Answer: C
+
+Q18.
+
+Events are typically raised:
+A) By subscribers
+B) Automatically by CLR
+C) By the publisher class
+D) By interface
+
+Answer: C
+
+Q19.
+
+Which access does the event keyword enforce?
+A) Complete public access
+B) Direct invocation by subscribers
+C) Controlled add/remove subscription
+D) Thread-safe execution
+
+Answer: C
+
+Q20.
+
+From a CCEE standpoint, the main advantage of using events is:
+A) Reduced memory usage
+B) Loose coupling between components
+C) Faster execution
+D) Easier garbage collection
+
+Answer: B
+---------------------------------------------------------------------------------------
+Session 10: Anonymous Types, Extension Methods, Partial Classes/Methods, LINQ, PLINQ
+Q1.
+
+Anonymous types in C# are primarily used to:
+A) Create reusable data models
+B) Store temporary data with read-only properties
+C) Replace classes permanently
+D) Enable inheritance
+
+Answer: B
+
+Q2.
+
+Which statement about anonymous types is TRUE?
+A) They can have methods
+B) Their properties are mutable
+C) They are created using the new keyword
+D) They support inheritance
+
+Answer: C
+
+Q3.
+
+Anonymous type properties are:
+A) Private
+B) Protected
+C) Read-only
+D) Static
+
+Answer: C
+
+Q4.
+
+Extension methods allow developers to:
+A) Modify CLR behavior
+B) Add methods to existing types without inheritance
+C) Override existing methods
+D) Add fields to classes
+
+Answer: B
+
+Q5.
+
+An extension method must be declared:
+A) Inside a class only
+B) Inside a static class
+C) Inside an interface
+D) Inside a namespace only
+
+Answer: B
+
+Q6.
+
+Which keyword is used to specify the type being extended in an extension method?
+A) ref
+B) out
+C) this
+D) base
+
+Answer: C
+
+Q7.
+
+Partial classes are primarily used to:
+A) Improve runtime performance
+B) Split a class definition across multiple files
+C) Enable multiple inheritance
+D) Restrict access
+
+Answer: B
+
+Q8.
+
+Which scenario most commonly uses partial classes?
+A) Threading logic
+B) Auto-generated code separation
+C) Exception handling
+D) File I/O
+
+Answer: B
+
+Q9.
+
+Partial methods:
+A) Must have implementation
+B) Must return a value
+C) Can be declared without implementation
+D) Can be public
+
+Answer: C
+
+Q10.
+
+If a partial method has no implementation, the compiler:
+A) Throws a runtime exception
+B) Generates a stub method
+C) Removes the call entirely
+D) Logs a warning
+
+Answer: C
+
+Q11.
+
+LINQ stands for:
+A) Logical Integrated Query
+B) Language Integrated Query
+C) Linked Internal Query
+D) Linear Query
+
+Answer: B
+
+Q12.
+
+LINQ to Objects operates on:
+A) Databases only
+B) XML only
+C) In-memory collections
+D) Files only
+
+Answer: C
+
+Q13.
+
+Which LINQ syntax resembles SQL?
+A) Method syntax
+B) Lambda syntax
+C) Query syntax
+D) Delegate syntax
+
+Answer: C
+
+Q14.
+
+Which LINQ syntax uses extension methods like Where() and Select()?
+A) Query syntax
+B) Method syntax
+C) Declarative syntax
+D) Imperative syntax
+
+Answer: B
+
+Q15.
+
+Deferred execution in LINQ means that a query is executed:
+A) At compile time
+B) At declaration
+C) When the result is enumerated
+D) Immediately after creation
+
+Answer: C
+
+Q16.
+
+Which of the following triggers execution of a deferred LINQ query?
+A) Defining the query
+B) Modifying the source collection
+C) Enumerating the query result
+D) Assigning the query to a variable
+
+Answer: C
+
+Q17.
+
+Which LINQ operator projects each element of a sequence into a new form?
+A) Where
+B) Select
+C) OrderBy
+D) GroupBy
+
+Answer: B
+
+Q18.
+
+PLINQ improves performance by:
+A) Reducing memory usage
+B) Executing queries sequentially
+C) Parallelizing query execution
+D) Avoiding deferred execution
+
+Answer: C
+
+Q19.
+
+PLINQ is most suitable for:
+A) IO-bound operations
+B) CPU-bound data processing
+C) UI rendering
+D) Database transactions
+
+Answer: B
+
+Q20.
+
+From a CCEE perspective, improper use of PLINQ may lead to:
+A) Compilation errors
+B) Increased complexity without performance gain
+C) Loss of type safety
+D) CLR crashes
+
+Answer: B
+---------------------------------------------------------------------------------------
+Session 11: Shared Assemblies, Custom Attributes, Reflection, File I/O & Streams
+Q1.
+
+A shared assembly in .NET is primarily intended to:
+A) Be used by a single application only
+B) Be deployed with each application separately
+C) Be reused across multiple applications
+D) Replace private assemblies
+
+Answer: C
+
+Q2.
+
+Shared assemblies are typically stored in the:
+A) Application folder
+B) System32 directory
+C) Global Assembly Cache (GAC)
+D) Bin directory
+
+Answer: C
+
+Q3.
+
+A strong name for an assembly mainly provides:
+A) Faster execution
+B) UI binding
+C) Versioning and security identity
+D) Memory optimization
+
+Answer: C
+
+Q4.
+
+Which of the following is required to create a shared assembly?
+A) CLS compliance
+B) Strong naming
+C) Partial class
+D) Reflection
+
+Answer: B
+
+Q5.
+
+Custom attributes in .NET are used to:
+A) Modify CLR behavior
+B) Store metadata about program elements
+C) Replace interfaces
+D) Improve performance
+
+Answer: B
+
+Q6.
+
+A custom attribute class must inherit from:
+A) Object
+B) Attribute
+C) Exception
+D) MarshalByRefObject
+
+Answer: B
+
+Q7.
+
+Attributes are typically applied to:
+A) Variables only
+B) Assemblies, classes, methods, properties
+C) Threads only
+D) Namespaces only
+
+Answer: B
+
+Q8.
+
+Which mechanism is used to read attribute information at runtime?
+A) JIT
+B) CTS
+C) Reflection
+D) GC
+
+Answer: C
+
+Q9.
+
+Reflection in .NET allows a program to:
+A) Compile code dynamically
+B) Inspect metadata and types at runtime
+C) Manage memory
+D) Replace the CLR
+
+Answer: B
+
+Q10.
+
+Which namespace is primarily used for reflection?
+A) System.IO
+B) System.Linq
+C) System.Reflection
+D) System.Runtime
+
+Answer: C
+
+Q11.
+
+Which reflection feature allows loading an assembly at runtime?
+A) Attribute scanning
+B) Assembly.Load()
+C) Type.GetType()
+D) GC.Collect()
+
+Answer: B
+
+Q12.
+
+Dynamic loading of assemblies is commonly used in:
+A) Static applications only
+B) Plugin-based architectures
+C) Console input handling
+D) Exception handling
+
+Answer: B
+
+Q13.
+
+Which class represents an assembly during reflection?
+A) Type
+B) MethodInfo
+C) Assembly
+D) Module
+
+Answer: C
+
+Q14.
+
+Which reflection object represents information about a method?
+A) PropertyInfo
+B) MethodInfo
+C) FieldInfo
+D) EventInfo
+
+Answer: B
+
+Q15.
+
+File I/O operations in .NET are primarily provided by which namespace?
+A) System.Text
+B) System.Net
+C) System.IO
+D) System.Data
+
+Answer: C
+
+Q16.
+
+Streams in .NET are used to:
+A) Store data permanently
+B) Transfer data sequentially
+C) Manage threads
+D) Perform LINQ queries
+
+Answer: B
+
+Q17.
+
+Which class is commonly used to read text files?
+A) FileStream
+B) StreamReader
+C) BinaryReader
+D) TextWriter
+
+Answer: B
+
+Q18.
+
+Which class is commonly used to write text files?
+A) StreamReader
+B) BinaryWriter
+C) StreamWriter
+D) FileInfo
+
+Answer: C
+
+Q19.
+
+Binary data is best handled using:
+A) StreamReader / StreamWriter
+B) TextReader / TextWriter
+C) BinaryReader / BinaryWriter
+D) FileInfo only
+
+Answer: C
+
+Q20.
+
+From a CCEE perspective, reflection should be used cautiously because it:
+A) Is syntactically complex
+B) Can impact performance and type safety
+C) Breaks compilation
+D) Prevents garbage collection
+
+Answer: B
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
