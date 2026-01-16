@@ -1,0 +1,235 @@
+SESSION 1 – Introduction to DBMS & MySQL
+
+(20 MCQs | Exam-Optimized | Concept + Application Blend)
+
+Q1
+
+A DBMS is best described as:
+
+A. A collection of files
+B. A programming language
+C. Software that manages databases
+D. Hardware used for storage
+
+Answer: C
+
+Q2
+
+Which of the following is NOT a function of DBMS?
+
+A. Data storage
+B. Data security
+C. Data redundancy increase
+D. Data retrieval
+
+Answer: C
+
+Q3
+
+Which component defines how data is physically stored?
+
+A. Schema
+B. Instance
+C. Metadata
+D. Data dictionary
+
+Answer: A
+
+Q4
+
+A database instance refers to:
+
+A. Database structure
+B. Database design
+C. Database content at a particular time
+D. Database constraints
+
+Answer: C
+
+Q5
+
+Which term refers to “data about data”?
+
+A. Instance
+B. Schema
+C. Metadata
+D. Record
+
+Answer: C
+
+Q6
+
+Which DBMS type stores data in tables with rows and columns?
+
+A. Hierarchical
+B. Network
+C. Relational
+D. Object-oriented
+
+Answer: C
+
+Q7
+
+Which DBMS allows flexible schema and horizontal scaling?
+
+A. Relational
+B. Object-relational
+C. File-based
+D. NoSQL
+
+Answer: D
+
+Q8
+
+Which of the following is a NoSQL database?
+
+A. MySQL
+B. Oracle
+C. PostgreSQL
+D. MongoDB
+
+Answer: D
+
+Q9
+
+Which DBMS type combines relational model with object concepts?
+
+A. Network DBMS
+B. Hierarchical DBMS
+C. Object-relational DBMS
+D. Distributed DBMS
+
+Answer: C
+
+Q10
+
+Which of the following is NOT a MySQL client?
+
+A. MySQL Monitor
+B. MySQL Shell
+C. MySQL Workbench
+D. MySQL Server
+
+Answer: D
+
+Q11
+
+MySQL Workbench is primarily used for:
+
+A. Command-line execution only
+B. GUI-based database design and administration
+C. OS-level file management
+D. Backup automation only
+
+Answer: B
+
+Q12
+
+Which MySQL client supports scripting and multiple APIs?
+
+A. MySQL Monitor
+B. MySQL Shell
+C. MySQL Workbench
+D. phpMyAdmin
+
+Answer: B
+
+Q13
+
+Which layer ensures data abstraction in DBMS?
+
+A. Physical layer
+B. Application layer
+C. Logical layer
+D. All of the above
+
+Answer: D
+
+Q14
+
+Which advantage of DBMS reduces data duplication?
+
+A. Data security
+B. Data independence
+C. Data redundancy control
+D. Data abstraction
+
+Answer: C
+
+Q15
+
+Which user interacts directly with the database using queries?
+
+A. End user
+B. Database administrator
+C. Application programmer
+D. System analyst
+
+Answer: A
+
+Q16
+
+Which role is responsible for database security and backup?
+
+A. End user
+B. DBA
+C. Developer
+D. Tester
+
+Answer: B
+
+Q17
+
+Which DBMS feature allows multiple users to access data simultaneously?
+
+A. Integrity
+B. Concurrency control
+C. Normalization
+D. Indexing
+
+Answer: B
+
+Q18
+
+Which concept allows applications to remain unaffected by database changes?
+
+A. Data redundancy
+B. Data consistency
+C. Data independence
+D. Data concurrency
+
+Answer: C
+
+Q19
+
+Which of the following is a disadvantage of file-based systems?
+
+A. Easy recovery
+B. Low redundancy
+C. Poor data sharing
+D. Strong security
+
+Answer: C
+
+Q20
+
+DBMS primarily evolved to overcome limitations of:
+
+A. Operating systems
+B. File processing systems
+C. Programming languages
+D. Computer networks
+
+Answer: B
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
