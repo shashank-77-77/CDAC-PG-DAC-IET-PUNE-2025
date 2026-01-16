@@ -222,6 +222,229 @@ D. Computer networks
 
 Answer: B
 ----------------------------------------------------------------------------------------
+SESSION 2 – Data Models, ERD, Codd’s Rules & SQL Basics
+
+(20 MCQs | CCEE-Weighted | High Signal, Low Noise)
+
+Q1
+
+Which data model focuses on business entities and relationships?
+
+A. Physical
+B. Logical
+C. Conceptual
+D. Internal
+
+Answer: C
+
+Q2
+
+Logical data model primarily represents:
+
+A. Storage structures
+B. Tables, keys, and relationships
+C. Disk allocation
+D. File organization
+
+Answer: B
+
+Q3
+
+Which data model is closest to actual database implementation?
+
+A. Conceptual
+B. Logical
+C. Physical
+D. External
+
+Answer: C
+
+Q4
+
+An ER diagram is mainly used during:
+
+A. Database tuning
+B. Database design
+C. Query optimization
+D. Backup planning
+
+Answer: B
+
+Q5
+
+In an ER diagram, an entity is represented by:
+
+A. Ellipse
+B. Diamond
+C. Rectangle
+D. Line
+
+Answer: C
+
+Q6
+
+Which ER component represents an attribute?
+
+A. Rectangle
+B. Diamond
+C. Ellipse
+D. Double line
+
+Answer: C
+
+Q7
+
+A weak entity is identified by:
+
+A. Primary key only
+B. Foreign key only
+C. Partial key and owner entity
+D. Unique constraint
+
+Answer: C
+
+Q8
+
+Which relationship cardinality means “one-to-many”?
+
+A. 1:1
+B. M:N
+C. 1:N
+D. N:1
+
+Answer: C
+
+Q9
+
+Codd’s rules define:
+
+A. SQL syntax
+B. File system constraints
+C. Characteristics of relational databases
+D. NoSQL principles
+
+Answer: C
+
+Q10
+
+Which Codd rule enforces data access only through relational operations?
+
+A. Rule of Integrity
+B. Rule of Guaranteed Access
+C. Rule of Data Independence
+D. Rule of Non-subversion
+
+Answer: B
+
+Q11
+
+SQL stands for:
+
+A. Structured Query Language
+B. Simple Query Language
+C. Standard Query Language
+D. Sequential Query Language
+
+Answer: A
+
+Q12
+
+Which SQL category defines database structure?
+
+A. DML
+B. DCL
+C. DDL
+D. TCL
+
+Answer: C
+
+Q13
+
+Which command is used to permanently remove a table?
+
+A. DELETE
+B. DROP
+C. TRUNCATE
+D. REMOVE
+
+Answer: B
+
+Q14
+
+TRUNCATE differs from DELETE because it:
+
+A. Can be rolled back
+B. Removes table structure
+C. Is faster and non-transactional
+D. Removes specific rows only
+
+Answer: C
+
+Q15
+
+Which SQL command modifies table structure?
+
+A. UPDATE
+B. ALTER
+C. INSERT
+D. SELECT
+
+Answer: B
+
+Q16
+
+Which SQL command removes all rows but keeps table structure?
+
+A. DELETE
+B. DROP
+C. REMOVE
+D. TRUNCATE
+
+Answer: D
+
+Q17
+
+Which SQL category controls user permissions?
+
+A. DDL
+B. DML
+C. DCL
+D. TCL
+
+Answer: C
+
+Q18
+
+COMMIT and ROLLBACK belong to:
+
+A. DDL
+B. DML
+C. DCL
+D. TCL
+
+Answer: D
+
+Q19
+
+Which SQL command is used to add a new column?
+
+A. ADD
+B. MODIFY
+C. ALTER TABLE
+D. CREATE COLUMN
+
+Answer: C
+
+Q20
+
+Which statement about DDL is correct?
+
+A. DDL commands can be rolled back
+B. DDL affects data only
+C. DDL changes database schema
+D. DDL is part of DML
+
+Answer: C
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
