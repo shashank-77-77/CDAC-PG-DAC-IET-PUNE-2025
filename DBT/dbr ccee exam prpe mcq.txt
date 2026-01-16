@@ -670,6 +670,229 @@ D. Index efficiency
 
 Answer: C
 ----------------------------------------------------------------------------------------
+SESSION 5 – Data Types, Constraints, Aggregates & Filtering
+
+(20 MCQs | CCEE-High Probability | Precision-Aligned)
+
+Q1
+
+Which MySQL data type is used to store variable-length strings?
+
+A. CHAR
+B. VARCHAR
+C. TEXT
+D. BLOB
+
+Answer: B
+
+Q2
+
+Which data type stores whole numbers?
+
+A. FLOAT
+B. DOUBLE
+C. DECIMAL
+D. INT
+
+Answer: D
+
+Q3
+
+Which constraint ensures column values are unique?
+
+A. PRIMARY KEY
+B. FOREIGN KEY
+C. UNIQUE
+D. CHECK
+
+Answer: C
+
+Q4
+
+Which constraint does NOT allow NULL values?
+
+A. UNIQUE
+B. NOT NULL
+C. CHECK
+D. DEFAULT
+
+Answer: B
+
+Q5
+
+Which constraint enforces referential integrity?
+
+A. PRIMARY KEY
+B. UNIQUE
+C. CHECK
+D. FOREIGN KEY
+
+Answer: D
+
+Q6
+
+Which constraint assigns a default value?
+
+A. CHECK
+B. UNIQUE
+C. DEFAULT
+D. NOT NULL
+
+Answer: C
+
+Q7
+
+Which aggregate function returns number of rows?
+
+A. SUM()
+B. COUNT()
+C. MAX()
+D. AVG()
+
+Answer: B
+
+Q8
+
+Which function calculates average of numeric values?
+
+A. COUNT()
+B. SUM()
+C. AVG()
+D. MIN()
+
+Answer: C
+
+Q9
+
+Which clause groups rows with same values?
+
+A. WHERE
+B. GROUP BY
+C. HAVING
+D. ORDER BY
+
+Answer: B
+
+Q10
+
+HAVING clause is used to:
+
+A. Filter rows
+B. Filter groups
+C. Sort data
+D. Remove duplicates
+
+Answer: B
+
+Q11
+
+Which operator is used for pattern matching?
+
+A. BETWEEN
+B. IN
+C. LIKE
+D. EXISTS
+
+Answer: C
+
+Q12
+
+Which wildcard matches exactly one character?
+
+A. %
+B. _
+C. *
+D. ?
+
+Answer: B
+
+Q13
+
+Which keyword removes duplicate rows?
+
+A. UNIQUE
+B. DISTINCT
+C. DIFFERENT
+D. REMOVE
+
+Answer: B
+
+Q14
+
+Which clause sorts the result set?
+
+A. GROUP BY
+B. HAVING
+C. WHERE
+D. ORDER BY
+
+Answer: D
+
+Q15
+
+Which operator checks range of values?
+
+A. LIKE
+B. IN
+C. BETWEEN
+D. EXISTS
+
+Answer: C
+
+Q16
+
+Which operator checks membership in a list?
+
+A. LIKE
+B. BETWEEN
+C. EXISTS
+D. IN
+
+Answer: D
+
+Q17
+
+How are NULL values compared in SQL?
+
+A. = NULL
+B. != NULL
+C. IS NULL
+D. EQUAL NULL
+
+Answer: C
+
+Q18
+
+Which condition checks non-NULL values?
+
+A. IS NULL
+B. NOT NULL
+C. IS NOT NULL
+D. != NULL
+
+Answer: C
+
+Q19
+
+Which aggregate function ignores NULL values?
+
+A. COUNT()
+B. COUNT(column)
+C. SUM()
+D. All except COUNT()
+
+Answer: D
+
+Q20
+
+Which constraint is parsed but ignored by MySQL in older versions?
+
+A. FOREIGN KEY
+B. CHECK
+C. UNIQUE
+D. NOT NULL
+
+Answer: B
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
