@@ -894,6 +894,229 @@ D. NOT NULL
 
 Answer: B
 ----------------------------------------------------------------------------------------
+SESSION 6 – Relational Algebra, Joins & Table Operations
+
+(20 MCQs | CCEE-Frequent | Precision Calibrated)
+
+Q1
+
+Which relational algebra operation selects rows?
+
+A. Projection
+B. Selection
+C. Union
+D. Join
+
+Answer: B
+
+Q2
+
+Which operation selects columns?
+
+A. Selection
+B. Join
+C. Projection
+D. Intersection
+
+Answer: C
+
+Q3
+
+Which operation combines tuples from two relations?
+
+A. Union
+B. Projection
+C. Join
+D. Selection
+
+Answer: C
+
+Q4
+
+Which join returns only matching rows?
+
+A. Cross join
+B. Inner join
+C. Outer join
+D. Natural join
+
+Answer: B
+
+Q5
+
+Which join returns all possible combinations?
+
+A. Inner join
+B. Outer join
+C. Natural join
+D. Cross join
+
+Answer: D
+
+Q6
+
+Natural join matches tables based on:
+
+A. Primary keys
+B. Foreign keys
+C. Same column names
+D. All columns
+
+Answer: C
+
+Q7
+
+Which join includes unmatched rows with NULL values?
+
+A. Inner join
+B. Cross join
+C. Outer join
+D. Natural join
+
+Answer: C
+
+Q8
+
+LEFT OUTER JOIN returns:
+
+A. Matching rows only
+B. All rows from left table
+C. All rows from right table
+D. Cartesian product
+
+Answer: B
+
+Q9
+
+Which SQL operator removes duplicate rows in UNION?
+
+A. UNION ALL
+B. UNION
+C. INTERSECT
+D. MINUS
+
+Answer: B
+
+Q10
+
+UNION ALL differs from UNION because it:
+
+A. Sorts data
+B. Removes NULLs
+C. Keeps duplicates
+D. Removes duplicates
+
+Answer: C
+
+Q11
+
+Which relational algebra operation is NOT supported directly in MySQL?
+
+A. UNION
+B. INTERSECT
+C. JOIN
+D. SELECTION
+
+Answer: B
+
+Q12
+
+Which command copies table structure only?
+
+A. CREATE TABLE new AS SELECT * FROM old
+B. CREATE TABLE new LIKE old
+C. INSERT INTO new SELECT * FROM old
+D. SELECT INTO new FROM old
+
+Answer: B
+
+Q13
+
+Which command copies both structure and data?
+
+A. CREATE TABLE new LIKE old
+B. CREATE TABLE new AS SELECT * FROM old
+C. CREATE TABLE new STRUCTURE old
+D. ALTER TABLE
+
+Answer: B
+
+Q14
+
+AUTO_INCREMENT is used to:
+
+A. Generate random numbers
+B. Generate sequential values
+C. Generate composite keys
+D. Generate foreign keys
+
+Answer: B
+
+Q15
+
+AUTO_INCREMENT is generally applied to:
+
+A. VARCHAR column
+B. DATE column
+C. PRIMARY KEY column
+D. FOREIGN KEY column
+
+Answer: C
+
+Q16
+
+Which join syntax is SQL standard?
+
+A. WHERE clause join
+B. NATURAL JOIN only
+C. JOIN ... ON syntax
+D. Comma-separated tables
+
+Answer: C
+
+Q17
+
+Which join is deprecated but still supported?
+
+A. INNER JOIN
+B. CROSS JOIN
+C. WHERE-based join
+D. NATURAL JOIN
+
+Answer: C
+
+Q18
+
+Which operation returns common rows from two tables?
+
+A. UNION
+B. UNION ALL
+C. INTERSECT
+D. MINUS
+
+Answer: C
+
+Q19
+
+MINUS operation returns:
+
+A. Common rows
+B. Rows from both tables
+C. Rows in first table not in second
+D. Cartesian product
+
+Answer: C
+
+Q20
+
+Which statement about joins is correct?
+
+A. Cross join uses join condition
+B. Natural join removes duplicate columns
+C. Inner join includes NULL matches
+D. Outer join excludes unmatched rows
+
+Answer: B
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
