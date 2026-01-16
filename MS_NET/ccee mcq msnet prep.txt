@@ -1,0 +1,621 @@
+SECTION A – .NET FUNDAMENTALS & RUNTIME (Q1–Q20)
+
+The execution engine of .NET is called:
+A) CTS
+B) CLS
+C) CLR ✅
+D) JIT
+
+IL code is best described as:
+A) Hardware dependent
+B) Platform independent ✅
+C) OS specific
+D) Native code
+
+Which component converts IL to native code at runtime?
+A) Compiler
+B) CLR
+C) JIT Compiler ✅
+D) Loader
+
+An assembly contains:
+A) Only metadata
+B) Only IL
+C) IL + metadata ✅
+D) Source code
+
+Garbage Collection manages:
+A) Stack memory
+B) Heap memory for managed objects ✅
+C) File handles
+D) CPU cycles
+
+CTS stands for:
+A) Common Type System ✅
+B) Common Thread Service
+C) Core Type Specification
+D) Code Type Structure
+
+CLS ensures:
+A) Language interoperability rules ✅
+B) Memory allocation
+C) JIT optimization
+D) Thread scheduling
+
+Managed code executes under:
+A) OS kernel
+B) BIOS
+C) CLR ✅
+D) CPU
+
+Which file extension represents a class library?
+A) .exe
+B) .dll ✅
+C) .cs
+D) .il
+
+Security in .NET primarily operates at:
+A) Hardware level
+B) OS level
+C) CLR level ✅
+D) Compiler level
+
+AppDomain is used for:
+A) UI isolation
+B) Process isolation
+C) Logical isolation within a process ✅
+D) Thread isolation
+
+JIT compilation happens:
+A) At compile time
+B) At install time
+C) On first execution of method ✅
+D) At CLR startup
+
+Metadata does NOT contain:
+A) Type definitions
+B) Method signatures
+C) Source comments ✅
+D) Assembly references
+
+Which language is NOT CLS compliant by default?
+A) C#
+B) VB.NET
+C) C++/CLI
+D) C++ (native) ✅
+
+Strong-named assemblies help in:
+A) UI binding
+B) Versioning and security ✅
+C) Faster execution
+D) Memory optimization
+
+Which component loads assemblies?
+A) JIT
+B) Loader ✅
+C) GC
+D) CTS
+
+Unmanaged code is executed by:
+A) CLR
+B) JIT
+C) OS directly ✅
+D) CTS
+
+Which statement about CLR is TRUE?
+A) It is language specific
+B) It manages memory, security, execution ✅
+C) It replaces OS
+D) It compiles source code
+
+Private assemblies are typically deployed:
+A) In GAC
+B) With application folder ✅
+C) In system32
+D) In registry
+
+GAC is used to store:
+A) Source files
+B) Shared assemblies ✅
+C) Native DLLs
+D) Config files
+
+SECTION B – C# CORE & OOP (Q21–Q45)
+
+A class is a:
+A) Data container
+B) Blueprint for objects ✅
+C) Method group
+D) Namespace
+
+Object creation uses keyword:
+A) alloc
+B) create
+C) new ✅
+D) init
+
+Method overloading depends on:
+A) Return type
+B) Method name only
+C) Parameter list ✅
+D) Access modifier
+
+Constructors are used to:
+A) Destroy objects
+B) Initialize objects ✅
+C) Free memory
+D) Handle exceptions
+
+A destructor is called by:
+A) Developer
+B) CLR
+C) GC ✅
+D) JIT
+
+Properties combine:
+A) Fields and methods ✅
+B) Classes and structs
+C) Interfaces and delegates
+D) Methods and events
+
+Read-only property can be implemented using:
+A) Only setter
+B) Only getter ✅
+C) Static field
+D) Const
+
+Static members belong to:
+A) Object
+B) Method
+C) Class ✅
+D) Assembly
+
+Static constructor is invoked:
+A) For every object
+B) Once per class before use ✅
+C) Explicitly
+D) On GC
+
+Inheritance allows:
+A) Code reuse ✅
+B) Memory reuse only
+C) UI reuse
+D) Thread reuse
+
+Which keyword prevents inheritance?
+A) abstract
+B) static
+C) sealed ✅
+D) private
+
+Method overriding requires base method to be:
+A) static
+B) private
+C) virtual ✅
+D) sealed
+
+Method hiding uses keyword:
+A) override
+B) new ✅
+C) sealed
+D) base
+
+Abstract class can contain:
+A) Only abstract methods
+B) Only concrete methods
+C) Both abstract and concrete methods ✅
+D) No methods
+
+Abstract methods must be:
+A) private
+B) static
+C) overridden in derived class ✅
+D) sealed
+
+Sealed class can be:
+A) Inherited
+B) Instantiated only
+C) Inherited partially
+D) Not inherited ✅
+
+Object Initializer allows:
+A) Method chaining
+B) Property initialization without constructor parameters ✅
+C) Lazy loading
+D) Reflection
+
+IDisposable is used to:
+A) Handle exceptions
+B) Release unmanaged resources ✅
+C) Manage GC
+D) Create threads
+
+Dispose method is typically called via:
+A) Destructor
+B) finally block / using statement ✅
+C) GC
+D) JIT
+
+Using statement ensures:
+A) Faster execution
+B) Automatic Dispose call ✅
+C) Thread safety
+D) Memory pinning
+
+Access specifier allowing derived class access:
+A) private
+B) internal
+C) protected ✅
+D) sealed
+
+Which supports multiple inheritance?
+A) Class
+B) Struct
+C) Interface ✅
+D) Abstract class
+
+Explicit interface implementation is useful when:
+A) Improving speed
+B) Resolving method name conflicts ✅
+C) Avoiding inheritance
+D) Using LINQ
+
+Operator overloading methods must be:
+A) virtual
+B) private
+C) static ✅
+D) abstract
+
+Which operator cannot be overloaded?
+A) +
+B) ==
+C) []
+D) . (dot) ✅
+
+SECTION C – ADVANCED C#, LINQ, THREADING (Q46–Q70)
+
+struct is a:
+A) Reference type
+B) Value type ✅
+C) Interface
+D) Delegate
+
+enum represents:
+A) Collection
+B) Constants set ✅
+C) Object
+D) Method
+
+Nullable value types use:
+A) ??
+B) ? ✅
+C) ref
+D) out
+
+?? operator is called:
+A) Null check
+B) Null coalescing ✅
+C) Conditional
+D) Casting
+
+Jagged arrays are:
+A) Rectangular arrays
+B) Arrays of arrays ✅
+C) Fixed arrays
+D) Linked lists
+
+Generics primarily improve:
+A) UI
+B) Type safety ✅
+C) GC speed
+D) Security
+
+Generic constraints restrict:
+A) Runtime behavior
+B) Compile-time type usage ✅
+C) Memory allocation
+D) Threading
+
+ICollection<T> supports:
+A) Indexing
+B) Key-value access
+C) Add/Remove operations ✅
+D) Sorting
+
+IDictionary stores data as:
+A) List
+B) Stack
+C) Queue
+D) Key-value pairs ✅
+
+Delegates are:
+A) Classes
+B) Method references ✅
+C) Interfaces
+D) Events
+
+Multicast delegate invocation order is:
+A) Random
+B) Parallel
+C) Sequential in order added ✅
+D) Reverse
+
+Action delegate:
+A) Returns value
+B) Returns void ✅
+C) Takes no parameters
+D) Is async
+
+Func delegate always:
+A) Returns void
+B) Returns value ✅
+C) Throws exception
+D) Is generic-less
+
+Lambda expressions are:
+A) Named methods
+B) Anonymous functions ✅
+C) Interfaces
+D) Threads
+
+LINQ stands for:
+A) Logical Integrated Query
+B) Language Integrated Query ✅
+C) Linked Query
+D) Linear Query
+
+Deferred execution means query executes:
+A) At declaration
+B) At enumeration ✅
+C) At compile time
+D) Immediately
+
+PLINQ is best for:
+A) IO-bound work
+B) CPU-bound parallel work ✅
+C) UI threads
+D) Network calls
+
+Exception handling keywords include:
+A) try, throw, catch, finally ✅
+B) if, else
+C) using
+D) lock
+
+finally block executes:
+A) Only on exception
+B) Only on success
+C) Always ✅
+D) Never
+
+Custom exceptions should inherit from:
+A) Object
+B) Error
+C) Exception ✅
+D) Application
+
+Events internally use:
+A) Interfaces
+B) Delegates ✅
+C) Classes
+D) Tasks
+
+Reflection allows:
+A) Compile-time inspection
+B) Runtime type discovery ✅
+C) GC tuning
+D) JIT replacement
+
+File I/O in .NET is under namespace:
+A) System.Net
+B) System.IO ✅
+C) System.Text
+D) System.Data
+
+Thread synchronization keyword:
+A) await
+B) async
+C) lock ✅
+D) yield
+
+async/await is built on:
+A) Threads
+B) Tasks ✅
+C) Delegates
+D) Events
+
+SECTION D – ASP.NET CORE, EF, WEB API, REACT (Q71–Q100)
+
+MVC stands for:
+A) Model View Controller ✅
+B) Main View Component
+C) Managed View Class
+D) Module View Control
+
+Controller handles:
+A) UI rendering
+B) User requests ✅
+C) DB schema
+D) Routing only
+
+Action methods return:
+A) void only
+B) IActionResult / ActionResult ✅
+C) Model only
+D) View only
+
+[HttpPost] attribute handles:
+A) GET requests
+B) POST requests ✅
+C) PUT requests
+D) DELETE requests
+
+ViewBag is:
+A) Strongly typed
+B) Dynamic data container ✅
+C) Session storage
+D) Database cache
+
+Data Annotations are used for:
+A) Routing
+B) Validation ✅
+C) Logging
+D) Caching
+
+TempData persists data:
+A) For entire session
+B) Across one redirect ✅
+C) Forever
+D) In database
+
+Partial views are used for:
+A) Security
+B) Reusable UI components ✅
+C) Routing
+D) Validation
+
+Filters address:
+A) Routing
+B) Cross-cutting concerns ✅
+C) UI layout
+D) DB access
+
+AntiForgeryToken prevents:
+A) XSS
+B) SQL Injection
+C) CSRF attacks ✅
+D) CORS
+
+Entity Framework is:
+A) ORM ✅
+B) UI framework
+C) Web server
+D) Compiler
+
+DbContext represents:
+A) Table
+B) Unit of Work + Change Tracker ✅
+C) View
+D) Controller
+
+Code First approach means:
+A) DB first
+B) Code generates DB ✅
+C) Stored procedures only
+D) No migrations
+
+Migrations handle:
+A) Data transfer
+B) Schema evolution ✅
+C) UI changes
+D) Routing
+
+Fluent API is preferred when:
+A) Simple mapping
+B) Complex configurations ✅
+C) No relationships
+D) LINQ not used
+
+Web API returns:
+A) Views
+B) HTML
+C) HTTP responses ✅
+D) Razor pages
+
+REST APIs are:
+A) Stateful
+B) Stateless ✅
+C) Session based
+D) UI driven
+
+HTTP GET is used to:
+A) Create resource
+B) Update resource
+C) Retrieve resource ✅
+D) Delete resource
+
+CORS is required to:
+A) Encrypt traffic
+B) Allow cross-origin requests ✅
+C) Improve performance
+D) Cache responses
+
+Newtonsoft.Json is used for:
+A) Routing
+B) Serialization/deserialization ✅
+C) Authentication
+D) Validation
+
+React is primarily responsible for:
+A) Database access
+B) Client-side UI & state ✅
+C) Business logic
+D) API hosting
+
+Web API + React architecture follows:
+A) Monolithic
+B) Client-server separation ✅
+C) Desktop model
+D) SOA only
+
+IActionResult allows returning:
+A) Only JSON
+B) Only Views
+C) Multiple HTTP response types ✅
+D) Only strings
+
+Authentication in MVC can be implemented using:
+A) Forms authentication ✅
+B) LINQ
+C) Reflection
+D) GC
+
+Authorization attribute is:
+A) [Validate]
+B) [Authorize] ✅
+C) [Secure]
+D) [Login]
+
+Razor Pages are:
+A) Replacement for MVC
+B) Page-based programming model ✅
+C) API controllers
+D) React components
+
+Routing maps:
+A) Views to Models
+B) URLs to actions ✅
+C) DB to entities
+D) Files to folders
+
+404 error indicates:
+A) Server error
+B) Unauthorized
+C) Resource not found ✅
+D) Bad request
+
+Bundling and Minification improve:
+A) Security
+B) Performance ✅
+C) Validation
+D) Logging
+
+MVC request lifecycle starts with:
+A) Controller
+B) View
+C) Routing engine ✅
+D) Model
+
+
+
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
