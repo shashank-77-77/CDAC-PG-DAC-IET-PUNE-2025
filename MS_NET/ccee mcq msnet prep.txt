@@ -3250,9 +3250,608 @@ D) Prevents garbage collection
 
 Answer: B
 ---------------------------------------------------------------------------------------
+Session 12: Threading, Synchronization, Tasks, async/await, TPL
+Q1.
 
+A thread in .NET represents:
+A) A process
+B) A lightweight unit of execution
+C) A memory block
+D) A CPU core
+
+Answer: B
+
+Q2.
+
+Which namespace provides threading support in .NET?
+A) System.Threading ✅
+B) System.Tasks
+C) System.Concurrent
+D) System.Runtime
+
+Answer: A
+
+Q3.
+
+The ThreadStart delegate is used when a thread method:
+A) Accepts parameters
+B) Returns a value
+C) Takes no parameters
+D) Is asynchronous
+
+Answer: C
+
+Q4.
+
+ParameterizedThreadStart is used to:
+A) Start background threads only
+B) Pass data to a thread method
+C) Synchronize threads
+D) Return values from threads
+
+Answer: B
+
+Q5.
+
+Which statement about the ThreadPool is TRUE?
+A) Threads must be created manually
+B) Threads are reused for multiple tasks
+C) It supports only one thread
+D) It replaces Tasks
+
+Answer: B
+
+Q6.
+
+The primary advantage of using ThreadPool is:
+A) Deterministic execution order
+B) Reduced overhead of thread creation
+C) Guaranteed thread affinity
+D) Automatic synchronization
+
+Answer: B
+
+Q7.
+
+Which keyword is used to synchronize access to a critical section?
+A) await
+B) async
+C) lock
+D) yield
+
+Answer: C
+
+Q8.
+
+The lock statement in C# is built on top of:
+A) Interlocked
+B) Monitor
+C) Mutex
+D) Semaphore
+
+Answer: B
+
+Q9.
+
+Which synchronization mechanism provides atomic operations?
+A) lock
+B) Monitor
+C) Interlocked
+D) Semaphore
+
+Answer: C
+
+Q10.
+
+A race condition occurs when:
+A) Threads execute sequentially
+B) Multiple threads access shared data without synchronization
+C) Threads are synchronized
+D) Tasks are awaited
+
+Answer: B
+
+Q11.
+
+Which type is used to represent an asynchronous operation in .NET?
+A) Thread
+B) Delegate
+C) Task
+D) Event
+
+Answer: C
+
+Q12.
+
+A Task differs from a Thread because a Task:
+A) Always creates a new OS thread
+B) Represents a unit of work, not a thread
+C) Cannot run in parallel
+D) Is synchronous by default
+
+Answer: B
+
+Q13.
+
+Which keyword marks a method as asynchronous?
+A) await
+B) async
+C) yield
+D) task
+
+Answer: B
+
+Q14.
+
+The await keyword is used to:
+A) Start a new thread
+B) Block the calling thread
+C) Asynchronously wait for a Task to complete
+D) Terminate a Task
+
+Answer: C
+
+Q15.
+
+Which return type is commonly used for async methods with no return value?
+A) void
+B) Task
+C) Thread
+D) Action
+
+Answer: B
+
+Q16.
+
+Which return type is preferred for async methods returning a value?
+A) object
+B) Task
+C) Task<T>
+D) ValueTask only
+
+Answer: C
+
+Q17.
+
+The Task Parallel Library (TPL) is designed to:
+A) Replace CLR
+B) Simplify parallel and concurrent programming
+C) Eliminate threading
+D) Handle file I/O
+
+Answer: B
+
+Q18.
+
+Which TPL feature enables parallel execution of loops?
+A) Task.Run
+B) Parallel.For / Parallel.ForEach
+C) async/await
+D) ThreadPool
+
+Answer: B
+
+Q19.
+
+Which of the following is a valid scenario for using async/await?
+A) CPU-bound tight loops
+B) Blocking UI thread operations
+C) I/O-bound operations like file or network access
+D) Constructor initialization
+
+Answer: C
+
+Q20.
+
+From a CCEE perspective, improper synchronization in multithreaded code primarily leads to:
+A) Compilation errors
+B) Deadlocks and race conditions
+C) Faster execution
+D) Better scalability
+
+Answer: B
 ---------------------------------------------------------------------------------------
+Session 13: ASP.NET Core MVC Fundamentals, Controllers, Actions, ADO.NET
+Q1.
+
+ASP.NET Core MVC follows which architectural pattern?
+A) Layered
+B) Client–Server
+C) Model–View–Controller
+D) Event-Driven
+
+Answer: C
+
+Q2.
+
+In MVC, the primary responsibility of a Controller is to:
+A) Render UI directly
+B) Handle incoming HTTP requests
+C) Define database schema
+D) Manage session state only
+
+Answer: B
+
+Q3.
+
+An MVC Controller class must typically:
+A) Inherit from System.Object only
+B) Implement IController explicitly
+C) Inherit from Controller or ControllerBase
+D) Be declared as static
+
+Answer: C
+
+Q4.
+
+Action methods in a controller are invoked based on:
+A) Method overloading rules
+B) Routing configuration
+C) Reflection only
+D) Compilation order
+
+Answer: B
+
+Q5.
+
+Which attribute specifies that an action responds to HTTP GET requests?
+A) [Get]
+B) [HttpRequest]
+C) [HttpGet]
+D) [RouteGet]
+
+Answer: C
+
+Q6.
+
+Which attribute specifies that an action responds to HTTP POST requests?
+A) [Post]
+B) [HttpPost]
+C) [Send]
+D) [HttpPut]
+
+Answer: B
+
+Q7.
+
+The [NonAction] attribute is used to:
+A) Disable routing completely
+B) Prevent a method from being treated as an action
+C) Restrict HTTP verbs
+D) Enable authorization
+
+Answer: B
+
+Q8.
+
+Which return type allows an action to return multiple response formats?
+A) void
+B) string
+C) IActionResult
+D) Model
+
+Answer: C
+
+Q9.
+
+Which file typically configures services and middleware in ASP.NET Core?
+A) web.config
+B) Global.asax
+C) Program.cs
+D) App.config
+
+Answer: C
+
+Q10.
+
+The ASP.NET Core request pipeline is composed of:
+A) Controllers only
+B) Middleware components
+C) Views and Models
+D) CLR services
+
+Answer: B
+
+Q11.
+
+Which component maps URLs to controller actions?
+A) Model Binder
+B) View Engine
+C) Routing
+D) Middleware
+
+Answer: C
+
+Q12.
+
+ADO.NET is primarily used for:
+A) UI rendering
+B) ORM-based data access only
+C) Low-level database access
+D) Client-side validation
+
+Answer: C
+
+Q13.
+
+Which ADO.NET provider is recommended for SQL Server in .NET 6?
+A) System.Data.SqlClient
+B) Microsoft.Data.SqlClient
+C) OleDbClient
+D) OdbcClient
+
+Answer: B
+
+Q14.
+
+Which object in ADO.NET represents a connection to the database?
+A) Command
+B) DataAdapter
+C) Connection
+D) DataReader
+
+Answer: C
+
+Q15.
+
+Which object is used to execute SQL statements or stored procedures?
+A) DataSet
+B) DataTable
+C) Command
+D) DataReader
+
+Answer: C
+
+Q16.
+
+Which ADO.NET object provides forward-only, read-only access to data?
+A) DataSet
+B) DataTable
+C) DataAdapter
+D) DataReader
+
+Answer: D
+
+Q17.
+
+Which ADO.NET component acts as a bridge between a DataSet and the database?
+A) Connection
+B) Command
+C) DataAdapter
+D) Transaction
+
+Answer: C
+
+Q18.
+
+Asynchronous database command execution improves:
+A) Database schema design
+B) UI responsiveness and scalability
+C) Query syntax
+D) Data consistency
+
+Answer: B
+
+Q19.
+
+Which method is used to execute a command asynchronously?
+A) Execute()
+B) ExecuteNonQuery()
+C) ExecuteReaderAsync()
+D) RunAsync()
+
+Answer: C
+
+Q20.
+
+From a CCEE standpoint, using asynchronous connections and commands primarily helps to:
+A) Reduce code size
+B) Prevent SQL injection
+C) Improve application scalability
+D) Eliminate transactions
+
+Answer: C
 ---------------------------------------------------------------------------------------
+Sessions 14 & 15: Views, Models, Razor, Validation, CRUD, MVC State Management
+Q1.
+
+In ASP.NET Core MVC, a Model primarily represents:
+A) UI layout
+B) Business/data logic
+C) Routing rules
+D) HTTP pipeline
+
+Answer: B
+
+Q2.
+
+A ViewModel is mainly used to:
+A) Map database tables directly
+B) Combine multiple models for a specific view
+C) Replace controllers
+D) Handle routing
+
+Answer: B
+
+Q3.
+
+Razor Views use which file extension?
+A) .html
+B) .aspx
+C) .cshtml
+D) .razoronly
+
+Answer: C
+
+Q4.
+
+Razor syntax allows mixing:
+A) SQL and HTML
+B) JavaScript and CSS
+C) C# and HTML
+D) XML and JSON
+
+Answer: C
+
+Q5.
+
+Which symbol is used in Razor to switch from HTML to C#?
+A) #
+B) $
+C) @
+D) %
+
+Answer: C
+
+Q6.
+
+HTML Helper methods in MVC are used to:
+A) Write JavaScript code
+B) Generate HTML elements programmatically
+C) Handle routing
+D) Manage sessions
+
+Answer: B
+
+Q7.
+
+Which HTML Helper is commonly used to generate a textbox?
+A) Html.LabelFor()
+B) Html.TextBoxFor()
+C) Html.DisplayFor()
+D) Html.ActionLink()
+
+Answer: B
+
+Q8.
+
+ViewBag is best described as:
+A) Strongly typed container
+B) Dynamic data container
+C) Session storage
+D) Database cache
+
+Answer: B
+
+Q9.
+
+Which statement about ViewBag is TRUE?
+A) It persists across requests
+B) It is strongly typed
+C) It exists only for the current request
+D) It stores data permanently
+
+Answer: C
+
+Q10.
+
+Data Annotations are primarily used for:
+A) Routing
+B) Validation
+C) Authentication
+D) Logging
+
+Answer: B
+
+Q11.
+
+Which attribute enforces a field to be mandatory?
+A) [Range]
+B) [StringLength]
+C) [Required]
+D) [Key]
+
+Answer: C
+
+Q12.
+
+Client-side validation in MVC improves:
+A) Database performance
+B) Server security only
+C) User experience and responsiveness
+D) Compilation speed
+
+Answer: C
+
+Q13.
+
+Server-side validation is necessary because:
+A) JavaScript is slow
+B) Client validation can be bypassed
+C) Razor does not support validation
+D) ViewModels are optional
+
+Answer: B
+
+Q14.
+
+A strongly-typed view is one that:
+A) Uses ViewBag only
+B) Is bound to a specific model type
+C) Uses partial views
+D) Avoids Razor syntax
+
+Answer: B
+
+Q15.
+
+Scaffolding in MVC is used to:
+A) Improve runtime speed
+B) Automatically generate CRUD code
+C) Manage sessions
+D) Secure controllers
+
+Answer: B
+
+Q16.
+
+CRUD stands for:
+A) Create, Read, Update, Delete
+B) Compile, Run, Update, Debug
+C) Create, Render, Use, Destroy
+D) Connect, Read, Upload, Download
+
+Answer: A
+
+Q17.
+
+Which MVC state management option persists data across one redirect?
+A) ViewBag
+B) ViewData
+C) TempData
+D) Session
+
+Answer: C
+
+Q18.
+
+Which state management technique stores data on the server for multiple requests?
+A) ViewBag
+B) TempData
+C) Session
+D) QueryString
+
+Answer: C
+
+Q19.
+
+Partial Views are mainly used to:
+A) Improve security
+B) Create reusable UI components
+C) Manage routing
+D) Handle validation
+
+Answer: B
+
+Q20.
+
+From a CCEE perspective, improper use of ViewBag over ViewModel mainly impacts:
+A) Compilation
+B) Type safety and maintainability
+C) Routing
+D) Garbage collection
+
+Answer: B
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------
