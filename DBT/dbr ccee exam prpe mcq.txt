@@ -1118,6 +1118,229 @@ D. Outer join excludes unmatched rows
 
 Answer: B
 ----------------------------------------------------------------------------------------
+SESSION 7 – Subqueries, TCL, DCL, Views & Indexes
+
+(20 MCQs | CCEE-Critical | Concept-Dense)
+
+Q1
+
+A subquery is:
+
+A. A query inside a table
+B. A query inside another query
+C. A temporary table
+D. A stored procedure
+
+Answer: B
+
+Q2
+
+Which subquery executes once for each row of the outer query?
+
+A. Simple subquery
+B. Nested subquery
+C. Correlated subquery
+D. Scalar subquery
+
+Answer: C
+
+Q3
+
+Which keyword checks for existence of rows returned by subquery?
+
+A. IN
+B. ANY
+C. EXISTS
+D. ALL
+
+Answer: C
+
+Q4
+
+EXISTS returns TRUE when:
+
+A. Subquery returns NULL
+B. Subquery returns at least one row
+C. Subquery returns one column
+D. Subquery returns exactly one row
+
+Answer: B
+
+Q5
+
+Which command permanently saves transaction changes?
+
+A. ROLLBACK
+B. SAVEPOINT
+C. COMMIT
+D. GRANT
+
+Answer: C
+
+Q6
+
+SAVEPOINT is used to:
+
+A. End transaction
+B. Lock table
+C. Mark transaction point
+D. Grant privileges
+
+Answer: C
+
+Q7
+
+Which TCL command undoes changes up to savepoint?
+
+A. COMMIT
+B. ROLLBACK
+C. GRANT
+D. DELETE
+
+Answer: B
+
+Q8
+
+Which SQL category controls user permissions?
+
+A. DDL
+B. DML
+C. DCL
+D. TCL
+
+Answer: C
+
+Q9
+
+Which command gives privileges?
+
+A. REVOKE
+B. COMMIT
+C. GRANT
+D. SAVEPOINT
+
+Answer: C
+
+Q10
+
+GRANT OPTION allows a user to:
+
+A. Revoke privileges
+B. Grant privileges to others
+C. Commit transactions
+D. Create views
+
+Answer: B
+
+Q11
+
+A view is:
+
+A. Physical copy of table
+B. Virtual table based on query
+C. Index on table
+D. Temporary table
+
+Answer: B
+
+Q12
+
+Which view is updatable?
+
+A. Complex view
+B. Join view
+C. Simple view
+D. Aggregate view
+
+Answer: C
+
+Q13
+
+Which view contains joins or aggregates?
+
+A. Simple view
+B. Temporary view
+C. Complex view
+D. Materialized view
+
+Answer: C
+
+Q14
+
+Primary purpose of views is:
+
+A. Performance improvement
+B. Data security and abstraction
+C. Data redundancy
+D. Indexing
+
+Answer: B
+
+Q15
+
+Which object improves query performance?
+
+A. View
+B. Trigger
+C. Index
+D. Cursor
+
+Answer: C
+
+Q16
+
+Indexes primarily improve performance of:
+
+A. INSERT
+B. UPDATE
+C. DELETE
+D. SELECT
+
+Answer: D
+
+Q17
+
+Which index type is created automatically for PRIMARY KEY?
+
+A. Hash
+B. Clustered
+C. Unique index
+D. Bitmap
+
+Answer: C
+
+Q18
+
+Temporary tables exist:
+
+A. Permanently
+B. Until system reboot
+C. For session duration
+D. Until COMMIT
+
+Answer: C
+
+Q19
+
+Which statement about views is TRUE?
+
+A. Views store data permanently
+B. Views always improve performance
+C. Views can restrict column access
+D. Views replace tables
+
+Answer: C
+
+Q20
+
+Which command removes privileges?
+
+A. DROP
+B. DELETE
+C. REVOKE
+D. ROLLBACK
+
+Answer: C
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
