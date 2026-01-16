@@ -446,6 +446,229 @@ D. DDL is part of DML
 
 Answer: C
 ----------------------------------------------------------------------------------------
+SESSIONS 3 & 4 – Data Redundancy, Functional Dependency, Normalization & DML
+
+(20 MCQs | CCEE-Critical | High Yield)
+
+Q1
+
+Data redundancy primarily leads to:
+
+A. Data security
+B. Data independence
+C. Data inconsistency
+D. Query optimization
+
+Answer: C
+
+Q2
+
+An update anomaly occurs when:
+
+A. Insertion of data fails
+B. Deletion causes loss of unintended data
+C. Same data must be updated at multiple places
+D. Data violates domain constraints
+
+Answer: C
+
+Q3
+
+Deletion anomaly results in:
+
+A. Duplicate records
+B. Loss of important information
+C. Slower queries
+D. Broken indexes
+
+Answer: B
+
+Q4
+
+Functional dependency X → Y implies:
+
+A. Y determines X
+B. X uniquely determines Y
+C. X and Y are independent
+D. X is a foreign key
+
+Answer: B
+
+Q5
+
+Which attribute uniquely identifies a record?
+
+A. Composite key
+B. Candidate key
+C. Foreign key
+D. Secondary key
+
+Answer: B
+
+Q6
+
+A primary key is selected from:
+
+A. Super keys
+B. Candidate keys
+C. Foreign keys
+D. Alternate keys
+
+Answer: B
+
+Q7
+
+First Normal Form (1NF) requires:
+
+A. No transitive dependency
+B. No partial dependency
+C. Atomic values only
+D. No multivalued dependency
+
+Answer: C
+
+Q8
+
+A table violates 1NF if it contains:
+
+A. Primary key
+B. Composite key
+C. Repeating groups
+D. Foreign key
+
+Answer: C
+
+Q9
+
+Second Normal Form (2NF) eliminates:
+
+A. Transitive dependency
+B. Multivalued dependency
+C. Partial dependency
+D. Functional dependency
+
+Answer: C
+
+Q10
+
+A table is in 2NF if it is:
+
+A. In 1NF only
+B. In 1NF and has no partial dependency
+C. In 3NF
+D. Free from transitive dependency
+
+Answer: B
+
+Q11
+
+Third Normal Form (3NF) removes:
+
+A. Partial dependency
+B. Transitive dependency
+C. Multivalued dependency
+D. Join dependency
+
+Answer: B
+
+Q12
+
+BCNF is stricter than 3NF because:
+
+A. It removes all dependencies
+B. Every determinant must be a candidate key
+C. It allows multivalued attributes
+D. It ignores functional dependency
+
+Answer: B
+
+Q13
+
+Fourth Normal Form (4NF) deals with:
+
+A. Partial dependency
+B. Transitive dependency
+C. Multivalued dependency
+D. Join dependency
+
+Answer: C
+
+Q14
+
+Which normal form handles join dependency?
+
+A. 3NF
+B. BCNF
+C. 4NF
+D. 5NF
+
+Answer: D
+
+Q15
+
+Which DML command adds new records?
+
+A. UPDATE
+B. INSERT
+C. ALTER
+D. CREATE
+
+Answer: B
+
+Q16
+
+Which command modifies existing records?
+
+A. INSERT
+B. DELETE
+C. UPDATE
+D. DROP
+
+Answer: C
+
+Q17
+
+DELETE differs from TRUNCATE because DELETE:
+
+A. Is faster
+B. Cannot be rolled back
+C. Is transactional
+D. Removes table structure
+
+Answer: C
+
+Q18
+
+Which DML command removes selected rows?
+
+A. DROP
+B. TRUNCATE
+C. DELETE
+D. REMOVE
+
+Answer: C
+
+Q19
+
+Which clause is mandatory in UPDATE to avoid mass updates?
+
+A. GROUP BY
+B. HAVING
+C. WHERE
+D. ORDER BY
+
+Answer: C
+
+Q20
+
+Normalization primarily improves:
+
+A. Query execution speed
+B. Storage utilization
+C. Data integrity
+D. Index efficiency
+
+Answer: C
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
