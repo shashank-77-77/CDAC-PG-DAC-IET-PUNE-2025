@@ -1,0 +1,283 @@
+bwans 
+package com.movieapp.bean;
+
+import java.time.LocalDate;
+import java.util.Objects;
+
+public abstract class Movie {
+
+    protected int movieId;
+    protected String name;
+    protected String actor;
+    protected String actress;
+    protected LocalDate releaseDate;
+
+    public Movie(int movieId, String name, String actor, String actress, LocalDate releaseDate) {
+        this.movieId = movieId;
+        this.name = name;
+        this.actor = actor;
+        this.actress = actress;
+        this.releaseDate = releaseDate;
+    }
+
+    public int getMovieId() {
+        return movieId;
+    }
+
+    public abstract void display();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Movie)) return false;
+        Movie movie = (Movie) o;
+        return movieId == movie.movieId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(movieId);
+    }
+}
+
+
+beans 
+
+package com.movieapp.bean;
+
+import java.time.LocalDate;
+
+public class ShortMovie extends Movie {
+
+    private int duration;
+    private String topic;
+
+    public ShortMovie(int movieId, String name, String actor, String actress,
+                      LocalDate releaseDate, int duration, String topic) {
+        super(movieId, name, actor, actress, releaseDate);
+        this.duration = duration;
+        this.topic = topic;
+    }
+
+    @Override
+    public void display() {
+        System.out.println("ShortMovie | ID:" + movieId +
+                " | Name:" + name +
+                " | Topic:" + topic +
+                " | Duration:" + duration);
+    }
+}
+
+beans
+
+package com.movieapp.bean;
+
+import java.time.LocalDate;
+
+public class BollywoodMovie extends Movie {
+
+    private int noOfSongs;
+    private String singer;
+
+    public BollywoodMovie(int movieId, String name, String actor, String actress,
+                           LocalDate releaseDate, int noOfSongs, String singer) {
+        super(movieId, name, actor, actress, releaseDate);
+        this.noOfSongs = noOfSongs;
+        this.singer = singer;
+    }
+
+    @Override
+    public void display() {
+        System.out.println("BollywoodMovie | ID:" + movieId +
+                " | Name:" + name +
+                " | Songs:" + noOfSongs +
+                " | Singer:" + singer);
+    }
+}
+
+dao
+package com.movieapp.dao;
+
+import com.movieapp.bean.Movie;
+import java.util.Set;
+
+public interface MovieDao {
+
+    boolean addMovie(Movie movie);
+    boolean deleteMovie(int movieId);
+    Set<Movie> getAllMovies();
+}
+
+
+dao
+package com.movieapp.dao;
+
+import com.movieapp.bean.Movie;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class MovieDaoImpl implements MovieDao {
+
+    private Set<Movie> movieSet = new HashSet<>();
+
+    @Override
+    public boolean addMovie(Movie movie) {
+        return movieSet.add(movie);
+    }
+
+    @Override
+    public boolean deleteMovie(int movieId) {
+        Iterator<Movie> it = movieSet.iterator();
+        while (it.hasNext()) {
+            if (it.next().getMovieId() == movieId) {
+                it.remove();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public Set<Movie> getAllMovies() {
+        return movieSet;
+    }
+}
+
+
+swrvice 
+package com.movieapp.service;
+
+import com.movieapp.bean.Movie;
+
+public interface MovieService {
+
+    void addMovie(Movie movie);
+    void deleteMovie(int movieId);
+    void displayMovieByType(int type);
+}
+
+
+
+service
+
+package com.movieapp.service;
+
+import com.movieapp.bean.*;
+import com.movieapp.dao.MovieDao;
+import com.movieapp.dao.MovieDaoImpl;
+
+public class MovieServiceImpl implements MovieService {
+
+    private MovieDao movieDao = new MovieDaoImpl();
+
+    @Override
+    public void addMovie(Movie movie) {
+        if (movieDao.addMovie(movie))
+            System.out.println("Movie added successfully.");
+        else
+            System.out.println("Duplicate Movie ID. Add operation rejected.");
+    }
+
+    @Override
+    public void deleteMovie(int movieId) {
+        if (movieDao.deleteMovie(movieId))
+            System.out.println("Movie deleted successfully.");
+        else
+            System.out.println("Movie ID not found.");
+    }
+
+    @Override
+    public void displayMovieByType(int type) {
+        for (Movie m : movieDao.getAllMovies()) {
+            if (type == 1 && m instanceof ShortMovie)
+                m.display();
+            else if (type == 2 && m instanceof BollywoodMovie)
+                m.display();
+        }
+    }
+}
+
+
+test
+package com.movieapp.test;
+
+import com.movieapp.bean.*;
+import com.movieapp.service.*;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class MovieTest {
+
+    public static void main(String[] args) {
+
+        MovieService service = new MovieServiceImpl();
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
+        do {
+            System.out.println("\n1.Add Movie\n2.Delete Movie\n3.Display By Type\n4.Exit");
+            choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+                    System.out.print("Movie ID: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.print("Name: ");
+                    String name = sc.nextLine();
+
+                    System.out.print("Actor: ");
+                    String actor = sc.nextLine();
+
+                    System.out.print("Actress: ");
+                    String actress = sc.nextLine();
+
+                    System.out.println("Type: 1.Short 2.Bollywood");
+                    int type = sc.nextInt();
+
+                    if (type == 1) {
+                        System.out.print("Duration: ");
+                        int dur = sc.nextInt();
+                        sc.nextLine();
+                        System.out.print("Topic: ");
+                        String topic = sc.nextLine();
+
+                        service.addMovie(new ShortMovie(
+                                id, name, actor, actress,
+                                LocalDate.now(), dur, topic));
+
+                    } else {
+                        System.out.print("Songs Count: ");
+                        int songs = sc.nextInt();
+                        sc.nextLine();
+                        System.out.print("Singer: ");
+                        String singer = sc.nextLine();
+
+                        service.addMovie(new BollywoodMovie(
+                                id, name, actor, actress,
+                                LocalDate.now(), songs, singer));
+                    }
+                    break;
+
+                case 2:
+                    System.out.print("Enter Movie ID: ");
+                    service.deleteMovie(sc.nextInt());
+                    break;
+
+                case 3:
+                    System.out.println("1.Short 2.Bollywood");
+                    service.displayMovieByType(sc.nextInt());
+                    break;
+
+                case 4:
+                    System.out.println("System shutdown completed.");
+            }
+        } while (choice != 4);
+    }
+}
+
+
