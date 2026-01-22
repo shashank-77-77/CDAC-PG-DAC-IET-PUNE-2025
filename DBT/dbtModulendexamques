@@ -54,12 +54,95 @@ Section B
 Q1.Encrypt_string(str VARCHAR(100)) is a UDF that moves each ASCII Charater by +1.
 as an example, "abc" => "bcd"
 
-Q2. Create a Stored procedure deleteEmployee(IN empID INT) that deletes the employee from EMP table
+proce----
 
+DELIMITER $$
+
+CREATE FUNCTION Encrypt_string(str VARCHAR(100))
+RETURNS VARCHAR(100)
+DETERMINISTIC
+BEGIN
+    DECLARE i INT DEFAULT 1;
+    DECLARE result VARCHAR(100) DEFAULT '';
+    
+    WHILE i <= CHAR_LENGTH(str) DO
+        SET result = CONCAT(
+            result,
+            CHAR(ASCII(SUBSTRING(str, i, 1)) + 1)
+        );
+        SET i = i + 1;
+    END WHILE;
+
+    RETURN result;
+END$$
+
+DELIMITER ;
+
+
+test---
+SELECT Encrypt_string('abc');
+
+
+
+Q2. Create a Stored procedure deleteEmployee(IN empID INT) that deletes the employee from EMP table
 IF employee doesnt exist in the EMP table, then print a message "Employee could not be found"
+
+proce--
+DELIMITER $$
+
+CREATE PROCEDURE deleteEmployee(IN empID INT)
+BEGIN
+    DECLARE empCount INT;
+
+    SELECT COUNT(*) INTO empCount
+    FROM EMP
+    WHERE empno = empID;
+
+    IF empCount = 0 THEN
+        SELECT 'Employee could not be found' AS Message;
+    ELSE
+        DELETE FROM EMP WHERE empno = empID;
+        SELECT 'Employee deleted successfully' AS Message;
+    END IF;
+END$$
+
+DELIMITER ;
+
+
+test---
+CALL deleteEmployee(101);
+
+
 
 Q3. Create a UDF tax_amount (income DECIMAL(10,2)) functon that returns based on slabs:
 
 5% for 2.5-5L.
 20% off 5-10L.
 30% more than 10L.
+
+proce---
+DELIMITER $$
+
+CREATE FUNCTION tax_amount(income DECIMAL(10,2))
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+    DECLARE tax DECIMAL(10,2);
+
+    IF income BETWEEN 250000 AND 500000 THEN
+        SET tax = income * 0.05;
+    ELSEIF income > 500000 AND income <= 1000000 THEN
+        SET tax = income * 0.20;
+    ELSEIF income > 1000000 THEN
+        SET tax = income * 0.30;
+    ELSE
+        SET tax = 0;
+    END IF;
+
+    RETURN tax;
+END$$
+
+DELIMITER ;
+
+test---
+SELECT tax_amount(600000);
