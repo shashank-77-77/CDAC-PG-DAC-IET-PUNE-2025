@@ -1,0 +1,16 @@
+
+(Question query with result)
+Section A
+
+Q1.Show Department with the highest number of employees.
+
+Q2. Show department name and the total salary of the employees in that department.
+
+Q3.Find Employees earning more than the average salary.
+
+
+Q4. Show employees whose salary is greater than 'ALLEN'.
+
+Q5 . Display Department number, total Salary, and average commission.
+
+
