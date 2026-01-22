@@ -14,3 +14,16 @@ Q4. Show employees whose salary is greater than 'ALLEN'.
 Q5 . Display Department number, total Salary, and average commission.
 
 
+Section B
+Q1.Encrypt_string(str VARCHAR(100)) is a UDF that moves each ASCII Charater by +1.
+as an example, "abc" => "bcd"
+
+Q2. Create a Stored procedure deleteEmployee(IN empID INT) that deletes the employee from EMP table
+
+IF employee doesnt exist in the EMP table, then print a message "Employee could not be found"
+
+Q3. Create a UDF tax_amount (income DECIMAL(10,2)) functon that returns based on slabs:
+
+5% for 2.5-5L.
+20% off 5-10L.
+30% more than 10L.
