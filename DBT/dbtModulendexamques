@@ -8,10 +8,20 @@ SELECT deptno
 FROM emp
 GROUP BY deptno
 HAVING COUNT(*) = (
-    SELECT MAX(COUNT(*))
-    FROM emp
-    GROUP BY deptno
+    SELECT MAX(emp_count)
+    FROM (
+        SELECT COUNT(*) AS emp_count
+        FROM emp
+        GROUP BY deptno
+    ) t
 );
+
+op=
++--------+
+| deptno |
++--------+
+|     30 |
++--------+
 
 Q2. Show department name and the total salary of the employees in that department.
 
@@ -20,12 +30,42 @@ FROM emp e
 JOIN dept d ON e.deptno = d.deptno
 GROUP BY d.dname;
 
++------------+--------------+
+| dname      | total_salary |
++------------+--------------+
+| SALES      |        22225 |
+| HR         |         5250 |
+| RESEARCH   |        19375 |
+| ACCOUNTING |        13850 |
+| IT         |         3000 |
++------------+--------------+
+5 rows in set (0.01 sec)
+
+
 
 Q3.Find Employees earning more than the average salary.
 
 SELECT *
 FROM emp
 WHERE sal > (SELECT AVG(sal) FROM emp);
+
+
++-------+---------+--------+----------------+------+------------+------+------+--------+---------+------------+------------+------------+----------+
+| EMPNO | ENAME   | GENDER | JOB            | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME  | PWD        | PHONE      | isActive |
++-------+---------+--------+----------------+------+------------+------+------+--------+---------+------------+------------+------------+----------+
+|  7415 | AARAV   | M      | CLERK          | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | AARAV      | NULL       | 7032300084 |        0 |
+|  7566 | JONES   | M      | MANAGER        | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB  | a12recmpm  | 7132300039 |        1 |
+|  7698 | BLAKE   | M      | MANAGER        | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN    | sales@2017 | 7132300027 |        1 |
+|  7782 | CLARK   | M      | MANAGER        | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | CLARK      | r50mpm     | 7032300001 |        1 |
+|  7788 | SCOTT   | M      | ANALYST        | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND | a12recmpm  | NULL       |        1 |
+|  7839 | KING    | M      | PRESIDENT      | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING       | r50mpm     | 7132300081 |        1 |
+|  7840 | FRED    | M      | vice PRESIDENT | 7839 | 1983-08-09 | 5000 | NULL |     20 |       1 | SAND STONE | a12recmpm  | NULL       |        1 |
+|  7902 | FORD    | M      | ANALYST        | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO    | a12recmpm  | NULL       |        0 |
+|  7919 | HOFFMAN | M      | MANAGER        | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | INTERVAL   | sales@2017 | NULL       |        1 |
+|  7920 | GRASS   | M      | SALESMAN       | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | GRASS      | sales@2017 | NULL       |        1 |
++-------+---------+--------+----------------+------+------------+------+------+--------+---------+------------+------------+------------+----------+
+10 rows in set (0.00 sec)
+
 
 
 Q4. Show employees whose salary is greater than 'ALLEN'.
@@ -39,6 +79,34 @@ WHERE sal > (
 );
 
 
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+------------+------------+------------+----------+
+| EMPNO | ENAME    | GENDER | JOB                 | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME  | PWD        | PHONE      | isActive |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+------------+------------+------------+----------+
+|  6001 | GITA     | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | GITA       | sales@2017 | NULL       |        1 |
+|  6129 | VRUSHALI | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | VRUSHALI   | PUN@8877   | NULL       |        1 |
+|  6473 | SHARMIN  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | SHARMIN    | a12recmpm  | NULL       |        1 |
+|  6781 | BANDISH  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | BANDISH    | a12recmpm  | NULL       |        1 |
+|  7415 | AARAV    | M      | CLERK               | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | AARAV      | NULL       | 7032300084 |        0 |
+|  7421 | THOMAS   | M      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | THOMAS     | r50mpm     | 7032300011 |        0 |
+|  7566 | JONES    | M      | MANAGER             | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB  | a12recmpm  | 7132300039 |        1 |
+|  7698 | BLAKE    | M      | MANAGER             | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN    | sales@2017 | 7132300027 |        1 |
+|  7782 | CLARK    | M      | MANAGER             | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | CLARK      | r50mpm     | 7032300001 |        1 |
+|  7788 | SCOTT    | M      | ANALYST             | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND | a12recmpm  | NULL       |        1 |
+|  7839 | KING     | M      | PRESIDENT           | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING       | r50mpm     | 7132300081 |        1 |
+|  7840 | FRED     | M      | vice PRESIDENT      | 7839 | 1983-08-09 | 5000 | NULL |     20 |       1 | SAND STONE | a12recmpm  | NULL       |        1 |
+|  7888 | Ruhan    | M      | Network             | 7888 | 1983-08-09 | 2000 | NULL |     60 |       1 | Ruhan      | BRD@1122   | NULL       |        1 |
+|  7902 | FORD     | M      | ANALYST             | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO    | a12recmpm  | NULL       |        0 |
+|  7919 | HOFFMAN  | M      | MANAGER             | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | INTERVAL   | sales@2017 | NULL       |        1 |
+|  7920 | GRASS    | M      | SALESMAN            | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | GRASS      | sales@2017 | NULL       |        1 |
+|  8433 | NATASHA  | F      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | NATASHA    | sales@2017 | NULL       |        1 |
+|  9400 | SANGITA  | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SANGITA    | NULL       | NULL       |        1 |
+|  9473 | SUPRIYA  | F      | ANALYST             | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SUPRIYA    | XYZ@1234   | NULL       |        1 |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+------------+------------+------------+----------+
+19 rows in set (0.00 sec)
+
+
+
+
 Q5 . Display Department number, total Salary, and average commission.
 
 SELECT deptno,
@@ -46,6 +114,17 @@ SELECT deptno,
        AVG(comm) AS avg_commission
 FROM emp
 GROUP BY deptno;
+
++--------+--------------+----------------+
+| deptno | total_salary | avg_commission |
++--------+--------------+----------------+
+|     10 |        13850 |      1300.0000 |
+|     20 |        19375 |           NULL |
+|     30 |        22225 |      1157.1429 |
+|     50 |         5250 |           NULL |
+|     60 |         3000 |           NULL |
++--------+--------------+----------------+
+5 rows in set (0.00 sec)
 
 
 ------------------------------------------------------------------------------
@@ -82,7 +161,12 @@ DELIMITER ;
 test---
 SELECT Encrypt_string('abc');
 
-
++-----------------------+
+| Encrypt_string('abc') |
++-----------------------+
+| bcd                   |
++-----------------------+
+1 row in set (0.01 sec)
 
 Q2. Create a Stored procedure deleteEmployee(IN empID INT) that deletes the employee from EMP table
 IF employee doesnt exist in the EMP table, then print a message "Employee could not be found"
@@ -92,16 +176,17 @@ DELIMITER $$
 
 CREATE PROCEDURE deleteEmployee(IN empID INT)
 BEGIN
-    DECLARE empCount INT;
+    DECLARE empCount INT DEFAULT 0;
 
-    SELECT COUNT(*) INTO empCount
-    FROM EMP
+    SELECT COUNT(*)
+    INTO empCount
+    FROM emp
     WHERE empno = empID;
 
     IF empCount = 0 THEN
         SELECT 'Employee could not be found' AS Message;
     ELSE
-        DELETE FROM EMP WHERE empno = empID;
+        DELETE FROM emp WHERE empno = empID;
         SELECT 'Employee deleted successfully' AS Message;
     END IF;
 END$$
@@ -109,8 +194,17 @@ END$$
 DELIMITER ;
 
 
+
 test---
 CALL deleteEmployee(101);
+
++-----------------------------+
+| Message                     |
++-----------------------------+
+| Employee could not be found |
++-----------------------------+
+1 row in set (0.00 sec)
+
 
 
 
@@ -146,3 +240,10 @@ DELIMITER ;
 
 test---
 SELECT tax_amount(600000);
+
++--------------------+
+| tax_amount(600000) |
++--------------------+
+|          120000.00 |
++--------------------+
+1 row in set (0.00 sec)
