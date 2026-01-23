@@ -24,3 +24,702 @@ to manage the database entities.
 Data Validation: Use data annotations to ensure proper validation.
 
 user interface: Ensure a userfriendly interface for managing students, courses, and , enrollments.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+StudentManagementSystem
+
+
+CREATE DATABASE StudentDB;
+GO
+USE StudentDB;
+
+CREATE TABLE Student (
+    StudentId INT IDENTITY PRIMARY KEY,
+    FirstName NVARCHAR(50) NOT NULL,
+    LastName NVARCHAR(50) NOT NULL,
+    DOB DATE NOT NULL,
+    Email NVARCHAR(100) NOT NULL,
+    PhoneNumber NVARCHAR(15)
+);
+
+CREATE TABLE Course (
+    CourseId INT IDENTITY PRIMARY KEY,
+    CourseName NVARCHAR(100) NOT NULL
+);
+
+
+
+
+StudentManagementSystem
+│
+├── Controllers
+│   ├── HomeController.cs
+│   ├── StudentsController.cs
+│   └── CoursesController.cs
+│
+├── Models
+│   ├── Student.cs
+│   ├── Course.cs
+│   └── StudentDbContext.cs
+│
+├── Views
+│   ├── Home
+│   │   └── Index.cshtml
+│   ├── Students
+│   │   ├── Index.cshtml
+│   │   ├── Create.cshtml
+│   │   ├── Edit.cshtml
+│   │   └── Delete.cshtml
+│   └── Courses
+│       ├── Index.cshtml
+│       └── Create.cshtml
+│
+├── Views/Shared
+│   ├── _Layout.cshtml
+│   └── _ValidationScriptsPartial.cshtml
+│
+├── appsettings.json
+└── Program.cs
+
+------------------------------------------------------------------------------------------------------
+
+ Controllers
+------------------------------------------------------------------------------------------------------
+HomeController.cs
+
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using StudentManagementSystem.Models;
+
+namespace StudentManagementSystem.Controllers
+{
+    public class HomeController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------
+StudentsController.cs
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using StudentManagementSystem.Models;
+
+namespace StudentManagementSystem.Controllers
+{
+    public class StudentsController : Controller
+    {
+        private readonly StudentDbContext _context;
+
+        public StudentsController(StudentDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Students.ToListAsync());
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(Student student)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(student);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(student);
+        }
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            var student = await _context.Students.FindAsync(id);
+            return View(student);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Student student)
+        {
+            _context.Update(student);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var student = await _context.Students.FindAsync(id);
+            return View(student);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var student = await _context.Students.FindAsync(id);
+            _context.Students.Remove(student);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------
+CoursesController.cs
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using StudentManagementSystem.Models;
+
+namespace StudentManagementSystem.Controllers
+{
+    public class CoursesController : Controller
+    {
+        private readonly StudentDbContext _context;
+
+        public CoursesController(StudentDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Courses.ToListAsync());
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(Course course)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(course);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(course);
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------
+Models
+--------------------------------------------------
+Student.cs
+
+using System.ComponentModel.DataAnnotations;
+
+namespace StudentManagementSystem.Models
+{
+    public partial class Student
+    {
+        public int StudentId { get; set; }
+
+        [Required]
+        public string FirstName { get; set; } = null!;
+
+        [Required]
+        public string LastName { get; set; } = null!;
+
+        [Required]
+        [DataType(DataType.Date)]
+        public DateTime DOB { get; set; }
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; } = null!;
+
+        public string? PhoneNumber { get; set; }
+    }
+}
+------------------------------------------------------------------------------------------------------
+
+Course.cs
+
+using System.ComponentModel.DataAnnotations;
+
+namespace StudentManagementSystem.Models
+{
+    public partial class Course
+    {
+        public int CourseId { get; set; }
+
+        [Required]
+        public string CourseName { get; set; } = null!;
+    }
+}
+------------------------------------------------------------------------------------------------------
+
+
+StudentDbContext.cs
+
+using Microsoft.EntityFrameworkCore;
+
+namespace StudentManagementSystem.Models
+{
+    public partial class StudentDbContext : DbContext
+    {
+        public StudentDbContext(DbContextOptions<StudentDbContext> options)
+            : base(options)
+        {
+        }
+
+        public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<Course> Courses { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Student>(entity =>
+            {
+                entity.ToTable("Student");   // 👈 FIX FOR YOUR ERROR
+                entity.HasKey(e => e.StudentId);
+            });
+
+            modelBuilder.Entity<Course>(entity =>
+            {
+                entity.ToTable("Course");
+                entity.HasKey(e => e.CourseId);
+            });
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------
+
+Views
+----------------------------------
+Home
+----------------------------------
+Index.cshtml
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+------------------------------------------------------------------------------------------------------
+
+Students
+--------------------------------
+Index.cshtml
+
+@model IEnumerable<StudentManagementSystem.Models.Student>
+
+<h2>Students</h2>
+<a asp-action="Create">Add Student</a>
+
+<table class="table">
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.FirstName</td>
+            <td>@s.LastName</td>
+            <td>@s.Email</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@s.StudentId">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@s.StudentId">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+------------------------------------------------------------------------------------------------------
+Create.cshtml
+
+@model StudentManagementSystem.Models.Student
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DOB" class="control-label"></label>
+                <input asp-for="DOB" class="form-control" />
+                <span asp-validation-for="DOB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+------------------------------------------------------------------------------------------------------
+
+Edit.cshtml
+
+@model StudentManagementSystem.Models.Student
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="StudentId" />
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DOB" class="control-label"></label>
+                <input asp-for="DOB" class="form-control" />
+                <span asp-validation-for="DOB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+-----------------------------------------------------------------------------------------------------
+Delete.cshtml
+
+@model StudentManagementSystem.Models.Student
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="StudentId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
+
+------------------------------------------------------------------------------------------------------
+
+ Courses
+-------------------------
+Index.cshtml
+
+@model IEnumerable<StudentManagementSystem.Models.Course>
+
+<h2>Courses</h2>
+<a asp-action="Create">Add Course</a>
+
+<ul>
+    @foreach (var c in Model)
+    {
+        <li>@c.CourseName</li>
+    }
+</ul>
+
+-----------------------------------------------------------------------------------------------------
+Create.cshtml
+
+@model StudentManagementSystem.Models.Course
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Course</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CourseName" class="control-label"></label>
+                <input asp-for="CourseName" class="form-control" />
+                <span asp-validation-for="CourseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+--------------------------------------------------------------------------------------------Views/Shared
+------------------------
+_Layout.cshtml
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - StudentManagementSystem</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/StudentManagementSystem.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    StudentManagementSystem
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Students" asp-action="Index">
+                                Students
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Courses" asp-action="Index">
+                                Courses
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">
+                                Privacy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2026 - StudentManagementSystem -
+            <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------
+
+ _ValidationScriptsPartial.cshtml
+
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+--------------------------------------------------------------------------------------------
+
+appsettings.json
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=shashank;Trusted_Connection=True;"
+  },
+  "AllowedHosts": "*"
+}
+
+--------------------------------------------------------------------------------------------
+
+Program.cs
+
+
+using Microsoft.EntityFrameworkCore;
+using StudentManagementSystem.Models;
+
+namespace StudentManagementSystem
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<StudentDbContext>(options =>
+                options.UseSqlServer(
+                    builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddControllersWithViews();
+
+            var app = builder.Build();
+
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+            app.UseRouting();
+            app.UseAuthorization();
+
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            app.Run();
+        }
+    }
+}
+

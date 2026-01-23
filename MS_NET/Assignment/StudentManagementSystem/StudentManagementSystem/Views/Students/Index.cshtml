@@ -1,0 +1,19 @@
+﻿@model IEnumerable<StudentManagementSystem.Models.Student>
+
+<h2>Students</h2>
+<a asp-action="Create">Add Student</a>
+
+<table class="table">
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.FirstName</td>
+            <td>@s.LastName</td>
+            <td>@s.Email</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@s.StudentId">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@s.StudentId">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,11 @@
+﻿@model IEnumerable<StudentManagementSystem.Models.Course>
+
+<h2>Courses</h2>
+<a asp-action="Create">Add Course</a>
+
+<ul>
+    @foreach (var c in Model)
+    {
+        <li>@c.CourseName</li>
+    }
+</ul>
