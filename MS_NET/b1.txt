@@ -1,0 +1,123 @@
+CLASS
+
+using System.ComponentModel.DataAnnotations;
+
+namespace demo1.Models;
+
+
+public class Book
+{
+    public int BookId { get; set; }
+
+    [Required]
+    public string BookName { get; set; }
+
+    [Required]
+    public string Author { get; set; }
+
+    [Required]
+    public string Genre { get; set; }
+
+    [Range(1000, 2100, ErrorMessage = "Enter valid publication year")]
+    public int PublicationYear { get; set; }
+}
+
+-----------------------------------------------------------------------------------------------
+
+DBCONTEXT
+
+using Microsoft.EntityFrameworkCore;
+
+namespace demo1.Models
+{
+    public class LibraryDbContext : DbContext
+    {
+        public LibraryDbContext(DbContextOptions<LibraryDbContext> options)
+            : base(options) { }
+
+        public DbSet<Book> Books { get; set; }
+    }
+}
+
+
+-----------------------------------------------------------------------------------------------------
+
+
+PROGRAM.CS
+
+using demo1.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace demo1
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<LibraryDbContext>(options =>
+            options.UseSqlServer(
+            builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+            // Add services to the container.
+            builder.Services.AddControllersWithViews();
+
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.MapStaticAssets();
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Books}/{action=Index}/{id?}")
+                .WithStaticAssets();
+
+            app.Run();
+        }
+    }
+}
+
+
+----------------------------------------------------------------------------------------------------
+
+
+APPSETTING
+
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=krishna;Integrated Security=True;Encrypt=True"
+  },
+
+  "AllowedHosts": "*"
+}
+
+
+------------------------------------------------------------------------------------------------------
+
+
+MIGRATION 
+
+
+Scenario	Command
+New project, no DB	Add-Migration → Update-Database
+DB already exists	Add-Migration -IgnoreChanges
