@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="prac/prac.csproj" />
+  <Project Path="WebApplication1/WebApplication1.csproj" />
+</Solution>

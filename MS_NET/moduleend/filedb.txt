@@ -1,0 +1,57 @@
+ builder.Services.AddDbContext<IETDbContext>(options => {
+                options.UseSqlServer("name=IETDb");
+            });
+
+
+
+**********************
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "IETDb": "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=IETDb;Integrated Security=True"
+  },  
+  "AllowedHosts": "*"
+}
+
+****************************
+
+using Microsoft.EntityFrameworkCore;
+
+namespace _11Demo_EF_Filters_Sessions_WebAPI.Models
+{
+    public class IETDbContext:DbContext
+    {
+        public DbSet<Emp> emps { get; set; }
+
+        public IETDbContext(DbContextOptions options):base(options)
+        {
+            
+        }
+    }
+}
+
+************************************
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace _11Demo_EF_Filters_Sessions_WebAPI.Models
+{
+    [Table("Emp")]
+    public class Emp
+    {
+        [Key]
+        [Column("id",TypeName ="int")]
+        public int Id { get; set; }
+
+        [Column("name", TypeName = "varchar(50)")]
+        public string Name { get; set; }
+
+        [Column("address", TypeName = "varchar(50)")]
+        public string Address { get; set; }
+    }
+}

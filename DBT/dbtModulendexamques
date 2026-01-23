@@ -23,6 +23,7 @@ op=
 |     30 |
 +--------+
 
+
 Q2. Show department name and the total salary of the employees in that department.
 
 SELECT d.dname, SUM(e.sal) AS total_salary
@@ -196,7 +197,13 @@ DELIMITER ;
 
 
 test---
-CALL deleteEmployee(101);
+CALL deleteEmployee(9400);
+
++-------------------------------+
+| Message                       |
++-------------------------------+
+| Employee deleted successfully |
++-------------------------------+
 
 +-----------------------------+
 | Message                     |

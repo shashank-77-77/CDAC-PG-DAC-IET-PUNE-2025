@@ -1,0 +1,26 @@
+you are required to develop a simple student management system using csarp ASP.NET core mvc
+and entity framewrk the system should have the following functionality:
+1.create a new asp.net core mvc proj
+Setup the necessary dependencies for entity framework core and sql server 
+2.Design the database(15marks)
+create a databse model for the student management system. the system should include the
+following entities;
+Student with properties: Studentid, FirstName, LastName, DOB, e=Email, PhoneNumber.
+course with properties: CourseID, CourseName.
+
+3. Implement CRUD operations for students
+implement crud (read update delete) operations for the student entity.
+create a controller and views for managing students.
+ensure validation on the student properties (eg. first name last name should not be empty, email should be in valid format at least contain '@' key)
+
+4.Implement CRUD operations for courses
+implement crud (read update delete) operations for the courses entity
+create a controller and views for managing
+ensure validation on the course poperties (eg. course name should not be empty)
+
+DataBaseContext: Configure the entity framework core Dbcontext using database first approach
+to manage the database entities.
+
+Data Validation: Use data annotations to ensure proper validation.
+
+user interface: Ensure a userfriendly interface for managing students, courses, and , enrollments.
