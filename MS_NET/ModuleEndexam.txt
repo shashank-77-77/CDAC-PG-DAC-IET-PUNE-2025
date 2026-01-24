@@ -28,7 +28,7 @@ user interface: Ensure a userfriendly interface for managing students, courses, 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 StudentManagementSystem
-
+----------------------------------
 
 CREATE DATABASE StudentDB;
 GO
@@ -49,7 +49,7 @@ CREATE TABLE Course (
 );
 
 
-
+----------------------------------
 
 StudentManagementSystem
 │
@@ -87,7 +87,7 @@ StudentManagementSystem
  Controllers
 ------------------------------------------------------------------------------------------------------
 HomeController.cs
-
+----------------------------------
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using StudentManagementSystem.Models;
@@ -116,7 +116,7 @@ namespace StudentManagementSystem.Controllers
 
 ------------------------------------------------------------------------------------------------------
 StudentsController.cs
-
+----------------------------------
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StudentManagementSystem.Models;
@@ -187,7 +187,7 @@ namespace StudentManagementSystem.Controllers
 
 ------------------------------------------------------------------------------------------------------
 CoursesController.cs
-
+----------------------------------
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StudentManagementSystem.Models;
@@ -231,7 +231,7 @@ namespace StudentManagementSystem.Controllers
 Models
 --------------------------------------------------
 Student.cs
-
+----------------------------------
 using System.ComponentModel.DataAnnotations;
 
 namespace StudentManagementSystem.Models
@@ -260,7 +260,7 @@ namespace StudentManagementSystem.Models
 ------------------------------------------------------------------------------------------------------
 
 Course.cs
-
+----------------------------------
 using System.ComponentModel.DataAnnotations;
 
 namespace StudentManagementSystem.Models
@@ -277,7 +277,7 @@ namespace StudentManagementSystem.Models
 
 
 StudentDbContext.cs
-
+----------------------------------
 using Microsoft.EntityFrameworkCore;
 
 namespace StudentManagementSystem.Models
@@ -331,7 +331,7 @@ Index.cshtml
 Students
 --------------------------------
 Index.cshtml
-
+----------------------------------
 @model IEnumerable<StudentManagementSystem.Models.Student>
 
 <h2>Students</h2>
@@ -354,7 +354,7 @@ Index.cshtml
 
 ------------------------------------------------------------------------------------------------------
 Create.cshtml
-
+----------------------------------
 @model StudentManagementSystem.Models.Student
 
 @{
@@ -412,7 +412,7 @@ Create.cshtml
 ------------------------------------------------------------------------------------------------------
 
 Edit.cshtml
-
+----------------------------------
 @model StudentManagementSystem.Models.Student
 
 @{
@@ -470,7 +470,7 @@ Edit.cshtml
 
 -----------------------------------------------------------------------------------------------------
 Delete.cshtml
-
+----------------------------------
 @model StudentManagementSystem.Models.Student
 
 @{
@@ -526,9 +526,9 @@ Delete.cshtml
 ------------------------------------------------------------------------------------------------------
 
  Courses
--------------------------
+----------------------------------------------------
 Index.cshtml
-
+----------------------------------
 @model IEnumerable<StudentManagementSystem.Models.Course>
 
 <h2>Courses</h2>
@@ -543,7 +543,7 @@ Index.cshtml
 
 -----------------------------------------------------------------------------------------------------
 Create.cshtml
-
+----------------------------------
 @model StudentManagementSystem.Models.Course
 
 @{
@@ -581,7 +581,7 @@ Create.cshtml
 --------------------------------------------------------------------------------------------Views/Shared
 ------------------------
 _Layout.cshtml
-
+----------------------------------
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -659,13 +659,13 @@ _Layout.cshtml
 -------------------------------------------------------------------------------------------
 
  _ValidationScriptsPartial.cshtml
-
+----------------------------------
 <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
 --------------------------------------------------------------------------------------------
 
 appsettings.json
-
+----------------------------------
 {
   "Logging": {
     "LogLevel": {
@@ -682,7 +682,7 @@ appsettings.json
 --------------------------------------------------------------------------------------------
 
 Program.cs
-
+----------------------------------
 
 using Microsoft.EntityFrameworkCore;
 using StudentManagementSystem.Models;
