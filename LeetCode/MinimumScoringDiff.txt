@@ -39,3 +39,22 @@ Constraints:
 0 <= nums[i] <= 105
  
 ---------------------------------------------------------------------------------------
+
+
+class Solution:
+    def minimumDifference(self, nums: List[int], k: int) -> int:
+        # Edge case: selecting one student always yields zero difference
+        if k == 1:
+            return 0
+        
+        # Sort the scores to enable window-based evaluation
+        nums.sort()
+        
+        min_diff = float('inf')
+        
+        # Slide a window of size k across the sorted array
+        for i in range(len(nums) - k + 1):
+            current_diff = nums[i + k - 1] - nums[i]
+            min_diff = min(min_diff, current_diff)
+        
+        return min_diff
